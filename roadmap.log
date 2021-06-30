@@ -1,0 +1,2264 @@
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  30 JUN 2021 14:44
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**roadmap.tex
+(./roadmap.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base
+/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count163
+\c@section=\count164
+\c@subsection=\count165
+\c@subsubsection=\count166
+\c@paragraph=\count167
+\c@subparagraph=\count168
+\c@figure=\count169
+\c@table=\count170
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (./mlt-thesis-2015.sty (/usr/share/texlive/texmf-dist/tex/latex/fontspec/font
+spec.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty 
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-02-03 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count171
+\l__pdf_internal_box=\box45
+\g__pdf_backend_object_int=\count172
+\g__pdf_backend_annotation_int=\count173
+))
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count174
+\g__xparse_grabber_int=\count175
+\l__xparse_m_args_int=\count176
+\l__xparse_v_nesting_int=\count177
+)
+Package: fontspec 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count178
+\l__fontspec_language_int=\count179
+\l__fontspec_strnum_int=\count180
+\l__fontspec_tmp_int=\count181
+\l__fontspec_tmpa_int=\count182
+\l__fontspec_tmpb_int=\count183
+\l__fontspec_tmpc_int=\count184
+\l__fontspec_em_int=\count185
+\l__fontspec_emdef_int=\count186
+\l__fontspec_strong_int=\count187
+\l__fontspec_strongdef_int=\count188
+\l__fontspec_tmpa_dim=\dimen135
+\l__fontspec_tmpb_dim=\dimen136
+\l__fontspec_tmpc_dim=\dimen137
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+
+Package fontspec Info: Font family 'LiberationSansNarrow(0)' created for font
+(fontspec)             'Liberation Sans Narrow' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Liberation Sans
+(fontspec)             Narrow/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Liberation Sans
+(fontspec)             Narrow/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Liberation Sans
+(fontspec)             Narrow/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Liberation
+(fontspec)             Sans Narrow/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'FreeSerif(0)' created for font 'FreeSerif'
+(fontspec)             with options [Ligatures=TeX,Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FreeSerif/OT:script=latn;language=dflt;mapping=tex-t
+ext;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"FreeSerif/OT:script=latn;language=dflt;+smcp;mapping
+=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FreeSerif/B/OT:script=latn;language=dflt;mapping=tex
+-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"FreeSerif/B/OT:script=latn;language=dflt;+smcp;mappi
+ng=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FreeSerif/I/OT:script=latn;language=dflt;mapping=tex
+-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FreeSerif/BI/OT:script=latn;language=dflt;mapping=te
+x-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'FreeSans(0)' created for font 'FreeSans'
+(fontspec)             with options [Ligatures=TeX,Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FreeSans/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"FreeSans/OT:script=latn;language=dflt;+smcp;mapping=
+tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FreeSans/B/OT:script=latn;language=dflt;mapping=tex-
+text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"FreeSans/B/OT:script=latn;language=dflt;+smcp;mappin
+g=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FreeSans/I/OT:script=latn;language=dflt;mapping=tex-
+text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FreeSans/BI/OT:script=latn;language=dflt;mapping=tex
+-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'FreeMono(0)' created for font 'FreeMono'
+(fontspec)             with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FreeMono/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FreeMono/B/OT:script=latn;language=dflt;mapping=tex-
+text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FreeMono/I/OT:script=latn;language=dflt;mapping=tex-
+text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FreeMono/BI/OT:script=latn;language=dflt;mapping=tex
+-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip49
+\bibsep=\skip50
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count189
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count190
+\Gm@cntv=\count191
+\c@Gm@tempcnt=\count192
+\Gm@bindingoffset=\dimen138
+\Gm@wd@mp=\dimen139
+\Gm@odd@mp=\dimen140
+\Gm@even@mp=\dimen141
+\Gm@layoutwidth=\dimen142
+\Gm@layoutheight=\dimen143
+\Gm@layouthoffset=\dimen144
+\Gm@layoutvoffset=\dimen145
+\Gm@dimlist=\toks15
+)) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count193
+\U@D=\dimen146
+(/usr/share/texlive/texmf-dist/tex/generic/babel/xebabel.def (/usr/share/texliv
+e/texmf-dist/tex/generic/babel/txtbabel.def))
+\bbl@readstream=\read2
+\bbl@dirlevel=\count194
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language11) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language11) on input line 108.
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 105.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip51
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen149
+\Hy@linkcounter=\count195
+\Hy@pagecounter=\count196
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count197
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count198
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen150
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count199
+\Field@Width=\dimen151
+\Fld@charsize=\dimen152
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count266
+\c@Item=\count267
+\c@Hfootnote=\count268
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2020/01/14 v7.00d Hyperref driver for XeTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box46
+\c@Hy@AnnotLevel=\count269
+\HyField@AnnotCount=\count270
+\Fld@listcount=\count271
+\c@bookmark@seq@number=\count272
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+) (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip52
+) (./agda.sty
+Package: agda 
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count273
+\calc@Bcount=\count274
+\calc@Adimen=\dimen153
+\calc@Bdimen=\dimen154
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count275
+\calc@Cskip=\skip55
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/share/texlive/texmf-dist/tex/latex/polytable/polytable.sty
+Package: polytable 2013/07/18 v0.8.5 `polytable' package (Andres Loeh)
+(/usr/share/texlive/texmf-dist/tex/latex/lazylist/lazylist.sty) (/usr/share/tex
+live/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen155
+\ar@mcellbox=\box47
+\extrarowheight=\dimen156
+\NC@list=\toks16
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box48
+)
+\PT@colwidth=\dimen157
+\PT@cols=\count276
+\PT@table=\count277
+\PT@toks=\toks17
+\PT@in=\read3
+\PT@out=\write3
+) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count278
+) (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks18
+) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texl
+ive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks19
+\XKV@tempa@toks=\toks20
+)
+\XKV@depth=\count279
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\mathindent=\dimen158
+\c@Agda@Current=\count280
+\c@Agda@Previous=\count281
+\c@Agda@AlignStart=\count282
+\c@Agda@SuppressStart=\count283
+\AgdaEmptySkip=\skip58
+\AgdaEmptyExtraSkip=\skip59
+\c@AgdaCodeNumber=\count284
+) (/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLa
+TeX
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-02-14 LaTeX2e option processing using LaTeX3 keys
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip60
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen159
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen160
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count285
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count286
+\leftroot@=\count287
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count288
+\DOTSCASE@=\count289
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box49
+\strutbox@=\box50
+\big@size=\dimen161
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count290
+\c@MaxMatrixCols=\count291
+\dotsspace@=\muskip17
+\c@parentequation=\count292
+\dspbrk@lvl=\count293
+\tag@help=\toks22
+\row@=\count294
+\column@=\count295
+\maxfields@=\count296
+\andhelp@=\toks23
+\eqnshift@=\dimen162
+\alignsep@=\dimen163
+\tagshift@=\dimen164
+\tagwidth@=\dimen165
+\totwidth@=\dimen166
+\lineht@=\dimen167
+\@envbody=\toks24
+\multlinegap=\skip61
+\multlinetaggap=\skip62
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+\g__um_fam_int=\count297
+\g__um_fonts_used_int=\count298
+\l__um_primecount_int=\count299
+\g__um_primekern_muskip=\muskip18
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count300
+\l_MT_multwidth_dim=\dimen168
+\origjot=\skip63
+\l_MT_shortvdotswithinadjustabove_dim=\dimen169
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen170
+\l_MT_above_intertext_sep=\dimen171
+\l_MT_below_intertext_sep=\dimen172
+\l_MT_above_shortintertext_sep=\dimen173
+\l_MT_below_shortintertext_sep=\dimen174
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip64
+\enit@outerparindent=\dimen175
+\enit@toks=\toks26
+\enit@inbox=\box51
+\enit@count@id=\count301
+\enitdp@description=\count302
+)
+
+Package fontspec Info: Font family 'DejaVuSerif(0)' created for font 'DejaVu
+(fontspec)             Serif' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"DejaVu
+(fontspec)             Serif/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"DejaVu
+(fontspec)             Serif/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"DejaVu
+(fontspec)             Serif/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"DejaVu
+(fontspec)             Serif/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'DejaVuSerif(1)' created for font 'DejaVu
+(fontspec)             Serif' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"DejaVu
+(fontspec)             Serif/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"DejaVu
+(fontspec)             Serif/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"DejaVu
+(fontspec)             Serif/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"DejaVu
+(fontspec)             Serif/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/DejaVuSerif(1)/m/n on input line 33.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/DejaVuSerif(1)/m/it on input line 3
+3.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/DejaVuSerif(1)/bx/n on input line 3
+3.
+
+Package fontspec Info: Font family 'DejaVuSans(0)' created for font 'DejaVu
+(fontspec)             Sans' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"DejaVu
+(fontspec)             Sans/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"DejaVu
+(fontspec)             Sans/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"DejaVu
+(fontspec)             Sans/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"DejaVu
+(fontspec)             Sans/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'DejaVuSans(1)' created for font 'DejaVu
+(fontspec)             Sans' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"DejaVu
+(fontspec)             Sans/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"DejaVu
+(fontspec)             Sans/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"DejaVu
+(fontspec)             Sans/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"DejaVu
+(fontspec)             Sans/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/DejaVuSans(1)/m/n on input line 34.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/DejaVuSans(1)/bx/n on input line 3
+4.
+
+Package fontspec Info: Font family 'DejaVuSansMono(0)' created for font
+(fontspec)             'DejaVu Sans Mono' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"DejaVu Sans
+(fontspec)             Mono/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"DejaVu Sans
+(fontspec)             Mono/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"DejaVu Sans
+(fontspec)             Mono/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"DejaVu Sans
+(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: Font family 'DejaVuSansMono(1)' created for font
+(fontspec)             'DejaVu Sans Mono' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"DejaVu Sans
+(fontspec)             Mono/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"DejaVu Sans
+(fontspec)             Mono/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"DejaVu Sans
+(fontspec)             Mono/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"DejaVu Sans
+(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(1)/m/n on input line
+ 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(1)/bx/n on input lin
+e 35.
+(/usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+)
+\c@definition=\count303
+\c@lem=\count304
+\c@proof=\count305
+\c@thm=\count306
+(./roadmap.aux (./perspectives.aux) (./previouswork.aux) (./mltt.aux) (./gfintr
+o.aux))
+\openout1 = `roadmap.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=670.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=0.0pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=28.45274pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box52
+Package hyperref Info: Link coloring OFF on input line 88.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count307
+)
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
+(./roadmap.out) (./roadmap.out)
+\@outlinefile=\write4
+\openout4 = `roadmap.out'.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;
+"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;
+"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=9.3075-},{Size=6.57-9.3075,Font=latinmodern-math.otf,
+Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
+},BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <9.3075->"[latinmodern-math.otf]/OT:script=math;language
+=dflt;"<6.57-9.3075>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=
+0;"<-6.57>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;
+"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 88.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
+ line 88.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 88.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
+t line 88.
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: latinmodern-math scale = 1.0001.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=9.3075-},{Size=6.57-9.3075,Font=latinmodern-math.otf,
+Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
+},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             8\font =7.41315pt\relax \fontdimen 9\font
+(fontspec)             =4.3143pt\relax \fontdimen 10\font =4.8618pt\relax
+(fontspec)             \fontdimen 11\font =7.5117pt\relax \fontdimen 12\font
+(fontspec)             =3.77776pt\relax \fontdimen 13\font =3.97485pt\relax
+(fontspec)             \fontdimen 14\font =3.97485pt\relax \fontdimen 15\font
+(fontspec)             =3.16455pt\relax \fontdimen 16\font =2.70465pt\relax
+(fontspec)             \fontdimen 17\font =2.70465pt\relax \fontdimen 18\font
+(fontspec)             =2.7375pt\relax \fontdimen 19\font =2.19pt\relax
+(fontspec)             \fontdimen 22\font =2.7375pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <9.3075->s*[1.0001]"[latinmodern-math.otf]/OT:script=mat
+h;language=dflt;"<6.57-9.3075>s*[1.0001]"[latinmodern-math.otf]/OT:script=math;
+language=dflt;+ssty=0;"<-6.57>s*[1.0001]"[latinmodern-math.otf]/OT:script=math;
+language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =7.41315pt\relax \fontdimen 9\font
+(fontspec)             =4.3143pt\relax \fontdimen 10\font =4.8618pt\relax
+(fontspec)             \fontdimen 11\font =7.5117pt\relax \fontdimen 12\font
+(fontspec)             =3.77776pt\relax \fontdimen 13\font =3.97485pt\relax
+(fontspec)             \fontdimen 14\font =3.97485pt\relax \fontdimen 15\font
+(fontspec)             =3.16455pt\relax \fontdimen 16\font =2.70465pt\relax
+(fontspec)             \fontdimen 17\font =2.70465pt\relax \fontdimen 18\font
+(fontspec)             =2.7375pt\relax \fontdimen 19\font =2.19pt\relax
+(fontspec)             \fontdimen 22\font =2.7375pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.0001]"[latinmodern-math.otf]/OT:script=math;lang
+uage=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =7.41315pt\relax \fontdimen 9\font
+(fontspec)             =4.3143pt\relax \fontdimen 10\font =4.8618pt\relax
+(fontspec)             \fontdimen 11\font =7.5117pt\relax \fontdimen 12\font
+(fontspec)             =3.77776pt\relax \fontdimen 13\font =3.97485pt\relax
+(fontspec)             \fontdimen 14\font =3.97485pt\relax \fontdimen 15\font
+(fontspec)             =3.16455pt\relax \fontdimen 16\font =2.70465pt\relax
+(fontspec)             \fontdimen 17\font =2.70465pt\relax \fontdimen 18\font
+(fontspec)             =2.7375pt\relax \fontdimen 19\font =2.19pt\relax
+(fontspec)             \fontdimen 22\font =2.7375pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 88.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
+t line 88.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 88.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
+t line 88.
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=9.3075-},{Size=6.57-9.3075,Font=latinmodern-math.otf,
+Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
+},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             8\font =0.438pt\relax \fontdimen 9\font =2.19pt\relax
+(fontspec)             \fontdimen 10\font =1.82864pt\relax \fontdimen 11\font
+(fontspec)             =1.21545pt\relax \fontdimen 12\font =6.56999pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <9.3075->s*[0.9999]"[latinmodern-math.otf]/OT:script=mat
+h;language=dflt;"<6.57-9.3075>s*[0.9999]"[latinmodern-math.otf]/OT:script=math;
+language=dflt;+ssty=0;"<-6.57>s*[0.9999]"[latinmodern-math.otf]/OT:script=math;
+language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.438pt\relax \fontdimen 9\font
+(fontspec)             =2.19pt\relax \fontdimen 10\font =1.82864pt\relax
+(fontspec)             \fontdimen 11\font =1.21545pt\relax \fontdimen 12\font
+(fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999]"[latinmodern-math.otf]/OT:script=math;lang
+uage=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.438pt\relax \fontdimen 9\font
+(fontspec)             =2.19pt\relax \fontdimen 10\font =1.82864pt\relax
+(fontspec)             \fontdimen 11\font =1.21545pt\relax \fontdimen 12\font
+(fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 8
+8.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
+t line 88.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 88.
+
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
+t line 88.
+
+Package unicode-math Warning: Using \overbracket and \underbracket from
+(unicode-math)                `mathtools' package.
+(unicode-math)                 
+(unicode-math)                 Use \Uoverbracket and \Uunderbracket for
+(unicode-math)                original `unicode-math' definition.
+
+
+Package unicode-math Warning: I'm going to overwrite the following commands
+(unicode-math)                from the `mathtools' package: 
+(unicode-math)                 
+(unicode-math)                     \dblcolon, \coloneqq, \Coloneqq, \eqqcolon.
+(unicode-math)                
+(unicode-math)                 
+(unicode-math)                 Note that since I won't overwrite the other
+(unicode-math)                colon-like commands, using them will lead to
+(unicode-math)                inconsistencies.
+
+File: logo/gu_logo_blue.pdf Graphic file (type pdf)
+<use logo/gu_logo_blue.pdf>
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.95116pt on input line 101.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.6658pt on input line 101.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.47559pt on input line 101.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 101.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.66417pt on input line 101.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.47441pt on input line 101.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
+File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
+
+) [1
+
+] [1] [2] (./roadmap.toc [3])
+\tf@toc=\write5
+\openout5 = `roadmap.toc'.
+
+[4] [1]
+\openout3 = `roadmap.ptb'.
+
+[2] [3]
+\openout2 = `perspectives.aux'.
+
+(./perspectives.tex
+Overfull \hbox (7.61324pt too wide) in paragraph at lines 21--28
+\TU/DejaVuSerif(0)/m/n/10.95 how can say the internal language, mechanism of ex
+ternalization (generally speech),
+ []
+
+[4
+
+] [5] [6]) [7]
+\openout2 = `previouswork.aux'.
+
+(./previouswork.tex) [8
+
+
+] [9
+
+]
+\openout2 = `mltt.aux'.
+
+(./mltt.tex [10
+
+]
+! Undefined control sequence.
+l.80 $\vdash \lambda x. \sin x : \R
+                                    \rightarrow \R$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.80 $\vdash \lambda x. \sin x : \R \rightarrow \R
+                                                  $
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [11]
+\openout2 = `gfintro.aux'.
+
+(./gfintro.tex [12
+
+
+]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.65 ... now given a single linear presentation C^
+                                                  L_0, where
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (647.51743pt too wide) in paragraph at lines 65--68
+[]\TU/DejaVuSerif(0)/m/n/10.95 Consider a language L, for now given a single li
+near presentation C$[][] [][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.95 syntax. So we could denote these L^
+                                        English, L^Bantu, L^Swedish for
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (1120.25572pt too wide) in paragraph at lines 93--100
+\TU/DejaVuSerif(0)/m/n/10.95 tax. So we could denote these L$[][][][][][][][] [
+][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+ [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][
+][] [][][][][][][]$ 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.101   One could also further elaborate these L^
+                                                 English_0 L^English_1 to va...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.106 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (1292.20442pt too wide) in paragraph at lines 101--106
+[]\TU/DejaVuSerif(0)/m/n/10.95 One could also further elaborate these L$[][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][]$ 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.107   L_
+          0 < L_1 -> L_English_0 < L_English_1
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.110 programming languages, like Logic^
+                                        English, Logic^Latex, Logic^Agda, Lo...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.112 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.115 Logic_
+            Core^English Logic_Extended^English
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.119 Logic_
+            Core^Agda Logic_Extended^Agda may collapse at certain points, bu...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.122 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (445.6949pt too wide) in paragraph at lines 119--122
+[]\TU/DejaVuSerif(0)/m/n/10.95 Logic$[][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][] [][][][][][]$ 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.123 ...cs = Logic + domain specific Mathematics^
+                                                  English Mathematics^Agda
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.124 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[13]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 Mathematics^
+                  English iI -- Something about
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.129 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.142   One could also further elaborate these L^
+                                                 English_0 L^English_1 to va...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.144 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (201.46841pt too wide) in paragraph at lines 142--144
+[]\TU/DejaVuSerif(0)/m/n/10.95 One could also further elaborate these L$[][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
+ []
+
+Missing character: There is no 𝜙 in font DejaVu Serif/OT:script=latn;language=d
+flt;mapping=tex-text;!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.150 ...ories, we define the functions \phi : (c_
+                                                  1, ..., c_n) -> c_t
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (576.66191pt too wide) in paragraph at lines 150--153
+[]\TU/DejaVuSerif(0)/m/n/10.95 Given a set of categories, we define the functio
+ns 𝜙: (c$[][] [][][][] [][][][] [] [][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][]$ 
+ []
+
+[14]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.189 denoted mathematically above as _
+                                       , and in GF as `Arith.gf` is given by :
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.190 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[15]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.267 Then one can form a tree `DetCN The_
+                                          Det Car_CN` which should linearize...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.271 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (702.87512pt too wide) in paragraph at lines 267--271
+[]\TU/DejaVuSerif(0)/m/n/10.95 Then one can form a tree ‘DetCN The$[][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][
+][][][][][][][][][][][][][][][]$ 
+ []
+
+[16] [17]
+Overfull \hbox (28.28131pt too wide) in paragraph at lines 351--351
+[]\TU/DejaVuSansMono(0)/m/n/10.95 lin Add e1 e2 = "the sum of" ++ e1 ++ "and" +
++ e2 ; Mul e1 e2 = "the product of"[] 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.384 `lincat` of $C_i$ , e.g. if `lincat C_
+                                            i = T ;` then `c_i : T`.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.385 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[18]
+Overfull \hbox (37.07129pt too wide) in paragraph at lines 400--400
+[]\TU/DejaVuSansMono(0)/m/n/10.95 product of" ++ linearize (Add (EInt 3) (EInt 
+4)) ++ "and" ++ linearize (EInt 5)[] 
+ []
+
+
+Overfull \hbox (28.28134pt too wide) in paragraph at lines 400--400
+[]\TU/DejaVuSansMono(0)/m/n/10.95 ->* "the product of" ++ ("the sum of" ++ (EIn
+t 3) ++ (EInt 4)) ++ "and" ++ ({ s[] 
+ []
+
+
+Overfull \hbox (19.49138pt too wide) in paragraph at lines 400--400
+[]\TU/DejaVuSansMono(0)/m/n/10.95 = "5"} . s) ->* "the product of" ++ ("the sum
+ of" ++ ({ s = "3"} . s) ++ ({ s =[] 
+ []
+
+
+Overfull \hbox (34.87378pt too wide) in paragraph at lines 400--400
+[]\TU/DejaVuSansMono(0)/m/n/10.95 "4"} . s)) ++ "and" ++ "5" ->* "the product o
+f" ++ ("the sum of" ++ "3" ++ "and"[] 
+ []
+
+
+Overfull \hbox (34.87378pt too wide) in paragraph at lines 400--400
+[]\TU/DejaVuSansMono(0)/m/n/10.95 ++ "4") ++ "and" ++ "5" ->* "the product of" 
+++ ("the sum of" ++ "3" ++ "and" ++[] 
+ []
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.410 [previous section](#
+                          #some-preliminary-observations-and-considerations).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.410 [previous section](##
+                           some-preliminary-observations-and-considerations).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (47.04161pt too wide) in paragraph at lines 422--427
+[]\TU/DejaVuSerif(0)/m/n/10.95 Once GF is [installed](https://www.grammaticalfr
+amework.org/download/index-3.10.html),
+ []
+
+
+Overfull \hbox (62.68181pt too wide) in paragraph at lines 431--437
+\TU/DejaVuSerif(0)/m/n/10.95 [official shell reference](https://www.grammatical
+framework.org/doc/gf-shell-reference.html)
+ []
+
+
+Overfull \hbox (50.1332pt too wide) in paragraph at lines 431--437
+\TU/DejaVuSerif(0)/m/n/10.95 and Inari Listenmaa’s post on [tips and gotchas](h
+ttps://inariksit.github.io/gf/2018/08/28/gf-
+ []
+
+
+Overfull \hbox (34.87378pt too wide) in paragraph at lines 446--446
+[]\TU/DejaVuSansMono(0)/m/n/10.95 0 msec Arith> help gr gr, generate_random gen
+erate random trees in the current[] 
+ []
+
+[19]
+Overfull \hbox (32.67633pt too wide) in paragraph at lines 466--466
+[]\TU/DejaVuSansMono(0)/m/n/10.95 (EInt 999) (EInt 999))) (Add (Add (EInt 999) 
+(EInt 999)) (Add (EInt 999) (EInt[] 
+ []
+
+
+Overfull \hbox (28.2813pt too wide) in paragraph at lines 466--466
+[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of the product of the product of 999 
+and 999 and the sum of 999 and 999[] 
+ []
+
+
+Overfull \hbox (26.0838pt too wide) in paragraph at lines 487--487
+[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of 999 and the product of the sum of 
+999 and 999 and the sum of 999 and[] 
+ []
+
+
+Overfull \hbox (19.49141pt too wide) in paragraph at lines 487--487
+[]\TU/DejaVuSansMono(0)/m/n/10.95 Add (EInt 999) (Mul (Add (EInt 999) (EInt 999
+)) (Add (EInt 999) (EInt 999)))[] 
+ []
+
+
+Overfull \hbox (26.0838pt too wide) in paragraph at lines 487--487
+[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of 999 and the product of the sum of 
+999 and 999 and the sum of 999 and[] 
+ []
+
+[20]
+Overfull \hbox (0.82831pt too wide) in paragraph at lines 507--509
+[]\TU/DejaVuSerif(0)/m/n/10.95 **Exercise 2 :** Write concrete syntax in your f
+avorite language, ‘ArithFaveLang.gf‘
+ []
+
+! You can't use `macro parameter character #' in vertical mode.
+l.520 #
+       ## Solutions
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.520 ##
+        # Solutions
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.520 ###
+          Solutions
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+[21]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.562 ...r](https://en.wikipedia.org/wiki/Catalan_
+                                                  number) of
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.564 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+) [22] [23
+
+]
+\openout3 = `roadmap.ptb'.
+
+[24]
+\openout3 = `roadmap.ptb'.
+
+[25] [26]
+\openout3 = `roadmap.ptb'.
+
+[27]
+Overfull \hbox (7.21178pt too wide) in paragraph at lines 1136--1146
+\TU/DejaVuSerif(0)/m/it/10.95 Thus, the induction principle for identity types 
+gives us an element $[][][][][] [][] [][] [][] [][] []
+ []
+
+\openout3 = `roadmap.ptb'.
+
+[28]
+\openout3 = `roadmap.ptb'.
+
+\openout3 = `roadmap.ptb'.
+
+[29]
+\openout3 = `roadmap.ptb'.
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 2135--2135
+ [][][][] 
+ []
+
+[30]
+Overfull \hbox (3.00977pt too wide) in paragraph at lines 2137--2139
+\TU/DejaVuSerif(0)/m/n/10.95 tween paths between paths level, some interesting 
+and nonintuitive results emerge.
+ []
+
+[31]
+\openout3 = `roadmap.ptb'.
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][] 
+ []
+
+
+Overfull \hbox (113.99916pt too wide) in paragraph at lines 3282--3282
+ [][][][] 
+ []
+
+[32] [33] [34]
+
+LaTeX Font Warning: Font shape `TU/DejaVuSerif(0)/m/sc' undefined
+(Font)              using `TU/DejaVuSerif(0)/m/n' instead on input line 3388.
+
+[35] [36] (./roadmap.bbl) [37]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3431.
+[38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3431.
+(./roadmap.aux (./perspectives.aux) (./previouswork.aux) (./mltt.aux) (./gfintr
+o.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3431.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3431.
+
+Package rerunfilecheck Info: File `roadmap.out' has not changed.
+(rerunfilecheck)             Checksum: 173D097E186CA17714F25B098DABD0F1;2082.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3431.
+ ) 
+Here is how much of TeX's memory you used:
+ 19755 strings out of 479819
+ 346990 string characters out of 5895846
+ 946307 words of memory out of 5000000
+ 36442 multiletter control sequences out of 15000+600000
+ 537637 words of font info for 148 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 51i,9n,109p,889b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on roadmap.xdv (43 pages, 921108 bytes).

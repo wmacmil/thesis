@@ -1,0 +1,54 @@
+
+
+
+1. Intro 
+
+Problem (Gangesalingem)
+
+2. Background/related work
+  * Linguistics related work in beginning 
+  * Cade, Hott '14
+  * Gangesalingem
+  * NaProche, Mizar, Thierry Coq system
+  * GF Alfa
+
+3. Preliminaries
+
+  * MLTT
+    - Judgement
+    - Props as types
+
+  * NL + Math
+    - May ITC Talk
+    - Differences between 
+
+  * GF (method)
+    - Example(s) from blog
+    - RGL
+    - PGF
+    - other pre/post-processing
+
+  * Agda (object of study)
+    - implementation of MLTT
+    - other theorem provers
+    - discuss our *approximation of agda*
+    - cubical tt
+
+
+(3-5) agda, my version, ideal
+
+  3. HoTT, (informal) case study 
+    * as done in thesis
+  4. Implementation
+    * Dependent TT 
+    * cubicallTT , an extension
+  5. Results
+    * test cases
+    
+6. Goals & Challenges
+  - Limitations
+  - Future Work - laying a foundation
+
+7. References
+
+Appendix : Code

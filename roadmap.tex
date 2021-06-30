@@ -1,0 +1,3433 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage{mlt-thesis-2015}
+
+% With Xetex/Luatex this shouldn't be used
+%\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{setspace}
+
+% from here
+
+\usepackage{fontspec}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{agda}
+
+\usepackage{unicode-math}
+
+%\usepackage{amssymb,amsmath,amsthm,stmaryrd,mathrsfs,wasysym}
+
+%\usepackage{enumitem,mathtools,xspace}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{xspace}
+
+
+\usepackage{enumitem}
+
+
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+
+% \setmonofont{Fira Mono}
+% \setsansfont{Noto Sans}
+
+\usepackage{newunicodechar}
+
+\newunicodechar{ℓ}{\ensuremath{\mathnormal\ell}}
+\newunicodechar{→}{\ensuremath{\mathnormal\rightarrow}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lem}{Lemma}
+\newtheorem{proof}{Proof}
+\newtheorem{thm}{Theorem}
+
+\newcommand{\jdeq}{\equiv}      % An equality judgment
+\newcommand{\refl}[1]{\ensuremath{\mathsf{refl}_{#1}}\xspace}
+\newcommand{\define}[1]{\textbf{#1}}
+\newcommand{\defeq}{\vcentcolon\equiv}  % A judgmental equality currently being defined
+
+%\newcommand{\jdeq}{\equiv}      % An equality judgment
+%\let\judgeq\jdeq
+
+
+\newcommand{\ind}[1]{\mathsf{ind}_{#1}}
+\newcommand{\indid}[1]{\ind{=_{#1}}} % (Martin-Lof) path induction principle for identity types
+
+\newcommand{\blank}{\mathord{\hspace{1pt}\text{--}\hspace{1pt}}}
+
+\newcommand{\opp}[1]{\mathord{{#1}^{-1}}}
+\let\rev\opp
+
+\newcommand{\id}[3][]{\ensuremath{#2 =_{#1} #3}\xspace}
+
+
+
+\newcommand{\UU}{\ensuremath{\mathcal{U}}\xspace}
+\let\bbU\UU
+\let\type\UU
+
+
+%\newcommand{\ct}{%
+  %\mathchoice{\mathbin{\raisebox{0.5ex}{$\displaystyle\centerdot$}}}%
+             %{\mathbin{\raisebox{0.5ex}{$\centerdot$}}}%
+             %{\mathbin{\raisebox{0.25ex}{$\scriptstyle\,\centerdot\,$}}}%
+             %{\mathbin{\raisebox{0.1ex}{$\scriptscriptstyle\,\centerdot\,$}}}
+%}
+
+% til here
+
+\title{The grammar of proof}
+% \subtitle{Subtitle}
+\author{Warrick Macmillan}
+
+\begin{document}
+
+%% ============================================================================
+%% Title page
+%% ============================================================================
+\begin{titlepage}
+
+\maketitle
+
+\vfill
+
+\begingroup
+\renewcommand*{\arraystretch}{1.2}
+\begin{tabular}{l@{\hskip 20mm}l}
+\hline
+Master's Thesis: & 30 credits\\
+Programme: & Master’s Programme in Language Technology\\
+Level: & Advanced level \\
+Semester and year: & Fall, 2021\\
+Supervisor & Aarne Ranta\\
+Examiner & (name of the examiner)\\
+Report number & (number will be provided by the administrators) \\
+Keywords & (enter a few keywords) 
+\end{tabular}
+\endgroup
+
+\thispagestyle{empty}
+\end{titlepage}
+
+%% ============================================================================
+%% Abstract
+%% ============================================================================
+\newpage
+\singlespacing
+\section*{Abstract}
+
+Brief summary of research question, background, method, results\ldots
+
+\thispagestyle{empty}
+
+%% ============================================================================
+%% Preface
+%% ============================================================================
+\newpage
+\section*{Preface}
+
+Acknowledgements, etc.
+
+\thispagestyle{empty}
+
+%% ============================================================================
+%% Contents
+%% ============================================================================
+\newpage
+
+\begin{spacing}{0.0}
+\tableofcontents
+\end{spacing}
+
+\thispagestyle{empty}
+
+%% ============================================================================
+%% Introduction
+%% ============================================================================
+\newpage
+\setcounter{page}{1}
+
+\section{Introduction}
+\label{sec:intro}
+
+The central concern of this thesis is the syntax of mathematics, programming
+languages, and their respective mutual influence, as conceived and practiced by
+mathematicians and computer scientists.  From one vantage point, the role of
+syntax in mathematics may be regarded as a 2nd order concern, a topic for
+discussion during a Fika, an artifact of ad hoc development by the working
+mathematician whose real goals are producing genuine mathematical knowledge.
+For the programmers and computer scientists, syntax may be regarding as a
+matter of taste, with friendly debates recurring regarding the use of
+semicolons, brackets, and white space.  Yet, when viewed through the lens of
+the propositions-as-types paradigm, these discussions intersect in new and
+interesting ways.  When one introduces a third paradigm through which to
+analyze the use of syntax in mathematics and programming, namely Linguistics, I
+propose what some may regard as superficial detail, indeed becomes a central
+paradigm, with many interesting and important questions. 
+
+To get a feel for this syntactic paradigm, let us look at a basic mathematical
+example: that of a group homomorphism, as expressed in a variety of sources.  
+
+% Wikipedia Defn:
+
+\begin{definition}
+In mathematics, given two groups, $(G, \ast)$ and $(H, \cdot)$, a group homomorphism from $(G, \ast)$ to $(H, \cdot)$ is a function $h : G \to H$ such that for all $u$ and $v$ in $G$ it holds that
+
+\begin{center}
+  $h(u \ast v) = h ( u ) \cdot h ( v )$ 
+\end{center}
+\end{definition}
+
+% http://math.mit.edu/~jwellens/Group%20Theory%20Forum.pdf
+
+\begin{definition}
+Let $G = (G,\cdot)$ and $G' = (G',\ast)$ be groups, and let $\phi : G \to G'$ be a map between them. We call $\phi$ a \textbf{homomorphism} if for every pair of elements $g, h \in G$, we have 
+\begin{center}
+  $\phi(g \ast h) = \phi ( g ) \cdot \phi ( h )$ 
+\end{center}
+\end{definition}
+
+% http://www.maths.gla.ac.uk/~mwemyss/teaching/3alg1-7.pdf
+
+\begin{definition}
+Let $G$, $H$, be groups.  A map $\phi : G \to H$ is called a \emph{group homomorphism} if
+\begin{center}
+  $\phi(xy) = \phi ( x ) \phi ( y )$ for all $x, y \in G$ 
+\end{center}
+(Note that $xy$ on the left is formed using the group operation in $G$, whilst the product $\phi ( x ) \phi ( y )$ is formed using the group operation $H$.)
+\end{definition}
+
+% NLab:
+
+\begin{definition}
+Classically, a group is a monoid in which every element has an inverse (necessarily unique).
+\end{definition}
+
+We inquire the reader to pay attention to nuance and difference in presentation
+that is normally ignored or taken for granted by the fluent mathematician.
+
+If one want to distill the meaning of each of these presentations, there is a
+significant amount of subliminal interpretation happening very much analagous
+to our innate lingusitic ussage.  The inverse and identity are discarded, even
+though they are necessary data when defning a group. The order of presentation
+of information is incostent, as well as the choice to use symbolic or natural
+language information. In (3), the group operation is used implicitly, and its
+clarification a side remark.
+
+Details aside, these all mean the same thing--don't they?  This thesis seeks to provide an
+abstract framework to determine whether two lingusitically nuanced presenations
+mean the same thing via their syntactic transformations. 
+
+These syntactic transformations come in two flavors : parsing and
+linearization, and are natively handled by a Logical Framework (LF) for
+specifying grammars : Grammatical Framework (GF).
+
+\begin{code}[hide]%
+\>[0]\AgdaSymbol{\{-\#}\AgdaSpace{}%
+\AgdaKeyword{OPTIONS}\AgdaSpace{}%
+\AgdaPragma{--cubical}\AgdaSpace{}%
+\AgdaSymbol{\#-\}}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaKeyword{module}\AgdaSpace{}%
+\AgdaModule{roadmap}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[0]\<%
+\end{code}
+
+\begin{code}[hide]%
+\>[0]\<%
+\\
+\>[0]\AgdaKeyword{module}\AgdaSpace{}%
+\AgdaModule{Monoid}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaKeyword{module}\AgdaSpace{}%
+\AgdaModule{Namespace1}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaKeyword{open}\AgdaSpace{}%
+\AgdaKeyword{import}\AgdaSpace{}%
+\AgdaModule{Cubical.Core.Everything}\<%
+\\
+%
+\>[2]\AgdaKeyword{open}\AgdaSpace{}%
+\AgdaKeyword{import}\AgdaSpace{}%
+\AgdaModule{Cubical.Foundations.Prelude}\AgdaSpace{}%
+\AgdaKeyword{renaming}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{to}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙''\AgdaUnderscore{}}}\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaKeyword{open}\AgdaSpace{}%
+\AgdaKeyword{import}\AgdaSpace{}%
+\AgdaModule{Cubical.Foundations.Isomorphism}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaKeyword{private}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{variable}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaGeneralizable{ℓ}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPostulate{Level}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{is-left-unit-for}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaGeneralizable{ℓ}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaGeneralizable{ℓ}\<%
+\\
+%
+\>[2]\AgdaFunction{is-left-unit-for}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaArgument{A}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{e}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{\AgdaUnderscore{}⋆\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{e}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{⋆}}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≡}}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{is-right-unit-for}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaGeneralizable{ℓ}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaGeneralizable{ℓ}\<%
+\\
+%
+\>[2]\AgdaFunction{is-right-unit-for}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaArgument{A}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{e}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{\AgdaUnderscore{}⋆\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{⋆}}\AgdaSpace{}%
+\AgdaBound{e}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≡}}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{is-assoc}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaGeneralizable{ℓ}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaGeneralizable{ℓ}\<%
+\\
+%
+\>[2]\AgdaFunction{is-assoc}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaArgument{A}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{\AgdaUnderscore{}⋆\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{⋆}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{⋆}}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≡}}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{⋆}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{⋆}}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSymbol{)}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaKeyword{record}\AgdaSpace{}%
+\AgdaRecord{MonoidStrRec}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaGeneralizable{ℓ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaBound{ℓ}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{constructor}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaInductiveConstructor{monoid}\<%
+\\
+%
+\>[4]\AgdaKeyword{field}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaField{ε}%
+\>[10]\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\<%
+\\
+%
+\>[6]\AgdaOperator{\AgdaField{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[6]\AgdaField{left-unit}%
+\>[17]\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{is-left-unit-for}\AgdaSpace{}%
+\AgdaField{ε}\AgdaSpace{}%
+\AgdaOperator{\AgdaField{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\<%
+\\
+%
+\>[6]\AgdaField{right-unit}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{is-right-unit-for}\AgdaSpace{}%
+\AgdaField{ε}\AgdaSpace{}%
+\AgdaOperator{\AgdaField{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\<%
+\\
+%
+\>[6]\AgdaField{assoc}%
+\>[17]\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{is-assoc}\AgdaSpace{}%
+\AgdaOperator{\AgdaField{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[6]\AgdaField{carrier-set}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{isSet}\AgdaSpace{}%
+\AgdaBound{A}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaKeyword{record}\AgdaSpace{}%
+\AgdaRecord{Monoid'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaPrimitive{ℓ-suc}\AgdaSpace{}%
+\AgdaBound{ℓ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{constructor}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaInductiveConstructor{monoid'}\<%
+\\
+%
+\>[4]\AgdaKeyword{field}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaField{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaBound{ℓ}\<%
+\\
+%
+\>[6]\AgdaField{ε}%
+\>[10]\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaField{A}\<%
+\\
+%
+\>[6]\AgdaOperator{\AgdaField{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaField{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaField{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaField{A}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[6]\AgdaField{left-unit}%
+\>[17]\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{is-left-unit-for}\AgdaSpace{}%
+\AgdaField{ε}\AgdaSpace{}%
+\AgdaOperator{\AgdaField{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\<%
+\\
+%
+\>[6]\AgdaField{right-unit}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{is-right-unit-for}\AgdaSpace{}%
+\AgdaField{ε}\AgdaSpace{}%
+\AgdaOperator{\AgdaField{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\<%
+\\
+%
+\>[6]\AgdaField{assoc}%
+\>[17]\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{is-assoc}\AgdaSpace{}%
+\AgdaOperator{\AgdaField{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[6]\AgdaField{carrier-set}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{isSet}\AgdaSpace{}%
+\AgdaField{A}\<%
+\\
+\>[0]\<%
+\end{code}
+
+We now show yet another definition of a group homomorphism formalized in the
+Agda programming language:
+
+[TODO: replace monoidhom with grouphom]
+
+\begin{code}%
+\>[0][@{}l@{\AgdaIndent{1}}]%
+\>[2]\AgdaFunction{monoidHom}%
+\>[175I]\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{ℓ}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPostulate{Level}\AgdaSymbol{\}}\<%
+\\
+\>[.][@{}l@{}]\<[175I]%
+\>[12]\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{(}\AgdaInductiveConstructor{monoid'}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{})}\AgdaSpace{}%
+\AgdaBound{(}\AgdaInductiveConstructor{monoid'}\AgdaSpace{}%
+\AgdaBound{a'}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{}}\AgdaSpace{}%
+\AgdaBound{\AgdaUnderscore{})}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaRecord{Monoid'}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{ℓ}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{)}\<%
+\\
+%
+\>[12]\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{a'}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Type}\AgdaSpace{}%
+\AgdaBound{ℓ}\<%
+\\
+%
+\>[2]\AgdaFunction{monoidHom}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaSymbol{(}\AgdaInductiveConstructor{monoid'}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaBound{ε}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaBound{left-unit}\AgdaSpace{}%
+\AgdaBound{right-unit}\AgdaSpace{}%
+\AgdaBound{assoc}\AgdaSpace{}%
+\AgdaBound{carrier-set}\AgdaSymbol{)}\<%
+\\
+%
+\>[4]\AgdaSymbol{(}\AgdaInductiveConstructor{monoid'}\AgdaSpace{}%
+\AgdaBound{A₁}\AgdaSpace{}%
+\AgdaBound{ε₁}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{\AgdaUnderscore{}∙₁\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaBound{left-unit₁}\AgdaSpace{}%
+\AgdaBound{right-unit₁}\AgdaSpace{}%
+\AgdaBound{assoc₁}\AgdaSpace{}%
+\AgdaBound{carrier-set₁}\AgdaSymbol{)}\<%
+\\
+%
+\>[4]\AgdaBound{f}\<%
+\\
+%
+\>[4]\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{m1}\AgdaSpace{}%
+\AgdaBound{m2}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{m1}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{∙}}\AgdaSpace{}%
+\AgdaBound{m2}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≡}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{m1}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaBound{∙₁}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{m2}\AgdaSymbol{)}\<%
+\end{code}
+
+While the first three definitions above are should be linguistically
+comprehensible to a non-mathematician, this last definition is most certainly
+not.  While may carry degree of comprehension to a programmer or mathematician
+not exposed to Agda, it is certainly comprehensible to a computer : that is, it
+typechecks on a computer where Cubical Agda is installed. While GF is designed
+for multilingual syntactic transformations and is targeted for natural language
+translation, it's underlying theory is largely based on ideas from the compiler
+communities. A cousin of the BNF Converter (BNFC), GF is fully capable of
+parsing progamming languages like Agda! And while the above definition is just
+another concrete syntactic presentation of a group homomorphism, it is distinct
+from the natural language presentations above in that the colors indicate it
+has indeed type checked. 
+
+While this example may not exemplify the power of Agda's type checker, it is of
+considerable interest to many. The typechecker has merely assured us that
+monoidHom, is a well-formed type.  The type-checker is much more useful than is
+immediately evident: it delegates the work of verifying that a proof is
+correct, that is, the work of judging whether a term has a type, to the
+computer. While it's of practical concern is immediate to any exploited grad
+student grading papers late on a Sunday night, its theoretical concern has led
+to many recent developments in modern mathematics. Thomas Hales solution to the
+Kepler Conjecture was seen as unverifiable by those reviewing it. This led to
+Hales outsourcing the verification to Interactive Theorem provers HOL Light and
+Isabelle, during which led to many minor corrections in the original proof
+which were never spotted due to human oversight.
+
+Fields Medalist Vladimir Voevodsky, had the experience of being told one day
+his proof of the Milnor conjecture was fatally flawed. Although the leak in the
+proof was patched, this experience of temporarily believing much of his life's
+work invalid led him to investigate proof assintants as a tool for future
+thought. Indeed, this proof verification error was a key event that led to the
+Univalent Foundations
+Project~\cite{theunivalentfoundationsprogram-homotopytypetheory-2013}.
+
+While Agda and other programming languages are capable of encoding definitions,
+theorems, and proofs, they have so far seen little adoption, and in some cases
+treated with suspicion and scorn by many mathematicians.  This isn't entirely
+unfounded : it's a lot of work to learn how to use Agda or Coq, software
+updates may cause proofs to break, and the inevitable errors we humans are
+instilled in these Theorem Provers. And that's not to mention that Martin-Löf
+Type Theory, the constructive foundational project which underlies these proof
+assistants, is rejected by those who dogmatically accept the law of the
+excluded middle and ZFC as the word of God.
+
+It should be noted, the constructivist rejects neither the law of the excluded
+middle nor ZFC. She merely observes them, and admits their handiness in certain
+cituations. Excluded middle is indeed a helpful tool, as many mathematicians
+may attest. The contention is that it should be avoided whenever possible -
+proofs which don't rely on it, or it's corallary of proof by contradction, are
+much more ameanable to formalization in systems with decideable type checking.
+And ZFC, while serving the mathematicians of the early 20th century, is 
+lacking when it comes to the higher dimensional structure of n-categories and
+infinity groupoids.
+
+What these theorem provers give the mathematician is confidence that her work
+is correct, and even more importantly, that the work which she takes for
+granted and references in her work is also correct. The task before us is then
+one of religious conversion. And one doesn't undertake a conversion by simply
+by preaching. Foundational details aside, this thesis is meant to provide a
+blueprint for the syntactic reformation that must take place.  
+
+It doesn't ask the mathematician to relinquish the beautiful language she has
+come to love in expressing her ideas.  Rather, it asks her to make a compromise
+for the time being, and use a Controlled Natural Language (CNL) to develop her
+work. In exchange she'll get the confidence that Agda provides. Not only that,
+she'll be able to search through a library, to see who else has possibly
+already postulated and proved her conjecture. A version of this grandiose vision is 
+explored in The Formal Abstracts Project.
+
+\include{perspectives}
+
+\include{previouswork}
+
+\section{Preliminaries}
+
+We give brief but relevant overviews of the background ideas and tools that went
+into the generation of this thesis. 
+
+
+\include{mltt}
+
+\include{gfintro}
+
+
+\subsection{Agda}
+
+Agda is an attempt to formalize Martin-Löf's intensional type theory (reference 1984).
+
+\subsection{Natural Language and Mathematics}
+
+...
+
+\section{HoTT Proofs}
+
+\subsection{Why HoTT for natural language?}
+
+We note that all natural language definitions, theorems, and proofs are copied
+here verbatim from the HoTT book.  This decision is admittedly arbitrary, but
+does have some benefits.  We list some here : 
+
+\begin{itemize}[noitemsep]
+
+\item As the HoTT book was a collaborative effort, it mixes the language of
+many individuals and editors, and can be seen as more ``linguistically
+neutral''
+
+\item By its very nature HoTT is interdiscplinary, conceived and constructed by
+mathematicians, logicians, and computer scientists. It therefore is meant to
+interface with all these discplines, and much of the book was indeed formalized
+before it was written
+
+\item It has become canonical reference in the field, and therefore benefits
+from wide familiarity
+
+\item It is open source, with publically available Latex files free for
+modification and distribution
+
+\end{itemize}
+
+The genisis of higher type theory is a somewhat elementary observation : that
+the identity type, parameterized by an arbitrary type $A$ and indexed by
+elements of $A$, can actually be built iteratively from previous identities.
+That is, $A$ may actually already be an identity defined over another type
+$A'$, namely $A \defeq x=_{A'} y$ where $x,y:A'$. The key idea is that this
+iterating identities admits a homotpical interpretation : 
+
+\begin{itemize}[noitemsep]
+
+\item Types are topological spaces
+\item Terms are points in these space
+
+\item Equality types $x=_{A} y$ are paths in $A$ with endpoints $x$ and $y$ in
+$A$
+
+\item Iterated equality types are paths between paths, or continuous path
+deformations in some higher path space. This is, intuitively, what
+mathematicians call a homotopy.
+
+\end{itemize}
+
+To be explicit, given a type $A$, we can form the homotopy $p=_{x=_{A} y}q$
+with endpoints $p$ and $q$ inhabiting the path space $x=_{A} y$.
+
+Let's start out by examining the inductive definition of the identity type.  We
+present this definition as it appears in section 1.12 of the HoTT book.
+
+\begin{definition}
+  The formation rule says that given a type $A:\UU$ and two elements $a,b:A$, we can form the type $(\id[A]{a}{b}):\UU$ in the same universe.
+  The basic way to construct an element of $\id{a}{b}$ is to know that $a$ and $b$ are the same.
+  Thus, the introduction rule is a dependent function
+  \[\refl{} : \prod_{a:A} (\id[A]{a}{a}) \]
+  called \define{reflexivity},
+  which says that every element of $A$ is equal to itself (in a specified way).  We regard $\refl{a}$ as being the
+  constant path %path\indexdef{path!constant}\indexsee{loop!constant}{path, constant}
+  at the point $a$.
+\end{definition}
+
+We recapitulate this definition in Agda, and treat : 
+
+\begin{code}[hide]%
+\>[0]\<%
+\\
+\>[0]\AgdaKeyword{module}\AgdaSpace{}%
+\AgdaModule{Id}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[0]\<%
+\end{code}
+\begin{code}%
+\>[0]\<%
+\\
+\>[0][@{}l@{\AgdaIndent{1}}]%
+\>[2]\AgdaKeyword{data}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{\AgdaUnderscore{}≡'\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡'}}\AgdaSpace{}%
+\AgdaBound{a}\<%
+\\
+\>[0]\<%
+\end{code}
+
+\subsection{An introduction to equality}
+
+There is already some tension brewing : most mathematicains have an intuition
+for equality, that of an identitfication between two pieces of information
+which intuitively must be the same thing, i.e. $2+2=4$. They might ask, what
+does it mean to ``construct an element of $\id{a}{b}$''? For the mathematician
+use to thinking in terms of sets $\{\id{a}{b} \mid a,b \in \mathbb{N} \}$ isn't
+a well-defined notion. Due to its use of the axiom of extensionality, the set
+theoretic notion of equality is, no suprise, extensional.  This means that sets
+are identified when they have the same elements, and equality is therefore
+external to the notion of set. To inhabit a type means to provide evidence for
+that inhabitation. The reflexivity constructor is therefore a means of
+providing evidence of an equality. This evidence approach is disctinctly
+constructive, and a big reason why classical and constructive mathematics,
+especially when treated in an intuitionistic type theory suitable for a
+programming language implementation, are such different beasts.
+
+In Martin-Löf Type Theory, there are two fundamental notions of equality,
+propositional and definitional.  While propositional equality is inductively
+defined (as above) as a type which may have possibly more than one inhabitant,
+definitional equality, denoted $-\equiv -$ and perhaps more aptly named
+computational equality, is familiarly what most people think of as equality.
+Namely, two terms which compute to the same canonical form are computationally
+equal. In intensional type theory, propositional equality is a weaker notion
+than computational equality : all propositionally equal terms are
+computationally equal. However, computational equality does not imply
+propistional equality - if it does, then one enters into the space of
+extensional type theory. 
+
+Prior to the homotopical interpretation of identity types, debates about
+extensional and intensional type theories centred around two features or bugs :
+extensional type theory sacrificed decideable type checking, while intensional
+type theories required extra beauracracy when dealing with equality in proofs.
+One approach in intensional type theories treated types as setoids, therefore
+leading to so-called ``Setoid Hell''. These debates reflected Martin-Löf's
+flip-flopping on the issue. His seminal 1979 Constructive Mathematics and
+Computer Programming, which took an extensional view, was soon betrayed by
+lectures he gave soon thereafter in Padova in 1980.  Martin-Löf was a born
+again intensional type theorist.  These Padova lectures were later published in
+the "Bibliopolis Book", and went on to inspire the European (and Gothenburg in
+particular) approach to implementing proof assitants, whereas the
+extensionalists were primarily eminating from Robert Constable's group at
+Cornell. 
+
+This tension has now been at least partially resolved, or at the very least
+clarified, by an insight Voevodsky was apparently most proud of : the
+introduction of h-levels. We'll delegate these details for a later section, it
+is mentioned here to indicate that extensional type theory was really ``set
+theory'' in disguise, in that it collapses the higher path structure of
+identity types. The work over the past 10 years has elucidated the intensional
+and extensional positions. HoTT, by allowing higher paths, is unashamedly
+intentional, and admits a collapse into the extensional universe if so desired.
+We now the examine the structure induced by this propositional equality.
+
+\subsection{All about Identity}
+
+We start with a slight reformulation of the identity type, where the element
+determining the equality is treated as a parameter rather than an index. This
+is a matter of convenience more than taste, as it delegates work for Agda's
+typechecker that the programmer may find a distraction. The reflexivity terms
+can generally have their endpoints inferred, and therefore cuts down on the
+beauracry which often obscures code. 
+
+\begin{code}%
+\>[0]\<%
+\\
+\>[0][@{}l@{\AgdaIndent{1}}]%
+\>[2]\AgdaKeyword{data}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{\AgdaUnderscore{}≡\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{a}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaKeyword{infix}\AgdaSpace{}%
+\AgdaNumber{20}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{\AgdaUnderscore{}≡\AgdaUnderscore{}}}\<%
+\\
+\>[0]\<%
+\end{code}
+
+It is of particular concern in this thesis, because it hightlights a
+fundamental difference between the lingusitic and the formal approach to proof
+presentation.  While the mathematician can whimsically choose to include the
+reflexivity arguement or ignore it if she believes it can be inferred, the
+programmer can't afford such a laxidasical attitude. Once the type has been
+defined, the arguement strcuture is fixed, all future references to the
+definition carefully adhere to its specification. The advantage that the
+programmer does gain however, that of Agda's powerful inferential abilities,
+allows for the insides to be seen via interaction windown. 
+
+Perhaps not of much interest up front, this is incredibly important detail
+which the mathematician never has to deal with explicity, but can easily make
+type and term translation infeasible due to the fast and loose nature of the
+mathematician's writing. Conversely, it may make Natural Language Generation
+(NLG) incredibly clunky, adhering to strict rules when created sentences out of
+programs. 
+
+[ToDo, give a GF example]
+
+A prime source of beauty in constructive mathematics arises from Gentzen's
+recognition of a natural duality in the rules for introducing and using logical
+connectives. The mutually coherence between introduction and elmination rules
+form the basis of what has since been labeled harmony in a deductive system.
+This harmony isn't just an artifact of beauty, it forms the basis for cuts in
+proof normalization, and correspondingly, evaluation of terms in a programming
+langauge. 
+
+The idea is simple, each new connective, or type former, needs a means of
+constructing its terms from its constiutuent parts, yielding introduction
+rules. This however, isn't enough - we need a way of dissecting and using the
+terms we construct. This yields an elimantion rule which can be uniquely
+derived from an inductively defined type. These elimination forms yield
+induction principles, or a general notion of proof by induction, when given an
+interpration in mathematics. In the non-depedent case, this is known as a
+recursion principle, and corresponds to recursion known by programmers far and
+wide.  The proof by induction over natural numbers familiar to mathematicians
+is just one special case of this induction principle at work--the power of
+induction has been recognized and brought to the fore by computer scientists.
+
+We now elaborate the most important induction principle in HoTT, namely, the
+induction of an identity type.
+
+\begin{definition}[Version 1]
+
+Moreover, one of the amazing things about homotopy type theory is that all of the basic constructions and axioms---all of the
+higher groupoid structure---arises automatically from the induction
+principle for identity types.
+Recall from [section 1.12]  that this says that if % \cref{sec:identity-types}
+  \begin{itemize}[noitemsep]
+    \item for every $x,y:A$ and every $p:\id[A]xy$ we have a type $D(x,y,p)$, and
+    \item for every $a:A$ we have an element $d(a):D(a,a,\refl a)$,
+  \end{itemize}
+then
+  \begin{itemize}[noitemsep]
+    \item there exists an element $\indid{A}(D,d,x,y,p):D(x,y,p)$ for \emph{every}
+    two elements $x,y:A$ and $p:\id[A]xy$, such that $\indid{A}(D,d,a,a,\refl a)
+    \jdeq d(a)$.
+  \end{itemize}
+\end{definition}
+The book then reiterates this definition, with basically no natural language,
+essentially in the raw logical framework devoid of anything but dependent
+function types.
+\begin{definition}[Version 2]
+In other words, given dependent functions
+\begin{align*}
+  D & :\prod_{(x,y:A)}(x= y) \; \to \; \type\\
+  d & :\prod_{a:A} D(a,a,\refl{a})
+\end{align*}
+there is a dependent function
+\[\indid{A}(D,d):\prod_{(x,y:A)}\prod_{(p:\id{x}{y})} D(x,y,p)\]
+such that
+\begin{equation}\label{eq:Jconv}
+\indid{A}(D,d,a,a,\refl{a})\jdeq d(a)
+\end{equation}
+for every $a:A$.
+Usually, every time we apply this induction rule we will either not care about the specific function being defined, or we will immediately give it a different name.
+
+\end{definition}
+Again, we define this, in Agda, staying as true to the syntax as possible.
+\begin{code}%
+\>[0]\<%
+\\
+\>[0][@{}l@{\AgdaIndent{1}}]%
+\>[2]\AgdaFunction{J}\AgdaSpace{}%
+\AgdaSymbol{:}%
+\>[275I]\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\<%
+\\
+\>[.][@{}l@{}]\<[275I]%
+\>[6]\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}%
+\>[36]\AgdaPrimitive{Set}\AgdaSymbol{)}\<%
+\\
+%
+\>[6]\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{((}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaSymbol{))}\AgdaSpace{}%
+\AgdaComment{-- → (d : (a : A) → (D a a r ))}\<%
+\\
+%
+\>[6]\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\<%
+\\
+%
+\>[6]\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\<%
+\\
+%
+\>[6]\AgdaComment{------------------------------------}\<%
+\\
+%
+\>[6]\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+%
+\>[2]\AgdaFunction{J}\AgdaSpace{}%
+\AgdaBound{D}\AgdaSpace{}%
+\AgdaBound{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaDottedPattern{\AgdaSymbol{.}}\AgdaDottedPattern{x}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{d}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+\>[0]\<%
+\end{code}
+
+It should be noted that, for instance, we can choose to leave out the $d$ label
+on the third line. Indeed minimizing the amount of dependent typing and using
+vanilla function types when dependency is not necessary, is generally
+considered ``best practice'' Agda, because it will get desugared by the time it
+typechecks anyways. For the writer of the text; however, it was convenient to
+define $d$ once, as there are not the same constraints on a mathematician
+writing in latex. It will again, serve as a nontrivial exercise to deal with
+when specifying the grammar, and will be dealt with later [ToDo add section].
+It is also of note that we choose to include Martin-Löf's original name $J$, as
+this is more common in the computer science literature.
+
+Once the identity type has been defined, it is natural to develop an ``equality
+calculus'',  so that we can actually use it in proof's, as well as develop the
+higher groupoid structure of types. The first fact, that propositional equality
+is an equivalence relation, is well motivated by needs of practical theorem
+proving in Agda and the more homotopically minded mathematician. First, we show the symmetry of equality--that paths are reversible.
+
+\begin{lem}\label{lem:opp}
+  For every type $A$ and every $x,y:A$ there is a function
+  \begin{equation*}
+    (x= y)\to(y= x)
+  \end{equation*}
+  denoted $p\mapsto \opp{p}$, such that $\opp{\refl{x}}\jdeq\refl{x}$ for each $x:A$.
+  We call $\opp{p}$ the \define{inverse} of $p$.
+  %\indexdef{path!inverse}%
+  %\indexdef{inverse!of path}%
+  %\index{equality!symmetry of}%a
+  %\index{symmetry!of equality}%
+\end{lem}
+
+\begin{proof}[First proof]
+  Assume given $A:\UU$, and
+  let $D:{\textstyle\prod_{(x,y:A)}}(x= y) \; \to \; \type$ be the type family defined by $D(x,y,p)\defeq (y= x)$.
+  %$\prod_{(x:A)} \prod_{y:B}$
+  In other words, $D$ is a function assigning to any $x,y:A$ and $p:x=y$ a type, namely the type $y=x$.
+  Then we have an element
+  \begin{equation*}
+    d\defeq \lambda x.\ \refl{x}:\prod_{x:A} D(x,x,\refl{x}).
+  \end{equation*}
+  Thus, the induction principle for identity types gives us an element
+  $\indid{A}(D,d,x,y,p): (y= x)$
+  for each $p:(x= y)$.
+  We can now define the desired function $\opp{(\blank)}$ to be 
+  $\lambda p.\ \indid{A}(D,d,x,y,p)$, 
+  i.e.\ we set 
+  $\opp{p} \defeq \indid{A}(D,d,x,y,p)$.
+  The conversion rule [missing reference] %rule~\eqref{eq:Jconv} 
+  gives $\opp{\refl{x}}\jdeq \refl{x}$, as required.
+\end{proof}
+The Agda code is certainly more brief: 
+\begin{code}%
+\>[0]\<%
+\\
+\>[0][@{}l@{\AgdaIndent{1}}]%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⁻¹}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⁻¹}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaKeyword{infixr}\AgdaSpace{}%
+\AgdaNumber{50}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⁻¹}}\<%
+\\
+\>[0]\<%
+\end{code}
+
+While first encountering induction principles can be scary, they are actually
+more mechanical than one may think. This is due to the the fact that they
+uniquely compliment the introduction rules of an an inductive type, and are
+simply a means of showing one can ``map out'', or derive an arbitrary type
+dependent on the type which has been inductively defined. The mechanical nature
+is what allows for Coq's induction tactic, and perhaps even more elegantly,
+Agda's pattern matching capabilities. It is always easier to use pattern
+matching for the novice Agda programmer, which almost feels like magic.
+Nonetheless, for completeness sake, the book uses the induction principle for
+much of Chapter 2. And pattern matching is unique to programming languages,
+its elegance isn't matched in the mathematicians' lexicon.
+
+Here is the same proof via ``natural language pattern matching'' and Agda
+pattern matching:
+
+\begin{proof}[Second proof]
+  We want to construct, for each $x,y:A$ and $p:x=y$, an element $\opp{p}:y=x$.
+  By induction, it suffices to do this in the case when $y$ is $x$ and $p$ is $\refl{x}$.
+  But in this case, the type $x=y$ of $p$ and the type $y=x$ in which we are trying to construct $\opp{p}$ are both simply $x=x$.
+  Thus, in the ``reflexivity case'', we can define $\opp{\refl{x}}$ to be simply $\refl{x}$.
+  The general case then follows by the induction principle, and the conversion rule $\opp{\refl{x}}\jdeq\refl{x}$ is precisely the proof in the reflexivity case that we gave.
+\end{proof}
+
+\begin{code}%
+\>[0]\<%
+\\
+\>[0][@{}l@{\AgdaIndent{1}}]%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⁻¹'}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⁻¹'}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+\>[0]\<%
+\end{code}
+
+Next is trasitivity--concatenation of paths--and we omit the natural language
+presentation, which is a slightly more sophisticated arguement than for
+symmetry.  
+
+
+\begin{code}%
+\>[0][@{}l@{\AgdaIndent{1}}]%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{z}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{z}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙\AgdaUnderscore{}}}%
+\>[430I]\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{z}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaBound{q}\<%
+\\
+\>[.][@{}l@{}]\<[430I]%
+\>[6]\AgdaKeyword{where}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x₁}\AgdaSpace{}%
+\AgdaBound{y₁}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x₁}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y₁}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{z}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{z}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{z₁}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{z₁}\AgdaSpace{}%
+\AgdaBound{z₁}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{λ}\AgdaSpace{}%
+\AgdaBound{v}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{q}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaKeyword{infixl}\AgdaSpace{}%
+\AgdaNumber{40}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙\AgdaUnderscore{}}}\<%
+\end{code}
+
+Putting on our spectacles, the reflexivity term serves as evidence of a
+constant path for any given point of any given type. To the category theorist,
+this makes up the data of an identity map. Likewise, conctanation of paths
+starts to look like function composition. This, along with the identity laws
+and associativity as proven below, gives us the data of a category. And we have
+not only have a category, but the symmetry allows us to prove all paths are
+isomorphisms, giving us a groupoid. This isn't a coincedence, it's a very deep
+and fascinating articulation of power of the machinery we've so far built. The
+fact the path space over a type naturally must satisfies coherence laws in an
+even higher path space gives leads to this notion of types as higher groupoids.  
+
+As regards the natural language--at this point, the bookkeeping starts to get hairy.  Paths between paths, and paths between paths between paths, these ideas start to lose geometric inutiotion. And the mathematician often fails to express, when writing $p= q$, that she is already reasoning in a path space. While clever, our brains aren't wired to do too much book-keeping.  Fortunately Agda does this for us, and we can use implicit arguements to avoid our code getting too messy.  [ToDo, add example]
+
+We now proceed to show that we have a groupoid, where the objects are points,
+the morphisms are paths. The isomorphisms arise from the path reversal.  Many
+of the proofs beyond this point are either routinely made via the induction
+principle, or even more routinely by just pattern matching on equality paths,
+we omit the details which can be found in the HoTT book, but it is expected
+that the GF parser will soon cover such examples.
+
+\begin{code}%
+%
+\>[2]\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+%
+\>[2]\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[2]\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{leftInverse}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[2]\AgdaFunction{leftInverse}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{rightInverse}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[2]\AgdaFunction{rightInverse}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{doubleInv}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+%
+\>[2]\AgdaFunction{doubleInv}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{associativity}\AgdaSpace{}%
+\AgdaSymbol{:\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+%
+\>[2]\AgdaFunction{associativity}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{z}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{w}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D₁}\AgdaSpace{}%
+\AgdaFunction{d₁}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D₁}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D₁}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{z}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+%
+\>[6]\AgdaComment{-- d₁ : (x : A) → D₁ x x r }\<%
+\\
+%
+\>[6]\AgdaComment{-- d₁ x z w q r' = r -- why can it infer this }\<%
+\\
+%
+\>[6]\AgdaFunction{D₂}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D₂}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{w}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+%
+\>[6]\AgdaFunction{D₃}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D₃}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{=}%
+\>[19]\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+%
+\>[6]\AgdaFunction{d₃}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D₃}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d₃}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d₂}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D₂}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d₂}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D₃}\AgdaSpace{}%
+\AgdaFunction{d₃}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+%
+\>[6]\AgdaFunction{d₁}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D₁}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d₁}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D₂}\AgdaSpace{}%
+\AgdaFunction{d₂}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{z}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaBound{w}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+\>[0]\<%
+\end{code}
+
+When one starts to look at structure above the groupoid level, i.e., the paths between paths between paths level, some interesting and nonintuitive results emerge. If one defines a path space that is seemingly trivial, namely, taking the same starting and end points, the higherdimensional structure yields non-trivial structure. 
+We now arrive at the first ``interesting'' result in this book, the Eckmann-Hilton Arguement. It says that composition on the loop space of a loop space, the second loop space, is commutitive.
+
+
+
+\begin{definition}
+
+Thus, given a type $A$ with a point $a:A$, we define its \define{loop space}
+\index{loop space}%
+$\Omega(A,a)$ to be the type $\id[A]{a}{a}$.
+We may sometimes write simply $\Omega A$ if the point $a$ is understood from context.
+
+\end {definition}
+
+
+\begin{definition}
+It can also be useful to consider the loop space\index{loop space!iterated}\index{iterated loop space} \emph{of} the loop space of $A$, which is the space of 2-dimensional loops on the identity loop at $a$.
+This is written $\Omega^2(A,a)$ and represented in type theory by the type $\id[({\id[A]{a}{a}})]{\refl{a}}{\refl{a}}$.
+\end {definition}
+
+\begin{thm}[Eckmann--Hilton]%\label{thm:EckmannHilton}
+  The composition operation on the second loop space
+  %
+  \begin{equation*}
+    \Omega^2(A)\times \Omega^2(A)\to \Omega^2(A)
+  \end{equation*}
+  is commutative: $\alpha\cdot\beta = \beta\cdot\alpha$, for any $\alpha, \beta:\Omega^2(A)$.
+  %\index{Eckmann--Hilton argument}%
+\end{thm}
+
+\begin{proof}
+First, observe that the composition of $1$-loops $\Omega A\times \Omega A\to \Omega A$ induces an operation
+\[
+\star : \Omega^2(A)\times \Omega^2(A)\to \Omega^2(A)
+\]
+as follows: consider elements $a, b, c : A$ and 1- and 2-paths,
+%
+\begin{align*}
+ p &: a = b,       &       r &: b = c \\
+ q &: a = b,       &       s &: b = c \\
+ \alpha &: p = q,  &   \beta &: r = s
+\end{align*}
+%
+as depicted in the following diagram (with paths drawn as arrows).
+
+[TODO Finish Eckmann Hilton Arguement]
+%\[
+ %\xymatrix@+5em{
+   %{a} \rtwocell<10>^p_q{\alpha}
+   %&
+   %{b} \rtwocell<10>^r_s{\beta}
+   %&
+   %{c}
+ %}
+%\]
+%Composing the upper and lower 1-paths, respectively, we get two paths $p\ct r,\ q\ct s : a = c$, and there is then a ``horizontal composition''
+%%
+%\begin{equation*}
+  %\alpha\hct\beta : p\ct r = q\ct s
+%\end{equation*}
+%%
+%between them, defined as follows.
+%First, we define $\alpha \rightwhisker r : p\ct r = q\ct r$ by path induction on $r$, so that
+%\[ \alpha \rightwhisker \refl{b} \jdeq \opp{\mathsf{ru}_p} \ct \alpha \ct \mathsf{ru}_q \]
+%where $\mathsf{ru}_p : p = p \ct \refl{b}$ is the right unit law from \cref{thm:omg}\ref{item:omg1}.
+%We could similarly define $\rightwhisker$ by induction on $\alpha$, or on all paths in sight, resulting in different judgmental equalities, but for present purposes the definition by induction on $r$ will make things simpler.
+%Similarly, we define $q\leftwhisker \beta : q\ct r = q\ct s$ by induction on $q$, so that
+%\[ \refl{b} \leftwhisker \beta \jdeq \opp{\mathsf{lu}_r} \ct \beta \ct \mathsf{lu}_s \]
+%where $\mathsf{lu}_r$ denotes the left unit law.
+%The operations $\leftwhisker$ and $\rightwhisker$ are called \define{whiskering}\indexdef{whiskering}.
+%Next, since $\alpha \rightwhisker r$ and $q\leftwhisker \beta$ are composable 2-paths, we can define the \define{horizontal composition}
+%\indexdef{horizontal composition!of paths}%
+%\indexdef{composition!of paths!horizontal}%
+%by:
+%\[
+%\alpha\hct\beta\ \defeq\ (\alpha\rightwhisker r) \ct (q\leftwhisker \beta).
+%\]
+%Now suppose that $a \jdeq  b \jdeq  c$, so that all the 1-paths $p$, $q$, $r$, and $s$ are elements of $\Omega(A,a)$, and assume moreover that $p\jdeq q \jdeq r \jdeq s\jdeq \refl{a}$, so that $\alpha:\refl{a} = \refl{a}$ and $\beta:\refl{a} = \refl{a}$ are composable in both orders.
+%In that case, we have
+%\begin{align*}
+  %\alpha\hct\beta
+  %&\jdeq (\alpha\rightwhisker\refl{a}) \ct (\refl{a}\leftwhisker \beta)\\
+  %&= \opp{\mathsf{ru}_{\refl{a}}} \ct \alpha \ct \mathsf{ru}_{\refl{a}} \ct \opp{\mathsf{lu}_{\refl a}} \ct \beta \ct \mathsf{lu}_{\refl{a}}\\
+  %&\jdeq \opp{\refl{\refl{a}}} \ct \alpha \ct \refl{\refl{a}} \ct \opp{\refl{\refl a}} \ct \beta \ct \refl{\refl{a}}\\
+  %&= \alpha \ct \beta.
+%\end{align*}
+%(Recall that $\mathsf{ru}_{\refl{a}} \jdeq \mathsf{lu}_{\refl{a}} \jdeq \refl{\refl{a}}$, by the computation rule for path induction.)
+%On the other hand, we can define another horizontal composition analogously by
+%\[
+%\alpha\hct'\beta\ \defeq\ (p\leftwhisker \beta)\ct (\alpha\rightwhisker s)
+%\]
+%and we similarly learn that
+%\[
+%\alpha\hct'\beta = \beta\ct\alpha.
+%\]
+%\index{interchange law}%
+%But, in general, the two ways of defining horizontal composition agree, $\alpha\hct\beta = \alpha\hct'\beta$, as we can see by induction on $\alpha$ and $\beta$ and then on the two remaining 1-paths, to reduce everything to reflexivity.
+%Thus we have
+%\[\alpha \ct \beta = \alpha\hct\beta = \alpha\hct'\beta = \beta\ct\alpha.
+%\qedhere
+%\]
+\end{proof}
+
+
+[Todo, clean up code so that its more tightly correspondent to the book proof]
+The corresponding agda code is below :
+
+\begin{code}%
+\>[0]\<%
+\\
+\>[0][@{}l@{\AgdaIndent{1}}]%
+\>[2]\AgdaComment{-- whiskering}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙ᵣ\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{b}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙ᵣ\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{b}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{c}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{p}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{q}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{b}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a'}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{p}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{q}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaBound{q}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaComment{-- iᵣ == ruₚ}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙ₗ\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{c}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{r'}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{s}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∙ₗ\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{b}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{c}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{r'}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{s}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSpace{}%
+\AgdaBound{β}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{c}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{r'}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{s}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{a'}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{r'}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{s}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaBound{s}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⋆\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{r'}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{s}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⋆\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaArgument{q}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaArgument{r'}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙ᵣ}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙ₗ}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⋆'\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{r'}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{b}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{c}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{r'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{q}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{s}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}⋆'\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaArgument{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaArgument{s}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}%
+\>[34]\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙ₗ}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙ᵣ}}\AgdaSpace{}%
+\AgdaBound{s}\AgdaSymbol{)}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{Ω}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[2]\AgdaFunction{Ω}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{a}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[2]\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{\AgdaUnderscore{}≡\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{lem1}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⋆}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaFunction{lem1}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{lem1'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⋆'}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}%
+\>[63]\AgdaSymbol{(}\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaFunction{lem1'}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaComment{-- ap\textbackslash{}\AgdaUnderscore{}}\<%
+\\
+%
+\>[2]\AgdaFunction{apf}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaBound{B}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{f}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{B}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{y}\<%
+\\
+%
+\>[2]\AgdaFunction{apf}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{B}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{y}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{J}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaFunction{d}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+\>[2][@{}l@{\AgdaIndent{0}}]%
+\>[4]\AgdaKeyword{where}\<%
+\\
+\>[4][@{}l@{\AgdaIndent{0}}]%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+%
+\>[6]\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{f}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{B}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{y}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{D}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\>[6]\AgdaFunction{d}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{λ}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{ap}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaBound{B}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{f}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{B}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{y}\<%
+\\
+%
+\>[2]\AgdaFunction{ap}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{lem20}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{α}\<%
+\\
+%
+\>[2]\AgdaFunction{lem20}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{lem21}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{β}\<%
+\\
+%
+\>[2]\AgdaFunction{lem21}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{β}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{lem2}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaFunction{lem2}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{apf}\AgdaSpace{}%
+\AgdaSymbol{(λ}\AgdaSpace{}%
+\AgdaBound{-}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{-}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{lem20}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{apf}\AgdaSpace{}%
+\AgdaSymbol{(λ}\AgdaSpace{}%
+\AgdaBound{-}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{-}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{lem21}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{lem2'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iₗ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaFunction{lem2'}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}%
+\>[21]\AgdaFunction{apf}%
+\>[26]\AgdaSymbol{(λ}\AgdaSpace{}%
+\AgdaBound{-}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{-}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⁻¹}}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{iᵣ}\AgdaSpace{}%
+\AgdaInductiveConstructor{r}\AgdaSymbol{))}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{lem21}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{apf}\AgdaSpace{}%
+\AgdaSymbol{(λ}\AgdaSpace{}%
+\AgdaBound{-}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{-}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{lem20}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaComment{-- apf (λ - → - ∙ (iₗ r ⁻¹ ∙ β ∙ iₗ r) ) (lem20 α) ∙ apf (λ - → α ∙ -) (lem21 β)}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaFunction{⋆≡∙}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⋆}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaFunction{⋆≡∙}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{lem1}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{lem2}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaComment{-- proven similairly to above }\<%
+\\
+%
+\>[2]\AgdaFunction{⋆'≡∙}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{Ω²}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{α}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{⋆'}}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaFunction{⋆'≡∙}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaFunction{lem1'}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{∙}}\AgdaSpace{}%
+\AgdaFunction{lem2'}\AgdaSpace{}%
+\AgdaBound{a}\AgdaSpace{}%
+\AgdaBound{α}\AgdaSpace{}%
+\AgdaBound{β}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\>[2]\AgdaComment{--eckmannHilton : \{A : Set\} → (a : A) → (α β : Ω² \{A\} a) → α ∙ β ≡ β ∙ α }\<%
+\\
+%
+\>[2]\AgdaComment{--eckmannHilton a r r = r}\<%
+\\
+\>[0]\<%
+\end{code}
+
+[TODO, fix without k errors]
+
+\section{GF Grammar for types}
+
+We now discuss the GF implementation, capable of parsing both natural language
+and Agda syntax. The parser was appropriated from the cubicaltt BNFC parser,
+de-cubified and then gf-ified. The languages are tightly coupled, so the
+translation is actually quite simple. Some main differences are:
+
+\begin{itemize}[noitemsep]
+
+\item GF treats abstract and concrete syntax seperately. This allows GF to
+support many concrete syntax implementation of a given grammar
+
+\item Fixity is dealt with at the concrete syntax layer in GF.  This allows for
+more refined control of fixity, but also results in difficulties : during
+linearization their can be the insertion of extra parens.
+
+\item GF supports dependent hypes and higher order abstract syntax, which makes
+it suitable to typecheck at the parsing stage. It would very interesting to see
+if this is interoperable with the current version of this work in later
+iterations [Todo - add github link referncing work I've done in this direction]
+
+\item GF also is enhanced by a PGF back-end, allowing an embedding of grammars
+into, among other languages, Haskell.
+
+\end{itemize}
+
+While GF is targeted towards natural language translation, there's nothing
+stopping it from being used as a PL tool as well, like, for instance, the
+front-end of a compiler. The innovation of this thesis is to combine both uses,
+thereby allowing translation between Controlled Natural Languages and
+programming languages.
+
+Example expressions the grammar can parse are seen below, which have been
+verified by hand to be isomorphic to the corresponding cubicaltt BNFC trees:
+
+\begin{verbatim}
+
+data bool : Set where true | false 
+data nat : Set where zero | suc ( n : nat )  
+caseBool ( x : Set ) ( y z : x ) : bool -> Set = split false -> y || true -> z
+indBool ( x : bool -> Set ) ( y : x false ) ( z : x true ) : ( b : bool ) -> x b = split false -> y || true  -> z
+funExt  ( a : Set )   ( b : a -> Set )   ( f g :  ( x : a )  -> b x )   ( p :  ( x : a )  -> ( b x )   ( f x ) == ( g x )  )  : (  ( y : a )  -> b y )  f == g = undefined
+foo ( b : bool ) : bool = b
+
+\end{verbatim}
+
+[Todo] add use cases
+
+\section{Goals and Challenges}
+
+The parser is still quite primitive, and needs to be extended extensively to
+support natural language ambiguity in mathematics as well as other linguistic
+nuance that GF captures well, like tense and aspect. This can follow a method
+expored in Aarne's paper : "Translating between Language and Logic: What Is
+Easy and What Is Difficult" where one develops a denotational semantics for
+translating between natural language expressions with the desired AST. The bulk
+of this work will be writing a Haskell back-end implementing this AST
+transformation. The extended syntax, designed for linguistic nuance, will be
+filtered into the core syntax, which is essentially what I have done.
+
+The Resource Grammar Library (RGL) is designed for out-of-the box grammar
+writing, and therefore much of the linearization nuance can be outsourced to
+this robust and well-studied library. Nonetheless, each application grammar
+brings its own unique challenges, and the RGL will only get one so far. My
+linearization may require extensive tweaking.
+
+Thus far, our parser is only able to parse non-cubical fragments of the
+cubicalTT standard library. Dealing with Agda pattern matching, it was
+realized, is outside the theoretical boundaries of GF (at least, if one were to
+do it in a non ad-hoc way) due to its inability to pass arbitrary strings down
+the syntax tree nodes during linearization. Pattern matching therefore needs to be dealt
+with via pre and post processing.  Additionally, cubicaltt is weaker at
+dealing with telescopes than Agda, and so a full generalization to Agda is not
+yet possible. Universes are another feature future iterations of this Grammar
+would need to deal with, but as they aren't present in most mathematician's
+vernacular, it is not seen as relevant for the state of this project.
+
+Records should also be added, but because this grammar supports sigma types,
+there is no rush. The Identity type is so far deeply embedded in our grammar,
+so the first code fragment may just be for explanatory purposes.  The degree to
+which the library is extended to cover domain specific information is up to
+debate, but for now the grammar is meant to be kept as minimal as possible.
+
+One interesting extension, time dependnet, would be to allow for a bidrectional
+feedback between GF and Agda : thereby allowing ad hoc extensions to GF's ASTs
+to allow for newly defined Agda functions to be treated with more care, i.e.
+have an arguement structure rather than just treating everything as variables.
+This may be too ambitious for the time being.
+
+\section{Code}
+
+\subsection{GF Parser}
+
+\subsection{Additional Agda Hott Code}
+
+Two citation examples: 
+\cite{dunning1993} introduced a well-known method for extracting
+collocations. Bilingual data can be used to train part-of-speech
+taggers \citep{das2011}. Another one: \citep{cortes2014}
+
+Testing Unicode: Göteborgs universitet
+
+\textit{Testing} \textbf{testing} \textsc{testing} some font series.
+
+Testing a formula:
+\[
+P(X) = \sum_{i=1}^N P(A_i) P(X|A_i)
+\]
+
+Testing a table:
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{c|c}
+cell 1 & cell 2 \\
+\hline
+cell 3 & cell 4
+\end{tabular}
+\caption{This is a table.}
+\end{center}
+\end{table}
+
+\newpage
+
+\section{Example section (heading level 1)}
+
+Text
+
+\subsection{Example subsection (heading level 2)}
+
+xxx
+
+\subsubsection{Example subsubsection (heading level 3)}
+
+xxx
+
+\newpage
+
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\bibliography{example_bibliography}
+
+
+\newpage
+\section{Appendices}
+
+\end{document}
+
+

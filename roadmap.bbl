@@ -1,0 +1,29 @@
+\begin{thebibliography}{}
+
+\bibitem[Cortes et~al., 2014]{cortes2014}
+Cortes, C., Kuznetsov, V., \& Mohri, M. (2014).
+\newblock Learning ensembles of structured prediction rules.
+\newblock In {\em Proceedings of the 52nd Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)}  (pp.\ 1--12).  Baltimore,
+  Maryland: Association for Computational Linguistics.
+
+\bibitem[Das \& Petrov, 2011]{das2011}
+Das, D. \& Petrov, S. (2011).
+\newblock Unsupervised part-of-speech tagging with bilingual graph-based
+  projections.
+\newblock In {\em Proceedings of the 49th Annual Meeting of the Association for
+  Computational Linguistics: Human Language Technologies}  (pp.\ 600--609).
+  Portland, Oregon, USA: Association for Computational Linguistics.
+
+\bibitem[Dunning, 1993]{dunning1993}
+Dunning, T. (1993).
+\newblock Accurate methods for the statistics of surprise and coincidence.
+\newblock {\em Computational Linguistics}, 19(1), 61--74.
+
+\bibitem[{The Univalent foundations program} \& {Institute for advanced study
+  (Princeton}, 2013]{theunivalentfoundationsprogram-homotopytypetheory-2013}
+{The Univalent foundations program} \& {Institute for advanced study
+  (Princeton}, N. (2013).
+\newblock {\em Homotopy Type Theory: Univalent Foundations of Mathematics}.
+
+\end{thebibliography}

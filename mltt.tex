@@ -1,0 +1,88 @@
+% from blog post
+\subsection{Martin-Löf Type Theory}
+\subsubsection{Judgments}
+
+A central contribution of Per Martin-Löf in the development of type theory was
+the recognition of the centrality of judgments in logic. Many mathematicians
+aren't familiar with the spectrum of judgments available, and merely believe
+they are concerned with *the* notion of truth, namely *the truth* of a
+mathematical proposition or theorem. There are many judgments one can make which
+most mathematicians aren't aware of or at least never mention. These include,
+for instance,
+
+\begin{itemize}[noitemsep]
+
+\item $A$ is a proposition
+\item $A$ is possible
+\item $A$ is probable
+
+\end{itemize}
+
+These judgments are understood not in the object language in which we state our
+propositions, possibilities, or probabilities, but as assertions in the
+metalanguage which require evidence for us to know and believe them. Most
+mathematicians may reach for their wallets if I come in and give a talk saying
+it is possible that the Riemann Hypothesis is true, partially because they
+already know that, and partially because it doesn't seem particularly
+interesting to say that something is possible, in the same way that a physicist
+may flinch if you say alchemy is possible. Most mathematicians, however, would
+agree that $P = NP$ is possible but isn't probable.
+
+For the logician these judgments may well be interesting because their may be
+logics in which the discussion of possibility or probability is even more
+interesting than the discussion of truth. And for the type theorist, interested
+in designing and building programming languages over many various logics, these
+judgments become a prime focus. The role of the type-checker in a programming
+language is to present evidence for, or decide the validity of the judgments.
+The four main judgments of type theory are :
+
+\begin{itemize}[noitemsep]
+\item $T$ is a type
+\item $T$ and $T'$ are equal types
+\item $t$ is a term of type $T$
+\item $t$ and $t'$ are equal terms of type $T$
+\end{itemize}
+
+
+We succinctly present these in a mathematical notation where Frege's turnstile,
+$\vdash$, denotes a judgment :
+
+\begin{itemize}[noitemsep]
+\item $\vdash T \; {\rm type}$
+\item $\vdash T = T'$
+\item $\vdash t:T$
+\item $\vdash t = t':T$
+\end{itemize}
+
+These judgments become much more interesting when we add the ability for them to
+be interpreted in a some context with judgment hypotheses. Given a series of
+judgments $J_1,...,J_n$, denoted $\Gamma$, where $J_i$ can depend on previously
+listed $J's$, we can make judgment $J$ under the hypotheses, e.g. $J_1,...,J_n
+\vdash J$. Often these hypotheses $J_i$, alternatively called *antecedents*,
+denote variables which may occur freely in the *consequent* judgment $J$. For
+instance, the antecedent, $x : \mathbb{R}$ occurs freely in the syntactic
+expression $\sin x$, a which is given meaning in the judgment $\vdash \sin x { :
+} \mathbb{R}$. We write our hypothetical judgement as follows :
+
+$x : \mathbb{R} \vdash \sin x : \mathbb{R}$
+
+One reason why hypothetical judgments are so interesting is we can devise rules
+which allow us to translate from the metalanguage to the object language using
+lambda expressions. These play the role of a function in mathematics and
+implication in logic. This comes out in the following introduction rule :
+
+$ \frac{\Gamma, x : A \vdash b : B} {\Gamma \vdash \lambda x. b : A \rightarrow
+B} $
+
+Using this rule, we now see a typical judgment, typical in a field like from
+real analysis,
+
+$\vdash \lambda x. \sin x : \R \rightarrow \R$
+
+Equality :
+
+Mathematicians denote this judgement
+\begin{align*} f {:} \mathbb{R} &\rightarrow \mathbb{R}\\ x &\mapsto \sin ( x )
+\end{align*}
+
+

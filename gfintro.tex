@@ -1,0 +1,590 @@
+\subsection{Grammatical Framework}
+% \subsection{Intro to GF}
+
+\subsubsection{Overview}
+
+I will introduce Grammatical Framework (GF) through an extended example targeted
+at a general audience familiar with logic, functional programming, or
+mathematics. GF is a powerful tool for specifying grammars. A grammar
+specification in GF is actually an abstract syntax. With an abstract syntax
+specified, one can then define various linearization rules which compositionally
+evaluate to strings. An Abstract Syntax Tree (AST) may then be linearized to
+various strings admitted by different concrete syntaxes. Conversely, given a
+string admitted by the language being defined, GF's powerful parser will
+generate all the ASTs which linearize to that tree.
+
+\subsubsection{Overview} % ## Focus of this tutorial
+
+We introduce this subject assuming no familiarity with GF, but a general
+mathematical and programming maturity. While GF is certainly geared to
+applications in domain specific machine translation, this writing will hopefully
+make evident that learning about GF, even without the intention of using it for
+its intended application, is a useful exercise in abstractly understanding
+syntax and its importance in just about any domain.
+
+A working high-level introduction of Grammatical Framework emphasizing both
+theoretical and practical elements of GF, as well as their interplay. Specific
+things covered will be
+
+\begin{itemize}[noitemsep]
+
+\item Historical developments leading to the creation and discovery of the GF
+formalism
+\item The difference between Abstract and Concrete Syntax, and the linearization
+and parsing functions between these two categories
+\item The basic judgments :
+  \begin{itemize}[noitemsep]
+    \item Abstract : `cat, fun`
+    \item Concrete : `lincat, lin`
+    \item Auxiliary : `oper, param`
+  \end{itemize}
+\item A library for building natural language applications with GF
+  \begin{itemize}[noitemsep]
+    \item The Resource Grammar Library (RGL)
+    \item A way of interfacing GF with Haskell and transforming ASTs externally
+    \item The Portable Grammar Format (PGF)
+\end{itemize}
+\item Module System and directory structure
+\item A brief comparison with other tools like BNFC
+
+\end{itemize}
+
+These topics will be understood via a simple example of an expression language,
+`Arith`, which will serve as a case study for understanding the many robust,
+theoretical topics mentioned above - indeed, mathematics is best understood and
+learned through examples. The best exercises are the reader's own ideas,
+questions, and contentions which may arise while reading through this.
+
+\subsubsection{Theoretical Overview}
+% \subsubsection{Theoretical Overview}
+
+\paragraph { What is a GF grammar ? }
+
+[TODO : update with latex]
+
+Consider a language L, for now given a single linear presentation C^L_0, where
+AST_L String_L0 denote the sets GF ASTs and Strings in the languages generated
+by the rules of L's abstract syntax and L0s compositional representation.
+
+  $Parse : String -> {AST} Linearize : AST -> String$
+
+with the important property that given a string s,
+
+  forall x in (Parse s), Linearize x == s
+
+And given an AST a, we can Parse . Linearize a belongs to {AST}
+
+Now we should explore why the linearizations are interesting. In part, this is
+because they have arisen from the role of grammars have played in the
+intersection and interaction between computer science and linguistics at least
+since Chomsky in the 50s, and they have different understandings and utilities
+in the respective disciplines. These two discplines converge in GF, which allows
+us to talk about natural languages (NLs) from programming languages (PLs)
+perspective. GF captures languages more expressive than Chomsky's Context Free
+Grammars (CFGs) but is still decideable with parsing in (cubic?) polynomial
+time, which means it still is quite domain specific and leaves a lot to be
+desired as far as turing complete languages or those capable of general
+recursion are concerned.
+
+We can should note that computa
+
+  given a string s , perhaps a phrase map Linearize (Parse s)
+
+is understood as the set of translations of a phrase of one language to possibly
+grammatical phrases in the other languages connected by a mutual abstract
+syntax. So we could denote these L^English, L^Bantu, L^Swedish for
+L^Englsih_American vs L^Englsih_English or L^Bantu_i with i being any one of the
+Bantu languages a hypothetical set of linguists and grammar writers may want to
+implement, on a given fragment of abstract syntax, with various domain
+applications, as determined by L, in mind.
+
+  One could also further elaborate these L^English_0 L^English_1 to varying
+degrees of granularity, like L^English_Chomsky L^English_Partee because Chomsky
+may something like "I was stoked" and Partee may only say something analogous "I
+was really excited" or whatever the individual nuances come with how speakers
+say what they mean with different surface syntax, and also
+
+  L_0 < L_1 -> L_English_0 < L_English_1
+
+But this would be similair to a set of expressions translateable between
+programming languages, like Logic^English, Logic^Latex, Logic^Agda, Logic^Coq,
+etc
+
+where one could extend the
+
+Logic_Core^English Logic_Extended^English
+
+whereas in the PL domain
+
+Logic_Core^Agda Logic_Extended^Agda may collapse at certain points, but also in
+some ways extend beyond our Languages capacities (we can make machine code only
+machines can understand, not us)
+
+or Mathematics = Logic + domain specific Mathematics^English Mathematics^Agda
+
+where we could have further refinements, via, for instance, the module system,
+the concrete and linear designs like
+
+Mathematics^English iI -- Something about
+
+  The Functor (in the module sense familiar to ML programmers)
+
+  break down to different classifications of
+
+-- Something about
+
+  The Functor (in the module sense familiar to ML programmers)
+
+  break down to different classifications of
+
+  The indexes here, while seemingly arbitrary,
+
+  One could also further elaborate these L^English_0 L^English_1 to varying
+degrees of granularity, like L^English_Chomsky L^English_Partee
+
+  because Chomsky may something like "I was stoked" and Partee may only say
+something analogous "I was really excited" or whatever the individual nuances
+come with how speakers say what they mean with different surface syntax, and
+also
+
+Given a set of categories, we define the functions \phi : (c_1, ..., c_n) -> c_t
+over the categories which will serve as the constructors of our ASTs. The
+categories and functions are denoted in GF with the cat and fun judgment.
+
+\subsubsection {Some preliminary observations and considerations}
+
+There are many ways to skin a cat. While in some sense GF offers the user a
+limited palette with which to paint, she nonetheless has quite a bit of
+flexibility in her decision making when designing a GF grammar for a specific
+domain or application. These decisions are not binary, but rest in the spectrum
+of of considerations varying between :
+
+* immediate usability and long term sustainability * prototyping and production
+readiness * dependency on external resources liable to change * research or
+application oriented * sensitivity and vulnerability to errors * scalability and
+maintainability
+
+Many answers to where on the spectrum a Grammar lies will only become clear a
+posteriori to code being written, which often contradicts prior decisions which
+had been made and requires significant efforts to refactor. General best
+practices that apply to all programming languages, like effective use of
+modularity, can and should be applied by the GF programmer out of the box,
+whereas the strong type system also promotes a degree of rigidity with which the
+programmer is forced to stay in a certain safety boundary. Nonetheless, a
+grammar is in some sense a really large program, which brings a whole series of
+difficulties.
+
+When designing a GF grammar for a given application, the most immediate question
+that will come to mind is separation of concerns as regards the spectrum of
+
+[Abstract <-> Concrete] syntax
+
+Have your cake and eat it ?
+
+\subsubsection{A grammar for basic arithmetic}
+
+\paragraph {Abstract Judgments}
+
+The core syntax of GF is quite simple. The abstract syntax specification,
+denoted mathematically above as _, and in GF as `Arith.gf` is given by :
+
+
+\begin{verbatim} abstract Arith = { ... }
+\end{verbatim}
+
+Please note all GF files end with the `.gf` file extension. More detailed
+information about abstract, concrete, modules, etc. relevant for GF is specified
+internal to a `*.gf` file
+
+The abstract specification is simple, and reveals GF's power and elegance. The
+two primary abstract judgments are :
+
+\begin{enumerate}
+\item `cat` : denoting a syntactic category
+\item. `fun` : denoting a n-ary function over categories. This is essentially a
+labeled context-free rewrite rule with (non-)terminal string information
+suppressed
+\end{enumerate}
+
+While there are more advanced abstract judgments, for instance `def` allows one
+to incorporate semantic information, discussion of these will be deferred to
+other resources. These core judgments have different interpretations in the
+natural and formal language settings. Let's see the spine of the `Arith`
+language, where we merely want to be able to write expressions like `( 3 + 4 ) *
+5` in a myriad of concrete syntaxes.
+
+\begin{verbatim} cat Exp ;
+
+fun Add : Exp -> Exp -> Exp ; Mul : Exp -> Exp -> Exp ; EInt : Int -> Exp ;
+\end{verbatim}
+
+To represent this abstractly, we merely have two binary operators, labeled `Add`
+and `Mul`, whose intended interpretation is just the operator names, and the
+`EInt` function which coerces a predefined `Int`, natively supported numerical
+strings `"0","1","2",...` into arithmetic expressions. We can now generate our
+first abstract syntax tree, corresponding to the above expression, `Mul (Add
+(EInt 3) (EInt 4)) (EInt 5)`, more readable perhaps with the tree structure
+expanded :
+
+\begin{verbatim} Mul Add EInt 3 EInt 4 EInt 5
+\end{verbatim}
+
+The trees nodes are just the function names, and the leaves, while denoted above
+as numbers, are actually function names for the built-in numeric strings which
+happen to be linearized to the same piece of syntax, i.e. `linearize 3 == 3`,
+where the left-hand 3 has type `Int` and the right-hand 3 has type `Str`. GF has
+support for very few, but important categories. These are `Int`, `Float`, and
+`String`. It is my contention and that adding user defined builtin categories
+would greatly ease the burden of work for people interested in using GF to model
+programming languages, because `String` makes the grammars notoriously
+ambiguous.
+
+In computer science terms, to judge `Foo` to be a given category `cat Foo;`
+corresponds to the definition of a given Algebraic Datatypes (ADTs) in Haskell,
+or inductive definitions in Agda, whereas the function judgments `fun`
+correspond to the various constructors. These connections become explicit in the
+PGF embedding of GF into Haskell, but examining the Haskell code below makes one
+suspect their is some equivalence lurking in the corner:
+
+\begin{verbatim} data Exp = Add Exp Exp | Mul Exp Exp | EInt Int
+\end{verbatim}
+
+In linguistics we can interpret the judgments via alternatively simple and
+standard examples:
+
+\begin{enumerate}
+\item `cat` : these could be syntactic categories like Common Nouns `CN`, Noun
+Phrases `NP` , and determiners `Det`
+\item `fun` : give us ways of combining words or phrases into more complex
+syntactic units
+\end {enumerate}
+
+For instance, if
+
+\begin{verbatim} fun Car_CN : CN ; The_Det : Det ; DetCN : Det -> CN -> NP ;
+\end{verbatim}
+
+Then one can form a tree `DetCN The_Det Car_CN` which should linearize to `"the
+car"` in English, `bilen` in Swedish, and `imoto` in Zulu once we have
+implemented concrete syntax linearizations for these respective languages, which
+we will now do.
+
+While there was an equivalence suggested Haskell ADTs should be careful not to
+treat these as the same as the GF judgments. Indeed, the linguistic
+interpretation breaks this analogy, because linguistic categories aren't stable
+mathematical objects in the sense that they evolved and changed during the
+evolution of language, and will continue to do so. Since GF is primarily
+concerned with parsing and linearization of languages, the full power of
+inductive definitions in Agda, for instance, doesn't seem like a particularly
+natural space to study and model natural language phenomena.
+
+
+\paragraph{Arith.gf}
+
+Below we recapitulate, for completeness, the whole `Arith.gf` file with all the
+pieces from above glued together, which, the reader should start to play with.
+
+\begin{verbatim} abstract Arith = {
+
+flags startcat = Exp ;
+
+-- a judgement which says "Exp is a category" cat Exp ;
+
+fun Add : Exp -> Exp -> Exp ; -- "+" Mul : Exp -> Exp -> Exp ; -- "*" EInt : Int
+-> Exp ; -- "33"
+
+}
+\end{verbatim}
+
+The astute reader will recognize some code which has not yet been described. The
+comments, delegated with `--`, can have their own lines or be given at the end
+of a piece of code. It is good practice to give example linearizations as
+comments in the abstract syntax file, so that it can be read in a stand-alone
+way.
+
+The `flags startcat = Exp ;` line is not a judgment, but piece of metadata for
+the compiler so that it knows, when generating random ASTs, to include a
+function at the root of the AST with codomain `Exp`. If I hadn't included `flags
+startcat = *some cat*` , and ran `gr` in the gf shell, we would get the
+following error, which can be incredibly confusing but simple bug to fix if you
+know what to look for!
+
+\begin{verbatim} Category S is not in scope CallStack (from HasCallStack):
+error, called at src/compiler/GF/Command/Commands.hs:881:38 in
+gf-3.10.4-BNI84g7Cbh1LvYlghrRUOG:GF.Command.Commands
+\end{verbatim}
+
+
+\paragraph{Concrete Judgments}
+
+We now append our abstract syntax GF file `Arith.gf` with our first concrete GF
+syntax, some pigdin English way of saying our same expression above, namely `the
+product of the sum of 3 and 4 and 5`. Note that `Mul` and `Add` both being
+binary operators preclude this reading : `product of (the sum of 3 and 4 and 5)`
+in GF, despite the fact that it seems the more natural English interpretation
+and it doesn't admit a proper semantic reading.
+
+Reflecting the tree around the `Mul` root, `Mul (EInt 5) (Add (EInt 3) (EInt
+4))`, we get a reading where the 'natural interpretation' matches the actual
+syntax :`the product of 5 and the sum of 3 and 4`. Let's look at the concrete
+syntax which allow us to simply specify the linearization rules corresponding to
+the above `fun` function judgments.
+
+Our concrete syntax header says that `ArithEng1` is constrained by the fact that
+the concrete syntaxes must share the same prefix with the abstract syntax, and
+extend it with one or more characters, i.e. `Arith+.gf`.
+
+\begin{verbatim} concrete ArithEng1 of Arith = { ... }
+\end{verbatim}
+
+We now introduce the two concrete syntax judgments which compliment those above,
+namely :
+
+* `cat` is dual to `lincat` * `fun` is dual to `lin`
+
+Here is the first pass at an English linearization :
+
+\begin{verbatim} lincat Exp = Str ;
+
+lin Add e1 e2 = "the sum of" ++ e1 ++ "and" ++ e2 ; Mul e1 e2 = "the product of"
+++ e1 ++ "and" ++ e2 ; EInt i = i.s ;
+\end{verbatim}
+
+The `lincat` judgement says that `Exp` category is given a linearization type
+`Str`, which means that any expression is just evaluated to a string. There are
+more expressive linearization types, records and tables, or products and
+coproducts in the mathematician's lingo. For instance, `EInt i = i.s` that we
+project the s field from the integer i (records are indexed by numbers but
+rather by names in PLs). We defer a more extended discussion of linearization
+types for later examples where they are not just useful but necessary, producing
+grammars more expressive than CFGs called Parallel Multiple Context Free
+Grammars (PMCFGs).
+
+The linearization of the `Add` function takes two arguments, `e1` and `e2` which
+must necessarily evaluate to strings, and produces a string. Strings in GF are
+denoted with double quotes `"my string"` and concatenation with `++`. This
+resulting string, `"the sum of" ++ e1 ++ "and" ++ e2` is the concatenation of
+`"the sum of"`, the evaluated string `e1`, `"and"`, and the string of a
+linearized `e2`. The linearization of `EInt` is almost an identity function,
+except that the primitive Integer's are strings embedded in a record for
+scalability purposes.
+
+Here is the relationship between `fun` and `lin` from a slightly higher vantage
+point. Given a `fun` judgement
+
+  $f {:} C_0 \rightarrow C_1 \rightarrow ... \rightarrow C_n$
+
+in the `abstract` file, the GF user provides a corresponding `lin` judgement of
+the form
+
+  $f \: c_0 \: c_1 \: ... \: c_n \: {=} \: t_0 \: \texttt{++} \: t_1 \:
+\texttt{++} \: ... \: \texttt{++} \: t_m $
+
+in the `concrete` file. Each $c_i$ must have the linearization type given in the
+`lincat` of $C_i$ , e.g. if `lincat C_i = T ;` then `c_i : T`.
+
+We step through the example above to see how the linearization recursively
+evaluates, noting that this may not be the actual reduction order GF internally
+performs. The relation `->*` informally used but not defined here expresses the
+step function after zero or more steps of evaluating an expression. This is the
+reflexive transitive closure of the single step relation `->` familiar in
+operational semantics.
+
+\begin{verbatim} linearize (Mul (Add (EInt 3) (EInt 4)) (EInt 5)) ->* "the
+product of" ++ linearize (Add (EInt 3) (EInt 4)) ++ "and" ++ linearize (EInt 5)
+->* "the product of" ++ ("the sum of" ++ (EInt 3) ++ (EInt 4)) ++ "and" ++ ({ s
+= "5"} . s) ->* "the product of" ++ ("the sum of" ++ ({ s = "3"} . s) ++ ({ s =
+"4"} . s)) ++ "and" ++ "5" ->* "the product of" ++ ("the sum of" ++ "3" ++ "and"
+++ "4") ++ "and" ++ "5" ->* "the product of" ++ ("the sum of" ++ "3" ++ "and" ++
+"4") ++ "and" ++ "5" ->* "the product of the sum of 3 and 4 and 5"
+\end{verbatim}
+
+The PMCFG class of languages is still quite tame when compared with, for
+instance, Turing complete languages. Thus, the `abstract` and `concrete`
+coupling tight, the evaluation is quite simple, and the programs tend to write
+themselves once the correct types are chosen. This is not to say GF programming
+is easier than in other languages, because often there are unforeseen
+constraints that the programmer must get used to, limiting the palette available
+when writing code. These constraints allow for fast parsing, but greatly limit
+the types of programs one often thinks of writing. We touch upon this in a
+[previous section](##some-preliminary-observations-and-considerations).
+
+Now that the basics of GF have been described, we will augment our grammar so
+that it becomes slightly more interesting, introduce a second `concrete` syntax,
+and show how to run these in the GF shell in order to translate between our two
+languages.
+
+\subsubsection{The GF shell}
+
+So now that we have a GF `abstract` and `concrete` syntax pair, one needs to
+test the grammars.
+
+Once GF is
+[installed](https://www.grammaticalframework.org/download/index-3.10.html), one
+can open both the `abstract` and `concrete` with the `gf` shell command applied
+to the `concrete` syntax, assuming the `abstract` syntax is in the same
+directory :
+
+\begin{verbatim} $ gf ArithEng1.gf
+\end{verbatim}
+
+I'll forego describing many important details and commands, please refer to the
+[official shell
+reference](https://www.grammaticalframework.org/doc/gf-shell-reference.html) and
+Inari Listenmaa's post on [tips and
+gotchas](https://inariksit.github.io/gf/2018/08/28/gf-gotchas.html) for a more
+nuanced take than I give here.
+
+The `ls` of the gf repl is `gr`. What does `gr` do? Lets try it, as well as ask
+gf what it does:
+
+\begin{verbatim} Arith> gr Add (EInt 999) (Mul (Add (EInt 999) (EInt 999)) (EInt
+999))
+
+0 msec Arith> help gr gr, generate_random generate random trees in the current
+abstract syntax
+\end{verbatim}
+
+We see that the tree generated isn't random - `999` is used exclusively, and
+obviously if the trees were actually random, the probability of such a small
+tree might be exceedingly low. The depth of the trees is cut-off, which can be
+modified with the `-depth=n` flag for some number n, and the predefined
+categories, `Int` in this case, are annoyingly restricted. Nonetheless, `gr` is
+a quick first pass at testing your grammar.
+
+Listed in the repl, but not shown here, are (some of the) additional flags that
+`gr` command can take. The `help` command reveals other possible commands,
+included is the linearization, the `l` command. We use the pipe `|` to compose
+gf functions, and the `-tr` to trace the output of `gr` prior to being piped :
+
+\begin{verbatim} Arith> gr -tr | l Add (Mul (Mul (EInt 999) (EInt 999)) (Add
+(EInt 999) (EInt 999))) (Add (Add (EInt 999) (EInt 999)) (Add (EInt 999) (EInt
+999)))
+
+the sum of the product of the product of 999 and 999 and the sum of 999 and 999
+and the sum of the sum of 999 and 999 and the sum of 999 and 999
+\end{verbatim}
+
+Clearly this expression is to too complex to say out loud and retain a semblance
+of meaning. Indeed, most grammatical sentences aren't meaningful. Dealing with
+semantics in GF is advanced, and we won't touch that here. Nonetheless, our
+grammar seems to be up and running.
+
+Let's try the sanity check referenced at the beginning of this post, namely,
+observe that $linearize \circ parse$ preserves an AST, and vice versa, $parse
+\circ linearize$ preserves a string. Parse is denoted `p`.
+
+\begin{verbatim} Arith> gr -tr | l -tr | p -tr | l Add (EInt 999) (Mul (Add
+(EInt 999) (EInt 999)) (Add (EInt 999) (EInt 999)))
+
+the sum of 999 and the product of the sum of 999 and 999 and the sum of 999 and
+999
+
+Add (EInt 999) (Mul (Add (EInt 999) (EInt 999)) (Add (EInt 999) (EInt 999)))
+
+the sum of 999 and the product of the sum of 999 and 999 and the sum of 999 and
+999
+\end{verbatim}
+
+Phew, that's a relief. Note that this is an unambiguous grammar, so when I said
+'preserves', I only meant it up to some notion of relatedness. This relation is
+indeed equality for unambiguous grammars. Unambiguous grammars are degenerate
+cases, however, so I expect this is the last time you'll see such tame behavior
+when the GF parser is involved. Now that all the main ingredients have been
+introduced, the reader
+
+\ Exercises
+
+**Exercise 1.1 :** Extend the `Arith` grammar with variables. Specifically,
+modify both `Arith.gf` and `ArithEng1.gf` arithmetic with two additional unique
+variables, `x` and `y`, such that the string `product of x and y` parses
+uniquely {: .notice--danger}
+
+**Exercise 1.2 :** Extend *Exercise 1.1* with unary predicates, so that `3 is
+prime` and `x is odd` parse. Then include binary predicates, so that `3 equals
+3` parses. {: .notice--danger}
+
+**Exercise 2 :** Write concrete syntax in your favorite language,
+`ArithFaveLang.gf` {: .notice--danger}
+
+**Exercise 3 :** Write second English concrete syntax, `ArithEng2.gf`, that
+mimics how children learn arithmetic, i.e. "3 plus 4" and "5 times 5". Observe
+the ambiguous parses in the gf shell. Substitute `plus` with `+`, `times` with
+`*`, and remedy the ambiguity with parentheses {: .notice--danger}
+
+**Thought Experiment :** Observe that parentheses are ugly and unnecessary:
+sophisticated folks use fixity conventions. How would one go about remedying the
+ugly parentheses, at either the abstract or concrete level? Try to do it! {:
+.notice--warning}
+
+### Solutions
+
+*Exercise 1.1*
+
+This warm-up exercise is to get use to GF syntax. Add a new category `Var` for
+variables, two lexical variable names `VarX` and `VarY`, and a coercion function
+(which won't show up on the linearization) from variables to expressions. We
+then augment the `concrete` syntax which is quite trivial.
+
+```haskell -- Add the following between `{}` in `Arith.gf` cat Var ; fun VExp :
+Var -> Exp ; VarX : Var ; VarY : Var ; ``` ```haskell -- Add the following
+between `{}` in `ArithEng1.gf` lincat Var = Str ; lin VExp v = v ; VarX = "x" ;
+VarY = "y" ; ```
+
+*Exercise 1.2*
+
+This is a similar augmentation as was performed above.
+
+```haskell -- Add the following between `{}` in `Arith.gf` flags startcat = Prop
+;
+
+cat Prop ;
+
+fun Odd : Exp -> Prop ; Prime : Exp -> Prop ; Equal : Exp -> Exp -> Prop ; ```
+```haskell -- Add the following between `{}` in `ArithEng1.gf` lincat Prop = Str
+; lin Odd e = e ++ "is odd"; Prime e = e ++ "is prime"; Equal e1 e2 = e1 ++
+"equals" ++ e2 ; ``` The main point is to recognize that we also need to modify
+the `startcat` flag to `Prop` so that `gr` generates numeric predicates rather
+than just expressions. One may also use the category flag to generate trees of
+any expression `gr -cat=Exp`.
+
+*Exercise 2*
+
+*Exercise 3*
+
+We simply change the strings that get linearized to what follows :
+
+```haskell lin Add e1 e2 = e1 ++ "plus" ++ e2 ; Mul e1 e2 = e1 ++ "times" ++ e2
+; ```
+
+With these minor modifications in place, we make the follow observation in the
+GF shell, noting that for a given number of binary operators in an expression,
+we get the [Catalan number](https://en.wikipedia.org/wiki/Catalan_number) of
+parses!
+
+```haskell Arith> gr -tr | l -tr | p -tr | l Add (Mul (VExp VarX) (Mul (EInt
+999) (VExp VarX))) (EInt 999)
+
+x times 999 times x plus 999
+
+Add (Mul (VExp VarX) (Mul (EInt 999) (VExp VarX))) (EInt 999) Add (Mul (Mul
+(VExp VarX) (EInt 999)) (VExp VarX)) (EInt 999) Mul (VExp VarX) (Add (Mul (EInt
+999) (VExp VarX)) (EInt 999)) Mul (VExp VarX) (Mul (EInt 999) (Add (VExp VarX)
+(EInt 999))) Mul (Mul (VExp VarX) (EInt 999)) (Add (VExp VarX) (EInt 999))
+
+x times 999 times x plus 999 x times 999 times x plus 999 x times 999 times x
+plus 999 x times 999 times x plus 999 x times 999 times x plus 999 ```
+
+```haskell Arith> gr -tr | l -tr | p -tr Add (EInt 999) (Mul (VExp VarY) (Mul
+(EInt 999) (EInt 999)))
+
+( 999 + ( y * ( 999 * 999 ) ) )
+
+Add (EInt 999) (Mul (VExp VarY) (Mul (EInt 999) (EInt 999))) ```
+
+
+
+...Blog post...
+
+
+

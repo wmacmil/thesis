@@ -1,0 +1,34 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {}Perspectives}{4}{section.2}%
+\contentsline {section}{\numberline {}Previous Work}{8}{section.3}%
+\contentsline {section}{\numberline {}Preliminaries}{9}{section.4}%
+\contentsline {subsection}{\numberline {}Martin-Löf Type Theory}{10}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {}Judgments}{10}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {}Grammatical Framework}{12}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {}Overview}{12}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {}Overview}{12}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {}Theoretical Overview}{13}{subsubsection.4.2.3}%
+\contentsline {paragraph}{ What is a GF grammar ? }{13}{section*.4}%
+\contentsline {subsubsection}{\numberline {}Some preliminary observations and considerations}{14}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {}A grammar for basic arithmetic}{15}{subsubsection.4.2.5}%
+\contentsline {paragraph}{Abstract Judgments}{15}{section*.5}%
+\contentsline {paragraph}{Arith.gf}{16}{section*.6}%
+\contentsline {paragraph}{Concrete Judgments}{17}{section*.7}%
+\contentsline {subsubsection}{\numberline {}The GF shell}{19}{subsubsection.4.2.6}%
+\contentsline {subsection}{\numberline {}Agda}{23}{subsection.4.3}%
+\contentsline {subsection}{\numberline {}Natural Language and Mathematics}{23}{subsection.4.4}%
+\contentsline {section}{\numberline {}HoTT Proofs}{23}{section.5}%
+\contentsline {subsection}{\numberline {}Why HoTT for natural language?}{23}{subsection.5.1}%
+\contentsline {subsection}{\numberline {}An introduction to equality}{24}{subsection.5.2}%
+\contentsline {subsection}{\numberline {}All about Identity}{25}{subsection.5.3}%
+\contentsline {section}{\numberline {}GF Grammar for types}{33}{section.6}%
+\contentsline {section}{\numberline {}Goals and Challenges}{34}{section.7}%
+\contentsline {section}{\numberline {}Code}{35}{section.8}%
+\contentsline {subsection}{\numberline {}GF Parser}{35}{subsection.8.1}%
+\contentsline {subsection}{\numberline {}Additional Agda Hott Code}{35}{subsection.8.2}%
+\contentsline {section}{\numberline {}Example section (heading level 1)}{36}{section.9}%
+\contentsline {subsection}{\numberline {}Example subsection (heading level 2)}{36}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {}Example subsubsection (heading level 3)}{36}{subsubsection.9.1.1}%
+\contentsline {section}{References}{37}{subsubsection.9.1.1}%
+\contentsline {section}{\numberline {}Appendices}{38}{section.10}%
