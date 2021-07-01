@@ -107,7 +107,7 @@ Semester and year: & Fall, 2021\\
 Supervisor & Aarne Ranta\\
 Examiner & (name of the examiner)\\
 Report number & (number will be provided by the administrators) \\
-Keywords & (enter a few keywords) 
+Keywords &  Grammatical Framework, Natural Language Generation,\\
 \end{tabular}
 \endgroup
 
@@ -703,13 +703,24 @@ by preaching. Foundational details aside, this thesis is meant to provide a
 blueprint for the syntactic reformation that must take place.  
 
 It doesn't ask the mathematician to relinquish the beautiful language she has
-come to love in expressing her ideas.  Rather, it asks her to make a compromise
+come to love in expressing her ideas. Rather, it asks her to make a compromise
 for the time being, and use a Controlled Natural Language (CNL) to develop her
 work. In exchange she'll get the confidence that Agda provides. Not only that,
-she'll be able to search through a library, to see who else has possibly
-already postulated and proved her conjecture. A version of this grandiose vision is 
-explored in The Formal Abstracts Project.
+she'll be able to search through a library, to see who else has possibly already
+postulated and proved her conjecture. A version of this grandiose vision is
+proposed via The Formal Abstracts Project.
 
+\input{latex/monoid}
+
+multiple defs?
+
+\input{latex/monoid}
+
+but no inputs from included files ? why. seems to be working now
+
+\include{intro}
+
+% \include{intro.lagda.tex}
 \include{perspectives}
 
 \include{previouswork}
@@ -728,6 +739,8 @@ into the generation of this thesis.
 \subsection{Agda}
 
 Agda is an attempt to formalize Martin-Löf's intensional type theory (reference 1984).
+For our purposes, we will only look at what can in some sense be seen as the
+kernel of Agda.
 
 \subsection{Natural Language and Mathematics}
 

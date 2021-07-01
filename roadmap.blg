@@ -2,11 +2,12 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: roadmap.aux
 The style file: apalike2.bst
+A level-1 auxiliary file: intro.aux
 A level-1 auxiliary file: perspectives.aux
 A level-1 auxiliary file: previouswork.aux
 A level-1 auxiliary file: mltt.aux
 A level-1 auxiliary file: gfintro.aux
-Illegal, another \bibstyle command---line 52 of file roadmap.aux
+Illegal, another \bibstyle command---line 53 of file roadmap.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
@@ -14,7 +15,7 @@ Database file #1: example_bibliography.bib
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 You've used 4 entries,
             2229 wiz_defined-function locations,
-            541 strings with 4904 characters,
+            542 strings with 4913 characters,
 and the built_in function-call counts, 1674 in all, are:
 = -- 166
 > -- 51
