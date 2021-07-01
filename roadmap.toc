@@ -1,35 +1,36 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {}Introduction}{1}{section.1}%
-\contentsline {section}{\numberline {}Introduction2}{5}{section.2}%
-\contentsline {section}{\numberline {}Perspectives}{9}{section.3}%
-\contentsline {section}{\numberline {}Previous Work}{13}{section.4}%
-\contentsline {section}{\numberline {}Preliminaries}{14}{section.5}%
-\contentsline {subsection}{\numberline {}Martin-Löf Type Theory}{15}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {}Judgments}{15}{subsubsection.5.1.1}%
-\contentsline {subsection}{\numberline {}Grammatical Framework}{17}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {}Overview}{17}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {}Overview}{17}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {}Theoretical Overview}{18}{subsubsection.5.2.3}%
-\contentsline {paragraph}{ What is a GF grammar ? }{18}{section*.4}%
-\contentsline {subsubsection}{\numberline {}Some preliminary observations and considerations}{19}{subsubsection.5.2.4}%
-\contentsline {subsubsection}{\numberline {}A grammar for basic arithmetic}{20}{subsubsection.5.2.5}%
-\contentsline {paragraph}{Abstract Judgments}{20}{section*.5}%
-\contentsline {paragraph}{Arith.gf}{21}{section*.6}%
-\contentsline {paragraph}{Concrete Judgments}{22}{section*.7}%
-\contentsline {subsubsection}{\numberline {}The GF shell}{24}{subsubsection.5.2.6}%
-\contentsline {subsection}{\numberline {}Agda}{28}{subsection.5.3}%
-\contentsline {subsection}{\numberline {}Natural Language and Mathematics}{28}{subsection.5.4}%
-\contentsline {section}{\numberline {}HoTT Proofs}{28}{section.6}%
-\contentsline {subsection}{\numberline {}Why HoTT for natural language?}{28}{subsection.6.1}%
-\contentsline {subsection}{\numberline {}An introduction to equality}{29}{subsection.6.2}%
-\contentsline {subsection}{\numberline {}All about Identity}{30}{subsection.6.3}%
-\contentsline {section}{\numberline {}GF Grammar for types}{38}{section.7}%
-\contentsline {section}{\numberline {}Goals and Challenges}{39}{section.8}%
-\contentsline {section}{\numberline {}Code}{40}{section.9}%
-\contentsline {subsection}{\numberline {}GF Parser}{40}{subsection.9.1}%
-\contentsline {subsection}{\numberline {}Additional Agda Hott Code}{40}{subsection.9.2}%
-\contentsline {section}{\numberline {}Example section (heading level 1)}{41}{section.10}%
-\contentsline {subsection}{\numberline {}Example subsection (heading level 2)}{41}{subsection.10.1}%
-\contentsline {subsubsection}{\numberline {}Example subsubsection (heading level 3)}{41}{subsubsection.10.1.1}%
-\contentsline {section}{References}{42}{subsubsection.10.1.1}%
-\contentsline {section}{\numberline {}Appendices}{43}{section.11}%
+\contentsline {section}{\numberline {}Perspectives}{5}{section.2}%
+\contentsline {section}{\numberline {}Previous Work}{9}{section.3}%
+\contentsline {subsection}{\numberline {}Ranta}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {}Mohan Ganesalingam}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {}other authors}{9}{subsection.3.3}%
+\contentsline {section}{\numberline {}Preliminaries}{10}{section.4}%
+\contentsline {subsection}{\numberline {}Martin-Löf Type Theory}{10}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {}Judgments}{10}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {}Grammatical Framework}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {}Overview}{11}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {}Overview}{12}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {}Theoretical Overview}{12}{subsubsection.4.2.3}%
+\contentsline {paragraph}{ What is a GF grammar ? }{12}{section*.4}%
+\contentsline {subsubsection}{\numberline {}Some preliminary observations and considerations}{14}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {}A grammar for basic arithmetic}{15}{subsubsection.4.2.5}%
+\contentsline {paragraph}{Abstract Judgments}{15}{section*.5}%
+\contentsline {paragraph}{Arith.gf}{16}{section*.6}%
+\contentsline {paragraph}{Concrete Judgments}{17}{section*.7}%
+\contentsline {subsubsection}{\numberline {}The GF shell}{19}{subsubsection.4.2.6}%
+\contentsline {subsection}{\numberline {}Agda}{22}{subsection.4.3}%
+\contentsline {subsection}{\numberline {}Natural Language and Mathematics}{22}{subsection.4.4}%
+\contentsline {section}{\numberline {}Natural Number Proofs}{23}{section.5}%
+\contentsline {section}{\numberline {}HoTT Proofs}{25}{section.6}%
+\contentsline {subsection}{\numberline {}Why HoTT for natural language?}{25}{subsection.6.1}%
+\contentsline {subsection}{\numberline {}An introduction to equality}{26}{subsection.6.2}%
+\contentsline {subsection}{\numberline {}All about Identity}{27}{subsection.6.3}%
+\contentsline {section}{\numberline {}GF Grammar for types}{36}{section.7}%
+\contentsline {section}{\numberline {}Goals and Challenges}{37}{section.8}%
+\contentsline {section}{\numberline {}Code}{38}{section.9}%
+\contentsline {subsection}{\numberline {}GF Parser}{38}{subsection.9.1}%
+\contentsline {subsection}{\numberline {}Additional Agda Hott Code}{38}{subsection.9.2}%
+\contentsline {section}{\numberline {}Testing}{39}{section.10}%
+\contentsline {section}{References}{40}{section.10}%
+\contentsline {section}{\numberline {}Appendices}{41}{section.11}%

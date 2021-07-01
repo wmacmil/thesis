@@ -1,0 +1,42 @@
+\section{Goals and Challenges}
+
+The parser is still quite primitive, and needs to be extended extensively to
+support natural language ambiguity in mathematics as well as other linguistic
+nuance that GF captures well, like tense and aspect. This can follow a method
+expored in Aarne's paper : "Translating between Language and Logic: What Is
+Easy and What Is Difficult" where one develops a denotational semantics for
+translating between natural language expressions with the desired AST. The bulk
+of this work will be writing a Haskell back-end implementing this AST
+transformation. The extended syntax, designed for linguistic nuance, will be
+filtered into the core syntax, which is essentially what I have done.
+
+The Resource Grammar Library (RGL) is designed for out-of-the box grammar
+writing, and therefore much of the linearization nuance can be outsourced to
+this robust and well-studied library. Nonetheless, each application grammar
+brings its own unique challenges, and the RGL will only get one so far. My
+linearization may require extensive tweaking.
+
+Thus far, our parser is only able to parse non-cubical fragments of the
+cubicalTT standard library. Dealing with Agda pattern matching, it was
+realized, is outside the theoretical boundaries of GF (at least, if one were to
+do it in a non ad-hoc way) due to its inability to pass arbitrary strings down
+the syntax tree nodes during linearization. Pattern matching therefore needs to be dealt
+with via pre and post processing.  Additionally, cubicaltt is weaker at
+dealing with telescopes than Agda, and so a full generalization to Agda is not
+yet possible. Universes are another feature future iterations of this Grammar
+would need to deal with, but as they aren't present in most mathematician's
+vernacular, it is not seen as relevant for the state of this project.
+
+Records should also be added, but because this grammar supports sigma types,
+there is no rush. The Identity type is so far deeply embedded in our grammar,
+so the first code fragment may just be for explanatory purposes.  The degree to
+which the library is extended to cover domain specific information is up to
+debate, but for now the grammar is meant to be kept as minimal as possible.
+
+One interesting extension, time dependnet, would be to allow for a bidrectional
+feedback between GF and Agda : thereby allowing ad hoc extensions to GF's ASTs
+to allow for newly defined Agda functions to be treated with more care, i.e.
+have an arguement structure rather than just treating everything as variables.
+This may be too ambitious for the time being.
+
+

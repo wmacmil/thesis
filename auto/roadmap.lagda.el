@@ -15,12 +15,17 @@
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
-    "latex/monoid"
     "intro"
     "perspectives"
     "previouswork"
-    "mltt"
-    "gfintro"
+    "preliminaries"
+    "natproof"
+    "latex/hott"
+    "grammar"
+    "horizon"
+    "conclusion"
+    "code"
+    "testcite"
     "article"
     "art11"
     "mlt-thesis-2015"
@@ -51,20 +56,12 @@
     "rev"
     "bbU"
     "type")
-   (LaTeX-add-labels
-    "sec:intro"
-    "eq:Jconv"
-    "lem:opp")
    (LaTeX-add-environments
     "definition"
     "lem"
     "proof"
     "thm")
    (LaTeX-add-bibliographies
-    "example_bibliography")
-   (LaTeX-add-index-entries
-    "loop space"
-    "loop space!iterated"
-    "iterated loop space"))
+    "example_bibliography"))
  :latex)
 

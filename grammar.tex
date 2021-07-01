@@ -1,0 +1,49 @@
+
+\section{GF Grammar for types}
+
+We now discuss the GF implementation, capable of parsing both natural language
+and Agda syntax. The parser was appropriated from the cubicaltt BNFC parser,
+de-cubified and then gf-ified. The languages are tightly coupled, so the
+translation is actually quite simple. Some main differences are:
+
+\begin{itemize}[noitemsep]
+
+\item GF treats abstract and concrete syntax seperately. This allows GF to
+support many concrete syntax implementation of a given grammar
+
+\item Fixity is dealt with at the concrete syntax layer in GF.  This allows for
+more refined control of fixity, but also results in difficulties : during
+linearization their can be the insertion of extra parens.
+
+\item GF supports dependent hypes and higher order abstract syntax, which makes
+it suitable to typecheck at the parsing stage. It would very interesting to see
+if this is interoperable with the current version of this work in later
+iterations [Todo - add github link referncing work I've done in this direction]
+
+\item GF also is enhanced by a PGF back-end, allowing an embedding of grammars
+into, among other languages, Haskell.
+
+\end{itemize}
+
+While GF is targeted towards natural language translation, there's nothing
+stopping it from being used as a PL tool as well, like, for instance, the
+front-end of a compiler. The innovation of this thesis is to combine both uses,
+thereby allowing translation between Controlled Natural Languages and
+programming languages.
+
+Example expressions the grammar can parse are seen below, which have been
+verified by hand to be isomorphic to the corresponding cubicaltt BNFC trees:
+
+\begin{verbatim}
+
+data bool : Set where true | false 
+data nat : Set where zero | suc ( n : nat )  
+caseBool ( x : Set ) ( y z : x ) : bool -> Set = split false -> y || true -> z
+indBool ( x : bool -> Set ) ( y : x false ) ( z : x true ) : ( b : bool ) -> x b = split false -> y || true  -> z
+funExt  ( a : Set )   ( b : a -> Set )   ( f g :  ( x : a )  -> b x )   ( p :  ( x : a )  -> ( b x )   ( f x ) == ( g x )  )  : (  ( y : a )  -> b y )  f == g = undefined
+foo ( b : bool ) : bool = b
+
+\end{verbatim}
+
+[Todo] add use cases
+
