@@ -1,5 +1,5 @@
 (TeX-add-style-hook
- "roadmap.lagda"
+ "roadmap"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("article" "11pt" "a4paper")))
@@ -39,7 +39,6 @@
     "hyperref"
     "agda"
     "unicode-math"
-    "stmaryrd"
     "amsfonts"
     "mathtools"
     "xspace"

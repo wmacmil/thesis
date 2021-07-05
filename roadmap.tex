@@ -5,9 +5,13 @@
 % With Xetex/Luatex this shouldn't be used
 %\usepackage[utf8]{inputenc}
 
+\usepackage{csquotes}
+
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{setspace}
+
+\usepackage{tikz-cd}
 
 % from here
 
@@ -19,6 +23,7 @@
 \usepackage{unicode-math}
 
 %\usepackage{amssymb,amsmath,amsthm,stmaryrd,mathrsfs,wasysym}
+\usepackage{stmaryrd}
 
 %\usepackage{enumitem,mathtools,xspace}
 \usepackage{amsfonts}
@@ -81,8 +86,8 @@
 
 % til here
 
-\title{The grammar of proof}
-% \subtitle{Subtitle}
+\title{A grammar of proof}
+% \subtitle{Subtitle} case study in formal & nl proof translation
 \author{Warrick Macmillan}
 
 \begin{document}
@@ -166,6 +171,11 @@ Acknowledgements, etc.
 \AgdaKeyword{where}\<%
 \end{code}
 
+
+1907
+
+
+
 \include{intro}
 
 \include{perspectives}
@@ -175,11 +185,7 @@ Acknowledgements, etc.
 \include{preliminaries}
 
 % should natproof and hottproof be subsections?
-
 \include{natproof}
-
-natproof?
-
 
 % remember to refactor this
 \include{latex/hott}

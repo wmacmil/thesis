@@ -1,5 +1,14 @@
 \begin{thebibliography}{}
 
+\bibitem[Avigad, 2015]{avigad2015mathematics}
+Avigad, J. (2015).
+\newblock Mathematics and language.
+
+\bibitem[Chomsky, 2009]{Chomsky57}
+Chomsky, N. (2009).
+\newblock {\em syntactic structures}.
+\newblock De Gruyter Mouton.
+
 \bibitem[Cortes et~al., 2014]{cortes2014}
 Cortes, C., Kuznetsov, V., \& Mohri, M. (2014).
 \newblock Learning ensembles of structured prediction rules.
@@ -19,6 +28,16 @@ Das, D. \& Petrov, S. (2011).
 Dunning, T. (1993).
 \newblock Accurate methods for the statistics of surprise and coincidence.
 \newblock {\em Computational Linguistics}, 19(1), 61--74.
+
+\bibitem[Frege, 1879]{frege79}
+Frege, G. (1879).
+\newblock {\em Begrisschrift}.
+\newblock Halle.
+
+\bibitem[Ranta \& Ranta, 1994]{ranta1994type}
+Ranta, A. \& Ranta, D. (1994).
+\newblock {\em Type-theoretical Grammar}.
+\newblock Indices (Claredon). Clarendon Press.
 
 \bibitem[{The Univalent foundations program} \& {Institute for advanced study
   (Princeton}, 2013]{theunivalentfoundationsprogram-homotopytypetheory-2013}

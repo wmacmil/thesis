@@ -1,15 +1,35 @@
 \section{Perspectives}
 
+\begin{displayquote}
+
+...when it comes to understanding the power of mathematical language to guide our
+thought and help us reason well, formal mathematical languages like the ones
+used by interactive proof assistants provide informative models of informal
+mathematical language. The formal languages un- derlying foundational frameworks
+such as set theory and type theory were designed to provide an account of the
+correct rules of mathematical reasoning, and, as Gödel observed, they do a
+remarkably good job. But correctness isn’t everything: we want our mathematical
+languages to enable us to reason efficiently and effectively as well. To that
+end, we need not just accounts as to what makes a mathematical argument correct,
+but also accounts of the structural features of our theorizing that help us
+manage mathematical complexity.\cite{avigad2015mathematics}
+
+\end{displayquote}
+
+The key development of this thesis it to explore the formal/informal distinction
+in mathematical language via by means of rule-based, syntax oriented machine
+translation.
 
 Computational linguistics, particularly those in the tradition of type
-theoretical semantics (Ranta 94), gives one a way of comparing natural and
-programming languages. Although it is concerned with the semantics of natural
-language in the logical tradition of Montague, it ended up inspiring the GF
-system, a side effect of which was to realize that translation was possible with
-this of abstracted view of natural language semantics. One can then carry this
-analogy to other areas of computer science, and compare NL and PL phenomena.
-Indeed, one such description of GF is that it is a compiler tool applied to
-domain specific machine translation.
+theoretical semantics\cite{ranta1994type}, gives one a way of comparing natural
+and programming languages. Although it is concerned with the semantics of
+natural language in the logical tradition of Montague, which who synthesized
+work in the traditions of Chomsky \cite{Chomsky57} and Frege \cite{frege79}, it
+ended up inspiring the GF system, a side effect of which was to realize that
+translation was possible with this of abstracted view of natural language
+semantics. One can then carry this analogy to other areas of computer science,
+and compare NL and PL phenomena. Indeed, one such description of GF is that it
+is a compiler tool applied to domain specific machine translation.
 
 * In PL theory, we also have a parallel series of abstraction levels, of which a
 compiler writing course covers the basics. Lexemes -> Abstract Syntax Trees ->
@@ -17,6 +37,122 @@ Well Formed ASTs (i.e. trees which type checking) -> (possibly) intermediate
 language Programs -> Target Language * In what I'll call formal linguistics, we
 have some kind of hierarchy in terms of the following Phonemes -> Morhemes ->
 Syntactic Units -> Sentences -> Dialogue
+
+\begin{tikzcd}
+Strings \ar[d,"Lexical\ Analysis"] \ar[dd,bend right=+90.0, swap,"Front\ End"]
+&[5m]
+\\ Lexemes \ar[d,"Parsing"] &[5em]
+\\ ASTs \ar[d,"Type\ Checker"] &[5m]
+\\ Typed\ ASTs
+  \ar[dd, bend left, "Code\ Generator"] 
+  \ar[dd, bend right, swap, "Interpreter"] &[5m]
+\\ ...
+\\ Target\ Language
+\end{tikzcd}
+
+\begin{tikzcd}
+Strings \ar[d,"Lexical\ Analysis"] \ar[dd,bend right=+90.0, swap,"Front\ End"]
+&[5m]
+\\ Lexemes \ar[d,"Parsing"] &[5em]
+\\ ASTs \ar[d,"Type\ Checker"] &[5m]
+\\ Typed\ ASTs
+  \ar[dd, bend left, "Code\ Generator"] 
+  \ar[dd, bend right, swap, "Interpreter"] &[5m]
+\\ ...
+\\ Target\ Language
+\end{tikzcd}
+\hspace{1cm}
+\begin{tikzcd}
+Phonemes \arrow[d, "Morhphophonological\\ Anaylsis" description]                                                                      \\
+Morphemes \arrow[d, "Parse"]                                                                                                          \\
+\{\ Syntactic\ Representation\ \} \arrow[d, "Montague"', bend right=49] \arrow[d, "Ranta", bend left=49] \arrow[d, "..." description] \\
+{\{\ STLC,\ ...\ ,\ DTT\ \}} \arrow[d, "?" description]                                                                               \\
+{\{\ Nearal Encoding\ ,\ ...\ Internal\ Language\ \}} \arrow[d, "?" description]                                                      \\
+Phonemes                                                                                                                             
+\end{tikzcd}
+
+% \begin{tikzcd}
+%      & Phonemes \arrow[d, "Morhphophonological\\ Anaylsis" description]                                            &     \\
+%      & Morphemes \arrow[d, "Parse"]                                                                                &     \\
+%      & Phrase\ Structure\ Tree \arrow[ld, "Montague" description] \arrow[rd, "Ranta" description] \arrow[d, "..."] &     \\
+% STLC & ...(semantic model)... \arrow[d, "?" description]                                                           & DTT \\
+%      & {\{\ Nearal Encoding\ ,\ ...\ Internal\ Language\ \}} \arrow[d, "?" description]                            &     \\
+%      & Phonemes                                                                                                    &    
+% \end{tikzcd}
+% \begin{tikzcd}
+% & Phonemes \arrow[d, "Morhphophonological\\ Anaylsis" description] & \\
+% & Morphemes \arrow[d, "Parse"] & \\
+% & Phrase\ Structure\ Tree \arrow[ld, "Montague" description] \arrow[rd, "Ranta"
+% description] \arrow[d, "..."] & \\
+% STLC \arrow[ruuu, "Internal Language", bend left] & ... \arrow[d, "?"
+% description] & DTT \arrow[luuu, bend right] \\
+% {\{\ Neural\ Encoding,} & ... \arrow[d, "?"] & {,\ Internal\ Language\ \}} \\
+% & Phonemes &
+% \end{tikzcd}
+
+% \begin{tikzcd}
+% & Phonemes \arrow[d, "Morhphophonological\\ Anaylsis" description] & \\
+% & Morphemes \arrow[d, "Parse"] & \\
+% & Phrase\ Structure\ Tree \arrow[ld, "Montague" description] \arrow[rd, "Ranta"
+% description] \arrow[d, "..."] & \\
+% STLC \arrow[ruuu, "Internal Language", bend left] & ...(semantic model)... \arrow[d, "?" description]                                                           & DTT \arrow[luuu, bend right] \\
+% & {\{\ Nearal Encoding\ ,\ ...\ Internal\ Language\ \}} \arrow[d, "?"] & \\
+% & Phonemes &
+% \end{tikzcd}
+
+% \begin{tikzcd}
+%      & A \arrow[d, "f"]                              &     \\
+%      & Phrase\ Structure\ Tree \arrow[ld] \arrow[rd] &     \\
+% STLC &                                               & DTT
+% \end{tikzcd}
+
+% \begin{tikzcd}
+%      & A \arrow[d, "f"]                                &     \\
+%      & Phrase\\ Structure\\ Tree \arrow[ld] \arrow[rd] &     \\
+% STLC &                                                 & DTT
+% \end{tikzcd}
+
+% \begin{tikzcd}[column sep=small]
+% & A \arrow[d] & \\
+% & A' \arrow[dl] \arrow[dr] & \\
+% B \ar{uur} &  & C \ar{uul}
+% \end{tikzcd}
+
+% \begin{tikzcd}
+% & A \arrow[d, "f" description] & & \\
+% & A' \arrow[ld] \arrow[rd] & & \\
+% B \arrow[ruu, bend left] & & C \arrow[luu, bend right] &
+% \end{tikzcd}
+
+The first diagram exhibits 
+
+% \begin{tikzcd}[column sep=small]
+%   B \arrow[dr] & & C \arrow[dl] \\
+%   & A \arrow[d] \\
+%   & A' \ar[uul] \ar[uur] 
+% \end{tikzcd}
+
+
+% \begin{tikzcd}[column sep=small]
+%   & A \arrow[dl] \arrow[dr] & \\
+%   B \arrow{rr} & & C
+% \end{tikzcd}
+
+
+This diagram is perhaps the most important side-by-side comparison one should
+observe and retain while reading this. Importantly, we should observe that the
+lefthand diagram represents synthetic processes, those which we decide and
+describe formally, whereas those on the right represent analytic observations,
+and therefore are subject to different, in some ways orthogonal, constraints.
+
+
+
+Let's zoom in a little and observe the so-called front-end part of the compiler. 
+
+\begin{tikzcd}
+Strings \ar[r,"Lexical Analysis"] \ar[rr,bend right,"GF Parser"'] &[10em] Lexemes
+\ar[r,"Parsing"] &[10em] ASTs \ar[ll,bend right, "GF Linearization"] 
+\end{tikzcd}
 
 This also has some (external) mapping at the neurological level, where one
 somehow can say the internal language, mechanism of externalization (generally
@@ -162,3 +298,52 @@ the future is all but clear.
 
 Mathematicians may indeed like some of the facilities theorem provers provide,
 but ultimately, they may not see that as the "essence" of what they are doing.
+
+----------------------------------------------------------------
+
+What is a proof? 
+
+Let
+Human 1 := h1
+Human 2 := h2
+. If h1 claims to have a proof p1, and elaborates it to h2 who claims she can
+either verify p1 or 
+reproduce and re-articulate it via p1', such that h1 and h2 agree that p1 and
+p1' are equivalent, then we have discovered some mathematics.agree Consensus of h1
+
+
+  Formalization = formal model construction of an informal piece of text
+  model could be different for different formalizations
+
+  - it may be formalized differently by two different people in many different ways
+  - it may have to be modified, to correct of an error, or modify a smaller piece?
+  - it may not type check, and only be presumed hypothetically to be 'a correct formalization'
+
+
+  
+What is a proof? It is a series of lemmas, constructors, and destructors
+
+What is informalization? 
+
+It is a process of taking a formal syntax, and turning it into a natural
+language utterance -  It is a clarification of the meaning of a piece of
+code. suppressing certain details and reiterating, sometimes
+redundantly, other details.
+
+A metaphor of the architect and the engineer.  A building, like all human
+endeavors, is created via resources and labor of many people. The role of the archtitect
+is to envision the gilded facade, the exterior layer directly perceived by
+others, giving a building its character, its purpose and function hidden in
+either specific articulations like the
+smokestack,  its 
+
+Dialectal layers of mathematics.  From the formal to the expository 
+
+Chicken or the egg?
+
+In order to construct a model of mathematics, we must a priori have a
+mathematical out of which to construct it.  Meaning Explanations?
+
+What is a foundation of mathematics from a mathematical perspective vs from a
+philosophical perspective
+
