@@ -2,14 +2,11 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "theunivalentfoundationsprogram-homotopytypetheory-2013"
+    "surveyLang"
     "frege79"
     "Chomsky57"
     "ranta1994type"
-    "avigad2015mathematics"
-    "warrick1993"
-    "dunning1993"
-    "das2011"
-    "cortes2014"
-    "theunivalentfoundationsprogram-homotopytypetheory-2013"))
+    "avigad2015mathematics"))
  :bibtex)
 

@@ -9,30 +9,16 @@ Chomsky, N. (2009).
 \newblock {\em syntactic structures}.
 \newblock De Gruyter Mouton.
 
-\bibitem[Cortes et~al., 2014]{cortes2014}
-Cortes, C., Kuznetsov, V., \& Mohri, M. (2014).
-\newblock Learning ensembles of structured prediction rules.
-\newblock In {\em Proceedings of the 52nd Annual Meeting of the Association for
-  Computational Linguistics (Volume 1: Long Papers)}  (pp.\ 1--12).  Baltimore,
-  Maryland: Association for Computational Linguistics.
-
-\bibitem[Das \& Petrov, 2011]{das2011}
-Das, D. \& Petrov, S. (2011).
-\newblock Unsupervised part-of-speech tagging with bilingual graph-based
-  projections.
-\newblock In {\em Proceedings of the 49th Annual Meeting of the Association for
-  Computational Linguistics: Human Language Technologies}  (pp.\ 600--609).
-  Portland, Oregon, USA: Association for Computational Linguistics.
-
-\bibitem[Dunning, 1993]{dunning1993}
-Dunning, T. (1993).
-\newblock Accurate methods for the statistics of surprise and coincidence.
-\newblock {\em Computational Linguistics}, 19(1), 61--74.
-
 \bibitem[Frege, 1879]{frege79}
 Frege, G. (1879).
 \newblock {\em Begrisschrift}.
 \newblock Halle.
+
+\bibitem[Kaliszyk \& Rabe, 2020]{surveyLang}
+Kaliszyk, C. \& Rabe, F. (2020).
+\newblock A survey of languages for formalizing mathematics.
+\newblock In C. Benzm{\"u}ller \& B. Miller (Eds.), {\em Intelligent Computer
+  Mathematics}  (pp.\ 138--156).  Cham: Springer International Publishing.
 
 \bibitem[Ranta \& Ranta, 1994]{ranta1994type}
 Ranta, A. \& Ranta, D. (1994).
