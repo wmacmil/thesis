@@ -15,7 +15,7 @@
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
-    "chapters/intro"
+    "intro"
     "perspectives"
     "previouswork"
     "preliminaries"
@@ -25,7 +25,6 @@
     "horizon"
     "conclusion"
     "code"
-    "testcite"
     "article"
     "art11"
     "mlt-thesis-2015"

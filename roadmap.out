@@ -21,11 +21,10 @@
 \BOOKMARK [2][-]{subsection.6.1}{Why\040HoTT\040for\040natural\040language?}{section.6}% 21
 \BOOKMARK [2][-]{subsection.6.2}{An\040introduction\040to\040equality}{section.6}% 22
 \BOOKMARK [2][-]{subsection.6.3}{All\040about\040Identity}{section.6}% 23
-\BOOKMARK [1][-]{section.7}{GF\040Grammar\040for\040types}{}% 24
+\BOOKMARK [1][-]{section.7}{A\040Spectrum\040of\040GF\040Grammars\040for\040types}{}% 24
 \BOOKMARK [1][-]{section.8}{Goals\040and\040Challenges}{}% 25
 \BOOKMARK [1][-]{section.9}{Code}{}% 26
 \BOOKMARK [2][-]{subsection.9.1}{GF\040Parser}{section.9}% 27
 \BOOKMARK [2][-]{subsection.9.2}{Additional\040Agda\040Hott\040Code}{section.9}% 28
-\BOOKMARK [1][-]{section.10}{Testing}{}% 29
-\BOOKMARK [1][-]{section.10}{References}{}% 30
-\BOOKMARK [1][-]{section.11}{Appendices}{}% 31
+\BOOKMARK [1][-]{subsection.9.2}{References}{}% 29
+\BOOKMARK [1][-]{section.10}{Appendices}{}% 30

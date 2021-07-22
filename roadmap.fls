@@ -309,8 +309,6 @@ INPUT conclusion.aux
 INPUT conclusion.aux
 INPUT code.aux
 INPUT code.aux
-INPUT testcite.aux
-INPUT testcite.aux
 OUTPUT roadmap.aux
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -405,9 +403,6 @@ INPUT conclusion.tex
 OUTPUT code.aux
 INPUT code.tex
 INPUT code.tex
-OUTPUT testcite.aux
-INPUT testcite.tex
-INPUT testcite.tex
 INPUT roadmap.bbl
 INPUT roadmap.bbl
 INPUT roadmap.aux
@@ -431,7 +426,5 @@ INPUT conclusion.aux
 INPUT conclusion.aux
 INPUT code.aux
 INPUT code.aux
-INPUT testcite.aux
-INPUT testcite.aux
 INPUT ./roadmap.out
 INPUT ./roadmap.out

@@ -1,5 +1,18 @@
 \section{Previous Work}
 
+There is a story that at some point, Göran Sundholm and Per Martin-Löf were
+sitting at a dinner table, dicsussing various questions of interest to the
+respective scholars, and Sundholm presented Martin-Löf with the problem of
+Donkey Sentences in natural language semantics, those analogous 'Every man who
+owns a donkey beats it'. This had been puzzling to those in the Montague
+tradition, whereby higher order logic didn't provide facile ways of interpreting
+these sentences. Martin-Löf apparently then, using his dependent type
+constructors, provided an interpretation of the donkey sentence on the back of
+the napkin. This is perhaps the genesis of Dependent Type Theory in natural
+language semantics. The research program was thereafter taken up by Martin-Löf's
+student Aarne Ranta \cite{ranta1994type}, bled into the development of GF, and
+has now in some sense led to this current work.
+
 The prior exploration of these interleaving subjects is vast, and we can only
 sample the available literature here. Indeed, there are so many approaches that
 this work should be seen in a small (but important) case in the context of a
@@ -18,6 +31,90 @@ to focus on a few important resources.
 
 \subsection{Ranta}
 
+The initial considerations of Ranta were both oriented towards the language of
+mathematics \cite{ranta93}, as well as purely linguistic concerns
+\cite{ranta1994type}. In the treatise, Ranta explored not just the many avenues
+to describe NL semantic phenomena with Dependent Types, but, after concentrating
+on a linguistic analysis, he also proposed a primitive way of parsing and
+sugaring these dependently typed interpretations of utterances into the strings
+themselves - introducing the common nouns as types idea which has been since
+seen great interest from both type theoretic and linguistic communities
+\cite{luoCNs}. Therefore, if we interpret the set of men and the set of donkeys
+as types, e.g. we judge $\vdash man \; {:} {\rm type}$ and $\vdash donkey \; {:}
+{\rm type}$ where ${\rm type}$ really denotes a universe, and ditransitive verbs
+``owns'' and ``beats'' as predicates, or dependent types over the CN types, i.e.
+$\vdash owns \; {:} man \rightarrow donkey \rightarrow {\rm type}$ we can
+interpret the sentence ``every man who owns a donkey beats it'' in DTT via the
+following judgment :
+
+\[\Pi z : (\Sigma x : man. \; \Sigma y : donkey. \; owns(x,y)). \; beats(\pi_1z,\pi_1(\pi_2z))\]
+
+We note that the natural language quantifiers, which were largely the subject of
+Montague's original investigations \cite{Montague1973}, find a natural
+interpretation as the dependent product and sum types, $\Pi$ and $\Sigma$,
+respectively. As type theory is constructive, and requires explicit witnesses
+for claims, we admit the behavior following semantic interpretation : given a
+man $m$, a donkey $d$ and evidence $m-owns-d$ that the man owns the donkey, we
+can supply, via the term of the above type applied to our own tripple
+$(m,d,m-owns-d)$ , evidence that the man beats the donkey, $beats(m,d)$ via
+$pi_1$ and $pi_2$, the projections, or $\Sigma$ eliminators.
+
+In the final chapter of \cite{ranta1994type}, $Sugaring and Parsing$, Ranta
+explores the explicit relation, and of translation between the above logical
+form and the string, where he presents a GF predecessor in the Alfa proof
+assistant, itself a predecessor of Agda. To accomplish this translation he
+introduces an intermediary , a functional phrase structure tree, which later
+becomes the basis for GFs abstract syntax.  What is referred to as ``sugaring''
+later changes to ``linearization''.
+
+Soon thereafter, GF became a fully realized vision, with better and more
+expressive parsing algorithms \cite{ljunglof2004expressivity} developed in
+Göteborg allowed for sugaring that can largely accommodate morphological
+features of the target natural language \cite{rantaForsberg}, the translation
+between the functional phrase structure (ASTs) and strings \cite{ranta_2004}.
+
+Interestingly, what were called ambiguation : MLTT -> {Phrase Structure} and
+interpretation : {Phrase Structure} -> MLTT were absorbed into GF by providing
+dependently typed ASTs, which allows GF not just to parse syntactic strings, but
+only parse semantically well formed, or meaningful strings. Although this
+feature was in some sense the genesis that allowed GF to implement the
+lingusitic ideas from the book \cite{rantaTT}, it has remained relatively
+limited in terms of actual GF programmers using it in their day to day work.
+Nonetheless, it was intriguing enough to investigate briefly during the course
+of this work as one can implement a programming language grammar that only
+accepts well typed programs, at least as far as they can be encoded via GF's
+dependent types \cite{warrickHarper}. Although GF isn't designed with
+TypeChecking in mind explicity, it would be very interesting to apply GF
+dependent types in the more advanced programming languages to filter parses of
+meaningless strings.
+
+While the semantics of natural language in MLTT is relevant historically, it is
+not the focus of this thesis. Its relevance comes from the fact that all these
+ideas were circulating in the same circles - that is, Ranta's writings on the
+language of mathematics, his approach to NL semantics, and their confluence
+among other things, with the development of GF. This led to the development of a
+natural language layer to Alfa \cite{alfaGF}, which in some sense can be seen as
+a direct predecessor to this work. In some sense, the scope of work seeks to
+recaptiulate  what was already done in 1998 - but this was prior to both GF's
+completion, and Alfa's hard fork to Agda.
+
+% TODO, fix spacing  error
+
+
+GF originally a
+
+
+
+
+% \begin
+% \caption{Abstraction Ladders} \label{fig:M1}
+% \end{figure}
+
+It should be noted that 
+
+
+Theoretical Grammar, Ranta
+
 We give consideration to some of the historical precedents of GF, with respect
 to Ranta. 
 
@@ -27,7 +124,181 @@ HoTT Grammar
 
 \subsection{Mohan Ganesalingam}
 
-The Language of Mathematics
+Perhaps the most substantial analysis of the linguistic perspective on
+written mathematics comes from Ganesalingam. This work presents a substantial
+model using Discource Representation Theory to capture 
+
+One of the most important precedents for this current work was published in a
+book called The Language of Mathematics by Mohan
+
+there is a considerable gap between what math-
+ematicians claim is true and what they believe, and this mismatch causes a
+number of serious linguistic problems
+\cite{ganesalingam2013language}
+
+--for equality section
+Sense vs reference, in some sense mathematics should be concerned with the
+reference of mathematical claims, independent of the language they are being
+stated in.  The abstractions of mathematics, while compositionally built out of
+the piece (which, classically, end up as sets), behave like their own things,
+with emergent properties (What Buckminster Fuller describes as syngergy)
+so that in the same way that a helium molecule's behavior is not theoretically
+tractable (numerical approximations are necessary) much of mathematics is similar
+
+also think, analytic vs synthetic distinction
+
+this gives us a new perspective on HoTT, because the description of spaces and
+other topological constructions, via HITs, uses a more sophisticated
+foundational machinery to connect the semantic intuition of a space with its
+syntactic description (rather than defining Homotopies classically over R or C, etc)
+
+
+-- this is a current phenomena
+
+"
+meaningful statements in some underlying logic. If it was pointed out that
+a particular sentence had no translation into such a logic, a mathematician
+would genuinely feel that they had been insufficiently precise. (The actual
+translation into logic is never performed, because it is exceptionally laborious;
+"
+
+
+"
+mathematics has a normative notion of what its content should look like; there is no
+analogue in natural languages.
+"
+
+1.2.3 full adaptivity
+
+
+"
+From a linguistic perspective, the formal mode is more novel and interesting
+because it is restricted enough to describe completely, both in terms of syntax
+and semantics. By contrast, the informal mode seems as hard to describe as
+general natural language. We will therefore look only at mathematics in the
+formal mode.
+"
+
+
+Section 2
+
+"
+The primary function of symbolic mathematics is to abbreviate material
+that would be too cumbersome to state with text alone. Thus a sentence
+"
+
+"
+Because symbolic material functions primarily in an abbreviative capacity,
+symbolic mathematics tends to occur inside textual mathematics rather than
+vice versa. Thus mathematical texts are largely composed out of textual
+"
+
+"
+adaptivity
+a phenomenon that is much more remarkable than the use of symbols. Math-
+ematical language expands as more mathematics is encountered. The kind of
+"
+
+"
+Thus definitions always contain enough information to fully specify the
+semantics of the material being defined.
+"
+
+"
+As a result, textual mathematics predominantly
+uses the third person singular and third person plural, to denote individual
+"
+
+"
+verbs, typically to refer to the mutual intent of the author and reader.
+Working mathematicians treat mathematical objects as if they were Pla-
+tonic ideals, timeless objects existing independently of the physical world. The
+"
+
+"
+The limited variation in person and tense means that inflectional morphol-
+gy plays only a small part in mathematical language. The only morphological
+"
+
+"The syntax of textual mathematics also exhibits relatively limited variation."
+
+
+this means that textual mathematics can be effectively captured by a context-
+free grammar (in the sense of (Jurafsky and Martin, 2009, p. 387)).
+
+In contrast to the morphology and syntax of textual mathematics, its
+lexicon is remarkably varied. As we have noted above, the mechanism of
+
+no tense or events
+no intesnionality
+no modality
+
+"
+usual. To a first approximation, mathematics does not exhibit any pragmatic
+phenomena: the meaning of a mathematical sentence is merely its composition-
+ally determined semantic content, and nothing more. In order to state this point
+"
+
+
+"
+Due to the absence of pragmatic phenomena, phenomena which are some-
+times analysed as semantic and sometimes analysed as pragmatic can be
+treated as being purely semantic where they occur in mathematics, i.e. they
+can be analysed in purely truth-conditional terms. This applies particularly
+to presuppositions, which play an important role in mathematics. Because
+"
+
+"
+Thus, in some intuitive sense, syntax is dependent on the types of expres-
+sions in a way that does not occur in existing formal languages. As we will
+show in §3.2 and Chapter 4, this notion of type is too semantic itself to be
+formalised in syntactic terms. In other words, the type of an expression is too
+closely related to what that expression refers to for purely syntactic notions
+of type to be applicable.
+"
+
+"
+most ambiguity in mathematics is not noticed by mathematicians, just as the extensive ambi-
+guity in natural languages is “simply not noticed by the majority of language
+"
+
+"
+in an extremely compact manner. In essence, they serve as a mathematical
+alternative to anaphor. They cannot be eliminated precisely because anaphor
+"
+
+reanalysis
+
+Chapter 7 pg 181
+
+be equal as distinct. In both cases, a disparity between the way we think
+about mathematical objects and the way they are formally defined causes
+our linguistic theories to make incorrect predictions. In order to obtain the
+correct predictions about language, we need to make sure that the formal
+situation matches actual usage.
+
+mal proofs are provided; and the cycle repeats. Thus informal mathematics
+changes over the centuries. 187
+
+% my idea
+engineers are motivated by needs and desires (emirical, descriptive,
+practial) , whereas mathematicians are much more idealistic in their pursuits,
+almost comparable to a stances on religious scripture
+
+mathematics developing over time is natural, the more and deeper we dig into the
+ground, the more we develop refinements of what kind of tools we are using,
+develop better iterations of the same tools (or possibly entirely new ones) as
+well as knowledge about the ground in which we are digging (these are adjoining)
+
+in some sense the library of babel problem, whereby we dont just discover
+predefined ideas by randomly sampling bags of words, but we have to work with
+hard labor, sweat, and tears, to imbue the sentences of mathematics with meaning
+that makes them descriptive, that there is some kind of internal, but
+distributed, mental process which is mirror whats on paper (and the 'reality' it
+describes)
+
+relate this to HoTT as a perfect 'case study' in the foundations of mathematics
+
 
 \subsection{other authors}
 
