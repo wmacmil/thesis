@@ -2,6 +2,24 @@
 
 \subsection{Why HoTT for natural language?}
 
+--for equality section
+Sense vs reference, in some sense mathematics should be concerned with the
+reference of mathematical claims, independent of the language they are being
+stated in.  The abstractions of mathematics, while compositionally built out of
+the piece (which, classically, end up as sets), behave like their own things,
+with emergent properties (What Buckminster Fuller describes as syngergy)
+so that in the same way that a helium molecule's behavior is not theoretically
+tractable (numerical approximations are necessary) much of mathematics is similar
+
+also think, analytic vs synthetic distinction
+
+this gives us a new perspective on HoTT, because the description of spaces and
+other topological constructions, via HITs, uses a more sophisticated
+foundational machinery to connect the semantic intuition of a space with its
+syntactic description (rather than defining Homotopies classically over R or C, etc)
+
+
+
 We note that all natural language definitions, theorems, and proofs are copied
 here verbatim from the HoTT book.  This decision is admittedly arbitrary, but
 does have some benefits.  We list some here : 

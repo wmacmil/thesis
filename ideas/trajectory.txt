@@ -65,6 +65,8 @@ There are two perspectives on mathematics, and the process of doing math, that i
 
 Sometimes the type is isomorphic to the program - one offers key insights into the other - the type guides the program construction. This isn't always the case, one can easily formulate the twin prime conjecture in Agda (see escardo).  But the type theorist may remain skeptical, perhaps the twin-prime conjecture hasn't been giving an equivalent but more insightful type.  Fermat's last theorem required significantly more machinery than its type might indicate.
 
+
+
 -- Programs have types
 -- program is a finer level of detail 
 

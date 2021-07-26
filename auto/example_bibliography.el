@@ -2,6 +2,9 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "mlMeanings"
+    "mtac2"
+    "coqAlec"
     "rantaTT"
     "warrickHarper"
     "rantaForsberg"
@@ -14,6 +17,7 @@
     "theunivalentfoundationsprogram-homotopytypetheory-2013"
     "surveyLang"
     "aarneHott"
+    "ltac2"
     "frege79"
     "Chomsky57"
     "ranta1994type"

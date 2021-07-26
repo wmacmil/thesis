@@ -4,6 +4,10 @@ The top-level auxiliary file: roadmap.aux
 The style file: apalike2.bst
 A level-1 auxiliary file: intro.aux
 A level-1 auxiliary file: perspectives.aux
+White space in argument---line 18 of file perspectives.aux
+ : \citation{objective
+ :                     evidence}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: previouswork.aux
 A level-1 auxiliary file: preliminaries.aux
 A level-1 auxiliary file: natproof.aux
@@ -21,45 +25,45 @@ Warning--I didn't find a database entry for "ganesalingam2013language"
 Warning--empty journal in ljunglof2004expressivity
 Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
-You've used 16 entries,
+You've used 20 entries,
             2229 wiz_defined-function locations,
-            629 strings with 6391 characters,
-and the built_in function-call counts, 5928 in all, are:
-= -- 592
-> -- 166
-< -- 21
-+ -- 54
-- -- 48
-* -- 417
-:= -- 996
-add.period$ -- 45
-call.type$ -- 16
-change.case$ -- 94
-chr.to.int$ -- 16
-cite$ -- 19
-duplicate$ -- 283
-empty$ -- 458
-format.name$ -- 74
-if$ -- 1228
+            655 strings with 7011 characters,
+and the built_in function-call counts, 7436 in all, are:
+= -- 749
+> -- 215
+< -- 25
++ -- 70
+- -- 64
+* -- 525
+:= -- 1249
+add.period$ -- 56
+call.type$ -- 20
+change.case$ -- 122
+chr.to.int$ -- 20
+cite$ -- 23
+duplicate$ -- 357
+empty$ -- 561
+format.name$ -- 94
+if$ -- 1539
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 79
-num.names$ -- 54
-pop$ -- 108
+missing$ -- 24
+newline$ -- 98
+num.names$ -- 66
+pop$ -- 129
 preamble$ -- 1
-purify$ -- 101
+purify$ -- 129
 quote$ -- 0
-skip$ -- 233
+skip$ -- 301
 stack$ -- 0
-substring$ -- 394
-swap$ -- 65
-text.length$ -- 5
+substring$ -- 479
+swap$ -- 87
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
+type$ -- 106
 warning$ -- 3
-while$ -- 50
+while$ -- 61
 width$ -- 0
-write$ -- 204
-(There was 1 error message)
+write$ -- 256
+(There were 2 error messages)

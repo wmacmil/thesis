@@ -26,6 +26,12 @@ Hallgren, T. \& Ranta, A. (2000).
   Programming and Automated Reasoning}, LPAR'00  (pp.\ 70–84).  Berlin,
   Heidelberg: Springer-Verlag.
 
+\bibitem[Kaiser et~al., 2018]{mtac2}
+Kaiser, J.-O., Ziliani, B., Krebbers, R., R\'{e}gis-Gianas, Y., \& Dreyer, D.
+  (2018).
+\newblock Mtac2: Typed tactics for backward reasoning in coq.
+\newblock {\em Proc. ACM Program. Lang.}, 2(ICFP).
+
 \bibitem[Kaliszyk \& Rabe, 2020]{surveyLang}
 Kaliszyk, C. \& Rabe, F. (2020).
 \newblock A survey of languages for formalizing mathematics.
@@ -48,11 +54,28 @@ Macmillan, W. (2020).
 \newblock {\em {GF-Typechecker}}.
 \newblock \url{https://github.com/wmacmil/GF_Typechecker}.
 
+\bibitem[Martin{-}L\"of, 1996]{mlMeanings}
+Martin{-}L\"of, P. (1996).
+\newblock On the meanings of the logical constants and the justifications of
+  the logical laws.
+\newblock {\em Nordic Journal of Philosophical Logic}, 1(1), 11--60.
+
 \bibitem[Montague, 1973]{Montague1973}
 Montague, R. (1973).
 \newblock {\em The Proper Treatment of Quantification in Ordinary English},
   (pp.\ 221--242).
 \newblock Springer Netherlands: Dordrecht.
+
+\bibitem[Pit-Claudel, 2020]{coqAlec}
+Pit-Claudel, C. (2020).
+\newblock Untangling mechanized proofs.
+\newblock In {\em Proceedings of the 13th ACM SIGPLAN International Conference
+  on Software Language Engineering}, SLE 2020  (pp.\ 155–174).  New York, NY,
+  USA: Association for Computing Machinery.
+
+\bibitem[Pédrot, 2021]{ltac2}
+Pédrot, P.-M. (2021).
+\newblock Ltac2 : Tactical warfare.
 
 \bibitem[Ranta, 1994]{ranta93}
 Ranta, A. (1994).
