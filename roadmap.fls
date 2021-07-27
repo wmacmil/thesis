@@ -287,6 +287,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 INPUT roadmap.aux
 INPUT roadmap.aux
 INPUT intro.aux
@@ -362,6 +368,10 @@ INPUT perspectives.tex
 OUTPUT previouswork.aux
 INPUT previouswork.tex
 INPUT previouswork.tex
+INPUT latex/ContrClean.tex
+INPUT latex/ContrClean.tex
+OUTPUT roadmap.ptb
+INPUT roadmap.ptb
 OUTPUT preliminaries.aux
 INPUT preliminaries.tex
 INPUT preliminaries.tex

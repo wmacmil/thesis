@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  26 JUL 2021 23:09
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  28 JUL 2021 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1015,40 +1015,67 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 e 41.
 (/usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
-)
-\c@definition=\count331
-\c@lem=\count332
-\c@proof=\count333
-\c@thm=\count334
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count331
+\lst@gtempboxa=\box63
+\lst@token=\toks40
+\lst@length=\count332
+\lst@currlwidth=\dimen286
+\lst@column=\count333
+\lst@pos=\count334
+\lst@lostspace=\dimen287
+\lst@width=\dimen288
+\lst@newlines=\count335
+\lst@lineno=\count336
+\lst@maxwidth=\dimen289
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count337
+\lst@skipnumbers=\count338
+\lst@framebox=\box64
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+\c@definition=\count339
+\c@lem=\count340
+\c@proof=\count341
+\c@thm=\count342
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-(./roadmap.aux (./intro.aux) (./perspectives.aux) (./previouswork.aux) (./preli
-minaries.aux) (./natproof.aux) (./latex/hott.aux) (./grammar.aux) (./horizon.au
-x) (./conclusion.aux) (./code.aux))
+(./roadmap.aux (./intro.aux) (./perspectives.aux) (./previouswork.aux
+
+LaTeX Warning: Label `fig:M1' multiply defined.
+
+
+LaTeX Warning: Label `fig:M2' multiply defined.
+
+) (./preliminaries.aux) (./natproof.aux) (./latex/hott.aux) (./grammar.aux) (./
+horizon.aux) (./conclusion.aux) (./code.aux))
 \openout1 = `roadmap.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1084,8 +1111,8 @@ LaTeX Font Info:    ... okay on input line 94.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 94.
+\AtBeginShipoutBox=\box65
+Package hyperref Info: Link coloring OFF on input line 109.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1093,11 +1120,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count335
+\c@section@level=\count343
 )
-LaTeX Info: Redefining \ref on input line 94.
-LaTeX Info: Redefining \pageref on input line 94.
-LaTeX Info: Redefining \nameref on input line 94.
+LaTeX Info: Redefining \ref on input line 109.
+LaTeX Info: Redefining \pageref on input line 109.
+LaTeX Info: Redefining \nameref on input line 109.
 (./roadmap.out) (./roadmap.out)
 \@outlinefile=\write5
 \openout5 = `roadmap.out'.
@@ -1142,15 +1169,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 94.
+(Font)              `operators' in the math version `normal' on input line 109.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 94.
+ line 109.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 94.
+(Font)              `operators' in the math version `bold' on input line 109.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 94.
+t line 109.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1221,15 +1249,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 94.
+(Font)              `symbols' in the math version `normal' on input line 109.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 94.
+t line 109.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 94.
+(Font)              `symbols' in the math version `bold' on input line 109.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 94.
+t line 109.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1282,17 +1310,17 @@ uage=dflt;"
 (fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 9
-4.
+(Font)              `largesymbols' in the math version `normal' on input line 1
+09.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 94.
+t line 109.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 94.
-
+(Font)              `largesymbols' in the math version `bold' on input line 109
+.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 94.
+t line 109.
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                `mathtools' package.
@@ -1311,38 +1339,39 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 (unicode-math)                colon-like commands, using them will lead to
 (unicode-math)                inconsistencies.
 
+\c@lstlisting=\count344
 File: logo/gu_logo_blue.pdf Graphic file (type pdf)
 <use logo/gu_logo_blue.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 107.
+(Font)              scaled to size 10.95116pt on input line 122.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 107.
+(Font)              scaled to size 7.6658pt on input line 122.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 107.
+(Font)              scaled to size 5.47559pt on input line 122.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 107.
+(Font)              scaled to size 10.94882pt on input line 122.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 107.
+(Font)              scaled to size 7.66417pt on input line 122.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 107.
+(Font)              scaled to size 5.47441pt on input line 122.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-07.
+22.
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.475> not available
-(Font)              size <5> substituted on input line 107.
+(Font)              size <5> substituted on input line 122.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 107
+LaTeX Font Info:    Trying to load font information for U+msa on input line 122
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 107
+LaTeX Font Info:    Trying to load font information for U+msb on input line 122
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (40.82745pt too wide) in paragraph at lines 107--119
+Overfull \hbox (40.82745pt too wide) in paragraph at lines 122--134
 [][] 
  []
 
@@ -1377,7 +1406,7 @@ See the PGF Math package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 &[5m]
+l.66 &[5m]
           
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -1392,10 +1421,10 @@ Missing character: There is no 0 in font nullfont!
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help
 ...
-l.75 I think the culprit is a tikzcd arrow in cell 1-1.
+l.77 I think the culprit is a tikzcd arrow in cell 1-1.
 \errmessage ...currentrow -\tikzcd@currentcolumn }
                                                   
-l.83 \end{tikzcd}
+l.85 \end{tikzcd}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1404,7 +1433,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.83 \end{tikzcd}
+l.85 \end{tikzcd}
                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1412,7 +1441,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.83 \end{tikzcd}
+l.85 \end{tikzcd}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1426,10 +1455,10 @@ my insertion and my current dilemma will both disappear.
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help
 ...
-l.75 I think the culprit is a tikzcd arrow in cell 1-1.
+l.77 I think the culprit is a tikzcd arrow in cell 1-1.
 \errmessage ...currentrow -\tikzcd@currentcolumn }
                                                   
-l.83 \end{tikzcd}
+l.85 \end{tikzcd}
                  
 (That was another \errmessage.)
 
@@ -1439,10 +1468,10 @@ l.83 \end{tikzcd}
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help
 ...
-l.75 I think the culprit is a tikzcd arrow in cell 1-1.
+l.77 I think the culprit is a tikzcd arrow in cell 1-1.
 \errmessage ...currentrow -\tikzcd@currentcolumn }
                                                   
-l.83 \end{tikzcd}
+l.85 \end{tikzcd}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1458,7 +1487,7 @@ Missing character: There is no s in font nullfont!
 ! Extra }, or forgotten \endgroup.
 \pgf@let@token ...Morhphophonological \\ Anaylsis}
                                                   
-l.83 \end{tikzcd}
+l.85 \end{tikzcd}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1469,7 +1498,7 @@ deleted material, e.g., by typing `I$}'.
 ! Extra }, or forgotten \endgroup.
 \pgf@let@token ...@is@a@labeltrue }\tikz@tonodes }
                                                   
-l.83 \end{tikzcd}
+l.85 \end{tikzcd}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1496,29 +1525,38 @@ Missing character: There is no p in font nullfont!
 [7] [8] [9] [10] [11]
 
 Package natbib Warning: Citation `objective evidence' on page 12 undefined on i
-nput line 357.
+nput line 359.
 
-[12]) [13] [14]
+[12] [13]) [14]
 \openout2 = `previouswork.aux'.
 
 (./previouswork.tex [15
 
 
-] [16]
+]
+Overfull \hbox (7.00284pt too wide) in paragraph at lines 76--90
+[]\TU/DejaVuSerif(0)/m/n/10.95 Interestingly, the functions that were called $[
+][][][][][][][][][][] [] [][][][] [] [][][][][][][] [][][][][][][][][][]$
+ []
 
-Package natbib Warning: Citation `ganesalingam2013language' on page 17 undefine
-d on input line 137.
+[16] [17] (./latex/ContrClean.tex
+\openout4 = `roadmap.ptb'.
 
-[17] [18]
-Overfull \hbox (4.69714pt too wide) in paragraph at lines 280--282
+) [18]
+
+Package natbib Warning: Citation `ganesalingam2013language' on page 19 undefine
+d on input line 229.
+
+[19] [20]
+Overfull \hbox (4.69714pt too wide) in paragraph at lines 372--374
 []\TU/DejaVuSerif(0)/m/n/10.95 mal proofs are provided; and the cycle repeats. 
 Thus informal mathematics changes
  []
 
-[19]) [20]
+[21]) [22]
 \openout2 = `preliminaries.aux'.
 
-(./preliminaries.tex (./mltt.tex [21
+(./preliminaries.tex (./mltt.tex [23
 
 
 ]
@@ -1540,7 +1578,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) (./gfintro.tex [22]
+) (./gfintro.tex [24]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -1566,7 +1604,7 @@ near presentation C$[][] [][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
  []
 
-[23]
+[25]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -1728,7 +1766,7 @@ l.129
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[24]
+[26]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -1795,7 +1833,7 @@ l.190
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[25] [26]
+[27] [28]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -1822,7 +1860,7 @@ Overfull \hbox (702.87512pt too wide) in paragraph at lines 267--271
 ][][][][][][][][][][][][][][][]$ 
  []
 
-[27] [28]
+[29] [30]
 Overfull \hbox (28.28131pt too wide) in paragraph at lines 351--351
 []\TU/DejaVuSansMono(0)/m/n/10.95 lin Add e1 e2 = "the sum of" ++ e1 ++ "and" +
 + e2 ; Mul e1 e2 = "the product of"[] 
@@ -1844,7 +1882,7 @@ l.385
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[29]
+[31]
 Overfull \hbox (37.07129pt too wide) in paragraph at lines 400--400
 []\TU/DejaVuSansMono(0)/m/n/10.95 product of" ++ linearize (Add (EInt 3) (EInt 
 4)) ++ "and" ++ linearize (EInt 5)[] 
@@ -1914,7 +1952,7 @@ Overfull \hbox (34.87378pt too wide) in paragraph at lines 446--446
 erate random trees in the current[] 
  []
 
-[30]
+[32]
 Overfull \hbox (32.67633pt too wide) in paragraph at lines 466--466
 []\TU/DejaVuSansMono(0)/m/n/10.95 (EInt 999) (EInt 999))) (Add (Add (EInt 999) 
 (EInt 999)) (Add (EInt 999) (EInt[] 
@@ -1944,7 +1982,7 @@ Overfull \hbox (26.0838pt too wide) in paragraph at lines 487--487
 999 and 999 and the sum of 999 and[] 
  []
 
-[31]
+[33]
 Overfull \hbox (0.82831pt too wide) in paragraph at lines 507--509
 []\TU/DejaVuSerif(0)/m/n/10.95 **Exercise 2 :** Write concrete syntax in your f
 avorite language, ‘ArithFaveLang.gf‘
@@ -1974,7 +2012,7 @@ I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-[32]
+[34]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -1991,28 +2029,28 @@ l.564
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-) (./introagda.tex)) [33]
+) (./introagda.tex)) [35]
 \openout2 = `natproof.aux'.
 
-(./natproof.tex) [34
+(./natproof.tex) [36
 
 
 ]
 \openout2 = `latex/hott.aux'.
 
-(./latex/hott.tex [35
+(./latex/hott.tex [37
 
 
 ]
 \openout4 = `roadmap.ptb'.
 
-[36]
+[38]
 \openout4 = `roadmap.ptb'.
 
-[37] [38]
+[39] [40]
 \openout4 = `roadmap.ptb'.
 
-[39]
+[41]
 Overfull \hbox (7.21178pt too wide) in paragraph at lines 414--424
 \TU/DejaVuSerif(0)/m/it/10.95 Thus, the induction principle for identity types 
 gives us an element $[][][][][] [][] [][] [][] [][] []
@@ -2022,7 +2060,7 @@ gives us an element $[][][][][] [][] [][] [][] [][] []
 
 \openout4 = `roadmap.ptb'.
 
-[40]
+[42]
 \openout4 = `roadmap.ptb'.
 
 \openout4 = `roadmap.ptb'.
@@ -2317,13 +2355,13 @@ Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
  [][][][] 
  []
 
-[41]
+[43]
 Overfull \hbox (3.00977pt too wide) in paragraph at lines 1415--1417
 \TU/DejaVuSerif(0)/m/n/10.95 tween paths between paths level, some interesting 
 and nonintuitive results emerge.
  []
 
-[42]
+[44]
 \openout4 = `roadmap.ptb'.
 
 
@@ -2696,10 +2734,10 @@ Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
  [][][][] 
  []
 
-[43] [44]) [45]
+[45] [46]) [47]
 \openout2 = `grammar.aux'.
 
-(./grammar.tex) [46
+(./grammar.tex) [48
 
 
 ]
@@ -2708,52 +2746,76 @@ Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
 No file horizon.tex.
 \openout2 = `conclusion.aux'.
 
-(./conclusion.tex) [47
+(./conclusion.tex
+! Misplaced alignment tab character &.
+l.52 * Latex &
+               Unicode support  -
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[49
 
 
 
 
 ]
+! Undefined control sequence.
+l.69 ...rete syntax -Harper psychology {\intersect
+                                                  } programming
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [50]
 \openout2 = `code.aux'.
 
-(./code.tex) [48
+(./code.tex) [51
 
 
 ] (./roadmap.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 92--96
+Underfull \hbox (badness 10000) in paragraph at lines 99--103
 []\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  \TU/DejaVuSerif(0)/m/it/10.95
  gf-contrib/typetheory\TU/DejaVuSerif(0)/m/n/10.95 .  []$[][][][][] [] [] [] []
 [][][][][] [] [][][] []
  []
 
-[49
+[52
 
-]) [50]
+]) [53]
 
 Package natbib Warning: There were undefined citations.
 
-[51]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
+[54]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
 (./roadmap.aux (./intro.aux) (./perspectives.aux) (./previouswork.aux) (./preli
 minaries.aux) (./natproof.aux) (./latex/hott.aux) (./grammar.aux) (./horizon.au
 x) (./conclusion.aux) (./code.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: 450B456F063AE9C2F52AD411D3876084;2330.
+(rerunfilecheck)             Checksum: 807DDF4C42CC5E3D487B912B97540BC0;2529.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 31654 strings out of 479819
- 610647 string characters out of 5895846
- 1186452 words of memory out of 5000000
- 48040 multiletter control sequences out of 15000+600000
+ 32856 strings out of 479819
+ 628381 string characters out of 5895846
+ 1186450 words of memory out of 5000000
+ 49227 multiletter control sequences out of 15000+600000
  538249 words of font info for 151 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,796b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (56 pages, 1234744 bytes).
+Output written on roadmap.xdv (59 pages, 1337572 bytes).

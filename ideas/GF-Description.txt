@@ -1,0 +1,32 @@
+Personal perspectives on GF
+
+A GF AST can be seen as a uniquely similar definition to that of an operad, and it should be noted that the insights and general way of thinking that an Operad gives about a subject.  
+
+
+
+* Compositionality 
+* Modularity
+* Abstraction
+
+Both of these principles are centrail concerns when understanding how to think about and effectively use GF, for exploiting these correctly is both rewarding and tricky.  
+
+
+We begin with an overall perspective on the what when why and how for GF 
+
+what
+- What is the semantic, or ontological domain I'm trying to model
+
+What are the languages which map to that domain?
+What are their building blocks and ways, or instructions, for assembling those building blocks.
+What are different ways of saying the same thing in a given language.
+Which principles or features of one language are shared in how they express 
+How do I map those building blocks into different languages?
+What are the most important features of the languages in terms of ?
+How ambiguous are the languages ? 
+
+
+Building blocks = Categories
+Instructions = functions
+Assembly instructions = compositions of functions
+
+

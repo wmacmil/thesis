@@ -88,6 +88,13 @@ RANTA, A. (2004).
 \newblock Grammatical framework.
 \newblock {\em Journal of Functional Programming}, 14(2), 145–189.
 
+\bibitem[Ranta, 2011]{rantaLog}
+Ranta, A. (2011).
+\newblock Translating between language and logic: what is easy and what is
+  difficult.
+\newblock In {\em International Conference on Automated Deduction}  (pp.\
+  5--25).: Springer.
+
 \bibitem[Ranta, 2013]{rantaTT}
 Ranta, A. (2013).
 \newblock {\em {gf-contrib/typetheory}}.

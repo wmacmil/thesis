@@ -1,0 +1,48 @@
+
+
+Grammars so far
+
+getting organized
+
+Finding the bug in logic grammar
+
+/home/wmacmil/thesis/godelsTgf/lambdaPi
+  updated version, not yet pushed, issues dealing with Exp, attempted RGL
+
+Aarne's hot grammar 
+  /home/wmacmil/thesis/gf/homotopy-typetheory
+  see ltest.logic, notice the Agda modifications
+  also, see 
+  /home/wmacmil/thesis/AgdaGrammar/contractableExamples.txt
+  /home/wmacmil/thesis/AgdaGrammar/agda/Contr*
+
+Main CubicalTT grammar
+BNFC -> Agda, how to deal with this 
+  Concrete syntax
+  List constraints, particularly with NL
+
+Depenent vs. Non-dependent types, and proofs in these langauges
+  Talk for itc
+
+sidenote
+  Dependent types kind of give a controlled notion of polymorphism
+
+Playing with PGF, semantic translation (i.e. model construction vs proofs)
+
+
+~/thesis/godelsTgf/Tele
+  Telescope construction, need an extra parameter to deal with lists
+  - this is where the compositionality breaks down a little
+
+
+Constraints, difficulties -- [can talk about these in the different sections, but also have an overall category?]
+
+Agda
+
+Support for universes,  (Talk about Escardo, Hott Book)
+
+/home/wmacmil/thesis/AgdaGrammar
+desired
+talk about pattern matching issue
+- external or via gf categories
+

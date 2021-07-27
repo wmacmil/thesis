@@ -16,6 +16,8 @@ manage mathematical complexity.\cite{avigad2015mathematics}
 
 \end{displayquote}
 
+\subsection{Linguistic and Programming Language Abstractions}
+
 The key development of this thesis it to explore the formal and informal
 distinction of presenting mathematics as understood by mathematicians and computer
 scientists by means of rule-based, syntax oriented machine translation.
@@ -381,10 +383,34 @@ assuring the building gets built, doesn't collapse, and functions with many
 implicit features which the user of the building may not notice : the running
 water, insulation, and electricity. Whereas the architect is responsible for the
 building's \emph{specification}, the engineer is tasked with its
-\emph{implementation}.  Informal proofs are specifications and formal proofs are implementations.
-Importantly, we are just now at a point historically where our technologies support the
-implementations, and modern theorem provers like Coq and Agda provide an incredible
-amount of help in realizing the them.
+\emph{implementation}.
+
+We claim informal proofs are specifications and formal proofs are implementations.
+Additionally, via the propositions-as-types interpretation, one may see a logic
+as a specification and a PL as an implementation of a given logic, 
+often with multiple ways of assigning terms to a given type. Therefore, one may
+see the mathematician ambiently developing a theorem in classical first order
+logic as providing a specification of a proposition in that language, whereas a given
+implementation of that theorem in Agda could be viewed as a model construction
+of some NL fragment, where truth in the model would correspond to termination of
+type-checking. Alternatively, during the informalization process, two different
+authors may suppress different details, or phrase a given utterance entirely
+differently, possibly leading to two different, but possibly similar proofs.
+Extrapolating our analogy,
+the same way, two architects hypothetically, given the same engineering plans,
+could produce two entirely different looking buildings.
+
+There isn't a natural notion of equivalence between informal and formal proofs,
+but rather, loosely, some kind of adjunction in the categorical sense between
+these two sets. We note the fact that the ``acceptable'' Natural language
+utterances aren't inductively defined precludes us from actually constructing a
+canonical mathematical model of formal/informal relationship, but we most certainly
+believe that if the GF perspective of translation is used, there at least an
+approximation of what a model may look like.
+
+% Importantly, we are just now at a point historically where our
+% technologies support the implementations, and modern theorem provers like Coq
+% and Agda provide an incredible amount of help in realizing the them.
 
 Mathematicians seek model independence in their results (i.e., they don't need a
 direct encoding of Fermat's last theorem in set theory in order to trust its
@@ -412,21 +438,22 @@ have a new perspective :
 
 \begin{itemize}
 
-\item what are mathematical objects
-\item   how do their encodings in different foundational formalisms affect their interpretations
-\item how does is mathematics develop as a social process
-\item how does what mathematics is and how it is done rely on given technologies of a given historical era.
+\item what are mathematical objects ?
+\item how do their encodings in different foundational formalisms affect their
+  interpretations ?
+\item how does is mathematics develop as a social process ?
+\item how does what mathematics is and how it is done rely on given technologies
+  of a given historical era. ?
   
 \end{itemize}
 
-While various branches of linguistics has seen rapid evolution due to, in large
+While various branches of linguistics have seen rapid evolution due to, in large
 part, their adoption of mathematical tools, the dual application of linguistic
 tools to mathematics is quite sparse and open terrain. We hope the reader can
 walk away with an new appreciation to some of these questions and topics after
-reading this.
-
-These nuances we will not explore here, but do intend to further elaborate in the
-future and and more importantly, inspire other readers to respond accordingly.
+reading this. These nuances we will not explore here, but shall be further
+elaborated in the future and and more importantly, hopefully inspire other
+readers to respond accordingly.
 
 Although not given in specific detail, the view of what mathematics is, in both
 a philosophical and mathematical sense, as well as from the view of what a

@@ -43,9 +43,17 @@
     "mathtools"
     "xspace"
     "enumitem"
-    "newunicodechar")
+    "newunicodechar"
+    "xcolor"
+    "listings"
+    "xparse")
    (TeX-add-symbols
     '("id" ["argument"] 2)
+    '("equivalenceH" 2)
+    '("appH" 2)
+    '("arrowH" 2)
+    '("comprehensionH" 3)
+    '("equalH" 2)
     '("opp" 1)
     '("indid" 1)
     '("ind" 1)
@@ -64,6 +72,8 @@
     "proof"
     "thm")
    (LaTeX-add-bibliographies
-    "example_bibliography"))
+    "example_bibliography")
+   (LaTeX-add-xparse-macros
+    '("codeword" "v")))
  :latex)
 

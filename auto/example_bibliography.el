@@ -2,6 +2,7 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "rantaLog"
     "mlMeanings"
     "mtac2"
     "coqAlec"

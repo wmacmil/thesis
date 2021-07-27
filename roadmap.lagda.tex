@@ -44,6 +44,14 @@
 
 \usepackage{newunicodechar}
 
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{xparse}
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{gray}{#1}}%
+}
+
+
 \newunicodechar{ℓ}{\ensuremath{\mathnormal\ell}}
 \newunicodechar{→}{\ensuremath{\mathnormal\rightarrow}}
 
@@ -76,6 +84,13 @@
 \newcommand{\UU}{\ensuremath{\mathcal{U}}\xspace}
 \let\bbU\UU
 \let\type\UU
+
+\newcommand{\equalH}[2]{#1 = #2}
+\newcommand{\comprehensionH}[3]{\{ #1 : #2 \mid #3 \}}
+\newcommand{\arrowH}[2]{#1 \rightarrow #2}
+\newcommand{\appH}[2]{#1 #2}
+\newcommand{\equivalenceH}[2]{#1 \simeq #2}
+
 
 
 %\newcommand{\ct}{%
@@ -165,7 +180,8 @@ Acknowledgements, etc.
 module roadmap where
 \end{code}
 
-2309 
+0014
+
 \include{intro}
 
 \include{perspectives}
