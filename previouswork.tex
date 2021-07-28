@@ -190,6 +190,8 @@ Equivalence ( f : A -> B ) : Set =
 \caption{Pidgin cubicalTT} \label{fig:M2}
 
 \input{latex/ContrClean}
+% \input{latex/primitives}
+
 \caption{Agda} \label{fig:M3}
 \end{figure}
 
@@ -216,36 +218,28 @@ must increase in complexity.
 
 \subsection{Mohan Ganesalingam}
 
+
+\begin{displayquote}
+
+there is a considerable gap between what mathematicians claim is true and what
+they believe, and this mismatch causes a number of serious linguistic problems
+
+\end{displayquote}
+
 Perhaps the most substantial analysis of the linguistic perspective on
-written mathematics comes from Ganesalingam. This work presents a substantial
-model using Discource Representation Theory to capture 
+written mathematics comes from Ganesalingam \cite{ganesalingam2013language}.
+Not only does he pick up and reexamine much of Ranta's early work, but he
+develops a whole theory for how to understand with the language mathematics from
+a formal point of view, additionally working with many questions about the
+foundation of mathematics. His model which is developed early in the treatise
+and is referenced 
+throughout uses Discourse Representation Theory \cite{kamp2011discourse}, to
+capture anaphoric use of variables. While he is interested in analyzing
+language, or goal is to translate, because the meaning of an expression is
+contained in its set of formalizations, so GF is more of just a tool in the
+pipeline rather than an actual infrastructure through which to dissect the various
+nuances of human speech.
 
-One of the most important precedents for this current work was published in a
-book called The Language of Mathematics by Mohan
-
-there is a considerable gap between what math-
-ematicians claim is true and what they believe, and this mismatch causes a
-number of serious linguistic problems
-\cite{ganesalingam2013language}
-
---for equality section
-Sense vs reference, in some sense mathematics should be concerned with the
-reference of mathematical claims, independent of the language they are being
-stated in.  The abstractions of mathematics, while compositionally built out of
-the piece (which, classically, end up as sets), behave like their own things,
-with emergent properties (What Buckminster Fuller describes as syngergy)
-so that in the same way that a helium molecule's behavior is not theoretically
-tractable (numerical approximations are necessary) much of mathematics is similar
-
-also think, analytic vs synthetic distinction
-
-this gives us a new perspective on HoTT, because the description of spaces and
-other topological constructions, via HITs, uses a more sophisticated
-foundational machinery to connect the semantic intuition of a space with its
-syntactic description (rather than defining Homotopies classically over R or C, etc)
-
-
--- this is a current phenomena
 
 "
 meaningful statements in some underlying logic. If it was pointed out that
@@ -253,7 +247,6 @@ a particular sentence had no translation into such a logic, a mathematician
 would genuinely feel that they had been insufficiently precise. (The actual
 translation into logic is never performed, because it is exceptionally laborious;
 "
-
 
 "
 mathematics has a normative notion of what its content should look like; there is no
@@ -397,7 +390,18 @@ relate this to HoTT as a perfect 'case study' in the foundations of mathematics
 The question 
 
 We note that 
-NaProche, Mizar, Coq (coquand), 
+
+NaProche
+
+he Naproche project (Natural language Proof Checking) studies the semi-formal language of mathematics from a linguistic, philosophical and mathematical perspective. A central goal of Naproche is to develop a controlled natural language (CNL) for mathematical texts and adapted proof checking software which checks texts written in the CNL for syntactical and mathematical correctness. 
+
+Uses Automated Theorem Prover (ATP) backend rather than ITP
+
+
+Mizar
+
+Coq (coquand), 
+
 Boxer
 Boxer system [29] is able to parse any English sentence and translate it into a formula
 of predicate calculus. Combined with theorem proving and model checking, Boxer can

@@ -1,0 +1,84 @@
+\begin{code}[hide]%
+\>[0]\<%
+\\
+\>[0]\AgdaKeyword{module}\AgdaSpace{}%
+\AgdaModule{primitives}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[0]\<%
+\end{code}
+
+Formation rules, are given by the data declaration, followed by some number of
+constructors which correspond to the 
+
+
+A proof the proof-theoretic this looks like the following
+
+
+\begin{prooftree}
+  \hypo{ \Gamma, A &\vdash B }
+  \infer1[abs]{ \Gamma &\vdash A\to B }
+  \hypo{ \Gamma \vdash A }
+  \infer2[app]{ \Gamma \vdash B }
+\end{prooftree}
+
+
+\begin{code}%
+\>[0]\<%
+\\
+\>[0]\AgdaKeyword{data}\AgdaSpace{}%
+\AgdaDatatype{𝔹}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaInductiveConstructor{true}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{𝔹}\<%
+\\
+%
+\>[2]\AgdaInductiveConstructor{false}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{𝔹}\<%
+\\
+\>[0]\<%
+\end{code}
+
+
+-- $ \frac{\Gamma, x : A \vdash b : B} {\Gamma \vdash \lambda x. b : A \rightarrow
+-- B} $
+
+\begin{code}%
+\>[0]\<%
+\\
+\>[0]\AgdaComment{-- if\AgdaUnderscore{}then\AgdaUnderscore{}else\AgdaUnderscore{} : \{A : Set\} → 𝔹 → A → A → A}\<%
+\\
+\>[0]\AgdaComment{-- if true then a1 else a2 = a1}\<%
+\\
+\>[0]\AgdaComment{-- if false then a1 else a2 = a2}\<%
+\\
+\>[0]\<%
+\end{code}
+
+-- data ℕ : Type where
+--   zero : ℕ
+--   suc  : ℕ → ℕ
+
+-- data List (A : Type) : Type where
+  
+
+-- data Vector : 
+
+
+
+-- \begin{code}%
+\>[0]\<%
+\\
+\>[0]\AgdaComment{-- Type : Set₁}\<%
+\\
+\>[0]\AgdaComment{-- Type = Set}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaComment{-- \textbackslash{}end\{code\}}\<%

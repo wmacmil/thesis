@@ -26,6 +26,13 @@ Hallgren, T. \& Ranta, A. (2000).
   Programming and Automated Reasoning}, LPAR'00  (pp.\ 70–84).  Berlin,
   Heidelberg: Springer-Verlag.
 
+\bibitem[Howard, 1986]{ml1984}
+Howard, W.~A. (1986).
+\newblock Per martin-löf. intuitionistic type theory. (notes by giovanni
+  sambin of a series of lectures given in padua, june 1980.) studies in proof
+  theory. bibliopolis, naples1984, ix 91 pp.
+\newblock {\em Journal of Symbolic Logic}, 51(4), 1075–1076.
+
 \bibitem[Kaiser et~al., 2018]{mtac2}
 Kaiser, J.-O., Ziliani, B., Krebbers, R., R\'{e}gis-Gianas, Y., \& Dreyer, D.
   (2018).
@@ -37,6 +44,11 @@ Kaliszyk, C. \& Rabe, F. (2020).
 \newblock A survey of languages for formalizing mathematics.
 \newblock In C. Benzm{\"u}ller \& B. Miller (Eds.), {\em Intelligent Computer
   Mathematics}  (pp.\ 138--156).  Cham: Springer International Publishing.
+
+\bibitem[Kamp et~al., 2011]{kamp2011discourse}
+Kamp, H., Van~Genabith, J., \& Reyle, U. (2011).
+\newblock Discourse representation theory.
+\newblock In {\em Handbook of philosophical logic}  (pp.\ 125--394). Springer.
 
 \bibitem[Ljungl{\"o}f, 2004]{ljunglof2004expressivity}
 Ljungl{\"o}f, P. (2004).

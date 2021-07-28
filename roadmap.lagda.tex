@@ -51,6 +51,8 @@
 \texttt{\textcolor{gray}{#1}}%
 }
 
+% \usepackage{bussproofs}
+\usepackage{ebproof}
 
 \newunicodechar{ℓ}{\ensuremath{\mathnormal\ell}}
 \newunicodechar{→}{\ensuremath{\mathnormal\rightarrow}}
@@ -180,7 +182,7 @@ Acknowledgements, etc.
 module roadmap where
 \end{code}
 
-0014
+2205
 
 \include{intro}
 
@@ -190,8 +192,11 @@ module roadmap where
 
 \include{preliminaries}
 
+\include{intro-agda}
+
 % should natproof and hottproof be subsections?
 \include{natproof}
+
 
 % remember to refactor this
 \include{latex/hott}

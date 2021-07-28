@@ -2,6 +2,8 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "ml1984"
+    "kamp2011discourse"
     "rantaLog"
     "mlMeanings"
     "mtac2"

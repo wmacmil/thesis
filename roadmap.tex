@@ -51,6 +51,8 @@
 \texttt{\textcolor{gray}{#1}}%
 }
 
+% \usepackage{bussproofs}
+\usepackage{ebproof}
 
 \newunicodechar{ℓ}{\ensuremath{\mathnormal\ell}}
 \newunicodechar{→}{\ensuremath{\mathnormal\rightarrow}}
@@ -187,7 +189,7 @@ Acknowledgements, etc.
 \AgdaKeyword{where}\<%
 \end{code}
 
-0014
+2205
 
 \include{intro}
 
@@ -197,8 +199,11 @@ Acknowledgements, etc.
 
 \include{preliminaries}
 
+\include{intro-agda}
+
 % should natproof and hottproof be subsections?
 \include{natproof}
+
 
 % remember to refactor this
 \include{latex/hott}

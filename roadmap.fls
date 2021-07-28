@@ -293,6 +293,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ebproof/ebproof.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ebproof/ebproof.sty
 INPUT roadmap.aux
 INPUT roadmap.aux
 INPUT intro.aux
@@ -303,6 +305,8 @@ INPUT previouswork.aux
 INPUT previouswork.aux
 INPUT preliminaries.aux
 INPUT preliminaries.aux
+INPUT intro-agda.aux
+INPUT intro-agda.aux
 INPUT natproof.aux
 INPUT natproof.aux
 INPUT latex/hott.aux
@@ -379,8 +383,9 @@ INPUT mltt.tex
 INPUT mltt.tex
 INPUT gfintro.tex
 INPUT gfintro.tex
-INPUT introagda.tex
-INPUT introagda.tex
+OUTPUT intro-agda.aux
+INPUT intro-agda.tex
+INPUT intro-agda.tex
 OUTPUT natproof.aux
 INPUT natproof.tex
 INPUT natproof.tex
@@ -424,6 +429,8 @@ INPUT previouswork.aux
 INPUT previouswork.aux
 INPUT preliminaries.aux
 INPUT preliminaries.aux
+INPUT intro-agda.aux
+INPUT intro-agda.aux
 INPUT natproof.aux
 INPUT natproof.aux
 INPUT latex/hott.aux
