@@ -24,16 +24,16 @@
 \contentsline {paragraph}{Arith.gf}{29}{section*.6}%
 \contentsline {paragraph}{Concrete Judgments}{30}{section*.7}%
 \contentsline {subsubsection}{\numberline {}The GF shell}{32}{subsubsection.4.2.6}%
-\contentsline {subsection}{\numberline {}Agda}{36}{subsection.4.3}%
-\contentsline {section}{\numberline {}Natural Number Proofs}{37}{section.5}%
-\contentsline {section}{\numberline {}HoTT Proofs}{38}{section.6}%
-\contentsline {subsection}{\numberline {}Why HoTT for natural language?}{38}{subsection.6.1}%
-\contentsline {subsection}{\numberline {}An introduction to equality}{39}{subsection.6.2}%
-\contentsline {subsection}{\numberline {}All about Identity}{40}{subsection.6.3}%
-\contentsline {section}{\numberline {}A Spectrum of GF Grammars for types}{49}{section.7}%
-\contentsline {section}{\numberline {}Goals and Challenges}{50}{section.8}%
-\contentsline {section}{\numberline {}Code}{52}{section.9}%
-\contentsline {subsection}{\numberline {}GF Parser}{52}{subsection.9.1}%
-\contentsline {subsection}{\numberline {}Additional Agda Hott Code}{52}{subsection.9.2}%
-\contentsline {section}{References}{53}{subsection.9.2}%
-\contentsline {section}{\numberline {}Appendices}{55}{section.10}%
+\contentsline {subsection}{\numberline {}Agda}{35}{subsection.4.3}%
+\contentsline {section}{\numberline {}Natural Number Proofs}{38}{section.5}%
+\contentsline {section}{\numberline {}HoTT Proofs}{39}{section.6}%
+\contentsline {subsection}{\numberline {}Why HoTT for natural language?}{39}{subsection.6.1}%
+\contentsline {subsection}{\numberline {}An introduction to equality}{40}{subsection.6.2}%
+\contentsline {subsection}{\numberline {}All about Identity}{41}{subsection.6.3}%
+\contentsline {section}{\numberline {}A Spectrum of GF Grammars for types}{50}{section.7}%
+\contentsline {section}{\numberline {}Goals and Challenges}{51}{section.8}%
+\contentsline {section}{\numberline {}Code}{53}{section.9}%
+\contentsline {subsection}{\numberline {}GF Parser}{53}{subsection.9.1}%
+\contentsline {subsection}{\numberline {}Additional Agda Hott Code}{53}{subsection.9.2}%
+\contentsline {section}{References}{54}{subsection.9.2}%
+\contentsline {section}{\numberline {}Appendices}{56}{section.10}%

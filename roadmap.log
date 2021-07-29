@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  28 JUL 2021 22:05
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  29 JUL 2021 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1070,8 +1070,8 @@ LaTeX Warning: Label `fig:M1' multiply defined.
 
 LaTeX Warning: Label `fig:M2' multiply defined.
 
-) (./preliminaries.aux) (./intro-agda.aux) (./natproof.aux) (./latex/hott.aux) 
-(./grammar.aux) (./horizon.aux) (./conclusion.aux) (./code.aux))
+) (./preliminaries.aux) (./natproof.aux) (./latex/hott.aux) (./grammar.aux) (./
+horizon.aux) (./conclusion.aux) (./code.aux))
 \openout1 = `roadmap.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
@@ -1563,10 +1563,10 @@ Overfull \hbox (7.00284pt too wide) in paragraph at lines 76--90
 ) [18]
 
 Package natbib Warning: Citation `ganesalingam2013language' on page 19 undefine
-d on input line 230.
+d on input line 231.
 
 [19] [20]
-Overfull \hbox (4.69714pt too wide) in paragraph at lines 365--367
+Overfull \hbox (4.69714pt too wide) in paragraph at lines 366--368
 []\TU/DejaVuSerif(0)/m/n/10.95 mal proofs are provided; and the cycle repeats. 
 Thus informal mathematics changes
  []
@@ -2047,34 +2047,69 @@ l.564
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-)) [35]
-\openout2 = `intro-agda.aux'.
+) (./intro-agda.tex [35] (./latex/ex.tex
 
-(./intro-agda.tex) [36
+! Package ebproof Error: Missing premiss in a proof tree.
+
+See the ebproof package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25     \infer1[]{ \vdash 픹 : {\rm type}}
+                                          
+(That was another \errmessage.)
 
 
-]
+! Package ebproof Error: Missing premiss in a proof tree.
+
+See the ebproof package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33     \infer1[]{ \Gamma \vdash true : 픹  }
+                                             
+(That was another \errmessage.)
+
+
+! Package ebproof Error: Missing premiss in a proof tree.
+
+See the ebproof package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37     \infer1[]{ \Gamma \vdash false : 픹  }
+                                              
+(That was another \errmessage.)
+
+\openout4 = `roadmap.ptb'.
+
+Missing character: There is no ̌ in font cmmi10!
+\openout4 = `roadmap.ptb'.
+
+\openout4 = `roadmap.ptb'.
+
+[36]))) [37]
 \openout2 = `natproof.aux'.
 
-(./natproof.tex) [37
+(./natproof.tex) [38
 
 
 ]
 \openout2 = `latex/hott.aux'.
 
-(./latex/hott.tex [38
+(./latex/hott.tex [39
 
 
 ]
 \openout4 = `roadmap.ptb'.
 
-[39]
+[40]
 \openout4 = `roadmap.ptb'.
 
-[40] [41]
+[41] [42]
 \openout4 = `roadmap.ptb'.
 
-[42]
+[43]
 Overfull \hbox (7.21178pt too wide) in paragraph at lines 414--424
 \TU/DejaVuSerif(0)/m/it/10.95 Thus, the induction principle for identity types 
 gives us an element $[][][][][] [][] [][] [][] [][] []
@@ -2084,308 +2119,308 @@ gives us an element $[][][][][] [][] [][] [][] [][] []
 
 \openout4 = `roadmap.ptb'.
 
-[43]
-\openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
 [44]
+\openout4 = `roadmap.ptb'.
+
+\openout4 = `roadmap.ptb'.
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+
+Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
+ [][][][] 
+ []
+
+[45]
 Overfull \hbox (3.00977pt too wide) in paragraph at lines 1415--1417
 \TU/DejaVuSerif(0)/m/n/10.95 tween paths between paths level, some interesting 
 and nonintuitive results emerge.
  []
 
-[45]
+[46]
 \openout4 = `roadmap.ptb'.
 
 
@@ -2758,10 +2793,10 @@ Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
  [][][][] 
  []
 
-[46] [47]) [48]
+[47] [48]) [49]
 \openout2 = `grammar.aux'.
 
-(./grammar.tex) [49
+(./grammar.tex) [50
 
 
 ]
@@ -2781,7 +2816,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[50
+[51
 
 
 
@@ -2796,31 +2831,45 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) [51]
+
+Package natbib Warning: Citation `prat2020relating' on page 52 undefined on inp
+ut line 77.
+
+) [52]
 \openout2 = `code.aux'.
 
-(./code.tex) [52
+(./code.tex) [53
 
 
-] (./roadmap.bbl [53
+] (./roadmap.bbl [54
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 111--115
+Underfull \hbox (badness 10000) in paragraph at lines 132--136
 []\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  \TU/DejaVuSerif(0)/m/it/10.95
  gf-contrib/typetheory\TU/DejaVuSerif(0)/m/n/10.95 .  []$[][][][][] [] [] [] []
 [][][][][] [] [][][] []
  []
 
-) [54]
+! Misplaced alignment tab character &.
+l.149 ...tion for Computing Machinery and Morgan &
+                                                   Claypool.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+) [55]
 
 Package natbib Warning: There were undefined citations.
 
-[55]
+[56]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
 (./roadmap.aux (./intro.aux) (./perspectives.aux) (./previouswork.aux) (./preli
-minaries.aux) (./intro-agda.aux) (./natproof.aux) (./latex/hott.aux) (./grammar
-.aux) (./horizon.aux) (./conclusion.aux) (./code.aux))
+minaries.aux) (./natproof.aux) (./latex/hott.aux) (./grammar.aux) (./horizon.au
+x) (./conclusion.aux) (./code.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 228.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
@@ -2834,12 +2883,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33040 strings out of 479819
- 632599 string characters out of 5895846
+ 33085 strings out of 479819
+ 633197 string characters out of 5895846
  1186452 words of memory out of 5000000
- 49402 multiletter control sequences out of 15000+600000
+ 49450 multiletter control sequences out of 15000+600000
  538249 words of font info for 151 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,796b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (60 pages, 1352892 bytes).
+Output written on roadmap.xdv (61 pages, 1390616 bytes).

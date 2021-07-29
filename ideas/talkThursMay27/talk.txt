@@ -1,0 +1,179 @@
+Defining a PL in GF
+
+(a preliminary hodge-podge of work that will hopefully soon lead to a masters thesis)
+
+--
+
+Harper "Concrete syntax is in some sense where PL theory meets psychology" - no known research in this area, ripe for exploration
+
+Take-away from this talk:
+
+* Concrete syntax can be and is an fact an interesting and worthy area of research
+* GF provides one possible mechanism and perspective from which to explore this 
+
+--
+
+What is GF? 
+
+This is less focused on Natural Language (NL) aspects of GF, which are its primary uses
+
+Domain specific language for encoding abstract and concrete syntax
+* LF for abstract syntax
+* Concrete can be seen as a semantics (pretty printer) for ASTs
+* Parse : Concrete  -> Abstract
+          string   |-> tree
+* Linearize : Abstract -> Concrete
+* composing parsing and linearization = Translation
+  - main purpose of GF
+* Other bells and whistles including RGL, PGF, Dependent Types, HOAS
+
+--
+
+Logical Framework (LF)
+* A mechanism of Asciifying logics, proof systems, PLs, etc.
+* There is a logical framework in other ITPs like Agda & Coq
+* Proving metatheorems, not typically used for writing programs/proofs in a given system (unlike agda)
+* LF is essentially the dependently typed lambda calculus
+* Variable binding via Higher order abstract syntax, a nice way of abstracting away these details
+* Examples include Twelf, Beluga, MMT, etc
+* Harper et. al proved Type Safety of SML - no other 
+
+--
+
+What is GF Grammar : An abstract syntax, L, and concrete syntax's L_i
+
+  < L , {L_0 , L_1 , ... , L_n} >
+
+where one could have 
+
+  < L , {L_Eng , L_Swe , ... , L_Bantu } >
+
+note : there will be things in a Bantu language not expressible in English, and vice versa, etc.
+
+  < L , {L_Math-Latex , L_Math-NL , L_Agda , ... , L_Haskell } >
+
+there are programs we can write in Agda but not Haskell, and vice versa, etc. 
+
+L somehow contains the ontological information about some domain,
+  - it's meant to allow precise translations, not wide coverage
+
+-- 
+
+Lets look at these in more detail :
+
+  parse : String -> { AST }
+  linearize : AST -> String 
+
+Consider "He saw her running with the telescope"
+
+2 parses in pigdin tree form
+
+  He saw (her running with the telescope)
+  (He saw her running) with the telescope
+
+Consider "3 + 4 * 5"
+
+2 parses in pigdin tree form
+
+  1 + (2 * 3)
+  (1 + 2) * 3
+
+For n expressions, catalan (n) trees, combinatorial explosion.
+
+So, what is translation? Function composition.
+
+Given a string s,
+
+  linearize (parse s)
+
+    gives
+
+  { strings }  which should be "grammatically equivalent"
+    - not necessarily semanticaly equivalent (although that's the goal)
+
+--
+
+With variants, we actually have
+
+  linearize : AST -> { String }
+
+so then we can have a single tree for expressions like
+
+  "the sum of three and four"
+  "three plus four" 
+
+or 
+
+  "every natural number"
+  "all natural numbers"
+
+But these ambiguities can also be dealt with distinct abstract categories
+
+--
+
+So, what should we model?
+Where does our nose lead us?
+
+Interpretations of a given judgment in different concrete syntaxes
+
+* Set theory , n is an element of N
+* Type theory , n is a term of type Nat
+* Homotopy theory , n is a point in the space N
+* Logic , n is a proof of the proposition Nat --broken
+* Category Theoretic , n is an arrow between the object N and itself
+
+--
+
+Thomas Hales formal abstracts project, CNLs for mathematicians that allow for digital referencing / verification / checking
+
+- vaporware as of yet
+- TBD feasibility
+
+This comes to a very natural question about mathematicians and their differences with interactive theorem proving and type theory communities
+
+--
+
+I will list some here some obvious reasons why these differences pose such an obstacle to reconciling the two communities. From the mathematicians perspective :
+
+* The syntax of programming languages is less elegant, harder to read, and often indecipherable - even to the original author given enough time
+* Computers, programs, programming languages, and software have bugs
+* Code deprecates over time, and old code often breaks with software updates
+* Learning to code requires expertise in its own right, and mathematicians don't have time to become experts in that, or so they believe
+* Tedious details are necessary in machine implementations of proofs 
+* Martin-Löf type theory is an entirely different foundation of mathematics, and most mathematicians aren't concerned with foundations
+* Natural language proofs often explicitly keep track of proof states, or goals, whereas interactive proof development shields these when one simply witnesses the program syntax
+* There is very little *new* mathematics which has been developed in theorem provers, in the sense of mainstream mathematical journals publishing original research that was developed exclusively in theorem provers
+* Typecheckers are stubborn
+
+From the programmers perspective, mathematics and mathematical prose suffers from the following :
+
+* Vague language is prone to error in interpretation
+* Details left to be deciphered by the reader often nontrivial, and possibly impossible to infer for non-experts
+* No easy way to fork someone else's work, credit them without explicitly referencing papers and theorem number
+* No online repository to look up, for instance, theorems proven by their type signature (think Hoogle)
+* Many (mostly older) papers written in foreign languages without translations available
+* Errors may not be caught until much later
+* Peer review incredibly costly 
+* Typechecker is bookkeeper, mathematician must do this manually
+
+Interested in expanding these lists? We should start documenting this officially..
+
+--
+
+Notes
+
+It's deceptively simple, extremely powerful, yet, also can be frustrating as it's not Turing complete
+
+Trade-off between abstract and concrete syntax approach to solving problems
+
+More expressive in Chomsky Hierarchy than CFGs, Parallel multiple CFGs, see Krasimir's thesis
+
+--
+
+Recursion principles,  Induction principles, and Pattern matching
+
+Ref. papers by Thierry Coquand, Peter Dybjer in the early 90s, Jesper Cockx more recently
+
+--
+
+To see PGF and RGL, look at the QA at the end

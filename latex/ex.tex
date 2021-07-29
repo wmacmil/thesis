@@ -1,0 +1,208 @@
+
+\begin{code}[hide]%
+\>[0]\<%
+\\
+\>[0]\AgdaComment{-- \{-\# OPTIONS --omega-in-omega --type-in-type \#-\}}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaKeyword{module}\AgdaSpace{}%
+\AgdaModule{ex}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[0]\<%
+\end{code}
+
+
+Formation rules, are given by the first line of the data declaration, followed
+by some number of constructors which correspond to the introduction forms of the
+type being defined.
+
+Therefore, to define a type Booleans, we present for the formation rule
+
+\[
+  \begin{prooftree}
+    \infer1[]{ \vdash 𝔹 : {\rm type}}
+  \end{prooftree}
+\]
+
+along with two introduction rules for the bits,
+
+\[
+  \begin{prooftree}
+    \infer1[]{ \Gamma \vdash true : 𝔹  }
+  \end{prooftree}
+  \quad \quad
+  \begin{prooftree}
+    \infer1[]{ \Gamma \vdash false : 𝔹  }
+  \end{prooftree}
+\]
+
+Agda's allows us to succintly put these together as
+
+\begin{code}%
+\>[0]\<%
+\\
+\>[0]\AgdaKeyword{data}\AgdaSpace{}%
+\AgdaDatatype{𝔹}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaInductiveConstructor{true}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{𝔹}\<%
+\\
+%
+\>[2]\AgdaInductiveConstructor{false}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{𝔹}\<%
+\\
+\>[0]\<%
+\end{code}
+
+As the elimination forms are deriveable from the introduction rules, the
+computation rules can then be extracted by via the harmonious relationship
+between the introduction and elmination forms \cite{pfenningHar}. As Agda's pattern
+matching is equivalent to the deriveable dependently typed elimination forms \cite{coqPat}, one can simply pattern match on a boolean variable to extract the classic recursion principle.
+
+\[
+  \begin{prooftree}
+    \hypo{̌\Gamma \vdash A : {\rm type} }
+    \hypo{\Gamma \vdash b : 𝔹 }
+    \hypo{\Gamma \vdash a1 : A}
+    \hypo{\Gamma \vdash a2 : A }
+    \infer4[]{\Gamma \vdash boolrec\{a1;a2\}(b) : A }
+  \end{prooftree}
+\]
+
+\begin{code}%
+\>[0]\<%
+\\
+\>[0]\AgdaOperator{\AgdaFunction{if\AgdaUnderscore{}then\AgdaUnderscore{}else\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaDatatype{𝔹}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{A}\<%
+\\
+\>[0]\AgdaOperator{\AgdaFunction{if}}\AgdaSpace{}%
+\AgdaInductiveConstructor{true}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{then}}\AgdaSpace{}%
+\AgdaBound{a1}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{else}}\AgdaSpace{}%
+\AgdaBound{a2}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{a1}\<%
+\\
+\>[0]\AgdaOperator{\AgdaFunction{if}}\AgdaSpace{}%
+\AgdaInductiveConstructor{false}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{then}}\AgdaSpace{}%
+\AgdaBound{a1}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{else}}\AgdaSpace{}%
+\AgdaBound{a2}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{a2}\<%
+\\
+\>[0]\<%
+\end{code}
+
+
+
+\begin{code}%
+\>[0]\<%
+\\
+\>[0]\AgdaKeyword{data}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaInductiveConstructor{zero}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\<%
+\\
+%
+\>[2]\AgdaInductiveConstructor{suc}%
+\>[7]\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaFunction{ℕrec}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{\{}\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\AgdaSymbol{\}}\AgdaSpace{}%
+\AgdaSymbol{->}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaSymbol{->}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{->}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{->}\AgdaSpace{}%
+\AgdaBound{X}\AgdaSpace{}%
+\AgdaSymbol{->}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaSymbol{->}\AgdaSpace{}%
+\AgdaBound{X}\<%
+\\
+\>[0]\AgdaFunction{ℕrec}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaInductiveConstructor{zero}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{x}\<%
+\\
+\>[0]\AgdaFunction{ℕrec}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaInductiveConstructor{suc}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{ℕrec}\AgdaSpace{}%
+\AgdaBound{f}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSymbol{)}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaComment{-- data List (A : Type) : Type where}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaComment{-- data Vector :}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\\[\AgdaEmptyExtraSkip]%
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaComment{-- \textbackslash{}begin\{code\}}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaComment{-- Type : Set₁}\<%
+\\
+\>[0]\AgdaComment{-- Type = Set}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaComment{-- \textbackslash{}end\{code\}}\<%
+\end{code}

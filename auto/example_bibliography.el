@@ -2,6 +2,12 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "coqPat"
+    "pfenningHar"
+    "wadler"
+    "ulf"
+    "stump"
+    "Bove2009"
     "ml1984"
     "kamp2011discourse"
     "rantaLog"

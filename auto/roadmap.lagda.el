@@ -22,7 +22,6 @@
     "perspectives"
     "previouswork"
     "preliminaries"
-    "intro-agda"
     "natproof"
     "latex/hott"
     "grammar"

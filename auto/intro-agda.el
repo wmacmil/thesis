@@ -1,9 +1,7 @@
 (TeX-add-style-hook
- "preliminaries"
+ "intro-agda"
  (lambda ()
    (TeX-run-style-hooks
-    "mltt"
-    "gfintro"
-    "intro-agda"))
+    "latex/ex"))
  :latex)
 

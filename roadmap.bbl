@@ -4,10 +4,27 @@
 Avigad, J. (2015).
 \newblock Mathematics and language.
 
+\bibitem[Bove \& Dybjer, 2009]{Bove2009}
+Bove, A. \& Dybjer, P. (2009).
+\newblock {\em Dependent Types at Work}, (pp.\ 57--99).
+\newblock Springer Berlin Heidelberg: Berlin, Heidelberg.
+
+\bibitem[Bove et~al., 2009]{ulf}
+Bove, A., Dybjer, P., \& Norell, U. (2009).
+\newblock A brief overview of agda -- a functional language with dependent
+  types.
+\newblock In S. Berghofer, T. Nipkow, C. Urban, \& M. Wenzel (Eds.), {\em
+  Theorem Proving in Higher Order Logics}  (pp.\ 73--78).  Berlin, Heidelberg:
+  Springer Berlin Heidelberg.
+
 \bibitem[Chomsky, 2009]{Chomsky57}
 Chomsky, N. (2009).
 \newblock {\em Syntactic Structures}.
 \newblock De Gruyter Mouton.
+
+\bibitem[Coquand, 1992]{coqPat}
+Coquand, T. (1992).
+\newblock Pattern matching with dependent types.
 
 \bibitem[Forsberg \& Ranta, 2004]{rantaForsberg}
 Forsberg, M. \& Ranta, A. (2004).
@@ -78,6 +95,10 @@ Montague, R. (1973).
   (pp.\ 221--242).
 \newblock Springer Netherlands: Dordrecht.
 
+\bibitem[Pfenning, 2009]{pfenningHar}
+Pfenning, F. (2009).
+\newblock Lecture notes on harmony.
+
 \bibitem[Pit-Claudel, 2020]{coqAlec}
 Pit-Claudel, C. (2020).
 \newblock Untangling mechanized proofs.
@@ -122,10 +143,19 @@ Ranta, A. \& Ranta, D. (1994).
 \newblock {\em Type-theoretical Grammar}.
 \newblock Indices (Claredon). Clarendon Press.
 
+\bibitem[Stump, 2016]{stump}
+Stump, A. (2016).
+\newblock {\em Verified Functional Programming in Agda}.
+\newblock Association for Computing Machinery and Morgan & Claypool.
+
 \bibitem[{The Univalent foundations program} \& {Institute for advanced study
   (Princeton}, 2013]{theunivalentfoundationsprogram-homotopytypetheory-2013}
 {The Univalent foundations program} \& {Institute for advanced study
   (Princeton}, N. (2013).
 \newblock {\em Homotopy Type Theory: Univalent Foundations of Mathematics}.
+
+\bibitem[Wadler et~al., 2020]{wadler}
+Wadler, P., Kokke, W., \& Siek, J.~G. (2020).
+\newblock {\em Programming Language Foundations in {A}gda}.
 
 \end{thebibliography}

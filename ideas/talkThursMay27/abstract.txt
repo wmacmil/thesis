@@ -1,0 +1,20 @@
+
+In this talk I will discuss how to use Grammatical Framework (GF) to model the syntax of a programming language.  
+
+GF a strongly typed domain specific language and logical framework for specifying abstract and concrete syntax. Once an abstract syntax has been specified, one can view a corresponding concrete syntax as a model. The parsing and linearization pipeline in GF gives it translation capabilities for both *controlled* natural languages and programming languages (PLs), and therefore allows one hypothetically translate between, for instance, a mathematics text and code running in an interactive theorem prover.
+
+In this talk I will
+
+* Introduce GF 
+* Discuss what it means to model a PL in GF 
+* Go through some increasingly sophisticated case studies of 
+  - Arithmetic language
+  - A simply typed lambda calculus with natural numbers, also knows as Godel's T
+  - Dependently typed lamda calculus
+
+I will stress both the formal aspects of these programming languages and the nuance and difficulty needed to capture natural languages representation that are able to be understood by non-computer scientists.
+
+References
+
+* Blog posts from my page, wmacmil.github.io.  This is still under construction and these writings are being written now.
+* TBD

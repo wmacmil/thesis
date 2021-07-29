@@ -305,8 +305,6 @@ INPUT previouswork.aux
 INPUT previouswork.aux
 INPUT preliminaries.aux
 INPUT preliminaries.aux
-INPUT intro-agda.aux
-INPUT intro-agda.aux
 INPUT natproof.aux
 INPUT natproof.aux
 INPUT latex/hott.aux
@@ -383,9 +381,16 @@ INPUT mltt.tex
 INPUT mltt.tex
 INPUT gfintro.tex
 INPUT gfintro.tex
-OUTPUT intro-agda.aux
 INPUT intro-agda.tex
 INPUT intro-agda.tex
+INPUT latex/ex.tex
+INPUT latex/ex.tex
+OUTPUT roadmap.ptb
+INPUT roadmap.ptb
+OUTPUT roadmap.ptb
+INPUT roadmap.ptb
+OUTPUT roadmap.ptb
+INPUT roadmap.ptb
 OUTPUT natproof.aux
 INPUT natproof.tex
 INPUT natproof.tex
@@ -429,8 +434,6 @@ INPUT previouswork.aux
 INPUT previouswork.aux
 INPUT preliminaries.aux
 INPUT preliminaries.aux
-INPUT intro-agda.aux
-INPUT intro-agda.aux
 INPUT natproof.aux
 INPUT natproof.aux
 INPUT latex/hott.aux
