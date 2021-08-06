@@ -12,9 +12,104 @@ matter of taste, with friendly debates recurring regarding the use of
 semicolons, brackets, and white space.  Yet, when viewed through the lens of
 the propositions-as-types paradigm, these discussions intersect in new and
 interesting ways.  When one introduces a third paradigm through which to
-analyze the use of syntax in mathematics and programming, namely Linguistics, I
+analyze the use of syntax in mathematics and programming, namely linguistics, I
 propose what some may regard as superficial detail, indeed becomes a central
-paradigm, with many interesting and important questions. 
+paradigm raising many interesting and important questions. 
+
+
+\subsection{Beyond Computational Trinitarianism}
+
+\begin{displayquote}
+
+The doctrine of computational trinitarianism holds that computation manifests
+itself in three forms: proofs of propositions, programs of a type, and mappings
+between structures. These three aspects give rise to three sects of worship:
+Logic, which gives primacy to proofs and propositions; Languages, which gives
+primacy to programs and types; Categories, which gives primacy to mappings and
+structures.\cite{harperTrinity}
+\end{displayquote}
+
+We begin this discussion of the three relationships between three respective
+fields, mathematics, and logic. The
+trinity  \autoref{fig:M1} as they are aptly named, are related via both formal and informal
+methods. The propositions as types paradigm, for example, is a heuristic and yet
+it also has many examples of successful ideas translating between the domains.
+Alternatively, the interpretation of a Type Theory(TT) into a category theory is
+incredibly \emph{formal}.
+
+We hope this thesis will help clarify another possible dimension in this
+diagram, that of Linguistics. And while the different categories may resemble
+religions in their own right, with communities convinced that they have a
+canonical perspective. Questioning the holy trinity is an act of a heresy, and
+it is the goal of this thesis to be a bit heretical by including a much less well understood 
+perspective, name Linguistics, which may provide additional challenges and
+insights into the trinity.
+
+We begin by showing how the trinity give rise to formal semantic interpretations
+of natural language.  Semantics is just linguistic phenomenon worth
+investigating in these domains, and could be
+replaced by other linguistic paradigms. This work is alternatively concerned
+with syntax.
+
+
+\begin{figure}
+\centering
+\begin{tikzcd}
+                                                                            &  &  & Logic \arrow[llldddd, "Denotational\ Semantics" description] \arrow[rrrdddd, "Include\ Terms" description] &  &  &                                                                                                       \\
+                                                                            &  &  &                                                                                                            &  &  &                                                                                                       \\
+                                                                            &  &  &                                                                                                            &  &  &                                                                                                       \\
+                                                                            &  &  &                                                                                                            &  &  &                                                                                                       \\
+Math \arrow[rrruuuu, "Embedded\ in\ FOL", bend left] \arrow[rrrrrr, "ITP"'] &  &  &                                                                                                            &  &  & CS \arrow[llllll, "Denotational\ Semantics", bend left] \arrow[llluuuu, "Remove\ Terms"', bend right]
+\end{tikzcd}
+\caption{The Holy Trinity} \label{fig:M1}
+\end{figure}
+
+Additionally, we can ask how do the trinity embed into natural language.  
+These are the most \emph{informal} arrows of the ``holy tetrahedron", or at
+least one reading of it. One can analyze mathematics using linguistic methods,
+or try to give a natural language justification of Intuitionistic Type Theory
+using Martin-Löf's meaning explanations.
+
+In this work, we will see that there are multiple GF grammars which model some
+subset of each member of the trinity. Studying these grammars, and asking how
+they can be used in applications for mathematicians, logicians, and computer
+scientists, is an important practical and philosophical question.
+
+Therefore, we hope this attempt at giving the language of mathematics, in
+particular  how 
+propositions and proofs are expressed and thought about in that
+language, a stronger foundation.
+
+\begin{figure}
+\centering
+\begin{tikzcd}
+     &  &  & Logic                                                                                                                     &  &  &            \\
+     &  &  &                                                                                                                           &  &  &            \\
+     &  &  & Linguistics \arrow[uu, "Montague\ Semantics"'] \arrow[llldd, "Distributional\ Semantics"'] \arrow[rrrdd, "TT\ Semantics"] &  &  &            \\
+     &  &  &                                                                                                                           &  &  &            \\
+Math &  &  &                                                                                                                           &  &  & CS\ (MLTT)
+\end{tikzcd}
+\caption{Formal Semantics} \label{fig:M2}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzcd}
+                                                &  &  & Logic \arrow[dd, "Embedding"] &  &  &                               \\
+                                                &  &  &                               &  &  &                               \\
+                                                &  &  & Linguistics                   &  &  &                               \\
+                                                &  &  &                               &  &  &                               \\
+Math \arrow[rrruu, "Language\ Of\ Mathematics"] &  &  &
+&  &  & CS\ (MLTT) \arrow[llluu, "Meaning\ Explanations"]
+\end{tikzcd}
+\caption{Interpretations of Natural Language} \label{fig:M3}
+\end{figure}
+
+
+
+
+
+\subsection{Example}
 
 To get a feel for this syntactic paradigm, let us look at a basic mathematical
 example: that of a group homomorphism, as expressed in a variety of sources.  

@@ -2,6 +2,8 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "harperTrinity"
+    "prat2020relating"
     "coqPat"
     "pfenningHar"
     "wadler"

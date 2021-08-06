@@ -1,0 +1,27 @@
+Hegel Quote, phenomenology of the spirit
+
+Sweden, svenska, and Martin-Lof's style of presenting type theory, down to the meaning explanations.
+
+What work was done during this thesis accomplishes
+
+There is the obvious work which is expressed in this thesis.  
+
+But with everything, there is a lot that maybe wasn't able to be expressed here.
+
+Ambitions were overly optimisitic
+
+- Learning Agda, Coq, and even some time playing with Lean (because it targets real mathematicians)
+
+- Trying to learn what it means to formalize mathematics with various case studies
+
+- Lots of discussions with various people (Dybjer, Angelov, Robin Cooper, Per) ITC people
+
+Thinking about GF and how to interpret it mathematically
+
+
+Mathematicians : 
+Logicians :
+Deeper issues of the internal meaning of mathematics and its relation to us neurologically, socialogically, historically, (for decades and centuries to come) will also hopefully see work from this thesis
+
+
+Agda im

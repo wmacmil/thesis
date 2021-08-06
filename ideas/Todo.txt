@@ -1,0 +1,194 @@
+August 
+
+- 6 
+  Today
+
+- 16 (10 days, ~ 7 - 8 days of writing)
+  preliminary draft Aarne/Inari
+
+- 28 (22 days, 16-18 days of writing)
+  final draft Aarne
+
+- 31 (final draft sumbission)
+
+---------------
+
+move prior GF Formalizations to a later secion
+
+first half : intro 
+
+second half : grammars
+
+-- include notes in our grammars
+
+Previous Grammars 
+Our Grammars 
+can reference previous grammars in our grammars (i.e. associativity of add
+when discussing associativity proof
+p "the sum of the sum of x and y and z is equal to the sum of x and the sum of y and z" gives 32 unique parses
+and the normalized forms "the sum of 3 , 4 and 5"(post PGF transformation) o longer conveys the information that makes this a proposition other than x = x "
+p "the sum of 3 , 4  and 5 is equal to the sum of 3 , 4 and 5"
+
+
+
+in the intro to MLTT. most mathematicians just know the algorithm for adding (e.g. what computer science provides that logic doesn't have), but not the actual 
+computational rules as examples of where it differs as well.
+comparison of syntaxes like in slides, (copy Aarne's table from cade with FOL and Agda syntax),
+comparison of rules as well (for the sake of syntactic difference)
+metatheorems in logic (normalization) can be done in type theory as ML did, but the computation rules allow us to do this in a diffent way?
+also include HoTT and Cubical intro in this, with the linguistic comparison left for later
+
+GF Section :
+give an example of 
+concrete vs abstract in both the section on Gf and then reexamined on the section with Sem Ad. and Syn Com.
+
+As expressive adequacy 
+the design of a CNL should involve the minimal, such that enough things a mathematician wants to say are able to be said ae sayable in a compehensible way
+
+formal abstacts : include this at the end of the Perspectives section (so we can talk about CNL)
+
+Case study : Corpus Section at the end
+
+apendix : abbreviations
+
+----
+
+
+NL generation : cubicalTT 
+Start with a syntactically complete grammar and produce a semantically adequate one
+PL generation
+
+compare ASTs for different grammars of the same proposition
+
+Possible solutions : write two grammars and connect them via PGF 
+
+so basically, we propose
+
+pgf parsing is difficult according to John, but since this is a simple PL (at least as it stands now) baybe this would be much more feasible, so this could become an obstace if the CNL isn't too restrictive
+hs  : HoTT book language (Sem Ad) PGF -> cubicalTT (Synt Com) 
+can also look at case studies for the same proof, (for instance, those articulated in the orginal paper) and see how more NL proofs, and the more Linguistic phenomena, 
+
+We seek to use some of the insights in the Logic paper to connect this, like how specific lingusitic phenomena in an extended grammar can be reduced to a core.
+computer scientist wants this, 
+LPGF : cubicalTT Grammar -> HoTT Grammar
+much harder, but also feasible, at least for a CNL subset of NL Grammar. 
+
+This seems feasible for the propositional fragment of NL Mathematics, but certainly not the proof.
+
+--if time/space
+Refactor Agda library, with theorem statements and proofs 
+Refactor grammars so that they are coherently together 
+
+-- if time/space
+Show the difficulty of Awodey's Category theoretic proof of the natural associativity of products 
+
+---------------------------------------
+
+The development of a more extensive parallel corpus would be interesting so these grammars could be written in parallel (not just for ML researchers).  A purely mathematical corpus would also need to be formulated, tagged with syntactic, semantic, and pragmatic phenomena. Additionally, more work to  but especially if it was to be labeled with 
+
+Ranta's discussion of this wrt 
+ Speech acts 
+Context
+Speaker's Meaning       } in some sense, this work outlines a roadmap for undderstanding mathematics pragmatically over these persepctives, via both syntactic and semantic translations
+Efficient Communication }
+Wastebasket
+
+@article{RANTA2020120,
+title = {Some remarks on pragmatics in the language of mathematics: Comments to the paper “At Least One Black Sheep: Pragmatics and Mathematical Language” by Luca San Mauro, Marco Ruffino and Giorgio Venturi},
+journal = {Journal of Pragmatics},
+volume = {160},
+pages = {120-122},
+year = {2020},
+issn = {0378-2166},
+doi = {https://doi.org/10.1016/j.pragma.2020.02.001},
+url = {https://www.sciencedirect.com/science/article/pii/S0378216620300321},
+author = {Aarne Ranta},
+abstract = {I agree wholeheartedly with the authors of “At Least One Black Sheep: Pragmatics and Mathematical Language” on their main thesis that the language of mathematics is permeated by phenomena that belong to pragmatics. I also agree with what they take to be the opposite view, which is presented in Mohan Ganesalingam's monograph The Language of Mathematics (2013). I think that the conflict is to a large extent terminological and has to do with what is meant by pragmatics.}
+}
+
+Discuss the pragmatics stuff with respect to natural language generation in general.  A CNL is inductively defined, NL is not. A CNL lacks the pragmatic tools needed to verify or prorduce proofs, but it is feasible that it can be used to at least catalogue mathematical Propositions presented as types.
+
+@article{RUFFINO2020114,
+title = {At least one black sheep: Pragmatics and mathematical language},
+journal = {Journal of Pragmatics},
+volume = {160},
+pages = {114-119},
+year = {2020},
+issn = {0378-2166},
+doi = {https://doi.org/10.1016/j.pragma.2020.01.011},
+url = {https://www.sciencedirect.com/science/article/pii/S0378216620300230},
+author = {Marco Ruffino and Luca {San Mauro} and Giorgio Venturi},
+keywords = {Pragmatics, Philosophy of mathematics, The language of mathematics, Existential quantifier, Parameters},
+abstract = {In this paper we argue, against a somewhat standard view, that pragmatic phenomena occur in mathematical language. We provide concrete examples supporting this thesis.}
+}
+
+Historically, a mathematics has been filtered of natural language artifacts, culminating in some sense with Frege's development of a formal proof (although formal proofs are a more relevant notion in logic and computer science) . We hope this work helps with a new foundational mentality, whereby we try to bring natural language back into mathematics in a controlled way, or at least to bridge the gap between our technologies, specifcally ITPs, and mathematicians, so that both the informal and formal can be understood in the same general framework.
+
+
+Perhaps differences in the thinking of mathematics, tongue-and-cheek call i-mathematics, with its externalization.  This doesn't exist with natural language, because a diagram in natural language is to be intpreted in some other semiotic category (art, engineering, mathematics) 
+
+in some sense, philosophy is baked into Dependent Type Theory (lexically, conceptually, ) in a way that it isn't for classical mathematics. although distinguishing between fields is a recent phenomena
+
+"Though philosophical discussion of visual thinking in mathematics has concentrated on its role in proof, visual thinking may be more valuable for discovery than proof." 
+
+Edward Zalta
+
+@InCollection{sep-epistemology-visual-thinking,
+	author       =	{Giaquinto, Marcus},
+	title        =	{{The Epistemology of Visual Thinking in Mathematics}},
+	booktitle    =	{The {Stanford} Encyclopedia of Philosophy},
+	editor       =	{Edward N. Zalta},
+	howpublished =	{\url{https://plato.stanford.edu/archives/spr2020/entries/epistemology-visual-thinking/}},
+	year         =	{2020},
+	edition      =	{{S}pring 2020},
+	publisher    =	{Metaphysics Research Lab, Stanford University}
+}
+
+Difference between a proof the understanding of a proof.  The first is a mathematical judgement, and the understanding is the inductive phase of connecting two judgements, that of a proposition and its being true with a type having a witness inhabitant. 
+
+In the same sense, that I suspect knot theorists were playing with physical knots before their inventions and discoveries
+
+proposition , theorem
+
+have in the judgements section, the definition, proof, corollay, comparison diagram
+
+
+
+A formal derivation on its own is a syntactic object but not a proof. Without an interpretation of the language of the formal system the end-formula of the derivation says nothing; and so nothing is proved. Without a demonstration of the system’s soundness with respect to the interpretation, one may lack sufficient reason to believe that all derivable conclusions are true.
+
+-think about this in terms of Pfennings what is logic
+
+
+Proofs in different PLs survey paper by dutch guy
+
+Which section does this go in? Gangasalingam?
+
+
+Math : symbolic, vs non-symbolic
+
+Gangesalingam section
+Linguists don't just study language is written, but the physical observation of how people speak 
+This suggests the mathematical intuitions go much further beyond the invention of the alphabet, and writing in general (symbolism in petroglyphs, writing vs art is indistinguishable anthropologically)
+
+https://mathoverflow.net/questions/8846/proofs-without-words
+
+But this is mathematics as it is written  it's not just symbols
+
+Mathematics may be understood by various audiences 
+
+Mathematicians, Logicians, TTs, Engineers and physicists (who sometimes sacrifice formality for ease of articulation altogether), artists who are only interested in the "semantic side of mathematics" (focused on the pure beauty)  
+
+Non-mathematicians can have deep mathematical intuitions, for instance, a business person could say I want to create a service that does such and such (NL specification that is incredibly vague), and then outsource the work.
+
+Categorical semantics : give a mathematical justification to a PL 
+PL implementation of mathematics is the opposite
+
+What does a mathematician mean when they say something is beautiful or ugly - this is presumably a semantic concept
+Not at the same way that when a Mathematician hypothetically looks at a sequence of bits, they see anything but noise
+But this is the point of doing mathematics, not to generate bits but to decipher beauty 
+
+
+idea : leave last section for last, so I can work on it for another day or two
+
+A FORMAL SYSTEM FOR EUCLID’S ELEMENTS
+https://www.cambridge.org/core/journals/review-of-symbolic-logic/article/abs/formal-system-for-euclids-elements/07CA7E5F8E1C5C2EB632E1005CBE7BEF

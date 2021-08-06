@@ -3,71 +3,52 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: roadmap.aux
 The style file: apalike2.bst
 A level-1 auxiliary file: intro.aux
-A level-1 auxiliary file: perspectives.aux
-White space in argument---line 19 of file perspectives.aux
- : \citation{objective
- :                     evidence}
-I'm skipping whatever remains of this command
-A level-1 auxiliary file: previouswork.aux
-A level-1 auxiliary file: preliminaries.aux
-A level-1 auxiliary file: natproof.aux
-A level-1 auxiliary file: latex/hott.aux
-A level-1 auxiliary file: grammar.aux
-A level-1 auxiliary file: horizon.aux
-A level-1 auxiliary file: conclusion.aux
-A level-1 auxiliary file: code.aux
-Illegal, another \bibstyle command---line 34 of file roadmap.aux
+Illegal, another \bibstyle command---line 25 of file roadmap.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: example_bibliography.bib
-Warning--I didn't find a database entry for "ganesalingam2013language"
-Warning--I didn't find a database entry for "prat2020relating"
-Warning--can't use both author and editor fields in Bove2009
-Warning--empty booktitle in coqPat
-Warning--empty journal in ljunglof2004expressivity
-Warning--can't use both author and editor fields in Montague1973
+Warning--empty booktitle in harperTrinity
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
-Warning--empty publisher in wadler
-You've used 29 entries,
+You've used 2 entries,
             2229 wiz_defined-function locations,
-            706 strings with 8486 characters,
-and the built_in function-call counts, 11005 in all, are:
-= -- 1098
-> -- 331
-< -- 35
-+ -- 108
-- -- 100
-* -- 794
-:= -- 1841
-add.period$ -- 81
-call.type$ -- 29
-change.case$ -- 180
-chr.to.int$ -- 29
-cite$ -- 35
-duplicate$ -- 523
-empty$ -- 840
-format.name$ -- 141
-if$ -- 2280
+            521 strings with 4247 characters,
+and the built_in function-call counts, 620 in all, are:
+= -- 52
+> -- 20
+< -- 2
++ -- 8
+- -- 6
+* -- 44
+:= -- 112
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 12
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 31
+empty$ -- 51
+format.name$ -- 10
+if$ -- 118
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 35
-newline$ -- 140
-num.names$ -- 95
-pop$ -- 205
+missing$ -- 3
+newline$ -- 11
+num.names$ -- 6
+pop$ -- 21
 preamble$ -- 1
-purify$ -- 190
+purify$ -- 13
 quote$ -- 0
-skip$ -- 423
+skip$ -- 21
 stack$ -- 0
-substring$ -- 717
-swap$ -- 123
-text.length$ -- 10
+substring$ -- 26
+swap$ -- 1
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
-warning$ -- 6
-while$ -- 92
+type$ -- 10
+warning$ -- 2
+while$ -- 4
 width$ -- 0
-write$ -- 368
-(There were 2 error messages)
+write$ -- 22
+(There was 1 error message)

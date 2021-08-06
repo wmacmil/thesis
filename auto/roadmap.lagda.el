@@ -19,15 +19,6 @@
    (TeX-run-style-hooks
     "latex2e"
     "intro"
-    "perspectives"
-    "previouswork"
-    "preliminaries"
-    "natproof"
-    "latex/hott"
-    "grammar"
-    "horizon"
-    "conclusion"
-    "code"
     "article"
     "art11"
     "mlt-thesis-2015"
@@ -78,6 +69,8 @@
    (LaTeX-add-bibliographies
     "example_bibliography")
    (LaTeX-add-xparse-macros
-    '("codeword" "v")))
+    '("codeword" "v")
+    '("term" "v")
+    '("keyword" "v")))
  :latex)
 

@@ -51,6 +51,14 @@
 \texttt{\textcolor{gray}{#1}}%
 }
 
+
+\NewDocumentCommand{\term}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+\NewDocumentCommand{\keyword}{v}{%
+\texttt{\textcolor{orange}{#1}}%
+}
+
 % \usepackage{bussproofs}
 \usepackage{ebproof}
 
@@ -104,7 +112,7 @@
 
 % til here
 
-\title{A grammar of proof}
+\title{On the Grammar of Proof}
 % \subtitle{Subtitle} case study in formal & nl proof translation
 \author{Warrick Macmillan}
 
@@ -189,32 +197,35 @@ Acknowledgements, etc.
 \AgdaKeyword{where}\<%
 \end{code}
 
-0051
+1935-
+Add section numbers to sections
+On the Grammar of Proof
 
 \include{intro}
 
-\include{perspectives}
-
-\include{previouswork}
-
-\include{preliminaries}
-
-% \include{intro-agda}
-
-% should natproof and hottproof be subsections?
-\include{natproof}
+% \include{perspectives}
 
 
-% remember to refactor this
-\include{latex/hott}
+% \include{preliminaries}
 
-\include{grammar}
+% \include{previouswork}
+% % \include{intro-agda}
 
-\include{horizon}
+% % should natproof and hottproof be subsections?
+% \include{natproof}
 
-\include{conclusion}
+% \include{grammar}
 
-\include{code}
+% \include{latex/hott}
+
+
+% \include{horizon}
+
+% \include{conclusion}
+
+% % \include{conclusion} index
+
+% \include{code}
 
 \newpage
 
