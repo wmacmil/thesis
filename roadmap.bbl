@@ -1,8 +1,54 @@
 \begin{thebibliography}{}
 
+\bibitem[Avigad, 2015]{avigad2015mathematics}
+Avigad, J. (2015).
+\newblock Mathematics and language.
+
+\bibitem[Chomsky, 2009]{Chomsky57}
+Chomsky, N. (2009).
+\newblock {\em Syntactic Structures}.
+\newblock De Gruyter Mouton.
+
+\bibitem[Frege, 1879]{frege79}
+Frege, G. (1879).
+\newblock {\em Begrisschrift}.
+\newblock Halle.
+
+\bibitem[Hales, 2019]{halesCNL}
+Hales, T. (2019).
+\newblock An argument for controlled natural languages in mathematics.
+
 \bibitem[Harper, 2011]{harperTrinity}
 Harper, R. (2011).
 \newblock The holy trinity.
+
+\bibitem[Kaiser et~al., 2018]{mtac2}
+Kaiser, J.-O., Ziliani, B., Krebbers, R., R\'{e}gis-Gianas, Y., \& Dreyer, D.
+  (2018).
+\newblock Mtac2: Typed tactics for backward reasoning in coq.
+\newblock {\em Proc. ACM Program. Lang.}, 2(ICFP).
+
+\bibitem[Martin{-}L\"of, 1996]{mlMeanings}
+Martin{-}L\"of, P. (1996).
+\newblock On the meanings of the logical constants and the justifications of
+  the logical laws.
+\newblock {\em Nordic Journal of Philosophical Logic}, 1(1), 11--60.
+
+\bibitem[Pit-Claudel, 2020]{coqAlec}
+Pit-Claudel, C. (2020).
+\newblock Untangling mechanized proofs.
+\newblock In {\em Proceedings of the 13th ACM SIGPLAN International Conference
+  on Software Language Engineering}, SLE 2020  (pp.\ 155–174).  New York, NY,
+  USA: Association for Computing Machinery.
+
+\bibitem[Pédrot, 2021]{ltac2}
+Pédrot, P.-M. (2021).
+\newblock Ltac2 : Tactical warfare.
+
+\bibitem[Ranta \& Ranta, 1994]{ranta1994type}
+Ranta, A. \& Ranta, D. (1994).
+\newblock {\em Type-theoretical Grammar}.
+\newblock Indices (Claredon). Clarendon Press.
 
 \bibitem[{The Univalent foundations program} \& {Institute for advanced study
   (Princeton}, 2013]{theunivalentfoundationsprogram-homotopytypetheory-2013}

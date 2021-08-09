@@ -27,6 +27,7 @@
     "luoCNs"
     "theunivalentfoundationsprogram-homotopytypetheory-2013"
     "surveyLang"
+    "halesCNL"
     "aarneHott"
     "ltac2"
     "frege79"

@@ -7,6 +7,8 @@
     "sec:intro"
     "fig:M1"
     "fig:M2"
-    "fig:M3"))
+    "fig:M3"
+    "def:def3"
+    "def:def4"))
  :latex)
 

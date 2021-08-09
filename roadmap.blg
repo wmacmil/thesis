@@ -3,52 +3,57 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: roadmap.aux
 The style file: apalike2.bst
 A level-1 auxiliary file: intro.aux
-Illegal, another \bibstyle command---line 25 of file roadmap.aux
+A level-1 auxiliary file: perspectives.aux
+White space in argument---line 19 of file perspectives.aux
+ : \citation{objective
+ :                     evidence}
+I'm skipping whatever remains of this command
+Illegal, another \bibstyle command---line 26 of file roadmap.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: example_bibliography.bib
 Warning--empty booktitle in harperTrinity
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
-You've used 2 entries,
+You've used 11 entries,
             2229 wiz_defined-function locations,
-            521 strings with 4247 characters,
-and the built_in function-call counts, 620 in all, are:
-= -- 52
-> -- 20
-< -- 2
-+ -- 8
-- -- 6
-* -- 44
-:= -- 112
-add.period$ -- 4
-call.type$ -- 2
-change.case$ -- 12
-chr.to.int$ -- 2
-cite$ -- 4
-duplicate$ -- 31
-empty$ -- 51
-format.name$ -- 10
-if$ -- 118
+            577 strings with 5306 characters,
+and the built_in function-call counts, 3478 in all, are:
+= -- 340
+> -- 110
+< -- 11
++ -- 36
+- -- 34
+* -- 240
+:= -- 621
+add.period$ -- 29
+call.type$ -- 11
+change.case$ -- 68
+chr.to.int$ -- 11
+cite$ -- 13
+duplicate$ -- 167
+empty$ -- 253
+format.name$ -- 49
+if$ -- 689
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 3
-newline$ -- 11
-num.names$ -- 6
-pop$ -- 21
+missing$ -- 12
+newline$ -- 53
+num.names$ -- 33
+pop$ -- 73
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 72
 quote$ -- 0
-skip$ -- 21
+skip$ -- 137
 stack$ -- 0
-substring$ -- 26
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 171
+swap$ -- 26
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 10
+type$ -- 58
 warning$ -- 2
-while$ -- 4
+while$ -- 25
 width$ -- 0
-write$ -- 22
-(There was 1 error message)
+write$ -- 131
+(There were 2 error messages)
