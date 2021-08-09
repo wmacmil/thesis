@@ -104,9 +104,9 @@ picture. In PL extrensic domain, we can inquire about
 Alternatively, intrinsic to a given PL, there picture is also not so clear.
 Agda, for example, requires the evaluation of terms during typechecking. It is
 implemented with 4.5 different stages between the syntax written by the
-programmers and the ``fully reflected Abstract Syntax Tree (AST)''. But this
-example is perhaps an outlier, because Agda's typechecker is so powerful that
-the design, implemenation, and use of Agda revolves around its type-checker,
+programmers and the ``fully reflected Abstract Syntax Tree (AST)" \cite{andreasEmail}. But this
+example is perhaps an outlier, because Agda's type-checker is so powerful that
+the design, implemenation, and use of Agda revolves around it,
 (which, ironically, is already called during the parsing phase). It is not
 anticipated that floating point computation, for instance, would ever be
 considered when implementing new features of Agda, at least not for the
@@ -126,10 +126,6 @@ to the Portable Grammar Format (PGF) embedding is nontrivial.
 % \end{displayquote}
 
 
-Let's zoom in a little and observe the so-called front-end part of the compiler.
-Displayed in \autoref{fig:M2} is the highest possible overview of GF. This is
-deceptively simple depiction of such a powerful and intricate system.
-
 \begin{figure}
 \centering
 \begin{tikzcd}
@@ -139,21 +135,24 @@ Strings \ar[r,"Lexical\ Analysis"] \ar[rr,bend right,"GF\ Parser"'] &[10em] Lexe
 \caption{GF in a nutshell} \label{fig:M2}
 \end{figure}
 
-What makes GF so compelling is its ability to translate between
-inductively defined languages that type theorists define and relatively
-expressive fragments of natural languages, via the composition GF's parsing and
-linearization capabilities. It is in some sense the attempt to overlay the
-abstraction ladders that led to this development. 
+Let's zoom in a little and observe the so-called front-end part of the compiler.
+Displayed in \autoref{fig:M2} is the highest possible overview of GF. This is a
+deceptively simple depiction of such a powerful and intricate system. What makes
+GF so compelling is its ability to translate between inductively defined
+languages that type theorists specify and relatively expressive fragments of
+natural languages, via the composition of GF's parsing and linearization
+capabilities. It is in some sense the attempt to overlay the abstraction ladders
+at the syntactic level and semantic led to this development.
 
 For natural language, some intrinsic properties might take place, if one
 chooses, at the neurological level, where one somehow can contrast the internal
-language, mechanism of externalization (generally speech), as proposed by
-Chomsky. Extrinsically to the linguistic abstractions depicted, pragmatics is
-absent, but of incredible interest in the field generally.
-
+language (i-language) with the mechanism of externalization (generally speech) as proposed by
+Chomsky \cite{Chomsky1995}. Extrinsic to the linguistic abstractions depicted, pragmatics is
+absent.
+.
 The point is to recognize their are stark differences between natural languages
 and programming languages which are even more apparent when one gets to certain
-abstractions. Classifying both programming languages and natural languages as
+abstractions. Classifying both programming languages as
 languages is best read as an incomplete (and even sometimes contradictory)
 metaphor, due to perceived similarities (of which their are ample).
 
@@ -164,24 +163,31 @@ well-behaved) domain, behaves as a programming language. Simultaneously, we
 probe the topic of Natural Language Generation (NLG). Given a
 logic or type system with some theory inside (say arithmetic over the naturals),
 how do we not just find a natural language representation which interprets our
-expressions,but also does so in a way that is linguistically coherent in a
-sense that a competent speaker can read such an expression and make sense of it.
+expressions, but also does so in a way that is linguistically coherent in a
+sense that a competent speaker can make sense of it in a facile way.
 
 The specific linguistic domain we focus on, that of mathematics, is a particular
-sweet spot at the intersection of these natural and formal language spaces. It should be
-noted that this problem, that of translating between formal (in a PL or logic)
-and informal (in linguistic sense) mathematics as stated, is both vague and
-difficult. It is difficult in both the practical sense, that it may be
-either of infeasible complexity or even perhaps undecidable. But it is also
-difficult in the philosophical sense, that it a question which one may entertain
-arguments which a priori may deflate its effectiveness or meaningfulness.
-Like all collective human endeavors, mathematics is a historical
-construction - that is, its conventions, notations, understanding,
-methodologies, and means of publication and distribution have all been in a
-constant flux. While in some sense the mathematics today can be seen today as a
-much refined version of whatever the Greeks or Egyptians were doing, there is no
+sweet spot at the intersection of these natural and formal language spaces. It
+should be noted that this problem, that of translating between \emph{formal} and
+\emph{informal} mathematics as stated, is both vague and difficult. It is
+difficult in both the practical sense, that it may be either of infeasible
+complexity or even perhaps undecidable, but it is also difficult in the
+philosophical sense. One may entertain the prospect of syntactically translated
+mathematics may a priori may deflate its effectiveness or meaningfulness. Like
+all collective human endeavors, mathematics is a historical construction - that
+is, its conventions, notations, understanding, methodologies, and means of
+publication and distribution have all been in a constant flux. There is no
 consensus on what mathematics is, how it is to be done, and most relevant for
 this treatise, how it is to be expressed.
+
+Historically, mathematics has been filtered of natural language artifacts,
+culminating in some sense with Frege's development of a formal proof. A
+mathematician often never sees a formal proof as it is treated in Logic and Type
+Theory. We hope this work helps with a new foundational mentality, whereby we
+try to bring natural language back into mathematics in a controlled way, or at
+least to bridge the gap between our technologies, specifically injecting ITPs
+into a mathematicians toolbox.
+
 
 We present a sketch of the difference of this so-called formal/informal
 distinction. Mathematics, that is mathematical constructions like numbers and
@@ -205,10 +211,9 @@ one takes, should benefit from this work.
 \subsection{Formalization and Informalization}
 
 Formalization is the process of taking an informal piece of natural language
-mathematics, embedding it in into a theorem prover, constructing a model, ,
-working with types instead of sets. This often requires significant amounts of
-work, and if the proof is big enough, warrants the title \emph{proof
-engineering}. We note some interesting artifacts about a piece of mathematics
+mathematics, embedding it in into a theorem prover, constructing a model,
+and working with types instead of sets. This often requires significant amounts of
+work. We note some interesting artifacts about a piece of mathematics
 being formalized:
 
 \begin{itemize}
@@ -224,67 +229,102 @@ being formalized:
 Informalization, on the other hand is a process of taking a piece formal syntax, and turning it into a natural
 language utterance, along with commentary motivating and or relating it to other
 mathematics. It is a clarification of the meaning of a piece of
-code, suppressing certain details and  sometimes
-redundantly reiterating other details.
+code, suppressing certain details and sometimes
+redundantly reiterating other details. In figure \autoref{fig:M5} we offer a few
+dimensions of comparison.
+
+\begin{figure}
+\centering
+\begin{tabular}{|c|c|c|} \hline
+  Category & Formal Proof & Informal Proof \\ \hline
+  Audience & Agda (and Human) & Human \\ \hline
+  Translation & Compiler & Human \\ \hline
+  Objectivity & Objective & Subjective \\ \hline % not always true
+  Historical & 20th Century & <= Euclid \\ \hline
+  Orientation & Syntax & Semantics \\ \hline
+  Inferability & Complete & Domain Expertise Necessary \\ \hline
+  Verification & PL Designer & Human \\ \hline
+  Ambiguity & Unambiguous & Ambiguous \\ \hline
+
+\end{tabular}
+\caption{Informal and Formal Proofs} \label{fig:M5}
+\end{figure}
 
 Mathematicians working in either direction know this is a respectable task,
 often leading to new methods, abstractions, and research altogether. And just as
-any type of machine translation, rule-based or statistical, for a Virginia Woolf
-novel or Emily Dickinson poem from English to Mandarin would be entirely
-laughable, so-to would the pretense that the methods we explore here using GF
+any type of machine translation, rule-based or statistical, on Virginia Woolf
+novel or Emily Dickinson poem from English to Mandarin would be 
+absurd, so-to would the pretense that the methods we explore here using GF
 could actually match the competence of mathematicians translating work between a
-computer a book. Despite the futility of beating a mathematician at proof
+computer a book. Despite the futility of surpassing a mathematician at proof
 translation, it shouldn't deter those so inspired to try.
 
 \subsection{Syntactic Completeness and Semantic Adequacy}
 
 The GF pipeline, that of bidirectional translation through an intermediary
-abstract syntax representation, has, two fundamental criteria that must be
+abstract syntax representation, has two fundamental criteria that must be
 assessed for one to judge the success of an approach over both formalization and
 informalization.
 
+The first criterion mentioned above, which we'll call \emph{syntactic
+  completeness}, says that a term either type-checks, or some natural language
+form can be deterministically transformed to a term that does type-check.
 
-The first criterion mentioned above, which we'll call \emph{syntactic completeness}, asks the
-following : given an utterance or natural language expression that a
+It asks the following : given an utterance or natural language expression that a
 mathematician might understand, does the GF grammar emit a well-formed syntactic
-expression in the target logic or programming language? [Example?]
+expression in the target logic or programming language? The saying ``grammars
+leak", can be transposed to say (NL) ``proofs leak" in that they are certain to
+contain omissions.
 
-This problem is certain to be infeasible in many cases - a mathematician might
-not be able to reconstruct the unstated syntactic details of a proof in an
-discipline outside her expertise, it is at worthy pursuit to ask why it is so
-difficult! Additionally, one does not know a priori that the generated
+This problem of syntactically complete mathematics is certain to be infeasible
+in many cases - a mathematician might not be able to reconstruct the unstated
+syntactic details of a proof in an discipline outside her expertise, it is at
+worthy pursuit to ask why it is so difficult! Additionally, certain inferable
+details may also detract from the natural language reading rather than assist.
+Perhaps most importantly, one does not know a priori that the generated
 expression in the logic has its intended meaning, other than through some meta
 verification procedure.
 
 Conversely, given a well formed syntactic expression in, for instance, Agda, one
 can ask if the resulting English expression generated by GF is
-\emph{semantically adequate}. This notion of semantic adequacy is also delicate,
-as mathematicians themselves may dispute, for instance, the proof of a given
-proposition or the correct definition of some notion. However, if it is doubtful
-that there would be many mathematicians who would not understand some standard
-theorem statement and proof in an arbitrary introductory analysis text, even if
-one may dispute it's presentation, clarity, pedagogy, or other pedantic details.
-Whether one asks that semantic adequacy means some kind of sociological
-consensus among those with relevant expertise, or a more relaxed criterion that
-some expert herself understands the argument, a dubious perspective in
-scientific circles, semantic adequacy should appease at least one and
-potentially more mathematicians.
+\emph{semantically adequate}.
 
-We introduce these terms, syntactic completeness and semantic adequacy, to
-highlight a perspective and insight that seems to underlie the biggest
-differences between informal and formal mathematics. We claim that mathematics,
-as done on a theorem prover, is a syntax oriented endeavor, whereas mathematics,
-as practiced by mathematicians, prioritizes semantic understanding. Developing a
-system which is able to formalize and informalize utterances which preserve 
-syntactic completeness and semantic adequacy, respectively, is
-probably infeasible. Even introducing objective criteria to really judge these
-terms is likely to infeasible.
+This notion of semantic adequacy is also delicate, as mathematicians themselves
+may dispute, for instance, the proof of a given proposition or the correct
+definition of some notion. However, if it is doubtful that there would be many
+mathematicians who would not understand some standard theorem statement and
+proof in an arbitrary introductory analysis text, even if one may dispute it's
+presentation, clarity, pedagogy, or other pedantic details. Whether one asks
+that semantic adequacy means some kind of sociological consensus among those
+with relevant expertise, or a more relaxed criterion that some expert herself
+understands the argument, a dubious perspective in scientific circles, semantic
+adequacy should appease at least one and potentially more mathematicians.
 
-This perspective represents an observation, and not intended to judge whether
+
+\begin{figure}[H]
+\centering
+\begin{tikzcd}
+Syntactically\ Complete \ar[r,"Informalization"] &[10em]
+Semantically\ Coherent \ar[l,bend right, "Formalization"] 
+\end{tikzcd}
+\caption{Formal and Informal Mathematics} \label{fig:M6}
+\end{figure}
+
+We introduce these terms, syntactic completeness and semantic adequacy to
+highlight perspectives and insight that seems to underlie the biggest
+differences between informal and formal mathematics, as is show in
+\autoref{fig:M6}. We claim that mathematics, as done on a theorem prover, is a
+syntax oriented endeavor, whereas mathematics, as practiced by mathematicians,
+prioritizes semantic understanding. Developing a system which is able to
+formalize and informalize utterances which preserve syntactic completeness and
+semantic adequacy, respectively, is probably infeasible. Even introducing
+objective criteria to really judge these definitions is likely to be infeasible.
+
+This perspective represents an observation and is not intended to judge whether
 the syntactic or semantic perspective on mathematics is better - there is a
 dialectical phenomena between the two. Let's highlight some advantages both
 provide, and try to distinguish more precisely what a syntactic and semantic
-perspective may be.
+perspective may be. 
 
 When the Agda user builds her proof, she is outsourcing much of the bookkeeping
 to the type-checker. This isn't purely a mechanical process though, she often
@@ -294,15 +334,17 @@ proof). The syntactic side is expressly clear from the readers perspective as
 well. If Agda proofs were semantically coherent, one would only need to look at
 code, with perhaps a few occasional remarks about various intentions and
 conclusions, to understand the mathematics being expressed. Yet, papers are
-often written exclusively in Latex, where Agda proofs have had to be reverse
+often written exclusively in Latex, where Agda proofs have to be reverse
 engineered, preserving only semantic details and forsaking syntactic nuance.
+
+
 Oftentimes the code is kept in the appendix so as to provide a complete
 syntactic blueprint. But the act of writing an Agda proof and reading them are
 often orthogonal, as the term somehow shadows the application of typing rules
-which enable its construction. In some sense, the construction of the proof is
+which enable its construction. The construction of the proof is
 entirely engaged with the types, whereas the human witness of a large term is
-either lost as to why it fulfills the typing judgment, they have to reexamine
-parts of the proof reasoning in their head or perhaps, again, try to build it
+either lost as to why it fulfills the typing judgment, she has to reexamine
+parts of the proof reasoning in her head or perhaps, try to rebuild 
 interactively with Agda's help.
 
 Even in cases where Agda code is included in a paper, it is most often the types
