@@ -139,22 +139,22 @@ expressive power of system like GF to parse these to the same form.
 % \end{figure}
 
 
-\begin{figure}
-\centering
-\begin{tabular}{|c|c|c|c|} \hline
-  FOL & MLTT & NL FOL & NL MLTT \\ \hline
-  $\forall\ x\ P(x)$ & $\Pi x : \tau.\ P(x)$     & $for\ all\ x,\ p$  & $the\  product\  over\  x\  in\ p$ \\ 
-  $\exists\ x\ P(x)$ & $\Sigma x : \tau.\ P(x)$  & $there\ exists\ an\ x\ such\ that\ p$ & $there\ exists\ an\ x\ in\ \tau such\ that\ p$ \\ 
-  $p\ \supset\ q$    & $p\ \to\ q$               & $if\ p\ then\ q$   & $p\  to\  q$ \\ 
-  $p\ \wedge\ q$     & $p\ \times\ q$            & $p\ and\ q$        & $the\  product\  of\  p\  and\  q$ \\ 
-  $p\ \lor\ q$       & $p\ +\ q$                 & $p\ or\ q$         & $the\  coproduct\  of\  p\  and\  q$ \\ 
-  $\neg\ p$          & $\neg\ p$                 & $it\ is\ not\ the\ case\ that\ p$ & $not\ p$ \\ 
-  $\top$             & $\top$                    & $true$             & $top$ \\ 
-  $\bot$             & $\bot$                    & $false$            & $bottom$ \\ 
-  $p\ =\ q$          & $p\ \equiv\ q$            & $p\ equals\ q$     & $definitionally\  equal$ \\ 
-\end{tabular}
-\caption{FOL vs MLTT} \label{fig:M5}
-\end{figure}
+% \begin{figure}
+% \centering
+% \begin{tabular}{|c|c|c|c|} \hline
+%   FOL & MLTT & NL FOL & NL MLTT \\ \hline
+%   $\forall\ x\ P(x)$ & $\Pi x : \tau.\ P(x)$     & $for\ all\ x,\ p$  & $the\  product\  over\  x\  in\ p$ \\ 
+%   $\exists\ x\ P(x)$ & $\Sigma x : \tau.\ P(x)$  & $there\ exists\ an\ x\ such\ that\ p$ & $there\ exists\ an\ x\ in\ \tau such\ that\ p$ \\ 
+%   $p\ \supset\ q$    & $p\ \to\ q$               & $if\ p\ then\ q$   & $p\  to\  q$ \\ 
+%   $p\ \wedge\ q$     & $p\ \times\ q$            & $p\ and\ q$        & $the\  product\  of\  p\  and\  q$ \\ 
+%   $p\ \lor\ q$       & $p\ +\ q$                 & $p\ or\ q$         & $the\  coproduct\  of\  p\  and\  q$ \\ 
+%   $\neg\ p$          & $\neg\ p$                 & $it\ is\ not\ the\ case\ that\ p$ & $not\ p$ \\ 
+%   $\top$             & $\top$                    & $true$             & $top$ \\ 
+%   $\bot$             & $\bot$                    & $false$            & $bottom$ \\ 
+%   $p\ =\ q$          & $p\ \equiv\ q$            & $p\ equals\ q$     & $definitionally\  equal$ \\ 
+% \end{tabular}
+% \caption{FOL vs MLTT} \label{fig:M5}
+% \end{figure}
 
 
 % \begin{multicols}{3}
@@ -217,11 +217,10 @@ logical types - everything is a type.
 \end{figure}
 
 
-
 \begin{figure}[H]
 \centering
 \begin{tabular}{|c|c|c|c|} \hline
-  Set Theory & MLTT & NL Set Theory & NL MLTT \\ \hline
+ Set Theory & MLTT & NL Set Theory & NL MLTT \\ \hline
  $S$          & $\tau$                 & $the\ set\ S$                     & $the\ type\ \tau$ \\ 
  $\mathbb{N}$ & $Nat$                  & $the\ set\ of\ natural\ numbers$  & $the\ type\ nat$ \\
  $S \times T$ & $S \times T$           & $the\ product\ of\ S\ and\ T$     & $the\  product\  of\  S\  and\  T$ \\

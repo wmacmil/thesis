@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  10 AUG 2021 13:33
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  10 AUG 2021 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1151,7 +1151,7 @@ LaTeX Warning: Label `fig:M2' multiply defined.
 LaTeX Warning: Label `fig:M5' multiply defined.
 
 
-LaTeX Warning: Label `fig:M5' multiply defined.
+LaTeX Warning: Label `fig:M6' multiply defined.
 
 ))
 \openout1 = `roadmap.aux'.
@@ -2019,17 +2019,12 @@ Package natbib Warning: Citation `rantaLog' on page 22 undefined on input line
 120.
 
 
-Overfull \hbox (5.64789pt too wide) in paragraph at lines 144--156
- [][] 
- []
-
-
 Overfull \hbox (5.64789pt too wide) in paragraph at lines 204--216
  [][] 
  []
 
 ! Undefined control sequence.
-l.228 ...o T$              & $the\ function\ \from
+l.227 ...o T$              & $the\ function\ \from
                                                   \ S\ to\ T$  & $p\  to\  q...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2038,7 +2033,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (13.96936pt too wide) in paragraph at lines 223--236
+Overfull \hbox (13.96936pt too wide) in paragraph at lines 222--235
  [][] 
  []
 
@@ -2050,7 +2045,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.305   \begin
+l.304   \begin
               {itemize}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2058,7 +2053,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Improper \prevdepth.
 \mult@@cols ...ace \multicolsep \ifdim \prevdepth 
                                                   = -\@m \p@ \else \@tempcnt...
-l.305   \begin
+l.304   \begin
               {itemize}
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -2068,7 +2063,7 @@ I'm forgetting what you said and using zero instead.
 ! Improper \prevdepth.
 <recently read> \prevdepth 
                            
-l.305   \begin
+l.304   \begin
               {itemize}
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -2078,7 +2073,7 @@ I'm forgetting what you said and using zero instead.
 ! Arithmetic overflow.
 <recently read> \@tempcntb 
                            
-l.305   \begin
+l.304   \begin
               {itemize}
 I can't carry out that multiplication or division,
 since the result is out of range.
@@ -2086,7 +2081,7 @@ since the result is out of range.
 ! Improper \prevdepth.
 <recently read> \prevdepth 
                            
-l.305   \begin
+l.304   \begin
               {itemize}
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -2100,7 +2095,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.307   \end{itemize}
+l.306   \end{itemize}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2108,7 +2103,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Arithmetic overflow.
 <recently read> \baselineskip 
                               
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 I can't carry out that multiplication or division,
 since the result is out of range.
@@ -2116,14 +2111,14 @@ since the result is out of range.
 ! Multicol Error.
 \page@sofar ... \else \errmessage {Multicol Error}
                                                   \fi \nointerlineskip \setb...
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 (That was another \errmessage.)
 
 ! You can't use `\prevdepth' in restricted horizontal mode.
 \nointerlineskip ->\prevdepth 
                               -\@m \p@ 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2133,7 +2128,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2141,7 +2136,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing number, treated as zero.
 <to be read again> 
                    \setbox 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2150,7 +2145,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \setbox 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -2162,7 +2157,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! You can't use `\moveright' in math mode.
 \page@sofar ...bal \dimen \tw@ \dp \z@ \moveright 
                                                   \multicol@leftmargin \hbox...
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2172,7 +2167,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ! Missing number, treated as zero.
 <to be read again> 
                    \hbox 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2181,7 +2176,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \hbox 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -2193,7 +2188,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! You can't use `\prevdepth' in math mode.
 \page@sofar ...umns \rlap {\phantom p}}\prevdepth 
                                                   \z@ \kern -\dimen \tw@ \if...
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2203,7 +2198,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ! Missing number, treated as zero.
 <to be read again> 
                    \kern 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2212,7 +2207,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \kern 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -2224,7 +2219,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2239,7 +2234,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2247,7 +2242,7 @@ If that doesn't work, type  X <return>  to quit.
 ! You can't use `\prevdepth' in restricted horizontal mode.
 \endmulticols ...ddvspace \multicolsep \prevdepth 
                                                   \z@ \mult@info \z@ {Ending...
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2257,7 +2252,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ! Missing number, treated as zero.
 <to be read again> 
                    \def 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2266,7 +2261,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \def 
-l.308 \end{multicols}
+l.307 \end{multicols}
                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -2979,10 +2974,10 @@ l.1 \subsection{Grammatical Framework}
 Here is how much of TeX's memory you used:
  33105 strings out of 479819
  634446 string characters out of 5895846
- 1173805 words of memory out of 5000000
+ 1172805 words of memory out of 5000000
  49536 multiletter control sequences out of 15000+600000
  537892 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,814b,1042s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (26 pages, 605392 bytes).
+Output written on roadmap.xdv (26 pages, 605940 bytes).
