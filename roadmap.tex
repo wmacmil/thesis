@@ -34,7 +34,9 @@
 
 
 \usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
 
+\usepackage{multicol}
 
 \setmainfont{DejaVu Serif}
 \setsansfont{DejaVu Sans}
@@ -103,6 +105,18 @@
 \newcommand{\equivalenceH}[2]{#1 \simeq #2}
 
 
+% for section numbers, doesn't work
+% \usepackage{titlesec}
+% \titleformat{\section}[block]
+%   {\fontsize{12}{15}\bfseries\sffamily\filcenter}
+%   {\thesection}
+%   {1em}
+%   {\MakeUppercase}
+% \titleformat{\subsection}[hang]
+%   {\fontsize{12}{15}\bfseries\sffamily}
+%   {\thesubsection}
+%   {1em}
+%   {}
 
 %\newcommand{\ct}{%
   %\mathchoice{\mathbin{\raisebox{0.5ex}{$\displaystyle\centerdot$}}}%
@@ -198,13 +212,13 @@ Acknowledgements, etc.
 \AgdaKeyword{where}\<%
 \end{code}
 
-2133
+1333
+
 Add section numbers to sections
 
 \include{intro}
 
 \include{perspectives}
-
 
 \include{preliminaries}
 

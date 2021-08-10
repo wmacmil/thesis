@@ -47,6 +47,7 @@
     "mathtools"
     "xspace"
     "enumitem"
+    "multicol"
     "newunicodechar"
     "xcolor"
     "listings"

@@ -12,16 +12,18 @@ Urteil, came to be used instead of proposition \cite{mlMeanings}.
 A central contribution of Per Martin-Löf in the development of type theory was
 the recognition of the centrality of judgments in logic. Many mathematicians
 aren't familiar with the spectrum of judgments available, and merely believe
-they are concerned with *the* notion of truth, namely *the truth* of a
+they are concerned with \emph{the} notion of truth, namely \emph{the truth} of a
 mathematical proposition or theorem. There are many judgments one can make which
-most mathematicians aren't aware of or at least never mention. These include,
-for instance,
+most mathematicians aren't aware of or at least never mention. Examples of both familiar
+and unfamiliar judgments include,
 
-\begin{itemize}[noitemsep]
+\begin{itemize}
 
+\item $A$ is true
 \item $A$ is a proposition
 \item $A$ is possible
-\item $A$ is probable
+\item $A$ is necessarily true
+\item $A$ is true at time $t$
 
 \end{itemize}
 
@@ -33,53 +35,72 @@ it is possible that the Riemann Hypothesis is true, partially because they
 already know that, and partially because it doesn't seem particularly
 interesting to say that something is possible, in the same way that a physicist
 may flinch if you say alchemy is possible. Most mathematicians, however, would
-agree that $P = NP$ is possible but isn't probable.
+agree that $P = NP$ is a proposition, and it is also possible, but isn't true.
 
 For the logician these judgments may well be interesting because their may be
-logics in which the discussion of possibility or probability is even more
-interesting than the discussion of truth. And for the type theorist, interested
+logics in which the discussion of possibility or necessity is even more
+interesting than the discussion of truth. And for the type theorist interested
 in designing and building programming languages over many various logics, these
 judgments become a prime focus. The role of the type-checker in a programming
 language is to present evidence for, or decide the validity of the judgments.
-The four main judgments of type theory are :
+The four main judgments of type theory are given in natural language on the left
+and symbolically on the right.
 
-\begin{itemize}[noitemsep]
+\begin{multicols}{2}
+\begin{itemize}
 \item $T$ is a type
 \item $T$ and $T'$ are equal types
 \item $t$ is a term of type $T$
 \item $t$ and $t'$ are equal terms of type $T$
-\end{itemize}
-
-
-We succinctly present these in a mathematical notation where Frege's turnstile,
-$\vdash$, denotes a judgment :
-
-\begin{itemize}[noitemsep]
 \item $\vdash T \; {\rm type}$
 \item $\vdash T = T'$
 \item $\vdash t:T$
 \item $\vdash t = t':T$
 \end{itemize}
+\end{multicols}
+
+Frege's turnstile, $\vdash$, denotes a judgment.
 
 These judgments become much more interesting when we add the ability for them to
 be interpreted in a some context with judgment hypotheses. Given a series of
 judgments $J_1,...,J_n$, denoted $\Gamma$, where $J_i$ can depend on previously
 listed $J's$, we can make judgment $J$ under the hypotheses, e.g. $J_1,...,J_n
-\vdash J$. Often these hypotheses $J_i$, alternatively called *antecedents*,
+\vdash J$. Often these hypotheses $J_i$, alternatively called \emph{antecedents},
 denote variables which may occur freely in the *consequent* judgment $J$. For
 instance, the antecedent, $x : \mathbb{R}$ occurs freely in the syntactic
 expression $\sin x$, a which is given meaning in the judgment $\vdash \sin x { :
 } \mathbb{R}$. We write our hypothetical judgement as follows :
 
-$x : \mathbb{R} \vdash \sin x : \mathbb{R}$
+$$x : \mathbb{R} \vdash \sin x : \mathbb{R}$$
+
+
+
+\subsubsection{Rules}
+
+Martin-Löf systematically used the four fundamental judgments in the proof
+theoretic style of Pragwitz. To this end, the intuitionistic formulation of the
+logical connectives just gives rules which admit an immediate computational
+interpretation. The main types of rules are type formation, introduction,
+elimination, and computation rules. The introduction rules for a type admit an
+induction principle derivable from that type's signature. Additionally, the
+$\beta$ and $\eta$ computation rules are derivable via the composition of
+introduction and elimination rules, which, if correctly formulated, should
+satisfy a relation known as harmony.
+
+The fundamental notion of the lambda calculus, the function, is 
+abstracted over a variable and returns a term of some type when applied to an
+argument which is subsequently reduced via the computational rules.
+Dependent Type Theory (DTT) generalizes this to allow the return type be
+parameterized by the variable being abstracted over. The dependent function
+forms the basis of the LF which underlies Agda and GF. 
 
 One reason why hypothetical judgments are so interesting is we can devise rules
 which allow us to translate from the metalanguage to the object language using
 lambda expressions. These play the role of a function in mathematics and
 implication in logic. This comes out in the following introduction rule :
 
-$ \frac{\Gamma, x : A \vdash b : B} {\Gamma \vdash \lambda x. b : A \rightarrow
-B} $
+% $$ \frac{\Gamma, x : A \vdash b : B} {\Gamma \vdash \lambda x. b : A \rightarrow
+% B} $$
 
 Using this rule, we now see a typical judgment, typical in a field like from
 real analysis,
@@ -92,4 +113,224 @@ Mathematicians denote this judgement
 \begin{align*} f {:} \mathbb{R} &\rightarrow \mathbb{R}\\ x &\mapsto \sin ( x )
 \end{align*}
 
+\subsection{Propositions, Sets, and Types}
+
+While the rules of type theory have been well-articulated elsewhere, we provide
+briefly compare the syntax of mathematical constructions in FOL, one possible
+natural language use \cite{rantaLog}, and MLTT. From this vantage, these look
+like simple symbolic manipulations, and in some sense, one doesn't need a the
+expressive power of system like GF to parse these to the same form.
+
+% \begin{figure}
+% \centering
+% \begin{tabular}{|c|c|c|c|} \hline
+%   FOL & MLTT & NL FOL & NL MLTT \\ \hline
+%   $\forall\ x\ P(x)$ & $\Pi x : \tau.\ P(x)$     & $for\ all\ x,\ p$  & $the product over x in\ p$ \\ hline
+%   $\exists\ x\ P(x)$ & $\Sigma x : \tau.\ P(x)$  & $there\ exists\ an\ x\ such\ that\ p$ & $there\ exists\ an\ x\ \in \tau \such \that p$ \\ hline 
+%   $p\ \supset\ q$    & $p\ \to\ q$               & $if\ p\ then\ q$   & $p to q$ \\ hline
+%   $p\ \wedge\ q$     & $p\ \times\ q$            & $p\ and\ q$        & $the product of p and q$ \\ hline
+%   $p\ \lor\ q$       & $p\ +\ q$                 & $p\ or\ q$         & $the coproduct of p and q$ \\ hline
+%   $\neg\ p$          & $\neg\ p$                 & $it\ is\ not\ the\ case\ that\ p$ \\ hline  
+%   $\top$             & $\top$                    & $true$             & $top$ \\ hline
+%   $\bot$             & $\bot$                    & $false$            & $bottom$ \\ hline
+%   $p\ =\ q$          & $p\ \equiv\ q$            & $p\ equals\ q$     & $definitionally equal$ \\ hline
+% \end{tabular}
+% \caption{FOL vs MLTT} \label{fig:M5}
+% \end{figure}
+
+
+\begin{figure}
+\centering
+\begin{tabular}{|c|c|c|c|} \hline
+  FOL & MLTT & NL FOL & NL MLTT \\ \hline
+  $\forall\ x\ P(x)$ & $\Pi x : \tau.\ P(x)$     & $for\ all\ x,\ p$  & $the\  product\  over\  x\  in\ p$ \\ 
+  $\exists\ x\ P(x)$ & $\Sigma x : \tau.\ P(x)$  & $there\ exists\ an\ x\ such\ that\ p$ & $there\ exists\ an\ x\ in\ \tau such\ that\ p$ \\ 
+  $p\ \supset\ q$    & $p\ \to\ q$               & $if\ p\ then\ q$   & $p\  to\  q$ \\ 
+  $p\ \wedge\ q$     & $p\ \times\ q$            & $p\ and\ q$        & $the\  product\  of\  p\  and\  q$ \\ 
+  $p\ \lor\ q$       & $p\ +\ q$                 & $p\ or\ q$         & $the\  coproduct\  of\  p\  and\  q$ \\ 
+  $\neg\ p$          & $\neg\ p$                 & $it\ is\ not\ the\ case\ that\ p$ & $not\ p$ \\ 
+  $\top$             & $\top$                    & $true$             & $top$ \\ 
+  $\bot$             & $\bot$                    & $false$            & $bottom$ \\ 
+  $p\ =\ q$          & $p\ \equiv\ q$            & $p\ equals\ q$     & $definitionally\  equal$ \\ 
+\end{tabular}
+\caption{FOL vs MLTT} \label{fig:M5}
+\end{figure}
+
+
+% \begin{multicols}{3}
+%   \begin{itemize}
+%     \item $\forall\ x\ P(x)$
+%     \item $\exists\ x\ P(x)$
+%     \item $p\ \supset\ q$
+%     \item $p\ \wedge\ q$
+%     \item $p\ \lor\ q$
+%     \item $\neg\ p$
+%     \item $\top$
+%     \item $\bot$
+%     \item $p\ =\ q$
+%     \item $\Pi x : \tau.\ P(x)$
+%     \item $\Sigma x : \tau.\ P(x)$
+%     \item $p\ \to\ q$
+%     \item $p\ \times\ q$
+%     \item $p\ +\ q$
+%     \item $\neg\ p$
+%     \item $\top$
+%     \item $\bot$
+%     \item $p\ \equiv\ q$
+%     \item $for\ all\ x,\ p$
+%     \item $there\ exists\ an\ x\ such\ that\ p$
+%     \item $if\ p\ then\ q$
+%     \item $p\ and\ q$
+%     \item $p\ or\ q$
+%     \item $it\ is\ not\ the\ case\ that\ p$
+%     \item $true$
+%     \item $false$
+%     \item $p\ equals\ q$
+%   \end{itemize}
+% \end{multicols}
+
+
+
+Additionally, it is worth comparing the type theoretic and natural language
+syntax with set theory. Now we bear witness to some deeper cracks than were
+visible above. We note that the type theoretic syntax is \emph{the same} in both
+tables, whereas the set theoretic and logical syntax shares no overlap. This is
+because set theory and first order logic are treated as distinct domains,
+whereas in vanilla MLTT, there is no distinguishing mathematical types from
+logical types - everything is a type.
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|c|c|} \hline
+  FOL & MLTT & NL FOL & NL MLTT \\ \hline
+  $\forall\ x\ P(x)$ & $\Pi x : \tau.\ P(x)$     & $for\ all\ x,\ p$  & $the\  product\  over\  x\  in\ p$ \\ 
+  $\exists\ x\ P(x)$ & $\Sigma x : \tau.\ P(x)$  & $there\ exists\ an\ x\ such\ that\ p$ & $there\ exists\ an\ x\ in\ \tau such\ that\ p$ \\ 
+  $p\ \supset\ q$    & $p\ \to\ q$               & $if\ p\ then\ q$   & $p\  to\  q$ \\ 
+  $p\ \wedge\ q$     & $p\ \times\ q$            & $p\ and\ q$        & $the\  product\  of\  p\  and\  q$ \\ 
+  $p\ \lor\ q$       & $p\ +\ q$                 & $p\ or\ q$         & $the\  coproduct\  of\  p\  and\  q$ \\ 
+  $\neg\ p$          & $\neg\ p$                 & $it\ is\ not\ the\ case\ that\ p$ & $not\ p$ \\ 
+  $\top$             & $\top$                    & $true$             & $top$ \\ 
+  $\bot$             & $\bot$                    & $false$            & $bottom$ \\ 
+  $p\ =\ q$          & $p\ \equiv\ q$            & $p\ equals\ q$     & $definitionally\  equal$ \\ \hline
+\end{tabular}
+\caption{FOL vs MLTT} \label{fig:M5}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{|c|c|c|c|} \hline
+  Set Theory & MLTT & NL Set Theory & NL MLTT \\ \hline
+ $S$          & $\tau$                 & $the\ set\ S$                     & $the\ type\ \tau$ \\ 
+ $\mathbb{N}$ & $Nat$                  & $the\ set\ of\ natural\ numbers$  & $the\ type\ nat$ \\
+ $S \times T$ & $S \times T$           & $the\ product\ of\ S\ and\ T$     & $the\  product\  of\  S\  and\  T$ \\
+ $S \to T$    & $S \to T$              & $the\ function\ \from\ S\ to\ T$  & $p\  to\  q$ \\
+ $\{x|P(x)\}$ & $\Sigma x : \tau.\ P(x)$ & $the\ set\ of\ x\ such\ that\ P$  & $there\ exists\ an\ x\ in\ \tau such\ that\ p$ \\
+ $\emptyset$  & $\bot$                 & $the\ empty\ set$                 & $bottom$ \\
+ $?$          & $\top$                 & $?$                             & $top$ \\
+ $S \cup T$   & $?$                    & $the\ union\ of\ S\ and\ T$       & $?$ \\
+ $S \subset T$ & $S <: T$              & $the\ subset\ S\ of\ T$          & $S\ is\ a\ subtype\ of\ T$ \\
+ $?$          & $U_1$                  & $?$ & $the\ second\ Universe$        \\ \hline 
+\end{tabular}
+\caption{Sets vs MLTT} \label{fig:M6}
+\end{figure}
+
+
+
+% \begin{multicols}{3}
+%   \begin{itemize}
+%     \item $S$
+%     \item $\mathbb{N}$
+%     \item $S \times T$
+%     \item $S \to T$
+%     \item $\{x|P(x)\}$
+%     \item $\emptyset$
+%     \item $?$
+%     \item $S \cup T$
+%     \item $S \subset T$
+%     \item $?$
+%     \item $\tau$
+%     \item $Nat$
+%     \item $S \times T$
+%     \item $S \to T$
+%     \item $\Sigma x : \_ . P(x)$
+%     \item $\bot$
+%     \item $\top$
+%     \item $?$
+%     \item $S <: T$
+%     \item $U_1$
+%     \item $the\ set\ S$
+%     \item $the\ set\ of\ natural\ numbers$
+%     \item $the\ product\ of\ N\ and\ N$
+%     \item $the\ function\ \from\ S\ to\ T$
+%     \item $the\ set\ of\ x\ such\ that\ P$
+%     \item $the\ empty\ set$
+%     \item $top$
+%     \item $the\ union\ of\ S\ and\ T$
+%     \item $the\ subset\ S\ of\ T$
+%     \item $the\ second\ Universe$
+%   \end{itemize}
+% \end{multicols}
+
+The basic types are sometimes simpler to work with, because they are incredibly
+expressive, but it also comes at a cost. The union of two sets simply gives a
+predicate over the members of the sets, whereas union and intersection types are
+often not considered ``core" to type theory, with multiple possible ways of
+interpreting how to treat this set-theoretic concept. The behavior of subtypes
+and subsets, while related in some ways, also represents a semantic departure
+from sets and types. For example, while there can be a greatest type in some
+sub-typing schema, there is no notion of a top set. This is why we use the type
+theoretic NL syntax when there are question marks in the set theory column.
+
+We also note that pragmatically, type theorists often interchange the logical,
+set theoretic, and type theoretic lexicons when describing types. Because the
+types were developed to overcome shortcomings of set theory and classical logic,
+the lexicons of all three ended up being blended, and in some sense, the type
+theorist can substitute certain words that a classical mathematician
+wouldn't.  Whereas $p\ implies\ q$ and $function\ from\ X\ to\ Y$ are not to
+be mixed, the type theorist may in some sense default to either.
+Nontheless, pragmatically speaking, one would never catch a type theorist
+saying $Nat implies Nat$ when expressing $Nat\ \to\ Nat$.
+
+
+Continuing with sets, we compare elements with terms, this time, via examples.
+
+
+\centering
+\begin{tabular}{|c|c|c|c|} \hline
+  Set Theory & MLTT & NL Set Theory & NL MLTT \\ \hline
+
+\begin{multicols}{2}
+  \begin{itemize}
+
+  \end{itemize}
+\end{multicols}
+
+Mathemacians and T
+
+
+% \begin{columns}
+
+% \begin{column}{0.4 \textwidth}
+% \begin{exampleblock}{Sets}
+%   \begin{itemize}
+%     \item $1$
+%     \item $(1,0)$
+%   \end{itemize}
+% \end{exampleblock}
+% \end{column}
+
+% \begin{column}{0.4 \textwidth}
+% \begin{block}{Programs}
+%   \begin{itemize}
+%     \item $suc\ zero$
+%     \item $(suc\ zero, zero)$
+%   \end{itemize}
+% \end{block}
+
+Nonetheless,
+there are many nuances this side-by-side comparison doesn't offer. First  
+
+While these differences may 
 

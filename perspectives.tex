@@ -93,7 +93,7 @@ that are necessary to give a more comprehsive snapshot. For instance, we may
 consider intrinsic and extrensic abstractions that diverge from the idealized
 picture. In PL extrensic domain, we can inquire about 
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
 
 \item systems with multiple interactive programming language 
 \item how the programming languages behave with respect to given programs
@@ -216,7 +216,8 @@ and working with types instead of sets. This often requires significant amounts 
 work. We note some interesting artifacts about a piece of mathematics
 being formalized:
 
-\begin{itemize}
+\begin{itemize[noitemsep]
+}
 
 \item it may be formalized differently by two different people in many different ways
 \item it may have to be modified, to include hidden lemmas, to correct of an
@@ -440,28 +441,36 @@ model construction of some NL fragment, where truth in the model would
 correspond to termination of type-checking. Alternatively, during the
 informalization process, two different authors may suppress different details,
 or phrase a given utterance entirely differently, possibly leading to two
-different, but possibly similar proofs. Extrapolating our analogy, the same 
-two architects given the same engineering plans could produce two entirely
-different looking and functioning buildings.  Oftentimes though, it is the
-architect who has the vision, and the engineers who end up implementing the
-architects art.
+different, but possibly similar proofs. Extrapolating our analogy, the same two
+architects given the same engineering plans could produce two entirely different
+looking and functioning buildings. Oftentimes though, it is the architect who
+has the vision, and the engineers who end up implementing the architects art.
+
+We also briefly explore the difference between the mathematician and the
+physicist. The physicist will often say under her breath to a class,
+``don't tell anyone in the math department I'm doing this" when swapping an
+integral and a sum or other loose but effective tricks in her blackboard
+calculations. While there is an implicit assumption that there are theorems in
+analysis which may justify these calculations, it is not the physicist's objective
+to be as rigorous as the mathematician. This is because the physicist is not
+using the mathematics as a syntactic mechanism to reflect the semantic domain of
+particles, energy, and other physical processes which the mathematics in physics
+serves to describe. The mathematician using Agda, needing to make syntactically
+complete arguments, needs to be obsessed with the details - whereas the
+``pen and paper" mathematician would need be reluctant to carry out all the
+excruciating syntactic details for sake of semantic clarity.
 
 There isn't a natural notion of equivalence between informal and formal proofs,
-but rather, loosely, some kind of adjunction in the categorical sense between
-these two sets. We note the fact that the ``acceptable" Natural language
-utterances aren't inductively defined. This precludes us from actually
-constructing a canonical mathematical model of formal/informal relationship, but
-we most certainly believe that if the GF perspective of translation is used,
-there can at least be an approximation of what a model may look like. It is our
-contention that the linguist interested in the language of mathematics should
-perhaps be seen as a scientist, whose point is to contribute basic ideas and
-insights from which the architects and engineers can use to inform their
-designs.
+but rather, loosely, some kind of adjunction between these two sets. We note the
+fact that the ``acceptable" Natural language utterances aren't inductively
+defined. This precludes us from actually constructing a canonical mathematical
+model of formal/informal relationship, but we most certainly believe that if the
+GF perspective of translation is used, there can at least be an approximation of
+what a model may look like. It is our contention that the linguist interested in
+the language of mathematics should perhaps be seen as a scientist, whose point
+is to contribute basic ideas and insights from which the architects and
+engineers can use to inform their designs.
 
-
-% Importantly, we are just now at a point historically where our
-% technologies support the implementations, and modern theorem provers like Coq
-% and Agda provide an incredible amount of help in realizing the them.
 
 Mathematicians seek model independence in their results (i.e., they don't need a
 direct encoding of Fermat's last theorem in set theory in order to trust its
@@ -486,7 +495,7 @@ nontrivial perspective at many important issues.
 Recapitulating much of what was said, we hope that the following questions may
 have a new perspective :
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
 
 \item what are mathematical objects ?
 \item how do their encodings in different foundational formalisms affect their

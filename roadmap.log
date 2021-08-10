@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  9 AUG 2021 21:34
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  10 AUG 2021 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -855,6 +855,75 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box64
 \enit@count@id=\count330
 \enitdp@description=\count331
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count332
+\mult@box=\box65
+\multicol@leftmargin=\dimen286
+\c@unbalance=\count333
+\c@collectmore=\count334
+\doublecol@number=\count335
+\multicoltolerance=\count336
+\multicolpretolerance=\count337
+\full@width=\dimen287
+\page@free=\dimen288
+\premulticols=\dimen289
+\postmulticols=\dimen290
+\multicolsep=\skip65
+\multicolbaselineskip=\skip66
+\partial@page=\box66
+\last@line=\box67
+\maxbalancingoverflow=\dimen291
+\mult@rightbox=\box68
+\mult@grightbox=\box69
+\mult@gfirstbox=\box70
+\mult@firstbox=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\c@minrows=\count338
+\c@columnbadness=\count339
+\c@finalcolumnbadness=\count340
+\last@try=\dimen292
+\multicolovershoot=\dimen293
+\multicolundershoot=\dimen294
+\mult@nat@firstbox=\box109
+\colbreak@box=\box110
+\mc@col@check@num=\count341
 )
 
 Package fontspec Info: Font family 'DejaVuSerif(0)' created for font 'DejaVu
@@ -898,14 +967,14 @@ Package fontspec Info: Font family 'DejaVuSerif(1)' created for font 'DejaVu
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/DejaVuSerif(1)/m/n on input line 40.
+(Font)                  OT1/cmr/m/n --> TU/DejaVuSerif(1)/m/n on input line 42.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/DejaVuSerif(1)/m/it on input line 4
-0.
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/DejaVuSerif(1)/bx/n on input line 4
-0.
+2.
 
 Package fontspec Info: Font family 'DejaVuSans(0)' created for font 'DejaVu
 (fontspec)             Sans' with options [Ligatures=TeX].
@@ -947,11 +1016,11 @@ Package fontspec Info: Font family 'DejaVuSans(1)' created for font 'DejaVu
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/DejaVuSans(1)/m/n on input line 41.
+(Font)                  OT1/cmss/m/n --> TU/DejaVuSans(1)/m/n on input line 43.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/DejaVuSans(1)/bx/n on input line 4
-1.
+3.
 
 Package fontspec Info: Font family 'DejaVuSansMono(0)' created for font
 (fontspec)             'DejaVu Sans Mono' with options
@@ -1016,56 +1085,56 @@ Package fontspec Info: Font family 'DejaVuSansMono(1)' created for font
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(1)/m/n on input line
- 42.
+ 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(1)/bx/n on input lin
-e 42.
+e 44.
 (/usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count332
-\lst@gtempboxa=\box65
+\lst@mode=\count342
+\lst@gtempboxa=\box111
 \lst@token=\toks42
-\lst@length=\count333
-\lst@currlwidth=\dimen286
-\lst@column=\count334
-\lst@pos=\count335
-\lst@lostspace=\dimen287
-\lst@width=\dimen288
-\lst@newlines=\count336
-\lst@lineno=\count337
-\lst@maxwidth=\dimen289
+\lst@length=\count343
+\lst@currlwidth=\dimen295
+\lst@column=\count344
+\lst@pos=\count345
+\lst@lostspace=\dimen296
+\lst@width=\dimen297
+\lst@newlines=\count346
+\lst@lineno=\count347
+\lst@maxwidth=\dimen298
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count338
-\lst@skipnumbers=\count339
-\lst@framebox=\box66
+\c@lstnumber=\count348
+\lst@skipnumbers=\count349
+\lst@framebox=\box112
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
 (/usr/share/texlive/texmf-dist/tex/latex/ebproof/ebproof.sty
 Package: ebproof 2017/05/17 v2.0 EB's proof trees
-\l_ebproof_separation_dim=\dimen290
-\l_ebproof_rule_margin_dim=\dimen291
-\l_ebproof_rule_thickness_dim=\dimen292
-\l_ebproof_rule_separation_dim=\dimen293
-\l_ebproof_rule_dash_length_dim=\dimen294
-\l_ebproof_rule_dash_space_dim=\dimen295
-\l_ebproof_label_separation_dim=\dimen296
-\l_ebproof_label_axis_dim=\dimen297
-\l_ebproof_transit_dim=\dimen298
-\g_ebproof_level_int=\count340
-\g_ebproof_stack_box=\box67
-\l_ebproof_a_box=\box68
-\l_ebproof_b_box=\box69
-\l_ebproof_c_box=\box70
-\l_ebproof_d_box=\box71
+\l_ebproof_separation_dim=\dimen299
+\l_ebproof_rule_margin_dim=\dimen300
+\l_ebproof_rule_thickness_dim=\dimen301
+\l_ebproof_rule_separation_dim=\dimen302
+\l_ebproof_rule_dash_length_dim=\dimen303
+\l_ebproof_rule_dash_space_dim=\dimen304
+\l_ebproof_label_separation_dim=\dimen305
+\l_ebproof_label_axis_dim=\dimen306
+\l_ebproof_transit_dim=\dimen307
+\g_ebproof_level_int=\count350
+\g_ebproof_stack_box=\box113
+\l_ebproof_a_box=\box114
+\l_ebproof_b_box=\box115
+\l_ebproof_c_box=\box116
+\l_ebproof_d_box=\box117
 )
-\c@definition=\count341
-\c@lem=\count342
-\c@proof=\count343
-\c@thm=\count344
+\c@definition=\count351
+\c@lem=\count352
+\c@proof=\count353
+\c@thm=\count354
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1077,40 +1146,36 @@ LaTeX Warning: Label `fig:M1' multiply defined.
 
 LaTeX Warning: Label `fig:M2' multiply defined.
 
-) (./preliminaries.aux) (./previouswork.aux
+) (./preliminaries.aux
 
-LaTeX Warning: Label `fig:M1' multiply defined.
-
-
-LaTeX Warning: Label `fig:M2' multiply defined.
+LaTeX Warning: Label `fig:M5' multiply defined.
 
 
-LaTeX Warning: Label `fig:M3' multiply defined.
+LaTeX Warning: Label `fig:M5' multiply defined.
 
-) (./natproof.aux) (./grammar.aux) (./latex/hott.aux) (./horizon.aux) (./conclu
-sion.aux) (./code.aux))
+))
 \openout1 = `roadmap.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1146,8 +1211,8 @@ LaTeX Font Info:    ... okay on input line 120.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring OFF on input line 120.
+\AtBeginShipoutBox=\box118
+Package hyperref Info: Link coloring OFF on input line 134.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1155,11 +1220,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count345
+\c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 120.
-LaTeX Info: Redefining \pageref on input line 120.
-LaTeX Info: Redefining \nameref on input line 120.
+LaTeX Info: Redefining \ref on input line 134.
+LaTeX Info: Redefining \pageref on input line 134.
+LaTeX Info: Redefining \nameref on input line 134.
 (./roadmap.out) (./roadmap.out)
 \@outlinefile=\write5
 \openout5 = `roadmap.out'.
@@ -1204,16 +1269,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 120.
+(Font)              `operators' in the math version `normal' on input line 134.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 120.
+ line 134.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 120.
+(Font)              `operators' in the math version `bold' on input line 134.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 120.
+t line 134.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1284,15 +1349,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 120.
+(Font)              `symbols' in the math version `normal' on input line 134.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 120.
+t line 134.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 120.
+(Font)              `symbols' in the math version `bold' on input line 134.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 120.
+t line 134.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1346,16 +1411,16 @@ uage=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-20.
+34.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 120.
+t line 134.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 120
+(Font)              `largesymbols' in the math version `bold' on input line 134
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 120.
+t line 134.
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                `mathtools' package.
@@ -1374,39 +1439,39 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 (unicode-math)                colon-like commands, using them will lead to
 (unicode-math)                inconsistencies.
 
-\c@lstlisting=\count346
+\c@lstlisting=\count356
 File: logo/gu_logo_blue.pdf Graphic file (type pdf)
 <use logo/gu_logo_blue.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 133.
+(Font)              scaled to size 10.95116pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 133.
+(Font)              scaled to size 7.6658pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 133.
+(Font)              scaled to size 5.47559pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 133.
+(Font)              scaled to size 10.94882pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 133.
+(Font)              scaled to size 7.66417pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 133.
+(Font)              scaled to size 5.47441pt on input line 147.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-33.
+47.
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.475> not available
-(Font)              size <5> substituted on input line 133.
+(Font)              size <5> substituted on input line 147.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 133
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 133
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (40.82745pt too wide) in paragraph at lines 133--145
+Overfull \hbox (40.82745pt too wide) in paragraph at lines 147--159
 [][] 
  []
 
@@ -1415,14 +1480,19 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 ) [1
 
-] [1] [2] (./roadmap.toc [3])
+] [1] [2] (./roadmap.toc)
 \tf@toc=\write6
 \openout6 = `roadmap.toc'.
 
-[4] [1]
+[3] [1]
 \openout2 = `intro.aux'.
 
 (./intro.tex
+
+Package natbib Warning: Citation `harperTrinity' on page 2 undefined on input l
+ine 29.
+
+
 Overfull \hbox (3.81491pt too wide) in paragraph at lines 24--30
 []\TU/DejaVuSerif(0)/m/n/10.95 The doctrine of computational trinitarianism hol
 ds that computation man-
@@ -1436,10 +1506,36 @@ ds that computation man-
 [5]
 \openout4 = `roadmap.ptb'.
 
-) [6] [7]) [8]
+) [6]
+
+Package natbib Warning: Citation `theunivalentfoundationsprogram-homotopytypeth
+eory-2013' on page 7 undefined on input line 215.
+
+
+Package natbib Warning: Citation `halesCNL' on page 7 undefined on input line 2
+52.
+
+[7]) [8]
 \openout2 = `perspectives.aux'.
 
-(./perspectives.tex [9
+(./perspectives.tex
+
+Package natbib Warning: Citation `avigad2015mathematics' on page 9 undefined on
+ input line 15.
+
+
+Package natbib Warning: Citation `ranta1994type' on page 9 undefined on input l
+ine 26.
+
+
+Package natbib Warning: Citation `Chomsky57' on page 9 undefined on input line 
+29.
+
+
+Package natbib Warning: Citation `frege79' on page 9 undefined on input line 30
+.
+
+[9
 
 
 ]
@@ -1566,22 +1662,88 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no p in font nullfont!
-[10] [11] [12] [13] [14] [15] [16] [17]
-Overfull \hbox (2.15211pt too wide) in paragraph at lines 539--548
-[]\TU/DejaVuSerif(0)/m/n/10.95 Graphical Programming languages facilitating dia
-grammatic programming are one
+
+Package natbib Warning: Citation `andreasEmail' on page 10 undefined on input l
+ine 107.
+
+[10]
+
+Package natbib Warning: Citation `Chomsky1995' on page 11 undefined on input li
+ne 150.
+
+[11]
+
+! LaTeX Error: Environment itemize[noitemsep]  undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 \item i
+             t may be formalized differently by two different people in many...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 222
+[][]
  []
 
-[18]) [19]
-\openout2 = `preliminaries.aux'.
 
-(./preliminaries.tex (./mltt.tex [20
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.223 \item i
+             t may have to be modified, to include hidden lemmas, to correct...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-]
+Underfull \hbox (badness 10000) detected at line 223
+[][]
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 \item i
+             t may not type check, and only be presumed hypothetically to be 'a
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 225
+[][]
+ []
+
 ! Undefined control sequence.
-l.87 $\vdash \lambda x. \sin x : \R
-                                    \rightarrow \R$
+\enit@enditemize ->\enit@after 
+                               \endlist \ifx \enit@series \relax \else \ifnu...
+l.228 \end{itemize}
+                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1589,7 +1751,261 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.87 $\vdash \lambda x. \sin x : \R \rightarrow \R
+\enit@enditemize ...x \else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.228 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.228 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.228 \end{itemize}
+                   
+I'm forgetting what you said and using zero instead.
+
+! Undefined control sequence.
+\enit@enditemize ...ist \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.228 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.228 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.228 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.228 \end{itemize}
+                   
+I'm forgetting what you said and using zero instead.
+
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.228 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[12] [13] [14]
+
+Package natbib Warning: Citation `mtac2' on page 15 undefined on input line 367
+.
+
+
+Package natbib Warning: Citation `ltac2' on page 15 undefined on input line 368
+.
+
+
+Package natbib Warning: Citation `coqAlec' on page 15 undefined on input line 3
+73.
+
+
+Package natbib Warning: Citation `mlMeanings' on page 15 undefined on input lin
+e 396.
+
+[15] [16] [17]
+
+Package natbib Warning: Citation `sep-epistemology-visual-thinking' on page 18 
+undefined on input line 529.
+
+
+Package natbib Warning: Citation `proofWW' on page 18 undefined on input line 5
+35.
+
+
+Package natbib Warning: Citation `Bar2016GlobularAO' on page 18 undefined on in
+put line 553.
+
+
+Package natbib Warning: Citation `coqAlec' on page 18 undefined on input line 5
+56.
+
+
+Overfull \hbox (2.15211pt too wide) in paragraph at lines 548--557
+[]\TU/DejaVuSerif(0)/m/n/10.95 Graphical Programming languages facilitating dia
+grammatic programming are one
+ []
+
+[18]
+
+Package natbib Warning: Citation `fong2016algebra' on page 19 undefined on inpu
+t line 565.
+
+
+Package natbib Warning: Citation `2002TheWO' on page 19 undefined on input line
+ 573.
+
+) [19]
+\openout2 = `preliminaries.aux'.
+
+(./preliminaries.tex (./mltt.tex
+
+Package natbib Warning: Citation `mlMeanings' on page 20 undefined on input lin
+e 8.
+
+[20
+
+
+]
+! Undefined control sequence.
+l.108 $\vdash \lambda x. \sin x : \R
+                                     \rightarrow \R$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.108 ...ash \lambda x. \sin x : \R \rightarrow \R
                                                   $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1597,1384 +2013,976 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) (./gfintro.tex [21]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.65 ... now given a single linear presentation C^
-                                                  L_0, where
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[21]
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.68 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Package natbib Warning: Citation `rantaLog' on page 22 undefined on input line 
+120.
 
 
-Overfull \hbox (647.51743pt too wide) in paragraph at lines 65--68
-[]\TU/DejaVuSerif(0)/m/n/10.95 Consider a language L, for now given a single li
-near presentation C$[][] [][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
+Overfull \hbox (5.64789pt too wide) in paragraph at lines 144--156
+ [][] 
+ []
+
+
+Overfull \hbox (5.64789pt too wide) in paragraph at lines 204--216
+ [][] 
+ []
+
+! Undefined control sequence.
+l.228 ...o T$              & $the\ function\ \from
+                                                  \ S\ to\ T$  & $p\  to\  q...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (13.96936pt too wide) in paragraph at lines 223--236
+ [][] 
  []
 
 [22]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.95 syntax. So we could denote these L^
-                                        English, L^Bantu, L^Swedish for
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.100 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (1120.25572pt too wide) in paragraph at lines 93--100
-\TU/DejaVuSerif(0)/m/n/10.95 tax. So we could denote these L$[][][][][][][][] [
-][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][
-][] [][][][][][][]$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.101   One could also further elaborate these L^
-                                                 English_0 L^English_1 to va...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.106 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (1292.20442pt too wide) in paragraph at lines 101--106
-[]\TU/DejaVuSerif(0)/m/n/10.95 One could also further elaborate these L$[][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][]$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.107   L_
-          0 < L_1 -> L_English_0 < L_English_1
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.108 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.110 programming languages, like Logic^
-                                        English, Logic^Latex, Logic^Agda, Lo...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.112 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.115 Logic_
-            Core^English Logic_Extended^English
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.116 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.119 Logic_
-            Core^Agda Logic_Extended^Agda may collapse at certain points, bu...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.122 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (445.6949pt too wide) in paragraph at lines 119--122
-[]\TU/DejaVuSerif(0)/m/n/10.95 Logic$[][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][] [][][][][][]$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.123 ...cs = Logic + domain specific Mathematics^
-                                                  English Mathematics^Agda
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.124 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.128 Mathematics^
-                  English iI -- Something about
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.129 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[23]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.142   One could also further elaborate these L^
-                                                 English_0 L^English_1 to va...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.144 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (201.46841pt too wide) in paragraph at lines 142--144
-[]\TU/DejaVuSerif(0)/m/n/10.95 One could also further elaborate these L$[][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
-
-Missing character: There is no 𝜙 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.150 ...ories, we define the functions \phi : (c_
-                                                  1, ..., c_n) -> c_t
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.153 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (576.66191pt too wide) in paragraph at lines 150--153
-[]\TU/DejaVuSerif(0)/m/n/10.95 Given a set of categories, we define the functio
-ns 𝜙: (c$[][] [][][][] [][][][] [] [][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.189 denoted mathematically above as _
-                                       , and in GF as `Arith.gf` is given by :
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.190 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[24] [25]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.267 Then one can form a tree `DetCN The_
-                                          Det Car_CN` which should linearize...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.271 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (702.87512pt too wide) in paragraph at lines 267--271
-[]\TU/DejaVuSerif(0)/m/n/10.95 Then one can form a tree ‘DetCN The$[][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][
-][][][][][][][][][][][][][][][]$ 
- []
-
-[26] [27]
-Overfull \hbox (28.28131pt too wide) in paragraph at lines 351--351
-[]\TU/DejaVuSansMono(0)/m/n/10.95 lin Add e1 e2 = "the sum of" ++ e1 ++ "and" +
-+ e2 ; Mul e1 e2 = "the product of"[] 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.384 `lincat` of $C_i$ , e.g. if `lincat C_
-                                            i = T ;` then `c_i : T`.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.385 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[28]
-Overfull \hbox (37.07129pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 product of" ++ linearize (Add (EInt 3) (EInt 
-4)) ++ "and" ++ linearize (EInt 5)[] 
- []
-
-
-Overfull \hbox (28.28134pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 ->* "the product of" ++ ("the sum of" ++ (EIn
-t 3) ++ (EInt 4)) ++ "and" ++ ({ s[] 
- []
-
-
-Overfull \hbox (19.49138pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 = "5"} . s) ->* "the product of" ++ ("the sum
- of" ++ ({ s = "3"} . s) ++ ({ s =[] 
- []
-
-
-Overfull \hbox (34.87378pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 "4"} . s)) ++ "and" ++ "5" ->* "the product o
-f" ++ ("the sum of" ++ "3" ++ "and"[] 
- []
-
-
-Overfull \hbox (34.87378pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 ++ "4") ++ "and" ++ "5" ->* "the product of" 
-++ ("the sum of" ++ "3" ++ "and" ++[] 
- []
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.410 [previous section](#
-                          #some-preliminary-observations-and-considerations).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.410 [previous section](##
-                           some-preliminary-observations-and-considerations).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-Overfull \hbox (47.04161pt too wide) in paragraph at lines 422--427
-[]\TU/DejaVuSerif(0)/m/n/10.95 Once GF is [installed](https://www.grammaticalfr
-amework.org/download/index-3.10.html),
- []
-
-
-Overfull \hbox (62.68181pt too wide) in paragraph at lines 431--437
-\TU/DejaVuSerif(0)/m/n/10.95 [official shell reference](https://www.grammatical
-framework.org/doc/gf-shell-reference.html)
- []
-
-
-Overfull \hbox (50.1332pt too wide) in paragraph at lines 431--437
-\TU/DejaVuSerif(0)/m/n/10.95 and Inari Listenmaa’s post on [tips and gotchas](h
-ttps://inariksit.github.io/gf/2018/08/28/gf-
- []
-
-
-Overfull \hbox (34.87378pt too wide) in paragraph at lines 446--446
-[]\TU/DejaVuSansMono(0)/m/n/10.95 0 msec Arith> help gr gr, generate_random gen
-erate random trees in the current[] 
- []
-
-[29]
-Overfull \hbox (32.67633pt too wide) in paragraph at lines 466--466
-[]\TU/DejaVuSansMono(0)/m/n/10.95 (EInt 999) (EInt 999))) (Add (Add (EInt 999) 
-(EInt 999)) (Add (EInt 999) (EInt[] 
- []
-
-
-Overfull \hbox (28.2813pt too wide) in paragraph at lines 466--466
-[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of the product of the product of 999 
-and 999 and the sum of 999 and 999[] 
- []
-
-
-Overfull \hbox (26.0838pt too wide) in paragraph at lines 487--487
-[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of 999 and the product of the sum of 
-999 and 999 and the sum of 999 and[] 
- []
-
-
-Overfull \hbox (19.49141pt too wide) in paragraph at lines 487--487
-[]\TU/DejaVuSansMono(0)/m/n/10.95 Add (EInt 999) (Mul (Add (EInt 999) (EInt 999
-)) (Add (EInt 999) (EInt 999)))[] 
- []
-
-
-Overfull \hbox (26.0838pt too wide) in paragraph at lines 487--487
-[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of 999 and the product of the sum of 
-999 and 999 and the sum of 999 and[] 
- []
-
-[30]
-Overfull \hbox (0.82831pt too wide) in paragraph at lines 507--509
-[]\TU/DejaVuSerif(0)/m/n/10.95 **Exercise 2 :** Write concrete syntax in your f
-avorite language, ‘ArithFaveLang.gf‘
- []
-
-! You can't use `macro parameter character #' in vertical mode.
-l.520 #
-       ## Solutions
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in vertical mode.
-l.520 ##
-        # Solutions
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in vertical mode.
-l.520 ###
-          Solutions
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-[31]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.562 ...r](https://en.wikipedia.org/wiki/Catalan_
-                                                  number) of
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.564 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-) (./intro-agda.tex [32] (./latex/ex.tex
-
-! LaTeX Error: Environment prooftree--  undefined.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24   \begin{prooftree-- }
+l.305   \begin
+              {itemize}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Improper \prevdepth.
+\mult@@cols ...ace \multicolsep \ifdim \prevdepth 
+                                                  = -\@m \p@ \else \@tempcnt...
+l.305   \begin
+              {itemize}
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Improper \prevdepth.
+<recently read> \prevdepth 
                            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+l.305   \begin
+              {itemize}
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
 
-! Undefined control sequence.
-l.25     \infer
-               1[]{ \vdash 픹 : {\rm type}}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+! Arithmetic overflow.
+<recently read> \@tempcntb 
+                           
+l.305   \begin
+              {itemize}
+I can't carry out that multiplication or division,
+since the result is out of range.
+
+! Improper \prevdepth.
+<recently read> \prevdepth 
+                           
+l.305   \begin
+              {itemize}
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
 
 
-! LaTeX Error: \begin{equation*} on input line 23 ended by \end{prooftree}.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26   \end{prooftree}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+l.307   \end{itemize}
+                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
+! Arithmetic overflow.
+<recently read> \baselineskip 
+                              
+l.308 \end{multicols}
+                     
+I can't carry out that multiplication or division,
+since the result is out of range.
 
-! Package ebproof Error: Missing premiss in a proof tree.
-
-See the ebproof package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33     \infer1[]{ \Gamma \vdash true : 픹  }
-                                             
+! Multicol Error.
+\page@sofar ... \else \errmessage {Multicol Error}
+                                                  \fi \nointerlineskip \setb...
+l.308 \end{multicols}
+                     
 (That was another \errmessage.)
 
-
-! Package ebproof Error: Missing premiss in a proof tree.
-
-See the ebproof package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37     \infer1[]{ \Gamma \vdash false : 픹  }
-                                              
-(That was another \errmessage.)
-
-\openout4 = `roadmap.ptb'.
+! You can't use `\prevdepth' in restricted horizontal mode.
+\nointerlineskip ->\prevdepth 
+                              -\@m \p@ 
+l.308 \end{multicols}
+                     
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.76 ...e placement of the arguement. We see the _
-                                                  ∨_
+l.308 \end{multicols}
+                     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Double subscript.
-l.76 ...placement of the arguement. We see the _∨_
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
+! Missing number, treated as zero.
+<to be read again> 
+                   \setbox 
+l.308 \end{multicols}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \setbox 
+l.308 \end{multicols}
+                     
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! You can't use `\moveright' in math mode.
+\page@sofar ...bal \dimen \tw@ \dp \z@ \moveright 
+                                                  \multicol@leftmargin \hbox...
+l.308 \end{multicols}
+                     
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hbox 
+l.308 \end{multicols}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \hbox 
+l.308 \end{multicols}
+                     
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! You can't use `\prevdepth' in math mode.
+\page@sofar ...umns \rlap {\phantom p}}\prevdepth 
+                                                  \z@ \kern -\dimen \tw@ \if...
+l.308 \end{multicols}
+                     
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.308 \end{multicols}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.308 \end{multicols}
+                     
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.82 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (1586.20804pt too wide) in paragraph at lines 76--82
-[]\TU/DejaVuSerif(0)/m/n/10.95 The underscore denotes the placement of the argu
-ement. We see the $[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
-
-\openout4 = `roadmap.ptb'.
-
-[33]
-Missing character: There is no ̌ in font cmmi10!
-\openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
-[34]))) [35]
-\openout2 = `previouswork.aux'.
-
-(./previouswork.tex [36
-
-
-]
-Overfull \hbox (7.00284pt too wide) in paragraph at lines 76--90
-[]\TU/DejaVuSerif(0)/m/n/10.95 Interestingly, the functions that were called $[
-][][][][][][][][][][] [] [][][][] [] [][][][][][][] [][][][][][][][][][]$
- []
-
-[37] [38] (./latex/ContrClean.tex
-\openout4 = `roadmap.ptb'.
-
-) [39]
-
-Package natbib Warning: Citation `ganesalingam2013language' on page 40 undefine
-d on input line 231.
-
-[40] [41]
-Overfull \hbox (4.69714pt too wide) in paragraph at lines 366--368
-[]\TU/DejaVuSerif(0)/m/n/10.95 mal proofs are provided; and the cycle repeats. 
-Thus informal mathematics changes
- []
-
-[42]) [43]
-\openout2 = `natproof.aux'.
-
-(./natproof.tex) [44
-
-
-]
-\openout2 = `grammar.aux'.
-
-(./grammar.tex) [45
-
-
-]
-\openout2 = `latex/hott.aux'.
-
-(./latex/hott.tex [46
-
-
-]
-\openout4 = `roadmap.ptb'.
-
-[47]
-\openout4 = `roadmap.ptb'.
-
-[48] [49]
-\openout4 = `roadmap.ptb'.
-
-[50]
-Overfull \hbox (7.21178pt too wide) in paragraph at lines 414--424
-\TU/DejaVuSerif(0)/m/it/10.95 Thus, the induction principle for identity types 
-gives us an element $[][][][][] [][] [][] [][] [][] []
- []
-
-\openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
-[51]
-\openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-
-Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
- [][][][] 
- []
-
-[52]
-Overfull \hbox (3.00977pt too wide) in paragraph at lines 1415--1417
-\TU/DejaVuSerif(0)/m/n/10.95 tween paths between paths level, some interesting 
-and nonintuitive results emerge.
- []
-
-[53]
-\openout4 = `roadmap.ptb'.
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][][][][][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][] 
- []
-
-
-Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
- [][][][] 
- []
-
-[54] [55]) [56]
-\openout2 = `horizon.aux'.
-
-No file horizon.tex.
-\openout2 = `conclusion.aux'.
-
-(./conclusion.tex
-! Misplaced alignment tab character &.
-l.52 * Latex &
-               Unicode support  -
+l.308 \end{multicols}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.308 \end{multicols}
+                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! You can't use `\prevdepth' in restricted horizontal mode.
+\endmulticols ...ddvspace \multicolsep \prevdepth 
+                                                  \z@ \mult@info \z@ {Ending...
+l.308 \end{multicols}
+                     
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \def 
+l.308 \end{multicols}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \def 
+l.308 \end{multicols}
+                     
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+) (./gfintro.tex
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \subsection
+               {Grammatical Framework}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \subsection
+               {Grammatical Framework}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.1 \subsection{Grammatical Framework}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1 \subsection{Grammatical Framework}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1 \subsection{Grammatical Framework}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
 I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
+or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[57
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
 
-
-
-
-]
-! Undefined control sequence.
-l.69 ...rete syntax -Harper psychology {\intersect
-                                                  } programming
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-) [58]
-\openout2 = `code.aux'.
-
-(./code.tex) [59
-
-
-] (./roadmap.bbl [60
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 178--182
-[]\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  \TU/DejaVuSerif(0)/m/it/10.95
- gf-contrib/typetheory\TU/DejaVuSerif(0)/m/n/10.95 .  []$[][][][][] [] [] [] []
-[][][][][] [] [][][] []
- []
-
-! Misplaced alignment tab character &.
-l.195 ...tion for Computing Machinery and Morgan &
-                                                   Claypool.
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
 I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
+or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[61]) [62]
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
 
-Package natbib Warning: There were undefined citations.
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-[63]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
-(./roadmap.aux (./intro.aux) (./perspectives.aux) (./preliminaries.aux) (./prev
-iouswork.aux) (./natproof.aux) (./grammar.aux) (./latex/hott.aux) (./horizon.au
-x) (./conclusion.aux) (./code.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 239.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 239.
-Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: 248D23CB6DF941FED89C6136E2FE3AF0;2790.
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.475pt have occurred.
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
 
-LaTeX Warning: There were multiply-defined labels.
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
- ) 
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.1 \subsection{Grammatical Framework}
+                                      
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1 \subsection{Grammatical Framework}
+                                      
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 33356 strings out of 479819
- 638880 string characters out of 5895846
- 1187805 words of memory out of 5000000
- 49717 multiletter control sequences out of 15000+600000
- 538249 words of font info for 151 fonts, out of 8000000 for 9000
+ 33105 strings out of 479819
+ 634446 string characters out of 5895846
+ 1173805 words of memory out of 5000000
+ 49536 multiletter control sequences out of 15000+600000
+ 537892 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,814b,1042s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (68 pages, 1594044 bytes).
+Output written on roadmap.xdv (26 pages, 605392 bytes).
