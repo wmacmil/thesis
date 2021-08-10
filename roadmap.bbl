@@ -12,6 +12,19 @@ Avigad, J. (2015).
 Bar, K., Kissinger, A., \& Vicary, J. (2016).
 \newblock Globular: an online proof assistant for higher-dimensional rewriting.
 
+\bibitem[Bove \& Dybjer, 2009]{Bove2009}
+Bove, A. \& Dybjer, P. (2009).
+\newblock {\em Dependent Types at Work}, (pp.\ 57--99).
+\newblock Springer Berlin Heidelberg: Berlin, Heidelberg.
+
+\bibitem[Bove et~al., 2009]{ulf}
+Bove, A., Dybjer, P., \& Norell, U. (2009).
+\newblock A brief overview of agda -- a functional language with dependent
+  types.
+\newblock In S. Berghofer, T. Nipkow, C. Urban, \& M. Wenzel (Eds.), {\em
+  Theorem Proving in Higher Order Logics}  (pp.\ 73--78).  Berlin, Heidelberg:
+  Springer Berlin Heidelberg.
+
 \bibitem[Chomsky, 1995]{Chomsky1995}
 Chomsky, N. (1995).
 \newblock {\em The Minimalist Program}.
@@ -22,9 +35,18 @@ Chomsky, N. (2009).
 \newblock {\em Syntactic Structures}.
 \newblock De Gruyter Mouton.
 
+\bibitem[Coquand, 1992]{coqPat}
+Coquand, T. (1992).
+\newblock Pattern matching with dependent types.
+
 \bibitem[Fong, 2016]{fong2016algebra}
 Fong, B. (2016).
 \newblock The algebra of open and interconnected systems.
+
+\bibitem[Forsberg \& Ranta, 2004]{rantaForsberg}
+Forsberg, M. \& Ranta, A. (2004).
+\newblock Functional morphology.
+\newblock {\em SIGPLAN Not.}, 39(9), 213–223.
 
 \bibitem[Frege, 1879]{frege79}
 Frege, G. (1879).
@@ -42,9 +64,23 @@ Giaquinto, M. (2020).
 Hales, T. (2019).
 \newblock An argument for controlled natural languages in mathematics.
 
+\bibitem[Hallgren \& Ranta, 2000]{alfaGF}
+Hallgren, T. \& Ranta, A. (2000).
+\newblock An extensible proof text editor.
+\newblock In {\em Proceedings of the 7th International Conference on Logic for
+  Programming and Automated Reasoning}, LPAR'00  (pp.\ 70–84).  Berlin,
+  Heidelberg: Springer-Verlag.
+
 \bibitem[Harper, 2011]{harperTrinity}
 Harper, R. (2011).
 \newblock The holy trinity.
+
+\bibitem[Howard, 1986]{ml1984}
+Howard, W.~A. (1986).
+\newblock Per martin-löf. intuitionistic type theory. (notes by giovanni
+  sambin of a series of lectures given in padua, june 1980.) studies in proof
+  theory. bibliopolis, naples1984, ix 91 pp.
+\newblock {\em Journal of Symbolic Logic}, 51(4), 1075–1076.
 
 \bibitem[Jackson, 2002]{2002TheWO}
 Jackson, A. (2002).
@@ -56,15 +92,52 @@ Kaiser, J.-O., Ziliani, B., Krebbers, R., R\'{e}gis-Gianas, Y., \& Dreyer, D.
 \newblock Mtac2: Typed tactics for backward reasoning in coq.
 \newblock {\em Proc. ACM Program. Lang.}, 2(ICFP).
 
+\bibitem[Kaliszyk \& Rabe, 2020]{surveyLang}
+Kaliszyk, C. \& Rabe, F. (2020).
+\newblock A survey of languages for formalizing mathematics.
+\newblock In C. Benzm{\"u}ller \& B. Miller (Eds.), {\em Intelligent Computer
+  Mathematics}  (pp.\ 138--156).  Cham: Springer International Publishing.
+
+\bibitem[Kamp et~al., 2011]{kamp2011discourse}
+Kamp, H., Van~Genabith, J., \& Reyle, U. (2011).
+\newblock Discourse representation theory.
+\newblock In {\em Handbook of philosophical logic}  (pp.\ 125--394). Springer.
+
+\bibitem[Ljungl{\"o}f, 2004]{ljunglof2004expressivity}
+Ljungl{\"o}f, P. (2004).
+\newblock Expressivity and complexity of the grammatical framework.
+
+\bibitem[Luo, 2012]{luoCNs}
+Luo, Z. (2012).
+\newblock Common nouns as types.
+\newblock In D. B{\'e}chet \& A. Dikovsky (Eds.), {\em Logical Aspects of
+  Computational Linguistics}  (pp.\ 173--185).  Berlin, Heidelberg: Springer
+  Berlin Heidelberg.
+
+\bibitem[Macmillan, 2020]{warrickHarper}
+Macmillan, W. (2020).
+\newblock {\em {GF-Typechecker}}.
+\newblock \url{https://github.com/wmacmil/GF_Typechecker}.
+
 \bibitem[Martin{-}L\"of, 1996]{mlMeanings}
 Martin{-}L\"of, P. (1996).
 \newblock On the meanings of the logical constants and the justifications of
   the logical laws.
 \newblock {\em Nordic Journal of Philosophical Logic}, 1(1), 11--60.
 
+\bibitem[Montague, 1973]{Montague1973}
+Montague, R. (1973).
+\newblock {\em The Proper Treatment of Quantification in Ordinary English},
+  (pp.\ 221--242).
+\newblock Springer Netherlands: Dordrecht.
+
 \bibitem[Nelsen, 1993]{proofWW}
 Nelsen, R. (1993).
 \newblock {\em Proofs Without Words}.
+
+\bibitem[Pfenning, 2009]{pfenningHar}
+Pfenning, F. (2009).
+\newblock Lecture notes on harmony.
 
 \bibitem[Pit-Claudel, 2020]{coqAlec}
 Pit-Claudel, C. (2020).
@@ -73,19 +146,62 @@ Pit-Claudel, C. (2020).
   on Software Language Engineering}, SLE 2020  (pp.\ 155–174).  New York, NY,
   USA: Association for Computing Machinery.
 
+\bibitem[Prat et~al., 2020]{prat2020relating}
+Prat, C.~S., Madhyastha, T.~M., Mottarella, M.~J., \& Kuo, C.-H. (2020).
+\newblock Relating natural language aptitude to individual differences in
+  learning programming languages.
+\newblock {\em Scientific reports}, 10(1), 1--10.
+
 \bibitem[Pédrot, 2021]{ltac2}
 Pédrot, P.-M. (2021).
 \newblock Ltac2 : Tactical warfare.
+
+\bibitem[Ranta, 1994]{ranta93}
+Ranta, A. (1994).
+\newblock Type theory and the informal language of mathematics.
+\newblock In H. Barendregt \& T. Nipkow (Eds.), {\em Types for Proofs and
+  Programs}  (pp.\ 352--365).  Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+\bibitem[RANTA, 2004]{ranta_2004}
+RANTA, A. (2004).
+\newblock Grammatical framework.
+\newblock {\em Journal of Functional Programming}, 14(2), 145–189.
+
+\bibitem[Ranta, 2011]{rantaLog}
+Ranta, A. (2011).
+\newblock Translating between language and logic: what is easy and what is
+  difficult.
+\newblock In {\em International Conference on Automated Deduction}  (pp.\
+  5--25).: Springer.
+
+\bibitem[Ranta, 2013]{rantaTT}
+Ranta, A. (2013).
+\newblock {\em {gf-contrib/typetheory}}.
+\newblock
+  \url{https://github.com/GrammaticalFramework/gf-contrib/tree/master/typetheory}.
+
+\bibitem[Ranta, 2014]{aarneHott}
+Ranta, A. (2014).
+\newblock Translating homotopy type theory in grammatical framework.
 
 \bibitem[Ranta \& Ranta, 1994]{ranta1994type}
 Ranta, A. \& Ranta, D. (1994).
 \newblock {\em Type-theoretical Grammar}.
 \newblock Indices (Claredon). Clarendon Press.
 
+\bibitem[Stump, 2016]{stump}
+Stump, A. (2016).
+\newblock {\em Verified Functional Programming in Agda}.
+\newblock Association for Computing Machinery and Morgan & Claypool.
+
 \bibitem[{The Univalent foundations program} \& {Institute for advanced study
   (Princeton}, 2013]{theunivalentfoundationsprogram-homotopytypetheory-2013}
 {The Univalent foundations program} \& {Institute for advanced study
   (Princeton}, N. (2013).
 \newblock {\em Homotopy Type Theory: Univalent Foundations of Mathematics}.
+
+\bibitem[Wadler et~al., 2020]{wadler}
+Wadler, P., Kokke, W., \& Siek, J.~G. (2020).
+\newblock {\em Programming Language Foundations in {A}gda}.
 
 \end{thebibliography}
