@@ -5,6 +5,76 @@
 
 module ex where
 
+data aℕ : Set where
+  zero' : aℕ
+
+variable
+  A : Set
+  D : Set
+  stuff : Set
+
+definition-body = aℕ
+
+T = aℕ → aℕ
+L = aℕ
+E = aℕ
+C = aℕ
+
+proof : L
+proof = zero'
+
+corollaryStuff = aℕ
+
+proofNeedingLemma : aℕ → aℕ → aℕ
+proofNeedingLemma x = λ x₁ → zero'
+
+\end{code}
+
+To give a brief overview of the syntax Agda uses for judgements, namely $T :
+Set$ means $T$ is a Type, $t : T$ means a term $t$ has type $T$, and $t = t'$
+means $t$ is defined to be equal to $t'$. Let's compare it to those keywords
+ubiquitous in mathematics \autoref{fig:M1}, and show how those are represented in Agda directly below. Warrick
+
+\begin{figure}[H]
+\centering
+
+\begin{itemize}
+\item Axiom
+\item Definition
+\item Lemma
+\item Theorem
+\item Proof
+\item Corollary
+\item Example
+\end{itemize}
+
+\caption{FOL vs MLTT} \label{fig:M1}
+\end{figure}
+
+\begin{code}
+
+data inductiveType : Set where --Formation Rule
+  constructr  : inductiveType --Introduction Rules
+  constructr' : inductiveType
+
+postulate   -- Axiom
+  axiom : A
+
+definition : stuff → Set --Definition
+definition s = definition-body
+
+theorem : T     -- Theorem Statement
+theorem = proofNeedingLemma lemma -- Proof
+  where
+    lemma : L     -- Lemma Statement
+    lemma = proof
+
+corollary : corollaryStuff → C
+corollary coro-term = theorem coro-term
+
+example : E     -- Example Statement
+example = proof
+
 \end{code}
 
 
@@ -46,7 +116,7 @@ Now we can define our first type, term judgement pair, and define, for instance,
 the Boolean or, ∨. We detail the definition which is just a result of the
 pattern match Agda performs when working interactively via holes in the emacs
 mode, and that once one plays around with it, one recognizes both the beauty and
-elegance in how Agda can help one facilitate building a program. The colon
+elegance in how Agda facilitates programming. The colon
 reresents the judgmenet that ∨ is a type, whereas the equality symbol denotes
 the fact that ∨ is computationally equal to the subsequent expression over the
 given inputs. Once one has made this equality judgement, agda can normalize the

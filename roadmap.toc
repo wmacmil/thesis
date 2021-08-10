@@ -1,0 +1,21 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {}Preliminaries}{2}{section.1}%
+\contentsline {subsection}{\numberline {}Martin-Löf Type Theory}{2}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {}Judgments}{2}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {}Rules}{3}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {}Propositions, Sets, and Types}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {}Agda}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {}Grammatical Framework}{10}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {}Overview}{10}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {}Overview}{10}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {}Theoretical Overview}{11}{subsubsection.1.4.3}%
+\contentsline {paragraph}{ What is a GF grammar ? }{11}{section*.4}%
+\contentsline {subsubsection}{\numberline {}Some preliminary observations and considerations}{12}{subsubsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {}A grammar for basic arithmetic}{13}{subsubsection.1.4.5}%
+\contentsline {paragraph}{Abstract Judgments}{13}{section*.5}%
+\contentsline {paragraph}{Arith.gf}{14}{section*.6}%
+\contentsline {paragraph}{Concrete Judgments}{15}{section*.7}%
+\contentsline {subsubsection}{\numberline {}The GF shell}{17}{subsubsection.1.4.6}%
+\contentsline {subsection}{\numberline {}Natural Language and Mathematics}{20}{subsection.1.5}%
+\contentsline {section}{References}{21}{subsection.1.5}%
+\contentsline {section}{\numberline {}Appendices}{22}{section.2}%

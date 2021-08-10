@@ -121,83 +121,14 @@ natural language use \cite{rantaLog}, and MLTT. From this vantage, these look
 like simple symbolic manipulations, and in some sense, one doesn't need a the
 expressive power of system like GF to parse these to the same form.
 
-% \begin{figure}
-% \centering
-% \begin{tabular}{|c|c|c|c|} \hline
-%   FOL & MLTT & NL FOL & NL MLTT \\ \hline
-%   $\forall\ x\ P(x)$ & $\Pi x : \tau.\ P(x)$     & $for\ all\ x,\ p$  & $the product over x in\ p$ \\ hline
-%   $\exists\ x\ P(x)$ & $\Sigma x : \tau.\ P(x)$  & $there\ exists\ an\ x\ such\ that\ p$ & $there\ exists\ an\ x\ \in \tau \such \that p$ \\ hline 
-%   $p\ \supset\ q$    & $p\ \to\ q$               & $if\ p\ then\ q$   & $p to q$ \\ hline
-%   $p\ \wedge\ q$     & $p\ \times\ q$            & $p\ and\ q$        & $the product of p and q$ \\ hline
-%   $p\ \lor\ q$       & $p\ +\ q$                 & $p\ or\ q$         & $the coproduct of p and q$ \\ hline
-%   $\neg\ p$          & $\neg\ p$                 & $it\ is\ not\ the\ case\ that\ p$ \\ hline  
-%   $\top$             & $\top$                    & $true$             & $top$ \\ hline
-%   $\bot$             & $\bot$                    & $false$            & $bottom$ \\ hline
-%   $p\ =\ q$          & $p\ \equiv\ q$            & $p\ equals\ q$     & $definitionally equal$ \\ hline
-% \end{tabular}
-% \caption{FOL vs MLTT} \label{fig:M5}
-% \end{figure}
-
-
-% \begin{figure}
-% \centering
-% \begin{tabular}{|c|c|c|c|} \hline
-%   FOL & MLTT & NL FOL & NL MLTT \\ \hline
-%   $\forall\ x\ P(x)$ & $\Pi x : \tau.\ P(x)$     & $for\ all\ x,\ p$  & $the\  product\  over\  x\  in\ p$ \\ 
-%   $\exists\ x\ P(x)$ & $\Sigma x : \tau.\ P(x)$  & $there\ exists\ an\ x\ such\ that\ p$ & $there\ exists\ an\ x\ in\ \tau such\ that\ p$ \\ 
-%   $p\ \supset\ q$    & $p\ \to\ q$               & $if\ p\ then\ q$   & $p\  to\  q$ \\ 
-%   $p\ \wedge\ q$     & $p\ \times\ q$            & $p\ and\ q$        & $the\  product\  of\  p\  and\  q$ \\ 
-%   $p\ \lor\ q$       & $p\ +\ q$                 & $p\ or\ q$         & $the\  coproduct\  of\  p\  and\  q$ \\ 
-%   $\neg\ p$          & $\neg\ p$                 & $it\ is\ not\ the\ case\ that\ p$ & $not\ p$ \\ 
-%   $\top$             & $\top$                    & $true$             & $top$ \\ 
-%   $\bot$             & $\bot$                    & $false$            & $bottom$ \\ 
-%   $p\ =\ q$          & $p\ \equiv\ q$            & $p\ equals\ q$     & $definitionally\  equal$ \\ 
-% \end{tabular}
-% \caption{FOL vs MLTT} \label{fig:M5}
-% \end{figure}
-
-
-% \begin{multicols}{3}
-%   \begin{itemize}
-%     \item $\forall\ x\ P(x)$
-%     \item $\exists\ x\ P(x)$
-%     \item $p\ \supset\ q$
-%     \item $p\ \wedge\ q$
-%     \item $p\ \lor\ q$
-%     \item $\neg\ p$
-%     \item $\top$
-%     \item $\bot$
-%     \item $p\ =\ q$
-%     \item $\Pi x : \tau.\ P(x)$
-%     \item $\Sigma x : \tau.\ P(x)$
-%     \item $p\ \to\ q$
-%     \item $p\ \times\ q$
-%     \item $p\ +\ q$
-%     \item $\neg\ p$
-%     \item $\top$
-%     \item $\bot$
-%     \item $p\ \equiv\ q$
-%     \item $for\ all\ x,\ p$
-%     \item $there\ exists\ an\ x\ such\ that\ p$
-%     \item $if\ p\ then\ q$
-%     \item $p\ and\ q$
-%     \item $p\ or\ q$
-%     \item $it\ is\ not\ the\ case\ that\ p$
-%     \item $true$
-%     \item $false$
-%     \item $p\ equals\ q$
-%   \end{itemize}
-% \end{multicols}
-
-
-
 Additionally, it is worth comparing the type theoretic and natural language
-syntax with set theory. Now we bear witness to some deeper cracks than were
-visible above. We note that the type theoretic syntax is \emph{the same} in both
-tables, whereas the set theoretic and logical syntax shares no overlap. This is
-because set theory and first order logic are treated as distinct domains,
-whereas in vanilla MLTT, there is no distinguishing mathematical types from
-logical types - everything is a type.
+syntax with set theory, as is done in \autoref{fig:M5} and \autoref{fig:M6}. Now
+we bear witness to some deeper cracks than were visible above. We note that the
+type theoretic syntax is \emph{the same} in both tables, whereas the set
+theoretic and logical syntax shares no overlap. This is because set theory and
+first order logic are distinct domains classically, whereas in MLTT,
+there is no distinguishing mathematical types from logical types - everything is
+a type.
 
 \begin{figure}[H]
 \centering
@@ -216,6 +147,18 @@ logical types - everything is a type.
 \caption{FOL vs MLTT} \label{fig:M5}
 \end{figure}
 
+We show the Type and set comparisons in \autoref{fig:M6}. The basic types are
+sometimes simpler to work with because they are expressive enough to capture
+logical and set theoretic notions, but this also comes at a cost. The union of
+two sets simply gives a predicate over the members of the sets, whereas union
+and intersection types are often not considered ``core" to type theory, with
+multiple possible ways of interpreting how to treat this set-theoretic concept.
+The behavior of subtypes and subsets, while related in some ways, also
+represents a semantic departure from sets and types. For example, while there
+can be a greatest type in some sub-typing schema, there is no notion of a top
+set. This is why we use the type theoretic NL syntax when there are question
+marks in the set theory column.
+
 
 \begin{figure}[H]
 \centering
@@ -226,61 +169,15 @@ logical types - everything is a type.
  $S \times T$ & $S \times T$           & $the\ product\ of\ S\ and\ T$     & $the\  product\  of\  S\  and\  T$ \\
  $S \to T$    & $S \to T$              & $the\ function\ \from\ S\ to\ T$  & $p\  to\  q$ \\
  $\{x|P(x)\}$ & $\Sigma x : \tau.\ P(x)$ & $the\ set\ of\ x\ such\ that\ P$  & $there\ exists\ an\ x\ in\ \tau such\ that\ p$ \\
- $\emptyset$  & $\bot$                 & $the\ empty\ set$                 & $bottom$ \\
+  $\emptyset$  & $\bot$                 & $the\ empty\ set$                 & $bottom$ \\
  $?$          & $\top$                 & $?$                             & $top$ \\
  $S \cup T$   & $?$                    & $the\ union\ of\ S\ and\ T$       & $?$ \\
- $S \subset T$ & $S <: T$              & $the\ subset\ S\ of\ T$          & $S\ is\ a\ subtype\ of\ T$ \\
+ $S \subset T$ & $S <: T$              & $S\ is\ a\ subset\ of\ T$          & $S\ is\ a\ subtype\ of\ T$ \\
  $?$          & $U_1$                  & $?$ & $the\ second\ Universe$        \\ \hline 
 \end{tabular}
 \caption{Sets vs MLTT} \label{fig:M6}
 \end{figure}
 
-
-
-% \begin{multicols}{3}
-%   \begin{itemize}
-%     \item $S$
-%     \item $\mathbb{N}$
-%     \item $S \times T$
-%     \item $S \to T$
-%     \item $\{x|P(x)\}$
-%     \item $\emptyset$
-%     \item $?$
-%     \item $S \cup T$
-%     \item $S \subset T$
-%     \item $?$
-%     \item $\tau$
-%     \item $Nat$
-%     \item $S \times T$
-%     \item $S \to T$
-%     \item $\Sigma x : \_ . P(x)$
-%     \item $\bot$
-%     \item $\top$
-%     \item $?$
-%     \item $S <: T$
-%     \item $U_1$
-%     \item $the\ set\ S$
-%     \item $the\ set\ of\ natural\ numbers$
-%     \item $the\ product\ of\ N\ and\ N$
-%     \item $the\ function\ \from\ S\ to\ T$
-%     \item $the\ set\ of\ x\ such\ that\ P$
-%     \item $the\ empty\ set$
-%     \item $top$
-%     \item $the\ union\ of\ S\ and\ T$
-%     \item $the\ subset\ S\ of\ T$
-%     \item $the\ second\ Universe$
-%   \end{itemize}
-% \end{multicols}
-
-The basic types are sometimes simpler to work with, because they are incredibly
-expressive, but it also comes at a cost. The union of two sets simply gives a
-predicate over the members of the sets, whereas union and intersection types are
-often not considered ``core" to type theory, with multiple possible ways of
-interpreting how to treat this set-theoretic concept. The behavior of subtypes
-and subsets, while related in some ways, also represents a semantic departure
-from sets and types. For example, while there can be a greatest type in some
-sub-typing schema, there is no notion of a top set. This is why we use the type
-theoretic NL syntax when there are question marks in the set theory column.
 
 We also note that pragmatically, type theorists often interchange the logical,
 set theoretic, and type theoretic lexicons when describing types. Because the
@@ -289,47 +186,84 @@ the lexicons of all three ended up being blended, and in some sense, the type
 theorist can substitute certain words that a classical mathematician
 wouldn't.  Whereas $p\ implies\ q$ and $function\ from\ X\ to\ Y$ are not to
 be mixed, the type theorist may in some sense default to either.
-Nontheless, pragmatically speaking, one would never catch a type theorist
+Nonetheless, pragmatically speaking, one would never catch a type theorist
 saying $Nat implies Nat$ when expressing $Nat\ \to\ Nat$.
 
 
-Continuing with sets, we compare elements with terms, this time, via examples.
+Terms become even messier, and this can be seen in just a small sample shown in
+\autoref{fig:M2}. In simple type theory, one distinguishes between types and
+terms at the syntactic level - this disappears in DTT. As will be seen later,
+the mixing of terms and types gives MLTT an incredible expressive power, but
+undoubtedly makes certain things very difficult as well. In set theory,
+everything is a set, so there is no distinguishing between elements of sets and
+sets even though practically they function very differently. Mathematicians only
+use sets because of their flexibility in so many ways, not because the axioms of
+set theory make a compelling case for sets being this kind of atomic form that
+makes up the mathematical universe. Category theorists have discovered vast
+generalizations of sets (where elements are arrows) which allow one to have the
+flexibility in a more structured and nuanced way, and the comparison with
+categories and types is much tighter than with sets. Regardless, mathematicians
+day to day work may not need all this general infrastructure.
 
+In FOL, terms don't exist at all, and the proof rules themselves contain the
+necessary information to encode the proofs or constructions. The type theoretic
+terms somehow compress and encode the proof trees, of which, and in the case of
+ITPs nodes are displayed during the interactive type-checking phase.
 
+\begin{figure}[H]
 \centering
-\begin{tabular}{|c|c|c|c|} \hline
-  Set Theory & MLTT & NL Set Theory & NL MLTT \\ \hline
+\begin{tabular}{|c|c|c|c|c|} \hline
+ Set Theory & MLTT & NL Set Theory & NL MLTT & Logic \\ \hline
+ $f(x) := p$ & $\lambda x. p$ & $f\ of\ x\ is\ p$ & $lambda\ x,\ p$ & $\supset-elim$ \\
+ $f(p)$ & $f p$ & $f of p$ & $the\ application\ of\ f\ to\ p$ & $modus\ ponens$ \\
+ $(x,y)$          & $(x,y)$ & $the\ pair\ of\ x\ and\ y$ & $the\ pair\ of\ x\ and\ y$ &  $\wedge-i$ \\
+ $\pi_{1,2}\ x$      & $\pi_{1,2}\ x$ & $the\ first\ projection\ of\ x$ & $the\ first\ projection\ of\ x$ & $\wedge-e$ \\ \hline
+\end{tabular}
+\caption{Term syntax in Sets, Logic, and MLTT} \label{fig:M2}
+\end{figure}
 
-\begin{multicols}{2}
-  \begin{itemize}
+We don't do all the constructors for type theory here for space, but note some
+interesting features:
 
-  \end{itemize}
-\end{multicols}
+\begin{itemize}
+\item The disjoint union in set theory is actually defined using 
+pairs - and therefore it doesn't have elimination forms other than those
+for the product. The disjoint union is also not nearly as ubiquitous, though.
+\item $\lambda$ is a constructor for both the dependent and
+non-dependent function, so its use in either case will be type-checked by Agda,
+whereas it's natural language counterpart in real mathematics will have
+syntactic distinction.
+\item The projections for a $\Sigma$ type behaves differently from the
+elimination principle for $\exists$, and this leads to
+incongruities in the natural language presentation.
+\end{itemize}
 
-Mathemacians and T
+Finally, we should note that there are many linguistic presentations
+mathematicians use for logical reasoning, i.e. the use of introduction and
+elimination rules. They certainly seem to use linguistic forms more when dealing
+with proofs, and symbolic notation for Sets, so the investigation of how these
+translate into type theory is a source of future work. Whereas propositions make
+explicit all the relevant detail, and can be read by non-experts, proofs are
+incredibly diverse and will be incomprehensible to those without expertise. 
+
+A detailed analysis of this should be done if and when a proper translation
+corpus is built to account for some of the ways mathematicians articulate these
+rules, as well as when and how mathematicians discuss sets,
+symbolically and otherwise. To create translation with ``real" natural language 
+is likely not to be very effective or interesting without a lot of evidence about
+how mathematicians speak and write.
 
 
-% \begin{columns}
+% IDEA : the proof from mathematicss (ie NL use of logical rules) should be PGFed
+% to the cubicaltt terms
 
-% \begin{column}{0.4 \textwidth}
-% \begin{exampleblock}{Sets}
-%   \begin{itemize}
-%     \item $1$
-%     \item $(1,0)$
-%   \end{itemize}
-% \end{exampleblock}
-% \end{column}
+% Linguistically, we have basic rules.  We can construct pairs by saying ``first
+% ... and ...", the projections are seldom 
+% Case expressions (
 
-% \begin{column}{0.4 \textwidth}
-% \begin{block}{Programs}
-%   \begin{itemize}
-%     \item $suc\ zero$
-%     \item $(suc\ zero, zero)$
-%   \end{itemize}
-% \end{block}
 
-Nonetheless,
-there are many nuances this side-by-side comparison doesn't offer. First  
-
-While these differences may 
+% Define the function f to be x^2 from N to N
+% Define the function f (x) = x^2 from N to N
+% Define the function from Nat to Nat as f (x) = x^2
+% f of x is x squared
 
