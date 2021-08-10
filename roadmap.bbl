@@ -8,6 +8,10 @@ Abel, A. (2020).
 Avigad, J. (2015).
 \newblock Mathematics and language.
 
+\bibitem[Bar et~al., 2016]{Bar2016GlobularAO}
+Bar, K., Kissinger, A., \& Vicary, J. (2016).
+\newblock Globular: an online proof assistant for higher-dimensional rewriting.
+
 \bibitem[Chomsky, 1995]{Chomsky1995}
 Chomsky, N. (1995).
 \newblock {\em The Minimalist Program}.
@@ -18,10 +22,21 @@ Chomsky, N. (2009).
 \newblock {\em Syntactic Structures}.
 \newblock De Gruyter Mouton.
 
+\bibitem[Fong, 2016]{fong2016algebra}
+Fong, B. (2016).
+\newblock The algebra of open and interconnected systems.
+
 \bibitem[Frege, 1879]{frege79}
 Frege, G. (1879).
 \newblock {\em Begrisschrift}.
 \newblock Halle.
+
+\bibitem[Giaquinto, 2020]{sep-epistemology-visual-thinking}
+Giaquinto, M. (2020).
+\newblock {The Epistemology of Visual Thinking in Mathematics}.
+\newblock In E.~N. Zalta (Ed.), {\em The {Stanford} Encyclopedia of
+  Philosophy}. Metaphysics Research Lab, Stanford University, {S}pring 2020
+  edition.
 
 \bibitem[Hales, 2019]{halesCNL}
 Hales, T. (2019).
@@ -30,6 +45,10 @@ Hales, T. (2019).
 \bibitem[Harper, 2011]{harperTrinity}
 Harper, R. (2011).
 \newblock The holy trinity.
+
+\bibitem[Jackson, 2002]{2002TheWO}
+Jackson, A. (2002).
+\newblock The world of blind mathematicians.
 
 \bibitem[Kaiser et~al., 2018]{mtac2}
 Kaiser, J.-O., Ziliani, B., Krebbers, R., R\'{e}gis-Gianas, Y., \& Dreyer, D.
@@ -42,6 +61,10 @@ Martin{-}L\"of, P. (1996).
 \newblock On the meanings of the logical constants and the justifications of
   the logical laws.
 \newblock {\em Nordic Journal of Philosophical Logic}, 1(1), 11--60.
+
+\bibitem[Nelsen, 1993]{proofWW}
+Nelsen, R. (1993).
+\newblock {\em Proofs Without Words}.
 
 \bibitem[Pit-Claudel, 2020]{coqAlec}
 Pit-Claudel, C. (2020).

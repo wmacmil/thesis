@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  9 AUG 2021 16:49
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  9 AUG 2021 21:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1555,25 +1555,22 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no p in font nullfont!
-[10] [11] [12] [13] [14] [15]
+[10] [11] [12] [13] [14] [15] [16] [17]
+Overfull \hbox (2.15211pt too wide) in paragraph at lines 539--548
+[]\TU/DejaVuSerif(0)/m/n/10.95 Graphical Programming languages facilitating dia
+grammatic programming are one
+ []
 
-Package natbib Warning: Citation `objective evidence' on page 16 undefined on i
-nput line 402.
+[18]) [19] (./roadmap.bbl) [20
 
-[16] [17]) [18] (./roadmap.bbl) [19
-
-]
-
-Package natbib Warning: There were undefined citations.
-
-[20]
+] [21]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
 (./roadmap.aux (./intro.aux) (./perspectives.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 239.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 239.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: 2FF2A6BABA7F3A75E228E531FF000663;738.
+(rerunfilecheck)             Checksum: BBF022FCE0A0BC7FDBD940C05A3604D0;825.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
@@ -1583,12 +1580,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33006 strings out of 479819
- 632992 string characters out of 5895846
+ 33021 strings out of 479819
+ 633352 string characters out of 5895846
  1170805 words of memory out of 5000000
- 49444 multiletter control sequences out of 15000+600000
+ 49459 multiletter control sequences out of 15000+600000
  537689 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,814b,1042s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (24 pages, 511156 bytes).
+Output written on roadmap.xdv (25 pages, 562904 bytes).

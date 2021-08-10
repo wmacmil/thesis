@@ -122,31 +122,9 @@ keywords = {Pragmatics, Philosophy of mathematics, The language of mathematics, 
 abstract = {In this paper we argue, against a somewhat standard view, that pragmatic phenomena occur in mathematical language. We provide concrete examples supporting this thesis.}
 }
 
-Historically, a mathematics has been filtered of natural language artifacts, culminating in some sense with Frege's development of a formal proof (although formal proofs are a more relevant notion in logic and computer science) . We hope this work helps with a new foundational mentality, whereby we try to bring natural language back into mathematics in a controlled way, or at least to bridge the gap between our technologies, specifcally ITPs, and mathematicians, so that both the informal and formal can be understood in the same general framework.
-
-
-Perhaps differences in the thinking of mathematics, tongue-and-cheek call i-mathematics, with its externalization.  This doesn't exist with natural language, because a diagram in natural language is to be intpreted in some other semiotic category (art, engineering, mathematics) 
 
 in some sense, philosophy is baked into Dependent Type Theory (lexically, conceptually, ) in a way that it isn't for classical mathematics. although distinguishing between fields is a recent phenomena
 
-"Though philosophical discussion of visual thinking in mathematics has concentrated on its role in proof, visual thinking may be more valuable for discovery than proof." 
-
-Edward Zalta
-
-@InCollection{sep-epistemology-visual-thinking,
-	author       =	{Giaquinto, Marcus},
-	title        =	{{The Epistemology of Visual Thinking in Mathematics}},
-	booktitle    =	{The {Stanford} Encyclopedia of Philosophy},
-	editor       =	{Edward N. Zalta},
-	howpublished =	{\url{https://plato.stanford.edu/archives/spr2020/entries/epistemology-visual-thinking/}},
-	year         =	{2020},
-	edition      =	{{S}pring 2020},
-	publisher    =	{Metaphysics Research Lab, Stanford University}
-}
-
-Difference between a proof the understanding of a proof.  The first is a mathematical judgement, and the understanding is the inductive phase of connecting two judgements, that of a proposition and its being true with a type having a witness inhabitant. 
-
-In the same sense, that I suspect knot theorists were playing with physical knots before their inventions and discoveries
 
 proposition , theorem
 
