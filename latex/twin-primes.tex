@@ -1,0 +1,391 @@
+\begin{code}[hide]%
+\>[0]\AgdaKeyword{module}\AgdaSpace{}%
+\AgdaModule{twin-primes}\AgdaSpace{}%
+\AgdaKeyword{where}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaKeyword{open}\AgdaSpace{}%
+\AgdaKeyword{import}\AgdaSpace{}%
+\AgdaModule{Data.Nat}\AgdaSpace{}%
+\AgdaKeyword{renaming}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaOperator{\AgdaPrimitive{\AgdaUnderscore{}+\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{to}\AgdaSpace{}%
+\AgdaOperator{\AgdaPrimitive{\AgdaUnderscore{}∔\AgdaUnderscore{}}}\AgdaSymbol{)}\<%
+\\
+\>[0]\AgdaKeyword{open}\AgdaSpace{}%
+\AgdaKeyword{import}\AgdaSpace{}%
+\AgdaModule{Data.Product}\AgdaSpace{}%
+\AgdaKeyword{using}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaRecord{Σ}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}×\AgdaUnderscore{}}}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaOperator{\AgdaInductiveConstructor{\AgdaUnderscore{},\AgdaUnderscore{}}}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaField{proj₁}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaField{proj₂}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{∃}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{Σ-syntax}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{∃-syntax}\AgdaSymbol{)}\<%
+\\
+\>[0]\AgdaKeyword{open}\AgdaSpace{}%
+\AgdaKeyword{import}\AgdaSpace{}%
+\AgdaModule{Data.Sum}\AgdaSpace{}%
+\AgdaKeyword{renaming}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaOperator{\AgdaDatatype{\AgdaUnderscore{}⊎\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{to}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{\AgdaUnderscore{}+\AgdaUnderscore{}}}\AgdaSymbol{)}\<%
+\\
+\>[0]\AgdaKeyword{import}\AgdaSpace{}%
+\AgdaModule{Relation.Binary.PropositionalEquality}\AgdaSpace{}%
+\AgdaSymbol{as}\AgdaSpace{}%
+\AgdaModule{Eq}\<%
+\\
+\>[0]\AgdaKeyword{open}\AgdaSpace{}%
+\AgdaModule{Eq}\AgdaSpace{}%
+\AgdaKeyword{using}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaOperator{\AgdaDatatype{\AgdaUnderscore{}≡\AgdaUnderscore{}}}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaInductiveConstructor{refl}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{trans}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{sym}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{cong}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{cong-app}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{subst}\AgdaSymbol{)}\<%
+\\
+\>[0]\AgdaKeyword{open}\AgdaSpace{}%
+\AgdaModule{Eq.≡-Reasoning}\AgdaSpace{}%
+\AgdaKeyword{using}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaOperator{\AgdaFunction{begin\AgdaUnderscore{}}}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}≡⟨⟩\AgdaUnderscore{}}}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaFunction{step-≡}\AgdaSymbol{;}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}∎}}\AgdaSymbol{)}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaOperator{\AgdaFunction{\AgdaUnderscore{}-\AgdaUnderscore{}}}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\<%
+\\
+\>[0]\AgdaBound{n}%
+\>[6]\AgdaOperator{\AgdaFunction{-}}\AgdaSpace{}%
+\AgdaInductiveConstructor{zero}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{n}\<%
+\\
+\>[0]\AgdaInductiveConstructor{zero}%
+\>[6]\AgdaOperator{\AgdaFunction{-}}\AgdaSpace{}%
+\AgdaInductiveConstructor{suc}\AgdaSpace{}%
+\AgdaBound{m}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaInductiveConstructor{zero}\<%
+\\
+\>[0]\AgdaInductiveConstructor{suc}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{-}}\AgdaSpace{}%
+\AgdaInductiveConstructor{suc}\AgdaSpace{}%
+\AgdaBound{m}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{-}}\AgdaSpace{}%
+\AgdaBound{m}\<%
+\end{code}
+\subsubsection{Formalizing The Twin Prime Conjecture}
+
+Inspired by Escardos's formalization of the twin primes conjecture \cite{escardó2020introduction}, we intend to
+demonstrate that while formalizing mathematics can be rewarding, it can also
+create immense difficulties, especially if one wishes to do it in a way that
+prioritizes natural language. The conjecture is incredibly compact
+
+\begin{lem}
+There are infinitely many twin primes.
+\end{lem}
+
+Somebody reading for the first time might then pose the immediate question : what is a twin prime?
+
+\begin{definition}\label{def:def1}
+A \emph{twin prime} is a prime number that is either 2 less or 2 more than another prime number
+\end{definition}
+
+Below Escardo's code is reproduced.
+\begin{code}%
+\>[0]\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+\>[0]\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSpace{}%
+\AgdaSymbol{=}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaSymbol{(}\AgdaBound{n}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≥}}\AgdaSpace{}%
+\AgdaNumber{2}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{×}}\<%
+\\
+%
+\>[2]\AgdaSymbol{((}\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaPrimitive{*}}\AgdaSpace{}%
+\AgdaBound{y}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaNumber{1}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{+}}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{x}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSymbol{))}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaFunction{twinPrimeConjecture}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+\>[0]\AgdaFunction{twinPrimeConjecture}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{n}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{Σ[}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaFunction{∈}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaFunction{]}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≥}}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSymbol{)}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaOperator{\AgdaFunction{×}}\AgdaSpace{}%
+\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\\
+%
+\>[2]\AgdaOperator{\AgdaFunction{×}}\AgdaSpace{}%
+\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaPrimitive{∔}}\AgdaSpace{}%
+\AgdaNumber{2}\AgdaSymbol{)}\<%
+\end{code}
+
+We note there are some both subtle and big differences, between the natural
+language claim. First, twin prime is defined implicitly via a product
+expression, \term{×}. Additionally, the ``either 2 less or 2 more" clause is
+oringially read as being interpreted as having ``2 more". This reading ignores
+the symmetry of products, however, and both ``p or (p ∔ 2)" could be interpreted
+as the twin prime. This phenomenon makes translation highly nontrivial; however,
+we will later see that PGF is capable of adding a semantic layer where the
+theorem can be evaluated during the translation. Finally, this theorem doesn't
+say what it is to be infinite in general, because such a definition would
+require a proving a bijection with the real numbers. In this case however, we
+can rely on the order of the natural numbers, to simply state what it means to
+have infinitely many primes.
+
+Despite the beauty of this, mathematicians always look for alternative, more
+general ways of stating things. Generalizing the notion of a twin prime is a
+prime gap. And then one immediately has to ask what is a prime gap?
+
+\begin{definition}\label{def:def2}
+A \emph{twin prime} is a prime that has a prime gap of two.
+\end{definition}
+\begin{definition}\label{def:def3}
+A \emph{prime gap} is the difference between two successive prime numbers.
+\end{definition}
+
+Now we're stuck, at least if you want to scour the internet for the definition
+of ``two successive prime numbers". That is because any mathematician will take
+for granted what it means, and it would be considered a waste of time and space
+to include something \emph{everyone} alternatively knows. Agda, however, must
+know in order to typecheck. Below we offer a presentation which suits Agda's
+needs, and matches the number theorists presentation of twin prime.
+
+
+\begin{code}%
+\>[0]\AgdaFunction{isSuccessivePrime}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+\>[0]\AgdaFunction{isSuccessivePrime}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaBound{x}\AgdaSpace{}%
+\AgdaBound{x₁}\AgdaSpace{}%
+\AgdaSymbol{=}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaSymbol{(}\AgdaBound{p''}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{p''}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\<%
+\\
+%
+\>[2]\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≤}}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≤}}\AgdaSpace{}%
+\AgdaBound{p''}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≤}}\AgdaSpace{}%
+\AgdaBound{p''}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaFunction{primeGap}\AgdaSpace{}%
+\AgdaSymbol{:}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{pIsPrime}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p'IsPrime}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\<%
+\\
+%
+\>[2]\AgdaSymbol{(}\AgdaFunction{isSuccessivePrime}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaBound{pIsPrime}\AgdaSpace{}%
+\AgdaBound{p'IsPrime}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\<%
+\\
+%
+\>[2]\AgdaDatatype{ℕ}\<%
+\\
+\>[0]\AgdaFunction{primeGap}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaBound{pIsPrime}\AgdaSpace{}%
+\AgdaBound{p'IsPrime}\AgdaSpace{}%
+\AgdaBound{p'-is-after-p}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{-}}\AgdaSpace{}%
+\AgdaBound{p'}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaFunction{twinPrime}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+\>[0]\AgdaFunction{twinPrime}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaSymbol{=}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaSymbol{(}\AgdaBound{pIsPrime}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p'IsPrime}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{isPrime}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSymbol{)}\<%
+\\
+%
+\>[2]\AgdaSymbol{(}\AgdaBound{p'-is-after-p}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaFunction{isSuccessivePrime}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaBound{pIsPrime}\AgdaSpace{}%
+\AgdaBound{p'IsPrime}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\<%
+\\
+%
+\>[2]\AgdaSymbol{(}\AgdaFunction{primeGap}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaBound{p'}\AgdaSpace{}%
+\AgdaBound{pIsPrime}\AgdaSpace{}%
+\AgdaBound{p'IsPrime}\AgdaSpace{}%
+\AgdaBound{p'-is-after-p}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
+\AgdaNumber{2}\<%
+\\
+%
+\\[\AgdaEmptyExtraSkip]%
+\>[0]\AgdaFunction{twinPrimeConjecture'}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaPrimitive{Set}\<%
+\\
+\>[0]\AgdaFunction{twinPrimeConjecture'}\AgdaSpace{}%
+\AgdaSymbol{=}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{n}\AgdaSpace{}%
+\AgdaSymbol{:}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSymbol{)}\AgdaSpace{}%
+\AgdaSymbol{→}\AgdaSpace{}%
+\AgdaFunction{Σ[}\AgdaSpace{}%
+\AgdaBound{p}\AgdaSpace{}%
+\AgdaFunction{∈}\AgdaSpace{}%
+\AgdaDatatype{ℕ}\AgdaSpace{}%
+\AgdaFunction{]}\AgdaSpace{}%
+\AgdaSymbol{(}\AgdaBound{p}\AgdaSpace{}%
+\AgdaOperator{\AgdaFunction{≥}}\AgdaSpace{}%
+\AgdaBound{n}\AgdaSymbol{)}\<%
+\\
+\>[0][@{}l@{\AgdaIndent{0}}]%
+\>[2]\AgdaOperator{\AgdaFunction{×}}\AgdaSpace{}%
+\AgdaFunction{twinPrime}\AgdaSpace{}%
+\AgdaBound{p}\<%
+\end{code}
+
+We see that \term{isSuccessivePrime} captures this meaning, interpreting
+``successive" as the type of suprema in the prime number ordering. We also see that all the primality proofs must be given explicitly.
+
+The term \term{primeGap} then has to reference this successive prime data, even
+though most of it is discarded and unused in the actual program returning a
+number. One could keep these unused arguements around via extra record fields,
+to anticipate future programs calling \prime{Gap}, but ultimately the developer has to
+decide what is relevant. A GF translation would ideally be kept as simple as possible. We also use propositional equality here, which is
+another departure from classical mathematics, as will be elaborated later.
+
+Finally, \{twinPrime} is a specialized version of \term{primeGap} to 2. ``has a
+prime gap of two`` needs to be interpreted ``whose prime gap is equal to two",
+and writing a GF grammar capable of disambiguating \emph{has} in mathematics
+generally is likely impossible.
+
+While working on this example, I tried to prove that 2 is prime in Agda, which turned out to be nontrivial. When I told this to an analyst (in the mathematical sense) he remarked that couldn't possibly be the case because it's something which a simple algorithm can compute (or generate). This exchange was incredibly stimulating, for the mathematian didn't know about the \emph{propositions as types} principle, and was simply taking for granted his internal computational capacity to confuse it for proof, especially in a constructive setting. He also seemed perplexed that anyone would find it interesting to prove that 2 is prime. As is hopefully revealed by this discussion, seemingly trivial things, when treated by the type theorist or linguist, can become wonderful areas of exploration.

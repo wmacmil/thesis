@@ -13,33 +13,12 @@ Bove, A., Dybjer, P., \& Norell, U. (2009).
   Theorem Proving in Higher Order Logics}  (pp.\ 73--78).  Berlin, Heidelberg:
   Springer Berlin Heidelberg.
 
-\bibitem[Coquand, 1992]{coqPat}
-Coquand, T. (1992).
-\newblock Pattern matching with dependent types.
-
 \bibitem[Howard, 1986]{ml1984}
 Howard, W.~A. (1986).
 \newblock Per martin-löf. intuitionistic type theory. (notes by giovanni
   sambin of a series of lectures given in padua, june 1980.) studies in proof
   theory. bibliopolis, naples1984, ix 91 pp.
 \newblock {\em Journal of Symbolic Logic}, 51(4), 1075–1076.
-
-\bibitem[Martin{-}L\"of, 1996]{mlMeanings}
-Martin{-}L\"of, P. (1996).
-\newblock On the meanings of the logical constants and the justifications of
-  the logical laws.
-\newblock {\em Nordic Journal of Philosophical Logic}, 1(1), 11--60.
-
-\bibitem[Pfenning, 2009]{pfenningHar}
-Pfenning, F. (2009).
-\newblock Lecture notes on harmony.
-
-\bibitem[Ranta, 2011]{rantaLog}
-Ranta, A. (2011).
-\newblock Translating between language and logic: what is easy and what is
-  difficult.
-\newblock In {\em International Conference on Automated Deduction}  (pp.\
-  5--25).: Springer.
 
 \bibitem[Stump, 2016]{stump}
 Stump, A. (2016).

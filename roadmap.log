@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  10 AUG 2021 18:49
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  11 AUG 2021 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -210,18 +210,87 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 \Gm@layouthoffset=\dimen144
 \Gm@layoutvoffset=\dimen145
 \Gm@dimlist=\toks15
-)) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count193
+\mult@box=\box46
+\multicol@leftmargin=\dimen146
+\c@unbalance=\count194
+\c@collectmore=\count195
+\doublecol@number=\count196
+\multicoltolerance=\count197
+\multicolpretolerance=\count198
+\full@width=\dimen147
+\page@free=\dimen148
+\premulticols=\dimen149
+\postmulticols=\dimen150
+\multicolsep=\skip51
+\multicolbaselineskip=\skip52
+\partial@page=\box47
+\last@line=\box48
+\maxbalancingoverflow=\dimen151
+\mult@rightbox=\box49
+\mult@grightbox=\box50
+\mult@gfirstbox=\box51
+\mult@firstbox=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\c@minrows=\count199
+\c@columnbadness=\count266
+\c@finalcolumnbadness=\count267
+\last@try=\dimen152
+\multicolovershoot=\dimen153
+\multicolundershoot=\dimen154
+\mult@nat@firstbox=\box90
+\colbreak@box=\box91
+\mc@col@check@num=\count268
+) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count193
+\etb@tempcnta=\count269
 )
-\csq@reset=\count194
-\csq@gtype=\count195
-\csq@glevel=\count196
-\csq@qlevel=\count197
-\csq@maxlvl=\count198
-\csq@tshold=\count199
+\csq@reset=\count270
+\csq@gtype=\count271
+\csq@glevel=\count272
+\csq@qlevel=\count273
+\csq@maxlvl=\count274
+\csq@tshold=\count275
 \csq@ltx@everypar=\toks16
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
@@ -232,11 +301,11 @@ Package csquotes Info: ... configuration file loaded successfully.
 File: csquotes.cfg 
 )) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count266
+\c@float@type=\count276
 \float@exts=\toks17
-\float@box=\box46
+\float@box=\box92
 \@float@everytoks=\toks18
-\@floatcapt=\box47
+\@floatcapt=\box93
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2020/02/14 3.40 The Babel package
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
@@ -245,12 +314,12 @@ File: switch.def 2020/02/14 3.40 Babel switching mechanism
 Language: english 2017/06/06 v3.3r English support from the babel system
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/02/14 3.40 Babel common definitions
-\babel@savecnt=\count267
-\U@D=\dimen146
+\babel@savecnt=\count277
+\U@D=\dimen155
 (/usr/share/texlive/texmf-dist/tex/generic/babel/xebabel.def (/usr/share/texliv
 e/texmf-dist/tex/generic/babel/txtbabel.def))
 \bbl@readstream=\read2
-\bbl@dirlevel=\count268
+\bbl@dirlevel=\count278
 )
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
@@ -271,8 +340,8 @@ Package graphics Info: Driver file: xetex.def on input line 105.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen147
-\Gin@req@width=\dimen148
+\Gin@req@height=\dimen156
+\Gin@req@width=\dimen157
 ) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/usr/share/texlive/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
@@ -282,12 +351,12 @@ Package: tikz-cd 2018/11/19 v0.9f Commutative diagrams with TikZ
 dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/gene
 ric/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks19
-\pgfutil@tempdima=\dimen149
-\pgfutil@tempdimb=\dimen150
+\pgfutil@tempdima=\dimen158
+\pgfutil@tempdimb=\dimen159
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box48
+\pgfutil@abb=\box94
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/u
@@ -307,26 +376,26 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 ex
 \pgfkeys@tmptoks=\toks22
 ))
-\pgf@x=\dimen151
-\pgf@y=\dimen152
-\pgf@xa=\dimen153
-\pgf@ya=\dimen154
-\pgf@xb=\dimen155
-\pgf@yb=\dimen156
-\pgf@xc=\dimen157
-\pgf@yc=\dimen158
-\pgf@xd=\dimen159
-\pgf@yd=\dimen160
+\pgf@x=\dimen160
+\pgf@y=\dimen161
+\pgf@xa=\dimen162
+\pgf@ya=\dimen163
+\pgf@xb=\dimen164
+\pgf@yb=\dimen165
+\pgf@xc=\dimen166
+\pgf@yc=\dimen167
+\pgf@xd=\dimen168
+\pgf@yd=\dimen169
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count269
-\c@pgf@countb=\count270
-\c@pgf@countc=\count271
-\c@pgf@countd=\count272
+\c@pgf@counta=\count279
+\c@pgf@countb=\count280
+\c@pgf@countc=\count281
+\c@pgf@countd=\count282
 \t@pgf@toka=\toks23
 \t@pgf@tokb=\toks24
 \t@pgf@tokc=\toks25
-\pgf@sys@id@count=\count273
+\pgf@sys@id@count=\count283
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -340,13 +409,13 @@ File: pgfsys-dvipdfmx.def 2020/01/08 v3.1.5b (3.1.5b)
 f
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 )
-\pgfsys@objnum=\count274
+\pgfsys@objnum=\count284
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count275
-\pgfsyssoftpath@bigbuffer@items=\count276
+\pgfsyssoftpath@smallbuffer@items=\count285
+\pgfsyssoftpath@bigbuffer@items=\count286
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -371,9 +440,9 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 e/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texl
 ive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/t
 exmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen161
-\pgfmath@count=\count277
-\pgfmath@box=\box49
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count287
+\pgfmath@box=\box95
 \pgfmath@toks=\toks26
 \pgfmath@stack@operand=\toks27
 \pgfmath@stack@operation=\toks28
@@ -396,57 +465,57 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmat
 hfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count278
+\c@pgfmathroundto@lastzeros=\count288
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen162
-\pgf@picmaxx=\dimen163
-\pgf@picminy=\dimen164
-\pgf@picmaxy=\dimen165
-\pgf@pathminx=\dimen166
-\pgf@pathmaxx=\dimen167
-\pgf@pathminy=\dimen168
-\pgf@pathmaxy=\dimen169
-\pgf@xx=\dimen170
-\pgf@xy=\dimen171
-\pgf@yx=\dimen172
-\pgf@yy=\dimen173
-\pgf@zx=\dimen174
-\pgf@zy=\dimen175
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen176
-\pgf@path@lasty=\dimen177
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen178
-\pgf@shorten@start@additional=\dimen179
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box50
-\pgf@hbox=\box51
-\pgf@layerbox@main=\box52
-\pgf@picture@serial@count=\count279
+\pgfpic=\box96
+\pgf@hbox=\box97
+\pgf@layerbox@main=\box98
+\pgf@picture@serial@count=\count289
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen180
+\pgflinewidth=\dimen189
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen181
-\pgf@pt@y=\dimen182
-\pgf@pt@temp=\dimen183
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -462,13 +531,13 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen184
+\pgfarrowsep=\dimen193
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen185
-\pgf@sys@shading@range@num=\count280
-\pgf@shadingcount=\count281
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count290
+\pgf@shadingcount=\count291
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -476,7 +545,7 @@ File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box53
+\pgfexternal@startupbox=\box99
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -494,15 +563,15 @@ File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box54
+\pgfnodeparttextbox=\box100
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen186
-\pgf@nodesepend=\dimen187
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -515,8 +584,8 @@ xmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf
 lities/pgffor.code.tex
 Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen188
-\pgffor@skip=\dimen189
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
 \pgffor@stack=\toks29
 \pgffor@toks=\toks30
 ))
@@ -526,33 +595,33 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count282
-\pgfplotmarksize=\dimen190
+\pgf@plot@mark@count=\count292
+\pgfplotmarksize=\dimen199
 )
-\tikz@lastx=\dimen191
-\tikz@lasty=\dimen192
-\tikz@lastxsaved=\dimen193
-\tikz@lastysaved=\dimen194
-\tikz@lastmovetox=\dimen195
-\tikz@lastmovetoy=\dimen196
-\tikzleveldistance=\dimen197
-\tikzsiblingdistance=\dimen198
-\tikz@figbox=\box55
-\tikz@figbox@bg=\box56
-\tikz@tempbox=\box57
-\tikz@tempbox@bg=\box58
-\tikztreelevel=\count283
-\tikznumberofchildren=\count284
-\tikznumberofcurrentchild=\count285
-\tikz@fig@count=\count286
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikz@lastmovetox=\dimen260
+\tikz@lastmovetoy=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
+\tikz@figbox=\box101
+\tikz@figbox@bg=\box102
+\tikz@tempbox=\box103
+\tikz@tempbox@bg=\box104
+\tikztreelevel=\count293
+\tikznumberofchildren=\count294
+\tikznumberofcurrentchild=\count295
+\tikz@fig@count=\count296
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count287
-\pgfmatrixcurrentcolumn=\count288
-\pgf@matrix@numberofcolumns=\count289
+\pgfmatrixcurrentrow=\count297
+\pgfmatrixcurrentcolumn=\count298
+\pgf@matrix@numberofcolumns=\count299
 )
-\tikz@expandcount=\count290
+\tikz@expandcount=\count300
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -569,13 +638,13 @@ File: tikzlibraryquotes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
 code.tex
 File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowinset=\dimen199
-\pgfarrowlength=\dimen256
-\pgfarrowwidth=\dimen257
-\pgfarrowlinewidth=\dimen258
+\pgfarrowinset=\dimen264
+\pgfarrowlength=\dimen265
+\pgfarrowwidth=\dimen266
+\pgfarrowlinewidth=\dimen267
 ))) (/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip51
+\FP@margin=\skip53
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
 (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -604,9 +673,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-\@linkdim=\dimen259
-\Hy@linkcounter=\count291
-\Hy@pagecounter=\count292
+\@linkdim=\dimen268
+\Hy@linkcounter=\count301
+\Hy@pagecounter=\count302
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
@@ -614,7 +683,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count293
+\Hy@SavedSpaceFactor=\count303
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
 Package hyperref Info: Hyper index ON on input line 4555.
@@ -622,22 +691,22 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count294
+\c@Hy@tempcnt=\count304
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5159.
-\XeTeXLinkMargin=\dimen260
+\XeTeXLinkMargin=\dimen269
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count295
-\Field@Width=\dimen261
-\Fld@charsize=\dimen262
+\Fld@menulength=\count305
+\Field@Width=\dimen270
+\Fld@charsize=\dimen271
 Package hyperref Info: Hyper figures OFF on input line 6430.
 Package hyperref Info: Link nesting OFF on input line 6435.
 Package hyperref Info: Hyper index ON on input line 6438.
@@ -650,9 +719,9 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count296
-\c@Item=\count297
-\c@Hfootnote=\count298
+\Hy@abspage=\count306
+\c@Item=\count307
+\c@Hfootnote=\count308
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
@@ -663,11 +732,11 @@ File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box59
-\c@Hy@AnnotLevel=\count299
-\HyField@AnnotCount=\count300
-\Fld@listcount=\count301
-\c@bookmark@seq@number=\count302
+\pdfm@box=\box105
+\c@Hy@AnnotLevel=\count309
+\HyField@AnnotCount=\count310
+\Fld@listcount=\count311
+\c@bookmark@seq@number=\count312
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
@@ -678,7 +747,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip52
+\Hy@SectionHShift=\skip54
 ) (./agda.sty
 Package: agda 
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -689,16 +758,16 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count303
-\calc@Bcount=\count304
-\calc@Adimen=\dimen263
-\calc@Bdimen=\dimen264
-\calc@Askip=\skip53
-\calc@Bskip=\skip54
+\calc@Acount=\count313
+\calc@Bcount=\count314
+\calc@Adimen=\dimen272
+\calc@Bdimen=\dimen273
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count305
-\calc@Cskip=\skip55
+\calc@Ccount=\count315
+\calc@Cskip=\skip57
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
@@ -708,17 +777,17 @@ Package: polytable 2013/07/18 v0.8.5 `polytable' package (Andres Loeh)
 (/usr/share/texlive/texmf-dist/tex/latex/lazylist/lazylist.sty) (/usr/share/tex
 live/texmf-dist/tex/latex/tools/array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen265
-\ar@mcellbox=\box60
-\extrarowheight=\dimen266
+\col@sep=\dimen274
+\ar@mcellbox=\box106
+\extrarowheight=\dimen275
 \NC@list=\toks31
-\extratabsurround=\skip56
-\backup@length=\skip57
-\ar@cellbox=\box61
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box107
 )
-\PT@colwidth=\dimen267
-\PT@cols=\count306
-\PT@table=\count307
+\PT@colwidth=\dimen276
+\PT@cols=\count316
+\PT@table=\count317
 \PT@toks=\toks32
 \PT@in=\read4
 \PT@out=\write4
@@ -735,17 +804,17 @@ ive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks34
 \XKV@tempa@toks=\toks35
 )
-\XKV@depth=\count308
+\XKV@depth=\count318
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\mathindent=\dimen268
-\c@Agda@Current=\count309
-\c@Agda@Previous=\count310
-\c@Agda@AlignStart=\count311
-\c@Agda@SuppressStart=\count312
-\AgdaEmptySkip=\skip58
-\AgdaEmptyExtraSkip=\skip59
-\c@AgdaCodeNumber=\count313
+\mathindent=\dimen277
+\c@Agda@Current=\count319
+\c@Agda@Previous=\count320
+\c@Agda@AlignStart=\count321
+\c@Agda@SuppressStart=\count322
+\AgdaEmptySkip=\skip60
+\AgdaEmptyExtraSkip=\skip61
+\c@AgdaCodeNumber=\count323
 ) (/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 (/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
@@ -760,61 +829,61 @@ File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip60
+\@mathmargin=\skip62
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks36
-\ex@=\dimen269
+\ex@=\dimen278
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen270
+\pmbraise@=\dimen279
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count314
+\inf@bad=\count324
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count315
-\leftroot@=\count316
+\uproot@=\count325
+\leftroot@=\count326
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count317
-\DOTSCASE@=\count318
+\classnum@=\count327
+\DOTSCASE@=\count328
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box62
-\strutbox@=\box63
-\big@size=\dimen271
+\Mathstrutbox@=\box108
+\strutbox@=\box109
+\big@size=\dimen280
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count319
-\c@MaxMatrixCols=\count320
+\macc@depth=\count329
+\c@MaxMatrixCols=\count330
 \dotsspace@=\muskip17
-\c@parentequation=\count321
-\dspbrk@lvl=\count322
+\c@parentequation=\count331
+\dspbrk@lvl=\count332
 \tag@help=\toks37
-\row@=\count323
-\column@=\count324
-\maxfields@=\count325
+\row@=\count333
+\column@=\count334
+\maxfields@=\count335
 \andhelp@=\toks38
-\eqnshift@=\dimen272
-\alignsep@=\dimen273
-\tagshift@=\dimen274
-\tagwidth@=\dimen275
-\totwidth@=\dimen276
-\lineht@=\dimen277
+\eqnshift@=\dimen281
+\alignsep@=\dimen282
+\tagshift@=\dimen283
+\tagwidth@=\dimen284
+\totwidth@=\dimen285
+\lineht@=\dimen286
 \@envbody=\toks39
-\multlinegap=\skip61
-\multlinetaggap=\skip62
+\multlinegap=\skip63
+\multlinetaggap=\skip64
 \mathdisplay@stack=\toks40
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-\g__um_fam_int=\count326
-\g__um_fonts_used_int=\count327
-\l__um_primecount_int=\count328
+\g__um_fam_int=\count336
+\g__um_fonts_used_int=\count337
+\l__um_primecount_int=\count338
 \g__um_primekern_muskip=\muskip18
 (/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
@@ -836,94 +905,25 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count329
-\l_MT_multwidth_dim=\dimen278
-\origjot=\skip63
-\l_MT_shortvdotswithinadjustabove_dim=\dimen279
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen280
-\l_MT_above_intertext_sep=\dimen281
-\l_MT_below_intertext_sep=\dimen282
-\l_MT_above_shortintertext_sep=\dimen283
-\l_MT_below_shortintertext_sep=\dimen284
+\g_MT_multlinerow_int=\count339
+\l_MT_multwidth_dim=\dimen287
+\origjot=\skip65
+\l_MT_shortvdotswithinadjustabove_dim=\dimen288
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen289
+\l_MT_above_intertext_sep=\dimen290
+\l_MT_below_intertext_sep=\dimen291
+\l_MT_above_shortintertext_sep=\dimen292
+\l_MT_below_shortintertext_sep=\dimen293
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip64
-\enit@outerparindent=\dimen285
+\labelindent=\skip66
+\enit@outerparindent=\dimen294
 \enit@toks=\toks41
-\enit@inbox=\box64
-\enit@count@id=\count330
-\enitdp@description=\count331
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count332
-\mult@box=\box65
-\multicol@leftmargin=\dimen286
-\c@unbalance=\count333
-\c@collectmore=\count334
-\doublecol@number=\count335
-\multicoltolerance=\count336
-\multicolpretolerance=\count337
-\full@width=\dimen287
-\page@free=\dimen288
-\premulticols=\dimen289
-\postmulticols=\dimen290
-\multicolsep=\skip65
-\multicolbaselineskip=\skip66
-\partial@page=\box66
-\last@line=\box67
-\maxbalancingoverflow=\dimen291
-\mult@rightbox=\box68
-\mult@grightbox=\box69
-\mult@gfirstbox=\box70
-\mult@firstbox=\box71
-\@tempa=\box72
-\@tempa=\box73
-\@tempa=\box74
-\@tempa=\box75
-\@tempa=\box76
-\@tempa=\box77
-\@tempa=\box78
-\@tempa=\box79
-\@tempa=\box80
-\@tempa=\box81
-\@tempa=\box82
-\@tempa=\box83
-\@tempa=\box84
-\@tempa=\box85
-\@tempa=\box86
-\@tempa=\box87
-\@tempa=\box88
-\@tempa=\box89
-\@tempa=\box90
-\@tempa=\box91
-\@tempa=\box92
-\@tempa=\box93
-\@tempa=\box94
-\@tempa=\box95
-\@tempa=\box96
-\@tempa=\box97
-\@tempa=\box98
-\@tempa=\box99
-\@tempa=\box100
-\@tempa=\box101
-\@tempa=\box102
-\@tempa=\box103
-\@tempa=\box104
-\@tempa=\box105
-\@tempa=\box106
-\@tempa=\box107
-\@tempa=\box108
-\c@minrows=\count338
-\c@columnbadness=\count339
-\c@finalcolumnbadness=\count340
-\last@try=\dimen292
-\multicolovershoot=\dimen293
-\multicolundershoot=\dimen294
-\mult@nat@firstbox=\box109
-\colbreak@box=\box110
-\mc@col@check@num=\count341
+\enit@inbox=\box110
+\enit@count@id=\count340
+\enitdp@description=\count341
 )
 
 Package fontspec Info: Font family 'DejaVuSerif(0)' created for font 'DejaVu
@@ -967,14 +967,14 @@ Package fontspec Info: Font family 'DejaVuSerif(1)' created for font 'DejaVu
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/DejaVuSerif(1)/m/n on input line 42.
+(Font)                  OT1/cmr/m/n --> TU/DejaVuSerif(1)/m/n on input line 45.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/DejaVuSerif(1)/m/it on input line 4
-2.
+5.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/DejaVuSerif(1)/bx/n on input line 4
-2.
+5.
 
 Package fontspec Info: Font family 'DejaVuSans(0)' created for font 'DejaVu
 (fontspec)             Sans' with options [Ligatures=TeX].
@@ -1016,11 +1016,11 @@ Package fontspec Info: Font family 'DejaVuSans(1)' created for font 'DejaVu
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/DejaVuSans(1)/m/n on input line 43.
+(Font)                  OT1/cmss/m/n --> TU/DejaVuSans(1)/m/n on input line 46.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/DejaVuSans(1)/bx/n on input line 4
-3.
+6.
 
 Package fontspec Info: Font family 'DejaVuSansMono(0)' created for font
 (fontspec)             'DejaVu Sans Mono' with options
@@ -1085,10 +1085,10 @@ Package fontspec Info: Font family 'DejaVuSansMono(1)' created for font
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(1)/m/n on input line
- 44.
+ 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(1)/bx/n on input lin
-e 44.
+e 47.
 (/usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
@@ -1142,26 +1142,26 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 (./roadmap.aux (./preliminaries.aux))
 \openout1 = `roadmap.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1198,7 +1198,7 @@ LaTeX Font Info:    ... okay on input line 134.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box118
-Package hyperref Info: Link coloring OFF on input line 134.
+Package hyperref Info: Link coloring OFF on input line 137.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1208,9 +1208,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 134.
-LaTeX Info: Redefining \pageref on input line 134.
-LaTeX Info: Redefining \nameref on input line 134.
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+LaTeX Info: Redefining \nameref on input line 137.
 (./roadmap.out) (./roadmap.out)
 \@outlinefile=\write5
 \openout5 = `roadmap.out'.
@@ -1255,16 +1255,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 134.
+(Font)              `operators' in the math version `normal' on input line 137.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 134.
+ line 137.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 134.
+(Font)              `operators' in the math version `bold' on input line 137.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 134.
+t line 137.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1335,15 +1335,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 134.
+(Font)              `symbols' in the math version `normal' on input line 137.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 134.
+t line 137.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 134.
+(Font)              `symbols' in the math version `bold' on input line 137.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 134.
+t line 137.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1397,16 +1397,16 @@ uage=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-34.
+37.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 134.
+t line 137.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 134
+(Font)              `largesymbols' in the math version `bold' on input line 137
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 134.
+t line 137.
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                `mathtools' package.
@@ -1429,35 +1429,35 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 File: logo/gu_logo_blue.pdf Graphic file (type pdf)
 <use logo/gu_logo_blue.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 147.
+(Font)              scaled to size 10.95116pt on input line 150.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 147.
+(Font)              scaled to size 7.6658pt on input line 150.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 147.
+(Font)              scaled to size 5.47559pt on input line 150.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 147.
+(Font)              scaled to size 10.94882pt on input line 150.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 147.
+(Font)              scaled to size 7.66417pt on input line 150.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 147.
+(Font)              scaled to size 5.47441pt on input line 150.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-47.
+50.
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.475> not available
-(Font)              size <5> substituted on input line 147.
+(Font)              size <5> substituted on input line 150.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 147
+LaTeX Font Info:    Trying to load font information for U+msa on input line 150
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 147
+LaTeX Font Info:    Trying to load font information for U+msb on input line 150
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (40.82745pt too wide) in paragraph at lines 147--159
+Overfull \hbox (40.82745pt too wide) in paragraph at lines 150--162
 [][] 
  []
 
@@ -1473,615 +1473,28 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 [3] [1]
 \openout2 = `preliminaries.aux'.
 
-(./preliminaries.tex (./mltt.tex [2
+(./preliminaries.tex (./intro-agda.tex (./latex/twin-primes.tex
+
+Package natbib Warning: Citation `escardó2020introduction' on page 2 undefined 
+on input line 96.
+
+[2
 
 ]
-! Undefined control sequence.
-l.108 $\vdash \lambda x. \sin x : \R
-                                     \rightarrow \R$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+\openout4 = `roadmap.ptb'.
 
-! Undefined control sequence.
-l.108 ...ash \lambda x. \sin x : \R \rightarrow \R
-                                                  $
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+\openout4 = `roadmap.ptb'.
 
 [3]
-Overfull \hbox (5.64789pt too wide) in paragraph at lines 135--147
- [][] 
- []
-
-! Undefined control sequence.
-l.170 ...o T$              & $the\ function\ \from
-                                                  \ S\ to\ T$  & $p\  to\  q...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (13.96936pt too wide) in paragraph at lines 165--178
- [][] 
- []
-
-[4]
-Overfull \hbox (17.62871pt too wide) in paragraph at lines 215--222
- [][] 
- []
-
-[5]) (./intro-agda.tex [6] (./latex/ex.tex
-\openout4 = `roadmap.ptb'.
-
-[7]
-
-! LaTeX Error: Environment prooftree--  undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.237   \begin{prooftree-- }
-                            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Undefined control sequence.
-l.238     \infer
-                1[]{ \vdash 픹 : {\rm type}}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: \begin{equation*} on input line 236 ended by \end{prooftree}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.239   \end{prooftree}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package ebproof Error: Missing premiss in a proof tree.
-
-See the ebproof package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.246     \infer1[]{ \Gamma \vdash true : 픹  }
-                                              
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-
-! Package ebproof Error: Missing premiss in a proof tree.
-
-See the ebproof package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250     \infer1[]{ \Gamma \vdash false : 픹  }
-                                               
-(That was another \errmessage.)
-
-\openout4 = `roadmap.ptb'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.289 ... placement of the arguement. We see the _
-                                                  ∨_
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Double subscript.
-l.289 ...lacement of the arguement. We see the _∨_
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.295 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (1586.20804pt too wide) in paragraph at lines 289--295
-[]\TU/DejaVuSerif(0)/m/n/10.95 The underscore denotes the placement of the argu
-ement. We see the $[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
-
-\openout4 = `roadmap.ptb'.
-
-Missing character: There is no ̌ in font cmmi10!
-[8]
-\openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
-)) (./gfintro.tex [9] [10]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.65 ... now given a single linear presentation C^
-                                                  L_0, where
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.68 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (647.51743pt too wide) in paragraph at lines 65--68
-[]\TU/DejaVuSerif(0)/m/n/10.95 Consider a language L, for now given a single li
-near presentation C$[][] [][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.95 syntax. So we could denote these L^
-                                        English, L^Bantu, L^Swedish for
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.100 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (1120.25572pt too wide) in paragraph at lines 93--100
-\TU/DejaVuSerif(0)/m/n/10.95 tax. So we could denote these L$[][][][][][][][] [
-][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
- [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][
-][] [][][][][][][]$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.101   One could also further elaborate these L^
-                                                 English_0 L^English_1 to va...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.106 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (1292.20442pt too wide) in paragraph at lines 101--106
-[]\TU/DejaVuSerif(0)/m/n/10.95 One could also further elaborate these L$[][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][]$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.107   L_
-          0 < L_1 -> L_English_0 < L_English_1
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.108 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.110 programming languages, like Logic^
-                                        English, Logic^Latex, Logic^Agda, Lo...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.112 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.115 Logic_
-            Core^English Logic_Extended^English
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.116 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.119 Logic_
-            Core^Agda Logic_Extended^Agda may collapse at certain points, bu...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.122 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (445.6949pt too wide) in paragraph at lines 119--122
-[]\TU/DejaVuSerif(0)/m/n/10.95 Logic$[][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][] [][][][][][]$ 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.123 ...cs = Logic + domain specific Mathematics^
-                                                  English Mathematics^Agda
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.124 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[11]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.128 Mathematics^
-                  English iI -- Something about
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.129 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.142   One could also further elaborate these L^
-                                                 English_0 L^English_1 to va...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.144 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (201.46841pt too wide) in paragraph at lines 142--144
-[]\TU/DejaVuSerif(0)/m/n/10.95 One could also further elaborate these L$[][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
-
-Missing character: There is no 𝜙 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.150 ...ories, we define the functions \phi : (c_
-                                                  1, ..., c_n) -> c_t
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.153 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (576.66191pt too wide) in paragraph at lines 150--153
-[]\TU/DejaVuSerif(0)/m/n/10.95 Given a set of categories, we define the functio
-ns 𝜙: (c$[][] [][][][] [][][][] [] [][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
-
-[12]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.189 denoted mathematically above as _
-                                       , and in GF as `Arith.gf` is given by :
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.190 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[13]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.267 Then one can form a tree `DetCN The_
-                                          Det Car_CN` which should linearize...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.271 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (702.87512pt too wide) in paragraph at lines 267--271
-[]\TU/DejaVuSerif(0)/m/n/10.95 Then one can form a tree ‘DetCN The$[][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][
-][][][][][][][][][][][][][][][]$ 
- []
-
-[14] [15]
-Overfull \hbox (28.28131pt too wide) in paragraph at lines 351--351
-[]\TU/DejaVuSansMono(0)/m/n/10.95 lin Add e1 e2 = "the sum of" ++ e1 ++ "and" +
-+ e2 ; Mul e1 e2 = "the product of"[] 
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.384 `lincat` of $C_i$ , e.g. if `lincat C_
-                                            i = T ;` then `c_i : T`.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.385 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[16]
-Overfull \hbox (37.07129pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 product of" ++ linearize (Add (EInt 3) (EInt 
-4)) ++ "and" ++ linearize (EInt 5)[] 
- []
-
-
-Overfull \hbox (28.28134pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 ->* "the product of" ++ ("the sum of" ++ (EIn
-t 3) ++ (EInt 4)) ++ "and" ++ ({ s[] 
- []
-
-
-Overfull \hbox (19.49138pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 = "5"} . s) ->* "the product of" ++ ("the sum
- of" ++ ({ s = "3"} . s) ++ ({ s =[] 
- []
-
-
-Overfull \hbox (34.87378pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 "4"} . s)) ++ "and" ++ "5" ->* "the product o
-f" ++ ("the sum of" ++ "3" ++ "and"[] 
- []
-
-
-Overfull \hbox (34.87378pt too wide) in paragraph at lines 400--400
-[]\TU/DejaVuSansMono(0)/m/n/10.95 ++ "4") ++ "and" ++ "5" ->* "the product of" 
-++ ("the sum of" ++ "3" ++ "and" ++[] 
- []
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.410 [previous section](#
-                          #some-preliminary-observations-and-considerations).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.410 [previous section](##
-                           some-preliminary-observations-and-considerations).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-Overfull \hbox (47.04161pt too wide) in paragraph at lines 422--427
-[]\TU/DejaVuSerif(0)/m/n/10.95 Once GF is [installed](https://www.grammaticalfr
-amework.org/download/index-3.10.html),
- []
-
-
-Overfull \hbox (62.68181pt too wide) in paragraph at lines 431--437
-\TU/DejaVuSerif(0)/m/n/10.95 [official shell reference](https://www.grammatical
-framework.org/doc/gf-shell-reference.html)
- []
-
-
-Overfull \hbox (50.1332pt too wide) in paragraph at lines 431--437
-\TU/DejaVuSerif(0)/m/n/10.95 and Inari Listenmaa’s post on [tips and gotchas](h
-ttps://inariksit.github.io/gf/2018/08/28/gf-
- []
-
-
-Overfull \hbox (34.87378pt too wide) in paragraph at lines 446--446
-[]\TU/DejaVuSansMono(0)/m/n/10.95 0 msec Arith> help gr gr, generate_random gen
-erate random trees in the current[] 
- []
-
-[17]
-Overfull \hbox (32.67633pt too wide) in paragraph at lines 466--466
-[]\TU/DejaVuSansMono(0)/m/n/10.95 (EInt 999) (EInt 999))) (Add (Add (EInt 999) 
-(EInt 999)) (Add (EInt 999) (EInt[] 
- []
-
-
-Overfull \hbox (28.2813pt too wide) in paragraph at lines 466--466
-[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of the product of the product of 999 
-and 999 and the sum of 999 and 999[] 
- []
-
-
-Overfull \hbox (26.0838pt too wide) in paragraph at lines 487--487
-[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of 999 and the product of the sum of 
-999 and 999 and the sum of 999 and[] 
- []
-
-
-Overfull \hbox (19.49141pt too wide) in paragraph at lines 487--487
-[]\TU/DejaVuSansMono(0)/m/n/10.95 Add (EInt 999) (Mul (Add (EInt 999) (EInt 999
-)) (Add (EInt 999) (EInt 999)))[] 
- []
-
-
-Overfull \hbox (26.0838pt too wide) in paragraph at lines 487--487
-[]\TU/DejaVuSansMono(0)/m/n/10.95 the sum of 999 and the product of the sum of 
-999 and 999 and the sum of 999 and[] 
- []
-
-[18]
-Overfull \hbox (0.82831pt too wide) in paragraph at lines 507--509
-[]\TU/DejaVuSerif(0)/m/n/10.95 **Exercise 2 :** Write concrete syntax in your f
-avorite language, ‘ArithFaveLang.gf‘
- []
-
-! You can't use `macro parameter character #' in vertical mode.
-l.520 #
-       ## Solutions
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in vertical mode.
-l.520 ##
-        # Solutions
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in vertical mode.
-l.520 ###
-          Solutions
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-[19]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.562 ...r](https://en.wikipedia.org/wiki/Catalan_
-                                                  number) of
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.564 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-)) [20] (./roadmap.bbl
+! Too many }'s.
+l.382 Finally, \{twinPrime}
+                            is a specialized version of \term{primeGap} to 2...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+))) [4] (./roadmap.bbl
 ! Misplaced alignment tab character &.
-l.47 ...ation for Computing Machinery and Morgan &
+l.26 ...ation for Computing Machinery and Morgan &
                                                    Claypool.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2090,28 +1503,32 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-) [21
+) [5
 
-] [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
+]
+
+Package natbib Warning: There were undefined citations.
+
+[6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
 (./roadmap.aux (./preliminaries.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 252.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 255.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 255.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: A501921A386C7A5D9FFE80CD7B50A403;1170.
+(rerunfilecheck)             Checksum: 7C03B2CA6261477764980E7CB37EE0A0;461.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 32713 strings out of 479819
- 624369 string characters out of 5895846
- 1169805 words of memory out of 5000000
- 49143 multiletter control sequences out of 15000+600000
- 538030 words of font info for 145 fonts, out of 8000000 for 9000
+ 32586 strings out of 479819
+ 622250 string characters out of 5895846
+ 1169544 words of memory out of 5000000
+ 49026 multiletter control sequences out of 15000+600000
+ 537689 words of font info for 138 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,10n,109p,814b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,6n,109p,880b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (26 pages, 496368 bytes).
+Output written on roadmap.xdv (10 pages, 104620 bytes).

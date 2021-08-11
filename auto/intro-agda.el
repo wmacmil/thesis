@@ -2,6 +2,6 @@
  "intro-agda"
  (lambda ()
    (TeX-run-style-hooks
-    "latex/ex"))
+    "latex/twin-primes"))
  :latex)
 

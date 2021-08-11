@@ -15,11 +15,8 @@ module Namespace1 where
   private
     variable
       ℓ ℓ' ℓ'' ℓ''' : Level
-
 \end{code}
-
 \begin{code}
-
   isGroupHom : (G : Group {ℓ}) (H : Group {ℓ'}) (f : ⟨ G ⟩ → ⟨ H ⟩) → Type _
   isGroupHom G H f = (x y : ⟨ G ⟩) → f (x G.+ y) ≡ (f x H.+ f y) where
     module G = GroupStr (snd G)
@@ -31,9 +28,7 @@ module Namespace1 where
     field
       fun : ⟨ G ⟩ → ⟨ H ⟩
       isHom : isGroupHom G H fun
-
 \end{code}
-
 This actually \emph{was} the Cubical Agda implementation of a group homomorphism
 sometime around the end of 2020. We see that, while a mathematician might be
 able to infer the meaning of some of the syntax, the use of levels, the
@@ -49,9 +44,7 @@ had to refactor the commented lines to those shown below to be compatible with
 our outdated version of cubical.  These changes would not just be interesting
 to look at from the author of the libraries's perspective, but also
 syntactically.
-
 \begin{code}
-
   record IsGroupHom {A : Type ℓ} {B : Type ℓ'}
     (M : GroupStr A) (f : A → B) (N : GroupStr B)
     : Type (ℓ-max ℓ ℓ')
@@ -73,5 +66,4 @@ syntactically.
   GroupHom' : (G : Group {ℓ}) (H : Group {ℓ'}) → Type (ℓ-max ℓ ℓ')
   -- GroupHom' : (G : Group ℓ) (H : Group ℓ') → Type (ℓ-max ℓ ℓ')
   GroupHom' G H = Σ[ f ∈ (G .fst → H .fst) ] IsGroupHom (G .snd) f (H .snd)
-
 \end{code}

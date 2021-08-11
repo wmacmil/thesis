@@ -62,14 +62,9 @@
 \AgdaGeneralizable{ℓ'''}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaPostulate{Level}\<%
-\\
-\>[0]\<%
 \end{code}
-
 \begin{code}%
-\>[0]\<%
-\\
-\>[0][@{}l@{\AgdaIndent{1}}]%
+%
 \>[2]\AgdaFunction{isGroupHom}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{G}\AgdaSpace{}%
@@ -181,10 +176,7 @@
 \AgdaBound{G}\AgdaSpace{}%
 \AgdaBound{H}\AgdaSpace{}%
 \AgdaField{fun}\<%
-\\
-\>[0]\<%
 \end{code}
-
 This actually \emph{was} the Cubical Agda implementation of a group homomorphism
 sometime around the end of 2020. We see that, while a mathematician might be
 able to infer the meaning of some of the syntax, the use of levels, the
@@ -200,11 +192,8 @@ had to refactor the commented lines to those shown below to be compatible with
 our outdated version of cubical.  These changes would not just be interesting
 to look at from the author of the libraries's perspective, but also
 syntactically.
-
 \begin{code}%
-\>[0]\<%
-\\
-\>[0][@{}l@{\AgdaIndent{1}}]%
+%
 \>[2]\AgdaKeyword{record}\AgdaSpace{}%
 \AgdaRecord{IsGroupHom}\AgdaSpace{}%
 \AgdaSymbol{\{}\AgdaBound{A}\AgdaSpace{}%
@@ -361,6 +350,4 @@ syntactically.
 \AgdaBound{f}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{H}\AgdaSpace{}%
 \AgdaSymbol{.}\AgdaField{snd}\AgdaSymbol{)}\<%
-\\
-\>[0]\<%
 \end{code}
