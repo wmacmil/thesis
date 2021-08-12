@@ -2,6 +2,8 @@
  "preliminaries"
  (lambda ()
    (TeX-run-style-hooks
-    "intro-agda"))
+    "mltt"
+    "intro-agda"
+    "gfintro"))
  :latex)
 

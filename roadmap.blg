@@ -2,54 +2,69 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: roadmap.aux
 The style file: apalike2.bst
+A level-1 auxiliary file: intro.aux
+A level-1 auxiliary file: perspectives.aux
 A level-1 auxiliary file: preliminaries.aux
-Illegal, another \bibstyle command---line 25 of file roadmap.aux
+A level-1 auxiliary file: previouswork.aux
+A level-1 auxiliary file: natproof.aux
+A level-1 auxiliary file: grammar.aux
+A level-1 auxiliary file: latex/hott.aux
+A level-1 auxiliary file: horizon.aux
+A level-1 auxiliary file: conclusion.aux
+A level-1 auxiliary file: code.aux
+Illegal, another \bibstyle command---line 34 of file roadmap.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: example_bibliography.bib
 Warning--I didn't find a database entry for "escardó2020introduction"
+Warning--I didn't find a database entry for "ganesalingam2013language"
 Warning--can't use both author and editor fields in Bove2009
+Warning--empty booktitle in coqPat
+Warning--empty booktitle in harperTrinity
+Warning--empty journal in ljunglof2004expressivity
+Warning--can't use both author and editor fields in Montague1973
+Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 5 entries,
+You've used 31 entries,
             2229 wiz_defined-function locations,
-            546 strings with 5115 characters,
-and the built_in function-call counts, 2086 in all, are:
-= -- 197
-> -- 77
-< -- 5
-+ -- 26
-- -- 24
-* -- 168
-:= -- 353
-add.period$ -- 14
-call.type$ -- 5
-change.case$ -- 32
-chr.to.int$ -- 5
-cite$ -- 7
-duplicate$ -- 89
-empty$ -- 157
-format.name$ -- 31
-if$ -- 423
+            713 strings with 8574 characters,
+and the built_in function-call counts, 11317 in all, are:
+= -- 1117
+> -- 340
+< -- 36
++ -- 114
+- -- 102
+* -- 822
+:= -- 1920
+add.period$ -- 85
+call.type$ -- 31
+change.case$ -- 190
+chr.to.int$ -- 31
+cite$ -- 38
+duplicate$ -- 528
+empty$ -- 872
+format.name$ -- 145
+if$ -- 2314
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 27
-num.names$ -- 17
-pop$ -- 42
+missing$ -- 37
+newline$ -- 148
+num.names$ -- 101
+pop$ -- 221
 preamble$ -- 1
-purify$ -- 35
+purify$ -- 201
 quote$ -- 0
-skip$ -- 67
+skip$ -- 414
 stack$ -- 0
-substring$ -- 143
-swap$ -- 20
-text.length$ -- 2
+substring$ -- 743
+swap$ -- 104
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
-warning$ -- 2
-while$ -- 18
+type$ -- 164
+warning$ -- 7
+while$ -- 97
 width$ -- 0
-write$ -- 66
+write$ -- 384
 (There was 1 error message)

@@ -1,8 +1,45 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {}Preliminaries}{2}{section.1}%
-\contentsline {subsection}{\numberline {}Agda}{2}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {}Overview}{2}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {}Formalizing The Twin Prime Conjecture}{2}{subsubsection.1.1.2}%
-\contentsline {subsection}{\numberline {}Natural Language and Mathematics}{4}{subsection.1.2}%
-\contentsline {section}{References}{5}{subsection.1.2}%
-\contentsline {section}{\numberline {}Appendices}{6}{section.2}%
+\contentsline {section}{\numberline {}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {}Beyond Computational Trinitarianism}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {}What is a Homomorophism?}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {}Perspectives}{9}{section.2}%
+\contentsline {subsection}{\numberline {}Linguistic and Programming Language Abstractions}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {}Formalization and Informalization}{12}{subsection.2.2}%
+\contentsline {section}{\numberline {}Preliminaries}{13}{section.3}%
+\contentsline {subsection}{\numberline {}Martin-Löf Type Theory}{13}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {}Judgments}{13}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {}Rules}{14}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {}Propositions, Sets, and Types}{15}{subsection.3.2}%
+\contentsline {subsection}{\numberline {}Agda}{17}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {}Overview}{17}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {}Agda Programming}{18}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {}Formalizing The Twin Prime Conjecture}{21}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {}Grammatical Framework}{23}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {}Overview}{23}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {}Overview}{23}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {}Theoretical Overview}{24}{subsubsection.3.4.3}%
+\contentsline {paragraph}{ What is a GF grammar ? }{24}{section*.4}%
+\contentsline {subsubsection}{\numberline {}Some preliminary observations and considerations}{25}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {}A grammar for basic arithmetic}{26}{subsubsection.3.4.5}%
+\contentsline {paragraph}{Abstract Judgments}{26}{section*.5}%
+\contentsline {paragraph}{Arith.gf}{28}{section*.6}%
+\contentsline {paragraph}{Concrete Judgments}{28}{section*.7}%
+\contentsline {subsubsection}{\numberline {}The GF shell}{30}{subsubsection.3.4.6}%
+\contentsline {subsection}{\numberline {}Natural Language and Mathematics}{34}{subsection.3.5}%
+\contentsline {section}{\numberline {}Previous Work}{35}{section.4}%
+\contentsline {subsection}{\numberline {}Ranta}{35}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {}Prior GF Formalizations}{36}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {}Mohan Ganesalingam}{39}{subsection.4.2}%
+\contentsline {subsection}{\numberline {}other authors}{41}{subsection.4.3}%
+\contentsline {section}{\numberline {}Natural Number Proofs}{43}{section.5}%
+\contentsline {section}{\numberline {}A Spectrum of GF Grammars for types}{44}{section.6}%
+\contentsline {section}{\numberline {}HoTT Proofs}{45}{section.7}%
+\contentsline {subsection}{\numberline {}Why HoTT for natural language?}{45}{subsection.7.1}%
+\contentsline {subsection}{\numberline {}An introduction to equality}{46}{subsection.7.2}%
+\contentsline {subsection}{\numberline {}All about Identity}{47}{subsection.7.3}%
+\contentsline {section}{\numberline {}Goals and Challenges}{56}{section.8}%
+\contentsline {section}{\numberline {}Code}{58}{section.9}%
+\contentsline {subsection}{\numberline {}GF Parser}{58}{subsection.9.1}%
+\contentsline {subsection}{\numberline {}Additional Agda Hott Code}{58}{subsection.9.2}%
+\contentsline {section}{References}{59}{subsection.9.2}%
+\contentsline {section}{\numberline {}Appendices}{61}{section.10}%
