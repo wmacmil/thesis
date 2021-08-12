@@ -73,14 +73,17 @@
 \AgdaSymbol{→}\AgdaSpace{}%
 \AgdaBound{z}\<%
 \\
-%
-\\[\AgdaEmptyExtraSkip]%
 \>[0]\<%
 \end{code}
 
+\begin{figure}
+\textbf{Definition}:
+A type $A$ is contractible, if there is $a : A$, called the center of contraction, such that for all $x : A$, $\equalH {a}{x}$.
+\caption{Rendered Latex} \label{fig:M1}
+\begin{verbatim}
+isContr ( A : Set ) : Set = ( a : A ) ( * ) ( ( x : A ) -> Id ( a ) ( x ) )
+\end{verbatim}
 \begin{code}%
-\>[0]\<%
-\\
 \>[0]\AgdaFunction{isContr}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
@@ -104,9 +107,22 @@
 \AgdaSymbol{(}\AgdaBound{a}\AgdaSpace{}%
 \AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSymbol{)}\<%
-\\
-%
-\\[\AgdaEmptyExtraSkip]%
+\end{code}
+
+\caption{Contractibility} \label{fig:M3}
+\end{figure}
+
+
+\begin{figure}
+\textbf{Definition}:
+A map $f : \arrowH {A}{B}$ is an equivalence, if for all $y : B$, its fiber, $\comprehensionH {x}{A}{\equalH {\appH {f}{x}}{y}}$, is contractible.
+We write $\equivalenceH {A}{B}$, if there is an equivalence $\arrowH {A}{B}$.
+\begin{verbatim}
+Equivalence ( f : A -> B ) : Set =
+  ( y : B ) -> ( isContr ( fiber it ) ) ; ; ;
+  fiber it : Set = ( x : A ) ( * ) ( Id ( f ( x ) ) ( y ) )
+\end{verbatim}
+\begin{code}%
 \>[0]\AgdaFunction{Equivalence}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaSymbol{(}\AgdaBound{A}\AgdaSpace{}%
@@ -161,6 +177,7 @@
 \AgdaOperator{\AgdaDatatype{≡}}\AgdaSpace{}%
 \AgdaBound{f}\AgdaSpace{}%
 \AgdaBound{x}\AgdaSymbol{)}\<%
-\\
-\>[0]\<%
 \end{code}
+
+\caption{Contractibility} \label{fig:M3}
+\end{figure}

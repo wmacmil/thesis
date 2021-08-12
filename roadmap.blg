@@ -17,54 +17,55 @@ Illegal, another \bibstyle command---line 34 of file roadmap.aux
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: example_bibliography.bib
-Warning--I didn't find a database entry for "escardó2020introduction"
-Warning--I didn't find a database entry for "ganesalingam2013language"
+Warning--empty booktitle in Bar2016GlobularAO
 Warning--can't use both author and editor fields in Bove2009
 Warning--empty booktitle in coqPat
 Warning--empty booktitle in harperTrinity
+Warning--empty booktitle in 2002TheWO
 Warning--empty journal in ljunglof2004expressivity
 Warning--can't use both author and editor fields in Montague1973
+Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 31 entries,
+You've used 50 entries,
             2229 wiz_defined-function locations,
-            713 strings with 8574 characters,
-and the built_in function-call counts, 11317 in all, are:
-= -- 1117
-> -- 340
-< -- 36
-+ -- 114
-- -- 102
-* -- 822
-:= -- 1920
-add.period$ -- 85
-call.type$ -- 31
-change.case$ -- 190
-chr.to.int$ -- 31
-cite$ -- 38
-duplicate$ -- 528
-empty$ -- 872
-format.name$ -- 145
-if$ -- 2314
+            811 strings with 11426 characters,
+and the built_in function-call counts, 18987 in all, are:
+= -- 1895
+> -- 609
+< -- 56
++ -- 217
+- -- 189
+* -- 1376
+:= -- 3185
+add.period$ -- 136
+call.type$ -- 50
+change.case$ -- 326
+chr.to.int$ -- 50
+cite$ -- 60
+duplicate$ -- 890
+empty$ -- 1425
+format.name$ -- 256
+if$ -- 3901
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 37
-newline$ -- 148
-num.names$ -- 101
-pop$ -- 221
+missing$ -- 52
+newline$ -- 235
+num.names$ -- 162
+pop$ -- 368
 preamble$ -- 1
-purify$ -- 201
+purify$ -- 337
 quote$ -- 0
-skip$ -- 414
+skip$ -- 706
 stack$ -- 0
-substring$ -- 743
-swap$ -- 104
-text.length$ -- 9
+substring$ -- 1229
+swap$ -- 195
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 164
-warning$ -- 7
-while$ -- 97
+type$ -- 276
+warning$ -- 10
+while$ -- 158
 width$ -- 0
-write$ -- 384
+write$ -- 620
 (There was 1 error message)

@@ -98,125 +98,6 @@ a direct predecessor to this work. In some sense, the scope of work seeks to
 recapitulate what was already done in 1998 - but this was prior to both GF's
 completion, and Alfa's hard fork to Agda.
 
-\subsubsection{Prior GF Formalizations}
-
-Prior to the grammars explored thin this thesis, Ranta produced two main results
-\cite{rantaLog} \cite{aarneHott}. These are incredibly important precedents in
-this approach to proof translation, and serve as important comparative work for
-which this work responds. In \cite{rantaLog}, Ranta designed a grammar which
-allowed for predicate logic with domain specific lexicon supporting mathematical
-theories on top of the logic like geometry or arithmetic. The the syntax was
-both meant to be relatively complete, so that typical logical utterances of
-interest could be accommodated, as well as relatively non-trivial linguistic
-nuance including lists of terms, predicates, and propositions, in-situ and
-bounded quantification, and multiple forms of constructing more syntactically
-nuanced predicates. The syntactic nuance captured in this work was by means of an
-extended grammar, via a Portable Grammar Format (PGF), on top of the minimal,
-core logical formalism.
-
-One could translate from the core and extended via a denotational semantics
-approach. The tree representing the \emph{syntactically complete} phrase ``for
-all natural numbers x, x is even or x is odd" would be evaluated to a tree which
-linearizes to the \emph{semantically adequate} phrase ``every natural number is
-even or odd". In the opposite direction, the desugaring of a logically informal
-statement into something linguistically idiomatic is also accomplished. In some
-sense, this grammar serves as a case study for what this thesis is trying to do.
-However, we note that the core logic only supports propositions without proofs -
-it is not a type theory with terms. This means that we are being slightly
-abusive to our terms, as the formal/informal translation is taking place is at
-the PGF level. The GF translation between concrete syntaxes supports multiple
-NLs, but the syntactic completeness has no mechanism of verification via Agda's
-type checker. Additionally, the domain of arithmetic is an important case study,
-but scaling this grammar (or any other, for that matter) to allow for
-\emph{semantic adequacy} of real mathematics is still far away, or as Ranta
-concedes, ``it seems that text generation involves undecidable optimization
-problems that have no ultimate automatic solution." It would be interesting to
-further extend this grammar with both terms and an Agda-like concrete syntax. 
-
-In 2014, Ranta gave an unpublished talk at the Stockholm Mathematics seminar
-\cite{aarneHott}. Fortunately the code is available, although many of the design
-choices aren't documented in the grammar. This project aimed to provide a
-translation like the one desired in our current work, but it took a real piece
-of mathematics text as the main influence on the design of the Abstract syntax.
-
-This work took a page of text from Peter Aczel's book which more or less goes
-over standard HoTT definitions and theorems, and allows the translation of the
-latex to a pidgin logical language. The central motivation of this grammar was
-to capture, entirely ``real" natural language mathematics, i.e. that which was
-written for the mathematician. Therefore, it isn't reminiscent of the slender
-abstract syntax the type theorist adores, and sacrificed ``syntactic
-completeness" for ``semantic adequacy". This means that the abstract syntax is
-much larger and very expressive, but it no longer becomes easy to reason about
-and additionally quite ad-hoc. Another defect is that this grammar
-overgenerates, so producing a unique parse from the PL side will become tricky.
-Nonetheless, this means that it's presumably possible to carve a subset of the
-GF HoTT abstract file to accommodate an Agda program, but one encounters rocks as soon
-as one begins to dig. For example, in \autoref{fig:M1} is some rendered latex
-taken verbatim from Ranta's test code.
-
-With some of hours of tinkering on the pidgin logic concrete syntax and some
-reverse engineering with help from the GF shell, one is able to get these
-definitions in \autoref{fig:M2}, which are intended to share the same syntactic
-space as cubicalTT. We note the first definition of ``contractability" actually
-runs in cubicalTT up to renaming a lexical items, and it is clear that the
-translation from that to Agda should be a benign task. However, the
-\emph{equivalence} syntax is stuck with the artifact from the bloated abstract
-syntax for the of the anaphoric use of ``it", which may presumably be fixed with
-a few hours more of tinkering, but becomes even more complicated when not just
-defining new types, but actually writing real mathematical proofs, or relatively
-large terms. To extend this grammar to accommodate a chapter worth of material,
-let alone a book, will not just require extending the lexicon, but encountering
-other syntactic phenomena that will further be difficult to compress when
-defining Agda's concrete syntax.
-
-\begin{figure}
-
- \textbf{Definition}:
- A type $A$ is contractible, if there is $a : A$, called the center of contraction, such that for all $x : A$, $\equalH {a}{x}$.
-
- \textbf{Definition}:
- A map $f : \arrowH {A}{B}$ is an equivalence, if for all $y : B$, its fiber, $\comprehensionH {x}{A}{\equalH {\appH {f}{x}}{y}}$, is contractible.
- We write $\equivalenceH {A}{B}$, if there is an equivalence $\arrowH {A}{B}$.
-\caption{Rendered Latex} \label{fig:M1}
-
-
-\begin{verbatim}
-isContr ( A : Set ) : Set = ( a : A ) ( * ) ( ( x : A ) -> Id ( a ) ( x ) )
-
-Equivalence ( f : A -> B ) : Set = 
-  ( y : B ) -> ( isContr ( fiber it ) ) ; ; ; 
-  fiber it : Set = ( x : A ) ( * ) ( Id ( f ( x ) ) ( y ) )
-\end{verbatim}
-\caption{Pidgin cubicalTT} \label{fig:M2}
-
-\input{latex/ContrClean}
-% \input{latex/ex}
-% \input{latex/primitives}
-
-\caption{Agda} \label{fig:M3}
-\end{figure}
-
-Additionally, we give the Agda code in \autoref{fig:M3}, so-as to see what the
-end result of such a program would be. The astute reader will also notice a
-semantic in the pidgin rendering error relative to the Agda implementation.
-\codeword{fiber} has the type \codeword{it : Set} instead of something like
-\codeword{(y : B) : Set}, and the y variable is unbound in the \codeword{fiber}
-expression. This demonstrates that to design a grammar prioritizing
-\emph{semantic adequacy} and subsequently trying to incorporate \emph{syntactic
-completeness} becomes a very difficult problem. Depending on the application of
-the grammar, the emphasis on this axis is most assuredly a choice one should
-consider up front.
-
-While both these grammars have their strengths and weaknesses, one shall see
-shortly that the approach in this thesis, taking an actual programming language
-parser in Backus-Naur Form Converter (BNFC), GFifying it, and trying to use the
-abstract syntax to model natural language, gives in some sense a dual challenge,
-where the abstract syntax remains simple, but its linearizations become
-must increase in complexity.
-
-% Draw a figure with these as axes, the names of the grammars, and a z axis for
-% size of lexicon, and basically how can we optimize all three
-
 \subsection{Mohan Ganesalingam}
 
 
@@ -388,23 +269,85 @@ relate this to HoTT as a perfect 'case study' in the foundations of mathematics
 
 \subsection{other authors}
 
-The question 
+\begin{displayquote}
+QED is the very tentative title of a project to build a computer system that effectively represents all important mathematical knowledge and techniques.
+\cite{godel1994qed} 
+\end{displayquote}
 
-We note that 
+The ambition of the QED Manifesto, with formalization and informalization of
+mathematics being one subset, is probably impossible. The myriad attempts
+at formalization and informalization are too much to compress here - a survey
+and comparison of these ideas is unfortunately unavailable. We recount some of
+them briefly.
 
-NaProche
+The Naproche project (Natural language Proof Checking) is a CNL for studying the
+language of mathematics by using Proof Representation Structures, a mutated form
+of Discourse Representation Structures \cite{cramer2009naproche}. A central
+goal of Naproche is to develop a controlled natural language (CNL), based off FOL, for
+mathematics texts. It parses a theorem from the CNL into fully formal
+statement, and then comes with a proof checking back-end to allow verification,
+where it uses an Automated Theorem Prover (ATP) to check for correctness.
+While the language is quite ``natural looking", it doesn't offer the same
+linguistic flexibility as our GF approach and aspirations.
 
-he Naproche project (Natural language Proof Checking) studies the semi-formal language of mathematics from a linguistic, philosophical and mathematical perspective. A central goal of Naproche is to develop a controlled natural language (CNL) for mathematical texts and adapted proof checking software which checks texts written in the CNL for syntactical and mathematical correctness. 
+Mizar is a system attempting to be a formal language,which mathematicians can
+use to express their results, and a database \cite{rudnicki1992overview}. It is
+based off Tarski-Grothendeick set theory, and allows for correctness checking of
+articles. It was originally developed concurrent to Martin-Löf's work in 1973,
+and so much of the interest in types instead of sets couldn't be anticipated.
+The focus Mizar on syntax resembling mathematics was pioneering, nonetheless, it
+uses clumsy references and looks unreadable to those without expertise. Mizar
+has a journal devoted to results in it, \emph{Formalized Mathematics}, and
+offers a large library of known results. Additionally, it has inspired
+iterations for other vernacular proof assistants, like Isabelle's Intelligible semi-automated
+reasoning (Isar) extension \cite{wenzel2004isabelle}.
 
-Uses Automated Theorem Prover (ATP) backend rather than ITP
+Subsequently, in \cite{mlTrans}, the authors take a corpus of parallel Mizar proofs natural
+language proofs with latex, and seek to \emph{autoformalize} natural language
+text with the intention of, in the future, further elaboration into an ITP.
+This work uses traditional language models from the machine learning community, and analyze
+the results. They were able to see some results, but nothing that as of yet can
+be foreseen to general use.  Interestingly, a type elaboration mechanism in some
+of their models was shown to bolster results.
+
+Formalization seems more feasible with machine learning methods than
+informalization , partially because tactics like ``hammer" in Coq for example,
+are capable of some fairly large proofs \cite{czajka2018hammer} . Nonetheless,
+for the Agda developer this isn't yet very relevant, and it's debatable whether
+it would even be desirable. Voevodsky, for example, was apparently skeptical of
+the usefulness of automated theorem proving for much of mathematics, as are many
+mathematicians (although this is certainly changing).
+
+The Boxer system, a CCG parser \cite{bos-etal-2004-wide} which allows English
+text translation into FOL. However, it is not always correct, and dealing with
+the language of mathematics will present obstacles. 
+
+In \cite{proofFrom} the authors test the informalization. Despite working with
+Coq, the the authors poignantly distinguish between proof scripts, sequences of
+tactics, and proof objects, and focus on natural deduction proofs. Since Coq is
+equipped with notions of Set, Type, and Prop, their methods make distinguishing
+between these possibly easier. This work only focuses on linearization of trees,
+and GF's pretty printer is likely superior to any NL generation techniques
+because of help from the RGL. The complexity of the system also made it
+untenable for larger proofs - nonetheless, it serves as an important prelude to
+many of the subsequent GF developments in this area.
+
+There are many other examples exploring the natural language and theorem prover
+boundary. It should be noted that GF's role in this space is primitive, but it
+does offer the advantage of being interfaced with many natural languages, and in
+programming languages too, including the syntax of these systems. We also hope
+other PL developers will and use , like the Grammatical Logical Inference
+Framework (GLIF), which uses GF as a front-end for the Meta-Meta-Theory
+framework \cite{schaefer2020glif}.
 
 
-Mizar
 
-Coq (coquand), 
 
-Boxer
-Boxer system [29] is able to parse any English sentence and translate it into a formula
-of predicate calculus. Combined with theorem proving and model checking, Boxer can
-moreover solve problems in open-domain textual entailment by formal reasoning [30].
-The problem that remains with Boxer is that the quality of formalization and rea-
+
+--- For conclusion
+
+
+
+The quest for computers doing mathematics for us, or at least helping is, has
+seen many bifurcations since the birth of computer science. I believe doing
+mathematics is impossible, but computers certainly do help.

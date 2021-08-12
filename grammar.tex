@@ -1,56 +1,177 @@
 
 \section{A Spectrum of GF Grammars for types}
 
-We now discuss the various iterations of code which experimented with NL aspects
+\subsection{Prior GF Formalizations}
 
-We should again emphasize the role of, in particular, Rantas two grammars, one
-formalizing logic, and the other working with a case study of a real text\cite{aarneHott}
+Prior to the grammars explored thin this thesis, Ranta produced two main results
+\cite{rantaLog} \cite{aarneHott}. These are incredibly important precedents in
+this approach to proof translation, and serve as important comparative work for
+which this work responds. In \cite{rantaLog}, Ranta designed a grammar which
+allowed for predicate logic with domain specific lexicon supporting mathematical
+theories on top of the logic like geometry or arithmetic. The the syntax was
+both meant to be relatively complete, so that typical logical utterances of
+interest could be accommodated, as well as relatively non-trivial linguistic
+nuance including lists of terms, predicates, and propositions, in-situ and
+bounded quantification, and multiple forms of constructing more syntactically
+nuanced predicates. The syntactic nuance captured in this work was by means of an
+extended grammar, via a Portable Grammar Format (PGF), on top of the minimal,
+core logical formalism.
+
+One could translate from the core and extended via a denotational semantics
+approach. The tree representing the \emph{syntactically complete} phrase ``for
+all natural numbers x, x is even or x is odd" would be evaluated to a tree which
+linearizes to the \emph{semantically adequate} phrase ``every natural number is
+even or odd". In the opposite direction, the desugaring of a logically informal
+statement into something linguistically idiomatic is also accomplished. In some
+sense, this grammar serves as a case study for what this thesis is trying to do.
+However, we note that the core logic only supports propositions without proofs -
+it is not a type theory with terms. This means that we are being slightly
+abusive to our terms, as the formal/informal translation is taking place is at
+the PGF level. The GF translation between concrete syntaxes supports multiple
+NLs, but the syntactic completeness has no mechanism of verification via Agda's
+type checker. Additionally, the domain of arithmetic is an important case study,
+but scaling this grammar (or any other, for that matter) to allow for
+\emph{semantic adequacy} of real mathematics is still far away, or as Ranta
+concedes, ``it seems that text generation involves undecidable optimization
+problems that have no ultimate automatic solution." It would be interesting to
+further extend this grammar with both terms and an Agda-like concrete syntax. 
+
+In 2014, Ranta gave an unpublished talk at the Stockholm Mathematics seminar
+\cite{aarneHott}. Fortunately the code is available, although many of the design
+choices aren't documented in the grammar. This project aimed to provide a
+translation like the one desired in our current work, but it took a real piece
+of mathematics text as the main influence on the design of the Abstract syntax.
+
+This work took a page of text from Peter Aczel's book which more or less goes
+over standard HoTT definitions and theorems, and allows the translation of the
+latex to a pidgin logical language. The central motivation of this grammar was
+to capture, entirely ``real" natural language mathematics, i.e. that which was
+written for the mathematician. Therefore, it isn't reminiscent of the slender
+abstract syntax the type theorist adores, and sacrificed ``syntactic
+completeness" for ``semantic adequacy". This means that the abstract syntax is
+much larger and very expressive, but it no longer becomes easy to reason about
+and additionally quite ad-hoc. Another defect is that this grammar
+overgenerates, so producing a unique parse from the PL side will become tricky.
+Nonetheless, this means that it's presumably possible to carve a subset of the
+GF HoTT abstract file to accommodate an Agda program, but one encounters rocks as soon
+as one begins to dig. For example, in \autoref{fig:M1} is some rendered latex
+taken verbatim from Ranta's test code.
+
+With some of hours of tinkering on the pidgin logic concrete syntax and some
+reverse engineering with help from the GF shell, one is able to get these
+definitions in \autoref{fig:M2}, which are intended to share the same syntactic
+space as cubicalTT. We note the first definition of ``contractability" actually
+runs in cubicalTT up to renaming a lexical items, and it is clear that the
+translation from that to Agda should be a benign task. However, the
+\emph{equivalence} syntax is stuck with the artifact from the bloated abstract
+syntax for the of the anaphoric use of ``it", which may presumably be fixed with
+a few hours more of tinkering, but becomes even more complicated when not just
+defining new types, but actually writing real mathematical proofs, or relatively
+large terms. To extend this grammar to accommodate a chapter worth of material,
+let alone a book, will not just require extending the lexicon, but encountering
+other syntactic phenomena that will further be difficult to compress when
+defining Agda's concrete syntax.
+
+\input{latex/ContrClean}
+
+% \begin{figure}
+
+%  \textbf{Definition}:
+%  A type $A$ is contractible, if there is $a : A$, called the center of contraction, such that for all $x : A$, $\equalH {a}{x}$.
+
+%  \textbf{Definition}:
+%  A map $f : \arrowH {A}{B}$ is an equivalence, if for all $y : B$, its fiber, $\comprehensionH {x}{A}{\equalH {\appH {f}{x}}{y}}$, is contractible.
+%  We write $\equivalenceH {A}{B}$, if there is an equivalence $\arrowH {A}{B}$.
+% \caption{Rendered Latex} \label{fig:M1}
+
+
+% \begin{verbatim}
+% isContr ( A : Set ) : Set = ( a : A ) ( * ) ( ( x : A ) -> Id ( a ) ( x ) )
+
+% Equivalence ( f : A -> B ) : Set = 
+%   ( y : B ) -> ( isContr ( fiber it ) ) ; ; ; 
+%   fiber it : Set = ( x : A ) ( * ) ( Id ( f ( x ) ) ( y ) )
+% \end{verbatim}
+% \caption{Pidgin cubicalTT} \label{fig:M2}
+
+% \input{latex/ContrClean}
+% % \input{latex/ex}
+% % \input{latex/primitives}
+
+% \caption{Agda} \label{fig:M3}
+% \end{figure}
+
+Additionally, we give the Agda code in \autoref{fig:M3}, so-as to see what the
+end result of such a program would be. The astute reader will also notice a
+semantic in the pidgin rendering error relative to the Agda implementation.
+\codeword{fiber} has the type \codeword{it : Set} instead of something like
+\codeword{(y : B) : Set}, and the y variable is unbound in the \codeword{fiber}
+expression. This demonstrates that to design a grammar prioritizing
+\emph{semantic adequacy} and subsequently trying to incorporate \emph{syntactic
+completeness} becomes a very difficult problem. Depending on the application of
+the grammar, the emphasis on this axis is most assuredly a choice one should
+consider up front.
+
+While both these grammars have their strengths and weaknesses, one shall see
+shortly that the approach in this thesis, taking an actual programming language
+parser in Backus-Naur Form Converter (BNFC), GFifying it, and trying to use the
+abstract syntax to model natural language, gives in some sense a dual challenge,
+where the abstract syntax remains simple, but its linearizations become
+must increase in complexity.
+
+
+% below is prior text, probably discard
+
+% We now discuss the various iterations of code which experimented with NL aspects
+
+% We should again emphasize the role of, in particular, Rantas two grammars, one
+% formalizing logic, and the other working with a case study of a real text\cite{aarneHott}
 
 
 
-We now discuss the GF implementation, capable of parsing both natural language
-and Agda syntax. The parser was appropriated from the cubicaltt BNFC parser,
-de-cubified and then gf-ified. The languages are tightly coupled, so the
-translation is actually quite simple. Some main differences are:
+% We now discuss the GF implementation, capable of parsing both natural language
+% and Agda syntax. The parser was appropriated from the cubicaltt BNFC parser,
+% de-cubified and then gf-ified. The languages are tightly coupled, so the
+% translation is actually quite simple. Some main differences are:
 
-\begin{itemize}[noitemsep]
+% \begin{itemize}[noitemsep]
 
-\item GF treats abstract and concrete syntax seperately. This allows GF to
-support many concrete syntax implementation of a given grammar
+% \item GF treats abstract and concrete syntax seperately. This allows GF to
+% support many concrete syntax implementation of a given grammar
 
-\item Fixity is dealt with at the concrete syntax layer in GF.  This allows for
-more refined control of fixity, but also results in difficulties : during
-linearization their can be the insertion of extra parens.
+% \item Fixity is dealt with at the concrete syntax layer in GF.  This allows for
+% more refined control of fixity, but also results in difficulties : during
+% linearization their can be the insertion of extra parens.
 
-\item GF supports dependent hypes and higher order abstract syntax, which makes
-it suitable to typecheck at the parsing stage. It would very interesting to see
-if this is interoperable with the current version of this work in later
-iterations [Todo - add github link referncing work I've done in this direction]
+% \item GF supports dependent hypes and higher order abstract syntax, which makes
+% it suitable to typecheck at the parsing stage. It would very interesting to see
+% if this is interoperable with the current version of this work in later
+% iterations [Todo - add github link referncing work I've done in this direction]
 
-\item GF also is enhanced by a PGF back-end, allowing an embedding of grammars
-into, among other languages, Haskell.
+% \item GF also is enhanced by a PGF back-end, allowing an embedding of grammars
+% into, among other languages, Haskell.
 
-\end{itemize}
+% \end{itemize}
 
-While GF is targeted towards natural language translation, there's nothing
-stopping it from being used as a PL tool as well, like, for instance, the
-front-end of a compiler. The innovation of this thesis is to combine both uses,
-thereby allowing translation between Controlled Natural Languages and
-programming languages.
+% While GF is targeted towards natural language translation, there's nothing
+% stopping it from being used as a PL tool as well, like, for instance, the
+% front-end of a compiler. The innovation of this thesis is to combine both uses,
+% thereby allowing translation between Controlled Natural Languages and
+% programming languages.
 
-Example expressions the grammar can parse are seen below, which have been
-verified by hand to be isomorphic to the corresponding cubicaltt BNFC trees:
+% Example expressions the grammar can parse are seen below, which have been
+% verified by hand to be isomorphic to the corresponding cubicaltt BNFC trees:
 
-\begin{verbatim}
+% \begin{verbatim}
 
-data bool : Set where true | false 
-data nat : Set where zero | suc ( n : nat )  
-caseBool ( x : Set ) ( y z : x ) : bool -> Set = split false -> y || true -> z
-indBool ( x : bool -> Set ) ( y : x false ) ( z : x true ) : ( b : bool ) -> x b = split false -> y || true  -> z
-funExt  ( a : Set )   ( b : a -> Set )   ( f g :  ( x : a )  -> b x )   ( p :  ( x : a )  -> ( b x )   ( f x ) == ( g x )  )  : (  ( y : a )  -> b y )  f == g = undefined
-foo ( b : bool ) : bool = b
+% data bool : Set where true | false 
+% data nat : Set where zero | suc ( n : nat )  
+% caseBool ( x : Set ) ( y z : x ) : bool -> Set = split false -> y || true -> z
+% indBool ( x : bool -> Set ) ( y : x false ) ( z : x true ) : ( b : bool ) -> x b = split false -> y || true  -> z
+% funExt  ( a : Set )   ( b : a -> Set )   ( f g :  ( x : a )  -> b x )   ( p :  ( x : a )  -> ( b x )   ( f x ) == ( g x )  )  : (  ( y : a )  -> b y )  f == g = undefined
+% foo ( b : bool ) : bool = b
 
-\end{verbatim}
+% \end{verbatim}
 
-[Todo] add use cases
+% [Todo] add use cases
 

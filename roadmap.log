@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  12 AUG 2021 06:24
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  12 AUG 2021 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1148,45 +1148,50 @@ LaTeX Warning: Label `fig:M2' multiply defined.
 
 ) (./preliminaries.aux
 
+LaTeX Warning: Label `fig:M5' multiply defined.
+
+
+LaTeX Warning: Label `fig:M6' multiply defined.
+
+
 LaTeX Warning: Label `fig:M2' multiply defined.
 
 
 LaTeX Warning: Label `def:def3' multiply defined.
 
-) (./previouswork.aux
+) (./previouswork.aux) (./natproof.aux) (./grammar.aux
 
 LaTeX Warning: Label `fig:M1' multiply defined.
 
 
-LaTeX Warning: Label `fig:M2' multiply defined.
+LaTeX Warning: Label `fig:M3' multiply defined.
 
 
 LaTeX Warning: Label `fig:M3' multiply defined.
 
-) (./natproof.aux) (./grammar.aux) (./latex/hott.aux) (./horizon.aux) (./conclu
-sion.aux) (./code.aux))
+) (./latex/hott.aux) (./horizon.aux) (./conclusion.aux) (./code.aux))
 \openout1 = `roadmap.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1223,7 +1228,7 @@ LaTeX Font Info:    ... okay on input line 137.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box118
-Package hyperref Info: Link coloring OFF on input line 137.
+Package hyperref Info: Link coloring OFF on input line 121.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1233,9 +1238,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 137.
-LaTeX Info: Redefining \pageref on input line 137.
-LaTeX Info: Redefining \nameref on input line 137.
+LaTeX Info: Redefining \ref on input line 121.
+LaTeX Info: Redefining \pageref on input line 121.
+LaTeX Info: Redefining \nameref on input line 121.
 (./roadmap.out) (./roadmap.out)
 \@outlinefile=\write5
 \openout5 = `roadmap.out'.
@@ -1280,16 +1285,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 137.
+(Font)              `operators' in the math version `normal' on input line 121.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 137.
+ line 121.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 137.
+(Font)              `operators' in the math version `bold' on input line 121.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 137.
+t line 121.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1360,15 +1365,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 137.
+(Font)              `symbols' in the math version `normal' on input line 121.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 137.
+t line 121.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 137.
+(Font)              `symbols' in the math version `bold' on input line 121.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 137.
+t line 121.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1422,16 +1427,16 @@ uage=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-37.
+21.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 137.
+t line 121.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 137
+(Font)              `largesymbols' in the math version `bold' on input line 121
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 137.
+t line 121.
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                `mathtools' package.
@@ -1454,35 +1459,35 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 File: logo/gu_logo_blue.pdf Graphic file (type pdf)
 <use logo/gu_logo_blue.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 150.
+(Font)              scaled to size 10.95116pt on input line 134.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 150.
+(Font)              scaled to size 7.6658pt on input line 134.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 150.
+(Font)              scaled to size 5.47559pt on input line 134.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 150.
+(Font)              scaled to size 10.94882pt on input line 134.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 150.
+(Font)              scaled to size 7.66417pt on input line 134.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 150.
+(Font)              scaled to size 5.47441pt on input line 134.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-50.
+34.
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.475> not available
-(Font)              size <5> substituted on input line 150.
+(Font)              size <5> substituted on input line 134.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 150
+LaTeX Font Info:    Trying to load font information for U+msa on input line 134
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 150
+LaTeX Font Info:    Trying to load font information for U+msb on input line 134
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (40.82745pt too wide) in paragraph at lines 150--162
+Overfull \hbox (40.82745pt too wide) in paragraph at lines 134--146
 [][] 
  []
 
@@ -1704,23 +1709,16 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no p in font nullfont!
-[10] [11])
-Runaway argument?
-{itemize[noitemsep] \par \item it may be formalized differently by tw\ETC.
-! File ended while scanning use of \begin .
-<inserted text> 
-                \par 
-l.223 \include{perspectives}
-                            
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+[10] [11] [12] [13] [14] [15] [16] [17]
+Overfull \hbox (2.15211pt too wide) in paragraph at lines 547--556
+[]\TU/DejaVuSerif(0)/m/n/10.95 Graphical Programming languages facilitating dia
+grammatic programming are one
+ []
 
-[12]
+[18]) [19]
 \openout2 = `preliminaries.aux'.
 
-(./preliminaries.tex (./mltt.tex [13
+(./preliminaries.tex (./mltt.tex [20
 
 
 ]
@@ -1742,7 +1740,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[14]
+[21]
 Overfull \hbox (5.64789pt too wide) in paragraph at lines 135--147
  [][] 
  []
@@ -1761,12 +1759,12 @@ Overfull \hbox (13.96936pt too wide) in paragraph at lines 165--178
  [][] 
  []
 
-[15]
+[22]
 Overfull \hbox (17.62871pt too wide) in paragraph at lines 215--222
  [][] 
  []
 
-[16]) (./intro-agda.tex [17] (./latex/ex.tex
+[23]) (./intro-agda.tex [24] (./latex/ex.tex
 \openout4 = `roadmap.ptb'.
 
 
@@ -1906,7 +1904,7 @@ Overfull \hbox (112.40799pt too wide) in paragraph at lines 248--248
  [][][][] 
  []
 
-[18]
+[25]
 Missing character: There is no ̌ in font cmmi10!
 
 Overfull \hbox (66.17099pt too wide) detected at line 274
@@ -1917,7 +1915,7 @@ Overfull \hbox (66.17099pt too wide) detected at line 274
 
 \openout4 = `roadmap.ptb'.
 
-[19]
+[26]
 
 ! Package ebproof Error: Missing premiss in a proof tree.
 
@@ -1983,15 +1981,10 @@ Overfull \hbox (10.37508pt too wide) in paragraph at lines 590--590
  [][] 
  []
 
-) (./latex/twin-primes.tex
-
-Package natbib Warning: Citation `escardó2020introduction' on page 20 undefined
- on input line 96.
-
-[20]
+) (./latex/twin-primes.tex [27]
 \openout4 = `roadmap.ptb'.
 
-[21]
+[28]
 \openout4 = `roadmap.ptb'.
 
 ! Missing $ inserted.
@@ -2027,7 +2020,7 @@ l.386 Finally, \{twinPrime}
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-) [22]) (./gfintro.tex [23]
+) [29]) (./gfintro.tex [30]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2157,7 +2150,7 @@ l.116
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[24]
+[31]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2265,7 +2258,7 @@ ns 𝜙: (c$[][] [][][][] [][][][] [] [][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][]$ 
  []
 
-[25]
+[32]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2282,7 +2275,7 @@ l.190
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[26]
+[33]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2309,13 +2302,13 @@ Overfull \hbox (702.87512pt too wide) in paragraph at lines 267--271
 ][][][][][][][][][][][][][][][]$ 
  []
 
-[27] [28]
+[34] [35]
 Overfull \hbox (28.28131pt too wide) in paragraph at lines 351--351
 []\TU/DejaVuSansMono(0)/m/n/10.95 lin Add e1 e2 = "the sum of" ++ e1 ++ "and" +
 + e2 ; Mul e1 e2 = "the product of"[] 
  []
 
-[29]
+[36]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2396,7 +2389,7 @@ Overfull \hbox (50.1332pt too wide) in paragraph at lines 431--437
 ttps://inariksit.github.io/gf/2018/08/28/gf-
  []
 
-[30]
+[37]
 Overfull \hbox (34.87378pt too wide) in paragraph at lines 446--446
 []\TU/DejaVuSansMono(0)/m/n/10.95 0 msec Arith> help gr gr, generate_random gen
 erate random trees in the current[] 
@@ -2420,7 +2413,7 @@ Overfull \hbox (26.0838pt too wide) in paragraph at lines 487--487
 999 and 999 and the sum of 999 and[] 
  []
 
-[31]
+[38]
 Overfull \hbox (19.49141pt too wide) in paragraph at lines 487--487
 []\TU/DejaVuSansMono(0)/m/n/10.95 Add (EInt 999) (Mul (Add (EInt 999) (EInt 999
 )) (Add (EInt 999) (EInt 999)))[] 
@@ -2462,7 +2455,7 @@ I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-[32]
+[39]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2479,10 +2472,10 @@ l.564
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-) [33]) [34]
+) [40]) [41]
 \openout2 = `previouswork.aux'.
 
-(./previouswork.tex [35
+(./previouswork.tex [42
 
 
 ]
@@ -2491,62 +2484,330 @@ Overfull \hbox (7.00284pt too wide) in paragraph at lines 76--90
 ][][][][][][][][][][] [] [][][][] [] [][][][][][][] [][][][][][][][][][]$
  []
 
-[36] [37] (./latex/ContrClean.tex
-\openout4 = `roadmap.ptb'.
-
-) [38]
-
-Package natbib Warning: Citation `ganesalingam2013language' on page 39 undefine
-d on input line 231.
-
-[39] [40]
-Overfull \hbox (4.69714pt too wide) in paragraph at lines 366--368
+[43] [44] [45]
+Overfull \hbox (4.69714pt too wide) in paragraph at lines 247--249
 []\TU/DejaVuSerif(0)/m/n/10.95 mal proofs are provided; and the cycle repeats. 
 Thus informal mathematics changes
  []
 
-[41]) [42]
+
+Overfull \hbox (1.2222pt too wide) in paragraph at lines 293--304
+\TU/DejaVuSerif(0)/m/n/10.95 use to express their results, and a database [[]].
+ It is based off Tarski-Grothendeick
+ []
+
+[46]
+Overfull \hbox (1.33945pt too wide) in paragraph at lines 335--342
+[]\TU/DejaVuSerif(0)/m/n/10.95 There are many other examples exploring the natu
+ral language and theorem prover
+ []
+
+) [47] [48]
 \openout2 = `natproof.aux'.
 
-(./natproof.tex) [43
+(./natproof.tex) [49
 
 
 ]
 \openout2 = `grammar.aux'.
 
-(./grammar.tex) [44
+(./grammar.tex [50
 
 
-]
+] (./latex/ContrClean.tex
+\openout4 = `roadmap.ptb'.
+
+\openout4 = `roadmap.ptb'.
+
+) [51]) [52]
 \openout2 = `latex/hott.aux'.
 
-(./latex/hott.tex [45
+(./latex/hott.tex
+! Undefined control sequence.
+l.56 ...ements $a,b:A$, we can form the type $(\id
+                                                  [A]{a}{b}):\UU$ in the sam...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \id 
+                    
+l.57 ... basic way to construct an element of $\id
+                                                  {a}{b}$ is to know that $a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.59   \[\refl{} : \prod_{a:A} (\id
+                                   [A]{a}{a}) \]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[53
 
 
 ]
 \openout4 = `roadmap.ptb'.
 
-[46]
+! Undefined control sequence.
+<recently read> \id 
+                    
+l.127 ...it mean to ``construct an element of $\id
+                                                  {a}{b}$''? For the mathema...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.128 use to thinking in terms of sets $\{\id
+                                             {a}{b} \mid a,b \in \mathbb{N} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[54]
 \openout4 = `roadmap.ptb'.
 
-[47] [48]
+[55]
+! Undefined control sequence.
+l.269     \item for every $x,y:A$ and every $p:\id
+                                                  [A]xy$ we have a type $D(x...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \indid 
+                       
+l.274     \item there exists an element $\indid
+                                               {A}(D,d,x,y,p):D(x,y,p)$ for ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.275     two elements $x,y:A$ and $p:\id
+                                         [A]xy$, such that $\indid{A}(D,d,a,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \indid 
+                       
+l.275 ...,y:A$ and $p:\id[A]xy$, such that $\indid
+                                                  {A}(D,d,a,a,\refl a)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.289 \[\indid
+              {A}(D,d):\prod_{(x,y:A)}\prod_{(p:\id{x}{y})} D(x,y,p)\]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.289 ...ndid{A}(D,d):\prod_{(x,y:A)}\prod_{(p:\id
+                                                  {x}{y})} D(x,y,p)\]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.292 \indid
+            {A}(D,d,a,a,\refl{a})\jdeq d(a)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[56]
 \openout4 = `roadmap.ptb'.
 
-[49]
-Overfull \hbox (7.21178pt too wide) in paragraph at lines 414--424
-\TU/DejaVuSerif(0)/m/it/10.95 Thus, the induction principle for identity types 
-gives us an element $[][][][][] [][] [][] [][] [][] []
- []
+! Undefined control sequence.
+l.398   denoted $p\mapsto \opp
+                              {p}$, such that $\opp{\refl{x}}\jdeq\refl{x}$ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.398 ...noted $p\mapsto \opp{p}$, such that $\opp
+                                                  {\refl{x}}\jdeq\refl{x}$ f...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.399   We call $\opp
+                     {p}$ the \define{inverse} of $p$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[57]
+! Undefined control sequence.
+<recently read> \indid 
+                       
+l.416   $\indid
+               {A}(D,d,x,y,p): (y= x)$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.418 ...can now define the desired function $\opp
+                                                  {(\blank)}$ to be
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.418 ...define the desired function $\opp{(\blank
+                                                  )}$ to be
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.419   $\lambda p.\ \indid
+                           {A}(D,d,x,y,p)$,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.421   $\opp
+             {p} \defeq \indid{A}(D,d,x,y,p)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.421   $\opp{p} \defeq \indid
+                              {A}(D,d,x,y,p)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.423   gives $\opp
+                   {\refl{x}}\jdeq \refl{x}$, as required.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\openout4 = `roadmap.ptb'.
+
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.533 ...ach $x,y:A$ and $p:x=y$, an element $\opp
+                                                  {p}:y=x$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.535 ...in which we are trying to construct $\opp
+                                                  {p}$ are both simply $x=x$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.536 ...``reflexivity case'', we can define $\opp
+                                                  {\refl{x}}$ to be simply $...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \opp 
+                     
+l.537 ... principle, and the conversion rule $\opp
+                                                  {\refl{x}}\jdeq\refl{x}$ i...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\openout4 = `roadmap.ptb'.
+
+[58]
 \openout4 = `roadmap.ptb'.
 
 \openout4 = `roadmap.ptb'.
 
-[50]
-\openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
 
 Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
  [][] 
@@ -2837,13 +3098,44 @@ Overfull \hbox (107.74344pt too wide) in paragraph at lines 1413--1413
  [][][][] 
  []
 
-[51]
+[59]
 Overfull \hbox (3.00977pt too wide) in paragraph at lines 1415--1417
 \TU/DejaVuSerif(0)/m/n/10.95 tween paths between paths level, some interesting 
 and nonintuitive results emerge.
  []
 
-[52]
+[60]
+! Undefined control sequence.
+<recently read> \id 
+                    
+l.1424 $\Omega(A,a)$ to be the type $\id
+                                        [A]{a}{a}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \id 
+                    
+l.1432 ...resented in type theory by the type $\id
+                                                  [({\id[A]{a}{a}})]{\refl{a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.1432 ...ed in type theory by the type $\id[({\id
+                                                  [A]{a}{a}})]{\refl{a}}{\re...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 \openout4 = `roadmap.ptb'.
 
 
@@ -3216,7 +3508,7 @@ Overfull \hbox (113.99916pt too wide) in paragraph at lines 2560--2560
  [][][][] 
  []
 
-[53] [54]) [55]
+[61] [62]) [63]
 \openout2 = `horizon.aux'.
 
 No file horizon.tex.
@@ -3233,7 +3525,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[56
+[64
 
 
 
@@ -3248,23 +3540,23 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) [57]
+) [65]
 \openout2 = `code.aux'.
 
-(./code.tex) [58
+(./code.tex) [66
 
 
-] (./roadmap.bbl [59
+] (./roadmap.bbl [67
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 138--142
+] [68]
+Underfull \hbox (badness 10000) in paragraph at lines 219--223
 []\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  \TU/DejaVuSerif(0)/m/it/10.95
  gf-contrib/typetheory\TU/DejaVuSerif(0)/m/n/10.95 .  []$[][][][][] [] [] [] []
 [][][][][] [] [][][] []
  []
 
 ! Misplaced alignment tab character &.
-l.155 ...tion for Computing Machinery and Morgan &
+l.247 ...tion for Computing Machinery and Morgan &
                                                    Claypool.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3273,20 +3565,16 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-) [60]
-
-Package natbib Warning: There were undefined citations.
-
-[61]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
+) [69] [70]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
 (./roadmap.aux (./intro.aux) (./perspectives.aux) (./preliminaries.aux) (./prev
 iouswork.aux) (./natproof.aux) (./grammar.aux) (./latex/hott.aux) (./horizon.au
 x) (./conclusion.aux) (./code.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 255.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 255.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 240.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: 45D334C61876151BA377692F8F427BDD;2931.
+(rerunfilecheck)             Checksum: 7A864E36CA39DE1E991D40FBC750D4FB;3189.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
@@ -3296,12 +3584,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33462 strings out of 479819
- 640133 string characters out of 5895846
- 1192543 words of memory out of 5000000
- 49817 multiletter control sequences out of 15000+600000
- 538249 words of font info for 151 fonts, out of 8000000 for 9000
+ 33537 strings out of 479819
+ 641830 string characters out of 5895846
+ 1192544 words of memory out of 5000000
+ 49894 multiletter control sequences out of 15000+600000
+ 538233 words of font info for 149 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,907b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (66 pages, 1557436 bytes).
+Output written on roadmap.xdv (75 pages, 1822236 bytes).
