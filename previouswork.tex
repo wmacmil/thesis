@@ -108,20 +108,84 @@ they believe, and this mismatch causes a number of serious linguistic problems
 
 \end{displayquote}
 
-Perhaps the most substantial analysis of the linguistic perspective on
-written mathematics comes from Ganesalingam \cite{ganesalingam2013language}.
-Not only does he pick up and reexamine much of Ranta's early work, but he
-develops a whole theory for how to understand with the language mathematics from
-a formal point of view, additionally working with many questions about the
-foundation of mathematics. His model which is developed early in the treatise
-and is referenced 
-throughout uses Discourse Representation Theory \cite{kamp2011discourse}, to
-capture anaphoric use of variables. While he is interested in analyzing
-language, or goal is to translate, because the meaning of an expression is
-contained in its set of formalizations, so GF is more of just a tool in the
-pipeline rather than an actual infrastructure through which to dissect the various
-nuances of human speech.
+Perhaps the most substantial analysis of the linguistic perspective on written
+mathematics comes from Ganesalingam \cite{ganesalingam2013language}. Not only
+does he pick up and reexamine much of Ranta's early work, but he develops a
+whole theory for how to understand with the language mathematics from a formal
+point of view, additionally working with many questions about the foundation of
+mathematics. His model which is developed early in the treatise and is
+referenced throughout uses Discourse Representation Theory
+\cite{kamp2011discourse}, to capture anaphoric use of variables. While he is
+interested in analyzing language, our goal is to translate, because the meaning
+of an expression is contained in its set of formalizations, so our project should be
+thought of as more of 
+a way to implement the linguistic features of language rather than
+Ganesalingam's work analyzing the infrastructure of natural language mathematics.
 
+---- Random philosophical ideas
+grammars can describe music, 
+should the ruler and compass be seen as a syntactic entity, (obviously we can
+describe them as such via group theory, but in some sense the imagery came before)
+how is using a ruler and compass using our linguistic capacities, vs just
+drawing a circle (which seems like it would be lot more similar).  Like, at what
+point does a drawing, or painting, become a mathematical construction. Or music,
+where there's a syntax, clearly denoting set of instruments over { tempo, pitch,
+  volume } but different pianists may have disctinct interpretaions, or jazz,
+and where modern music departs from this 
+Art ->
+Primitive -> Real -> Primitive, think of calder, where they are trees, each
+having a presumably equivalent (up to some degree of physical stability)
+Primitive -> Real -> Primitive 
+
+Syntax vs semantics, a new look
+sheet music grammar -> 
+meaning of a theorem is the well formed forumla which represents it - a
+syntactic unit 
+if ones goal is syntactic completeness, then the meaning of the theorem is the
+syntacic thing or {= things} which express it.
+sem. ad. the meaning of a theorem is some way of expressing it, such that it is
+communicable  (think of the harry ball theorem). mathematicians are blending
+both, mixing meaning between syn. comp. and sem. adequate (i.e. the syntax does
+presumably represent these abstract entites, but only to a point)
+
+ASTs -> Linearization : PMCFG
+ASTs -> AST : any kind of computation using agda
+
+one could write a grammar for fol, use GF as a parser, export to haskell, and
+then run a theorem prover on it
+ASTs -> Other data type
+
+what is a mathematic construction : we don't say this set of bits is this
+theorem, or this unique computation (different times different runs, noise in
+compiler opitmizations) even though they are , or this other set of bits is this theorem, 
+extensionally the same vs intensionally the same
+
+when does the complexity of using PGF become more hard than 
+
+or is it somewhere in between, 
+
+or is the meaning something
+
+We can assign syntactic to describe meaning, and the meaning of natural language
+utterances, vs. mathematics, vs physics , vs music, vs art (shape grammars) , vs physics
+
+we typically associate syntax with writing, especially in CS
+concrete sytnax : how are the units represented 
+abstract sytnax : what is the abstract structure associated to 
+  for computers, this is trees. as well for linguistics
+semantics : what does the syntax represent 
+
+Architecture : 
+syntax -> 
+Syntax -> signals (of samples) or digitally produced & modified -> 
+meaning 
+
+Or the syntax of physics vs the physics itself
+where ultimately the sentences are is to be co
+
+meaning is just 
+
+---- end Random philosophical ideas
 
 "
 meaningful statements in some underlying logic. If it was pointed out that
@@ -129,15 +193,35 @@ a particular sentence had no translation into such a logic, a mathematician
 would genuinely feel that they had been insufficiently precise. (The actual
 translation into logic is never performed, because it is exceptionally laborious;
 "
+Mathematics - Meaning -> FOL 
+but a lot of mathematics hasn't been formalized, and the mathematics
+historically was less concerned with logic in the modern sense, although it was
+concerned with truth, and proof, quite early
+
+
+- what about visual mathematics, one should be careful to accept that
+mathematics is purely a linguistic phenomena, as was pointed out previously
+
 
 "
 mathematics has a normative notion of what its content should look like; there is no
 analogue in natural languages.
 "
+discusses normativity - there is and there isn't - maybe a set of normative
+notions is better, with varying degrees of overlap and differences. certain communities are very 
 
 1.2.3 full adaptivity
 
-
+pre-geometry, geometry intuition
+euclidean geometry : points in space,  ruler and compass
+algebraic geometry : polynomials describing curves
+inductive types
+formal mode and informal mode aren't precise, so we should be skeptical.  HoTT,
+for example, takes HITs, an incredibly nuanced syntactic feature, and describes
+spaces with them (in the same way euclidean geometry saw them as sets of points,
+or line segments between 
+is both, in some sense, because it gives a mechinism of describing spaces
+directly. 
 "
 From a linguistic perspective, the formal mode is more novel and interesting
 because it is restricted enough to describe completely, both in terms of syntax
@@ -149,8 +233,16 @@ formal mode.
 
 Section 2
 
+He says symbols serve to ``abbreviate material", 
+inside textual mathematics, and are of less concern 
+concrete syntax, interact with other parts of our brain than. But this is indeed
+true for hour we're studying GF.
+
+but its also worth pondering
+how the symbols are expressive. Would be interesting to study this because strings in Agda are in some ways easier
+to read,
 "
-The primary function of symbolic mathematics is to abbreviate material
+The primary function of symbolic mathematics is to 
 that would be too cumbersome to state with text alone. Thus a sentence
 "
 
@@ -170,6 +262,9 @@ ematical language expands as more mathematics is encountered. The kind of
 Thus definitions always contain enough information to fully specify the
 semantics of the material being defined.
 "
+What about Thomas Hales proofs, are these only semantically valid when they have
+been formalized?
+
 
 "
 As a result, textual mathematics predominantly

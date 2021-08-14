@@ -1,0 +1,91 @@
+---- Random philosophical ideas
+grammars can describe music, 
+should the ruler and compass be seen as a syntactic entity, (obviously we can
+describe them as such via group theory, but in some sense the imagery came before)
+how is using a ruler and compass using our linguistic capacities, vs just
+drawing a circle (which seems like it would be lot more similar).  Like, at what
+point does a drawing, or painting, become a mathematical construction (this difference is a pragmatic, contextual  one). Or music,
+where there's a syntax, clearly denoting set of instruments over { tempo, pitch,
+  volume } but different pianists may have disctinct interpretaions, or jazz,
+and where modern music departs from this 
+Art ->
+Primitive -> Real -> Primitive, think of calder, where they are trees, each
+having a presumably equivalent (up to some degree of physical stability)
+Primitive -> Real -> Primitive 
+
+Syntax vs semantics, a new look
+sheet music grammar -> 
+meaning of a theorem is the well formed forumla which represents it - a
+syntactic unit 
+if ones goal is syntactic completeness, then the meaning of the theorem is the
+syntacic thing or {= things} which express it.
+sem. ad. the meaning of a theorem is some way of expressing it, such that it is
+communicable  (think of the harry ball theorem). mathematicians are blending
+both, mixing meaning between syn. comp. and sem. adequate (i.e. the syntax does
+presumably represent these abstract entites, but only to a point)
+
+ASTs -> Linearization : PMCFG
+ASTs -> AST : any kind of computation using agda
+
+one could write a grammar for fol, use GF as a parser, export to haskell, and
+then run a theorem prover on it
+ASTs -> Other data type
+
+what is a mathematic construction : we don't say this set of bits is this
+theorem, or this unique computation (different times different runs, noise in
+compiler opitmizations) even though they are , or this other set of bits is this theorem, 
+extensionally the same vs intensionally the same
+
+when does the complexity of using PGF become more hard than 
+
+or is it somewhere in between, 
+
+or is the meaning something
+
+We can assign syntactic to describe meaning, and the meaning of natural language
+utterances, vs. mathematics, vs physics , vs music, vs art (shape grammars) , vs physics
+
+we typically associate syntax with writing, especially in CS
+concrete sytnax : how are the units represented 
+abstract sytnax : what is the abstract structure associated to 
+  for computers, this is trees. as well for linguistics
+semantics : what does the syntax represent 
+
+Architecture : 
+syntax -> 
+Syntax -> signals (of samples) or digitally produced & modified -> 
+meaning 
+
+Or the syntax of physics vs the physics itself
+where ultimately the sentences are is to be co
+
+
+
+mathematics isn't inherently formal, and that constructing a formal model of it
+validates our intuitions, in the same way that constructing a building which
+stands validates our intuition, or creating an experiment with physics validates
+our model (in this case, equations describing laws) of the world
+
+Our models can only get more specific, i.e. we can only measure things up to
+some decimal of accuracy (whereby noise of instruments, etc interferes).
+similarly, we can only approximate proofs, 
+
+
+ geometry, owes its existence to the need which was felt of learning something about the relations of real things to one another.
+
+ As far as the laws of mathematics refer to reality, they are not certain; and
+ as far as they are certain, they do not refer to reality. Einstein geometry and experience
+
+
+
+
+Question : are there mathematical theorems which reference previous theorems
+
+Corollaries are really just propisitons of the form if A then B,
+So 
+
+
+it should be argued We have no pretense that
+
+---- end Randomphilosophical ideas
+

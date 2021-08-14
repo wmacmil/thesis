@@ -93,40 +93,15 @@ Speaker's Meaning       } in some sense, this work outlines a roadmap for undder
 Efficient Communication }
 Wastebasket
 
-@article{RANTA2020120,
-title = {Some remarks on pragmatics in the language of mathematics: Comments to the paper “At Least One Black Sheep: Pragmatics and Mathematical Language” by Luca San Mauro, Marco Ruffino and Giorgio Venturi},
-journal = {Journal of Pragmatics},
-volume = {160},
-pages = {120-122},
-year = {2020},
-issn = {0378-2166},
-doi = {https://doi.org/10.1016/j.pragma.2020.02.001},
-url = {https://www.sciencedirect.com/science/article/pii/S0378216620300321},
-author = {Aarne Ranta},
-abstract = {I agree wholeheartedly with the authors of “At Least One Black Sheep: Pragmatics and Mathematical Language” on their main thesis that the language of mathematics is permeated by phenomena that belong to pragmatics. I also agree with what they take to be the opposite view, which is presented in Mohan Ganesalingam's monograph The Language of Mathematics (2013). I think that the conflict is to a large extent terminological and has to do with what is meant by pragmatics.}
-}
 
 Discuss the pragmatics stuff with respect to natural language generation in general.  A CNL is inductively defined, NL is not. A CNL lacks the pragmatic tools needed to verify or prorduce proofs, but it is feasible that it can be used to at least catalogue mathematical Propositions presented as types.
 
-@article{RUFFINO2020114,
-title = {At least one black sheep: Pragmatics and mathematical language},
-journal = {Journal of Pragmatics},
-volume = {160},
-pages = {114-119},
-year = {2020},
-issn = {0378-2166},
-doi = {https://doi.org/10.1016/j.pragma.2020.01.011},
-url = {https://www.sciencedirect.com/science/article/pii/S0378216620300230},
-author = {Marco Ruffino and Luca {San Mauro} and Giorgio Venturi},
-keywords = {Pragmatics, Philosophy of mathematics, The language of mathematics, Existential quantifier, Parameters},
-abstract = {In this paper we argue, against a somewhat standard view, that pragmatic phenomena occur in mathematical language. We provide concrete examples supporting this thesis.}
-}
 
 
-in some sense, philosophy is baked into Dependent Type Theory (lexically, conceptually, ) in a way that it isn't for classical mathematics. although distinguishing between fields is a recent phenomena
 
 
-proposition , theorem
+we reference the definition, proof, and corollary  section.  while coq supports these keywords,
+including them in Agda, for instance, went against the more minimal perspective. The words carry semantic weight, but the interpretation of the meaning when a lemma or corollary is called a carry pragmatic content in that the author has to decide how to judge the relation of them to the \emph{theorems} in some kind of natural ways. there are even ex  meaning there's
 
 have in the judgements section, the definition, proof, corollay, comparison diagram
 

@@ -1,0 +1,101 @@
+\subsection{Mohan Ganesalingam}
+
+
+\begin{displayquote}
+
+there is a considerable gap between what mathematicians claim is true and what
+they believe, and this mismatch causes a number of serious linguistic problems
+
+\end{displayquote}
+
+Perhaps the most substantial analysis of the linguistic perspective on written
+mathematics comes from Ganesalingam \cite{ganesalingam2013language}. Not only
+does he pick up and reexamine much of Ranta's early work, but he develops a
+whole theory for how to understand with the language mathematics from a formal
+point of view, additionally working with many questions about the foundation of
+mathematics. His model which is developed early in the treatise and is
+referenced throughout uses Discourse Representation Theory
+\cite{kamp2011discourse}, to capture anaphoric use of variables. While he is
+interested in analyzing language, our goal is to translate, because the meaning
+of an expression is contained in its set of formalizations, so our project should be
+thought of as more of 
+a way to implement the linguistic features of language rather than
+Ganesalingam's work analyzing the infrastructure of natural language mathematics.
+
+Gangesalingem draws insightful, nuanced conclusions from compelling examples. Nonetheless, this subject is somewhat restricted to a specific linguistic tradition and framing and modern, textual mathematics. Therefore, we hope to (i) contrast our GF implementation point of view and (ii) offer some perspectives on his work.
+
+He remarks that mathematicians believe ``insufficiently precise" mathematical sentences are would be results from a failure to  into logic. This is much more true from the Agda developers perspective, than the mathematicians. It is likely there are many mathematicians who assume small mistakes may go by the reviewers unchecked, as are the reviewers. However, the Brunei number offers a counterexample even the computer scientist has to come to terms with - because it's based off pen and paper work which hasn't terminated in Agda \cite{brunerie2016homotopy}.  And while this one example which may see resolution, one may construct other which won't, and it is speculative to think what mathematics is formalizable.
+
+Gangesalingem also articulates ``mathematics has a normative notion of what its
+content should look like; there is no analogue in natural languages." While this
+is certainly true in \emph{local} cases surrounding a given mathematical
+community , there are also many disputes - the Brouwer school is one example,
+but our prior discussion of visual proofs also offers another counterexample.
+Additionally, the ``GF perspective" presented here is meant to disrupt the notion of normativity, by suggesting that concrete syntax can reflect deep differences in content beyond just its appearance. Escher's prints, alternatively uniquely mirror both mathematics and art - they are constructions using rules from formal systems, but are appreciated by a general audience.
+
+He also discusses the important distinction between formal (which he focuses on) and informal modes in mathematics, with the informal representing the text which is a kind of commentary which is assumed to be inexpressible in logic. GF, fortunately can actually accommodate both if one considers only natural language translation in the informal case. This is interesting because one would need extend a ``formal grammar" with the general natural language content needed to include the informal.
+
+
+He says symbols serve to ``abbreviate material", and ``occur inside textual
+mathematics". While his discourse records can deal with symbols, in GF,
+overloading of symbols can cause overgeneration. For example certain words like
+"is" and "are" can easily be interpreted as equality, equivalence, or
+isomorphism depending on the context.
+
+One of Ganesalingam's original contributions, is the notion of adaptivity :
+``Mathematical language expands as more mathematics is encountered". He
+references someones various stages of coming to terms with concepts in
+mathematics and their generalization in somebodies head. For instance, one can
+define the concept of the $n$ squared as $n^2$ of two as "n*n", which are
+definitionally equal in Agda if one is careful about how one defines addition,
+multiplication, and exponentiation. Writing grammars, on has to cater the
+language to the audience, for example, which details does one leave out when
+generating natural language proofs?
+
+Mathematical variables, it is also noticed, can be treated anaphorically. From
+the PL persepctive they are just expressions. Creating a suitable translation
+from textual math to formal languages accounting for anaphora with GF proves to
+be exceedingly tricky, as can be seen in the HoTT grammar below.
+
+\subsubsection{Pragmatics in mathematics}
+
+Ganesalingam makes one observation which is particularly pertinent to our
+analysis and understanding of mathematical language, which is that of pragmatics
+content. The point warranted both a rebuttal \cite{RUFFINO2020114} and an
+additional response by Ranta \cite{RANTA2020120}. Ganesalingam says
+``mathematics does not exhibit any pragmatic phenomena: the meaning of a
+mathematical sentence is merely its compositionally determined semantic content,
+and nothing more. ". We explore these fascinating dialogues here, adjoining our
+own take in the context of this project.
+
+A working example for how pragmatics shows up in mathematics, we look ask what is the difference in meaning between lemma, proof, and corollary.  While there is a syntactic distinction between \term{Lemma} and \term{Theorem} in Coq, Agda is meant to epitomize the Propositions as Types, where it resembles Haskell rather than a theorem prover at a first glance. The words carry semantic weight : lemma for things preceding theorems and corollaries for things applying theorems.  The interpretation of the meaning when a lemma or corollary is called a carry pragmatic content in that the author has to decide how to judge the relation of them to the \emph{theorems} in some kind of natural ways. Inferring how to judge a keyword seems impossible for a machine.
+
+Ranta categorizes pragmatic phenomena in 5 ways : speech acts, context, speaker's meaning, efficient communication, and the \emph{wastebasket}. We    
+
+
+
+Our Grammars give us tools to work with the speaker's meaning of a mathematical
+utterance by a translation into syntactically complete Agda judgment (assuming
+it type-checks). Dually, efficient communication is the goal of producing a
+semantically adequate grammar. The task of creating a grammar which satisfies
+both is obviously the most difficult task before future grammar writers.
+
+
+
+Discuss the pragmatics stuff with respect to natural language generation in
+general. A CNL is inductively defined, NL is not. A CNL lacks the pragmatic
+tools needed to verify or prorduce proofs, but it is feasible that it can be
+used to at least catalogue mathematical Propositions presented as types. also,
+discuss cnl with respect to this last quote
+
+
+
+Ganesalingam points out that ``a disparity between the way we think about
+mathematical objects and the way they are formally defined causes our linguistic
+theories to make incorrect predictions." This constraint on our theoretical
+understanding of language, and the practical implications yield a bleak outlook.
+Nevertheless, mathematical objects developing over time is natural, the more and
+deeper we dig into the ground, the more we develop refinements of what kind of
+tools we are using, develop better iterations of the same tools (or possibly
+entirely new ones) as well as knowledge about the ground in which we are
+digging.

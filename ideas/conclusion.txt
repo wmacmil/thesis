@@ -1,0 +1,26 @@
+
+Conclusion: 
+
+
+
+Despite the promise of HoTT, formal abstracts, lean in mathematics education, we
+don't forsee a convergence of Type Theorists and Mathematians, even though
+belief the holy trinity would compell us to think so. GF as a PL paradigm,
+applied to this problem, gives us a stark contrast of how different these two
+approaches to mathematical language. For the grammars of proof are insufficient
+to capture the complexity and nuance about the language of proof, so much of
+which has yet to be discovered. Grammars for proposition, and grammars for
+definition, offer a much more limited and seemingly feasible problem, especially
+with GF, but nonetheless writing grammars which capture the language of
+proposition and definition are much more tangible, largely because they are
+meant to be unambiguous. 
+
+
+library of babel, with all mathematics, all Proofs, all permutations of proofs, all ways of expressing proofs in all the languages, both formal and informal, all the catalogues describing the relations of proofs, ad infinitum
+
+In some sense the library of babel problem, whereby we dont just discover
+predefined ideas by randomly sampling bags of words, but we have to work with
+hard labor, sweat, and tears, to imbue the sentences of mathematics with meaning
+that makes them descriptive, that there is some kind of internal, but
+distributed, mental process which is mirror whats on paper (and the 'reality' it
+describes)
