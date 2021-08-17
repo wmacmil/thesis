@@ -39,6 +39,8 @@ can normalize the definitionally equal terms to the same normal form in
 downstream programs. Let's compare it these judgements to those keywords ubiquitous in
 mathematics, and show how those are represented in Agda directly below.
 
+\begin{figure}
+\centering
 \begin{minipage}[t]{.3\textwidth}
 \vspace{2cm}
 \begin{itemize}
@@ -72,6 +74,8 @@ example : E     -- Example Statement
 example = proof
 \end{code}
 \end{minipage}
+\caption{Mathematical Assertions and Agda Judgements} \label{fig:O1}
+\end{figure}
 
 Formation rules, are given by the first line of the data declaration, followed
 by some number of constructors which correspond to the introduction forms of the
@@ -164,8 +168,8 @@ directly with lambda's if the typechecker infers a function type for a hole.
 ~-patternMatch true = false
 ~-patternMatch false = true
 
-functionalExample : 𝔹 → (𝔹 → 𝔹) → (𝔹 → 𝔹)
-functionalExample b f = if b then f else λ b' → f (~-patternMatch b')
+functionalNegation : 𝔹 → (𝔹 → 𝔹) → (𝔹 → 𝔹)
+functionalNegation b f = if b then f else λ b' → f (~-patternMatch b')
 \end{code}
 
 This simple example leads us to one of the domains our subsequent grammars will describe, arithmetic. We show how to inductively define natural numbers in Agda, with the formation and introduction rules included beside for contrast.
@@ -236,8 +240,8 @@ Agda can infer the speciliazation for you, as seen in \term{natrec'} below.
     \infer4[]{\Gamma \vdash natind\{e₀,\;x.y.e₁\}(n) : X[x := n]}
   \end{prooftree}
 \]
-$$\Gamma \vdash natrec\{e₀;x.y.e₁\}(n) \equiv e₀ : X[x := 0]$$
-$$\Gamma \vdash natrec\{e₀;x.y.e₁\}(suc\ n) \equiv e₁[x := n,y := natrec\{e₀;x.y.e₁\}(n)] : X[x := suc\ n]$$
+$$\Gamma \vdash natind{e₀;x.y.e₁\}(n) \equiv e₀ : X[x := 0]$$
+$$\Gamma \vdash natind{e₀;x.y.e₁\}(suc\ n) \equiv e₁[x := n,y := natind\{e₀;x.y.e₁\}(n)] : X[x := suc\ n]$$
 \begin{code}
 natind : {X : ℕ → Set} → (n : ℕ) → X zero → ((n : ℕ) → X n → X (suc n)) → X n
 natind zero base step = base
@@ -246,10 +250,11 @@ natind (suc n) base step = step n (natind n base step)
 natrec' : {X : Set} → ℕ → X → (ℕ → X → X) → X
 natrec' = natind
 \end{code}
+We will defer the details of using induction and recursion principles for later
+sections, when we actually give examples of pidgin proofs some of our grammars can
+handle. For now, the keen reader should try using Agda.
 
-%We will defer the details of these induction and recursion principles for later
-%sections, when we actually give examples of pidgin proofs our grammars can
-%handle. %Question for conclusion: how do we teach agda proofs vs programs? i.e.
+%Question for conclusion: how do we teach agda proofs vs programs? i.e.
 %how can it infer if its generating langauge for a computer scientist or a
 %mathematician %Variables in mathematics are meant to be simple (like e₀) but in
 %Agda, its generally advisable to use more expresive variables. %We can either

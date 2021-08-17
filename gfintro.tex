@@ -1,72 +1,128 @@
-\subsection{Grammatical Framework}
-% \subsection{Intro to GF}
+\section{Grammatical Framework}
 
-\subsubsection{Overview}
+\subsection{A Brief Introduction to GF}
 
-I will introduce Grammatical Framework (GF) through an extended example targeted
-at a general audience familiar with logic, functional programming, or
-mathematics. GF is a powerful tool for specifying grammars. A grammar
-specification in GF is actually an abstract syntax. With an abstract syntax
-specified, one can then define various linearization rules which compositionally
-evaluate to strings. An Abstract Syntax Tree (AST) may then be linearized to
-various strings admitted by different concrete syntaxes. Conversely, given a
-string admitted by the language being defined, GF's powerful parser will
-generate all the ASTs which linearize to that tree.
+A grammar specification in GF is actually just an abstract syntax. With an abstract
+syntax specified, one can then define various linearization rules which
+compositionally evaluate to strings. An Abstract Syntax Tree (AST) may then be
+linearized to various strings admitted by different concrete syntaxes.
+Conversely, given a string admitted by the language being defined, GF's powerful
+parser will generate all the ASTs which linearize to that tree.
 
-\subsubsection{Overview} % ## Focus of this tutorial
+When defining a GF pipeline, one merely to construct an abstract syntax file and a
+concrete syntax file such that they are coherent. In the abstract, one
+specifies the \emph{semantics} of the domain one wants to translate over, which
+is ironic, because we normally associate abstract syntax with \emph{just syntax}.
+However, because GF was intended for implementing the natural language
+phenomena, the types of semantic categories (or sorts) can grow much bigger than is
+desirable in a programming language, where minimalism is generally favored.  The
+\emph{foods grammar} is the \emph{hello world} of GF, and should be referred to
+for those interested in example of how the abstract syntax serves as a semantic
+space in NL applications \cite{ranta2011grammatical}.
 
-We introduce this subject assuming no familiarity with GF, but a general
-mathematical and programming maturity. While GF is certainly geared to
-applications in domain specific machine translation, this writing will hopefully
-make evident that learning about GF, even without the intention of using it for
-its intended application, is a useful exercise in abstractly understanding
-syntax and its importance in just about any domain.
+Consider a language $L$ we want to represent, and we come up with a model that we
+build as a set of categories and functions over those categories.  Let $Cat(L)$,
+denote the categories.  Also suppose we define functions such that, given an
+ordered list $x_1,...,x_n;y \in Cat(L)$ we define a set of functions,
+$Fun_L(x_1,...,x_n;y)$ defined over the categories. In gf, a function can be
+denoted something like $\phi : x_1 \rightarrow ... \rightarrow x_n$. We may compose these based
+off their arities. So, given a function $\psi \in Fun_L(y_1,,...,y_n;z)$,
+functions $\phi_1,...\phi_n$ such that $\phi_i \in Fun_L(x_{i,1},...,x_{i,m};y_i)}$ 
+ we can plug these functions in together, or nest them such that
+$$\psi \circ (\phi_1,...,\phi_n) : \rightarrow (x_{i,j}) \rightarrow (y_{i})
+\rightarrow Z$$ 
 
-A working high-level introduction of Grammatical Framework emphasizing both
-theoretical and practical elements of GF, as well as their interplay. Specific
-things covered will be
+This is how abstract syntax trees are formed. It is also worth noting that they
+obey an associativity property, namely that 
 
-\begin{itemize}[noitemsep]
+\begin{align*}
+&\theta \circ (\psi_1 \circ (\phi_{1,1},...,\phi_{1,k_1}),...,\psi_n \circ
+(\phi_{n,1},...,\phi_{n,k_n}))\\ = &(\theta \circ \psi_1,...\psi_n) \circ (\phi_{1,1},...,\phi_{1,k_1},...,\phi_{n,1},...,\phi_{n,k_n})
+\end{align*}
 
-\item Historical developments leading to the creation and discovery of the GF
-formalism
-\item The difference between Abstract and Concrete Syntax, and the linearization
-and parsing functions between these two categories
-\item The basic judgments :
-  \begin{itemize}[noitemsep]
-    \item Abstract : `cat, fun`
-    \item Concrete : `lincat, lin`
-    \item Auxiliary : `oper, param`
-  \end{itemize}
-\item A library for building natural language applications with GF
-  \begin{itemize}[noitemsep]
-    \item The Resource Grammar Library (RGL)
-    \item A way of interfacing GF with Haskell and transforming ASTs externally
-    \item The Portable Grammar Format (PGF)
-\end{itemize}
-\item Module System and directory structure
-\item A brief comparison with other tools like BNFC
+This means that trees in GF are invariant as to how they are built - we
+can build a tree from the leaves to the root or vice versa.
 
-\end{itemize}
+Example : consider the arithmetic grammar of exponentiation, multiplication, and
+addition defined over a single category of natural number expressions,
+$\mathds{N}$.
 
-These topics will be understood via a simple example of an expression language,
-`Arith`, which will serve as a case study for understanding the many robust,
-theoretical topics mentioned above - indeed, mathematics is best understood and
-learned through examples. The best exercises are the reader's own ideas,
-questions, and contentions which may arise while reading through this.
+$$\_\^{}\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
+$$\_*\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
+$$\_+\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
 
-\subsubsection{Theoretical Overview}
-% \subsubsection{Theoretical Overview}
+We can think of constructing the trees by partial application, i.e., 
 
-\paragraph { What is a GF grammar ? }
+$(\lambda x. 2 \^{} x) : \mathds{N} -> \mathds{N}$
 
-[TODO : update with latex]
+Lets try see the constructions yielding the string $(1 + 2) \^{} (3 * 4)$.
 
-Consider a language L, for now given a single linear presentation C^L_0, where
+We can either (i) construct this as the exponent of two fully formed expressions,
+namely a sum and a product applied to some numbers, or we can first apply the
+exponent to the two binary functions, yielding a quaternary function 
+
+\begin{align*}
+&\lambda x,y. x \^{} y)\\
+  ((\lambda x,y. x + y) 1 2)\\
+  ((\lambda x,y. x * y) 3 4) \\
+\mapsto &(\lambda x,y. x \^{} y)\\
+  (1 + 2)\\
+  (3 * 4))\\
+\end{align}
+
+(1 + 2) \^{} (3 * 4)
+  
+
+((\lambda x,y. x \^{} y)
+  (\lambda x,y. x + y) 
+  (\lambda x,y. x * y))
+    1 2 3 4
+
+((\lambda x,y. x + y) \^{} (\lambda x,y. x * y)) 1 2 3 4
+((\lambda x,y. x + y) \^{} (\lambda x,y. x * y)) 1 2 3 4
+
+(1 + 2) \^{} (3 * 4)
+
+and then say
+(\lambda x. 2 \^{} x) (1 + 3) * (4 + 5)
+= 
+(\lambda x. 2 \^{} x) (1 + 3) * (4 + 5)
+
+$(\lambda x. 2 \wedge x) : \mathds{N} -> \mathds{N}$
+
+and then apply it to a complex arguement, say 
+(1 + 3) * (4 + 5)
+(\lambda x. 2 ^ x) : Nat -> Nat
+
+where 
+
+
+\lambda y : Pow y 1 : Nat -> Nat
+
+(times (plus 2 3) (plus 4 5))
+(Pow \circ (1,times)) : Nat -> Nat -> Nat
+
+(plus 2 3) (plus 4 5)
+
+can either be 
+
+2^(1+3)*(4+5)
+
+
+  % \sin {:} \mathbb{R} &\rightarrow \mathbb{R}\\ x &\mapsto \sin ( x )
+% \circ (\phi_1,...,\phi_n) : \rightarrow (x_{i,j}) \rightarrow (y_{i})
+% \rightarrow Z$$ 
+
+The two functions displayed in, \autoref{fig:N2}.  If we can loosely call String
+the set of strings freely generated osome acan be 
+
+for now given a single linear presentation $C^{AST}$ , where
+
 AST_L String_L0 denote the sets GF ASTs and Strings in the languages generated
 by the rules of L's abstract syntax and L0s compositional representation.
 
-  $Parse : String -> {AST} Linearize : AST -> String$
+$$Parse : String -> {AST}$$
+$$Linearize : AST -> String$$
 
 with the important property that given a string s,
 
@@ -85,6 +141,163 @@ Grammars (CFGs) but is still decideable with parsing in (cubic?) polynomial
 time, which means it still is quite domain specific and leaves a lot to be
 desired as far as turing complete languages or those capable of general
 recursion are concerned.
+
+
+\subsection{Theoretical Overview}
+
+There are two judgments in an Abstract file, for categories and named functions
+defined over those categories, namely \term{cat} and \term{fun}. The categories
+are just (succinct) names, and while GF allows dependent types, e.g. categories which are
+parameterized over other categories which allow for more fine-grained semantic distinctions.
+We will leave these details aside, but do note that GF's dependent types can be used
+to implement a programming language which only parses well-typed terms (and can
+actually compute with them using auxiliary declarations).
+
+In a simply typed programming language we can choose categories, for
+variables, types and expressions, or what might \term{Var}, \term{Typ}, and
+\term{Exp} respectively. One can then define the functions for the simply typed
+lambda calculus extended with natural numbers, known as Gödel's T.
+
+\begin{verbatim} 
+cat
+  Typ ; Exp ; Var ;
+fun
+  Tarr : Typ -> Typ -> Typ ;
+  Tnat : Typ ;
+
+  Evar : Var -> Exp ;
+  Elam : Var -> Typ -> Exp -> Exp ;
+  Eapp : Exp -> Exp -> Exp ;
+
+  Ezer : Exp ;
+  Esuc : Exp -> Exp ;
+  EnatrecLam : Exp -> Exp -> Exp ->  Exp ;
+
+  X : Var ;
+  Y : Var ;
+  F : Var ;
+  IntV : Int -> Var ;
+\end{verbatim}
+
+So far we specified how to form expressions, namely types built out of higher
+order functions between natural numbers, and expressions built out of lambda and
+natural number terms. The variables are kept as a separate syntactic category,
+and integers, \term{Int}, are predefined via GF's internals and simply allow one
+to parse numeric expressions. One may then define a functional which takes a
+function over the natural numbers and returns that function applied to $1$ - the
+AST for this expression is :
+
+\begin{verbatim} 
+Elam
+    F
+    Tarr
+        Tnat Tnat
+      Eapp
+        Evar
+            F
+        Evar
+            IntV
+                1
+\end{verbatim} 
+
+Dual to the abstract, there are parallel judgments when defining a concrete
+syntax in GF, \term{lincat} and \term{lin} corresponding to \term{cat} and
+\term{fun}, respectively. Whereas the AST is the specification, the concrete
+form is its implementation in a given lanaguage. The \term{lincat} serves to
+give \emph{linearization types} which are quite simply either strings, records (or products
+which support sub-typing and named fields), or tables (or coproducts) which can
+make choices when computing with arbitrarily named parameters. The \term{lin}
+is a term which matches the type signature of the \term{fun} with which it
+shares a name. The \term{lincat} constrains the concrete types of the arguments,
+and therefore subjects the GF user to how they are used. 
+
+If we assume we are just working with strings, then we can simply define the
+functions as recursively concatenating \term{++} strings. The lambda function
+for pidgin English then has, as its linearization form as follows :
+
+\begin{verbatim}
+lin 
+  Elam v t e = "function taking" ++ v ++ "in" ++ t ++ "to" ++ e ;
+\end{verbatim}
+
+Once all the relevant functions are giving correct linearizations, one can now
+parse and linearize to the abstract syntax tree above the to string ``function
+taking f in the natural numbers to the natural numbers to apply f to 1". This is
+clearly intolerable for a variety of reasons, but it's an approximation of what
+a computer scientist might say. If instead, we want to linearize this same
+expression to a pidgin programming language string modeled off Haskell, ``\\ ( f
+: nat -> nat ) -> f 1". We should notice the absence of parentheses for
+application suggest something more subtle is happening with the linearization
+process, for normally programming languages use fixity declarations to avoid
+lisp looking code. Here are the linearization functions which allow for
+linearization from the above AST :
+
+\begin{verbatim}
+lincat
+  Typ = TermPrec ;
+  Exp = TermPrec ;
+lin
+  Elam v t e = 
+    mkPrec 0 ("\\" ++ parenth (v ++ ":" ++ usePrec 0 t) ++ "->" ++ usePrec 0 e) ;
+  Eapp = infixl 2 "" ;
+\end{verbatim}
+
+Where did \term{TermPrec}, \term{infixl}, \term{parenth}, \term{mkPrec}, and
+\term{usePrec} come from? These are all functions defined in the RGL. We show a
+few of them below, thereby introducing the final, main GF judgments \term{param}
+and \term{oper} for parameters and operators.
+
+\begin{verbatim}
+param 
+  Bool = True | False ;
+oper
+  TermPrec : Type = {s : Str ; p : Prec} ;
+  usePrec : Prec -> TermPrec -> Str = \p,x ->
+    case lessPrec x.p p of {
+      True => parenth x.s ;
+      False => parenthOpt x.s
+    } ;
+  parenth : Str -> Str = \s -> "(" ++ s ++ ")" ;
+  parenthOpt : Str -> Str = \s -> variants {s ; "(" ++ s ++ ")"} ;
+\end{verbatim}
+
+Parameters in GF, to a first approximation, are simply data types with finite
+cardinality of unary constructors. Operators, on the other hand, encode the
+logic of GF linearization rules. They are an unnecessary part of the language
+because they don't introduce new logical content, but they do allow one to
+abstract the function bodies of \term{lin}'s so that one may keep the actual
+linearization rules looking clean.  Since GF also support \term{oper} overloading, one can
+often get away with often deceptively sleek looking linearizations, and this is
+a key feature of the RGL. The variants is one of the ways to encode
+multiple linearizations forms for a given tree, so here, for 
+
+Let's look at the 
+
+
+We can now discuss 
+
+One can now form expressions like the following :
+
+\begin{itemize}[noitemsep]
+  \item Abstract : `cat, fun`
+  \item Concrete : `lincat, lin`
+  \item Auxiliary : `oper, param`
+\end{itemize}
+
+Consider a language $L$, for now given a single linear presentation $C^L$ , where
+AST_L String_L0 denote the sets GF ASTs and Strings in the languages generated
+by the rules of L's abstract syntax and L0s compositional representation.
+
+GF has basic judgments 
+
+
+\begin{itemize}[noitemsep]
+  \item The Resource Grammar Library (RGL)
+  \item A way of interfacing GF with Haskell and transforming ASTs externally
+  \item The Portable Grammar Format (PGF)
+  \item Module System and directory structure
+\end{itemize}
+
 
 We can should note that computa
 

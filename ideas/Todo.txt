@@ -6,7 +6,7 @@ August
 - 16 (10 days, ~ 7 - 8 days of writing)
   preliminary draft Aarne/Inari
 
-- 28 (22 days, 16-18 days of writing)
+- 26 (22 days, 16-18 days of writing)
   final draft Aarne
 
 - 31 (final draft sumbission)
@@ -33,7 +33,6 @@ p "the sum of 3 , 4  and 5 is equal to the sum of 3 , 4 and 5"
 
 in the intro to MLTT. most mathematicians just know the algorithm for adding (e.g. what computer science provides that logic doesn't have), but not the actual 
 computational rules as examples of where it differs as well.
-comparison of syntaxes like in slides, (copy Aarne's table from cade with FOL and Agda syntax),
 comparison of rules as well (for the sake of syntactic difference)
 metatheorems in logic (normalization) can be done in type theory as ML did, but the computation rules allow us to do this in a diffent way?
 also include HoTT and Cubical intro in this, with the linguistic comparison left for later
@@ -89,21 +88,17 @@ The development of a more extensive parallel corpus would be interesting so thes
 Ranta's discussion of this wrt 
  Speech acts 
 Context
-Speaker's Meaning       } in some sense, this work outlines a roadmap for undderstanding mathematics pragmatically over these persepctives, via both syntactic and semantic translations
+Speaker's Meaning } in some sense, this work outlines a roadmap for undderstanding mathematics pragmatically over these persepctives, via both syntactic and semantic translations
 Efficient Communication }
 Wastebasket
 
 
-Discuss the pragmatics stuff with respect to natural language generation in general.  A CNL is inductively defined, NL is not. A CNL lacks the pragmatic tools needed to verify or prorduce proofs, but it is feasible that it can be used to at least catalogue mathematical Propositions presented as types.
 
 
 
 
 
-we reference the definition, proof, and corollary  section.  while coq supports these keywords,
-including them in Agda, for instance, went against the more minimal perspective. The words carry semantic weight, but the interpretation of the meaning when a lemma or corollary is called a carry pragmatic content in that the author has to decide how to judge the relation of them to the \emph{theorems} in some kind of natural ways. there are even ex  meaning there's
 
-have in the judgements section, the definition, proof, corollay, comparison diagram
 
 
 
@@ -111,11 +106,9 @@ A formal derivation on its own is a syntactic object but not a proof. Without an
 
 -think about this in terms of Pfennings what is logic
 
-
 Proofs in different PLs survey paper by dutch guy
 
 Which section does this go in? Gangasalingam?
-
 
 Math : symbolic, vs non-symbolic
 
@@ -123,18 +116,11 @@ Gangesalingam section
 Linguists don't just study language is written, but the physical observation of how people speak 
 This suggests the mathematical intuitions go much further beyond the invention of the alphabet, and writing in general (symbolism in petroglyphs, writing vs art is indistinguishable anthropologically)
 
-https://mathoverflow.net/questions/8846/proofs-without-words
-
-But this is mathematics as it is written  it's not just symbols
-
-Mathematics may be understood by various audiences 
 
 Mathematicians, Logicians, TTs, Engineers and physicists (who sometimes sacrifice formality for ease of articulation altogether), artists who are only interested in the "semantic side of mathematics" (focused on the pure beauty)  
 
-Non-mathematicians can have deep mathematical intuitions, for instance, a business person could say I want to create a service that does such and such (NL specification that is incredibly vague), and then outsource the work.
+Non-mathematicians can have deep mathematical intuitions, for instance, a business person could say I want to create a service that does such and such (NL specification that is incredibly vague), and then outsource the work. What is the granularity of a specification ? I think students can ask profound questions (and therefore, implicity propose interesting typing judgements)
 
-Categorical semantics : give a mathematical justification to a PL 
-PL implementation of mathematics is the opposite
 
 What does a mathematician mean when they say something is beautiful or ugly - this is presumably a semantic concept
 Not at the same way that when a Mathematician hypothetically looks at a sequence of bits, they see anything but noise

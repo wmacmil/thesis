@@ -1,14 +1,14 @@
 \section{Previous Work}
 
-There is a story that at some point, Göran Sundholm and Per Martin-Löf were
-sitting at a dinner table, dicsussing various questions of interest to the
-respective scholars, and Sundholm presented Martin-Löf with the problem of
-Donkey Sentences in natural language semantics, those analogous 'Every man who
-owns a donkey beats it'. This had been puzzling to those in the Montague
-tradition, whereby higher order logic didn't provide facile ways of interpreting
-these sentences. Martin-Löf apparently then, using his dependent type
-constructors, provided an interpretation of the donkey sentence on the back of
-the napkin. This is perhaps the genesis of dependent type theory in natural
+There is a story that at some point in the 1980s, Göran Sundholm and Per
+Martin-Löf were sitting at a dinner table, dicsussing various questions of
+interest to the respective scholars, and Sundholm presented Martin-Löf with the
+problem of Donkey Sentences in natural language semantics, those analogous
+'Every man who owns a donkey beats it'. This had been puzzling to those in the
+Montague tradition, whereby higher order logic didn't provide facile ways of
+interpreting these sentences. Martin-Löf apparently then, using his dependent
+type constructors, provided an interpretation of the donkey sentence on the back
+of the napkin. This is perhaps the genesis of dependent type theory in natural
 language semantics. The research program was thereafter taken up by Martin-Löf's
 student Aarne Ranta \cite{ranta1994type}, bled into the development of GF, and
 has now in some sense led to this current work.
@@ -122,247 +122,129 @@ thought of as more of
 a way to implement the linguistic features of language rather than
 Ganesalingam's work analyzing the infrastructure of natural language mathematics.
 
----- Random philosophical ideas
-grammars can describe music, 
-should the ruler and compass be seen as a syntactic entity, (obviously we can
-describe them as such via group theory, but in some sense the imagery came before)
-how is using a ruler and compass using our linguistic capacities, vs just
-drawing a circle (which seems like it would be lot more similar).  Like, at what
-point does a drawing, or painting, become a mathematical construction. Or music,
-where there's a syntax, clearly denoting set of instruments over { tempo, pitch,
-  volume } but different pianists may have disctinct interpretaions, or jazz,
-and where modern music departs from this 
-Art ->
-Primitive -> Real -> Primitive, think of calder, where they are trees, each
-having a presumably equivalent (up to some degree of physical stability)
-Primitive -> Real -> Primitive 
+Gangesalingem draws insightful, nuanced conclusions from compelling examples.
+Nonetheless, this subject is somewhat restricted to a specific linguistic
+tradition and framing and modern, textual mathematics. Therefore, we hope to (i)
+contrast our GF implementation point of view and (ii) offer some perspectives on
+his work.
 
-Syntax vs semantics, a new look
-sheet music grammar -> 
-meaning of a theorem is the well formed forumla which represents it - a
-syntactic unit 
-if ones goal is syntactic completeness, then the meaning of the theorem is the
-syntacic thing or {= things} which express it.
-sem. ad. the meaning of a theorem is some way of expressing it, such that it is
-communicable  (think of the harry ball theorem). mathematicians are blending
-both, mixing meaning between syn. comp. and sem. adequate (i.e. the syntax does
-presumably represent these abstract entites, but only to a point)
+He remarks that mathematicians believe ``insufficiently precise" mathematical
+sentences are would be results from a failure to into logic. This is much more
+true from the Agda developers perspective, than the mathematicians. It is likely
+there are many mathematicians who assume small mistakes may go by the reviewers
+unchecked, as are the reviewers. However, the Brunei number offers a
+counterexample even the computer scientist has to come to terms with - because
+it's based off pen and paper work which hasn't terminated in Agda
+\cite{brunerie2016homotopy}. And while this one example which may see
+resolution, one may construct other which won't, and it is speculative to think
+what mathematics is formalizable.
 
-ASTs -> Linearization : PMCFG
-ASTs -> AST : any kind of computation using agda
+Gangesalingem also articulates ``mathematics has a normative notion of what its
+content should look like; there is no analogue in natural languages." While this
+is certainly true in \emph{local} cases surrounding a given mathematical
+community , there are also many disputes - the Brouwer school is one example,
+but our prior discussion of visual proofs also offers another counterexample.
+Additionally, the ``GF perspective" presented here is meant to disrupt the
+notion of normativity, by suggesting that concrete syntax can reflect deep
+differences in content beyond just its appearance. Escher's prints,
+alternatively uniquely mirror both mathematics and art - they are constructions
+using rules from formal systems, but are appreciated by a general audience.
 
-one could write a grammar for fol, use GF as a parser, export to haskell, and
-then run a theorem prover on it
-ASTs -> Other data type
+He also discusses the important distinction between formal (which he focuses on)
+and informal modes in mathematics, with the informal representing the text which
+is a kind of commentary which is assumed to be inexpressible in logic. GF,
+fortunately can actually accommodate both if one considers only natural language
+translation in the informal case. This is interesting because one would need
+extend a ``formal grammar" with the general natural language content needed to
+include the informal.
 
-what is a mathematic construction : we don't say this set of bits is this
-theorem, or this unique computation (different times different runs, noise in
-compiler opitmizations) even though they are , or this other set of bits is this theorem, 
-extensionally the same vs intensionally the same
+He says symbols serve to ``abbreviate material", and ``occur inside textual
+mathematics". While his discourse records can deal with symbols, in GF,
+overloading of symbols can cause overgeneration. For example certain words like
+"is" and "are" can easily be interpreted as equality, equivalence, or
+isomorphism depending on the context.
 
-when does the complexity of using PGF become more hard than 
+One of Ganesalingam's original contributions, is the notion of adaptivity :
+``Mathematical language expands as more mathematics is encountered". He
+references someones various stages of coming to terms with concepts in
+mathematics and their generalization in somebodies head. For instance, one can
+define the concept of the $n$ squared as $n^2$ of two as "n*n", which are
+definitionally equal in Agda if one is careful about how one defines addition,
+multiplication, and exponentiation. Writing grammars, on has to cater the
+language to the audience, for example, which details does one leave out when
+generating natural language proofs?
 
-or is it somewhere in between, 
+Mathematical variables, it is also noticed, can be treated anaphorically. From
+the PL persepctive they are just expressions. Creating a suitable translation
+from textual math to formal languages accounting for anaphora with GF proves to
+be exceedingly tricky, as can be seen in the HoTT grammar below.
 
-or is the meaning something
+\subsubsection{Pragmatics in mathematics}
 
-We can assign syntactic to describe meaning, and the meaning of natural language
-utterances, vs. mathematics, vs physics , vs music, vs art (shape grammars) , vs physics
+Ganesalingam makes one observation which is particularly pertinent to our
+analysis and understanding of mathematical language, which is that of pragmatics
+content. The point warranted both a rebuttal \cite{RUFFINO2020114} and an
+additional response by Ranta \cite{RANTA2020120}. Ganesalingam says
+``mathematics does not exhibit any pragmatic phenomena: the meaning of a
+mathematical sentence is merely its compositionally determined semantic content,
+and nothing more. ". We explore these fascinating dialogues here, adjoining our
+own take in the context of this project.
 
-we typically associate syntax with writing, especially in CS
-concrete sytnax : how are the units represented 
-abstract sytnax : what is the abstract structure associated to 
-  for computers, this is trees. as well for linguistics
-semantics : what does the syntax represent 
+San Mauro et al. disagree with this conception, stating mathematicians may rely
+``on rhetorical figures, and speak metaphorically or even ironically", and that
+mathematicians may forego literal meaning if considered fruitful. The authors
+then give two technical examples of pragmatic phenomena where pragmatics is
+explicitly exhibited, but we elect to give our own example relevant for our position on
+the matter.
 
-Architecture : 
-syntax -> 
-Syntax -> signals (of samples) or digitally produced & modified -> 
-meaning 
+We look ask what is the difference in meaning between lemma, proof, and
+corollary. While there is a syntactic distinction between \term{Lemma} and
+\term{Theorem} in Coq, Agda which resembles Haskell rather than a theorem prover
+at a first glance, sees no distinction as seen in \autoref{fig:O1}. The words carry semantic weight :
+\emph{lemma} for concepts preceding theorems and \emph{corollaries} for concepts
+applying theorems. The interpretation of the meaning when a lemma or corollary
+is called a carry pragmatic content in that the author has to decide how to
+judge the content by its importance, and relation of them to the \emph{theorems}
+in some kind of natural ways. Inferring how to judge a keyword seems impossible
+for a machine, especially since critical results are perhaps misnamed the Yoneda
+Lemma is just one of many examples.
 
-Or the syntax of physics vs the physics itself
-where ultimately the sentences are is to be co
+Ranta categorizes pragmatic phenomena in 5 ways : speech acts, context,
+speaker's meaning, efficient communication, and the \emph{wastebasket}. He
+asserts that the disagreement is really a matter of how coarsely pragmatics is
+interpreted by the authors - Ganesalingam applies a very fine filter in his
+study of mathematical language, whereas the coarser filter applied by San Mauro
+et al. allows for many more pragmatics phenomena to be captured, and that the
+``wastebasket" category is really the application of this filter. Ranta shows
+that both Speech Acts and Context are pragmatic phenomena treated in
+Ganesalingam's work and speaker's meaning and efficient communication are in
+covered by San Mauro et al., and that the authors disagreement arises less about
+the content itself and how it is analyzed, but rather whether the analysis
+should be classified as pragmatic or semantic.
 
-meaning is just 
+Our Grammars give us tools to work with the speaker's meaning of a mathematical
+utterance by a translation into syntactically complete Agda judgment (assuming
+it type-checks). Dually, efficient communication is the goal of producing a
+semantically adequate grammar. The task of creating a grammar which satisfies
+both is obviously the most difficult task before future grammar writers. We
+therefore hope that the modeling of natural language mathematics via the
+grammars presented will give insights into how understanding of all five
+pragmatic phenomena are necessary for good grammatical translations between CNLs
+and formal languages. For the CNLs to really be ``natural", one must be able to
+infer and incorporate the pragmatic phenomena discussed here, and indeed much
+more.
 
----- end Random philosophical ideas
+Ganesalingam points out that ``a disparity between the way we think about
+mathematical objects and the way they are formally defined causes our linguistic
+theories to make incorrect predictions." This constraint on our theoretical
+understanding of language, and the practical implications yield a bleak outlook.
+Nevertheless, mathematical objects developing over time is natural, the more and
+deeper we dig into the ground, the more we develop refinements of what kind of
+tools we are using, develop better iterations of the same tools (or possibly
+entirely new ones) as well as knowledge about the soil in which we are
+digging.
 
-"
-meaningful statements in some underlying logic. If it was pointed out that
-a particular sentence had no translation into such a logic, a mathematician
-would genuinely feel that they had been insufficiently precise. (The actual
-translation into logic is never performed, because it is exceptionally laborious;
-"
-Mathematics - Meaning -> FOL 
-but a lot of mathematics hasn't been formalized, and the mathematics
-historically was less concerned with logic in the modern sense, although it was
-concerned with truth, and proof, quite early
-
-
-- what about visual mathematics, one should be careful to accept that
-mathematics is purely a linguistic phenomena, as was pointed out previously
-
-
-"
-mathematics has a normative notion of what its content should look like; there is no
-analogue in natural languages.
-"
-discusses normativity - there is and there isn't - maybe a set of normative
-notions is better, with varying degrees of overlap and differences. certain communities are very 
-
-1.2.3 full adaptivity
-
-pre-geometry, geometry intuition
-euclidean geometry : points in space,  ruler and compass
-algebraic geometry : polynomials describing curves
-inductive types
-formal mode and informal mode aren't precise, so we should be skeptical.  HoTT,
-for example, takes HITs, an incredibly nuanced syntactic feature, and describes
-spaces with them (in the same way euclidean geometry saw them as sets of points,
-or line segments between 
-is both, in some sense, because it gives a mechinism of describing spaces
-directly. 
-"
-From a linguistic perspective, the formal mode is more novel and interesting
-because it is restricted enough to describe completely, both in terms of syntax
-and semantics. By contrast, the informal mode seems as hard to describe as
-general natural language. We will therefore look only at mathematics in the
-formal mode.
-"
-
-
-Section 2
-
-He says symbols serve to ``abbreviate material", 
-inside textual mathematics, and are of less concern 
-concrete syntax, interact with other parts of our brain than. But this is indeed
-true for hour we're studying GF.
-
-but its also worth pondering
-how the symbols are expressive. Would be interesting to study this because strings in Agda are in some ways easier
-to read,
-"
-The primary function of symbolic mathematics is to 
-that would be too cumbersome to state with text alone. Thus a sentence
-"
-
-"
-Because symbolic material functions primarily in an abbreviative capacity,
-symbolic mathematics tends to occur inside textual mathematics rather than
-vice versa. Thus mathematical texts are largely composed out of textual
-"
-
-"
-adaptivity
-a phenomenon that is much more remarkable than the use of symbols. Math-
-ematical language expands as more mathematics is encountered. The kind of
-"
-
-"
-Thus definitions always contain enough information to fully specify the
-semantics of the material being defined.
-"
-What about Thomas Hales proofs, are these only semantically valid when they have
-been formalized?
-
-
-"
-As a result, textual mathematics predominantly
-uses the third person singular and third person plural, to denote individual
-"
-
-"
-verbs, typically to refer to the mutual intent of the author and reader.
-Working mathematicians treat mathematical objects as if they were Pla-
-tonic ideals, timeless objects existing independently of the physical world. The
-"
-
-"
-The limited variation in person and tense means that inflectional morphol-
-gy plays only a small part in mathematical language. The only morphological
-"
-
-"The syntax of textual mathematics also exhibits relatively limited variation."
-
-
-this means that textual mathematics can be effectively captured by a context-
-free grammar (in the sense of (Jurafsky and Martin, 2009, p. 387)).
-
-In contrast to the morphology and syntax of textual mathematics, its
-lexicon is remarkably varied. As we have noted above, the mechanism of
-
-no tense or events
-no intesnionality
-no modality
-
-"
-usual. To a first approximation, mathematics does not exhibit any pragmatic
-phenomena: the meaning of a mathematical sentence is merely its composition-
-ally determined semantic content, and nothing more. In order to state this point
-"
-
-
-"
-Due to the absence of pragmatic phenomena, phenomena which are some-
-times analysed as semantic and sometimes analysed as pragmatic can be
-treated as being purely semantic where they occur in mathematics, i.e. they
-can be analysed in purely truth-conditional terms. This applies particularly
-to presuppositions, which play an important role in mathematics. Because
-"
-
-"
-Thus, in some intuitive sense, syntax is dependent on the types of expres-
-sions in a way that does not occur in existing formal languages. As we will
-show in §3.2 and Chapter 4, this notion of type is too semantic itself to be
-formalised in syntactic terms. In other words, the type of an expression is too
-closely related to what that expression refers to for purely syntactic notions
-of type to be applicable.
-"
-
-"
-most ambiguity in mathematics is not noticed by mathematicians, just as the extensive ambi-
-guity in natural languages is “simply not noticed by the majority of language
-"
-
-"
-in an extremely compact manner. In essence, they serve as a mathematical
-alternative to anaphor. They cannot be eliminated precisely because anaphor
-"
-
-reanalysis
-
-Chapter 7 pg 181
-
-be equal as distinct. In both cases, a disparity between the way we think
-about mathematical objects and the way they are formally defined causes
-our linguistic theories to make incorrect predictions. In order to obtain the
-correct predictions about language, we need to make sure that the formal
-situation matches actual usage.
-
-mal proofs are provided; and the cycle repeats. Thus informal mathematics
-changes over the centuries. 187
-
-% my idea
-engineers are motivated by needs and desires (emirical, descriptive,
-practial) , whereas mathematicians are much more idealistic in their pursuits,
-almost comparable to a stances on religious scripture
-
-mathematics developing over time is natural, the more and deeper we dig into the
-ground, the more we develop refinements of what kind of tools we are using,
-develop better iterations of the same tools (or possibly entirely new ones) as
-well as knowledge about the ground in which we are digging (these are adjoining)
-
-in some sense the library of babel problem, whereby we dont just discover
-predefined ideas by randomly sampling bags of words, but we have to work with
-hard labor, sweat, and tears, to imbue the sentences of mathematics with meaning
-that makes them descriptive, that there is some kind of internal, but
-distributed, mental process which is mirror whats on paper (and the 'reality' it
-describes)
-
-relate this to HoTT as a perfect 'case study' in the foundations of mathematics
-
-
-\subsection{other authors}
+\subsection{Other authors}
 
 \begin{displayquote}
 QED is the very tentative title of a project to build a computer system that effectively represents all important mathematical knowledge and techniques.
@@ -370,7 +252,7 @@ QED is the very tentative title of a project to build a computer system that eff
 \end{displayquote}
 
 The ambition of the QED Manifesto, with formalization and informalization of
-mathematics being one subset, is probably impossible. The myriad attempts
+mathematics being a subset, is probably impossible. The myriad attempts
 at formalization and informalization are too much to compress here - a survey
 and comparison of these ideas is unfortunately unavailable. We recount some of
 them briefly.
@@ -423,26 +305,15 @@ tactics, and proof objects, and focus on natural deduction proofs. Since Coq is
 equipped with notions of Set, Type, and Prop, their methods make distinguishing
 between these possibly easier. This work only focuses on linearization of trees,
 and GF's pretty printer is likely superior to any NL generation techniques
-because of help from the RGL. The complexity of the system also made it
+because of help from the Resource Grammar Library (RGL). The complexity of the system also made it
 untenable for larger proofs - nonetheless, it serves as an important prelude to
 many of the subsequent GF developments in this area.
 
-There are many other examples exploring the natural language and theorem prover
-boundary. It should be noted that GF's role in this space is primitive, but it
-does offer the advantage of being interfaced with many natural languages, and in
-programming languages too, including the syntax of these systems. We also hope
-other PL developers will and use , like the Grammatical Logical Inference
-Framework (GLIF), which uses GF as a front-end for the Meta-Meta-Theory
-framework \cite{schaefer2020glif}.
-
-
-
-
-
---- For conclusion
-
-
-
-The quest for computers doing mathematics for us, or at least helping is, has
-seen many bifurcations since the birth of computer science. I believe doing
-mathematics is impossible, but computers certainly do help.
+There are many other examples worth exploring in the natural language and
+theorem prover boundary. It should be noted that GF's role in this space is
+primitive, but it does offer the advantage of providing interface for natural
+languages and programming languages. We also hope other PL developers will and
+use and develop tools like the Grammatical Logical Inference Framework (GLIF),
+which uses GF as a front-end for the Meta-Meta-Theory framework
+\cite{schaefer2020glif}. With many approaches are not mentioned here, we a
+hungry reader should evaluate these many sources with respect to this work.

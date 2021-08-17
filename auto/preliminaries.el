@@ -3,7 +3,6 @@
  (lambda ()
    (TeX-run-style-hooks
     "mltt"
-    "intro-agda"
-    "gfintro"))
+    "intro-agda"))
  :latex)
 

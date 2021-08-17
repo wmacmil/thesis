@@ -114,6 +114,8 @@ can normalize the definitionally equal terms to the same normal form in
 downstream programs. Let's compare it these judgements to those keywords ubiquitous in
 mathematics, and show how those are represented in Agda directly below.
 
+\begin{figure}
+\centering
 \begin{minipage}[t]{.3\textwidth}
 \vspace{2cm}
 \begin{itemize}
@@ -203,6 +205,8 @@ mathematics, and show how those are represented in Agda directly below.
 \AgdaFunction{proof}\<%
 \end{code}
 \end{minipage}
+\caption{Mathematical Assertions and Agda Judgements} \label{fig:O1}
+\end{figure}
 
 Formation rules, are given by the first line of the data declaration, followed
 by some number of constructors which correspond to the introduction forms of the
@@ -367,7 +371,7 @@ directly with lambda's if the typechecker infers a function type for a hole.
 \\
 %
 \\[\AgdaEmptyExtraSkip]%
-\>[0]\AgdaFunction{functionalExample}\AgdaSpace{}%
+\>[0]\AgdaFunction{functionalNegation}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
 \AgdaDatatype{𝔹}\AgdaSpace{}%
 \AgdaSymbol{→}\AgdaSpace{}%
@@ -379,7 +383,7 @@ directly with lambda's if the typechecker infers a function type for a hole.
 \AgdaSymbol{→}\AgdaSpace{}%
 \AgdaDatatype{𝔹}\AgdaSymbol{)}\<%
 \\
-\>[0]\AgdaFunction{functionalExample}\AgdaSpace{}%
+\>[0]\AgdaFunction{functionalNegation}\AgdaSpace{}%
 \AgdaBound{b}\AgdaSpace{}%
 \AgdaBound{f}\AgdaSpace{}%
 \AgdaSymbol{=}\AgdaSpace{}%
@@ -512,8 +516,8 @@ Agda can infer the speciliazation for you, as seen in \term{natrec'} below.
     \infer4[]{\Gamma \vdash natind\{e₀,\;x.y.e₁\}(n) : X[x := n]}
   \end{prooftree}
 \]
-$$\Gamma \vdash natrec\{e₀;x.y.e₁\}(n) \equiv e₀ : X[x := 0]$$
-$$\Gamma \vdash natrec\{e₀;x.y.e₁\}(suc\ n) \equiv e₁[x := n,y := natrec\{e₀;x.y.e₁\}(n)] : X[x := suc\ n]$$
+$$\Gamma \vdash natind{e₀;x.y.e₁\}(n) \equiv e₀ : X[x := 0]$$
+$$\Gamma \vdash natind{e₀;x.y.e₁\}(suc\ n) \equiv e₁[x := n,y := natind\{e₀;x.y.e₁\}(n)] : X[x := suc\ n]$$
 \begin{code}%
 \>[0]\AgdaFunction{natind}\AgdaSpace{}%
 \AgdaSymbol{:}\AgdaSpace{}%
@@ -588,10 +592,11 @@ $$\Gamma \vdash natrec\{e₀;x.y.e₁\}(suc\ n) \equiv e₁[x := n,y := natrec\{
 \AgdaSymbol{=}\AgdaSpace{}%
 \AgdaFunction{natind}\<%
 \end{code}
+We will defer the details of using induction and recursion principles for later
+sections, when we actually give examples of pidgin proofs some of our grammars can
+handle. For now, the keen reader should try using Agda.
 
-%We will defer the details of these induction and recursion principles for later
-%sections, when we actually give examples of pidgin proofs our grammars can
-%handle. %Question for conclusion: how do we teach agda proofs vs programs? i.e.
+%Question for conclusion: how do we teach agda proofs vs programs? i.e.
 %how can it infer if its generating langauge for a computer scientist or a
 %mathematician %Variables in mathematics are meant to be simple (like e₀) but in
 %Agda, its generally advisable to use more expresive variables. %We can either

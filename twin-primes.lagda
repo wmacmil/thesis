@@ -74,7 +74,6 @@ to include something \emph{everyone} alternatively knows. Agda, however, must
 know in order to typecheck. Below we offer a presentation which suits Agda's
 needs, and matches the number theorists presentation of twin prime.
 
-
 \begin{code}
 isSuccessivePrime : (p p' : ℕ) → isPrime p → isPrime p' → Set
 isSuccessivePrime p p' x x₁ =
@@ -98,19 +97,51 @@ twinPrimeConjecture' = (n : ℕ) → Σ[ p ∈ ℕ ] (p ≥ n)
   × twinPrime p
 \end{code}
 
+
 We see that \term{isSuccessivePrime} captures this meaning, interpreting
 ``successive" as the type of suprema in the prime number ordering. We also see that all the primality proofs must be given explicitly.
 
 The term \term{primeGap} then has to reference this successive prime data, even
 though most of it is discarded and unused in the actual program returning a
 number. One could keep these unused arguements around via extra record fields,
-to anticipate future programs calling \prime{Gap}, but ultimately the developer has to
+to anticipate future programs calling \term{primeGap}, but ultimately the developer has to
 decide what is relevant. A GF translation would ideally be kept as simple as possible. We also use propositional equality here, which is
 another departure from classical mathematics, as will be elaborated later.
 
 Finally, \{twinPrime} is a specialized version of \term{primeGap} to 2. ``has a
 prime gap of two`` needs to be interpreted ``whose prime gap is equal to two",
 and writing a GF grammar capable of disambiguating \emph{has} in mathematics
-generally is likely impossible.
+generally is likely impossible. One can also uncurry much of the above code to make it more readable, which we include in the appendix.
+
+\begin{code}
+--TODO ADD to the appendix
+prime = Σ[ p ∈ ℕ ] isPrime p
+
+isSuccessivePrime' : prime → prime → Set
+isSuccessivePrime' (p , pIsPrime) (p' , p'IsPrime) =
+  ((p'' , p''IsPrime) : prime) →
+  p ≤ p' → p ≤ p'' → p' ≤ p''
+
+successivePrimes =
+  Σ[ p ∈ prime ] Σ[ p' ∈ prime ] isSuccessivePrime' p p'
+
+primeGap' : successivePrimes → ℕ
+primeGap' ((p , pIsPrime) , (p' , p'IsPrime) , p'-is-after-px) = p - p'
+
+nth-pletPrimes : successivePrimes → ℕ → Set
+nth-pletPrimes (p , p' , p'-is-after-p) n =
+  primeGap' (p , p' , p'-is-after-p) ≡ n
+
+twinPrimes : successivePrimes →  Set
+twinPrimes sucPrimes = nth-pletPrimes sucPrimes 2
+
+twinPrimeConjecture'' : Set
+twinPrimeConjecture'' = (n : ℕ) →
+  Σ[ pr@(p , pIsPrime) ∈ prime ]
+  Σ[ pr'@(p' , p'IsPrime) ∈ prime ]
+  Σ[ pr-after-pr' ∈  isSuccessivePrime' pr pr' ]
+    (p ≥ n)
+  × twinPrimes (pr , pr' , pr-after-pr')
+\end{code}
 
 While working on this example, I tried to prove that 2 is prime in Agda, which turned out to be nontrivial. When I told this to an analyst (in the mathematical sense) he remarked that couldn't possibly be the case because it's something which a simple algorithm can compute (or generate). This exchange was incredibly stimulating, for the mathematian didn't know about the \emph{propositions as types} principle, and was simply taking for granted his internal computational capacity to confuse it for proof, especially in a constructive setting. He also seemed perplexed that anyone would find it interesting to prove that 2 is prime. As is hopefully revealed by this discussion, seemingly trivial things, when treated by the type theorist or linguist, can become wonderful areas of exploration.

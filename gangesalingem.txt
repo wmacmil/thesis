@@ -68,27 +68,46 @@ mathematical sentence is merely its compositionally determined semantic content,
 and nothing more. ". We explore these fascinating dialogues here, adjoining our
 own take in the context of this project.
 
-A working example for how pragmatics shows up in mathematics, we look ask what is the difference in meaning between lemma, proof, and corollary.  While there is a syntactic distinction between \term{Lemma} and \term{Theorem} in Coq, Agda is meant to epitomize the Propositions as Types, where it resembles Haskell rather than a theorem prover at a first glance. The words carry semantic weight : lemma for things preceding theorems and corollaries for things applying theorems.  The interpretation of the meaning when a lemma or corollary is called a carry pragmatic content in that the author has to decide how to judge the relation of them to the \emph{theorems} in some kind of natural ways. Inferring how to judge a keyword seems impossible for a machine.
+San Mauro et al. disagree with this conception, stating mathematicians may rely
+``on rhetorical figures, and speak metaphorically or even ironically", and that
+mathematicians may forego literal meaning if considered fruitful. The authors
+then give two technical examples of pragmatic phenomena where pragmatics is
+explicitly exhibited, but we elect to give our own example relevant for our position on
+the matter.
 
-Ranta categorizes pragmatic phenomena in 5 ways : speech acts, context, speaker's meaning, efficient communication, and the \emph{wastebasket}. We    
+We look ask what is the difference in meaning between lemma, proof, and
+corollary. While there is a syntactic distinction between \term{Lemma} and
+\term{Theorem} in Coq, Agda which resembles Haskell rather than a theorem prover
+at a first glance, sees no distinction. The words carry semantic weight :
+\emph{lemma} for concepts preceding theorems and \emph{corollaries} for concepts
+applying theorems. The interpretation of the meaning when a lemma or corollary
+is called a carry pragmatic content in that the author has to decide how to
+judge the content by its importance, and relation of them to the \emph{theorems}
+in some kind of natural ways. Inferring how to judge a keyword seems impossible
+for a machine, especially since critical results are perhaps misnamed the Yoneda
+Lemma is just one of many examples.
 
-
+Ranta categorizes pragmatic phenomena in 5 ways : speech acts, context,
+speaker's meaning, efficient communication, and the \emph{wastebasket}. He
+asserts that the disagreement is really a matter of how coarsely pragmatics is
+interpreted by the authors - Ganesalingam applies a very fine filter in his
+study of mathematical language, whereas the coarser filter applied by San Mauro
+et al. allows for many more pragmatics phenomena to be captured, and that the
+``wastebasket" category is really the application of this filter. Ranta
+shows that both Speech Acts and Context are pragmatic phenomena treated in
+Ganesalingam's work and speaker's meaning and efficient communication are in covered by San Mauro et al., and that the authors disagreement arises less about the content itself and how it is analyzed, but rather whether the analysis should be classified as pragmatic or semantic.
 
 Our Grammars give us tools to work with the speaker's meaning of a mathematical
 utterance by a translation into syntactically complete Agda judgment (assuming
 it type-checks). Dually, efficient communication is the goal of producing a
 semantically adequate grammar. The task of creating a grammar which satisfies
-both is obviously the most difficult task before future grammar writers.
-
-
-
-Discuss the pragmatics stuff with respect to natural language generation in
-general. A CNL is inductively defined, NL is not. A CNL lacks the pragmatic
-tools needed to verify or prorduce proofs, but it is feasible that it can be
-used to at least catalogue mathematical Propositions presented as types. also,
-discuss cnl with respect to this last quote
-
-
+both is obviously the most difficult task before future grammar writers. We
+therefore hope that the modeling of natural language mathematics via the
+grammars presented will give insights into how understanding of all five
+pragmatic phenomena are necessary for good grammatical translations between CNLs
+and formal languages. For the CNLs to really be ``natural", one must be able to
+infer and incorporate the pragmatic phenomena discussed here, and indeed much
+more.
 
 Ganesalingam points out that ``a disparity between the way we think about
 mathematical objects and the way they are formally defined causes our linguistic
@@ -97,5 +116,5 @@ understanding of language, and the practical implications yield a bleak outlook.
 Nevertheless, mathematical objects developing over time is natural, the more and
 deeper we dig into the ground, the more we develop refinements of what kind of
 tools we are using, develop better iterations of the same tools (or possibly
-entirely new ones) as well as knowledge about the ground in which we are
+entirely new ones) as well as knowledge about the soil in which we are
 digging.

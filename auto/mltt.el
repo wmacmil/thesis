@@ -2,8 +2,8 @@
  "mltt"
  (lambda ()
    (LaTeX-add-labels
-    "fig:M5"
-    "fig:M6"
-    "fig:M2"))
+    "fig:P1"
+    "fig:P2"
+    "fig:P3"))
  :latex)
 

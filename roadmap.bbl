@@ -32,6 +32,10 @@ Bove, A., Dybjer, P., \& Norell, U. (2009).
   Theorem Proving in Higher Order Logics}  (pp.\ 73--78).  Berlin, Heidelberg:
   Springer Berlin Heidelberg.
 
+\bibitem[Brunerie, 2016]{brunerie2016homotopy}
+Brunerie, G. (2016).
+\newblock On the homotopy groups of spheres in homotopy type theory.
+
 \bibitem[Chomsky, 1995]{Chomsky1995}
 Chomsky, N. (1995).
 \newblock {\em The Minimalist Program}.
@@ -166,6 +170,17 @@ Martin{-}L\"of, P. (1996).
   the logical laws.
 \newblock {\em Nordic Journal of Philosophical Logic}, 1(1), 11--60.
 
+\bibitem[Martin-Lof \& Lozinski, 1984]{ml79}
+Martin-Lof, P. \& Lozinski, Z.~A. (1984).
+\newblock Constructive mathematics and computer programming [and discussion].
+\newblock {\em Philosophical Transactions of the Royal Society of London.
+  Series A, Mathematical and Physical Sciences}, 312(1522), 501--518.
+
+\bibitem[Martin-Löf, 1987]{mlTruth}
+Martin-Löf, P. (1987).
+\newblock Truth of a proposition, evidence of a judgement, validity of a proof.
+\newblock {\em Synthese}, 73(3), 407--420.
+
 \bibitem[Montague, 1973]{Montague1973}
 Montague, R. (1973).
 \newblock {\em The Proper Treatment of Quantification in Ordinary English},
@@ -208,8 +223,15 @@ RANTA, A. (2004).
 \newblock Grammatical framework.
 \newblock {\em Journal of Functional Programming}, 14(2), 145–189.
 
-\bibitem[Ranta, 2011]{rantaLog}
-Ranta, A. (2011).
+\bibitem[Ranta, 2011a]{ranta2011grammatical}
+Ranta, A. (2011a).
+\newblock {\em Grammatical framework: Programming with multilingual grammars},
+  volume 173.
+\newblock CSLI Publications, Center for the Study of Language and Information
+  Stanford.
+
+\bibitem[Ranta, 2011b]{rantaLog}
+Ranta, A. (2011b).
 \newblock Translating between language and logic: what is easy and what is
   difficult.
 \newblock In {\em International Conference on Automated Deduction}  (pp.\
@@ -225,6 +247,13 @@ Ranta, A. (2013).
 Ranta, A. (2014).
 \newblock Translating homotopy type theory in grammatical framework.
 
+\bibitem[Ranta, 2020]{RANTA2020120}
+Ranta, A. (2020).
+\newblock Some remarks on pragmatics in the language of mathematics: Comments
+  to the paper “at least one black sheep: Pragmatics and mathematical
+  language” by luca san mauro, marco ruffino and giorgio venturi.
+\newblock {\em Journal of Pragmatics}, 160, 120--122.
+
 \bibitem[Ranta \& Ranta, 1994]{ranta1994type}
 Ranta, A. \& Ranta, D. (1994).
 \newblock {\em Type-theoretical Grammar}.
@@ -235,6 +264,11 @@ Rudnicki, P. (1992).
 \newblock An overview of the mizar project.
 \newblock In {\em Proceedings of the 1992 Workshop on Types for Proofs and
   Programs}  (pp.\ 311--330).
+
+\bibitem[Ruffino et~al., 2020]{RUFFINO2020114}
+Ruffino, M., {San Mauro}, L., \& Venturi, G. (2020).
+\newblock At least one black sheep: Pragmatics and mathematical language.
+\newblock {\em Journal of Pragmatics}, 160, 114--119.
 
 \bibitem[Schaefer \& Kohlhase, 2020]{schaefer2020glif}
 Schaefer, J.~F. \& Kohlhase, M. (2020).

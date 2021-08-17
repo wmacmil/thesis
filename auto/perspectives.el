@@ -2,9 +2,9 @@
  "perspectives"
  (lambda ()
    (LaTeX-add-labels
-    "fig:M1"
-    "fig:M2"
-    "fig:M5"
-    "fig:M6"))
+    "fig:N1"
+    "fig:N2"
+    "fig:N3"
+    "fig:N4"))
  :latex)
 

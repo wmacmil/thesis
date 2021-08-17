@@ -83,15 +83,6 @@ at least one reading of it. One can analyze mathematics using linguistic
 methods, or try to give a natural language justification of Intuitionistic Type
 Theory (ITT) using Martin-Löf's meaning explanations.
 
-In this work, we will see that there are multiple GF grammars which model some
-subset of each member of the trinity. Constructing these grammars, and asking
-how they can be used in applications for mathematicians, logicians, and computer
-scientists is an important practical and philosophical question. Therefore we
-hope this attempt at giving the language of mathematics, in particular how
-propositions and proofs are expressed and thought about in that language, a
-stronger foundation.
-
-
 \begin{figure}[H]
 \centering
 \begin{tikzcd}
@@ -104,6 +95,14 @@ Math \arrow[rrruu, "Language\ Of\ Mathematics"] &  &  &
 \end{tikzcd}
 \caption{Interpretations of Natural Language} \label{fig:M3}
 \end{figure}
+
+In this work, we will see that there are multiple GF grammars which model some
+subset of each member of the trinity. Constructing these grammars, and asking
+how they can be used in applications for mathematicians, logicians, and computer
+scientists is an important practical and philosophical question. Therefore we
+hope this attempt at giving the language of mathematics, in particular how
+propositions and proofs are expressed and thought about in that language, a
+stronger foundation.
 
 \subsection{What is a Homomorophism?}
 
@@ -147,7 +146,7 @@ which definitions feel better, and how the reader herself might present the
 definition differently.
 
 If one want to distill the meaning of each of these presentations, there is a
-significant amount of subliminal interpretation happening very much analagous to
+significant amount of subliminal interpretation happening very much analogous to
 our innate lingusitic ussage. The inverse and identity are discarded, even
 though they are necessary data when defning a group. The order of presentation
 of information is inconsistent, as well as the choice to use symbolic or natural
@@ -166,29 +165,20 @@ We now show yet another definition of a group homomorphism formalized in the
 Agda programming language:
 
 \input{latex/monoid}
-
-% \input{latex/Nat}
-% \input{latex/Plus}
-% \input{latex/Times}
-
-% While the first four definitions above are should be linguistically
-% comprehensible to a non-mathematician, these last two definitions is most certainly
-% not.
-
-While the last two definitions may carry degree of comprehension to a programmer or mathematician
-not exposed to Agda, it is certainly comprehensible to a computer : that is, it
-typechecks on a computer where Cubical Agda is installed. While GF is designed
-for multilingual syntactic transformations and is targeted for natural language
-translation, it's underlying theory is largely based on ideas from the compiler
-communities. A cousin of the BNF Converter (BNFC), GF is fully capable of
-parsing programming languages like Agda! And while the Agda definitions are just
-another concrete syntactic presentation of a group homomorphism, they are distinct
-from the natural language presentations above in that the colors indicate it
-has indeed type checked. 
+While the last two definitions may carry degree of comprehension to a programmer
+or mathematician not exposed to Agda, it is certainly comprehensible to a
+computer : that is, it typechecks on a computer where Cubical Agda is installed.
+While GF is designed for multilingual syntactic transformations and is targeted
+for natural language translation, it's underlying theory is largely based on
+ideas from the compiler communities. A cousin of the BNF Converter (BNFC), GF is
+fully capable of parsing programming languages like Agda! And while the Agda
+definitions are just another concrete syntactic presentation of a group
+homomorphism, they are distinct from the natural language presentations above in
+that the colors indicate it has indeed type checked.
 
 While this example may not exemplify the power of Agda's type-checker, it is of
 considerable interest to many. The type-checker has merely assured us that
-GroupHom(') are well-formed types - not that we have a canonical representation
+\term{GroupHom(')} are well-formed types - not that we have a canonical representation
 of a group homomorphism. The type-checker is much more useful than is
 immediately evident: it delegates the work of verifying that a proof is correct,
 that is, the work of judging whether a term has a type, to the computer. While
@@ -210,15 +200,14 @@ Univalent Foundations
 Project~\cite{theunivalentfoundationsprogram-homotopytypetheory-2013}.
 
 While Agda and other programming languages are capable of encoding definitions,
-theorems, and proofs, they have so far seen little adoption, and in some cases
-treated with suspicion and scorn by many mathematicians.  This isn't entirely
-unfounded : it's a lot of work to learn how to use Agda or Coq, software
-updates may cause proofs to break, and the inevitable imperfections we humans
-are prone to 
-instilled in these tools . Besides, Martin-Löf
-Type Theory, the constructive foundational project which underlies these proof
-assistants, is often misunderstood by those who dogmatically accept the law of the
-excluded middle as the word of God.
+theorems, and proofs, they have so far seen little adoption. In some cases they
+have been treated with suspicion and scorn by many mathematicians. This isn't
+entirely unfounded : it's a lot of work to learn how to use Agda or Coq,
+software updates may cause proofs to break, and the inevitable imperfections we
+humans are prone to instilled in these tools . Besides, Martin-Löf Type Theory,
+the constructive foundational project which underlies these proof assistants, is
+often misunderstood by those who dogmatically accept the law of the excluded
+middle as the word of God.
 
 It should be noted, the constructivist rejects neither the law of the excluded
 middle, nor ZFC. She merely observes them, and admits their handiness in certain

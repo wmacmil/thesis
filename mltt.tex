@@ -44,7 +44,7 @@ in designing and building programming languages over many various logics, these
 judgments become a prime focus. The role of the type-checker in a programming
 language is to present evidence for, or decide the validity of the judgments.
 The four main judgments of type theory are given in natural language on the left
-and symbolically on the right.
+and symbolically on the right :
 
 \begin{multicols}{2}
 \begin{itemize}
@@ -59,9 +59,7 @@ and symbolically on the right.
 \end{itemize}
 \end{multicols}
 
-Frege's turnstile, $\vdash$, denotes a judgment.
-
-These judgments become much more interesting when we add the ability for them to
+Frege's turnstile, $\vdash$, denotes a judgment. These judgments become much more interesting when we add the ability for them to
 be interpreted in a some context with judgment hypotheses. Given a series of
 judgments $J_1,...,J_n$, denoted $\Gamma$, where $J_i$ can depend on previously
 listed $J's$, we can make judgment $J$ under the hypotheses, e.g. $J_1,...,J_n
@@ -78,7 +76,7 @@ $$x : \mathbb{R} \vdash \sin x : \mathbb{R}$$
 \subsubsection{Rules}
 
 Martin-Löf systematically used the four fundamental judgments in the proof
-theoretic style of Pragwitz. To this end, the intuitionistic formulation of the
+theoretic style of Pragwitz and Gentzen. To this end, the intuitionistic formulation of the
 logical connectives just gives rules which admit an immediate computational
 interpretation. The main types of rules are type formation, introduction,
 elimination, and computation rules. The introduction rules for a type admit an
@@ -92,26 +90,67 @@ abstracted over a variable and returns a term of some type when applied to an
 argument which is subsequently reduced via the computational rules.
 Dependent Type Theory (DTT) generalizes this to allow the return type be
 parameterized by the variable being abstracted over. The dependent function
-forms the basis of the LF which underlies Agda and GF. 
+forms the basis of the LF which underlies Agda and GF. Here is the formation
+rule : 
+
+\[
+  \begin{prooftree}
+    \hypo{̌\Gamma  \vdash A \; {\rm type}}
+    \hypo{̌\Gamma, x : A \vdash B \; {\rm type}}
+    \infer2[]{\Gamma \vdash \Pi x {:} A. B}
+  \end{prooftree}
+\]
 
 One reason why hypothetical judgments are so interesting is we can devise rules
 which allow us to translate from the metalanguage to the object language using
 lambda expressions. These play the role of a function in mathematics and
-implication in logic. This comes out in the following introduction rule :
+implication in logic. More generally, this is a dependent type, representing the
+$\forall$ quantifier. Assuming from now on $\Gamma \vdash A \; {\rm type}$ and
+$\Gamma, x : A \vdash B \; {\rm type}$, we present here the introduction rule for
+the most fundamental type in Agda, denoted \term{(x : A) -> B}.
 
-% $$ \frac{\Gamma, x : A \vdash b : B} {\Gamma \vdash \lambda x. b : A \rightarrow
-% B} $$
+\[
+  \begin{prooftree}
+    \hypo{̌\Gamma, x {:} A \vdash B \; {\rm type}}
+    \infer2[]{\Gamma \vdash \lambda x. b {:} \Pi x {:} A. B}
+  \end{prooftree}
+\]
 
-Using this rule, we now see a typical judgment, typical in a field like from
-real analysis,
+Observe that the hypothetical judgment with $x : A$ in the hypothesis has been
+reduced to the same hypothesis set below the line, with the lambda term and Pi
+type now accounting for the variable.
 
-$\vdash \lambda x. \sin x : \R \rightarrow \R$
+\[
+  \begin{prooftree}
+    \hypo{\Gamma \vdash f {:} \Pi x {:} A. B}
+    \hypo{\Gamma \vdash a {:} A}
+    \infer2[]{\Gamma \vdash f\, a {:} B[x := a]}
+  \end{prooftree}
+\]
 
-Equality :
-
-Mathematicians denote this judgement
-\begin{align*} f {:} \mathbb{R} &\rightarrow \mathbb{R}\\ x &\mapsto \sin ( x )
+We briefly give the elimination rule for
+Pi, application, as well as the classic $\beta$ and $\eta$ computational equality
+judgments (which are actually rules, but it is standard to forego the premises): 
+$$\Gamma \vdash (\lambda x.b)\, a \equiv b[x := a] {:} B[x := a]$$
+$$\Gamma \vdash (\lambda x.f)\, x \equiv f {:} \Pi x{:}A. B}$$
+Using this rule, we now see a typical judgment without hypothesis in a real
+analysis, $\vdash \lambda x. \sin x : \mathbb{R} \rightarrow \mathbb{R}$.  This is normally
+expressed as follows (knowing full well that $\sin$ actually has to be
+approximated when saying what the computable function in the codomain is): 
+\begin{align*}
+  \sin {:} \mathbb{R} &\rightarrow \mathbb{R}\\ x &\mapsto \sin ( x )
 \end{align*}
+Evaluating this function on 0, we see
+\begin{align*}
+(\lambda x. \sin x)\, 0 &\equiv \sin 0   \\ &\equiv 0
+\end{align*}
+
+While most mathematicians take this for granted, we hope this gives some insight
+into how computer scientists present functions. We recommend reading
+Martin-Löf's original papers \cite{ml1984} \cite{ml79} to see all the rules
+elaborated in full detail, as well as his philosophical papers
+\cite{mlMeanings} \cite{mlTruth} to understand type theory as it was conceived
+both practically and philosophically.
 
 \subsection{Propositions, Sets, and Types}
 
@@ -122,7 +161,7 @@ like simple symbolic manipulations, and in some sense, one doesn't need a the
 expressive power of system like GF to parse these to the same form.
 
 Additionally, it is worth comparing the type theoretic and natural language
-syntax with set theory, as is done in \autoref{fig:M5} and \autoref{fig:M6}. Now
+syntax with set theory, as is done in \autoref{fig:P1} and \autoref{fig:P2}. Now
 we bear witness to some deeper cracks than were visible above. We note that the
 type theoretic syntax is \emph{the same} in both tables, whereas the set
 theoretic and logical syntax shares no overlap. This is because set theory and
@@ -144,10 +183,10 @@ a type.
   $\bot$             & $\bot$                    & $false$            & $bottom$ \\ 
   $p\ =\ q$          & $p\ \equiv\ q$            & $p\ equals\ q$     & $definitionally\  equal$ \\ \hline
 \end{tabular}
-\caption{FOL vs MLTT} \label{fig:M5}
+\caption{FOL vs MLTT} \label{fig:P1}
 \end{figure}
 
-We show the Type and set comparisons in \autoref{fig:M6}. The basic types are
+We show the Type and set comparisons in \autoref{fig:P2}. The basic types are
 sometimes simpler to work with because they are expressive enough to capture
 logical and set theoretic notions, but this also comes at a cost. The union of
 two sets simply gives a predicate over the members of the sets, whereas union
@@ -175,7 +214,7 @@ marks in the set theory column.
  $S \subset T$ & $S <: T$              & $S\ is\ a\ subset\ of\ T$          & $S\ is\ a\ subtype\ of\ T$ \\
  $?$          & $U_1$                  & $?$ & $the\ second\ Universe$        \\ \hline 
 \end{tabular}
-\caption{Sets vs MLTT} \label{fig:M6}
+\caption{Sets vs MLTT} \label{fig:P2}
 \end{figure}
 
 
@@ -191,7 +230,7 @@ saying $Nat implies Nat$ when expressing $Nat\ \to\ Nat$.
 
 
 Terms become even messier, and this can be seen in just a small sample shown in
-\autoref{fig:M2}. In simple type theory, one distinguishes between types and
+\autoref{fig:P3}. In simple type theory, one distinguishes between types and
 terms at the syntactic level - this disappears in DTT. As will be seen later,
 the mixing of terms and types gives MLTT an incredible expressive power, but
 undoubtedly makes certain things very difficult as well. In set theory,
@@ -219,7 +258,7 @@ ITPs nodes are displayed during the interactive type-checking phase.
  $(x,y)$          & $(x,y)$ & $the\ pair\ of\ x\ and\ y$ & $the\ pair\ of\ x\ and\ y$ &  $\wedge-i$ \\
  $\pi_{1,2}\ x$      & $\pi_{1,2}\ x$ & $the\ first\ projection\ of\ x$ & $the\ first\ projection\ of\ x$ & $\wedge-e$ \\ \hline
 \end{tabular}
-\caption{Term syntax in Sets, Logic, and MLTT} \label{fig:M2}
+\caption{Term syntax in Sets, Logic, and MLTT} \label{fig:P3}
 \end{figure}
 
 We don't do all the constructors for type theory here for space, but note some
@@ -252,18 +291,3 @@ rules, as well as when and how mathematicians discuss sets,
 symbolically and otherwise. To create translation with ``real" natural language 
 is likely not to be very effective or interesting without a lot of evidence about
 how mathematicians speak and write.
-
-
-% IDEA : the proof from mathematicss (ie NL use of logical rules) should be PGFed
-% to the cubicaltt terms
-
-% Linguistically, we have basic rules.  We can construct pairs by saying ``first
-% ... and ...", the projections are seldom 
-% Case expressions (
-
-
-% Define the function f to be x^2 from N to N
-% Define the function f (x) = x^2 from N to N
-% Define the function from Nat to Nat as f (x) = x^2
-% f of x is x squared
-
