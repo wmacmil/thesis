@@ -1,0 +1,66 @@
+lso show agda code which reflects difficulty with universes
+% discuss mixture of logic language, tt, and sets in the example chosen, and the
+% fact that despite its successes,
+% contrast with hott book which is exclusively meant to be type-theoreticly formulatedwritten
+% formal, personal, and sociological problems, for conclusion
+% compare and contrast the categories alone, how they are similair and different
+% after all three have been written
+%IN ORDER TO USE GF TO MODEL FORMAL LANGUAGES, ONE HAS TO DEVELOP FORMAL MODELS
+%OF GF ITSELF. this includes testing, extracting grammars, proving that GF
+%grammar does or doesn't contain a string, how to control ambiguity with
+%parsing. also, look at notions of subgrammars (and sublanguages), with the
+%module systems, and with respect to
+% can we come up with a model of computation for GF (i.e. lambdas, Strings, etc)?
+% Definition 1.4. A group G is a monoid with an inverse g for every element g.
+% Thus G is a category with one object, in which every arrow is an isomorphism.
+% awodey
+
+% for conclusion, as regards group
+% A category is equivalently
+%     a monad in the 2-category of spans of sets;
+%     a monoid in the monoidal category of endospans on the set of objects;
+%     a simplicial set which satisfies the Segal conditions;
+%     a simplicial set which satisfies the weak Kan complex conditions strictly:
+%     hence a directed homotopy type which is “1-truncated”
+% this is not our notion,
+% it would be absurd to think 
+
+% a monoid is a category with on object
+% a monoid is (a monoid in the monoidal category of endospans on the set of
+%   objects) with one object 
+% a monoid is (a monoid in the monoidal category of endospans on the set of
+%   objects) with one object 
+
+% a monoid is (a (a monoid in the monoidal category of endospans on the set of
+%   objects) in the monoidal category of endospans on the set of
+%   objects) with one object 
+% --> a a ungrammatical
+% a monoid is ([an?] (a monoid in the monoidal category of endospans on the set of
+%   objects) in the monoidal category of endospans on the set of
+%   objects) with one object 
+
+% category :=  a simplicial set which satisfies the weak Kan complex conditions strictly:
+
+% group := (a simplicial set which satisfies the weak Kan complex conditions
+%   strictly) with one object where every arrow is an isomorphism
+
+% a simplicial set is a contravariant functor from the simplex category to the
+%   category of sets
+
+% a simplicial set which satisfies the Segal conditions;
+
+% category of sets := simplicial set[s] which satisfies the Segal conditions;
+% whose 
+
+% groupoid with a single object, or more precisely a pointed groupoid with a single object.
+
+% a group is a record type such that...
+% substitute infinity-groupoid in for type
+% a group is (give a signature) 
+% a group is a record type such that...
+
+Idea : one can define incredibly general structures such that everything is 
+
+
+functor with one map 
+

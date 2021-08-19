@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {}Mathematical Model of GF}{9}{subsection.1.3}%
 \contentsline {section}{\numberline {}Prior GF Formalizations}{12}{section.2}%
 \contentsline {subsection}{\numberline {}CADE 2011}{12}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {}An Additional Grammar}{13}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {}An Additional PGF Grammar}{13}{subsubsection.2.1.1}%
 \contentsline {subsection}{\numberline {}Stockholm Math Seminar 2014}{16}{subsection.2.2}%
-\contentsline {section}{References}{18}{figure.6}%
-\contentsline {section}{\numberline {}Appendices}{19}{section.3}%
+\contentsline {section}{References}{19}{figure.6}%
+\contentsline {section}{\numberline {}Appendices}{20}{section.3}%
