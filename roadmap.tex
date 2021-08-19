@@ -6,6 +6,7 @@
 %\usepackage[utf8]{inputenc}
 
 
+
 \usepackage{multicol}
 % \usepackage{graphicx}
 
@@ -93,6 +94,10 @@
 \newcommand{\appH}[2]{#1 #2}
 \newcommand{\equivalenceH}[2]{#1 \simeq #2}
 
+% \DeclareMathSymbol{\mlq}{\mathord}{operators}{``}
+% \DeclareMathSymbol{\mrq}{\mathord}{operators}{`'}
+
+% \newcommand\doubleplus{+\kern-1.3ex+\kern0.8ex}
 
 % for section numbers, doesn't work
 % \usepackage{titlesec}
@@ -128,24 +133,6 @@
 \begin{titlepage}
 
 \maketitle
-
-\vfill
-
-\begingroup
-\renewcommand*{\arraystretch}{1.2}
-\begin{tabular}{l@{\hskip 20mm}l}
-\hline
-Master's Thesis: & 30 credits\\
-Programme: & Master’s Programme in Language Technology\\
-Level: & Advanced level \\
-Semester and year: & Fall, 2021\\
-Supervisor & Aarne Ranta\\
-Examiner & (name of the examiner)\\
-Report number & (number will be provided by the administrators) \\
-Keywords &  Grammatical Framework, Natural Language Generation,\\
-\end{tabular}
-\endgroup
-
 \thispagestyle{empty}
 \end{titlepage}
 
@@ -201,38 +188,36 @@ Acknowledgements, etc.
 \AgdaKeyword{where}\<%
 \end{code}
 
-2128
+20;
+
 TODO
   Add section numbers to sections
   Fix figure titles
 
-\include{intro}
+% \include{intro}
 
-\include{perspectives}
+% \include{perspectives}
 
-\include{preliminaries}
+% \include{preliminaries}
 
-\include{previouswork}
-% \include{intro-agda}
+% \include{previouswork}
 
 \include{gfintro}
 
 % should natproof and hottproof be subsections?
-\include{natproof}
-
+% \include{natproof}
 
 \include{grammar}
 
-\include{latex/hott}
+% \include{latex/hott}
 
+% \include{horizon}
 
-\include{horizon}
-
-\include{conclusion}
+% \include{conclusion}
 
 % \include{conclusion} index
 
-\include{code}
+% \include{code}
 
 \newpage
 

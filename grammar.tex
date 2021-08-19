@@ -1,40 +1,259 @@
 
-\section{A Spectrum of GF Grammars for types}
+% \section{A Spectrum of GF Grammars for types}
+\section{Prior GF Formalizations}
 
-\subsection{Prior GF Formalizations}
-
-Prior to the grammars explored thin this thesis, Ranta produced two main results
+Prior to the grammars explored thesis, Ranta produced two main results
 \cite{rantaLog} \cite{aarneHott}. These are incredibly important precedents in
 this approach to proof translation, and serve as important comparative work for
-which this work responds. In \cite{rantaLog}, Ranta designed a grammar which
-allowed for predicate logic with domain specific lexicon supporting mathematical
-theories on top of the logic like geometry or arithmetic. The the syntax was
-both meant to be relatively complete, so that typical logical utterances of
-interest could be accommodated, as well as relatively non-trivial linguistic
-nuance including lists of terms, predicates, and propositions, in-situ and
-bounded quantification, and multiple forms of constructing more syntactically
-nuanced predicates. The syntactic nuance captured in this work was by means of an
-extended grammar, via a Portable Grammar Format (PGF), on top of the minimal,
-core logical formalism.
+which this work responds.
 
-One could translate from the core and extended via a denotational semantics
-approach. The tree representing the \emph{syntactically complete} phrase ``for
-all natural numbers x, x is even or x is odd" would be evaluated to a tree which
-linearizes to the \emph{semantically adequate} phrase ``every natural number is
-even or odd". In the opposite direction, the desugaring of a logically informal
-statement into something linguistically idiomatic is also accomplished. In some
-sense, this grammar serves as a case study for what this thesis is trying to do.
-However, we note that the core logic only supports propositions without proofs -
-it is not a type theory with terms. This means that we are being slightly
-abusive to our terms, as the formal/informal translation is taking place is at
-the PGF level. The GF translation between concrete syntaxes supports multiple
-NLs, but the syntactic completeness has no mechanism of verification via Agda's
-type checker. Additionally, the domain of arithmetic is an important case study,
-but scaling this grammar (or any other, for that matter) to allow for
-\emph{semantic adequacy} of real mathematics is still far away, or as Ranta
-concedes, ``it seems that text generation involves undecidable optimization
-problems that have no ultimate automatic solution." It would be interesting to
-further extend this grammar with both terms and an Agda-like concrete syntax. 
+\subsection{CADE 2011}
+
+In \cite{rantaLog}, Ranta designed a grammar which
+allowed for predicate logic with a domain specific lexicon supporting mathematical
+theories , say geometry or arithmetic, on top of the logic. The syntax was
+both meant to be relatively complete, so that typical logical utterances of
+interest could be accommodated, as well as support relatively non-trivial linguistic
+nuance like lists of terms, predicates, and propositions, in-situ and
+bounded quantification, like other ways of constructing more syntactically
+nuanced predicates. The more interesting syntactic details captured in this work
+was by means of an extended grammar on top of the core. The bidirectional
+transformation between the core and extended grammars via a PGF also show the
+viability and necessity of using more expressive programming languages (Haskell) when
+doing thorough translations.
+ 
+Lists are natural to humans - this is reflected in our language. The RGL supports listing the sentences, noun phrases, and other
+grammatical categories. One can then use PGF to unroll the lists into binary
+operators, or alternatively transform them in the opposite direction.
+, we first mention that GF
+natively supports list categories, the judgment \term{cat [C] {n}} can be
+desugared to
+\begin{verbatim}
+  cat ListC ;
+  fun BaseC : C -> ... -> C -> ListC ; -- n C ’s
+  fun ConsC : C -> ListC -> ListC
+\end{verbatim}
+
+As a case study for this grammar, the proposition $\forall x (Nat(x) \supset
+Even(x) \lor Odd(x))$ can be given a maximized and minimized version. The tree
+representing the \emph{syntactically complete} phrase ``for all natural numbers
+x, x is even or x is odd" would be minimized to a tree which linearizes to the
+\emph{semantically adequate} phrase ``every natural number is even or odd".
+
+% The trees below also revels how the semantically adequate tree is also
+% simpler to understand as representing
+% \begin{verbatim}
+% PUnivs
+%   (BaseVar X)
+%   Nat
+%   (PConj COr (PAtom (APred1 Even (IVar X))) (PAtom (APred1 Odd (IVar X))))
+% |
+% V
+% PAtom (APred1 (ConjPred1 COr (BasePred1 Even Odd)) (IUniv Nat))
+% \
+% end{verbatim}
+
+We see that our criteria of semantic adequacy and syntactic completeness can
+both occur in the same grammar, with the different subsets related not by a
+direct GF translation but a PGF level transformation. Problematically, this
+syntactically complete phrase produces four ASTs, with the ``or" and ``forall"
+competing for precedence. Where PGF may only give one translation to the
+extended syntax, this doesn't give the user of the grammar confidence that her
+phrase was correctly interpreted.
+
+In the opposite direction, the desugaring of a logically ``informal"
+statement into something less linguistically idiomatic is also accomplished.
+Ranta claims ``Finding extended syntax equivalents for core syntax trees is
+trickier than the opposite direction". While this may be true for this
+particular grammar, we argue that this may not hold generally true, for a few
+reasons. Dealing with these ambiguities must be
+solved first and foremost to satisfy the PL designer who only accepts
+unambiguous parses. For instance, the gf shell shows \codeword{p "the sum of the
+sum of x and y and z is equal to the sum of x and the sum of y and z"} giving 32
+unique parses. While these can be filtered through some simple modifications, we
+should note that a mapping a complicated Agda expression to a bigger extended syntax 
+would likely be infeasible. Ranta also outlines the mapping, $\llbracket -
+\rrbracket : Core \to Extended$,
+
+\begin{itemize}
+\item Flattening a list \\
+  $x\ and\ y\ and\ z\ \mapsto x,\ y\ and\ z$
+\item Aggregation \\
+  $x\ is\ even\ or\ x\ is\ odd\ \mapsto x\ is\ even\ or\ odd$
+\item In-situ quantification \\
+  $\forall\ n\ \in Nat,\ x\ is\ even\ or\ x\ is\ odd \mapsto every\ Nat\ is\ even\ or \odd$
+\item Negation \\
+  $it\ is\ not\ that\ case\ that\ x\ is\ even\ \mapsto \x is\ not\ even$
+\item Reflexivitazion \\
+  $x\ is\ equal\ to\ x\ \mapsto x\ is\ equal\ to\ itself$
+\item Modification \\
+  $x\ is\ a\ number\ and\ x\ is\ even\ \mapsto x\ is\ an\ even\ number$
+\end{itemize}
+
+Scaling this to cover more phenomena, as outlined in [cite ganesalingam], will
+pose challenges. Extending this work in general without very sophisticated
+statistical methods is impossible because mathematicians will speak uniquely,
+and so choosing how to build an extended that covers multiple ways of saying
+things will be require many arbitrary choices along the way, and efficient
+communication is a pragmatic matter outside the scope of this work. The most
+interesting linguistic phenomena, we believe, is in-situ quantification, in part
+because quantifiers been at the epicenter of the Montague tradition.
+
+In some sense, this grammar serves as a case study for what this thesis is
+trying to do. However, we note that the core logic only supports propositions
+without proofs - it is not a type theory with terms. Additionally, the domain of
+arithmetic is an important case study, but scaling this grammar (or any other,
+for that matter) to allow for \emph{semantic adequacy} of real mathematics is
+still far away, or as Ranta concedes, ``it seems that text generation involves
+undecidable optimization problems that have no ultimate automatic solution." It
+would be interesting to further extend this grammar with both terms and an
+Agda-like concrete syntax.
+
+\subsubsection{An Additional Grammar}
+
+One of the difficulties encountered in this thesis was back-tracing previously
+written code - the large size of a grammar and declarative nature of the code,
+makes it incredibly difficult to isolate individual features one may wish to
+understand. This is true for both GF and PGF, and therefore a lot of work went
+into filtering grammars so that one could just try to isolate a single feature
+of interest. Although the GF module system is partially capable of solving this
+in some circumstances, there is not proper methodology and therefore it was
+found that writing a grammar from scratch was often the easiest way to do this.
+Grammars can be written compositionally (adding new categories and functions, refactoring
+linearization types, etc.) but decomposing them is not a compositional process. 
+
+Additionally, testing the intermediary functions in the PGF grammar was, at
+least initially, quite difficult, although once one becomes familiar with the
+PGF API there is a possibility of streamlining at least parts of this process.
+
+We wrote a smaller version [cite mycode] of, just focused on propositional
+logic, but with the added interest of not just translating between Trees, but
+also allowing Haskell computation and evaluation of expressions. Although this
+exercise was in some ways a digression from the language of proofs, it also
+highlighted many interesting problems.  
+
+We begin with an example : the idea was to create a PGF layer for the evaluation
+of propositional expressions to their Boolean values, and then create a question
+answering system which gave different types of answers - the binary valued
+answer, the most verbose possible answer, and the answer which was deemed the
+most semantically adequate, \codeword{Simple}, \codeword{Verbose}, and
+\codeword{Compressed}, respectively. The system is capable of the following :
+\begin{verbatim}
+is it the case that if the sum of 3 , 4 and 5 is prime , odd and even then 4 is prime and even
+  Simple : yes .
+  Verbose : yes . if the sum of 3 and the sum of 4 and 5 is prime and the sum of 3 and the sum of 4 and 5 is odd and the sum of 3 and the sum of 4 and 5 is even then 4 is prime and 4 is even .
+  Compressed : yes . if the sum of 3 , 4 and 5 is prime , odd and even then 4 is prime and even .
+\end{verbatim}
+
+The extended grammar in this case only had lists of propositions and predicates,
+and so it was much simpler than in [cite logic]. GF list categories are then
+transformed into Haskell lists, so the syntactic sugar for a GF list is actually
+functionally tied to its external behavior as well. The functions for our
+discussion are:
+\begin{verbatim}
+  IsNumProp : NumPred -> Object -> Prop ;
+  LstNumPred : Conj -> [NumPred] -> NumPred ; 
+  LstProp : Conj  -> [Prop] -> Prop ;
+\end{verbatim}
+
+Note that a numerical predicate, \codeword{NumPred}, represents, for instance, primality.
+In order for our pipeline to answer the
+question, we had to not only do transform trees, $\llbracket - \rrbracket :
+\{pgfAST\} \rightarrow \{pgfAST\}$
+, but also evaluate them in more classical domains $\llbracket - \rrbracket : \{pgfAST\} \rightarrow
+\mathds{N}$ for the arithemtic objects and $\llbracket - \rrbracket : \{pgfAST\} \rightarrow
+\mathds{B}$ for the propositions, the later case being  \codeword{evalProp} below.
+
+Due to the extension, there are now more tricky cases one has to cover when
+evaluating this, which for a normal ``propositional evaluator" doesn't have to
+deal with lists. For the most part, this evaluation is able to just apply
+boolean semantics to the \emph{canonical} constructors, like GNot. However, a
+bug that was subtle and difficult to find appeared, thereby forcing us to dig
+deep inside GIsNumProp, preventing an easy solution to what would otherwise be a
+simple example of denotational semantics.
+\begin{verbatim}
+evalProp :: GProp -> Bool
+evalProp p = case p of
+  ...
+  GNot p -> not (evalProp p)
+  ...
+  GIsNumProp (GLstNumProp c (GListNumPred (x : xs))) obj ->
+    let xo = evalProp (GIsNumProp x obj)
+        xso = evalProp (GIsNumProp (GLstNumProp c (GListNumPred (xs))) obj) in
+    case c of
+      GAnd -> (&&) xo xso 
+      GOr -> (||) xo xso
+  ... 
+\end{verbatim}
+While still relatively tame to overcome, one can imagine that an even expressive and semantically
+adequate abstract syntax might yield many trickier and more subtle obstacles like this.
+The more semantic content one incorporates into the GF grammar, the larger the
+PGF GADT, which leads to many more pains when evaluating these trees.
+
+
+Personally speaking, there were many obstacles in getting a relatively simple
+example to work, particularly when it came to writing test cases. For the naive
+way to test with GF is to translate, and the linearization and parsing functions
+don't give the programmer many degrees of freedom. While some work has been
+done [cite inari] in allowing for testing of grammars. The specific domain of
+formal languages in GF require a more refined notion of testing because
+they should be testable relative to some model with well behaved mathematical
+properties.
+
+
+
+Debugging something in pipeline $String \rightarrow GADT \rightarrow GADT
+\rightarrow String$ for a large scale grammar without a testing methodology for
+each intermediate state is surely to be avoided. Unfortunately, there is no
+published work on using Quickcheck [cite hughes] with PGF. The bugs in this
+grammar were discovered via the input and output \emph{appearance} of strings .
+Often, no string would be returned, and discovering the source was excruciating.
+In one case, a bug was discovered that was presumed to be from the PGF
+evaluator, but was then back-traced to Ranta's grammar from which the code had
+been refactored. The sentence which broke our pipeline from core to extended, "4
+is prime , 5 is even and if 6 is odd then 7 is even", would be easily
+generated through something like quickcheck.  
+
+An important observation that was made during this development : that theorems
+should be the source of inspirations for deciding which PGF transformations
+should take place. For instance, one could say, define $odd : \mathds{N}
+\rightarrow Set$, $prime : \mathds{N} \rightarrow Set$ and prove that $\forall n
+\in \mathds{N}.\; n > 2 \times prime\; n \implies odd\; n$. We can use this
+theorem as a source of translation, and in fact encode a PGF rule that
+transforms anything of the form ``n is prime and n is odd" to ``n is prime",
+subject to the condition that $n \neq 2$. One could then take a whole set of
+theorems from predicate calculus and encode them as Haskell functions which
+simplify the expressions to give some kind of adequate kernel of the expression.
+The verbose ``if $a$ then $b$ and if $a$ then $c$, should always be read ``if
+$a$ then $b$ and $c$". see The application of these theorems and evaluation
+functions in Haskell could help give in our QA example, more informative and
+direct answers.
+
+We hope this intricate look at a fairly simple grammar highlights some very
+serious considerations one should make when writing a PGF embedded grammar.
+These include : how does the semantic space the grammar seeks to approximate
+effects the PGF translation, how testing formal grammars is non-trivial but
+necessary future work, and finally, how information (in this case theorems) from
+the domain of approximation can shape and inspire the PGF transformations for
+during the translation process.
+
+
+% change this to section, add something about PGF above
+% also show agda code which reflects difficulty with universes
+% discuss mixture of logic language, tt, and sets in the example chosen, and the
+% fact that despite its successes, 
+% contrast with hott book which is exclusively meant to be type-theoreticly formulatedwritten
+% formal, personal, and sociological problems, for conclusion
+% compare and contrast the categories alone, how they are similair and different
+% after all three have been written
+%IN ORDER TO USE GF TO MODEL FORMAL LANGUAGES, ONE HAS TO DEVELOP FORMAL MODELS
+%OF GF ITSELF. this includes testing, extracting grammars, proving that GF
+%grammar does or doesn't contain a string, how to control ambiguity with
+%parsing. also, look at notions of subgrammars (and sublanguages), with the
+%module systems, and with respect to
+% can we come up with a model of computation for GF (i.e. lambdas, Strings, etc)?
+
+\subsection{Stockholm Math Seminar 2014}
 
 In 2014, Ranta gave an unpublished talk at the Stockholm Mathematics seminar
 \cite{aarneHott}. Fortunately the code is available, although many of the design

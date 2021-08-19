@@ -1,46 +1,11 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {}Introduction}{2}{section.1}%
-\contentsline {subsection}{\numberline {}Beyond Computational Trinitarianism}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {}What is a Homomorophism?}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {}Perspectives}{8}{section.2}%
-\contentsline {subsection}{\numberline {}Linguistic and Programming Language Abstractions}{8}{subsection.2.1}%
-\contentsline {subsection}{\numberline {}Formalization and Informalization}{11}{subsection.2.2}%
-\contentsline {subsection}{\numberline {}Syntactic Completeness and Semantic Adequacy}{12}{subsection.2.3}%
-\contentsline {subsection}{\numberline {}What is a proof?}{15}{subsection.2.4}%
-\contentsline {subsection}{\numberline {}What is a proof revisited}{17}{subsection.2.5}%
-\contentsline {section}{\numberline {}Preliminaries}{19}{section.3}%
-\contentsline {subsection}{\numberline {}Martin-Löf Type Theory}{19}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {}Judgments}{19}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {}Rules}{20}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {}Propositions, Sets, and Types}{21}{subsection.3.2}%
-\contentsline {subsection}{\numberline {}Agda}{24}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {}Overview}{24}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {}Agda Programming}{24}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {}Formalizing The Twin Prime Conjecture}{27}{subsubsection.3.3.3}%
-\contentsline {section}{\numberline {}Previous Work}{31}{section.4}%
-\contentsline {subsection}{\numberline {}Ranta}{31}{subsection.4.1}%
-\contentsline {subsection}{\numberline {}Mohan Ganesalingam}{33}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {}Pragmatics in mathematics}{34}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {}Other authors}{35}{subsection.4.3}%
-\contentsline {section}{\numberline {}Grammatical Framework}{38}{section.5}%
-\contentsline {subsection}{\numberline {}A Brief Introduction to GF}{38}{subsection.5.1}%
-\contentsline {subsection}{\numberline {}Theoretical Overview}{40}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {}Some preliminary observations and considerations}{44}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {}A grammar for basic arithmetic}{45}{subsubsection.5.2.2}%
-\contentsline {paragraph}{Abstract Judgments}{45}{section*.4}%
-\contentsline {paragraph}{Arith.gf}{47}{section*.5}%
-\contentsline {paragraph}{Concrete Judgments}{47}{section*.6}%
-\contentsline {subsubsection}{\numberline {}The GF shell}{49}{subsubsection.5.2.3}%
-\contentsline {section}{\numberline {}Natural Number Proofs}{53}{section.6}%
-\contentsline {section}{\numberline {}A Spectrum of GF Grammars for types}{54}{section.7}%
-\contentsline {subsection}{\numberline {}Prior GF Formalizations}{54}{subsection.7.1}%
-\contentsline {section}{\numberline {}HoTT Proofs}{57}{section.8}%
-\contentsline {subsection}{\numberline {}Why HoTT for natural language?}{57}{subsection.8.1}%
-\contentsline {subsection}{\numberline {}An introduction to equality}{58}{subsection.8.2}%
-\contentsline {subsection}{\numberline {}All about Identity}{59}{subsection.8.3}%
-\contentsline {section}{\numberline {}Goals and Challenges}{68}{section.9}%
-\contentsline {section}{\numberline {}Code}{70}{section.10}%
-\contentsline {subsection}{\numberline {}GF Parser}{70}{subsection.10.1}%
-\contentsline {subsection}{\numberline {}Additional Agda Hott Code}{70}{subsection.10.2}%
-\contentsline {section}{References}{71}{subsection.10.2}%
-\contentsline {section}{\numberline {}Appendices}{75}{section.11}%
+\contentsline {section}{\numberline {}Grammatical Framework}{2}{section.1}%
+\contentsline {subsection}{\numberline {}Thinking about GF}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {}A Brief Introduction to GF}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {}Mathematical Model of GF}{9}{subsection.1.3}%
+\contentsline {section}{\numberline {}Prior GF Formalizations}{12}{section.2}%
+\contentsline {subsection}{\numberline {}CADE 2011}{12}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {}An Additional Grammar}{13}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {}Stockholm Math Seminar 2014}{16}{subsection.2.2}%
+\contentsline {section}{References}{18}{figure.6}%
+\contentsline {section}{\numberline {}Appendices}{19}{section.3}%
