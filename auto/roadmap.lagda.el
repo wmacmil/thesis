@@ -18,7 +18,6 @@
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "lstinline")
    (TeX-run-style-hooks
     "latex2e"
-    "gfintro"
     "grammar"
     "article"
     "art11"

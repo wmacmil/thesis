@@ -25,6 +25,8 @@ lso show agda code which reflects difficulty with universes
 % this is not our notion,
 % it would be absurd to think 
 
+% joke from Wadler, a monad is just a monoid in the monoidal category of endofucntors
+
 % a monoid is a category with on object
 % a monoid is (a monoid in the monoidal category of endospans on the set of
 %   objects) with one object 
@@ -39,13 +41,22 @@ lso show agda code which reflects difficulty with universes
 %   objects) in the monoidal category of endospans on the set of
 %   objects) with one object 
 
+% how does this look in type theory , if, for instance, one chooses to define it as this a special case of this very very general thing
+% monoid = monoid in = monoid object in  ...
+% monoid doesn't equal 
+
+% intensionally very different, even if extensionally equal
+
 % category :=  a simplicial set which satisfies the weak Kan complex conditions strictly:
 
 % group := (a simplicial set which satisfies the weak Kan complex conditions
 %   strictly) with one object where every arrow is an isomorphism
+% definitional substution works in type theory,  but does it really work for NL mathematics? i.e. does one say (one object) for a functor. what does it mean in this case
 
 % a simplicial set is a contravariant functor from the simplex category to the
 %   category of sets
+
+% are these just inductive recursive definitions ?  ask peter dybjer
 
 % a simplicial set which satisfies the Segal conditions;
 
@@ -59,8 +70,48 @@ lso show agda code which reflects difficulty with universes
 % a group is (give a signature) 
 % a group is a record type such that...
 
-Idea : one can define incredibly general structures such that everything is 
+% Idea : one can define incredibly general structures such that everything is an example of this, or an exaple of this subject to some conditions, but doesn't this collapse?
+
+Wittgenstein : a dictionary is not a closed system because all the words refer to themselves.  Maybe it
+
+one can look at the trace of a dictionary defined word
+
+determiner
+determiner: a; determiner: an
+    1.
+    used when referring to someone or something for the first time in a text or conversation.
+
+so look at the trace
+
+word metavariable 
+
+word - defintion -> {words} - map definition -> {{words}} - map (map defintion) -> {{{words}}}
+
+% a bunch of simultaneous inductive recursive definitions like even & odd
+
+% at some point the word will circle back, but the definitions only get more complex
+by keeping mapping, we arrive at a divergent 
+% maybe this is why NNs are relatively successful at approximating parts of language, they 
+
+
+word is really 
+  (word, POS)
+
+word is really 
+  (word, POS, semantics)
 
 
 functor with one map 
+
+also, Bauer, where one talks about groups with signature, and then says a group is just a model of the o
+
+Example 1.12. A model G of Group, cf. Example 1.2, is given by a carrier set |G| and
+maps
+[[u]]G : 1 → |G|,
+ [[m]]G : |G| × |G| → |G|,
+ [[i]]G : |G| → |G|,
+interpreting the operation symbols u, m, and i, respectively, such that the equations EGroup .
+This amounts precisely to (|G|, [[u]]G , [[m]]G , [[i]]G ) being a group, except that the unit is
+viewed as a map 1 → |G| instead of an element of |G|.
+
 

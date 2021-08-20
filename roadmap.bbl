@@ -1,14 +1,7 @@
 \begin{thebibliography}{}
 
-\bibitem[Ranta, 2011a]{ranta2011grammatical}
-Ranta, A. (2011a).
-\newblock {\em Grammatical framework: Programming with multilingual grammars},
-  volume 173.
-\newblock CSLI Publications, Center for the Study of Language and Information
-  Stanford.
-
-\bibitem[Ranta, 2011b]{rantaLog}
-Ranta, A. (2011b).
+\bibitem[Ranta, 2011]{rantaLog}
+Ranta, A. (2011).
 \newblock Translating between language and logic: what is easy and what is
   difficult.
 \newblock In {\em International Conference on Automated Deduction}  (pp.\

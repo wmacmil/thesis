@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  19 AUG 2021 13:04
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  19 AUG 2021 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1141,7 +1141,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-(./roadmap.aux (./gfintro.aux) (./grammar.aux
+(./roadmap.aux (./grammar.aux
 
 LaTeX Warning: Label `fig:M3' multiply defined.
 
@@ -1471,180 +1471,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout6 = `roadmap.toc'.
 
 [3] [1]
-\openout2 = `gfintro.aux'.
-
-(./gfintro.tex [2
-
-] [3]
-
-LaTeX Warning: Reference `fig:N2' on page 4 undefined on input line 135.
-
-[4] [5] [6] [7] [8]
-! Extra }, or forgotten $.
-l.381 ...phi_i \in Fun_L(x_{i,1},...,x_{i,m};y_i)}
-                                                  $
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[9]
-
-LaTeX Warning: Command \^ invalid in math mode on input line 402.
-
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 4
-02.
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-
-LaTeX Warning: Command \^ invalid in math mode on input line 408.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 410.
-
-Missing character: There is no ⧺ in font [latinmodern-math.otf]/OT:script=math;
-language=dflt;!
-Missing character: There is no ⧺ in font [latinmodern-math.otf]/OT:script=math;
-language=dflt;!
-
-! LaTeX Error: \begin{align*} on input line 420 ended by \end{align}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.428 \end{align}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 428.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 428.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 428.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 428.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 428.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 428.
-
-
-! LaTeX Error: \begin{align*} on input line 430 ended by \end{align}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.435 \end{align}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 435.
-
-
-LaTeX Warning: Command \^ invalid in math mode on input line 435.
-
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-[10]
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.459 (\lambda x. 2 ^
-                      x) : Nat -> Nat
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.460 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-Missing character: There is no 𝜆 in font DejaVu Serif/OT:script=latn;language=d
-flt;mapping=tex-text;!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.473 2^
-        (1+3)*(4+5)
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.474 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Reference `fig:N2' on page 11 undefined on input line 480.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.485 AST_
-          L String_L0 denote the sets GF ASTs and Strings in the languages g...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.487 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (243.72195pt too wide) in paragraph at lines 485--487
-[]\TU/DejaVuSerif(0)/m/n/10.95 AST$[][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
-
-) [11]
 \openout2 = `grammar.aux'.
 
-(./grammar.tex [12
-
+(./grammar.tex [2
 
 ]
 ! Undefined control sequence.
@@ -1665,7 +1494,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[13]
+[3]
 Overfull \hbox (1.91148pt too wide) in paragraph at lines 146--146
 []\TU/DejaVuSansMono(0)/m/n/10.95 is it the case that if the sum of 3 , 4 and 5
  is prime , odd and even then 4[] 
@@ -1677,31 +1506,68 @@ Overfull \hbox (6.30647pt too wide) in paragraph at lines 146--146
  of 4 and 5 is prime and the sum[] 
  []
 
-[14]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
+63.
+(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [4]
 Overfull \hbox (23.88637pt too wide) in paragraph at lines 187--187
 []        \TU/DejaVuSansMono(0)/m/n/10.95 xso = evalProp (GIsNumProp (GLstNumPr
 op c (GListNumPred (xs))) obj) in[] 
  []
 
-[15]
+[5]
 
-LaTeX Warning: Reference `fig:M2' on page 16 undefined on input line 281.
+LaTeX Warning: Reference `fig:M2' on page 6 undefined on input line 268.
 
 (./latex/ContrClean.tex
 \openout4 = `roadmap.ptb'.
 
+[6]
 \openout4 = `roadmap.ptb'.
 
-) [16] [17]) [18] (./roadmap.bbl) [19
+) [7]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.309 ...github.com/mortberg/cubicaltt/blob/pi4s3_
+                                                  dimclosures/examples/brune...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-] [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
-(./roadmap.aux (./gfintro.aux) (./grammar.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 231.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
+! You can't use `macro parameter character #' in math mode.
+l.309 ...pi4s3_dimclosures/examples/brunerie2.ctt#
+                                                  L562
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.310 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (68.71486pt too wide) in paragraph at lines 307--310
+\TU/DejaVuSerif(0)/m/n/10.95 q– HTTPSqqq://github.com/mortberg/cubicaltt/blob/p
+i4s3$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]$ 
+ []
+
+) [8] (./roadmap.bbl) [9
+
+] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
+(./roadmap.aux (./grammar.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: 2991D8EF1E0B41B9B03B02B5AECDCA54;693.
+(rerunfilecheck)             Checksum: BB9AD2C7769B0425F13EF6C40D520195;392.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
@@ -1714,12 +1580,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 32912 strings out of 479819
- 629921 string characters out of 5895846
- 1176641 words of memory out of 5000000
- 49335 multiletter control sequences out of 15000+600000
- 538107 words of font info for 143 fonts, out of 8000000 for 9000
+ 32617 strings out of 479819
+ 622898 string characters out of 5895846
+ 1168641 words of memory out of 5000000
+ 49049 multiletter control sequences out of 15000+600000
+ 537977 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,15n,109p,814b,1028s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,6n,109p,814b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (24 pages, 432244 bytes).
+Output written on roadmap.xdv (14 pages, 192976 bytes).

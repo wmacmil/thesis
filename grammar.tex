@@ -167,7 +167,7 @@ $\llbracket - \rrbracket : \{pgfAST\} \rightarrow \mathds{B}$,
 The extension adds more complex cases  to cover when
 evaluating propistions, because a normal ``propositional evaluator" doesn't have to
 deal with lists. For the most part, this evaluation is able to just apply
-boolean semantics to the \emph{canonical} constructors, like \codeword{GNot}. However, a
+boolean semantics to the \emph{canonical} propositional constructors, like \codeword{GNot}. However, a
 bug that was subtle and difficult to find appeared, thereby forcing us to dig
 deep inside GIsNumProp, preventing an easy solution to what would otherwise be a
 simple example of denotational semantics.
@@ -185,9 +185,9 @@ evalProp p = case p of
       GOr -> (||) xo xso
   ...
 \end{verbatim}
-While still relatively tame to overcome, an even more expressive abstract syntax
-may yield many more subtle obstacles like this, which is the reason its so hard
-to understand by just trying to read the code. The more semantic content one
+While this case is still relatively simple, an even more expressive abstract syntax
+may yield many more subtle obstacles, which is the reason it's so hard
+to understand PGF helper functions by just trying to read the code. The more semantic content one
 incorporates into the GF grammar, the larger the PGF GADT, which leads to many
 more cases when evaluating these trees.
 
@@ -197,8 +197,8 @@ way to test with GF is to translate, and the linearization and parsing functions
 don't give the programmer many degrees of freedom. ASTs are not objects amenable
 to human intuition, which makes it problematic because understanding the
 transformations of them constantly requires parsing and linearizing to see their
-``behavior". While some work has been done [cite inari] in allowing for testing
-of GF grammars for NL applications, the specific domain of formal languages in
+``behavior". While some work has been done to allow testing
+of GF grammars for NL applications [cite inari], the specific domain of formal languages in
 GF requires a more refined notion of testing because they should be testable
 relative to some model with well behaved mathematical properties. Debugging
 something in the pipeline $String \rightarrow GADT \rightarrow GADT \rightarrow
@@ -224,7 +224,7 @@ theorem as a source of translation, and in fact encode a PGF rule that
 transforms anything of the form ``n is prime and n is odd" to ``n is prime",
 subject to the condition that $n \neq 2$. One could then take a whole set of
 theorems from predicate calculus and encode them as Haskell functions which
-simplify the expressions to give some kind of kernel of the expression with the
+simplify the expressions to a minified expression with the
 same meaning, up to some notion of equivalence. The verbose ``if $a$ then $b$
 and if $a$ then $c$, can be more canonically read as ``if $a$ then $b$ and $c$".
 The application of these theorems as evaluation functions in Haskell could
@@ -239,19 +239,6 @@ the domain of approximation can shape and inspire the PGF transformations
 during the translation process.
 
 
-% also show agda code which reflects difficulty with universes
-% discuss mixture of logic language, tt, and sets in the example chosen, and the
-% fact that despite its successes,
-% contrast with hott book which is exclusively meant to be type-theoreticly formulatedwritten
-% formal, personal, and sociological problems, for conclusion
-% compare and contrast the categories alone, how they are similair and different
-% after all three have been written
-%IN ORDER TO USE GF TO MODEL FORMAL LANGUAGES, ONE HAS TO DEVELOP FORMAL MODELS
-%OF GF ITSELF. this includes testing, extracting grammars, proving that GF
-%grammar does or doesn't contain a string, how to control ambiguity with
-%parsing. also, look at notions of subgrammars (and sublanguages), with the
-%module systems, and with respect to
-% can we come up with a model of computation for GF (i.e. lambdas, Strings, etc)?
 
 \subsection{Stockholm Math Seminar 2014}
 
@@ -293,33 +280,6 @@ defining Agda's concrete syntax.
 
 \input{latex/ContrClean}
 
-% \begin{figure}
-
-%  \textbf{Definition}:
-%  A type $A$ is contractible, if there is $a : A$, called the center of contraction, such that for all $x : A$, $\equalH {a}{x}$.
-
-%  \textbf{Definition}:
-%  A map $f : \arrowH {A}{B}$ is an equivalence, if for all $y : B$, its fiber, $\comprehensionH {x}{A}{\equalH {\appH {f}{x}}{y}}$, is contractible.
-%  We write $\equivalenceH {A}{B}$, if there is an equivalence $\arrowH {A}{B}$.
-% \caption{Rendered Latex} \label{fig:M1}
-
-
-% \begin{verbatim}
-% isContr ( A : Set ) : Set = ( a : A ) ( * ) ( ( x : A ) -> Id ( a ) ( x ) )
-
-% Equivalence ( f : A -> B ) : Set =
-%   ( y : B ) -> ( isContr ( fiber it ) ) ; ; ;
-%   fiber it : Set = ( x : A ) ( * ) ( Id ( f ( x ) ) ( y ) )
-% \end{verbatim}
-% \caption{Pidgin cubicalTT} \label{fig:M2}
-
-% \input{latex/ContrClean}
-% % \input{latex/ex}
-% % \input{latex/primitives}
-
-% \caption{Agda} \label{fig:M3}
-% \end{figure}
-
 Additionally, we give the Agda code in \autoref{fig:M3}, so-as to see what the
 end result of such a program would be. The astute reader will also notice a
 semantic in the pidgin rendering error relative to the Agda implementation.
@@ -338,45 +298,18 @@ abstract syntax to model natural language, gives in some sense a dual challenge,
 where the abstract syntax remains simple, but its linearizations become
 must increase in complexity.
 
+-- Proof using isPropIsContr. This is slow and the direct proof below is better
 
-% below is prior text, probably discard
+isPropIsEquiv' : (f : A → B) → isProp (isEquiv f)
+equiv-proof (isPropIsEquiv' f u0 u1 i) y =
+  isPropIsContr (u0 .equiv-proof y) (u1 .equiv-proof y) i
 
-% We now discuss the various iterations of code which experimented with NL aspects
-
-% We should again emphasize the role of, in particular, Rantas two grammars, one
-% formalizing logic, and the other working with a case study of a real text\cite{aarneHott}
-
+-- Direct proof that computes quite ok (can be optimized further if
+-- necessary, see:
+q-- HTTPSqqq://github.com/mortberg/cubicaltt/blob/pi4s3_dimclosures/examples/brunerie2.ctt#L562
 
 
-% We now discuss the GF implementation, capable of parsing both natural language
-% and Agda syntax. The parser was appropriated from the cubicaltt BNFC parser,
-% de-cubified and then gf-ified. The languages are tightly coupled, so the
-% translation is actually quite simple. Some main differences are:
 
-% \begin{itemize}[noitemsep]
-
-% \item GF treats abstract and concrete syntax seperately. This allows GF to
-% support many concrete syntax implementation of a given grammar
-
-% \item Fixity is dealt with at the concrete syntax layer in GF.  This allows for
-% more refined control of fixity, but also results in difficulties : during
-% linearization their can be the insertion of extra parens.
-
-% \item GF supports dependent hypes and higher order abstract syntax, which makes
-% it suitable to typecheck at the parsing stage. It would very interesting to see
-% if this is interoperable with the current version of this work in later
-% iterations [Todo - add github link referncing work I've done in this direction]
-
-% \item GF also is enhanced by a PGF back-end, allowing an embedding of grammars
-% into, among other languages, Haskell.
-
-% \end{itemize}
-
-% While GF is targeted towards natural language translation, there's nothing
-% stopping it from being used as a PL tool as well, like, for instance, the
-% front-end of a compiler. The innovation of this thesis is to combine both uses,
-% thereby allowing translation between Controlled Natural Languages and
-% programming languages.
 
 % Example expressions the grammar can parse are seen below, which have been
 % verified by hand to be isomorphic to the corresponding cubicaltt BNFC trees:
