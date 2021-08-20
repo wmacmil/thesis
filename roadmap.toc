@@ -1,7 +1,12 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {}Prior GF Formalizations}{2}{section.1}%
-\contentsline {subsection}{\numberline {}CADE 2011}{2}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {}An Additional PGF Grammar}{3}{subsubsection.1.1.1}%
-\contentsline {subsection}{\numberline {}Stockholm Math Seminar 2014}{6}{subsection.1.2}%
-\contentsline {section}{References}{9}{figure.3}%
-\contentsline {section}{\numberline {}Appendices}{10}{section.2}%
+\contentsline {section}{\numberline {}Grammatical Framework}{2}{section.1}%
+\contentsline {subsection}{\numberline {}Thinking about GF}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {}A Brief Introduction to GF}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {}Prior GF Formalizations}{10}{section.2}%
+\contentsline {subsection}{\numberline {}CADE 2011}{10}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {}An Additional PGF Grammar}{11}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {}What is Equality?}{15}{subsection.2.2}%
+\contentsline {section}{\numberline {}Natural Number Proofs}{17}{section.3}%
+\contentsline {subsection}{\numberline {}Stockholm Math Seminar 2014}{18}{subsection.3.1}%
+\contentsline {section}{References}{20}{figure.6}%
+\contentsline {section}{\numberline {}Appendices}{21}{section.4}%

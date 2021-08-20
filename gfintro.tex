@@ -368,136 +368,136 @@ These are all the main ingredients a GF user will hopefully need to understand
 the grammars hereby elaborated, and hopefully these examples will showcase the
 full potential of GF for the problem of mathematical translations.
 
-\subsection{Mathematical Model of GF}
-Note on the construction of free monoids
+% \subsection{Mathematical Model of GF}
+% Note on the construction of free monoids
 
-Consider a language $L$ we want to represent, and we come up with a model that we
-build as a set of categories and functions over those categories.  Let $Cat(L)$,
-denote the categories.  Also suppose we define functions such that, given an
-ordered list $x_1,...,x_n;y \in Cat(L)$ we define a set of functions,
-$Fun_L(x_1,...,x_n;y)$ defined over the categories. In gf, a function can be
-denoted something like $\phi : x_1 \rightarrow ... \rightarrow x_n$. We may compose these based
-off their arities. So, given a function $\psi \in Fun_L(y_1,,...,y_n;z)$,
-functions $\phi_1,...\phi_n$ such that $\phi_i \in Fun_L(x_{i,1},...,x_{i,m};y_i)}$ 
- we can plug these functions in together, or nest them such that
-$$\psi \circ (\phi_1,...,\phi_n) : \rightarrow (x_{i,j}) \rightarrow (y_{i})
-\rightarrow Z$$ 
-
-This is how abstract syntax trees are formed. It is also worth noting that they
-obey an associativity property, namely that 
-
-\begin{align*}
-&\theta \circ (\psi_1 \circ (\phi_{1,1},...,\phi_{1,k_1}),...,\psi_n \circ
-(\phi_{n,1},...,\phi_{n,k_n}))\\ = &(\theta \circ \psi_1,...\psi_n) \circ (\phi_{1,1},...,\phi_{1,k_1},...,\phi_{n,1},...,\phi_{n,k_n})
-\end{align*}
-
-This means that trees in GF are invariant as to how they are built - we
-can build a tree from the leaves to the root or vice versa.
-
-Example : consider the arithmetic grammar of exponentiation, multiplication, and
-addition defined over a single category of natural number expressions, whereby
-the function symbol is to be interpreted as a string and the tensor product,
-$\otimes$ as the concatenation during evaluation. 
-
-$$\_\^{}\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
-$$\_*\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
-$$\_+\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
-
-We can think of constructing the trees by partial application, i.e., 
-
-$(\lambda x.\: 2 \otimes \^{} \otimes x) : \mathds{N} -> \mathds{N}$
-
-Lets try see the constructions yielding the string $(1 + 2) \^{} (3 * 4)$.
-
-We can either (i) construct this as the exponent of two fully formed expressions,
-namely a sum and a product applied to some numbers, or we can first apply the
-exponent to the two binary functions, yielding a quaternary function .
-
-$x ++ y$
-$x \doubleplus y$
-$``x \doubleplus y"$
-
-\begin{align*}
-&(\lambda x,y.\: x \otimes \^{} \otimes y)\\
-&\hspace{1cm} ((\lambda x,y.\:x \otimes + \otimes y)\; 1\; 2)\\
-&\hspace{1cm} ((\lambda x,y.\: x \otimes * \otimes y)\; 3\; 4) \\
-\mapsto\; &(\lambda x,y.\: x \otimes \^{} \otimes y)\\
-&\hspace{1cm} (1 + 2)\\
-&\hspace{1cm} (3 * 4))\\
-\mapsto\; &((1 + 2) \^{} (3 * 4))\\
-\end{align}
-
-\begin{align*}
-&((\lambda x,y.\: x \otimes \^{} \otimes y)\\
-&\hspace{1cm} (\lambda x,y.\:x \otimes + \otimes y)\\
-&\hspace{1cm} (\lambda x,y.\: x \otimes * \otimes y)) \\
-&\hspace{1cm} 1\; 2; 3; 4; \\
-\end{align}
-
-(1 + 2) \^{} (3 * 4)
-  
-
-((\lambda x,y. x \^{} y)
-  (\lambda x,y. x + y) 
-  (\lambda x,y. x * y))
-    1 2 3 4
-
-((\lambda x,y. x + y) \^{} (\lambda x,y. x * y)) 1 2 3 4
-((\lambda x,y. x + y) \^{} (\lambda x,y. x * y)) 1 2 3 4
-
-(1 + 2) \^{} (3 * 4)
-
-and then say
-(\lambda x. 2 \^{} x) (1 + 3) * (4 + 5)
-= 
-(\lambda x. 2 \^{} x) (1 + 3) * (4 + 5)
-
-$(\lambda x. 2 \wedge x) : \mathds{N} -> \mathds{N}$
-
-and then apply it to a complex arguement, say 
-(1 + 3) * (4 + 5)
-(\lambda x. 2 ^ x) : Nat -> Nat
-
-where 
-
-
-\lambda y : Pow y 1 : Nat -> Nat
-
-(times (plus 2 3) (plus 4 5))
-(Pow \circ (1,times)) : Nat -> Nat -> Nat
-
-(plus 2 3) (plus 4 5)
-
-can either be 
-
-2^(1+3)*(4+5)
-
-
-  % \sin {:} \mathbb{R} &\rightarrow \mathbb{R}\\ x &\mapsto \sin ( x )
-% \circ (\phi_1,...,\phi_n) : \rightarrow (x_{i,j}) \rightarrow (y_{i})
+% Consider a language $L$ we want to represent, and we come up with a model that we
+% build as a set of categories and functions over those categories.  Let $Cat(L)$,
+% denote the categories.  Also suppose we define functions such that, given an
+% ordered list $x_1,...,x_n;y \in Cat(L)$ we define a set of functions,
+% $Fun_L(x_1,...,x_n;y)$ defined over the categories. In gf, a function can be
+% denoted something like $\phi : x_1 \rightarrow ... \rightarrow x_n$. We may compose these based
+% off their arities. So, given a function $\psi \in Fun_L(y_1,,...,y_n;z)$,
+% functions $\phi_1,...\phi_n$ such that $\phi_i \in Fun_L(x_{i,1},...,x_{i,m};y_i)}$ 
+%  we can plug these functions in together, or nest them such that
+% $$\psi \circ (\phi_1,...,\phi_n) : \rightarrow (x_{i,j}) \rightarrow (y_{i})
 % \rightarrow Z$$ 
 
-The two functions displayed in, \autoref{fig:N2}.  If we can loosely call String
-the set of strings freely generated osome acan be 
+% This is how abstract syntax trees are formed. It is also worth noting that they
+% obey an associativity property, namely that 
 
-for now given a single linear presentation $C^{AST}$ , where
+% \begin{align*}
+% &\theta \circ (\psi_1 \circ (\phi_{1,1},...,\phi_{1,k_1}),...,\psi_n \circ
+% (\phi_{n,1},...,\phi_{n,k_n}))\\ = &(\theta \circ \psi_1,...\psi_n) \circ (\phi_{1,1},...,\phi_{1,k_1},...,\phi_{n,1},...,\phi_{n,k_n})
+% \end{align*}
 
-AST_L String_L0 denote the sets GF ASTs and Strings in the languages generated
-by the rules of L's abstract syntax and L0s compositional representation.
+% This means that trees in GF are invariant as to how they are built - we
+% can build a tree from the leaves to the root or vice versa.
 
-$$Parse : String -> {AST}$$
-$$Linearize : AST -> String$$
+% Example : consider the arithmetic grammar of exponentiation, multiplication, and
+% addition defined over a single category of natural number expressions, whereby
+% the function symbol is to be interpreted as a string and the tensor product,
+% $\otimes$ as the concatenation during evaluation. 
 
-with the important property that given a string s,
+% $$\_\^{}\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
+% $$\_*\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
+% $$\_+\_ : \mathds{N} \to \mathds{N} \to \mathds{N}$$
+
+% We can think of constructing the trees by partial application, i.e., 
+
+% $(\lambda x.\: 2 \otimes \^{} \otimes x) : \mathds{N} -> \mathds{N}$
+
+% Lets try see the constructions yielding the string $(1 + 2) \^{} (3 * 4)$.
+
+% We can either (i) construct this as the exponent of two fully formed expressions,
+% namely a sum and a product applied to some numbers, or we can first apply the
+% exponent to the two binary functions, yielding a quaternary function .
+
+% $x ++ y$
+% $x \doubleplus y$
+% $``x \doubleplus y"$
+
+% \begin{align*}
+% &(\lambda x,y.\: x \otimes \^{} \otimes y)\\
+% &\hspace{1cm} ((\lambda x,y.\:x \otimes + \otimes y)\; 1\; 2)\\
+% &\hspace{1cm} ((\lambda x,y.\: x \otimes * \otimes y)\; 3\; 4) \\
+% \mapsto\; &(\lambda x,y.\: x \otimes \^{} \otimes y)\\
+% &\hspace{1cm} (1 + 2)\\
+% &\hspace{1cm} (3 * 4))\\
+% \mapsto\; &((1 + 2) \^{} (3 * 4))\\
+% \end{align}
+
+% \begin{align*}
+% &((\lambda x,y.\: x \otimes \^{} \otimes y)\\
+% &\hspace{1cm} (\lambda x,y.\:x \otimes + \otimes y)\\
+% &\hspace{1cm} (\lambda x,y.\: x \otimes * \otimes y)) \\
+% &\hspace{1cm} 1\; 2; 3; 4; \\
+% \end{align}
+
+% (1 + 2) \^{} (3 * 4)
+  
+
+% ((\lambda x,y. x \^{} y)
+%   (\lambda x,y. x + y) 
+%   (\lambda x,y. x * y))
+%     1 2 3 4
+
+% ((\lambda x,y. x + y) \^{} (\lambda x,y. x * y)) 1 2 3 4
+% ((\lambda x,y. x + y) \^{} (\lambda x,y. x * y)) 1 2 3 4
+
+% (1 + 2) \^{} (3 * 4)
+
+% and then say
+% (\lambda x. 2 \^{} x) (1 + 3) * (4 + 5)
+% = 
+% (\lambda x. 2 \^{} x) (1 + 3) * (4 + 5)
+
+% $(\lambda x. 2 \wedge x) : \mathds{N} -> \mathds{N}$
+
+% and then apply it to a complex arguement, say 
+% (1 + 3) * (4 + 5)
+% (\lambda x. 2 ^ x) : Nat -> Nat
+
+% where 
 
 
-And given an AST a, we can Parse . Linearize a belongs to {AST}
+% \lambda y : Pow y 1 : Nat -> Nat
 
-Now we should explore why the linearizations are interesting. In part, this is
-because they have arisen from the role of grammars have played in the
-intersection and interaction between computer science and linguistics at least
-since Chomsky in the 50s, and they have different understandings and utilities
-in the respective disciplines. These two discplines converge in GF, which allows
-us to talk about natural languages (NLs) from programming languages (PLs)
-perspective.
+% (times (plus 2 3) (plus 4 5))
+% (Pow \circ (1,times)) : Nat -> Nat -> Nat
+
+% (plus 2 3) (plus 4 5)
+
+% can either be 
+
+% 2^(1+3)*(4+5)
+
+
+%   % \sin {:} \mathbb{R} &\rightarrow \mathbb{R}\\ x &\mapsto \sin ( x )
+% % \circ (\phi_1,...,\phi_n) : \rightarrow (x_{i,j}) \rightarrow (y_{i})
+% % \rightarrow Z$$ 
+
+% The two functions displayed in, \autoref{fig:N2}.  If we can loosely call String
+% the set of strings freely generated osome acan be 
+
+% for now given a single linear presentation $C^{AST}$ , where
+
+% AST_L String_L0 denote the sets GF ASTs and Strings in the languages generated
+% by the rules of L's abstract syntax and L0s compositional representation.
+
+% $$Parse : String -> {AST}$$
+% $$Linearize : AST -> String$$
+
+% with the important property that given a string s,
+
+
+% And given an AST a, we can Parse . Linearize a belongs to {AST}
+
+% Now we should explore why the linearizations are interesting. In part, this is
+% because they have arisen from the role of grammars have played in the
+% intersection and interaction between computer science and linguistics at least
+% since Chomsky in the 50s, and they have different understandings and utilities
+% in the respective disciplines. These two discplines converge in GF, which allows
+% us to talk about natural languages (NLs) from programming languages (PLs)
+% perspective.
 

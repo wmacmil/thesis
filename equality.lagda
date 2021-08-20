@@ -29,17 +29,12 @@ actually a type. It is defined as follows in Agda, with an accompanying natural
 language definition from [cite hottbook] :
 
 \begin{code}[hide]
-{-# OPTIONS --cubical #-}
-
-module hott where
-
-module Id where
+module equality where
 \end{code}
 \begin{code}
   data _≡'_ {A : Set} : (a b : A) → Set where
     r : (a : A) → a ≡' a
 \end{code}
-
 \begin{definition}
   The formation rule says that given a type $A:\UU$ and two elements $a,b:A$, we can form the type $(\id[A]{a}{b}):\UU$ in the same universe.
   The basic way to construct an element of $\id{a}{b}$ is to know that $a$ and $b$ are the same.
@@ -50,8 +45,6 @@ module Id where
   constant path %path\indexdef{path!constant}\indexsee{loop!constant}{path, constant}
   at the point $a$.
 \end{definition}
-
-We recapitulate this definition in Agda, and treat : 
 
 
 The astute might ask, what
