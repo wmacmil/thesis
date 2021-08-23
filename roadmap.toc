@@ -1,12 +1,33 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {}Grammatical Framework}{2}{section.1}%
-\contentsline {subsection}{\numberline {}Thinking about GF}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {}A Brief Introduction to GF}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {}Prior GF Formalizations}{10}{section.2}%
-\contentsline {subsection}{\numberline {}CADE 2011}{10}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {}An Additional PGF Grammar}{11}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {}What is Equality?}{15}{subsection.2.2}%
-\contentsline {section}{\numberline {}Natural Number Proofs}{17}{section.3}%
-\contentsline {subsection}{\numberline {}Stockholm Math Seminar 2014}{18}{subsection.3.1}%
-\contentsline {section}{References}{20}{figure.6}%
-\contentsline {section}{\numberline {}Appendices}{21}{section.4}%
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Beyond Computational Trinitarianism}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}What is a Homomorophism?}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Perspectives}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Linguistic and Programming Language Abstractions}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Formalization and Informalization}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Syntactic Completeness and Semantic Adequacy}{12}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}What is a proof?}{15}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}What is a proof revisited}{17}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Preliminaries}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Martin-Löf Type Theory}{19}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Judgments}{19}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Rules}{20}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Propositions, Sets, and Types}{21}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Agda}{24}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Overview}{24}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Agda Programming}{24}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Formalizing The Twin Prime Conjecture}{27}{subsubsection.3.3.3}%
+\contentsline {section}{\numberline {4}Previous Work}{31}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Ranta}{31}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Mohan Ganesalingam}{33}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Pragmatics in mathematics}{34}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Other authors}{35}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Grammatical Framework}{38}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Thinking about GF}{38}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}A Brief Introduction to GF}{40}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Prior GF Formalizations}{46}{section.6}%
+\contentsline {subsection}{\numberline {6.1}CADE 2011}{46}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}An Additional PGF Grammar}{47}{subsubsection.6.1.1}%
+\contentsline {section}{\numberline {7}Natural Number Proofs}{51}{section.7}%
+\contentsline {section}{References}{52}{section.7}%
+\contentsline {section}{\numberline {8}Appendices}{56}{section.8}%

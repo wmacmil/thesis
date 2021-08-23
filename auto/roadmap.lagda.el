@@ -18,11 +18,13 @@
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
+    "intro"
+    "perspectives"
+    "preliminaries"
+    "previouswork"
     "gfintro"
     "grammar"
-    "latex/equality"
     "natproof"
-    "hottgrammars"
     "article"
     "art11"
     "mlt-thesis-2015"

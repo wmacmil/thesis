@@ -27,9 +27,9 @@
 \usepackage[margin=2.5cm]{geometry}
 \setlength{\skip\footins}{10mm}
 
-\renewcommand{\thesection}{}
-\renewcommand{\thesubsection}{}
-\renewcommand{\thesubsubsection}{}
+% \renewcommand{\thesection}{}
+% \renewcommand{\thesubsection}{}
+% \renewcommand{\thesubsubsection}{}
 
 \let\@subtitle\@empty
 \newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
@@ -66,9 +66,9 @@
                                      {\normalfont\sffamily\bfseries\fontsize{12pt}{13pt}\selectfont}}
 
 \def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
-\let\sectionignore\@gobbletwo
-\let\subsectionignore\@gobbletwo
-\let\subsubsectionignore\@gobbletwo
+% \let\sectionignore\@gobbletwo
+% \let\subsectionignore\@gobbletwo
+% \let\subsubsectionignore\@gobbletwo
 \let\latex@numberline\numberline
 \def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
 
