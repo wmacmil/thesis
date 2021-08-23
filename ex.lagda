@@ -249,6 +249,8 @@ natind (suc n) base step = step n (natind n base step)
 
 natrec' : {X : Set} → ℕ → X → (ℕ → X → X) → X
 natrec' = natind
+
+
 \end{code}
 We will defer the details of using induction and recursion principles for later
 sections, when we actually give examples of pidgin proofs some of our grammars can

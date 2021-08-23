@@ -29,5 +29,5 @@
 \contentsline {subsection}{\numberline {6.1}CADE 2011}{46}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}An Additional PGF Grammar}{47}{subsubsection.6.1.1}%
 \contentsline {section}{\numberline {7}Natural Number Proofs}{51}{section.7}%
-\contentsline {section}{References}{52}{section.7}%
-\contentsline {section}{\numberline {8}Appendices}{56}{section.8}%
+\contentsline {section}{References}{53}{section.7}%
+\contentsline {section}{\numberline {8}Appendices}{57}{section.8}%

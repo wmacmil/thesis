@@ -89,7 +89,7 @@ Cornell.
 
 This tension has now been at least partially resolved, or at the very least
 clarified, by an insight Voevodsky was apparently most proud of : the
-introduction of h-levels. We'll delegate these details for a later section, it
+introduction of h-levels. We'll delegate these details to more advanced references, it
 is mentioned here to indicate that extensional type theory was really ``set
 theory'' in disguise, in that it collapses the higher path structure of
 identity types. The work over the past 10 years has elucidated the intensional
