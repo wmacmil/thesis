@@ -2,6 +2,9 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "bezem2017univalence"
+    "cohen:hal-01378906"
+    "cubicalAgda"
     "ranta2011grammatical"
     "mlTruth"
     "ml79"

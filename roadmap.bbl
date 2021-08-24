@@ -12,6 +12,10 @@ Avigad, J. (2015).
 Bar, K., Kissinger, A., \& Vicary, J. (2016).
 \newblock Globular: an online proof assistant for higher-dimensional rewriting.
 
+\bibitem[Bezem et~al., 2017]{bezem2017univalence}
+Bezem, M., Coquand, T., \& Huber, S. (2017).
+\newblock The univalence axiom in cubical sets.
+
 \bibitem[Bos et~al., 2004]{bos-etal-2004-wide}
 Bos, J., Clark, S., Steedman, M., Curran, J.~R., \& Hockenmaier, J. (2004).
 \newblock Wide-coverage semantic representations from a {CCG} parser.
@@ -45,6 +49,15 @@ Chomsky, N. (1995).
 Chomsky, N. (2009).
 \newblock {\em Syntactic Structures}.
 \newblock De Gruyter Mouton.
+
+\bibitem[Cohen et~al., 2015]{cohen:hal-01378906}
+Cohen, C., Coquand, T., Huber, S., \& M{\"o}rtberg, A. (2015).
+\newblock {Cubical Type Theory: a constructive interpretation of the univalence
+  axiom}.
+\newblock In {\em {21st International Conference on Types for Proofs and
+  Programs}}, number~69 in 21st International Conference on Types for Proofs
+  and Programs  (pp.\ 262).  Tallinn, Estonia: {Schloss
+  Dagstuhl--Leibniz-Zentrum fuer Informatik}.
 
 \bibitem[Coquand, 1992]{coqPat}
 Coquand, T. (1992).
@@ -279,6 +292,12 @@ Stump, A. (2016).
 {The Univalent foundations program} \& {Institute for advanced study
   (Princeton}, N. (2013).
 \newblock {\em Homotopy Type Theory: Univalent Foundations of Mathematics}.
+
+\bibitem[Vezzosi et~al., 2019]{cubicalAgda}
+Vezzosi, A., M\"{o}rtberg, A., \& Abel, A. (2019).
+\newblock Cubical agda: A dependently typed programming language with
+  univalence and higher inductive types.
+\newblock {\em Proc. ACM Program. Lang.}, 3(ICFP).
 
 \bibitem[Wadler et~al., 2020]{wadler}
 Wadler, P., Kokke, W., \& Siek, J.~G. (2020).

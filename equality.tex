@@ -1,3 +1,5 @@
+\section{HoTT Grammars}
+
 \subsection{What is Equality?}
 
 % quote peter dybjer at oplss
@@ -10,23 +12,24 @@ inclined might ask about identification generally. We showcase different
 notions of identifying things in mathematics, logic, and type theory :
 
 \begin{itemize}
-\item Equivalence of propositions 
-\item Equality of sets
-\item Equality of members of sets
-\item Isomorphism of structures
-\item Equality of terms
-\item Equality of types
+\item Equivalence of propositions (logic)
+\item Equality of sets (mathematics)
+\item Equality of members of sets (mathematics)
+\item Isomorphism of structures (algebra)
+\item Equality of terms (type theory)
+\item Equality of types (type theory)
+\item Deformation of paths (homotopy theory)
+\item Arrows between arrows (category theory)
 \end{itemize}
 
 While there are notions of equality, sameness, or identification outside of
-these formal domains, we don't dare take a philosophical stab at these notions here. 
-Earlier, we saw two notions of equality in type theory, the judgmental equality
-in our introduction to MLTT, and the propositional equality which was used in
-the twin prime conjecture. Judgmental equality is the means of computing, for
-instance, that $2+2=4$, for there is no way of proving this other than appealing
-to the definition of addition. Propositional equality, on the other hand, is
-actually a type. It is defined as follows in Agda, with an accompanying natural
-language definition from [cite hottbook] :
+these formal domains, we don't dare take a philosophical stab at these notions
+here. Earlier, we saw two notions of equality in type theory, judgmental and
+propositional. As was seen, Judgmental equality provides a means of computing,
+for instance, that $2+2=4$ is evediently true by appealing to its definition.
+Propositional equality, on the other hand, is actually a type. It is defined as
+follows in Agda, with an accompanying natural language definition from [cite
+hottbook] :
 
 \begin{code}[hide]
 {-# OPTIONS --cubical #-}
@@ -39,7 +42,6 @@ module Id where
   data _≡'_ {A : Set} : (a b : A) → Set where
     r : (a : A) → a ≡' a
 \end{code}
-
 \begin{definition}
   The formation rule says that given a type $A:\UU$ and two elements $a,b:A$, we can form the type $(\id[A]{a}{b}):\UU$ in the same universe.
   The basic way to construct an element of $\id{a}{b}$ is to know that $a$ and $b$ are the same.
@@ -50,8 +52,6 @@ module Id where
   constant path %path\indexdef{path!constant}\indexsee{loop!constant}{path, constant}
   at the point $a$.
 \end{definition}
-
-We recapitulate this definition in Agda, and treat : 
 
 
 The astute might ask, what
@@ -74,9 +74,9 @@ definitional equality, denoted $-\equiv -$ and perhaps more aptly named
 computational equality, is familiarly what most people think of as equality.
 Namely, two terms which compute to the same canonical form are computationally
 equal. In intensional type theory, propositional equality is a weaker notion
-than computational equality : all propositionally equal terms are
-computationally equal. However, computational equality does not imply
-propistional equality - if it does, then one enters into the space of
+than computational equality : all computationally equal terms are
+propositionally equal. If there is a rule allowing one to transform
+propositional equalities into definitional ones, one enters into the space of
 extensional type theory. 
 
 Prior to the homotopical interpretation of identity types, debates about
@@ -85,14 +85,14 @@ extensional type theory sacrificed decideable type checking, while intensional
 type theories required extra beauracracy when dealing with equality in proofs.
 One approach in intensional type theories treated types as setoids, therefore
 leading to so-called ``Setoid Hell''. These debates reflected Martin-Löf's
-flip-flopping on the issue. His seminal 1979 Constructive Mathematics and
-Computer Programming, which took an extensional view, was soon betrayed by
-lectures he gave soon thereafter in Padova in 1980.  Martin-Löf was a born
-again intensional type theorist.  These Padova lectures were later published in
-the "Bibliopolis Book", and went on to inspire the European (and Gothenburg in
-particular) approach to implementing proof assitants, whereas the
+flip-flopping on the issue. His seminal Constructive Mathematics and Computer
+Programming [cite], took an extensional view, and was soon betrayed by lectures
+he gave soon thereafter in Padova in 1980. Martin-Löf was a born again
+intensional type theorist. These Padova lectures were later published in the
+"Bibliopolis Book" [cite], and went on to inspire the European (and Gothenburg
+in particular) approach to implementing proof assitants, whereas the
 extensionalists were primarily eminating from Robert Constable's group at
-Cornell. 
+Cornell.
 
 This tension has now been at least partially resolved, or at the very least
 clarified, by an insight Voevodsky was apparently most proud of : the
@@ -102,4 +102,52 @@ theory'' in disguise, in that it collapses the higher path structure of
 identity types. The work over the past 10 years has elucidated the intensional
 and extensional positions. HoTT, by allowing higher paths, is unashamedly
 intentional, and admits a collapse into the extensional universe if so desired.
-We now the examine the structure induced by this propositional equality.
+
+\subsection{Why HoTT grammars?}
+
+There were abundant incentives motivating us to use HoTT as a case study for
+grammatical transformations of mathematics.  These include :
+
+\begin{itemize}[noitemsep]
+\item HoTT is a new foundation of mathematics
+\item Much expertise revolves around Göteborg, and Agda 
+\item The HoTT book is a canonical reference
+\item Most of the work is being formalized concurrent to its being written 
+\item Independent of set theory
+\item Univalence allows us to compare notions of equality
+\item Higher inductive types allow for ``more natural" higher dimensional constructions
+\item Cubical Type Theory (CTT) allowing for a constructive interpretation of univalence
+\item It is interdisciplinary and is transforming the boundaries of disciplines
+\end{itemize}
+
+Other projects, like lean [cite avigad] are seeking to do classical mathematics
+in a way that's relatively familiar to classical mathematicians, and due to its
+extensive libraries, from some vantages at least, it would give easier
+ways of accessing classical results, and possibly appeal more directly to
+mathematicians [cite buzzard]. The recent formalization of \emph{perfectoid
+  spaces} [cite buzzard], for example, validate that Lean may soon offer
+mathematicians an toolbox worthy them spending their time on.
+
+Homotopy Type theory and its offspring have greatly centered around the Agda
+community, is perhaps less practically oriented with more of a foundational
+emphasis than other type theories (and the proof assistants it has inspired).
+Nonetheless, HoTT gives a direct means of interpretation on both a proof assistant,
+on pen and paper, and perhaps most importantly appeals to the semantic intuition
+of the topologist. These reasons, for us, makes it the most theoretically
+appealing from the natural language perspective, because it's simultaneously
+trying to emphasize the multisorted nature of the Trinitarian subjects and their
+various cross-interpretations, with syntax being seen as one main obstacle in
+getting disparate researchers to coalesce. 
+
+The two grammars we explore HoTT we explore, emphasize the duality of
+programming and writing which HoTT is itself attempting to accentuate. Prior to
+the writing of the grammars, much of chapter 2 of the HoTT book was formalized
+in Agda with a fixation of syntactic overlap. This wasn't entirely possible, for
+we found certain proofs could be proven other ways more easily in Agda. The
+exercise showed how important the creation of a corpus can be, for no other
+reason than to analyze the language in an unambiguous setting. While the goal of
+both ``informalizing" and possibly generating Agda code was originally proposed,
+it turned out that the myriad tools and skills needed to get there required
+navigating many subtle issues that have been outlined above. We hope these final
+two grammars and a brief comparison of them will give the reader a new lens with
+which to study HoTT.

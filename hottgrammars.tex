@@ -1,60 +1,125 @@
-\subsection{Stockholm Math Seminar 2014}
+\subsection{Ranta's HoTT Grammar}
 
-In 2014, Ranta gave an unpublished talk at the Stockholm Mathematics seminar
+In 2014, Ranta gave an unpublished talk at the Stockholm Mathematics Seminar
 \cite{aarneHott}. Fortunately the code is available, although many of the design
 choices aren't documented in the grammar. This project aimed to provide a
 translation like the one desired in our current work, but it took a real piece
-of mathematics text as the main influence on the design of the Abstract syntax.
+of mathematics text as the main influence on the design of the abstract syntax.
 
 This work took a page of text from Peter Aczel's book which more or less goes
-over standard HoTT definitions and theorems, and allows the translation of the
-latex to a pidgin logical language. The central motivation of this grammar was
-to capture, entirely ``real" natural language mathematics, i.e. that which was
-written for the mathematician. Therefore, it isn't reminiscent of the slender
-abstract syntax the type theorist adores, and sacrificed ``syntactic
-completeness" for ``semantic adequacy". This means that the abstract syntax is
-much larger and very expressive, but it no longer becomes easy to reason about
-and additionally quite ad-hoc. Another defect is that this grammar
-overgenerates, so producing a unique parse from the PL side will become tricky.
-Nonetheless, this means that it's presumably possible to carve a subset of the
-GF HoTT abstract file to accommodate an Agda program, but one encounters rocks as soon
-as one begins to dig. For example, in \autoref{fig:M1} is some rendered latex
-taken verbatim from Ranta's test code.
+over standard HoTT definitions and theorems. The grammar allows the translation
+of the latex document in English to the same document in French, and to a pidgin
+logical language. The central motivation of this grammar was to capture entirely
+``real" natural language mathematics, i.e. that which was written for the
+mathematician. Therefore, it isn't reminiscent of the slender abstract syntax
+the type theorist adores, and sacrificed ``syntactic completeness" for
+``semantic adequacy". This means that the abstract syntax is much larger and
+very expressive, but it no longer becomes easy to reason about and additionally
+quite ad-hoc. Another defect is that this grammar overgenerates, so producing a
+unique parse from the PL side would require a significant amount of refactoring.
+Nonetheless, it is presumably possible to carve a subset of the
+GF HoTT abstract file to accommodate an Agda program, but one encounters rocks
+as soon as one begins to dig.
 
-With some of hours of tinkering on the pidgin logic concrete syntax and some
-reverse engineering with help from the GF shell, one is able to get these
-definitions in \autoref{fig:M2}, which are intended to share the same syntactic
-space as cubicalTT. We note the first definition of ``contractability" actually
-runs in cubicalTT up to renaming a lexical items, and it is clear that the
-translation from that to Agda should be a benign task. However, the
-\emph{equivalence} syntax is stuck with the artifact from the bloated abstract
-syntax for the of the anaphoric use of ``it", which may presumably be fixed with
-a few hours more of tinkering, but becomes even more complicated when not just
-defining new types, but actually writing real mathematical proofs, or relatively
-large terms. To extend this grammar to accommodate a chapter worth of material,
-let alone a book, will not just require extending the lexicon, but encountering
-other syntactic phenomena that will further be difficult to compress when
-defining Agda's concrete syntax.
+In \autoref{fig:R1} one can see different syntactic presentations of a notion of
+\emph{contractability}, that a space is deformable into a single point, or that a Type
+is actually inhabited by a unique term. Some rendered latex taken verbatim from
+Ranta's test code, compared with the translated pidgin logic code (after
+refactoring of Ranta's linearization scheme) and an Agda program. We see that it was
+fairly easy to get the notation for our cubicalTT grammar [ref cubicaltt].
+When parsing the logical form, unfortunately, the grammar is incredibly ambiguous.
 
 \input{latex/ContrClean}
 
-Additionally, we give the Agda code in \autoref{fig:M3}, so-as to see what the
-end result of such a program would be. The astute reader will also notice a
-semantic in the pidgin rendering error relative to the Agda implementation.
-\codeword{fiber} has the type \codeword{it : Set} instead of something like
-\codeword{(y : B) : Set}, and the y variable is unbound in the \codeword{fiber}
-expression. This demonstrates that to design a grammar prioritizing
+To extend this grammar to accommodate a chapter worth of material, let alone a
+book, will not just require extending the lexicon, but encountering other
+syntactic phenomena that will further be difficult to compress when defining
+Agda's concrete syntax. This demonstrates that to design a grammar prioritizing
 \emph{semantic adequacy} and subsequently trying to incorporate \emph{syntactic
 completeness} becomes a very difficult problem. Depending on the application of
 the grammar, the emphasis on this axis is most assuredly a choice one should
 consider up front.
 
-While both these grammars have their strengths and weaknesses, one shall see
-shortly that the approach in this thesis, taking an actual programming language
+The next grammar, taking an actual programming language
 parser in Backus-Naur Form Converter (BNFC), GFifying it, and trying to use the
 abstract syntax to model natural language, gives in some sense a dual challenge,
-where the abstract syntax remains simple, but its linearizations become
-must increase in complexity.
+where the abstract syntax remains simple as in our dependently typed grammar,
+but its linearizations become increasingly complex, especially when generating
+natural language.
+
+\subsection{cubicalTT Grammar}
+
+Cubical type theories arose out of the desire to give a complete computational
+interpretation to HoTT, whereby nonviolence would become a theorem rather than
+an axiom \cite{cohen:hal-01378906}. The utility of this is that canonicity, the
+property of an expression having a irreducible normal form, is satisfied for all
+expressions. Univalence, by introducing a type without computational behavior,
+means that the constructivist using Agda will be able to define terms which
+don't normalize.
+
+The origin of cubical, looking beyond simplicial models of type theory to
+cubical categories instead \cite{bezem2017univalence}, gave a blueprint for a
+totally new type theory which natively supports proving functional
+extensionality, which is a especially important for mathematicians. The ideas of
+cubical became the origin for a new series of proof assistants, cubical [cite
+https://github.com/simhu/cubical] and cubicaltt [cite
+https://github.com/mortberg/cubicaltt], and Cubical Agda \cite{cubicalAgda}, as
+well as other in originating from Robert Constables disciples in the NuPrl
+tradition [cite redprl, redtt, jonprl]. cubicalTT, which was relatively
+complete, had an unambiguous BNFC grammar, more or less represents a kernel of
+Agda with cubical primitives. This final grammar, which we don't as cubicalTT,
+took the actual cubicalTT grammar and gfified the subset which is in the
+intersection with vanilla Agda. Extending our GF version to include cubical
+primitives would facilitate the extension of the work to Cubical Agda, which
+supports Higher Inductive Types natively and is capable of all types of new
+constructions [cite stuff] not mentioned in the HoTT book.
+
+Our grammar for vanilla dependent pi types [refer earlier section] was actually
+a subset of the current cubicalTT abstract syntax. We give a brief sketch of the
+algorithm to go between a BNFC grammar and a GF grammar. BNFC essentially
+combines the abstract and concrete syntax, enabling a hierarchy of numbered
+expressions \term{ExpN} to minimize use of parentheses. So, given m names and
+choosing $Name_i$, with the accompanying rule :
+
+$$Name_i.\; ReturnCat_i ::= s^0_{i}\;C^0_{i_0}\;...\;C^{n-1}_{i_{n-1}}\;s^n_{i}\;;$$
+
+where string $s^i_j$ may be empty. The $i^{th}$ subscript represents the 
+precedence number of a category. We can produce the following in GF.
+
+$$cat\; Name_i\; \bigcap\{ReturnCat_i,C^0,..., C^{n-1}\}\;;$$
+$$fun\; Name_i\:{:} C^0 \rightarrow ... \rightarrow C^{n-1} \rightarrow ReturnCat_i $$
+$$lincat \: \bigcap\{ReturnCat_i,C^0,..., C^{n-1}\}\;; = TermPrec$$
+$$lin \; Name_i\;c^0; ... \;c^n = mkPrec(0,(s^0_{i}\; ++
+usePrec(i_0,c^0)\;++...\;usePrec(i_{n-1},c^{n-1})\;s^n_{i}\;) ;$$
+
+where $c^j \in C^j \; \forall i,j$, and term{usePrec} and \term{mkPrec} come
+from the RGL, as seen earlier.
+
+We reiterate the examples from the simply typed lambda calculus. The BNFC code:
+
+\begin{verbatim}
+Lam. Exp  ::= "\\" [PTele] "->" Exp ;
+Fun. Exp1 ::= Exp2 "->" Exp1 ;
+App. Exp2 ::= Exp2 Exp3 ;
+\end{verbatim}
+
+is GFified as follows:
+
+\begin{verbatim}
+cat Exp ;
+fun
+  Lam : [PTele] -> Exp -> Exp ;
+  Fun : Exp -> Exp -> Exp ;
+  App : Exp -> Exp -> Exp ;
+\end{verbatim}
+\begin{verbatim}
+lincat Exp = TermPrec ;
+lin 
+  Lam pt e = mkPrec 0 ("\\" ++ pt ++ "->" ++ usePrec 0 e) ;
+  Fun = infixr 1 "->" ; 
+  App = infixl 2 "" ;
+\end{verbatim}
+
 
 -- Proof using isPropIsContr. This is slow and the direct proof below is better
 

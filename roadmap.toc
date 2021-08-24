@@ -29,5 +29,9 @@
 \contentsline {subsection}{\numberline {6.1}CADE 2011}{46}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}An Additional PGF Grammar}{47}{subsubsection.6.1.1}%
 \contentsline {section}{\numberline {7}Natural Number Proofs}{51}{section.7}%
-\contentsline {section}{References}{53}{section.7}%
-\contentsline {section}{\numberline {8}Appendices}{57}{section.8}%
+\contentsline {subsection}{\numberline {7.1}Associativity of Natural Numbers}{51}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}What is Equality?}{56}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Ranta's HoTT Grammar}{58}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}cubicalTT Grammar}{59}{subsection.7.4}%
+\contentsline {section}{References}{61}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Appendices}{65}{section.8}%
