@@ -68,57 +68,83 @@ well as other in originating from Robert Constables disciples in the NuPrl
 tradition [cite redprl, redtt, jonprl]. cubicalTT, which was relatively
 complete, had an unambiguous BNFC grammar, more or less represents a kernel of
 Agda with cubical primitives. This final grammar, which we don't as cubicalTT,
-took the actual cubicalTT grammar and gfified the subset which is in the
+took the actual cubicalTT grammar and GFified the subset which is in the
 intersection with vanilla Agda. Extending our GF version to include cubical
-primitives would facilitate the extension of the work to Cubical Agda, which
+primitives would facilitate the extension of the work to Cubical Agda, and we
+hope future endeavors will go in this direction. Cubical Agda
 supports Higher Inductive Types natively and is capable of all types of new
-constructions [cite stuff] not mentioned in the HoTT book.
+constructions [cite stuff] not mentioned in the HoTT book, but is also
+incredibly experimental, with large changes to the standard library constantly
+underway as in [refer intro].
 
-Our grammar for vanilla dependent pi types [refer earlier section] was actually
+Our grammar for vanilla dependent $\Pi$-types [refer earlier section] was actually
 a subset of the current cubicalTT abstract syntax. We give a brief sketch of the
 algorithm to go between a BNFC grammar and a GF grammar. BNFC essentially
 combines the abstract and concrete syntax, enabling a hierarchy of numbered
 expressions \term{ExpN} to minimize use of parentheses. So, given m names and
 choosing $Name_i$, with the accompanying rule :
 
-$$Name_i.\; ReturnCat_i ::= s^0_{i}\;C^0_{i_0}\;...\;C^{n-1}_{i_{n-1}}\;s^n_{i}\;;$$
+$$Name_i.\; ReturnCat_{i_n} ::= s^0_{i}\;C^0_{i_0}\;...\;C^{n-1}_{i_{n-1}}\;s^n_{i}\;;$$
 
-where string $s^i_j$ may be empty. The $i^{th}$ subscript represents the 
-precedence number of a category. We can produce the following in GF.
+where string $s^i_j$ may be empty and the $k$ in the $i^{th}_k$ subscript represents the 
+precedence number of a category. These precedences are indicated with a
+\term{Coercions N} keyword in BNFC. We can produce the following in GF.
 
 $$cat\; Name_i\; \bigcap\{ReturnCat_i,C^0,..., C^{n-1}\}\;;$$
 $$fun\; Name_i\:{:} C^0 \rightarrow ... \rightarrow C^{n-1} \rightarrow ReturnCat_i $$
 $$lincat \: \bigcap\{ReturnCat_i,C^0,..., C^{n-1}\}\;; = TermPrec$$
-$$lin \; Name_i\;c^0; ... \;c^n = mkPrec(0,(s^0_{i}\; ++
-usePrec(i_0,c^0)\;++...\;usePrec(i_{n-1},c^{n-1})\;s^n_{i}\;) ;$$
+$$lin \; Name_i\;c^0\;... \;c^n = mkPrec(i_n,(s^0_{i}\texttt{++}usePrec(i_0+1,c^0)\texttt{++}...\texttt{++}usePrec(i_{n-1}+1,c^{n-1})\texttt{++}s^n_{i})) ;$$
 
-where $c^j \in C^j \; \forall i,j$, and term{usePrec} and \term{mkPrec} come
-from the RGL, as seen earlier.
-
-We reiterate the examples from the simply typed lambda calculus. The BNFC code:
+where $c^j \in C^j \; \forall i,j$, and \term{usePrec} and \term{mkPrec} come
+from the RGL, as seen earlier. We also note that some \term{lincat} might
+actually just be strings (or something else), for it is only when a precedence
+is observed that the \codeword{TermPrec} is applicable. The use of
+\term{usePrec} is only applicable when $i_k$ isn't empty. Additionally, this
+doesn't account for the fact that already some categories may have been
+witnessed in which case we want to intersect over the whole set of rules at
+once. We reiterate the examples from the simply typed lambda calculus. The BNFC
+code results in the GF code immediately below.
 
 \begin{verbatim}
+--BNFC
 Lam. Exp  ::= "\\" [PTele] "->" Exp ;
 Fun. Exp1 ::= Exp2 "->" Exp1 ;
-App. Exp2 ::= Exp2 Exp3 ;
-\end{verbatim}
-
-is GFified as follows:
-
-\begin{verbatim}
-cat Exp ;
+-- GF
+cat Exp ; PTele ;
 fun
   Lam : [PTele] -> Exp -> Exp ;
   Fun : Exp -> Exp -> Exp ;
-  App : Exp -> Exp -> Exp ;
-\end{verbatim}
-\begin{verbatim}
-lincat Exp = TermPrec ;
+lincat Exp = TermPrec ; [PTele] = Str ;
 lin 
   Lam pt e = mkPrec 0 ("\\" ++ pt ++ "->" ++ usePrec 0 e) ;
-  Fun = infixr 1 "->" ; 
-  App = infixl 2 "" ;
+  Fun = mkPrec 1 (usePrec 2 x ++ "->" ++ usePrec 1 y) ;
 \end{verbatim}
+
+This more or less elaborates exactly how to implement a programming language
+with unambiguous parsing in GF. There is also a simple means of translating
+lists, including BNFC's \term{separator} and \term{terminator} keywords during
+the linearization process. Finally, there is a custom \term{token} keyword, and
+this is perhaps the most important feature absent in GF.
+Because BNFC generates Haskell code reminiscent of the PGF embedding, it would
+also be possible to translate the trees directly, if parsing complexity with GF
+was found to be slower than BNFC.
+
+Most interestingly is to look at what is
+absent in BNFC, namely, the ability to add records and paremeters into the
+linearization types generally, although these GF features are implicitly used to
+encode precedence. For one could add unique categories in GF $Exp_1,...,Exp_n$, but this would
+clutter the abstract syntax with information which isn't \emph{semantically}
+relevant. And while the Haskell code generated by BNFC for cubicalTT is sent through a
+resolver to the \emph{actual} abstract syntax used by the type-checker and
+evaluator, the fact that it parses the concrete syntax into an appropriate
+intermediary form is enough for our purposes. 
+
+\subsubsection{Difficulties}
+
+\subsection{Comparing the Grammars}
+
+\subsubsection{Ideas for resolution}
+
 
 
 -- Proof using isPropIsContr. This is slow and the direct proof below is better

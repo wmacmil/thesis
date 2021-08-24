@@ -33,5 +33,5 @@
 \contentsline {subsection}{\numberline {7.2}What is Equality?}{56}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Ranta's HoTT Grammar}{58}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}cubicalTT Grammar}{59}{subsection.7.4}%
-\contentsline {section}{References}{61}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Appendices}{65}{section.8}%
+\contentsline {section}{References}{62}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Appendices}{66}{section.8}%
