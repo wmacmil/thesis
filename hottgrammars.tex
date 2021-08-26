@@ -296,10 +296,10 @@ The distinction between individuals, propositions,
 sorts, functions, and predicates also allows more nuance, but delegates the work
 of deciding what category a term represents much more difficult, which makes the
 possibility of having some algorithm infer the right category much more
-difficult.  Additionally, 
-We see that the universal phrase, the notion of a $\Pi$-type, merits semantic 
+difficult. The expressions can be embedded into any of these categories.  Additionally, 
+we see that the universal phrase, the notion of a $\Pi$-type, merits semantic 
 distinction in this grammar, with unique functions being assigned for all the
-(observed) ways of saying it.
+(observed) ways of saying it - this is the case with existential statements as well.
 
 \begin{verbatim}
   plainUnivPhrase   : [Var] -> Sort -> UnivPhrase ;  -- for x, y : A
@@ -309,6 +309,33 @@ distinction in this grammar, with unique functions being assigned for all the
   if_thenUnivPhrase : [Var] -> Sort -> UnivPhrase ;  -- if x,y : A then
 \end{verbatim}
 
+One caveat is that set comprehensions are treated as expressions, whereas
+existential phrases are propositions, even though to the Agda programmer they
+are the same thing. This differences obviously arises in the fact
+that expressions are meant to be symbolic in this grammar, whereas functions
+taking \term{Exp} arguments generally return things of grammatical categories
+with possibly auxiliary data, i.e.
+
+\begin{verbatim}
+lincat
+  Sort = SortExp ;
+  Fun  = FunExp ;
+  Ind  = IndExp ; 
+  Prop = S ;
+oper
+  SortExp = {cn : CN ; postname : Str ; isSymbolic : Bool} ;
+  IndExp = {s : NP ; isSymbolic : Bool} ;
+  FunExp = {s : CN ; isSymbolic : Bool} ;
+\end{verbatim}
+
+Ranta clearly chose to treat prioritize semantic adequacy by placing the
+grammatical categories at the forefront. This was not an error, as Peter Azcel
+wrote this mixing notations from set theory, type theory, first order logic, and
+homotopy theory presented in a Latex document. For as much as the
+type theorist insists on his or her exclusive use of types, the written language
+tradition is still tied to the logical and set theoretic tradition of presenting
+mathematics - and this constraint arises in a more expressive abstract syntax. 
+
 This includes document structure categories, \codeword{Title}, \codeword{Label},
 \codeword{Paragraph}, \codeword{Definition}, \codeword{Conclusion}, etc. While
 these may resembling a module system in ways, they also reflect a different
@@ -317,11 +344,29 @@ control of handling software complexity. \codeword{ConclusionPhrase} reflects
 what Agda's typechecker infers and is displayed to the user, and is therefore
 redundant from the programmers perspective.
 
-We have implemented Agda representation, which we compare with the rendered
-latex, as well as the cubicalTT syntax in theappendix \ref{comparison}
+Another observation of the grammar is that the certain notions come with more
+semantic information that the type-checker would be able to infer, so for
+instance, \codewrod \codeword{fiberExp} is a binary function, as opposed to the
+cubicalTT grammar which treats it as a variable and explicitly uses the
+application operator for each of its arguments, leading to the application hell
+observed in our earlier work.
+
+Despite the complexity of the abstract syntax relative to cubicalTT, it is
+remarkable that Ranta was able to capture the entire text with a few days of
+labor. Expertise in GF, however, reveals itself through trial, error, and
+patience. Despite the success, we hypothesize that extending it to longer
+lengths of text would very difficult for anyone without deep knowledge of GF and
+type theory generally. The ease of extending cubicalTT to cover more text,
+, despite its limitations regarding language generation, pose a dual problem of
+extending the concrete syntax each time a new grammatical ``feature" is discovered.
+
+We have taken the text parsed by Ranta's HoTT grammar and implemented both an
+Agda representation which typechecks as well as the cubicalTT syntax in the
+appendix \ref{comparison}.
 
 \subsubsection{Ideas for resolution}
 
+We now propose a resolution of this problem 
 
 
 

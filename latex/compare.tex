@@ -418,21 +418,251 @@ cubicalTT parses the following.  We note an idealization : that agda supports an
 \codeword{\\ ( ( b , refl )}  would not typecheck in the original cubicalTT. Additionally, the reflexivity constructor is only present when the identity is inductively defined, as it is a primitive in cubical type theories.
 
 \begin{figure}[H]
+\begin{verbatim}
 id ( a : Set ) : a -> a = \\ ( b : a ) -> b
 isContr ( a : Set ) : Set = ( b : a ) * ( x : a ) -> a b == x
-fiber ( a b  : Set ) ( f : a -> b ) ( y : b )  : Set = ( x : a ) * ( x : a ) -> b y == ( f x )
-isEquiv ( a b  : Set ) ( f : a -> b )   : Set = ( y : b ) -> isContr ( fiber a b f y )
-  where fiber ( a b  : Set ) ( f : a -> b ) ( y : b )  : Set = ( x : a ) * ( x : a ) -> b y == ( f x )
+fiber ( a b  : Set ) ( f : a -> b ) ( y : b )  : Set 
+  = ( x : a ) * ( x : a ) -> b y == ( f x )
+isEquiv ( a b  : Set ) ( f : a -> b )   : Set 
+  = ( y : b ) -> isContr ( fiber a b f y )
+  where fiber ( a b  : Set ) ( f : a -> b ) ( y : b )  : Set 
+    = ( x : a ) * ( x : a ) -> b y == ( f x )
 equiv ( a b : Set ) : Set = ( f : a -> b ) * isEquiv a b f
 
 idIsEquiv ( a : Set ) : isEquiv a a ( id a ) =  ( ybar , lemma0 )
   where
     idFib : Set = fiber a a id y
     ^ ybar : idFib = ( y , refl )
-    ^ lemma0 ( x : idFib ) : ( ( p ) ybar == x ) = \\ ( ( b , refl ) : ( c : a ) * ( a c == c ) ) -> refl
+    ^ lemma0 ( x : idFib ) : ( ( p ) ybar == x ) 
+      = \\ ( ( b , refl ) : ( c : a ) * ( a c == c ) ) -> refl
 
 idIsEquiv ( x : Set ) : equiv x x = ( id , idIsEquiv x )
-eqToIso ( a b : Set ) : ( Set a == b ) -> equiv a b = split refl -> idIsEquiv a
+eqToIso ( a b : Set ) : ( Set a == b ) -> equiv a b 
+  = split refl -> idIsEquiv a
+\end{verbatim}
 \end{figure}
 
-We compare two abstract syntax trees side by side to show that 
+We compare two abstract syntax trees side by side to show that they have quite different structures,
+
+\begin{figure}
+\centering
+\begin{minipage}[t]{.5\textwidth}
+\begin{verbatim}
+Exp> 
+* DeclDef
+    * Contr
+      ConsTele
+        * TeleC
+            * A
+              BaseAIdent
+              Univ
+          BaseTele
+      Univ
+      NoWhere
+        * Sigma
+            * BasePTele
+                * PTeleC
+                    * Var
+                        * B
+                      Var
+                        * A
+              Pi
+                * BasePTele
+                    * PTeleC
+                        * Var
+                            * X
+                          Var
+                            * A
+                  Id
+                    * Var
+                        * A
+                      Var
+                        * B
+                      Var
+                        * X
+\end{verbatim}
+\end{minipage}%
+\begin{minipage}[t]{.55\textwidth}
+\begin{verbatim}
+* PredDefinition
+    * type_Sort
+      A_Var
+      contractible_Pred
+      ExistCalledProp
+        * a_Var
+          ExpSort
+            * VarExp
+                * A_Var
+          FunInd
+            * centre_of_contraction_Fun
+          ForAllProp
+            * allUnivPhrase
+                * BaseVar
+                    * x_Var
+                  ExpSort
+                    * VarExp
+                        * A_Var
+              ExpProp
+                * DollarMathEnv
+                  equalExp
+                    * VarExp
+                        * a_Var
+                      VarExp
+                        * x_Var
+\end{verbatim}
+\end{minipage}
+\caption{Mathematical Assertions and Agda Judgements} \label{fig:I2}
+\end{figure}
+
+What we notice : 
+
+
+\begin{figure}
+\centering
+\begin{minipage}[t]{.5\textwidth}
+\begin{verbatim}
+* DeclSplit
+    * EqToIso
+      ConsTele
+        * TeleC
+            * A
+              ConsAIdent
+                * B
+                  BaseAIdent
+              Univ
+          BaseTele
+      Fun
+        * Id
+            * Univ
+              Var
+                * A
+              Var
+                * B
+          App
+            * App
+                * Var
+                    * Equiv
+                  Var
+                    * A
+              Var
+                * B
+      BaseBranch
+        * OBranch
+            * Refl
+              BaseAIdent
+              NoWhere
+                * App
+                    * Var
+                        * IdIsEquiv
+                      Var
+                        * A
+\end{verbatim}
+\end{minipage}%
+\begin{minipage}[t]{.55\textwidth}
+\begin{verbatim}
+3 PropParagraph
+    * NoConclusionPhrase
+      ForAllProp
+        * if_thenUnivPhrase
+            * BaseVar
+                * U_Var
+              type_universe_Sort
+          ForAllProp
+            * plainUnivPhrase
+                * ConsVar
+                    * X_Var
+                      BaseVar
+                        * Y_Var
+                  ExpSort
+                    * VarExp
+                        * U_Var
+              LabelledExpProp
+                * DisplayMathEnv
+                  StarLabel
+                  mapExp
+                    * equalExp
+                        * VarExp
+                            * X_Var
+                          VarExp
+                            * Y_Var
+                      equivalenceExp
+                        * VarExp
+                            * X_Var
+                          VarExp
+                            * Y_Var
+4 ConclusionParagraph
+    1 NoConclusionPhrase
+      ApplyLabelConclusion
+        * the_lemma_Label
+          BaseInd
+          ForAllProp
+            * plainUnivPhrase
+                * BaseVar
+                    * X_Var
+                  ExpSort
+                    * VarExp
+                        * U_Var
+              ExpProp
+                * DollarMathEnv
+                  equivalenceExp
+                    * VarExp
+                        * X_Var
+                      VarExp
+                        * X_Var
+    2 henceConclusionPhrase
+      ApplyLabelConclusion
+        * id_induction_Label
+          ConsInd
+            * FunInd
+                * ExpFun
+                    * TypedExp
+                        * ConsExp
+                            * VarExp
+                                * X_Var
+                              BaseExp
+                                * VarExp
+                                    * Y_Var
+                          VarExp
+                            * U_Var
+              BaseInd
+          LabelProp
+            * StarLabel
+\end{verbatim}
+\end{minipage}
+\caption{Mathematical Assertions and Agda Judgements} \label{fig:I3}
+\end{figure}
+
+todo : refactor to have the final sections side-by-side, do a more "thorough analysis of the text fragment above"
+namely - look at the redundancy, the intro of identity local to a definition (often having more than one proposition in a proposition) 
+the failure in some instances to provide relevant info, etc.
+
+also, refactor to have the sigma proof here
+
+Exp> * DeclDef
+    * IdIsEquiv
+      ConsTele
+        * TeleC
+            * X
+              BaseAIdent
+              Univ
+          BaseTele
+      App
+        * App
+            * Var
+                * Equiv
+              Var
+                * X
+          Var
+            * X
+      NoWhere
+        * Pair
+            * Var
+                * Identity
+              App
+                * Var
+                    * IdIsEquiv
+                  Var
+                    * X
+
+
+

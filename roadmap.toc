@@ -17,28 +17,29 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Overview}{24}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Agda Programming}{24}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Formalizing The Twin Prime Conjecture}{27}{subsubsection.3.3.3}%
-\contentsline {section}{\numberline {4}Previous Work}{31}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Ranta}{31}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Mohan Ganesalingam}{33}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Pragmatics in mathematics}{34}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Other authors}{35}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Grammatical Framework}{38}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Thinking about GF}{38}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}A Brief Introduction to GF}{40}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Prior GF Formalizations}{46}{section.6}%
-\contentsline {subsection}{\numberline {6.1}CADE 2011}{46}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}An Additional PGF Grammar}{47}{subsubsection.6.1.1}%
-\contentsline {section}{\numberline {7}Natural Number Proofs}{51}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Associativity of Natural Numbers}{51}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}What is Equality?}{56}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Ranta's HoTT Grammar}{58}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}cubicalTT Grammar}{59}{subsection.7.4}%
-\contentsline {subsubsection}{\numberline {7.4.1}Difficulties}{61}{subsubsection.7.4.1}%
-\contentsline {subsubsection}{\numberline {7.4.2}More advanced Agda features}{62}{subsubsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.5}Comparing the Grammars}{63}{subsection.7.5}%
+\contentsline {section}{\numberline {4}Previous Work}{30}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Ranta}{30}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Mohan Ganesalingam}{32}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Pragmatics in mathematics}{33}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Other authors}{34}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Grammatical Framework}{37}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Thinking about GF}{37}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}A Brief Introduction to GF}{39}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Prior GF Formalizations}{45}{section.6}%
+\contentsline {subsection}{\numberline {6.1}CADE 2011}{45}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}An Additional PGF Grammar}{46}{subsubsection.6.1.1}%
+\contentsline {section}{\numberline {7}Natural Number Proofs}{50}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Associativity of Natural Numbers}{50}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}What is Equality?}{55}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Ranta's HoTT Grammar}{57}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}cubicalTT Grammar}{58}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Difficulties}{60}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}More advanced Agda features}{61}{subsubsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.5}Comparing the Grammars}{62}{subsection.7.5}%
 \contentsline {subsubsection}{\numberline {7.5.1}Ideas for resolution}{64}{subsubsection.7.5.1}%
 \contentsline {section}{References}{65}{subsubsection.7.5.1}%
 \contentsline {section}{\numberline {8}Appendix}{69}{section.8}%
-\contentsline {subsection}{\numberline {8.1}cubicalTT}{69}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Hott and cubicalTT Grammars}{75}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}HoTT Agda Corpus}{76}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.1}Twin Primes Conjecture Revisited}{69}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}cubicalTT}{69}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Hott and cubicalTT Grammars}{75}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}HoTT Agda Corpus}{80}{subsection.8.4}%
