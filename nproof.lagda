@@ -44,7 +44,6 @@ variable
   A B : Set
   a a' : A
 \end{code}
-
 We now present the type which encodes the proposition which says some number $0$
 plus some number is propositionally equal to that number. Agda is able to
 compute evidence for this proposition via the definition of addition, and
@@ -167,7 +166,7 @@ Finally, taking a ``desguared" version of the Agda proof term, as presented in
 our grammar, we can can reconstruct the lambda term which would, in an idealized
 world, match the software foundations proof.
 
-\begin{verbatim}
+\begin{verbatim} 
 p -lang=LHask "
   \\ ( n m p : nat ) ->
   natind
@@ -204,6 +203,7 @@ This is by all accounts horrendous, nonetheless it does contain enough
 information to say it is syntactically complete. There are a few points which
 make this proof non-trivial to translate.
 
+
 First, as is obvious, there is little support for punctuation and proof
 structure - the indentations were added by hand. The semantic distinction is
 left to the type-checker in the dependently typed language, so the syntactic
@@ -217,12 +217,12 @@ by creating many fields in the records of the \codeword{lincat} for \term{Exp},
 one for each syntactic category. Then one may have parameters, with which to
 match them on and determine how they are expressed as syntactic categories. This
 has been done for a Digital Grammars client looking to produce natural language
-for a code base, but unfortunately the code is not publically avaialable [cite
-aarne]. We note that this error may become increasingly difficult the more
-syntax one covers, and generalizing it to full scale mathematics texts with the
-myriad syntactic uses of different types of mathematical terms seems intractible
-(although Ganesalignam came up with a different theoretical notion ``type" to
-cover grammartical artificats in textual mathematics [cite ganes]).
+for a code base, but unfortunately the code is not publically avaialable
+\cite{rantaZ}. We note that this error may become increasingly difficult the
+more syntax one covers, and generalizing it to full scale mathematics texts with
+the myriad syntactic uses of different types of mathematical terms seems
+intractible (although Ganesalignam came up with a different theoretical notion
+``type" to cover grammartical artificats in textual mathematics [cite ganes]).
 
 Second, the application function, which is so common it gets the syntactic
 distinction of being whitespace, does not have the same luxury in the natural

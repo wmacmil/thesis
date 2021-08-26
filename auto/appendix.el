@@ -1,9 +1,10 @@
 (TeX-add-style-hook
- "natproof"
+ "appendix"
  (lambda ()
    (TeX-run-style-hooks
-    "latex/nproof")
+    "latex/compare")
    (LaTeX-add-labels
-    "assoc"))
+    "cubicaltt"
+    "hottproofs"))
  :latex)
 

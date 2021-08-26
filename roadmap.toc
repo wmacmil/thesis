@@ -2,13 +2,13 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Beyond Computational Trinitarianism}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}What is a Homomorophism?}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Perspectives}{8}{section.2}%
+\contentsline {section}{\numberline {2}Philosophical Perspectives}{8}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Linguistic and Programming Language Abstractions}{8}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Formalization and Informalization}{11}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Syntactic Completeness and Semantic Adequacy}{12}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}What is a proof?}{15}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}What is a proof revisited}{17}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Preliminaries}{19}{section.3}%
+\contentsline {section}{\numberline {3}Technical Preliminaries}{19}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Martin-Löf Type Theory}{19}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Judgments}{19}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Rules}{20}{subsubsection.3.1.2}%
@@ -33,5 +33,12 @@
 \contentsline {subsection}{\numberline {7.2}What is Equality?}{56}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Ranta's HoTT Grammar}{58}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}cubicalTT Grammar}{59}{subsection.7.4}%
-\contentsline {section}{References}{62}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Appendices}{66}{section.8}%
+\contentsline {subsubsection}{\numberline {7.4.1}Difficulties}{61}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}More advanced Agda features}{62}{subsubsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.5}Comparing the Grammars}{63}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Ideas for resolution}{64}{subsubsection.7.5.1}%
+\contentsline {section}{References}{65}{subsubsection.7.5.1}%
+\contentsline {section}{\numberline {8}Appendix}{69}{section.8}%
+\contentsline {subsection}{\numberline {8.1}cubicalTT}{69}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Hott and cubicalTT Grammars}{75}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}HoTT Agda Corpus}{76}{subsection.8.3}%

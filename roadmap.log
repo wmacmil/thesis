@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  24 AUG 2021 11:11
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  25 AUG 2021 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1156,29 +1156,29 @@ LaTeX Warning: Label `fig:M3' multiply defined.
 
 LaTeX Warning: Label `fig:M3' multiply defined.
 
-))
+) (./appendix.aux))
 \openout1 = `roadmap.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1215,7 +1215,7 @@ LaTeX Font Info:    ... okay on input line 131.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box118
-Package hyperref Info: Link coloring OFF on input line 131.
+Package hyperref Info: Link coloring OFF on input line 143.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1225,9 +1225,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 131.
-LaTeX Info: Redefining \pageref on input line 131.
-LaTeX Info: Redefining \nameref on input line 131.
+LaTeX Info: Redefining \ref on input line 143.
+LaTeX Info: Redefining \pageref on input line 143.
+LaTeX Info: Redefining \nameref on input line 143.
 (./roadmap.out) (./roadmap.out)
 \@outlinefile=\write5
 \openout5 = `roadmap.out'.
@@ -1272,16 +1272,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 131.
+(Font)              `operators' in the math version `normal' on input line 143.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 131.
+ line 143.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 131.
+(Font)              `operators' in the math version `bold' on input line 143.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 131.
+t line 143.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1352,15 +1352,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 131.
+(Font)              `symbols' in the math version `normal' on input line 143.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 131.
+t line 143.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 131.
+(Font)              `symbols' in the math version `bold' on input line 143.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 131.
+t line 143.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1414,16 +1414,16 @@ uage=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-31.
+43.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 131.
+t line 143.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 131
+(Font)              `largesymbols' in the math version `bold' on input line 143
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 131.
+t line 143.
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                `mathtools' package.
@@ -2200,50 +2200,31 @@ LaTeX Warning: Reference `fig:R1' on page 58 undefined on input line 24.
 ) [58
 
 
-] [59] [60]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...github.com/mortberg/cubicaltt/blob/pi4s3_
-                                                  dimclosures/examples/brune...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! You can't use `macro parameter character #' in math mode.
-l.130 ...pi4s3_dimclosures/examples/brunerie2.ctt#
-                                                  L562
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.131 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (68.71486pt too wide) in paragraph at lines 128--131
-\TU/DejaVuSerif(0)/m/n/10.95 q– HTTPSqqq://github.com/mortberg/cubicaltt/blob/p
-i4s3$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[]$ 
+] [59]
+Overfull \hbox (3.28198pt too wide) detected at line 96
+[][][] [][][][][] [][] [][][] [][] [] [][][][][][][][][][] [][][][][][][][][][]
+[][][][] [] [][] [][][][][][][][][][][][][][][][][][] [] [][] [][][][][][][][][
+]
  []
 
-) [61] (./roadmap.bbl [62
+[60] [61] [62] [63]
+Overfull \hbox (1.91154pt too wide) in paragraph at lines 293--293
+[]  \TU/DejaVuSansMono(0)/m/n/10.95 Ind ;              -- individual, element, 
+corresponding to a singular term[] 
+ []
 
-] [63]
+) [64] (./roadmap.bbl [65
+
+] [66]
 Underfull \hbox (badness 10000) in paragraph at lines 248--252
 []\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  \TU/DejaVuSerif(0)/m/it/10.95
  gf-contrib/typetheory\TU/DejaVuSerif(0)/m/n/10.95 .  []$[][][][][] [] [] [] []
 [][][][][] [] [][][] []
  []
 
-[64]
+[67]
 ! Misplaced alignment tab character &.
-l.288 ...tion for Computing Machinery and Morgan &
+l.294 ...tion for Computing Machinery and Morgan &
                                                    Claypool.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2252,16 +2233,83 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-) [65] [66]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
+) [68]
+\openout2 = `appendix.aux'.
+
+(./appendix.tex
+Overfull \hbox (280.99213pt too wide) in paragraph at lines 129--129
+[]      \TU/DejaVuSansMono(0)/m/n/10.95 -- note, cubical tt doesn't support ind
+uctive families, and therefore the datatype (& labels) need to be modified[] 
+ []
+
+[69
+
+]
+Overfull \hbox (72.2311pt too wide) in paragraph at lines 129--129
+\TU/DejaVuSansMono(0)/m/n/10.95 > ( ( b ) ( x ) ) ) ( p : ( x : a ) -> ( ( ( b 
+) ( x ) ) ( ( f ) ( x ) ) == ( ( g ) ( x ) ) ) )[] 
+ []
+
+[70]
+Overfull \hbox (177.7104pt too wide) in paragraph at lines 129--129
+[]  \TU/DejaVuSansMono(0)/m/n/10.95 A , B , C , D , E , F , G , H , I , J , K ,
+ L , M , N , O , P , Q , R , S , T , U , V , W , X , Y , Z : AIdent ;[] 
+ []
+
+[71]
+Overfull \hbox (32.67632pt too wide) in paragraph at lines 267--267
+[]  \TU/DejaVuSansMono(0)/m/n/10.95 Id e1 e2 e3 = mkPrec 3 (usePrec 4 e1 ++ use
+Prec 4 e2 ++ "==" ++ usePrec 3 e3) ;[] 
+ []
+
+
+Overfull \hbox (283.18956pt too wide) in paragraph at lines 267--267
+[]\TU/DejaVuSansMono(0)/m/n/10.95 -- for an explicit vs implicit use of paramet
+ers, may have to use expressions as records, with a parameter is_implicit[] 
+ []
+
+
+Overfull \hbox (261.21477pt too wide) in paragraph at lines 267--267
+[]  \TU/DejaVuSansMono(0)/m/n/10.95 IdJ e1 e2 e3 e4 e5 = mkPrec 3 ("J" ++ usePr
+ec 4 e1 ++ usePrec 4 e2 ++ usePrec 4 e3 ++ usePrec 4 e4 ++ usePrec 4 e5) ;[] 
+ []
+
+
+Overfull \hbox (8.50397pt too wide) in paragraph at lines 267--267
+[]  \TU/DejaVuSansMono(0)/m/n/10.95 Pair e1 e2 = mkPrec 5 ("(" ++ usePrec 0 e1 
+++ "," ++ usePrec 0 e2 ++ ")") ;[] 
+ []
+
+[72] [73] [74] (./latex/compare.tex
+\openout4 = `roadmap.ptb'.
+
+[75]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.434     ^
+            ybar : idFib = ( y , refl )
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.436 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+)) [76]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
 (./roadmap.aux (./intro.aux) (./perspectives.aux) (./preliminaries.aux) (./prev
 iouswork.aux) (./gfintro.aux) (./grammar.aux) (./natproof.aux) (./latex/equalit
-y.aux) (./hottgrammars.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 236.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
+y.aux) (./hottgrammars.aux) (./appendix.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 249.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: 034F42FDD7A390AF7CD3AB6CE1E07AA7;2629.
+(rerunfilecheck)             Checksum: 55CEEC4AF63F59E3C7507196D48FBF5E;3211.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
@@ -2274,12 +2322,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33704 strings out of 479819
- 646197 string characters out of 5895846
+ 33739 strings out of 479819
+ 646588 string characters out of 5895846
  1177651 words of memory out of 5000000
- 50054 multiletter control sequences out of 15000+600000
+ 50080 multiletter control sequences out of 15000+600000
  538521 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,907b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (71 pages, 1777916 bytes).
+Output written on roadmap.xdv (81 pages, 2011968 bytes).

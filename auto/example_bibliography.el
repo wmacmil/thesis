@@ -2,6 +2,7 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "rantaZ"
     "bezem2017univalence"
     "cohen:hal-01378906"
     "cubicalAgda"

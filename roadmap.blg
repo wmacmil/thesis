@@ -15,8 +15,9 @@ Illegal, another \bibstyle command---line 33 of file roadmap.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
+A level-1 auxiliary file: appendix.aux
 Database file #1: example_bibliography.bib
-I was expecting an "="---line 30 of file example_bibliography.bib
+I was expecting an "="---line 42 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
@@ -30,45 +31,45 @@ Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 58 entries,
+You've used 59 entries,
             2229 wiz_defined-function locations,
-            855 strings with 12855 characters,
-and the built_in function-call counts, 21762 in all, are:
-= -- 2170
-> -- 704
-< -- 64
-+ -- 250
-- -- 219
-* -- 1600
-:= -- 3676
-add.period$ -- 158
-call.type$ -- 58
-change.case$ -- 380
-chr.to.int$ -- 57
-cite$ -- 68
-duplicate$ -- 1004
-empty$ -- 1623
-format.name$ -- 296
-if$ -- 4447
+            860 strings with 13004 characters,
+and the built_in function-call counts, 22037 in all, are:
+= -- 2195
+> -- 711
+< -- 65
++ -- 252
+- -- 221
+* -- 1617
+:= -- 3727
+add.period$ -- 161
+call.type$ -- 59
+change.case$ -- 385
+chr.to.int$ -- 58
+cite$ -- 69
+duplicate$ -- 1018
+empty$ -- 1646
+format.name$ -- 299
+if$ -- 4501
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 59
-newline$ -- 273
-num.names$ -- 186
-pop$ -- 411
+missing$ -- 61
+newline$ -- 278
+num.names$ -- 189
+pop$ -- 419
 preamble$ -- 1
-purify$ -- 392
+purify$ -- 398
 quote$ -- 0
-skip$ -- 794
+skip$ -- 804
 stack$ -- 0
-substring$ -- 1409
-swap$ -- 210
+substring$ -- 1421
+swap$ -- 211
 text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 322
+type$ -- 326
 warning$ -- 10
-while$ -- 179
+while$ -- 181
 width$ -- 0
-write$ -- 721
+write$ -- 733
 (There were 2 error messages)

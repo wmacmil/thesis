@@ -92,10 +92,22 @@
 \let\type\UU
 
 \newcommand{\equalH}[2]{#1 = #2}
-\newcommand{\comprehensionH}[3]{\{ #1 : #2 \mid #3 \}}
+\newcommand{\typingH}[2]{#1 : #2}
+\newcommand{\lambdaH}[3]{\lambda_{#1 : #2} #3}
 \newcommand{\arrowH}[2]{#1 \rightarrow #2}
-\newcommand{\appH}[2]{#1 #2}
 \newcommand{\equivalenceH}[2]{#1 \simeq #2}
+\newcommand{\comprehensionH}[3]{\{ #1 : #2 \mid #3 \}}
+\newcommand{\idMapH}[1]{1_{ #1 }}
+\newcommand{\fiberH}[2]{\{ #1 \}_{ #2 }}
+\newcommand{\appH}[2]{#1 #2}
+\newcommand{\defineH}[2]{#1 := #2}
+\newcommand{\pairH}[2]{( #1 , #2 )}
+\newcommand{\reflexivityH}[2]{r_{ #1 } #2}
+\newcommand{\barH}[1]{\bar{ #1 }}
+\newcommand{\idPropH}[2]{( #1 = #2 )}
+\newcommand{\equivalenceMapH}[2]{E_ { #1 , #2 }}
+
+
 
 % \DeclareMathSymbol{\mlq}{\mathord}{operators}{``}
 % \DeclareMathSymbol{\mrq}{\mathord}{operators}{`'}
@@ -191,10 +203,11 @@ Acknowledgements, etc.
 \AgdaKeyword{where}\<%
 \end{code}
 
-1111
+17
 TODO
-  Add section numbers to sections
   Fix figure titles
+  References
+  Citations
 
 \include{intro}
 
@@ -222,7 +235,6 @@ TODO
 
 % \include{conclusion}
 
-% \include{appendix}
 
 \newpage
 
@@ -231,7 +243,8 @@ TODO
 \bibliography{example_bibliography}
 
 \newpage
-\section{Appendices}
+
+\include{appendix}
 
 \end{document}
 

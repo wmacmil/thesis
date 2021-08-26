@@ -321,6 +321,8 @@ INPUT latex/equality.aux
 INPUT latex/equality.aux
 INPUT hottgrammars.aux
 INPUT hottgrammars.aux
+INPUT appendix.aux
+INPUT appendix.aux
 OUTPUT roadmap.aux
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -449,6 +451,13 @@ OUTPUT roadmap.ptb
 INPUT roadmap.ptb
 INPUT roadmap.bbl
 INPUT roadmap.bbl
+OUTPUT appendix.aux
+INPUT appendix.tex
+INPUT appendix.tex
+INPUT latex/compare.tex
+INPUT latex/compare.tex
+OUTPUT roadmap.ptb
+INPUT roadmap.ptb
 INPUT roadmap.aux
 INPUT intro.aux
 INPUT intro.aux
@@ -468,5 +477,7 @@ INPUT latex/equality.aux
 INPUT latex/equality.aux
 INPUT hottgrammars.aux
 INPUT hottgrammars.aux
+INPUT appendix.aux
+INPUT appendix.aux
 INPUT ./roadmap.out
 INPUT ./roadmap.out
