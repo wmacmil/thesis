@@ -83,6 +83,11 @@ Czajka, {\L}. \& Kaliszyk, C. (2018).
 \newblock Hammer for coq: Automation for dependent type theory.
 \newblock {\em Journal of automated reasoning}, 61(1), 423--453.
 
+\bibitem[de~Bruijn, 1983]{deBruijn1983}
+de~Bruijn, N.~G. (1983).
+\newblock {\em AUTOMATH, a Language for Mathematics}, (pp.\ 159--200).
+\newblock Springer Berlin Heidelberg: Berlin, Heidelberg.
+
 \bibitem[Escardó, 2020]{escardó2020introduction}
 Escardó, M.~H. (2020).
 \newblock Introduction to univalent foundations of mathematics with agda.
@@ -320,5 +325,11 @@ Wang, Q., Brown, C., Kaliszyk, C., \& Urban, J. (2020).
 \bibitem[Wenzel et~al., 2004]{wenzel2004isabelle}
 Wenzel, M. et~al. (2004).
 \newblock The isabelle/isar reference manual.
+
+\bibitem[Zipperer, 2016]{zipperer2016formalization}
+Zipperer, A. (2016).
+\newblock {\em A formalization of elementary group theory in the proof
+  assistant Lean}.
+\newblock PhD thesis, Master’s thesis, Carnegie Mellon University.
 
 \end{thebibliography}

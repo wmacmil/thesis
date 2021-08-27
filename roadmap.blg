@@ -17,13 +17,14 @@ Illegal, another \bibstyle command---line 33 of file roadmap.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: appendix.aux
 Database file #1: example_bibliography.bib
-I was expecting an "="---line 42 of file example_bibliography.bib
+I was expecting an "="---line 66 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
 Warning--empty booktitle in Bar2016GlobularAO
 Warning--can't use both author and editor fields in Bove2009
 Warning--empty booktitle in coqPat
+Warning--can't use both author and editor fields in deBruijn1983
 Warning--empty booktitle in harperTrinity
 Warning--empty booktitle in 2002TheWO
 Warning--empty journal in ljunglof2004expressivity
@@ -31,45 +32,45 @@ Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 59 entries,
+You've used 61 entries,
             2229 wiz_defined-function locations,
-            860 strings with 13004 characters,
-and the built_in function-call counts, 22037 in all, are:
-= -- 2195
-> -- 711
-< -- 65
-+ -- 252
-- -- 221
-* -- 1617
-:= -- 3727
-add.period$ -- 161
-call.type$ -- 59
-change.case$ -- 385
-chr.to.int$ -- 58
-cite$ -- 69
-duplicate$ -- 1018
-empty$ -- 1646
-format.name$ -- 299
-if$ -- 4501
+            872 strings with 13369 characters,
+and the built_in function-call counts, 22777 in all, are:
+= -- 2272
+> -- 725
+< -- 68
++ -- 258
+- -- 225
+* -- 1668
+:= -- 3849
+add.period$ -- 167
+call.type$ -- 61
+change.case$ -- 395
+chr.to.int$ -- 60
+cite$ -- 72
+duplicate$ -- 1054
+empty$ -- 1702
+format.name$ -- 305
+if$ -- 4654
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 61
-newline$ -- 278
-num.names$ -- 189
-pop$ -- 419
+missing$ -- 63
+newline$ -- 288
+num.names$ -- 195
+pop$ -- 431
 preamble$ -- 1
-purify$ -- 398
+purify$ -- 410
 quote$ -- 0
-skip$ -- 804
+skip$ -- 835
 stack$ -- 0
-substring$ -- 1421
-swap$ -- 211
-text.length$ -- 19
+substring$ -- 1479
+swap$ -- 223
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 326
-warning$ -- 10
-while$ -- 181
+type$ -- 336
+warning$ -- 11
+while$ -- 188
 width$ -- 0
-write$ -- 733
+write$ -- 760
 (There were 2 error messages)

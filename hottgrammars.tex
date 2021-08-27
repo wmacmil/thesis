@@ -361,19 +361,132 @@ type theory generally. The ease of extending cubicalTT to cover more text,
 extending the concrete syntax each time a new grammatical ``feature" is discovered.
 
 We have taken the text parsed by Ranta's HoTT grammar and implemented both an
-Agda representation which typechecks as well as the cubicalTT syntax in the
+Agda representation which type-checks as well as the cubicalTT syntax in the
 appendix \ref{comparison}.
 
 \subsubsection{Ideas for resolution}
 
-We now propose a resolution of this problem 
+Based off these comparisons, we now propose a road-map for future investigations 
+of how to build a ``master grammar", which should ideally seek to do at least the following:
 
+\begin{itemize}
+\item Allow for expressive natural language - maximize \emph{semantic adequacy}
+\item Enable parsing of a real programming language - ensure \emph{syntactic completeness}
+\item Allow GF developers to expand the grammar in a compositional, modular, safe, reliable,
+  and methodologically precise way
+\item Enable long-term integration of the grammars into practical tools for
+  mathematicians and computer scientists
+\end{itemize}
 
+We therefore believe there is a set of principles one can follow to achieve
+these goals : namely, start with a small, syntactically precise core, and extend
+it based off the needs of either the programmer or the mathematician.
 
+Let's suppose that our hypothetical ``core" should consist of a desugared type
+theory with $\Pi$, $\Sigma$, and Equality types, with their respective
+introduction and elimination forms, inductive definitions and a means of case
+analysis, and declarations for building types and terms. We could then
+\emph{extend} this with telescopes for syntactic sugar, where and let bindings
+to allow for local definitions, and modules to allow for the basic needs of a
+suitable programming language - and we'd essentially have the cubicalTT grammar.
+One thing to be emphasized is that the extension should already map to the core.
+As was noted when we discussed Haskell transformations for logic \ref{cade}, the
+mapping $\llbracket - \rrbracket : Extended \to Core$ can follow relatively
+conventional techniques.
 
-% -- Proof using isPropIsContr. This is slow and the direct proof below is better
-% -- Direct proof that computes quite ok (can be optimized further if
-% -- necessary, see:
-% q-- HTTPSqqq://github.com/mortberg/cubicaltt/blob/pi4s3_dimclosures/examples/brunerie2.ctt#L562
+This can then be extended again to include more nuance that a particular Agda programmer
+might desire : unicode support, universes, Agda-style pattern matching, cubical
+primitives (although this \emph{fundamentally} changes the underlying type
+theory), higher inductive types, and many other possible add-ons. While
+important to capture more and more, it should be noted that creating a GF
+grammar capable of parsing all of Agda would be overkill, and working with
+Agda's existing parser would probably be preferred at some point if for no other
+reason than that the myriad of features would create a grammar that would no
+longer presumable be feasible for natural language generation.
+
+Once the grammar for the logical framework has been established, the grammar
+writer would then have the lexical data, specific to the domain being modeled -
+our two case studies previous being natural numbers propositions and
+notions from homotopy type theory.  This presents the challenge of how ``deep"
+does one wish to embed the domain into GF. For our cubicalTT parser, we chose
+the shallowest possible embedding, whereby every term was just a \emph{variable}
+with no semantic distinction. In the grammar for QA, we chose the deepest
+possible embedding, with \term{Nat} being a distinguished category, not just
+a function. While this is convenient for the example, it was only so because
+we could coerce the builtin number to it, i.e. \codword{Int -> Nat}. Unless one
+intends to use GF's dependent types, this deep embedding is likely unnecessary,
+and in some sense creates to much semantic space in the grammar.
+
+The ``in-between" depth is to include \term{Nat} as an expression, whereby the
+zero, successor, and induction principle, included as functions, retain their
+arities from the actual programming language, but don't actually specify what
+types of expressions work for them - this work is delegated to the type-checker.
+While this has the benefit of disallowing the ``application hell" we saw in our
+unreadable natural language proof, it also requires what we'll passively call
+``arity inference", and therefore some components of the type-checker would be
+needed to scale this depth of embedding functions into Haskell. Additionally,
+the use of the phrase ``successor function" to refer to $\eta$-expanded form in
+contrast to ``the successor of" reveals the deep difficulties of how to delegate
+unique linguistic forms to all the possible arity assignments, something that a
+programming language can infer automatically based of a term's use.
+
+Once the grammar has been extended \emph{enough} such that it satisfies the
+programmers needs, the even more difficult aspect of extending it to satisfying
+the mathematician would come into play. One could have categories for things
+like sets and propositions, as Ranta does in HoTT. These extensions of the
+$\Pi,\Sigma,\equiv$ core, if given a Haskell embedding, could be made such that
+any proposition in the extended langauge would be mapped to its type in the core
+language. Therefore, in Ranta's code, the existential propositions and set
+comprehension syntax could be evaluated, via Haskell, to the $\Sigma$ type in
+the core grammar, thereby allowing for at least a hypothetical translation from
+semantically sound utterances to syntactically complete ones. While this sounds
+good, we offer a conterexample, namely the definition of a left coset in group
+theory, $gH = \{gh {:}h \in H\}\; \forall g \in G$ , because $h \in H$ is a
+judgment and not a type. Indeed, quotients, subsets, and subgroups in type theory must be
+treated differently than their set-theoretic counterparts whereby the
+sets must be given encodings which break the propositions as sets mentality that
+we're used to \cite{zipperer2016formalization}. Additionally, in the reverse
+direction, taking a $\Sigma$ type and generating a natural language utterance
+which may be of the type, set, or one the many propositional flavors would
+require some pragmatic knowledge that our system is not capable of handling.
+
+Our proposal is to build a core, \emph{syntactically complete} grammar similar
+to cubicalTT and extend it to a \emph{semantically adequate} which follows
+Ranta's HoTT grammar methodology. It should be based of the condition that they
+are coherent in a sense that the extended grammar can be compositionally
+evaluated to the core, via a Haskell function, which obviously borrows the
+approach taken from the CADE logic grammar. This proposal is based off extensive
+trial and error with these respective grammars, witnessing their respective
+strengths and deficiencies, and weaving these strengths as cogently as is
+possible.
+
+\paragraph{Typechecker's Role}
+
+One of the difficult things in dealing with all of this is coming to terms with
+the strengths and weaknesses of a purely, or at least mostly syntactical
+approach to translation from machine to natural language. One of the central
+pieces of a programming language missing from this approach is the role of the
+typechecker. In dependently typed languages like Agda, where the type-checker
+evaluates programs in types to a canonical form, this is especially acute - for
+the typechecker tells you when a proof is valid. For the mathematician, a proof
+may be valid even if it doesn't type-check, because they can more or less
+account for many details which ensure that an argument is articulated honestly
+and truthfully - and while there may be small errors, presumptions, or holes in
+a syntactic proof, this ultimately doesn't detract from the semantic ideas being
+portrayed and perceived.
+
+The coherence of a semantically adquate and syntactically complete object
+via some intermediary form like an AST, sadly doesn't seem feasible, without
+some kind of verification procedure in between. We imagine that a semantically
+adequate proof, may generate through this idealized system an Agda proof with
+holes, for instance, which could either be filled in with tactics or with help
+through Agda's interactive proof development system.
+
+We know that despite its intractability, this should be a long term goal for
+whoever continues this project. Even if there's not an equivalence between
+syntactically complete and semantically adequate objects, it is feasible that
+one can come up with ways of approximating one inside the other's domain, and we
+believe the power of dependent type theories may give us one way of achieving
+this approximation.
 
 

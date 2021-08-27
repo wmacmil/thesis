@@ -2,7 +2,9 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "zipperer2016formalization"
     "rantaZ"
+    "deBruijn1983"
     "bezem2017univalence"
     "cohen:hal-01378906"
     "cubicalAgda"
