@@ -2,6 +2,9 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "buzzard2020will"
+    "ml1984"
+    "angelovSS"
     "zipperer2016formalization"
     "rantaZ"
     "deBruijn1983"
@@ -40,7 +43,6 @@
     "ulf"
     "stump"
     "Bove2009"
-    "ml1984"
     "kamp2011discourse"
     "rantaLog"
     "mlMeanings"

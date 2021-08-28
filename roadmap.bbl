@@ -4,6 +4,11 @@
 Abel, A. (2020).
 \newblock Personal correspondance.
 
+\bibitem[Angelov, 2021]{angelovSS}
+Angelov, K. (2021).
+\newblock Meet the grammarian: Why or do we need to write application grammars?
+\newblock GF Summer School.
+
 \bibitem[Avigad, 2015]{avigad2015mathematics}
 Avigad, J. (2015).
 \newblock Mathematics and language.
@@ -39,6 +44,10 @@ Bove, A., Dybjer, P., \& Norell, U. (2009).
 \bibitem[Brunerie, 2016]{brunerie2016homotopy}
 Brunerie, G. (2016).
 \newblock On the homotopy groups of spheres in homotopy type theory.
+
+\bibitem[Buzzard, 2020]{buzzard2020will}
+Buzzard, K. (2020).
+\newblock When will computers prove theorems?
 
 \bibitem[Chomsky, 1995]{Chomsky1995}
 Chomsky, N. (1995).
@@ -138,13 +147,6 @@ Hallgren, T. \& Ranta, A. (2000).
 Harper, R. (2011).
 \newblock The holy trinity.
 
-\bibitem[Howard, 1986]{ml1984}
-Howard, W.~A. (1986).
-\newblock Per martin-löf. intuitionistic type theory. (notes by giovanni
-  sambin of a series of lectures given in padua, june 1980.) studies in proof
-  theory. bibliopolis, naples1984, ix 91 pp.
-\newblock {\em Journal of Symbolic Logic}, 51(4), 1075–1076.
-
 \bibitem[Jackson, 2002]{2002TheWO}
 Jackson, A. (2002).
 \newblock The world of blind mathematicians.
@@ -181,6 +183,12 @@ Luo, Z. (2012).
 Macmillan, W. (2020).
 \newblock {\em {GF-Typechecker}}.
 \newblock \url{https://github.com/wmacmil/GF_Typechecker}.
+
+\bibitem[Martin{-}L{\"{o}}f, 1984]{ml1984}
+Martin{-}L{\"{o}}f, P. (1984).
+\newblock {\em Intuitionistic type theory}, volume~1 of {\em Studies in proof
+  theory}.
+\newblock Bibliopolis.
 
 \bibitem[Martin{-}L\"of, 1996]{mlMeanings}
 Martin{-}L\"of, P. (1996).
@@ -224,8 +232,13 @@ Pit-Claudel, C. (2020).
 Pédrot, P.-M. (2021).
 \newblock Ltac2 : Tactical warfare.
 
-\bibitem[Ranta, 1994]{ranta93}
-Ranta, A. (1994).
+\bibitem[Ranta, 1994a]{ranta1994type}
+Ranta, A. (1994a).
+\newblock {\em Type-theoretical Grammar}.
+\newblock Indices (Claredon). Clarendon Press.
+
+\bibitem[Ranta, 1994b]{ranta93}
+Ranta, A. (1994b).
 \newblock Type theory and the informal language of mathematics.
 \newblock In H. Barendregt \& T. Nipkow (Eds.), {\em Types for Proofs and
   Programs}  (pp.\ 352--365).  Berlin, Heidelberg: Springer Berlin Heidelberg.
@@ -271,11 +284,6 @@ Ranta, A. (2020).
   to the paper “at least one black sheep: Pragmatics and mathematical
   language” by luca san mauro, marco ruffino and giorgio venturi.
 \newblock {\em Journal of Pragmatics}, 160, 120--122.
-
-\bibitem[Ranta \& Ranta, 1994]{ranta1994type}
-Ranta, A. \& Ranta, D. (1994).
-\newblock {\em Type-theoretical Grammar}.
-\newblock Indices (Claredon). Clarendon Press.
 
 \bibitem[Rudnicki, 1992]{rudnicki1992overview}
 Rudnicki, P. (1992).

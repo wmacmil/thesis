@@ -38,9 +38,11 @@
 \contentsline {subsection}{\numberline {7.5}Comparing the Grammars}{62}{subsection.7.5}%
 \contentsline {subsubsection}{\numberline {7.5.1}Ideas for resolution}{64}{subsubsection.7.5.1}%
 \contentsline {paragraph}{Typechecker's Role}{66}{section*.4}%
-\contentsline {section}{References}{68}{section*.4}%
-\contentsline {section}{\numberline {8}Appendix}{72}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Twin Primes Conjecture Revisited}{72}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}cubicalTT}{72}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Hott and cubicalTT Grammars}{78}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}HoTT Agda Corpus}{83}{subsection.8.4}%
+\contentsline {section}{\numberline {8}Conclusion}{68}{section.8}%
+\contentsline {subsection}{\numberline {8.1}The Mathematical Library of Babel}{69}{subsection.8.1}%
+\contentsline {section}{References}{71}{subsection.8.1}%
+\contentsline {section}{\numberline {9}Appendix}{75}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Twin Primes Conjecture Revisited}{75}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}cubicalTT}{75}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Hott and cubicalTT Grammars}{81}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}HoTT Agda Corpus}{86}{subsection.9.4}%
