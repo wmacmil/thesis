@@ -163,7 +163,7 @@ Supervisor & Aarne Ranta\\
 Examiner 1 & Staffan Larsson\\
 Examiner 2 & Stergios Chatzikyriakidis \\
 Report number & (number will be provided by the administrators) \\
-Keywords & Natural Language Generation, Parsing, ... 
+Keywords & The Language of Mathematics, Type Theory, Grammatical Framework
 \end{tabular}
 \endgroup
 
@@ -177,7 +177,51 @@ Keywords & Natural Language Generation, Parsing, ...
 \singlespacing
 \section*{Abstract}
 
-Brief summary of research question, background, method, results\ldots
+% Brief summary of research question, background, method, results\ldots
+
+The notion of \emph{formal proof} is a modern development, beginning with
+Frege's foundational studies in modern mathematical logic. Formal proofs have
+manifested more recently as verifiable computer programs written in programming
+languages like Agda, via the propositions-as-types interpretation of logical
+formulas. The notion of mathematical proof more generally, developed at least as
+far back as Euclid, may be viewed as a natural language argument which provides
+evidence for a proposition. Comparing notions of formal and natural language
+mathematics is of both significant practical and theoretical concern, and one means
+of comparison is seeking systematic ways of \emph{translating} between them.
+
+This thesis gives one possible mechanism of translation between mathematical
+vernacular and code via Grammatical Framework (GF), as a GF grammar can parse
+and linearize. It can therefore translate between natural and programming
+language utterances via a shared abstract syntax tree (AST). While grammars for
+programming languages are generally meant to be compact so-as to produce unique
+parses, natural language grammars must account for both a natural language's
+ambiguity and expressiveness - the fact that there are uncountable ways of
+saying ``the same thing" makes it so interesting. Rectifying these opposing
+interests in a single grammar is therefore incredibly challenging.
+
+I introduce dual notions of understanding and analyzing mathematical language.
+\emph{Syntactic completeness} is a criteria for judging constructions which
+contain no errors and entirely encode an argument's subtlest details.
+\emph{Semantically adequate} proofs and constructions are those which validate a
+claim to a fluent mathematician, but may require some implicit knowledge,
+explicitly defer arguments to the reader, or even contain errors. The grammars
+written for this thesis and prior to it are therefore able to compared on this
+spectrum. We demonstrate a syntactically complete grammar which can parse real
+Agda proofs but generates poor natural language, and compare it to a
+semantically adequate grammar which parses actual mathematics text, but
+generates ill-formed types and programs. A Haskell embedding of these grammars
+with intermediary transformations allows for at least a partial resolution of
+these competing interests.
+
+To further elaborate this discord between syntactic completeness and semantic
+adequacy, we give parallel examples of mathematics text and Agda code,
+with an Agda formalization of parts of the Homotopy Type Theory (HoTT) book
+given to emphasize the needed for parallel corpus of programming and natural
+language data for future translation endeavors. Additionally, the differences
+between type theoretic, set theoretic, and logical language are explored
+throughout this work, because foundational attitudes create inherent frictions
+in the translation process. The insights gleaned from this work suggest new ways of
+analyzing and understanding the difference between formal and informal proofs.
 
 \thispagestyle{empty}
 

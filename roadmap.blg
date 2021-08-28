@@ -22,6 +22,7 @@ I was expecting an "="---line 93 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "borges"
 Warning--empty booktitle in Bar2016GlobularAO
 Warning--can't use both author and editor fields in Bove2009
 Warning--empty booktitle in coqPat
@@ -35,7 +36,7 @@ Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-20
 Warning--empty publisher in wadler
 You've used 63 entries,
             2229 wiz_defined-function locations,
-            879 strings with 13393 characters,
+            880 strings with 13399 characters,
 and the built_in function-call counts, 23120 in all, are:
 = -- 2305
 > -- 733
