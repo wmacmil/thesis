@@ -179,19 +179,19 @@
 \end{code}
 This actually \emph{was} the Cubical Agda implementation of a group homomorphism
 sometime around the end of 2020. We see that, while a mathematician might be
-able to infer the meaning of some of the syntax, the use of levels, the
-distinguising bewteen isGroupHom and GroupHom itself, and many other details
+able to infer the meaning of some of the syntax, the use of levels,
+distinguising between isGroupHom and GroupHom itself, and many other details
 might obscure what's going on.
 
 We finally provide the current (May 2021) definition via Cubical Agda. One may
-witness a significant number of differences from the previous version :
-concrete syntax differenes via changes in camel case, new uses of Group vs
-GroupStr, as well as, most significantly, the identity and inverse preservation
-data not appearing as corollaries, but part of the definition. Additionally, we
-had to refactor the commented lines to those shown below to be compatible with
-our outdated version of cubical.  These changes would not just be interesting
-to look at from the author of the libraries's perspective, but also
-syntactically.
+witness a significant number of differences from the previous version : concrete
+syntax differences via changes in camel case, new uses of Group vs GroupStr, as
+well as, most significantly, the identity and inverse preservation data not
+appearing as corollaries, but part of the definition. Additionally, we had to
+refactor the commented lines to those shown below to be compatible with our
+outdated version of cubical. These changes reflect interesting syntactic
+changes.
+
 \begin{code}%
 %
 \>[2]\AgdaKeyword{record}\AgdaSpace{}%

@@ -1,6 +1,93 @@
 \section{Appendix} \label{appendix}
 
 
+
+\subsection{What is a Homomorphism?}
+
+To get a feel for the syntactic paradigm we explore in this thesis, let us look at a basic mathematical
+example: that of a group homomorphism as expressed in by a variety of somewhat
+randomly sampled authors.  
+
+% Wikipedia Defn:
+
+\begin{definition}
+In mathematics, given two groups, $(G, \ast)$ and $(H, \cdot)$, a group homomorphism from $(G, \ast)$ to $(H, \cdot)$ is a function $h : G \to H$ such that for all $u$ and $v$ in $G$ it holds that
+  $$h(u \ast v) = h ( u ) \cdot h ( v )$$ 
+\end{definition}
+
+% http://math.mit.edu/~jwellens/Group%20Theory%20Forum.pdf
+
+\begin{definition}
+Let $G = (G,\cdot)$ and $G' = (G',\ast)$ be groups, and let $\phi : G \to G'$ be a map between them. We call $\phi$ a \textbf{homomorphism} if for every pair of elements $g, h \in G$, we have 
+% \begin{center}
+  $$\phi(g \ast h) = \phi ( g ) \cdot \phi ( h )$$ 
+% \end{center}
+\end{definition}
+
+% http://www.maths.gla.ac.uk/~mwemyss/teaching/3alg1-7.pdf
+
+\begin{definition}\label{def:def3}
+Let $G$, $H$, be groups.  A map $\phi : G \to H$ is called a \emph{group homomorphism} if
+  $$\phi(xy) = \phi ( x ) \phi ( y )\ for\ all\ x, y \in G$$ 
+(Note that $xy$ on the left is formed using the group operation in $G$, whilst the product $\phi ( x ) \phi ( y )$ is formed using the group operation $H$.)
+\end{definition}
+
+% NLab:
+
+\begin{definition}\label{def:def4}
+Classically, a group is a monoid in which every element has an inverse (necessarily unique).
+\end{definition}
+
+We inquire the reader to pay attention to nuance and difference in presentation
+that is normally ignored or taken for granted by the fluent mathematician, ask
+which definitions feel better, and how the reader herself might present the
+definition differently.
+
+If one wants to distill the meaning of each of these presentations, there is a
+significant amount of subliminal interpretation happening very much analogous to
+our innate linguistic usage. The inverse and identity are discarded, even though
+they are necessary data when defining a group. The order of presenting the
+information is inconsistent, as well as the choice to use symbolic or natural
+language information. In Definition~\ref{def:def3}, the group operation is used
+implicitly, and its clarification a side remark. Details aside, these all mean
+the same thing - don't they?
+
+
+We now show yet another definition of a group homomorphism formalized in the
+Agda programming language:
+
+\input{latex/monoid}
+
+While the last two definitions be somewhat compressible to a programmer
+or mathematician not exposed to Agda, it is certainly comprehensible to a
+computer : that is, the colors indicate it type-checks on a computer where Cubical Agda is installed.
+While GF is designed for multilingual syntactic transformations and is targeted
+for natural language translation, its underlying theory is largely based on
+ideas from the compiler communities. A cousin of the BNF Converter (BNFC), GF is
+fully capable of parsing programming languages like Agda! While the Agda
+definitions are present another concrete presentation of a group
+homomorphism, they are distinct in that they have inherent semantic content.
+
+While this example may not exemplify the power of Agda's type-checker, it is of
+considerable interest to many. The type-checker has merely assured us that
+\term{GroupHom(')} are well-formed types - not that we have a canonical representation
+of a group homomorphism.
+% Aarne says cut
+
+We note that the natural
+language definitions of monoid differ in form, but also in pragmatic content.
+How one expresses formalities in natural language is incredibly diverse, and
+Definition~\ref{def:def4} as compared with the prior homomorphism definitions is
+particularly poignant in demonstrating this. These differ very much in nature to
+the Agda definitions - especially pragmatically.
+The differences between the Cubical
+Agda definitions may be loosely called pragmatic, in the sense that the choice
+of definitions may have downstream effects on readability, maintainability, modularity, and other
+considerations when trying to write good code, in a burgeoning area known as proof engineering.
+
+% TODO section name
+
+
 \input{latex/twinsigma}
 
 \subsection{cubicalTT} \label{cubicaltt}

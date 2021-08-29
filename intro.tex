@@ -7,7 +7,7 @@ mathematicians and computer scientists.  From one vantage point, the role of
 syntax in mathematics may be regarded as a 2nd order concern, a topic for
 discussion during a Fika, an artifact of ad hoc development by the working
 mathematician whose real goals are producing genuine mathematical knowledge.
-For the programmers and computer scientists, syntax may be regarding as a
+For the programmers and computer scientists, syntax may be regarded as a
 matter of taste, with friendly debates recurring regarding the use of
 semicolons, brackets, and white space.  Yet, when viewed through the lens of
 the propositions-as-types paradigm, these discussions intersect in new and
@@ -15,7 +15,6 @@ interesting ways.  When one introduces a third paradigm through which to
 analyze the use of syntax in mathematics and programming, namely linguistics, I
 propose what some may regard as superficial detail, indeed becomes a central
 paradigm raising many interesting and important questions. 
-
 
 \subsection{Beyond Computational Trinitarianism}
 
@@ -35,8 +34,7 @@ trinity, shown in \autoref{fig:M1}, are related via both \emph{formal} and \emph
 methods. The propositions as types paradigm, for example, is a heuristic. Yet
 it also offers many examples of successful ideas translating between the domains.
 Alternatively, the interpretation of a Type Theory(TT) into a category theory is
-incredibly \emph{formal}.
-
+completely \emph{formal}.
 
 \begin{figure}[H]
 \centering
@@ -52,12 +50,12 @@ Math \arrow[rrruuuu, "Embedded\ in\ FOL", bend left] \arrow[rrrrrr, "ITP"'] &  &
 
 We hope this thesis will help clarify another possible dimension in this
 diagram, that of Linguistics, and call it the ``holy tetrahedron". The different
-vertices also resemble
-religions in their own right, with communities convinced that they have a
-canonical perspective on foundations and the essence of mathematics. Questioning the holy trinity is an act of a heresy, and
-it is the goal of this thesis to be a bit heretical by including a much less well understood 
-perspective which provides additional challenges and
-insights into the trinity.
+intellectual communities represented by the three subjects of the trinity also
+resemble religions in their own right, convinced that they have a canonical
+perspective on foundations and the essence of mathematics. Questioning the holy
+trinity is an act of a heresy, and it is the goal of this thesis to be heretical
+by including a much less well understood perspective which provides additional
+challenges and insights into the trinity.
 
 \begin{figure}[H]
 \centering
@@ -97,99 +95,38 @@ Math \arrow[rrruu, "Language\ Of\ Mathematics"] &  &  &
 \end{figure}
 
 In this work, we will see that there are multiple GF grammars which model some
-subset of each member of the trinity. Constructing these grammars, and asking
-how they can be used in applications for mathematicians, logicians, and computer
-scientists is an important practical and philosophical question. Therefore we
-hope this attempt at giving the language of mathematics, in particular how
-propositions and proofs are expressed and thought about in that language, a
-stronger foundation.
+subset of each member of the trinity. Constructing these grammars, and it is
+important to ask how they can be used in applications for mathematicians,
+logicians, and computer scientists. Therefore we hope this attempt at giving the
+language of mathematics, in particular how propositions and proofs are expressed
+and thought about in that language, a stronger foundation.
 
-\subsection{What is a Homomorophism?}
+\subsection{The Goal before Us }
+\begin{displayquote}
+Treating propositions as types is definitely not in the way of thinking of
+ordinary mathematician, yet it is very close to what he actually does. 
+\emph{N. G. de Bruijn} \cite{deBruijn1983}.
+\end{displayquote}
 
-To get a feel for the syntactic paradigm we explore in this thesis, let us look at a basic mathematical
-example: that of a group homomorphism as expressed in by a variety of somewhat
-randomly sampled authors.  
+This thesis seeks to provide an abstract framework to determine whether two
+lingusitically nuanced presenations mean the same thing via their syntactic
+transformations. Obviously these meanings are not resolvable in any kind of
+absolute sense, but at least from a translational sense. These syntactic
+transformations come in two flavors : parsing and linearization, and are
+natively handled by a Logical Framework (LF) for specifying grammars :
+Grammatical Framework (GF).
 
-% Wikipedia Defn:
-
-\begin{definition}
-In mathematics, given two groups, $(G, \ast)$ and $(H, \cdot)$, a group homomorphism from $(G, \ast)$ to $(H, \cdot)$ is a function $h : G \to H$ such that for all $u$ and $v$ in $G$ it holds that
-  $$h(u \ast v) = h ( u ) \cdot h ( v )$$ 
-\end{definition}
-
-% http://math.mit.edu/~jwellens/Group%20Theory%20Forum.pdf
-
-\begin{definition}
-Let $G = (G,\cdot)$ and $G' = (G',\ast)$ be groups, and let $\phi : G \to G'$ be a map between them. We call $\phi$ a \textbf{homomorphism} if for every pair of elements $g, h \in G$, we have 
-% \begin{center}
-  $$\phi(g \ast h) = \phi ( g ) \cdot \phi ( h )$$ 
-% \end{center}
-\end{definition}
-
-% http://www.maths.gla.ac.uk/~mwemyss/teaching/3alg1-7.pdf
-
-\begin{definition}\label{def:def3}
-Let $G$, $H$, be groups.  A map $\phi : G \to H$ is called a \emph{group homomorphism} if
-  $$\phi(xy) = \phi ( x ) \phi ( y )$ for all $x, y \in G$$ 
-(Note that $xy$ on the left is formed using the group operation in $G$, whilst the product $\phi ( x ) \phi ( y )$ is formed using the group operation $H$.)
-\end{definition}
-
-% NLab:
-
-\begin{definition}\label{def:def4}
-Classically, a group is a monoid in which every element has an inverse (necessarily unique).
-\end{definition}
-
-We inquire the reader to pay attention to nuance and difference in presentation
-that is normally ignored or taken for granted by the fluent mathematician, ask
-which definitions feel better, and how the reader herself might present the
-definition differently.
-
-If one want to distill the meaning of each of these presentations, there is a
-significant amount of subliminal interpretation happening very much analogous to
-our innate lingusitic ussage. The inverse and identity are discarded, even
-though they are necessary data when defning a group. The order of presentation
-of information is inconsistent, as well as the choice to use symbolic or natural
-language information. In Definition~\ref{def:def3}, the group operation is used
-implicitly, and its clarification a side remark.
-
-Details aside, these all mean the same thing - don't they?  This thesis seeks to provide an
-abstract framework to determine whether two lingusitically nuanced presenations
-mean the same thing via their syntactic transformations. Obviously these
-meanings  are not resolvable in any kind of absolute sense, but at least from a
-translational sense. These syntactic transformations come in two flavors : parsing and
-linearization, and are natively handled by a Logical Framework (LF) for
-specifying grammars : Grammatical Framework (GF).
-
-We now show yet another definition of a group homomorphism formalized in the
-Agda programming language:
-
-\input{latex/monoid}
-While the last two definitions may carry degree of comprehension to a programmer
-or mathematician not exposed to Agda, it is certainly comprehensible to a
-computer : that is, it typechecks on a computer where Cubical Agda is installed.
-While GF is designed for multilingual syntactic transformations and is targeted
-for natural language translation, it's underlying theory is largely based on
-ideas from the compiler communities. A cousin of the BNF Converter (BNFC), GF is
-fully capable of parsing programming languages like Agda! And while the Agda
-definitions are just another concrete syntactic presentation of a group
-homomorphism, they are distinct from the natural language presentations above in
-that the colors indicate it has indeed type checked.
-
-While this example may not exemplify the power of Agda's type-checker, it is of
-considerable interest to many. The type-checker has merely assured us that
-\term{GroupHom(')} are well-formed types - not that we have a canonical representation
-of a group homomorphism. The type-checker is much more useful than is
-immediately evident: it delegates the work of verifying that a proof is correct,
-that is, the work of judging whether a term has a type, to the computer. While
-it's of practical concern is immediate to any exploited grad student grading
-papers late on a Sunday night, its theoretical concern has led to many recent
-developments in modern mathematics. Thomas Hales solution to the Kepler
-Conjecture was seen as unverifiable by those reviewing it, and this led to Hales
-outsourcing the verification to Interactive Theorem Provers (ITPs) HOL Light and
-Isabelle. This computer delegated verification phase led to many minor
-corrections in the original proof which were never spotted due to human
-oversight.
+The type-checker, a language's mechanism of ensuring that programs satisfy the
+specification of their types, is incredibly useful: it delegates the work of
+verifying that a proof is correct, that is, the work of judging whether a term
+has a type, to the computer. While its of practical concern is immediate to any
+exploited grad student grading papers late on a Sunday night, its theoretical
+concern has led to many recent developments in modern mathematics. Thomas Hales
+solution to the Kepler Conjecture was seen as unverifiable by those reviewing
+it, and this led to Hales outsourcing the verification to Interactive Theorem
+Provers (ITPs) HOL Light and Isabelle. This computer delegated verification
+phase led to many minor corrections in the original proof which were never
+spotted due to human oversight.
 
 Fields medalist Vladimir Voevodsky had the experience of being told one day
 his proof of the Milnor conjecture was fatally flawed. Although the leak in the
@@ -202,55 +139,48 @@ Project~\cite{theunivalentfoundationsprogram-homotopytypetheory-2013}.
 While Agda and other programming languages are capable of encoding definitions,
 theorems, and proofs, they have so far seen little adoption. In some cases they
 have been treated with suspicion and scorn by many mathematicians. This isn't
-entirely unfounded : it's a lot of work to learn how to use Agda or Coq,
-software updates may cause proofs to break, and the inevitable imperfections we
-humans are prone to instilled in these tools . Besides, Martin-Löf Type Theory,
+entirely unfounded : it's a lot of work to learn Agda,
+software updates may cause proofs to break, and the inevitable imperfections of
+software are instilled in these tools . Besides, Martin-Löf Type Theory,
 the constructive foundational project which underlies these proof assistants, is
 often misunderstood by those who dogmatically accept the law of the excluded
 middle as the word of God.
 
 It should be noted, the constructivist rejects neither the law of the excluded
-middle, nor ZFC. She merely observes them, and admits their handiness in certain
-citations. Excluded middle is indeed a helpful tool as many mathematicians
-may attest. The contention is that it should be avoided whenever possible -
-proofs which don't rely on it, or it's corallary of proof by contradction, are
-much more ameanable to formalization in systems with decideable type checking.
-And ZFC, while serving the mathematicians of the early 20th century, is 
-lacking when it comes to the higher dimensional structure of n-categories and
-infinity groupoids.
+middle, $\phi \or \neg \ph$. She merely observes them, and admits its handiness
+in certain situations. Excluded middle is indeed a helpful tool - many important
+results rely on it. The type theorist's contention is that it should be avoided
+whenever possible - proofs which don't rely on it, or it's corollaries like
+proof by contradction, are much more amenable to formalization in systems with
+decidable type checking. Zermelo-Fraenkel Set Theory with the axiom of choice,
+ZFC, while serving the mathematicians of the early 20th century, is lacking when
+it comes to the higher dimensional structure of n-categories.
 
-What these theorem provers give the mathematician is confidence that her work
-is correct, and even more importantly, that the work which she takes for
-granted and references in her work is also correct. The task before us is then
-one of religious conversion. And one doesn't undertake a conversion by simply
-by preaching. Foundational details aside, this thesis is meant to provide a
-blueprint for the syntactic reformation that must take place.  
+What ITPs give the mathematician is confidence that her work is correct, and
+even more importantly, that the work which she takes for granted and references
+in her work is also correct. Foundational details aside, this thesis is meant to
+provide insight into one piece, namely in the space of syntax, of a blueprint
+for what many hope to be a reformation regarding how mathematics is practiced.
 
-We don't insist a mathematician relinquish the beautiful language she has
-come to love in expressing her ideas.  Rather, it asks her to make a
-hypothetical compromise
-for the time being, and use a Controlled Natural Language (CNL) to develop her
-work. In exchange she'll get the confidence that Agda provides. Not only that,
-she'll be able to search through a library, to see who else has possibly
-already postulated and proved her conjecture. A version of this grandiose vision is 
-explored in The Formal Abstracts Project \cite{halesCNL}, and it should
-practically motivate work.  
+We don't insist a mathematician relinquish the beautiful language she has come
+to love in expressing her ideas. Rather, we asks her to make a hypothetical
+compromise for the time being, and use a Controlled Natural Language (CNL) to
+encode key developments in her work. In exchange she may get some of the
+confidence that Agda provides. Not only that, if adopted at scale, she will able
+to search through a library to see who else has possibly already postulated and
+proved her conjecture. A version of this grandiose vision is explored in The
+Formal Abstracts Project \cite{halesCNL}, and it should practically motivate
+part of our work.
 
 Practicalities aside, this work also attempts to offer a nuanced philosophical
 perspective on the matter by exploring why translation of mathematical language,
-despite it's seemingly structured form, is difficult. We note that the natural
-language definitions of monoid differ in form, but also in pragmatic content.
-How one expresses formalities in natural language is incredibly diverse, and
-Definition~\ref{def:def4} as compared with the prior homomorphism definitions is
-particularly poignant in demonstrating this. These differ very much in nature to
-the Agda definitions - especially pragmatically. The differences between the Cubical
-Agda definitions may be loosely called pragmatic, in the sense that the choice
-of definitions may have downstream effects on readability, maintainability, modularity, and other
-considerations when trying to write good code, in a burgeoning area known as proof engineering.
+despite it's seemingly structured form, is difficult. A pragmatic treatment of
+the language of mathematics is the golden egg if one wishes to articulate the
+nuance in how the notions proposition, proof, and judgment are understood by
+humans, and how their translation can really take place. This distant goal
+should be prefaced with a semantic study of mathematics, which itself needs a
+syntactic basis. We hope that the treatment of syntax in this thesis, while a
+long ways away from giving a pragmatic account of mathematics, will help pave
+the way there.
 
-A pragmatic treatment of the language of mathematics is the golden egg if one
-wishes to articulate the nuance in how the notions proposition, proof, and
-judgment are understood by humans. Nonetheless, this problem is just now seeing
-attention. We hope that the treatment of syntax in this thesis, while a long
-ways away from giving a pragmatic account of mathematics, will help pave the way
-there.
+\input{perspectives}

@@ -1,48 +1,49 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Beyond Computational Trinitarianism}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}What is a Homomorophism?}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Philosophical Perspectives}{8}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Linguistic and Programming Language Abstractions}{8}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Formalization and Informalization}{11}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Syntactic Completeness and Semantic Adequacy}{12}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}What is a proof?}{15}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}What is a proof revisited}{17}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Technical Preliminaries}{19}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Martin-Löf Type Theory}{19}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Judgments}{19}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Rules}{20}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Propositions, Sets, and Types}{21}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Agda}{24}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Overview}{24}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Agda Programming}{24}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Formalizing The Twin Prime Conjecture}{27}{subsubsection.3.3.3}%
-\contentsline {section}{\numberline {4}Previous Work}{30}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Ranta}{30}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Mohan Ganesalingam}{32}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Pragmatics in mathematics}{33}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Other authors}{34}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Grammatical Framework}{37}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Thinking about GF}{37}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}A Brief Introduction to GF}{39}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Prior GF Formalizations}{45}{section.6}%
-\contentsline {subsection}{\numberline {6.1}CADE 2011}{45}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}An Additional PGF Grammar}{46}{subsubsection.6.1.1}%
-\contentsline {section}{\numberline {7}Natural Number Proofs}{50}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Associativity of Natural Numbers}{50}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}What is Equality?}{55}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Ranta's HoTT Grammar}{57}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}cubicalTT Grammar}{58}{subsection.7.4}%
-\contentsline {subsubsection}{\numberline {7.4.1}Difficulties}{60}{subsubsection.7.4.1}%
-\contentsline {subsubsection}{\numberline {7.4.2}More advanced Agda features}{61}{subsubsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.5}Comparing the Grammars}{62}{subsection.7.5}%
-\contentsline {subsubsection}{\numberline {7.5.1}Ideas for resolution}{64}{subsubsection.7.5.1}%
-\contentsline {paragraph}{Typechecker's Role}{66}{section*.4}%
-\contentsline {section}{\numberline {8}Conclusion}{68}{section.8}%
-\contentsline {subsection}{\numberline {8.1}The Mathematical Library of Babel}{69}{subsection.8.1}%
-\contentsline {section}{References}{71}{subsection.8.1}%
-\contentsline {section}{\numberline {9}Appendix}{75}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Twin Primes Conjecture Revisited}{75}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}cubicalTT}{75}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Hott and cubicalTT Grammars}{81}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}HoTT Agda Corpus}{86}{subsection.9.4}%
+\contentsline {subsection}{\numberline {1.2}The Goal before Us }{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Philosophical Perspectives}{5}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Linguistic and Programming Language Abstractions}{6}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Formalization and Informalization}{9}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Syntactic Completeness and Semantic Adequacy}{10}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}What is a proof?}{12}{subsubsection.1.3.4}%
+\contentsline {paragraph}{A Reconsideration of Proof}{15}{section*.4}%
+\contentsline {section}{\numberline {2}Technical Preliminaries}{17}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Martin-Löf Type Theory}{17}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Judgments}{17}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Rules}{18}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Propositions, Sets, and Types}{19}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Agda}{22}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Overview}{22}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Agda Programming}{22}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Formalizing The Twin Prime Conjecture}{25}{subsubsection.2.3.3}%
+\contentsline {section}{\numberline {3}Previous Work}{28}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Ranta}{28}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Mohan Ganesalingam}{30}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Pragmatics in mathematics}{31}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Other authors}{32}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Grammatical Framework}{35}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Thinking about GF}{35}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}A Brief Introduction to GF}{37}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Prior GF Formalizations}{43}{section.5}%
+\contentsline {subsection}{\numberline {5.1}CADE 2011}{43}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}An Additional PGF Grammar}{44}{subsubsection.5.1.1}%
+\contentsline {section}{\numberline {6}Natural Number Proofs}{48}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Associativity of Natural Numbers}{48}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}What is Equality?}{53}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Ranta's HoTT Grammar}{55}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}cubicalTT Grammar}{56}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Difficulties}{58}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}More advanced Agda features}{60}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Comparing the Grammars}{60}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Ideas for resolution}{63}{subsubsection.6.5.1}%
+\contentsline {paragraph}{Typechecker's Role}{65}{section*.5}%
+\contentsline {section}{\numberline {7}Conclusion}{66}{section.7}%
+\contentsline {subsection}{\numberline {7.1}The Mathematical Library of Babel}{67}{subsection.7.1}%
+\contentsline {section}{References}{69}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Appendix}{73}{section.8}%
+\contentsline {subsection}{\numberline {8.1}What is a Homomorphism?}{73}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Twin Primes Conjecture Revisited}{75}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}cubicalTT}{76}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Hott and cubicalTT Grammars}{82}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}HoTT Agda Corpus}{86}{subsection.8.5}%

@@ -305,8 +305,6 @@ INPUT roadmap.aux
 INPUT roadmap.aux
 INPUT intro.aux
 INPUT intro.aux
-INPUT perspectives.aux
-INPUT perspectives.aux
 INPUT preliminaries.aux
 INPUT preliminaries.aux
 INPUT previouswork.aux
@@ -368,13 +366,6 @@ OUTPUT roadmap.toc
 OUTPUT intro.aux
 INPUT intro.tex
 INPUT intro.tex
-INPUT latex/monoid.tex
-INPUT latex/monoid.tex
-OUTPUT roadmap.ptb
-INPUT roadmap.ptb
-OUTPUT roadmap.ptb
-INPUT roadmap.ptb
-OUTPUT perspectives.aux
 INPUT perspectives.tex
 INPUT perspectives.tex
 OUTPUT preliminaries.aux
@@ -457,6 +448,12 @@ INPUT roadmap.bbl
 OUTPUT appendix.aux
 INPUT appendix.tex
 INPUT appendix.tex
+INPUT latex/monoid.tex
+INPUT latex/monoid.tex
+OUTPUT roadmap.ptb
+INPUT roadmap.ptb
+OUTPUT roadmap.ptb
+INPUT roadmap.ptb
 INPUT latex/twinsigma.tex
 INPUT latex/twinsigma.tex
 OUTPUT roadmap.ptb
@@ -468,8 +465,6 @@ INPUT roadmap.ptb
 INPUT roadmap.aux
 INPUT intro.aux
 INPUT intro.aux
-INPUT perspectives.aux
-INPUT perspectives.aux
 INPUT preliminaries.aux
 INPUT preliminaries.aux
 INPUT previouswork.aux

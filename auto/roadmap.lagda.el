@@ -19,7 +19,6 @@
    (TeX-run-style-hooks
     "latex2e"
     "intro"
-    "perspectives"
     "preliminaries"
     "previouswork"
     "gfintro"

@@ -60,5 +60,5 @@ Equivalence A B f = ∀ (y : B) → isContr (fiber' y)
     fiber' : (y : B) → Set
     fiber' y = Σ A (λ x → y ≡ f x)
 \end{code}
-\caption{Contractibility} \label{fig:M3}
+\caption{Contractibility} \label{fig:R3}
 \end{figure}

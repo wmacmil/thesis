@@ -2,9 +2,12 @@
  "appendix"
  (lambda ()
    (TeX-run-style-hooks
+    "latex/monoid"
     "latex/twinsigma"
     "latex/compare")
    (LaTeX-add-labels
+    "def:def3"
+    "def:def4"
     "cubicaltt"
     "hottproofs"))
  :latex)
