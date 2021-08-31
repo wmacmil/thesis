@@ -17,7 +17,7 @@ Illegal, another \bibstyle command---line 33 of file roadmap.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: appendix.aux
 Database file #1: example_bibliography.bib
-I was expecting an "="---line 93 of file example_bibliography.bib
+I was expecting an "="---line 114 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
@@ -33,45 +33,45 @@ Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 63 entries,
+You've used 65 entries,
             2229 wiz_defined-function locations,
-            879 strings with 13383 characters,
-and the built_in function-call counts, 23120 in all, are:
-= -- 2305
-> -- 733
-< -- 71
-+ -- 261
-- -- 227
-* -- 1682
-:= -- 3928
-add.period$ -- 172
-call.type$ -- 63
-change.case$ -- 405
-chr.to.int$ -- 61
-cite$ -- 74
-duplicate$ -- 1074
-empty$ -- 1721
-format.name$ -- 307
-if$ -- 4712
+            889 strings with 13732 characters,
+and the built_in function-call counts, 23793 in all, are:
+= -- 2368
+> -- 757
+< -- 73
++ -- 270
+- -- 234
+* -- 1730
+:= -- 4050
+add.period$ -- 179
+call.type$ -- 65
+change.case$ -- 418
+chr.to.int$ -- 63
+cite$ -- 76
+duplicate$ -- 1106
+empty$ -- 1776
+format.name$ -- 318
+if$ -- 4847
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 64
-newline$ -- 297
-num.names$ -- 201
-pop$ -- 440
+missing$ -- 67
+newline$ -- 307
+num.names$ -- 209
+pop$ -- 456
 preamble$ -- 1
-purify$ -- 421
+purify$ -- 434
 quote$ -- 0
-skip$ -- 851
+skip$ -- 870
 stack$ -- 0
-substring$ -- 1470
-swap$ -- 225
+substring$ -- 1496
+swap$ -- 227
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 346
+type$ -- 356
 warning$ -- 11
-while$ -- 191
+while$ -- 196
 width$ -- 0
-write$ -- 782
+write$ -- 809
 (There were 2 error messages)

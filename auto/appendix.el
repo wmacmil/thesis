@@ -6,6 +6,7 @@
     "latex/twinsigma"
     "latex/compare")
    (LaTeX-add-labels
+    "judge"
     "def:def3"
     "def:def4"
     "cubicaltt"

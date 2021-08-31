@@ -2,6 +2,8 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "dybjerITT"
+    "10.5555/1121735"
     "buzzard2020will"
     "ml1984"
     "angelovSS"

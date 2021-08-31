@@ -47,7 +47,7 @@ We note there are some both subtle and big differences, between the natural
 language claim. First, twin prime is defined implicitly via a product
 expression, \term{×}. Additionally, the ``either 2 less or 2 more" clause is
 oringially read as being interpreted as having ``2 more". This reading ignores
-the symmetry of products, however, and both ``p or (p ∔ 2)" could be interpreted
+the symmetry of products, however, and both $p$ or $(p ∔ 2)$ could be interpreted
 as the twin prime. This phenomenon makes translation highly nontrivial; however,
 we will later see that PGF is capable of adding a semantic layer where the
 theorem can be evaluated during the translation. Finally, this theorem doesn't

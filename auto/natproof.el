@@ -4,6 +4,7 @@
    (TeX-run-style-hooks
     "latex/nproof")
    (LaTeX-add-labels
+    "npf"
     "assoc"))
  :latex)
 

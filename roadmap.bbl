@@ -97,6 +97,13 @@ de~Bruijn, N.~G. (1983).
 \newblock {\em AUTOMATH, a Language for Mathematics}, (pp.\ 159--200).
 \newblock Springer Berlin Heidelberg: Berlin, Heidelberg.
 
+\bibitem[Dybjer \& Palmgren, 2020]{dybjerITT}
+Dybjer, P. \& Palmgren, E. (2020).
+\newblock {Intuitionistic Type Theory}.
+\newblock In E.~N. Zalta (Ed.), {\em The {Stanford} Encyclopedia of
+  Philosophy}. Metaphysics Research Lab, Stanford University, {S}ummer 2020
+  edition.
+
 \bibitem[Escardó, 2020]{escardó2020introduction}
 Escardó, M.~H. (2020).
 \newblock Introduction to univalent foundations of mathematics with agda.
@@ -333,6 +340,13 @@ Wang, Q., Brown, C., Kaliszyk, C., \& Urban, J. (2020).
 \bibitem[Wenzel et~al., 2004]{wenzel2004isabelle}
 Wenzel, M. et~al. (2004).
 \newblock The isabelle/isar reference manual.
+
+\bibitem[Wiedijk, 2006]{10.5555/1121735}
+Wiedijk, F. (2006).
+\newblock {\em The Seventeen Provers of the World: Foreword by Dana S. Scott
+  (Lecture Notes in Computer Science / Lecture Notes in Artificial
+  Intelligence)}.
+\newblock Berlin, Heidelberg: Springer-Verlag.
 
 \bibitem[Zipperer, 2016]{zipperer2016formalization}
 Zipperer, A. (2016).

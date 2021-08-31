@@ -1,6 +1,159 @@
 \section{Appendix} \label{appendix}
 
 
+\subsection{Martin-Löf Type Theory} \label{judge}
+
+\subsubsection{Judgments}
+
+\begin{displayquote}
+With Kant, something important happened, namely, that the term judgement, Ger.
+Urteil, came to be used instead of proposition. \emph{Per Martin-Löf} \cite{mlMeanings}.
+\end{displayquote}
+
+A central contribution of Per Martin-Löf in the development of type theory was
+the recognition of the centrality of judgments in logic. Many mathematicians
+aren't familiar with the spectrum of judgments available, and merely believe
+they are concerned with \emph{the} notion of truth, namely \emph{the truth} of a
+mathematical proposition or theorem. There are many judgments one can make which
+most mathematicians aren't aware of or at least never mention. Examples of both familiar
+and unfamiliar judgments include,
+
+\begin{itemize}
+
+\item $A$ is true
+\item $A$ is a proposition
+\item $A$ is possible
+\item $A$ is necessarily true
+\item $A$ is true at time $t$
+
+\end{itemize}
+
+These judgments are understood not in the object language in which we state our
+propositions, possibilities, or probabilities, but as assertions in the
+metalanguage which require evidence for us to know and believe them. Most
+mathematicians may reach for their wallets if I come in and give a talk saying
+it is possible that the Riemann Hypothesis is true, partially because they
+already know that, and partially because it doesn't seem particularly
+interesting to say that something is possible, in the same way that a physicist
+may flinch if you say alchemy is possible. Most mathematicians, however, would
+agree that $P = NP$ is a proposition, and it is also possible, but isn't true.
+
+For the logician these judgments may well be interesting because their may be
+logics in which the discussion of possibility or necessity is even more
+interesting than the discussion of truth. And for the type theorist interested
+in designing and building programming languages over many various logics, these
+judgments become a prime focus. The role of the type-checker in a programming
+language is to present evidence for, or decide the validity of the judgments.
+The four main judgments of type theory are given in natural language on the left
+and symbolically on the right :
+
+\begin{multicols}{2}
+\begin{itemize}
+\item $T$ is a type
+\item $T$ and $T'$ are equal types
+\item $t$ is a term of type $T$
+\item $t$ and $t'$ are equal terms of type $T$
+\item $\vdash T \; {\rm type}$
+\item $\vdash T = T'$
+\item $\vdash t:T$
+\item $\vdash t = t':T$
+\end{itemize}
+\end{multicols}
+
+Frege's turnstile, $\vdash$, denotes a judgment. These judgments become much more interesting when we add the ability for them to
+be interpreted in a some context with judgment hypotheses. Given a series of
+judgments $J_1,...,J_n$, denoted $\Gamma$, where $J_i$ can depend on previously
+listed $J's$, we can make judgment $J$ under the hypotheses, e.g. $J_1,...,J_n
+\vdash J$. Often these hypotheses $J_i$, alternatively called \emph{antecedents},
+denote variables which may occur freely in the *consequent* judgment $J$. For
+instance, the antecedent, $x : \mathbb{R}$ occurs freely in the syntactic
+expression $\sin x$, a which is given meaning in the judgment $\vdash \sin x { :
+} \mathbb{R}$. We write our hypothetical judgement as follows :
+
+$$x : \mathbb{R} \vdash \sin x : \mathbb{R}$$
+
+
+
+\subsubsection{Rules}
+
+Martin-Löf systematically used the four fundamental judgments in the proof
+theoretic style of Pragwitz and Gentzen. To this end, the intuitionistic formulation of the
+logical connectives just gives rules which admit an immediate computational
+interpretation. The main types of rules are type formation, introduction,
+elimination, and computation rules. The introduction rules for a type admit an
+induction principle derivable from that type's signature. Additionally, the
+$\beta$ and $\eta$ computation rules are derivable via the composition of
+introduction and elimination rules, which, if correctly formulated, should
+satisfy a relation known as harmony.
+
+The fundamental notion of the lambda calculus, the function, is 
+abstracted over a variable and returns a term of some type when applied to an
+argument which is subsequently reduced via the computational rules.
+Dependent Type Theory (DTT) generalizes this to allow the return type be
+parameterized by the variable being abstracted over. The dependent function
+forms the basis of the LF which underlies Agda and GF. Here is the formation
+rule : 
+
+\[
+  \begin{prooftree}
+    \hypo{̌\Gamma  \vdash A \; {\rm type}}
+    \hypo{̌\Gamma, x : A \vdash B \; {\rm type}}
+    \infer2[]{\Gamma \vdash \Pi x {:} A. B}
+  \end{prooftree}
+\]
+
+One reason why hypothetical judgments are so interesting is we can devise rules
+which allow us to translate from the metalanguage to the object language using
+lambda expressions. These play the role of a function in mathematics and
+implication in logic. More generally, this is a dependent type, representing the
+$\forall$ quantifier. Assuming from now on $\Gamma \vdash A \; {\rm type}$ and
+$\Gamma, x : A \vdash B \; {\rm type}$, we present here the introduction rule for
+the most fundamental type in Agda, denoted \term{(x : A) -> B}.
+
+\[
+  \begin{prooftree}
+    \hypo{̌\Gamma, x {:} A \vdash B \; {\rm type}}
+    \infer2[]{\Gamma \vdash \lambda x. b {:} \Pi x {:} A. B}
+  \end{prooftree}
+\]
+
+Observe that the hypothetical judgment with $x : A$ in the hypothesis has been
+reduced to the same hypothesis set below the line, with the lambda term and Pi
+type now accounting for the variable.
+
+\[
+  \begin{prooftree}
+    \hypo{\Gamma \vdash f {:} \Pi x {:} A. B}
+    \hypo{\Gamma \vdash a {:} A}
+    \infer2[]{\Gamma \vdash f\, a {:} B[x := a]}
+  \end{prooftree}
+\]
+
+We briefly give the elimination rule for
+Pi, application, as well as the classic $\beta$ and $\eta$ computational equality
+judgments (which are actually rules, but it is standard to forego the premises): 
+$$\Gamma \vdash (\lambda x.b)\, a \equiv b[x := a] {:} B[x := a]$$
+$$\Gamma \vdash (\lambda x.f)\, x \equiv f {:} \Pi x{:}A. B}$$
+Using this rule, we now see a typical judgment without hypothesis in a real
+analysis, $\vdash \lambda x. \sin x : \mathbb{R} \rightarrow \mathbb{R}$.  This is normally
+expressed as follows (knowing full well that $\sin$ actually has to be
+approximated when saying what the computable function in the codomain is): 
+\begin{align*}
+  \sin {:} \mathbb{R} &\rightarrow \mathbb{R}\\ x &\mapsto \sin ( x )
+\end{align*}
+Evaluating this function on 0, we see
+\begin{align*}
+(\lambda x. \sin x)\, 0 &\equiv \sin 0   \\ &\equiv 0
+\end{align*}
+
+While most mathematicians take this for granted, we hope this gives some insight
+into how computer scientists present functions. We recommend reading
+Martin-Löf's original papers \cite{ml1984} \cite{ml79} to see all the rules
+elaborated in full detail, as well as his philosophical papers
+\cite{mlMeanings} \cite{mlTruth} to understand type theory as it was conceived
+both practically and philosophically.
+
+% TODO : ADD stuff about substution, variable binding
 
 \subsection{What is a Homomorphism?}
 
