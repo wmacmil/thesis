@@ -31,13 +31,12 @@ proofNeedingLemma x = λ x₁ → zero'
 
 \subsubsection{Agda Programming}
 
-To give a brief overview of the syntax Agda uses for judgements, namely \term{T}
-: \term{Set} means \term{T} is a type, \term{t} : \term{T} means a term \term{t}
-has type \term{T}, and \term{t} = \term{t'} means \term{t} is defined to be
-judgmentally equal to \term{t'}. Once one has made this equality judgement, Agda
-can normalize the definitionally equal terms to the same normal form in
-downstream programs. Let's compare it these judgements to those keywords ubiquitous in
-mathematics, and show how those are represented in Agda directly below.
+Listed is the syntax Agda uses for judgements: \term{T} : \term{Set} means
+\term{T} is a type, \term{t} : \term{T} means a term \term{t} has type \term{T},
+and \term{t} = \term{t'} means \term{t} is defined to be judgmentally equal to
+\term{t'}. Once one has made this equality judgement, Agda can normalize the
+definitionally equal terms to the same normal form. Let's compare these Agda
+judgements to those keywords ubiquitous in mathematics:
 
 \begin{figure}
 \centering
@@ -77,7 +76,7 @@ example = proof
 \caption{Mathematical Assertions and Agda Judgements} \label{fig:O1}
 \end{figure}
 
-Formation rules, are given by the first line of the data declaration, followed
+Formation rules are given by the first line of the data declaration, followed
 by some number of constructors which correspond to the introduction forms of the
 type being defined. Therefore, to define a type for Booleans, $𝔹$, we present
 these rules both in the proof theoretic and Agda syntax. We note that the
@@ -108,16 +107,15 @@ data 𝔹 : Set where -- formation rule
 \end{code}
 \end{minipage}
 
-As the elimination forms are deriveable from the introduction rules, the
+The elimination forms are deriveable from the introduction rules, and the
 computation rules can then be extracted by via the harmonious relationship
 between the introduction and elmination forms \cite{pfenningHar}. Agda's pattern
 matching is equivalent to the deriveable dependently typed elimination forms
 \cite{coqPat}, and one can simply pattern match on a boolean, producing multiple
 lines for each constructor of the variable's type, to extract the classic
-recursion principle for Booleans. Below we see the boolean elimination form
-along with its computation rules. We don't include the premises of the eqaulity
-rules as rules because they redundantly use the same premises as the typing
-judgment.
+recursion principle for Booleans. The \term{if then else} statement shown below
+is really just the boolean elimination form. It is not standard to include the
+premises of the eqaulity rules.
 
 \begin{minipage}[t]{.4\textwidth}
 \[
@@ -142,14 +140,13 @@ if false then a1 else a2 = a2
 \end{code}
 \end{minipage}
 
-When using Agda one is working interactively via holes in the emacs mode.
-
-Glossing over many details, we show a sample of code in the proof development
-state prior to pattern matching on \codeword{b}, we have a hole, \codeword{{ b
-}0}. The proof state is displayed to the right. It shows both the current
-context with \codeword{A, b, a1, a2}, the goal which is something of type
-\codeword{A}, and what we have, \codeword{B}, represents the type of the
-variable in the hole.
+When using Agda one is interactively building a proof via holes. There is an
+Agda Emacs mode which enables this. Glossing over many details, we show sample
+code in the proof development state prior to pattern matching on \codeword{b}.
+We have a hole, \codeword{{ b }0}, and the proof state is displayed to the
+right. It shows both the current context with \codeword{A, b, a1, a2}, the goal
+which is something of type \codeword{A}, and what we have, \codeword{B},
+represents the type of the variable in the hole.
 
 \hfill
 \begin{minipage}[t]{.4\textwidth}
@@ -175,20 +172,19 @@ A  : Set   (not in scope)
 The interactivity is performed via emacs commands, and every time one updates
 the hole with a new term, we can immediately view the next goal with an updated
 context. The underscore in \term{if_then_else_} denotes the placement of the
-arguement, as Agda allows mixfix operations. Agda allows for more nuanced
-syntacic features out of the box than most programming languages provide, like
-unicode. This is interesting from the \emph{concrete syntax} perspective as the
-arguement placement and symbolic expressiveness makes Agda's syntax feel more
-familiar to the mathematician. We also observe the use of parametric
-polymorphism, namely, that we can extract a member of some arbtitrary type
-\term{A} from a boolean value given two members of \term{A}.
+arguements, as Agda allows mixfix operations. Agda allows for more nuanced
+syntacic features like unicode. This is interesting from the \emph{concrete
+syntax} perspective as the arguement placement and symbolic expressiveness makes
+Agda's syntax feel more familiar to the mathematician. We also observe the use
+of parametric polymorphism, namely, that we can extract a member of some
+arbtitrary type \term{A} from a boolean value given two members of \term{A}.
 
-This polymorphism allows one to implement simple programs like \term{~} and more
-interestingly, \term{functionalNegation} where one can use functions as
-arguements. \term{functionalNegation} is a functional, or higher order
-functions, which take functions as arguements and return functions. We also
-notice in \term{functionalNegation} that one can work directly with lambda's to
-ensure the correct return type.
+This polymorphism allows one to implement simple programs like boolean negation,
+\term{~}, and more interestingly, \term{functionalNegation}, where one can use
+functions as arguements. \term{functionalNegation} is a functional, or higher
+order functions, which take functions as arguements and return functions. We
+also notice in \term{functionalNegation} that one can work directly with a
+built-in $\lambda$ to ensure the correct return type.
 
 \begin{code}
 ~ : 𝔹 → 𝔹
@@ -199,8 +195,9 @@ functionalNegation b f = if b then f else λ b' → f (~ b')
 \end{code}
 
 This simple example leads us to one of the domains our subsequent grammars will
-describe, arithmetic (see \ref{npf}). We show how to inductively define natural numbers in Agda,
-with the formation and introduction rules included beside for contrast.
+describe, like arithmetic (see \ref{npf}). We show how to inductively define
+natural numbers in Agda, with the formation and introduction rules included
+beside for contrast.
 
 \begin{minipage}[t]{.4\textwidth}
 \vspace{3mm}
@@ -228,12 +225,12 @@ data ℕ : Set where
 \end{code}
 \end{minipage}
 
-This is our first observation of a recursive type, whereby pattern matching over
-$ℕ$ allows one to use an induction hypothesis over the subtree and gurantee
-termination when making recurive calls on the function being defined. We can
-define a recursion principle for $ℕ$, which essentially gives one the power to
-build iterators. Again, we include the elimination and equality
-rules for syntactic juxtaposition.
+This is a recursive type, whereby pattern matching over $ℕ$ allows one to use an
+induction hypothesis over the subtree and gurantee termination when making
+recurive calls on the function being defined. We can define a recursion
+principle for $ℕ$, which gives one the power to build iterators.
+Again, we include the elimination and equality rules for syntactic
+juxtaposition.
 
 \[
   \begin{prooftree}

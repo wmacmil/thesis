@@ -15,22 +15,21 @@ suc n - suc m = n - m
 \end{code}
 \subsubsection{Formalizing The Twin Prime Conjecture}
 
-Inspired by Escardos's formalization of the twin primes conjecture \cite{escardó2020introduction}, we intend to
-demonstrate that while formalizing mathematics can be rewarding, it can also
-create immense difficulties, especially if one wishes to do it in a way that
-prioritizes natural language. The conjecture is incredibly compact
+Inspired by Escardos's formalization of the twin primes conjecture
+\cite{escardó2020introduction}, we intend to demonstrate that while formalizing
+mathematics can be rewarding, it can also create immense difficulties,
+especially if one wishes to do it in a way that prioritizes natural language.
+The conjecture, along with the definition of a twin prime, is incredibly
+compact. We include Escardo's definition below the natural.
 
 \begin{lem}
 There are infinitely many twin primes.
 \end{lem}
 
-Somebody reading for the first time might then pose the immediate question : what is a twin prime?
-
 \begin{definition}\label{def:def10}
 A \emph{twin prime} is a prime number that is either 2 less or 2 more than another prime number
 \end{definition}
 
-Below Escardo's code is reproduced.
 \begin{code}
 isPrime : ℕ → Set
 isPrime n =
@@ -44,21 +43,19 @@ twinPrimeConjecture = (n : ℕ) → Σ[ p ∈ ℕ ] (p ≥ n)
 \end{code}
 
 We note there are some both subtle and big differences, between the natural
-language claim. First, twin prime is defined implicitly via a product
-expression, \term{×}. Additionally, the ``either 2 less or 2 more" clause is
-oringially read as being interpreted as having ``2 more". This reading ignores
-the symmetry of products, however, and both $p$ or $(p ∔ 2)$ could be interpreted
-as the twin prime. This phenomenon makes translation highly nontrivial; however,
-we will later see that PGF is capable of adding a semantic layer where the
-theorem can be evaluated during the translation. Finally, this theorem doesn't
-say what it is to be infinite in general, because such a definition would
-require a proving a bijection with the real numbers. In this case however, we
-can rely on the order of the natural numbers, to simply state what it means to
-have infinitely many primes.
-
-Despite the beauty of this, mathematicians always look for alternative, more
-general ways of stating things. Generalizing the notion of a twin prime is a
-prime gap. And then one immediately has to ask what is a prime gap?
+language and Agda presentation. First, the Agda twin prime is defined implicitly
+via a product expression, \term{×}. Additionally, the ``either 2 less or 2 more"
+clause is oringially read as being interpreted as having ``2 more". This reading
+ignores the symmetry of products, however, and both $p$ or $(p ∔ 2)$ could be
+interpreted as the twin prime. This phenomenon makes translation highly
+nontrivial; however, we will later see that embedding a GF grammar in Haskell
+allows one to add a semantic layer where the symmetry can be explicitly included
+during the translation. Finally, this theorem doesn't say what it is to be
+infinite in general, because such a definition would require a proving a
+bijection with the natural numbers. In this case our notion of infinity we rely
+on the order of $ℕ$. Despite the beauty of this, mathematicians always look for
+alternative, more general ways of stating things. Generalizing the notion of a
+twin prime is a prime gap.
 
 \begin{definition}\label{def:def11}
 A \emph{twin prime} is a prime that has a prime gap of two.
@@ -70,9 +67,9 @@ A \emph{prime gap} is the difference between two successive prime numbers.
 Now we're stuck, at least if you want to scour the internet for the definition
 of ``two successive prime numbers". That is because any mathematician will take
 for granted what it means, and it would be considered a waste of time and space
-to include something \emph{everyone} alternatively knows. Agda, however, must
-know in order to typecheck. Below we offer a presentation which suits Agda's
-needs, and matches the number theorists presentation of twin prime.
+to define something \emph{everyone} alternatively knows. Agda, however, can't
+infer this. Below we offer a presentation which suits Agda's needs, and matches
+the number theorists presentation of twin prime.
 
 \begin{code}
 isSuccessivePrime : (p p' : ℕ) → isPrime p → isPrime p' → Set
@@ -99,14 +96,13 @@ twinPrimeConjecture' = (n : ℕ) → Σ[ p ∈ ℕ ] (p ≥ n)
 
 
 We see that \term{isSuccessivePrime} captures this meaning, interpreting
-``successive" as the type of suprema in the prime number ordering. We also see that all the primality proofs must be given explicitly.
-
-The term \term{primeGap} then has to reference this successive prime data, even
-though most of it is discarded and unused in the actual program returning a
-number. One could keep these unused arguements around via extra record fields,
-to anticipate future programs calling \term{primeGap}, but ultimately the developer has to
-decide what is relevant. A GF translation would ideally be kept as simple as possible. We also use propositional equality here, which is
-another departure from classical mathematics, as will be elaborated later.
+``successive" as the type of suprema in the prime number ordering. We also see
+that all the primality proofs must be given explicitly. The term \term{primeGap}
+then has to reference this successive prime data, even though most of it is
+discarded and unused in the actual program returning a number. A GF translation
+would ideally be kept as simple as possible. We also use propositional equality
+here, which is another departure from classical mathematics, as will be
+elaborated later \ref{twins}.
 
 Finally, \{twinPrime} is a specialized version of \term{primeGap} to 2. ``has a
 prime gap of two`` needs to be interpreted ``whose prime gap is equal to two",
