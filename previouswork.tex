@@ -1,41 +1,32 @@
 \section{Previous Work}
 
-There is a story that at some point in the 1980s, Göran Sundholm and Per
-Martin-Löf were sitting at a dinner table, dicsussing various questions of
-interest to the respective scholars, and Sundholm presented Martin-Löf with the
-problem of Donkey Sentences in natural language semantics, those analogous
-'Every man who owns a donkey beats it'. This had been puzzling to those in the
-Montague tradition, whereby higher order logic didn't provide facile ways of
-interpreting these sentences. Martin-Löf apparently then, using his dependent
-type constructors, provided an interpretation of the donkey sentence on the back
-of the napkin. This is perhaps the genesis of dependent type theory in natural
-language semantics. The research program was thereafter taken up by Martin-Löf's
-student Aarne Ranta \cite{ranta1994type}, bled into the development of GF, and
-has now in some sense led to this current work.
+According to legend, Göran Sundholm and Per Martin-Löf were sitting at a dinner
+table, discussing various questions of interest, and Sundholm presented
+Martin-Löf with the problem of \emph{donkey sentences} in natural language
+semantics, statements analogous ``Every man who owns a donkey beats it". This
+had been puzzling to those in the Montague tradition, whereby higher order logic
+didn't provide facile ways of interpreting these sentences. Martin-Löf
+apparently then, using dependent types, provided an interpretation of the donkey
+sentence on the back of the napkin. This is perhaps the genesis of dependent
+type theory in natural language semantics. The research program was thereafter
+taken up by Martin-Löf's student Aarne Ranta \cite{ranta1994type}, bled into the
+development of GF, and has now led to this current work.
 
-The prior exploration of these interleaving subjects is vast, and we can only
-sample the available literature here. Indeed, there are so many approaches that
-this work should be seen in a small (but important) case in the context of a
-deep and broad literature \cite{surveyLang}. Acquiring expertise in such a
-breadth of work is outside the scope of this thesis. Our approach, using
-GF ASTs as a basis language for Mathematics and the logic the mathematical
-objects are described in, is both distinct but has many roots and
-interconnections with the remaining literature. The success of finding a
-suitable language for mathematics will obviously require a comparative analysis
-of the strengths and weaknesses in the goals in such a vast bibliography. 
- How the GF approach compares with this long merits careful consideration and
- future work.
-
-It will function of our purpose, constrained by the limited scope of this work,
-to focus on a few important resources.
+The prior exploration of formal languages for the interleaving Trinitarian
+subjects, is vast, and we can only sample the literature\cite{surveyLang}. Our
+approach, using GF ASTs as a has many roots and interconnections with this
+literature. The success of finding a suitable language for mathematics will
+obviously require a comparative analysis of the strengths and weaknesses in such
+a vast bibliography. How the GF approach compares with this long list merits
+careful consideration and future work. We focus on a few resources.
 
 \subsection{Ranta}
 
 The initial considerations of Ranta were both oriented towards the language of
 mathematics \cite{ranta93}, as well as purely linguistic concerns
-\cite{ranta1994type}. In the treatise, Ranta explored not just the many avenues
-to describe NL semantic phenomena with Dependent Types, but, after concentrating
-on a linguistic analysis, he also proposed a primitive way of parsing and
+\cite{ranta1994type}. In his treatise, Ranta explores not just the many avenues
+to describe NL semantic phenomena with dependent types, but, after concentrating
+on a linguistic analysis, he also proposes a primitive way of parsing and
 sugaring these dependently typed interpretations of utterances into the strings
 themselves - introducing the common nouns as types idea which has been since
 seen great interest from both type theoretic and linguistic communities
@@ -53,18 +44,18 @@ We note that the natural language quantifiers, which were largely the subject of
 Montague's original investigations \cite{Montague1973}, find a natural
 interpretation as the dependent product and sum types, $\Pi$ and $\Sigma$,
 respectively. As type theory is constructive, and requires explicit witnesses
-for claims, we admit the behavior following semantic interpretation : given a
-man $m$, a donkey $d$ and evidence $m-owns-d$ that the man owns the donkey, we
-can supply, via the term of the above type applied to our own tripple
-$(m,d,m-owns-d)$ , evidence that the man beats the donkey, $beats(m,d)$ via
-$pi_1$ and $pi_2$, the projections, or $\Sigma$ eliminators.
+for claims, we admit the following semantic interpretation : given a man $m$, a
+donkey $d$ and evidence $m-owns-d$ that the man owns the donkey, we can supply,
+via the term of the above type applied to our own tripple $(m,d,m-owns-d)$ ,
+evidence that the man beats the donkey, $beats(m,d)$ via the projections $\pi_1$
+and $\pi_2$, or $\Sigma$ eliminators.
 
-In the final chapter of \cite{ranta1994type}, $Sugaring and Parsing$, Ranta
+In the final chapter of \cite{ranta1994type}, \emph{Sugaring and Parsing}, Ranta
 explores the explicit relation, and of translation between the above logical
 form and the string, where he presents a GF predecessor in the Alfa proof
 assistant, itself a predecessor of Agda. To accomplish this translation he
 introduces an intermediary , a functional phrase structure tree, which later
-becomes the basis for GFs abstract syntax.  What is referred to as ``sugaring''
+becomes the basis for GF's abstract syntax.  What is referred to as ``sugaring''
 later changes to ``linearization''.
 
 Soon thereafter, GF became a fully realized vision, with better and more
@@ -76,87 +67,76 @@ between the functional phrase structure (ASTs) and strings \cite{ranta_2004}.
 Interestingly, the functions that were called $ambiguation : MLTT \to \{Phrase\
 Structure\}$ and $interpretation : \{Phrase Structure\} \to MLTT$ were absorbed
 into GF by providing dependently typed ASTs, which allows GF not just to parse
-syntactic strings, but only parse semantically well formed, or meaningful
+\emph{syntactic} strings, but only parse semantically well formed, or meaningful
 strings. Although this feature was in some sense the genesis that allowed GF to
 implement the lingusitic ideas from the book \cite{rantaTT}, it has remained
-relatively limited in terms of actual GF programmers using it in their day to
-day work. Nonetheless, it was intriguing enough to investigate briefly during
-the course of this work as one can implement a programming language grammar that
-only accepts well typed programs, at least as far as they can be encoded via
-GF's dependent types \cite{warrickHarper}. Although GF isn't designed with
-TypeChecking in mind explicity, it would be very interesting to apply GF
-dependent types in the more advanced programming languages to filter parses of
-meaningless strings.
+relatively untouched on the GF programmers tool-belt. Nonetheless, it was
+intriguing enough to investigate briefly during the course of this work as one
+can implement a programming language grammar that only accepts well typed
+programs, at least as far as they can be encoded via GF's dependent types
+\cite{warrickHarper}. Although GF isn't explicitly designed with type-checking
+in mind , it would be very interesting to apply GF dependent types in the more
+advanced programming languages to filter meaningless strings.
 
 While the semantics of natural language in MLTT is relevant historically, it is
 not the focus of this thesis. Its relevance comes from the fact that all these
 ideas were circulating in the same circles - that is, Ranta's writings on the
-language of mathematics, his approach to NL semantics, and their confluence
-among other things, with the development of GF. This led to the development of a
-natural language layer to Alfa \cite{alfaGF}, which in some sense can be seen as
-a direct predecessor to this work. In some sense, the scope of work seeks to
-recapitulate what was already done in 1998 - but this was prior to both GF's
-completion, and Alfa's hard fork to Agda.
+language of mathematics, his approach to NL semantics, the derivative
+development of GF and their confluence. This led to the development of a natural
+language layer to Alfa \cite{alfaGF}, which can be seen as a direct predecessor
+to this work. In some sense, we seek to recapitulate what was already done in
+1998 - but this was prior to both GF's completion, and Alfa's hard fork to Agda.
 
 \subsection{Mohan Ganesalingam}
 
-
 \begin{displayquote}
-
-there is a considerable gap between what mathematicians claim is true and what
-they believe, and this mismatch causes a number of serious linguistic problems
-
+There is a considerable gap between what mathematicians claim is true and what
+they believe, and this mismatch causes a number of serious linguistic problems. 
+\emph{Mohan Ganesalingam} \cite{ganesalingam2013language}
 \end{displayquote}
 
-Perhaps the most substantial analysis of the linguistic perspective on written
+The most substantial analysis of the linguistic perspective on written
 mathematics comes from Ganesalingam \cite{ganesalingam2013language}. Not only
 does he pick up and reexamine much of Ranta's early work, but he develops a
-whole theory for how to understand with the language mathematics from a formal
-point of view, additionally working with many questions about the foundation of
-mathematics. His model which is developed early in the treatise and is
-referenced throughout uses Discourse Representation Theory
-\cite{kamp2011discourse}, to capture anaphoric use of variables. While he is
-interested in analyzing language, our goal is to translate, because the meaning
-of an expression is contained in its set of formalizations, so our project should be
-thought of as more of 
-a way to implement the linguistic features of language rather than
-Ganesalingam's work analyzing the infrastructure of natural language mathematics.
+whole theory for how to understand the language mathematics from a formal point
+of view, additionally working with many questions about the foundation of
+mathematics. His model, which is developed early in the treatise and is
+referenced throughout uses Discourse Representation Theory (DRT)
+\cite{kamp2011discourse}, to capture anaphoric use of mathematical variables.
+While he is interested in analyzing language, our goal is to translate, because
+the meaning of an expression is contained in its set of formalizations. Our
+project should be thought of as more of a way to implement the linguistic
+features of mathematics rather than Ganesalingam's work focusing on analysis.
 
-Gangesalingem draws insightful, nuanced conclusions from compelling examples.
+Ganesalingam draws insightful, nuanced conclusions from compelling examples.
 Nonetheless, this subject is somewhat restricted to a specific linguistic
-tradition and framing and modern, textual mathematics. Therefore, we hope to (i)
-contrast our GF implementation point of view and (ii) offer some perspectives on
+tradition and modern, textual mathematics. Therefore, we hope to 
+contrast our GF point of view while offering some perspectives on
 his work.
 
 He remarks that mathematicians believe ``insufficiently precise" mathematical
-sentences are would be results from a failure to into logic. This is much more
-true from the Agda developers perspective, than the mathematicians. It is likely
-there are many mathematicians who assume small mistakes may go by the reviewers
-unchecked, as are the reviewers. However, the Brunei number offers a
-counterexample even the computer scientist has to come to terms with - because
-it's based off pen and paper work which hasn't terminated in Agda
-\cite{brunerie2016homotopy}. And while this one example which may see
-resolution, one may construct other which won't, and it is speculative to think
-what mathematics is formalizable.
+sentences are those which would be result from a failure to translate them into
+logic. This is much more true from the Agda developers perspective than the
+mathematicians. Mathematicians generally assume small mistakes may go unnoticed
+by the reviewers.
 
-Gangesalingem also articulates ``mathematics has a normative notion of what its
+Ganesalingam also articulates ``mathematics has a normative notion of what its
 content should look like; there is no analogue in natural languages." While this
 is certainly true in \emph{local} cases surrounding a given mathematical
 community , there are also many disputes - the Brouwer school is one example,
 but our prior discussion of visual proofs also offers another counterexample.
-Additionally, the ``GF perspective" presented here is meant to disrupt the
+Additionally, the GF perspective presented here is meant to disrupt the
 notion of normativity, by suggesting that concrete syntax can reflect deep
-differences in content beyond just its appearance. Escher's prints,
-alternatively uniquely mirror both mathematics and art - they are constructions
-using rules from formal systems, but are appreciated by a general audience.
+differences in content beyond just its appearance.
 
 He also discusses the important distinction between formal (which he focuses on)
-and informal modes in mathematics, with the informal representing the text which
-is a kind of commentary which is assumed to be inexpressible in logic. GF,
-fortunately can actually accommodate both if one considers only natural language
-translation in the informal case. This is interesting because one would need
-extend a ``formal grammar" with the general natural language content needed to
-include the informal.
+and informal modes in mathematics, with the informal representing the
+``commentary" which is assumed to be inexpressible in logic. GF, fortunately can
+actually accommodate both if one considers only natural language translation in
+the informal case. This is interesting because one would need extend a ``formal
+grammar" with the general natural language content needed to include the
+informal, although it is uncertain if the commentary should just be delegated to
+comments if translated to Agda.
 
 He says symbols serve to ``abbreviate material", and ``occur inside textual
 mathematics". While his discourse records can deal with symbols, in GF,
@@ -164,20 +144,23 @@ overloading of symbols can cause overgeneration. For example certain words like
 "is" and "are" can easily be interpreted as equality, equivalence, or
 isomorphism depending on the context.
 
-One of Ganesalingam's original contributions, is the notion of adaptivity :
+One of Ganesalingam's original contributions is the notion of adaptivity :
 ``Mathematical language expands as more mathematics is encountered". He
-references someones various stages of coming to terms with concepts in
-mathematics and their generalization in somebodies head. For instance, one can
-define the concept of the $n$ squared as $n^2$ of two as "n*n", which are
-definitionally equal in Agda if one is careful about how one defines addition,
-multiplication, and exponentiation. Writing grammars, on has to cater the
-language to the audience, for example, which details does one leave out when
-generating natural language proofs?
+references some person's various stages of coming to terms with concepts in
+mathematics and their generalization in that person's head. For instance, one
+can define the concept of the $n$ squared as $n^2$ of two as ``$n$*$n$", which
+are definitionally equal in Agda if one is careful about how one defines
+addition, multiplication, and exponentiation, but require proof otherwise.
+These details are unaccounted for by the mathematician, but can often hamper
+formalization efforts because the substitution of propositionally equal and
+definitionally equal terms are treated differently outside of select type theories.
 
 Mathematical variables, it is also noticed, can be treated anaphorically. From
-the PL persepctive they are just expressions. Creating a suitable translation
+the PL perspective they are just expressions. Creating a suitable translation
 from textual math to formal languages accounting for anaphora with GF proves to
-be exceedingly tricky, as can be seen in the HoTT grammar below.
+be exceedingly tricky, as can be seen in the HoTT grammar below. These examples
+should showcase that Ganesalingam's analysis, while certainly helpful when
+building grammars, may require additional analysis to actually make things work.
 
 \subsubsection{Pragmatics in mathematics}
 
@@ -187,8 +170,7 @@ content. The point warranted both a rebuttal \cite{RUFFINO2020114} and an
 additional response by Ranta \cite{RANTA2020120}. Ganesalingam says
 ``mathematics does not exhibit any pragmatic phenomena: the meaning of a
 mathematical sentence is merely its compositionally determined semantic content,
-and nothing more. ". We explore these fascinating dialogues here, adjoining our
-own take in the context of this project.
+and nothing more."
 
 San Mauro et al. disagree with this conception, stating mathematicians may rely
 ``on rhetorical figures, and speak metaphorically or even ironically", and that
@@ -197,42 +179,40 @@ then give two technical examples of pragmatic phenomena where pragmatics is
 explicitly exhibited, but we elect to give our own example relevant for our position on
 the matter.
 
-We look ask what is the difference in meaning between lemma, proof, and
-corollary. While there is a syntactic distinction between \term{Lemma} and
-\term{Theorem} in Coq, Agda which resembles Haskell rather than a theorem prover
-at a first glance, sees no distinction as seen in \autoref{fig:O1}. The words carry semantic weight :
-\emph{lemma} for concepts preceding theorems and \emph{corollaries} for concepts
-applying theorems. The interpretation of the meaning when a lemma or corollary
-is called a carry pragmatic content in that the author has to decide how to
-judge the content by its importance, and relation of them to the \emph{theorems}
-in some kind of natural ways. Inferring how to judge a keyword seems impossible
-for a machine, especially since critical results are perhaps misnamed the Yoneda
-Lemma is just one of many examples.
+We look at the difference in meaning between lemma, proof, and corollary. While
+there is a syntactic distinction between \term{Lemma} and \term{Theorem} in Coq,
+Agda, which resembles Haskell rather than a theorem prover , sees no distinction
+as seen in \autoref{fig:O1}. The words carry semantic weight : \emph{lemma} for
+concepts preceding theorems and \emph{corollaries} for concepts applying
+theorems. The interpretation of the meaning when a lemma or corollary is called
+carry pragmatic content in that the author has to decide - how to judge the
+content by its ``importance" and its relation to the \emph{theorems}. Inferring
+how to judge a keyword seems impossible for a machine, especially since critical
+results are misnamed - the Yoneda Lemma is just one of many examples.
 
 Ranta categorizes pragmatic phenomena in 5 ways : speech acts, context,
 speaker's meaning, efficient communication, and the \emph{wastebasket}. He
 asserts that the disagreement is really a matter of how coarsely pragmatics is
 interpreted by the authors - Ganesalingam applies a very fine filter in his
 study of mathematical language, whereas the coarser filter applied by San Mauro
-et al. allows for many more pragmatics phenomena to be captured, and that the
+et al. allows for many more pragmatics phenomena to be captured and that the
 ``wastebasket" category is really the application of this filter. Ranta shows
-that both Speech Acts and Context are pragmatic phenomena treated in
-Ganesalingam's work and speaker's meaning and efficient communication are in
-covered by San Mauro et al., and that the authors disagreement arises less about
-the content itself and how it is analyzed, but rather whether the analysis
-should be classified as pragmatic or semantic.
+that both speech acts and context are pragmatic phenomena treated in
+Ganesalingam's work and speaker's meaning and efficient communication are
+covered by San Mauro et al. Ranta contends that the authors disagreement arises
+less about the content itself and how it is analyzed, but rather whether the
+analysis should be classified as pragmatic or semantic.
 
-Our Grammars give us tools to work with the speaker's meaning of a mathematical
-utterance by a translation into syntactically complete Agda judgment (assuming
-it type-checks). Dually, efficient communication is the goal of producing a
-semantically adequate grammar. The task of creating a grammar which satisfies
-both is obviously the most difficult task before future grammar writers. We
-therefore hope that the modeling of natural language mathematics via the
-grammars presented will give insights into how understanding of all five
-pragmatic phenomena are necessary for good grammatical translations between CNLs
-and formal languages. For the CNLs to really be ``natural", one must be able to
-infer and incorporate the pragmatic phenomena discussed here, and indeed much
-more.
+Our grammars give us tools to study the \emph{speaker's meaning} of a
+mathematical utterance by trying to translate them into syntactically complete
+Agda judgments. \emph{Efficient communication} is the goal of producing a
+semantically adequate grammar. The prospect of creating a grammar which
+satisfies both is the most difficult task. We therefore hope that modeling of
+natural language mathematics will give insights into how understanding of all
+five pragmatic phenomena are necessary for worthwhile translations between CNLs
+and formal languages, even if our grammars only really work with syntax. For the
+CNLs to really be ``natural", one must be able to infer and incorporate
+pragmatic phenomena.
 
 Ganesalingam points out that ``a disparity between the way we think about
 mathematical objects and the way they are formally defined causes our linguistic
@@ -241,7 +221,7 @@ understanding of language, and the practical implications yield a bleak outlook.
 Nevertheless, mathematical objects developing over time is natural, the more and
 deeper we dig into the ground, the more we develop refinements of what kind of
 tools we are using, develop better iterations of the same tools (or possibly
-entirely new ones) as well as knowledge about the soil in which we are
+entirely new ones, and additionally learn about the soil in which we are
 digging.
 
 \subsection{Other authors}

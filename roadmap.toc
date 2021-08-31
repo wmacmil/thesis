@@ -17,36 +17,36 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Overview}{17}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Agda Programming}{18}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Formalizing The Twin Prime Conjecture}{21}{subsubsection.2.2.3}%
-\contentsline {section}{\numberline {3}Previous Work}{24}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Ranta}{24}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Mohan Ganesalingam}{26}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Pragmatics in mathematics}{27}{subsubsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.3}Other authors}{28}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Grammatical Framework}{31}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Thinking about GF}{31}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}A Brief Introduction to GF}{33}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Prior GF Formalizations}{39}{section.5}%
-\contentsline {subsection}{\numberline {5.1}CADE 2011}{39}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}An Additional PGF Grammar}{40}{subsubsection.5.1.1}%
-\contentsline {section}{\numberline {6}Natural Number Proofs}{44}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Associativity of Natural Numbers}{44}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}What is Equality?}{49}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Ranta's HoTT Grammar}{51}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}cubicalTT Grammar}{52}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Difficulties}{54}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}More advanced Agda features}{56}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Comparing the Grammars}{56}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Ideas for resolution}{59}{subsubsection.6.5.1}%
-\contentsline {paragraph}{Typechecker's Role}{61}{section*.8}%
-\contentsline {section}{\numberline {7}Conclusion}{62}{section.7}%
-\contentsline {subsection}{\numberline {7.1}The Mathematical Library of Babel}{63}{subsection.7.1}%
-\contentsline {section}{References}{65}{subsection.7.1}%
-\contentsline {section}{\numberline {8}Appendix}{69}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Martin-Löf Type Theory}{69}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Judgments}{69}{subsubsection.8.1.1}%
-\contentsline {subsubsection}{\numberline {8.1.2}Rules}{70}{subsubsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.2}What is a Homomorphism?}{71}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Twin Primes Conjecture Revisited}{74}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}cubicalTT}{74}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Hott and cubicalTT Grammars}{80}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}HoTT Agda Corpus}{82}{subsection.8.6}%
+\contentsline {section}{\numberline {3}Previous Work}{23}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Ranta}{23}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Mohan Ganesalingam}{24}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Pragmatics in mathematics}{26}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Other authors}{27}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Grammatical Framework}{29}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Thinking about GF}{29}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}A Brief Introduction to GF}{31}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Prior GF Formalizations}{37}{section.5}%
+\contentsline {subsection}{\numberline {5.1}CADE 2011}{37}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}An Additional PGF Grammar}{38}{subsubsection.5.1.1}%
+\contentsline {section}{\numberline {6}Natural Number Proofs}{42}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Associativity of Natural Numbers}{42}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}What is Equality?}{47}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Ranta's HoTT Grammar}{49}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}cubicalTT Grammar}{50}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Difficulties}{52}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}More advanced Agda features}{54}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Comparing the Grammars}{54}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Ideas for resolution}{57}{subsubsection.6.5.1}%
+\contentsline {paragraph}{Typechecker's Role}{59}{section*.8}%
+\contentsline {section}{\numberline {7}Conclusion}{60}{section.7}%
+\contentsline {subsection}{\numberline {7.1}The Mathematical Library of Babel}{61}{subsection.7.1}%
+\contentsline {section}{References}{63}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Appendix}{67}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Martin-Löf Type Theory}{67}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Judgments}{67}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}Rules}{68}{subsubsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.2}What is a Homomorphism?}{69}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Twin Primes Conjecture Revisited}{72}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}cubicalTT}{72}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Hott and cubicalTT Grammars}{78}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}HoTT Agda Corpus}{80}{subsection.8.6}%

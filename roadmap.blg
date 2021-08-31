@@ -33,45 +33,45 @@ Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 65 entries,
+You've used 64 entries,
             2229 wiz_defined-function locations,
-            889 strings with 13732 characters,
-and the built_in function-call counts, 23793 in all, are:
-= -- 2368
-> -- 757
-< -- 73
-+ -- 270
-- -- 234
-* -- 1730
-:= -- 4050
-add.period$ -- 179
-call.type$ -- 65
-change.case$ -- 418
-chr.to.int$ -- 63
-cite$ -- 76
-duplicate$ -- 1106
-empty$ -- 1776
-format.name$ -- 318
-if$ -- 4847
+            886 strings with 13637 characters,
+and the built_in function-call counts, 23557 in all, are:
+= -- 2344
+> -- 750
+< -- 72
++ -- 268
+- -- 232
+* -- 1715
+:= -- 4003
+add.period$ -- 177
+call.type$ -- 64
+change.case$ -- 412
+chr.to.int$ -- 62
+cite$ -- 75
+duplicate$ -- 1096
+empty$ -- 1761
+format.name$ -- 315
+if$ -- 4804
 int.to.chr$ -- 3
 int.to.str$ -- 0
 missing$ -- 67
-newline$ -- 307
-num.names$ -- 209
-pop$ -- 456
+newline$ -- 303
+num.names$ -- 206
+pop$ -- 452
 preamble$ -- 1
-purify$ -- 434
+purify$ -- 428
 quote$ -- 0
-skip$ -- 870
+skip$ -- 861
 stack$ -- 0
-substring$ -- 1496
+substring$ -- 1484
 swap$ -- 227
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 356
+type$ -- 350
 warning$ -- 11
-while$ -- 196
+while$ -- 194
 width$ -- 0
-write$ -- 809
+write$ -- 799
 (There were 2 error messages)

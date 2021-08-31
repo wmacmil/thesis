@@ -196,8 +196,6 @@ twin prime is a prime gap.
 
 \begin{definition}\label{def:def11}
 A \emph{twin prime} is a prime that has a prime gap of two.
-\end{definition}
-\begin{definition}\label{def:def12}
 A \emph{prime gap} is the difference between two successive prime numbers.
 \end{definition}
 
@@ -369,7 +367,6 @@ the number theorists presentation of twin prime.
 \AgdaBound{p}\<%
 \end{code}
 
-
 We see that \term{isSuccessivePrime} captures this meaning, interpreting
 ``successive" as the type of suprema in the prime number ordering. We also see
 that all the primality proofs must be given explicitly. The term \term{primeGap}
@@ -377,26 +374,24 @@ then has to reference this successive prime data, even though most of it is
 discarded and unused in the actual program returning a number. A GF translation
 would ideally be kept as simple as possible. We also use propositional equality
 here, which is another departure from classical mathematics, as will be
-elaborated later \ref{e}.
+elaborated later \ref{e}. Finally, \term{twinPrime} is a specialized version of
+\term{primeGap} to 2. ``has a prime gap of two`` needs to be interpreted ``whose
+prime gap is equal to two", and writing a GF grammar capable of disambiguating
+\emph{has} in mathematics generally is likely impossible. One can also uncurry
+much of the above code to make it more readable, which we include in the
+appendix \ref{twin}.
 
-Finally, \{twinPrime} is a specialized version of \term{primeGap} to 2. ``has a
-prime gap of two`` needs to be interpreted ``whose prime gap is equal to two",
-and writing a GF grammar capable of disambiguating \emph{has} in mathematics
-generally is likely impossible. One can also uncurry much of the above code to
-make it more readable, which we include in the appendix \ref{twin}.
-
-While working on this example, I tried to prove that 2 is prime in Agda with
-this defintion. It turned out to be nontrivial. When I told this to an analyst
-(in the mathematical sense) he remarked that couldn't possibly be the case
-because it's something which a simple algorithm can compute (or generate). This
-exchange was incredibly stimulating, for the mathematian didn't know about the
-\emph{propositions as types} principle, and was simply taking for granted his
-internal computational capacity to confuse it for proof, especially in a
-constructive setting. He also seemed perplexed that anyone would find it
-interesting to prove that 2 is prime. The proof that 2 is prime, via Agda's
-standard libary, is done via reflection - a way of quoting a term into in
-abstract syntax tree and then performing some kind of metacomputation. While
+As a personal anecdote, I tried to prove that 2 is prime in Agda, which turned
+out to be nontrivial. When I told this to a mathematician he remarked that
+couldn't possibly be the case because it's something which a simple algorithm
+can compute (or generate). This exchange was incredibly stimulating, for the
+mathematian didn't know about the \emph{propositions as types} principle, and
+was simply taking for granted his internal computational capacity to confuse it
+for proof, especially in a constructive setting. He also seemed perplexed that
+anyone would find it interesting to prove that 2 is prime. Agda's standard
+libary proof is done with tactics and reflection - a way of quoting a term into
+in abstract syntax tree and then performing some kind of metacomputation. While
 elegant, this obviously requires a lot of machinery, none of which would be easy
-to communicate to a mathematician who doesn't know much about coding. As is
-hopefully revealed by this discussion, seemingly trivial things, when treated by
-the type theorist or linguist, can become wonderful areas of exploration.
+to communicate to a mathematician who doesn't know much about coding. Seemingly
+trivial things, when treated by the type theorist or linguist, can become
+wonderful areas of exploration.
