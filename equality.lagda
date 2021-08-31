@@ -1,4 +1,4 @@
-\subsection{What is Equality?}
+\subsection{What is Equality?} \label{e}
 
 % quote peter dybjer at oplss
 % all out assault on equality

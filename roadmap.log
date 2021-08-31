@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  31 AUG 2021 13:26
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  31 AUG 2021 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1884,9 +1884,6 @@ Overfull \hbox (10.37508pt too wide) in paragraph at lines 607--607
 [21]
 \openout4 = `roadmap.ptb'.
 
-
-LaTeX Warning: Reference `twins' on page 22 undefined on input line 380.
-
 ! Too many }'s.
 l.382 Finally, \{twinPrime}
                             is a specialized version of \term{primeGap} to 2...
@@ -2292,11 +2289,11 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  33764 strings out of 479819
- 646987 string characters out of 5895846
+ 646983 string characters out of 5895846
  1193651 words of memory out of 5000000
  50100 multiletter control sequences out of 15000+600000
  538521 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,814b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (89 pages, 2215704 bytes).
+Output written on roadmap.xdv (89 pages, 2215808 bytes).

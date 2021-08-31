@@ -102,7 +102,7 @@ then has to reference this successive prime data, even though most of it is
 discarded and unused in the actual program returning a number. A GF translation
 would ideally be kept as simple as possible. We also use propositional equality
 here, which is another departure from classical mathematics, as will be
-elaborated later \ref{twins}.
+elaborated later \ref{e}.
 
 Finally, \{twinPrime} is a specialized version of \term{primeGap} to 2. ``has a
 prime gap of two`` needs to be interpreted ``whose prime gap is equal to two",
