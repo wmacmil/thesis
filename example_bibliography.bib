@@ -1,9 +1,9 @@
 
-@Book{angelovApi,
-  author = {Angelov , Krasimir}, 
+@misc{angelovApi,
+  author = {Angelov , Krasimir},
   title = {{PGF}},
-  %%Comment year = 2020,
-  publisher = {\url{https://hackage.haskell.org/package/gf-3.11.0/docs/PGF.html}}
+  year = 2010,
+  howpublished = {\url{https://hackage.haskell.org/package/gf-3.11.0/docs/PGF.html}}
 }
 
 @InProceedings{twelf,
@@ -20,14 +20,14 @@ isbn="978-3-540-48660-2"
 }
 
 @Book{warrickCub,
-  author = {Macmillan , Warrick}, 
+  author = {Macmillan , Warrick},
   title = {{cubicalTT}},
   year = 2021,
   publisher = {\url{https://github.com/wmacmil/AgdaGrammar}}
 }
 
 @Book{cubicaltt,
-  author = {Mörtberg , Anders}, 
+  author = {Mörtberg , Anders},
   title = {{cubicaltt}},
   year = 2018,
   publisher = {\url{https://github.com/mortberg/cubicaltt}}
@@ -35,8 +35,8 @@ isbn="978-3-540-48660-2"
 
 @INPROCEEDINGS{705656,
   author={Hermida, C. and Makkai, M. and Power, J.},
-  booktitle={Proceedings. Thirteenth Annual IEEE Symposium on Logic in Computer Science (Cat. No.98CB36226)}, 
-  title={Higher dimensional multigraphs}, 
+  booktitle={Proceedings. Thirteenth Annual IEEE Symposium on Logic in Computer Science (Cat. No.98CB36226)},
+  title={Higher dimensional multigraphs},
   year={1998},
   volume={},
   number={},
@@ -214,7 +214,8 @@ address = {Berlin, Heidelberg}
 @misc{buzzard2020will,
   title={When will computers prove theorems?},
   author={Buzzard, Kevin},
-  year={2020}
+  year={2020},
+  howpublished={\url{https://www.ma.imperial.ac.uk/~buzzard/xena/computers.pdf}}
 }
 
 @book{ml1984,
@@ -247,7 +248,7 @@ URL= {https://school.grammaticalframework.org/2021/},
 
 
 @Book{rantaZ,
-  author = {Ranta , Aarne}, 
+  author = {Ranta , Aarne},
   title = {{From machine readable Z to engineer and manager readable English
 }},
   year = 2019,
@@ -274,7 +275,7 @@ url="https://doi.org/10.1007/978-3-642-81955-1_11"
 
 
 @misc{bezem2017univalence,
-      title={The univalence axiom in cubical sets}, 
+      title={The univalence axiom in cubical sets},
       author={Marc Bezem and Thierry Coquand and Simon Huber},
       year={2017},
       eprint={1710.10941},
@@ -396,7 +397,7 @@ abstract = {In this paper we argue, against a somewhat standard view, that pragm
 }
 
 @misc{brunerie2016homotopy,
-      title={On the homotopy groups of spheres in homotopy type theory}, 
+      title={On the homotopy groups of spheres in homotopy type theory},
       author={Guillaume Brunerie},
       year={2016},
       eprint={1606.05916},
@@ -527,7 +528,7 @@ isbn="978-3-540-49178-1"
 
 
 @misc{escardó2020introduction,
-      title={Introduction to Univalent Foundations of Mathematics with Agda}, 
+      title={Introduction to Univalent Foundations of Mathematics with Agda},
       author={Martín Hötzel Escardó},
       year={2020},
       eprint={1911.00580},
@@ -548,7 +549,7 @@ isbn="978-3-540-49178-1"
 }
 
 @misc{fong2016algebra,
-      title={The Algebra of Open and Interconnected Systems}, 
+      title={The Algebra of Open and Interconnected Systems},
       author={Brendan Fong},
       year={2016},
       eprint={1609.05382},
@@ -587,10 +588,10 @@ title = {Personal Correspondance},
 year = 2020
 }
 
-@inproceedings{harperTrinity,
+@misc{harperTrinity,
   title={The Holy Trinity},
   author={Robert Harper},
-  year={2011}
+  year={2011},  howpublished={\url{https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/}}
 }
 
 @article{prat2020relating,
@@ -604,10 +605,19 @@ year = 2020
   publisher={Nature Publishing Group}
 }
 
-@inproceedings{coqPat,
+@inproceedings{coqPat1992_OLD_BAD_REFERENCE,
   title={Pattern Matching with Dependent Types},
   author={T. Coquand},
   year={1992}
+}
+
+@inproceedings{coqPat,
+  title={Pattern matching with dependent types},
+  author={Coquand, Thierry},
+  booktitle={Proceedings of the Workshop on Types for Proofs and Programs},
+  pages={71--83},
+  year={1992},
+  organization={Citeseer}
 }
 
 @misc{pfenningHar,
@@ -799,14 +809,14 @@ series = {SLE 2020}
 }
 
 @Book{rantaTT,
-  author = {Ranta , Aarne}, 
+  author = {Ranta , Aarne},
   title = {{gf-contrib/typetheory}},
   year = 2013,
   publisher = {\url{https://github.com/GrammaticalFramework/gf-contrib/tree/master/typetheory}}
 }
 
 @Book{warrickHarper,
-  author = {Macmillan , Warrick}, 
+  author = {Macmillan , Warrick},
   title = {{GF-Typechecker}},
   year = 2020,
   publisher = {\url{https://github.com/wmacmil/GF_Typechecker}}
@@ -846,7 +856,16 @@ numpages = {11},
 keywords = {finite functions, functional programming, linguistics, morphological description, embedded languages}
 }
 
-@article{ranta_2004, title={Grammatical Framework}, volume={14}, DOI={10.1017/S0956796803004738}, number={2}, journal={Journal of Functional Programming}, publisher={Cambridge University Press}, author={RANTA, AARNE}, year={2004}, pages={145–189}}
+@article{ranta_2004,
+    title={{Grammatical Framework}},
+    volume={14}, DOI={10.1017/S0956796803004738},
+    number={2},
+    journal={Journal of Functional Programming},
+    publisher={Cambridge University Press},
+    author={Ranta, Aarne},
+    year={2004},
+    pages={145–189}
+    }
 
 @article{ljunglof2004expressivity,
   title={Expressivity and complexity of the Grammatical Framework},
@@ -997,8 +1016,17 @@ year = 2021
   publisher={Clarendon Press}
 }
 
-@misc{avigad2015mathematics,
-      title={Mathematics and language}, 
+@incollection{avigad2015mathematics,
+  title={Mathematics and language},
+  author={Avigad, Jeremy},
+  booktitle={Mathematics, Substance and Surmise},
+  pages={235--255},
+  year={2015},
+  publisher={Springer}
+}
+
+@misc{avigad2015mathematics_arxiv_preprint,
+      title={Mathematics and language},
       author={Jeremy Avigad},
       year={2015},
       eprint={1505.07238},
