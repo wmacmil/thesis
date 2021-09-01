@@ -1,6 +1,6 @@
 \section{Grammatical Framework}
 
-\subsection{Thinking about GF}
+\subsection{Introducing GF}
 
 A grammar specification in GF is an abstract syntax, where one specifies trees,
 and a concrete syntax, where one says how the trees compositionally evaluate to
@@ -99,7 +99,7 @@ Spectrum\ of\ GF \arrow[uuu, "Statistical\ Methods?"] \arrow[rrr, "Ranta\ HoTT\ 
 \caption{The Grammatical Dimension} \label{fig:G3}
 \end{figure}
 
-The cubicalTT grammar, seeking syntacitic completeness, only has a pidgin
+The cubicalTT grammar, seeking syntactic completeness, only has a pidgin
 English syntax, and therefore is only to be used for parsing a programming language.
 Ranta's HoTT grammar on the other hand, while capable of presenting a
 quasi-logical form, would require extensive refactoring in order to transform
@@ -109,10 +109,6 @@ expressions, does not yet cover proofs, and therefore would require additional e
 to actually express an Agda program. Finally, we note that large-scale
 coverage of linguistic phenomena for any of these grammars will additionally
 need to incorporate statistical methods in some way. 
-
-Before providing perspectives on the grammar design process, it is also 
-When designing grammars, the foremost question one should ask
-A few remarks on designing GF grammars should be noted as well. 
 
 GF has been show to exist in the PMCFG class of languages \cite{seki91pmcfg},
 between CFGs and context sensitive grammars on the Chomsky Hierarchy
@@ -124,10 +120,9 @@ often there are unforeseen constraints that the programmer must get used to,
 limiting the available palette. These constraints allow for fast parsing, but
 greatly limit the sorts of programs one often thinks of writing.
 
-\subsection{A Brief Introduction to GF}
+\subsection{GF's Technicalities}
 
-GF is a very powerful yet simple system.  While learning the basics may not be
-too difficult for the experienced programmer, GF requires the programmer to work
+GF is a very powerful, yet simple system. GF requires the programmer to work
 with, in some sense, an incredibly stiff set of constraints compared to general
 purpose languages, and therefore its lack of expressiveness requires a different
 way of thinking about programming.
@@ -161,6 +156,8 @@ parameterized over other categories and thereby allow for more fine-grained
 semantic distinctions. We emphasize that GF's dependent types can be used to
 implement a programming language which only parses well-typed terms (and can
 actually compute with them using auxiliary declarations).
+
+\subsubsection{Gödel's T in GF}
 
 In a simply typed programming language we can choose categories, for variables,
 types and expressions. One can then define the functions for the simply typed
@@ -255,9 +252,9 @@ lin
 
 Where did \codeword{TermPrec}, \codeword{infixl}, \codeword{parenth},
 \codeword{mkPrec}, and \codeword{usePrec} come from? These are all functions
-defined in GF's standard library, the RGL. We show a few of them below, thereby
-introducing the final, main GF judgments \term{param} and \term{oper} for
-parameters and operations.
+defined in GF's standard library, the RGL \cite{ranta2009rgl}. We show a few of
+them below, thereby introducing the final, main GF judgments \term{param} and
+\term{oper} for parameters and operations.
 
 \begin{verbatim}
 param 
@@ -279,9 +276,10 @@ linearization rules. They are syntactic sugar - they allow one to abstract the
 function bodies of \term{lin}s and \term{lincat}s so that one may keep the
 actual linearization rules looking clean. Since GF also support \term{oper}
 overloading, one can often get away with often deceptively sleek looking
-linearizations, and this is a key feature of the RGL. The use of \codeword{variants} is one of the
-ways to encode multiple linearizations forms for a given tree, so here, for
-example, we're breaking the key nice property from above.
+linearizations, and this is a key feature of the RGL. The
+use of \codeword{variants} is one of the ways to encode multiple linearizations
+forms for a given tree, so here, for example, we're breaking the key nice
+property from above.
 
 This more or less resembles a typical programming language, with very little
 deviation from what when would expect specifying something in Twelf
@@ -328,12 +326,12 @@ requires a lot work from the grammar writer in this case.
 The subsequent examples should illuminate this tension. The problem of
 merging a syntactically oriented domain like type theory with and a semantically
 oriented one like natural language mathematics with the same abstract syntax poses very serious
-problems, but also highlights the power and need of other features of GF, like the RGL \cite{ranta2009rgl}
+problems, but also highlights the power and need of other features of GF, like the RGL 
 and Haskell embedding made available through the PGF API \cite{angelovApi}.
 
 The GF RGL is a library for parsing grammatically coherent language. It exists
 for many different natural languages, with various levels of coverage and
-grammatically, with a core abstract syntax shared by all of them. The API allows
+grammaticality, with a core abstract syntax shared by all of them. The API allows
 one to easily construct sentence level phrases once the lexicon has been
 defined. The API also provides helper functions for lexical constructions.
 

@@ -2,6 +2,8 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "quickCheck"
+    "warrickQA"
     "angelovApi"
     "twelf"
     "warrickCub"
@@ -55,6 +57,7 @@
     "andreasEmail"
     "harperTrinity"
     "prat2020relating"
+    "coqPat1992_OLD_BAD_REFERENCE"
     "coqPat"
     "pfenningHar"
     "wadler"
@@ -83,6 +86,7 @@
     "frege79"
     "Chomsky57"
     "ranta1994type"
-    "avigad2015mathematics"))
+    "avigad2015mathematics"
+    "avigad2015mathematics_arxiv_preprint"))
  :bibtex)
 

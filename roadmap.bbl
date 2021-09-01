@@ -95,6 +95,12 @@ Chomsky, N. (2009).
 \newblock {\em Syntactic Structures}.
 \newblock De Gruyter Mouton.
 
+\bibitem[Claessen \& Hughes, 2000]{quickCheck}
+Claessen, K. \& Hughes, J. (2000).
+\newblock Quickcheck: A lightweight tool for random testing of haskell
+  programs.
+\newblock {\em SIGPLAN Not.}, 35(9), 268–279.
+
 \bibitem[Cohen et~al., 2015]{cohen:hal-01378906}
 Cohen, C., Coquand, T., Huber, S., \& M{\"o}rtberg, A. (2015).
 \newblock {Cubical Type Theory: a constructive interpretation of the univalence
@@ -233,6 +239,11 @@ Lambek, J., of~Mathematics, M. U.~D., \& Statistics (1989).
 \newblock Rapport du Department of Mathematics and Statistics. McGill
   University, Department of Mathematics and Statistics.
 
+\bibitem[Listenmaa, 2019]{listenmaa2019phd}
+Listenmaa, I. (2019).
+\newblock {\em {Formal Methods for Testing Grammars}}.
+\newblock PhD thesis, {University of Gothenburg}.
+
 \bibitem[Ljungl{\"o}f, 2004]{ljunglof2004expressivity}
 Ljungl{\"o}f, P. (2004).
 \newblock Expressivity and complexity of the grammatical framework.
@@ -249,10 +260,15 @@ Macmillan, W. (2020).
 \newblock {\em {GF-Typechecker}}.
 \newblock \url{https://github.com/wmacmil/GF_Typechecker}.
 
-\bibitem[Macmillan, 2021]{warrickCub}
-Macmillan, W. (2021).
+\bibitem[Macmillan, 2021a]{warrickCub}
+Macmillan, W. (2021a).
 \newblock {\em {cubicalTT}}.
 \newblock \url{https://github.com/wmacmil/AgdaGrammar}.
+
+\bibitem[Macmillan, 2021b]{warrickQA}
+Macmillan, W. (2021b).
+\newblock {QA Grammar}.
+\newblock \url{https://github.com/wmacmil/AgdaGrammar/tree/main/pgfTests}.
 
 \bibitem[Martin{-}L{\"{o}}f, 1984]{ml1984}
 Martin{-}L{\"{o}}f, P. (1984).

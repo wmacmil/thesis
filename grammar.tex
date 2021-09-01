@@ -1,5 +1,3 @@
-PGF 
-% \section{A Spectrum of GF Grammars for types}
 \section{Prior GF Formalizations}
 
 \subsection{CADE 2011} \label{cade}
@@ -91,20 +89,18 @@ problems that have no ultimate automatic solution."
 
 \subsubsection{A Question Answering Example}
 
-
-We wrote a smaller version of the above grammar \cite{warrickCub} just focused on
+We wrote a smaller version of the above grammar \cite{warrickQA} just focused on
 propositional logic. It included an added component not just translating between
 ASTs, but also allowing intermediary computation and of logical
-propositions and numerical expressions. Although this exercise was in some ways
-a digression from the language of proofs, it also highlighted many interesting
-problems.
+propositions and numerical expressions.
 
-We begin with an example : the idea was to create a PGF layer for the evaluation
-of propositional expressions to their Boolean values, and then create a question
-answering system which gave different types of answers - the binary valued
-answer, the most verbose possible answer, and the answer which was deemed the
-most semantically adequate, \codeword{Simple}, \codeword{Verbose}, and
-\codeword{Compressed}, respectively. The system is capable of the following :
+After a Haskell evaluation of propositional expressions to their Boolean values,
+which could possibly in the future be extended to predicate logic, the system
+allows a question answering system which gave different kinds of answers - the
+binary valued answer, the most verbose possible answer, and the answer which was
+deemed the most semantically adequate, \codeword{Simple}, \codeword{Verbose},
+and \codeword{Compressed}, respectively. All answers are technically syntactically
+complete. An example question with the answers follows:
 \begin{verbatim}
 is it the case that if the sum of 3 , 4 and 5 is prime , odd and even then 4
   is prime and even
@@ -118,10 +114,10 @@ is it the case that if the sum of 3 , 4 and 5 is prime , odd and even then 4
 \end{verbatim}
 
 The extended grammar in this case only had lists of propositions and predicates,
-and so it was much simpler than [cite logic]. GF list categories are then
-transformed into Haskell lists via PGF, so the syntactic sugar for a GF list is actually
-functionally tied to its external behavior as well. The functions for our
-discussion are:
+and so it was much simpler than Ranta's Cade grammar. GF list categories are
+then transformed into Haskell lists via the embedding, using GF list syntax
+explicitly is necessary as it is tied to its external behavior as well. The
+functions of interest for our discussion are:
 \begin{verbatim}
   IsNumProp : NumPred -> Object -> Prop ;
   LstNumPred : Conj -> [NumPred] -> NumPred ;
@@ -130,19 +126,20 @@ discussion are:
 
 Note that a numerical predicate, \codeword{NumPred}, represents, for instance,
 primality. In order for our pipeline to answer the question, we had to not only
-do transform trees, $\llbracket - \rrbracket : \{pgfAST\} \rightarrow
-\{pgfAST\}$ , but also evaluate them in more classical domains $\llbracket -
-\rrbracket : \{pgfAST\} \rightarrow \mathds{N}$ for the arithmetic objects and
-$\llbracket - \rrbracket : \{pgfAST\} \rightarrow \mathds{B}$,
-\codeword{evalProp}, for the propositions.
+do transform trees, $\llbracket - \rrbracket : \{AST\} \rightarrow
+\{AST\}$ , but also evaluate them in more classical domains $\llbracket -
+\rrbracket : \{AST\} \rightarrow \mathds{N}$ for the arithmetic objects. The
+boolean semantics, 
+$\llbracket - \rrbracket : \{AST\} \rightarrow \mathds{B}$,
+are called \codeword{evalProp} in Haskell.
 
-The extension adds more complex cases  to cover when
-evaluating propistions, because a normal ``propositional evaluator" doesn't have to
-deal with lists. For the most part, this evaluation is able to just apply
-boolean semantics to the \emph{canonical} propositional constructors, like \codeword{GNot}. However, a
-bug that was subtle and difficult to find appeared, thereby forcing us to dig
-deep inside GIsNumProp, preventing an easy solution to what would otherwise be a
-simple example of denotational semantics.
+The extension adds more complex cases to cover when evaluating propositions,
+because a normal ``propositional evaluator" doesn't have to deal with lists. For
+the most part, this evaluation is able to just apply Boolean semantics to the
+\emph{canonical} propositional constructors, like \codeword{GNot}. 
+However, one had to dig deeper inside \codeword{GIsNumProp} in order to resolve
+bugs in lists.
+
 \begin{verbatim}
 evalProp :: GProp -> Bool
 evalProp p = case p of
@@ -163,62 +160,55 @@ to understand PGF helper functions by just trying to read the code. The more sem
 incorporates into the GF grammar, the larger the PGF GADT, which leads to many
 more cases when evaluating these trees.
 
-There were many obstructions in engineering this relatively simple
-example, particularly when it came to writing test cases. For the naive
-way to test with GF is to translate, and the linearization and parsing functions
-don't give the programmer many degrees of freedom. ASTs are not objects amenable
-to human intuition, which makes it problematic because understanding the
-transformations of them constantly requires parsing and linearizing to see their
-``behavior". While some work has been done to allow testing
-of GF grammars for NL applications [cite inari], the specific domain of formal languages in
-GF requires a more refined notion of testing because they should be testable
-relative to some model with well behaved mathematical properties. Debugging
-something in the pipeline $String \rightarrow GADT \rightarrow GADT \rightarrow
-String$ for a large scale grammar without a testing methodology for each
-intermediate state is surely to be avoided.
+\paragraph{Testing Anecdotes}
 
-Unfortunately, there is no published work on using Quickcheck [cite hughes] with
-PGF. The bugs in this grammar were discovered via the input and output
-\emph{appearance} of strings. Often, no string would be returned after a small
-change, and discovering the source (abstract, concrete, or PGF) was
-excruciating. In one case, a bug was discovered that was presumed to be from the
-PGF evaluator, but was then back-traced to Ranta's grammar from which the code
-had been refactored. The sentence which broke our pipeline from core to
-extended, "4 is prime , 5 is even and if 6 is odd then 7 is even", would be
-easily generated (or at least its AST) by quickcheck.
+There were many obstructions in engineering this relatively simple example,
+particularly when it came to writing test cases. The naive way to test with GF
+is to translate, and the linearization and parsing functions don't give the
+programmer many degrees of freedom. ASTs are not objects amenable to human
+intuition, which makes it problematic because understanding their
+transformations constantly requires parsing and linearizing to see their
+``behavior". While some work has been done to allow testing of GF grammars for
+NL applications \cite{listenmaa2019phd}, the domain of formal languages in GF
+requires a more refined notion of testing because most utterances should be
+testable relative to some model with well behaved mathematical properties.
+Debugging something in the pipeline $String \rightarrow GADT \rightarrow GADT
+\rightarrow String$ for a large scale grammar without a testing methodology for
+each intermediate state is surely to be avoided.
+
+Unfortunately, there is no published work on using Quickcheck \cite{quickCheck}
+with the PGF library. The bugs in this grammar were discovered via the input and
+output \emph{appearance} of strings. Often, no string would be returned after a
+small change, and discovering if the source was in the abstract, concrete, or
+Haskell embedding was excruciating. In one case, a bug was discovered that was
+presumed to be from the PGF evaluator, but was then back-traced to Ranta's
+grammar from which the code had been refactored. The sentence which broke our
+pipeline from core to extended, "4 is prime , 5 is even and if 6 is odd then 7
+is even", would be easily generated (or at least its AST) by Quickcheck.
+
+\paragraph{Theorems and Linguistic Utterances}
 
 An important observation that was made during this development : that theorems
 should be the source of inspirations for deciding which PGF transformations
-should take place. For instance, one could define $odd : \mathds{N}
-\rightarrow Set$, $prime : \mathds{N} \rightarrow Set$ and prove that $\forall n
-\in \mathds{N}.\; n > 2 \times prime\; n \implies odd\; n$. We can use this
-theorem as a source of translation, and in fact encode a PGF rule that
-transforms anything of the form ``n is prime and n is odd" to ``n is prime",
-subject to the condition that $n \neq 2$. One could then take a whole set of
-theorems from predicate calculus and encode them as Haskell functions which
-simplify the expressions to a minified expression with the
-same meaning, up to some notion of equivalence. The verbose ``if $a$ then $b$
-and if $a$ then $c$, can be more canonically read as ``if $a$ then $b$ and $c$".
-The application of these theorems as evaluation functions in Haskell could
-help give our QA example more informative and direct answers.
+should take place. For instance, one could define $odd : \mathds{N} \rightarrow
+Set$, $prime : \mathds{N} \rightarrow Set$ and prove that $\forall n \in
+\mathds{N}.\; n > 2 \times prime\; n \implies odd\; n$. We can use this theorem
+as a source of translation, and in fact encode a PGF rule that transforms
+anything of the form ``n is prime and n is odd" to ``n is prime", subject to the
+condition that $n \neq 2$. One could then take a whole set of theorems from
+predicate calculus and encode them as Haskell functions which minify the
+expressions to something with equivalent meaning. The verbose ``if $a$ then $b$
+and if $a$ then $c$", can be more canonically read as ``if $a$ then $b$ and $c$".
+The application of these theorems as evaluation functions in Haskell could help
+give our QA example more informative and direct answers.
 
-\paragraph{Reflections on Grammar Refactoring}
-One of the difficulties encountered in this work was reverse engineering Ranta's
-code - the large size and declarative nature of a grammar makes it incredibly
-difficult to isolate individual features one may wish to understand. This is
-true for both GF and its Haskell embedding. Significant efforts went into
-filtering the grammars to understand behaviors of individual components of
-interest. Careful usage of the GF module system may allow one to look at
-``subgrammars" in some circumstances, but there is not proper methodology to
-extract a sub-grammar and therefore it was found that writing a grammar from
-scratch was often the easiest way to do this. Grammars can be written
-compositionally (adding new categories and functions, refactoring linearization
-types, etc.) but decomposing them is not a compositional process.
-
-We hope this intricate look at a fairly simple grammar highlights some very
-serious considerations one should make when writing a PGF embedded grammar.
-These include : how does the semantic space the grammar seeks to approximate
-effects the PGF translation, how testing formal grammars is non-trivial but
-necessary future work, and finally, how information (in this case theorems) from
-the domain of approximation can shape and inspire the PGF transformations 
-during the translation process.
+\paragraph{Reflections on Grammar Refactoring} One of the difficulties
+encountered in this work was reverse engineering Ranta's GF and Haskell code-
+the large size and declarative nature of a grammar makes it incredibly difficult
+to isolate individual features one may wish to understand. Significant efforts
+went into filtering the grammars to understand behaviors of individual
+components. Careful usage of the GF module system may sometimes allow one to
+look at ``subgrammars", but there is not proper methodology to extract a
+sub-grammar and therefore it was found that writing a grammar from scratch was
+often the easiest way to do this. While grammars can be written compositionally,
+decomposing them is often not a compositional process.

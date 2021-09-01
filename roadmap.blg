@@ -17,7 +17,7 @@ Illegal, another \bibstyle command---line 33 of file roadmap.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: appendix.aux
 Database file #1: example_bibliography.bib
-I was expecting an "="---line 306 of file example_bibliography.bib
+I was expecting an "="---line 342 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
@@ -31,45 +31,45 @@ Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 79 entries,
+You've used 82 entries,
             2229 wiz_defined-function locations,
-            976 strings with 16364 characters,
-and the built_in function-call counts, 29494 in all, are:
-= -- 2952
-> -- 937
-< -- 88
-+ -- 332
-- -- 290
-* -- 2161
-:= -- 5003
-add.period$ -- 227
-call.type$ -- 79
-change.case$ -- 509
-chr.to.int$ -- 77
-cite$ -- 88
-duplicate$ -- 1360
-empty$ -- 2206
-format.name$ -- 394
-if$ -- 6027
-int.to.chr$ -- 3
+            990 strings with 16683 characters,
+and the built_in function-call counts, 30411 in all, are:
+= -- 3045
+> -- 964
+< -- 91
++ -- 341
+- -- 298
+* -- 2232
+:= -- 5174
+add.period$ -- 236
+call.type$ -- 82
+change.case$ -- 527
+chr.to.int$ -- 79
+cite$ -- 91
+duplicate$ -- 1396
+empty$ -- 2270
+format.name$ -- 407
+if$ -- 6201
+int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 82
-newline$ -- 381
-num.names$ -- 254
-pop$ -- 544
+missing$ -- 83
+newline$ -- 396
+num.names$ -- 263
+pop$ -- 555
 preamble$ -- 1
-purify$ -- 530
+purify$ -- 549
 quote$ -- 0
-skip$ -- 1065
+skip$ -- 1094
 stack$ -- 0
-substring$ -- 1902
-swap$ -- 284
+substring$ -- 1965
+swap$ -- 286
 text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 434
+type$ -- 452
 warning$ -- 9
-while$ -- 245
+while$ -- 252
 width$ -- 0
-write$ -- 1004
+write$ -- 1042
 (There were 2 error messages)
