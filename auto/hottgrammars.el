@@ -2,6 +2,9 @@
  "hottgrammars"
  (lambda ()
    (TeX-run-style-hooks
-    "latex/ContrClean"))
+    "latex/ContrClean")
+   (LaTeX-add-labels
+    "rantaHott"
+    "cubic"))
  :latex)
 

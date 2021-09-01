@@ -1,21 +1,9 @@
-\section{Natural Number Proofs} \label{npf}
+\section{Proofs in GF} \label{npf}
 
-We now explore the ``main goal" of this work : proofs in GF. We commence with 
-perhaps the most natural kind of proof one would expect, those over the
-inductively defined natural numbers. As a proposed foundational alternative to
-mathematics, dependent type theories allow types to depend on terms and
-therefore allow propositions which include terms to be encoded as types.
-
-In the simple type theory example, we included \emph{types} and
-\emph{expressions} as distinct syntactic categories, whereby the linearization
-of a type can't possibly call the linearization of a term. We now experiment
-with a small dependently typed programming language with only $\Pi$-types. The
-big difference for such a simple fragment like natural numbers in the dependent
-setting is the fact that the recursion principle becomes an induction principle.
-The types of a sub-expression being evaluated with a recursive call may depend
-on the values being computing. Extra work is required in implementing
-type-checkers for dependent language because they have to deal with a much more
-sensitive and computationally expensive notion of type.
+We now explore the proofs in GF. As a proposed
+foundational alternative to mathematics, dependent type theories allow types to
+depend on terms and therefore allow propositions which include terms to be
+encoded as types.
 
 A dependent type theorist will assert that every time mathematicians use a
 notion like $\mathbb{R}^n$, they are implicitly quantifying over the natural
@@ -23,24 +11,38 @@ numbers, namely $n$, and therefore are referring to a parameterized type, not a
 \emph{set}. There are many more elaborate examples of dependency in mathematics,
 but because this notation is ubiquitous, we note that the type theorist would
 not be satisfied with many expressions from real analysis, because they assert
-things about $\mathbb{R}^n$ all the time without ever proving anything by
-induction over the numbers. Perhaps this seems pedantic, but it highlights a
-large gap between the type-theorists syntactic approach to mathematics and the
-mathematicians focus on the domain semantics of her field of interest.
+things about $\mathbb{R}^n$ all the time without ever proving anything about
+$\mathbb{R}^n$ by induction over the $n$. Perhaps this seems pedantic, but
+it highlights a large gap between the type-theorist's syntactic approach to
+mathematics and the mathematician's focus on the domain semantics of her field
+of interest.
 
-Delaying a more in depth discussion of equality [ref later section], we here
-assert that one proves equality in Agda by finding something that is \emph{irrefutably
-equal} to itself, where the notion of irrefutably is in some sense gave birth to
-subject matter of higher type theory.  Taking this for granted, we begin by
-looking at one of the simplest natural numbers proof's : that addition is
-associative.
+Delaying a more in depth discussion of equality \ref{e}, we assert that one
+proves equality in Agda by finding something that is \emph{irrefutably equal} to
+itself, where the notion of irrefutably gave birth to subject matter of homotopy
+type theory and cubical type theories, which can both be classified as higher
+dimensional type theories.
 
-\subsection{Associativity of Natural Numbers} \label{assoc}
+\subsection{Natural Numbers Proofs} \label{assoc}
 
-We define addition in Agda by recursion on the first argument, and notice that
-the sum of two natural numbers is always a natural number. Therefore, agda has
+The most idiomatic kind of proof one would expect are those over the inductively
+defined natural numbers. In the simple type theory example \ref{godel} we
+included \emph{types} and \emph{expressions} as distinct syntactic categories,
+whereby the linearization of a type can't possibly call the linearization of a
+term. We now experiment with dependently typed programming languages. The big
+difference in the dependently typed setting is the fact that the recursion
+principle becomes an induction principle. The types of a sub-expression being
+evaluated with a recursive call may depend on the values being computing. This
+means extra work is required in implementing type-checkers for dependent
+language - they have to deal with a much more sensitive and computationally
+expensive notion of type. Additionally, a mixture of types and terms creates
+difficulties in capturing natural language phenomena when trying to distinguish
+between proposition and proof.
+
+\subsubsection{The Associativity of Natural Numbers} \label{npf}
+
+We define addition in Agda by recursion on the first argument. Agda has
 the capacity to always compute the sum of two given natural numbers, via the
-defining equations, and indeed $2+2=4$ is irrefutably true. Additionally, we
-know that $0$ added to a number is always that number.
+defining equations, and indeed $2+2=4$ is irrefutably true.
 
 \input{latex/nproof}

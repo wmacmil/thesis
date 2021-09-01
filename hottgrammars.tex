@@ -1,88 +1,88 @@
-\subsection{Ranta's HoTT Grammar}
+\subsection{Ranta's HoTT Grammar} \label{rantaHott}
 
 In 2014, Ranta gave an unpublished talk at the Stockholm Mathematics Seminar
-\cite{aarneHott}. Fortunately the code is available, although many of the design
-choices aren't documented in the grammar. This project aimed to provide a
-translation like the one desired in our current work, but it took a real piece
-of mathematics text as the main influence on the design of the abstract syntax.
+\cite{aarneHott}. This project aimed to provide a translation like the one
+desired in our current work, but it took a real piece of mathematics text as the
+main influence on the design of the grammar.
 
-This work took a page of text from Peter Aczel's book which more or less goes
-over standard HoTT definitions and theorems. The grammar allows the translation
-of the latex document in English to the same document in French, and to a pidgin
+Using a page of text from Peter Aczel's writings goes over a few
+standard HoTT definitions and theorems, the grammar allows the translation of
+the latex document in English to the same document in French, and to a pidgin
 logical language. The central motivation of this grammar was to capture entirely
-``real" natural language mathematics, i.e. that which was written for the
-mathematician. Therefore, it isn't reminiscent of the slender abstract syntax
-the type theorist adores, and sacrificed ``syntactic completeness" for
-``semantic adequacy". This means that the abstract syntax is much larger and
-very expressive, but it no longer becomes easy to reason about and additionally
-quite ad-hoc. Another defect is that this grammar overgenerates, so producing a
-unique parse from the PL side would require a significant amount of refactoring.
-Nonetheless, it is presumably possible to carve a subset of the
-GF HoTT abstract file to accommodate an Agda program, but one encounters rocks
-as soon as one begins to dig.
+``real" natural language mathematics. Therefore, it isn't reminiscent of the
+slender abstract syntax the type theorist adores, and sacrificed ``syntactic
+completeness" for ``semantic adequacy". The abstract syntax is much larger and
+very expressive, but is no longer easy to reason about. Additionally, certain
+design choices feel ad-hoc. Another defect is that this grammar overgenerates
+when parsing from the pidgin logical language. Producing a unique parse from the
+PL side would require a significant amount of refactoring. While it is
+presumably possible to carve a subset of the GF HoTT abstract file to
+accommodate an Agda program, but one encounters rocks as soon as one begins to
+dig.
 
 In \autoref{fig:R1} one can see different syntactic presentations of a notion of
-\emph{contractability}, that a space is deformable into a single point, or that a Type
-is actually inhabited by a unique term. Some rendered latex taken verbatim from
-Ranta's test code, compared with the translated pidgin logic code (after
-refactoring of Ranta's linearization scheme) and an Agda program. We see that it was
-fairly easy to get the notation for our cubicalTT grammar [ref cubicaltt].
-When parsing the logical form, unfortunately, the grammar is incredibly ambiguous.
+\emph{contractability}, that a space is deformable into a single point, or that
+a Type is actually inhabited by a single unique term. Some rendered latex is
+compared with the translated pidgin logic code (after refactoring of Ranta's
+linearization scheme) and an Agda program. We see that it was fairly easy to get
+the notation for our cubicalTT grammar \ref{cubic}. When parsing the logical
+form, unfortunately, the grammar is incredibly ambiguous.
 
 \input{latex/ContrClean}
 
 To extend this grammar to accommodate a chapter worth of material, let alone a
 book, will not just require extending the lexicon, but encountering other
-syntactic phenomena that will further be difficult to compress when defining
-Agda's concrete syntax. This demonstrates that to design a grammar prioritizing
-\emph{semantic adequacy} and subsequently trying to incorporate \emph{syntactic
-completeness} becomes a very difficult problem. Depending on the application of
-the grammar, the emphasis on this axis is most assuredly a choice one should
-consider up front.
+syntactic phenomena that will further be difficult to compress when writing a
+dual grammar for Agda's concrete syntax. This demonstrates that to design a
+grammar prioritizing \emph{semantic adequacy} and subsequently trying to
+incorporate \emph{syntactic completeness} is difficult, and probably not the
+best grammar design choice.
 
-The next grammar, taking an actual programming language
-parser in Backus-Naur Form Converter (BNFC), GFifying it, and trying to use the
-abstract syntax to model natural language, gives in some sense a dual challenge,
-where the abstract syntax remains simple as in our dependently typed grammar,
-but its linearizations become increasingly complex, especially when generating
+The next grammar we present, taking an actual programming language parser in
+BNFC, GFifying it, and trying to use the abstract syntax to model natural
+language, gives in some sense a dual challenge, where the abstract syntax
+remains simple as in our dependently typed grammar \ref{npf}, but its
+linearizations may become increasingly complex, especially when generating
 natural language.
 
-\subsection{cubicalTT Grammar}
+\subsection{cubicalTT Grammar} \label{cubic}
 
 Cubical type theories arose out of the desire to give a complete computational
-interpretation to HoTT, whereby nonviolence would become a theorem rather than
-an axiom \cite{cohen:hal-01378906}. The utility of this is that canonicity, the
+interpretation to HoTT, whereby univalence would become a theorem rather than an
+axiom \cite{cohen:hal-01378906}. The utility of this is that canonicity, the
 property of an expression having a irreducible normal form, is satisfied for all
-expressions. Univalence, by introducing a type without computational behavior,
-means that the constructivist using Agda will be able to define terms which
-don't normalize.
+expressions - all natural number expressions must evaluate to numerals.
+Univalence in classical HoTT, by introducing a type without computational
+behavior, means that the constructivist using Agda will be able to define terms
+which don't normalize.
 
-The origin of cubical, looking beyond simplicial models of type theory to
-cubical categories instead \cite{bezem2017univalence}, gave a blueprint for a
-totally new type theory which natively supports proving functional
-extensionality, which is a especially important for mathematicians. The ideas of
-cubical became the origin for a new series of proof assistants, cubical [cite
-https://github.com/simhu/cubical] and cubicaltt [cite
-https://github.com/mortberg/cubicaltt], and Cubical Agda \cite{cubicalAgda}, as
-well as other in originating from Robert Constables disciples in the NuPrl
-tradition [cite redprl, redtt, jonprl]. cubicalTT, which was relatively
-complete, had an unambiguous BNFC grammar, more or less represents a kernel of
-Agda with cubical primitives. This final grammar, which we don't as cubicalTT,
-took the actual cubicalTT grammar and GFified the subset which is in the
-intersection with vanilla Agda. Extending our GF version to include cubical
-primitives would facilitate the extension of the work to Cubical Agda, and we
-hope future endeavors will go in this direction. Cubical Agda
-supports Higher Inductive Types natively and is capable of all types of new
-constructions [cite stuff] not mentioned in the HoTT book, but is also
-incredibly experimental, with large changes to the standard library constantly
-underway as in [refer intro].
+Cubical Type Theories originated when looking beyond simplicial models of type
+theory to cubical categories instead \cite{bezem2017univalence}, and gave a
+blueprint for a totally new type theory which natively supports proving
+functional extensionality, which is a especially important for mathematicians.
+The ideas from cubical type theories cubical generated a series of proof
+assistants: Cubical \cite{huberCub}, cubicalTT \cite{cubicaltt}, and Cubical
+Agda \cite{cubicalAgda}, as well as other in originating from Robert Constables
+disciples in the NuPrl tradition \cite{Angiuli_2018} \cite{redTT} \cite{coolTT}.
+cubicalTT, had an unambiguous BNFC grammar which more or less represents a
+kernel of Agda with cubical primitives. This final grammar, which we simply
+denote as cubicalTT, took the actual cubicalTT grammar and GFified the subset
+which is in the intersection with vanilla Agda. Extending our GF version to
+include cubical primitives would facilitate the extension of the work to Cubical
+Agda, and we hope future endeavors will go in this direction. Cubical Agda
+supports Higher Inductive Types \cite{hits} natively and is capable of all types
+of new constructions not mentioned in the HoTT book. It is also incredibly
+experimental, with large changes to the standard library constantly underway as
+can be seen in \ref{homo}.
 
-Our grammar for vanilla dependent $\Pi$-types [refer earlier section] was actually
-a subset of the current cubicalTT abstract syntax. We give a brief sketch of the
-algorithm to go between a BNFC grammar and a GF grammar. BNFC essentially
-combines the abstract and concrete syntax, enabling a hierarchy of numbered
-expressions \term{ExpN} to minimize use of parentheses. So, given m names and
-choosing $Name_i$, with the accompanying rule :
+\subsubsection{GFification}
+
+Our grammar for vanilla dependent $\Pi$-types \ref{npf} was actually a subset of
+the current cubicalTT abstract syntax. We give a brief sketch of the algorithm
+to go between a BNFC grammar and a GF grammar. BNFC essentially combines the
+abstract and concrete syntax, enabling a hierarchy of numbered expressions
+\term{ExpN} to minimize use of parentheses. So, given $m$ names and choosing
+$Name_i$, we take the accompanying BNFC rule :
 
 $$Name_i.\; ReturnCat_{i_n} ::= s^0_{i}\;C^0_{i_0}\;...\;C^{n-1}_{i_{n-1}}\;s^n_{i}\;;$$
 
@@ -95,9 +95,9 @@ $$fun\; Name_i\:{:} C^0 \rightarrow ... \rightarrow C^{n-1} \rightarrow ReturnCa
 $$lincat \: \bigcap\{ReturnCat_i,C^0,..., C^{n-1}\}\;; = TermPrec$$
 $$lin \; Name_i\;c^0\;... \;c^n = mkPrec(i_n,(s^0_{i}\texttt{++}usePrec(i_0+1,c^0)\texttt{++}...\texttt{++}usePrec(i_{n-1}+1,c^{n-1})\texttt{++}s^n_{i})) ;$$
 
-where $c^j \in C^j \; \forall i,j$, and \term{usePrec} and \term{mkPrec} come
-from the RGL, as seen earlier. We also note that some \term{lincat} might
-actually just be strings (or something else), for it is only when a precedence
+where $c^i \in C^j \; \forall i,j$, and \term{usePrec} and \term{mkPrec} come
+from the RGL, as seen earlier. We also note that some \term{lincat}s can be
+arbitrary linearization types, for it is only when a precedence
 is observed that the \codeword{TermPrec} is applicable. The use of
 \term{usePrec} is only applicable when $i_k$ isn't empty. Additionally, this
 doesn't account for the fact that already some categories may have been
@@ -124,30 +124,26 @@ This more or less elaborates exactly how to implement a programming language
 with unambiguous parsing in GF. There is also a simple means of translating
 lists, including BNFC's \term{separator} and \term{terminator} keywords during
 the linearization process. Finally, there is a custom \term{token} keyword, and
-this is perhaps the most important feature absent in GF.
-Because BNFC generates Haskell code reminiscent of the PGF embedding, it would
-also be possible to translate the trees directly, if parsing complexity with GF
-was found to be slower than BNFC.
+this is perhaps the most important feature absent in GF. Because BNFC generates
+Haskell code similar to GF, it would also be possible to translate the trees
+directly, if parsing complexity with GF was found to be slower than BNFC.
 
-Most interestingly is to look at what is absent in BNFC, namely, the ability to
-add records and paremeters into the linearization types generally, although
-these GF features are implicitly used to encode precedence. For one could add
-unique categories in GF $Exp_1,...,Exp_n$, but this would clutter the abstract
-syntax with information which isn't \emph{semantically} relevant. And while the
-Haskell code generated by BNFC for cubicalTT is sent through a resolver to the
-\emph{actual} abstract syntax used by the type-checker and evaluator, the fact
-that it parses the concrete syntax into an appropriate intermediary form is
-enough for our purposes.
-
-We give the full grammar, including examples, in the appendix \ref{cubicaltt}.
+Most interesting is to observe what GF has but is absent in BNFC, namely, the
+ability to add records and paremeters into the linearization types generally.
+One could add unique categories in GF $Exp_1,...,Exp_n$, but this would clutter
+the abstract syntax with information which isn't \emph{semantically} relevant.
+And while the Haskell code generated by BNFC for cubicalTT is sent through a
+resolver to the \emph{actual} abstract syntax used by the type-checker and
+evaluator, the fact that it parses the concrete syntax into an appropriate
+intermediary form is enough for our purposes. The grammar is available at
+\cite{warrickCub}.
 
 \subsubsection{Difficulties}
 
-While our grammar certainly supports a real programming language syntax, modulo
-a few quarks, linearizing to a CNL for mathematics was not implemented due to
+While cubicalTT gives unique parses a PL, linearizing to a CNL for mathematics was not implemented due to
 time constraints, and the difficulties already encountered for an even simpler
 programming language \ref{assoc}, namely that types and terms in dependent type
-theory can be of just about any grammatical category, where we list a few :
+theory can be of just about any grammatical category. We list a few examples :
 
 \begin{itemize}
 \item nouns, ``zero"
@@ -155,23 +151,23 @@ theory can be of just about any grammatical category, where we list a few :
 \item verbs, ``add"
 \item verb phrase, ``apply the function to the subset of..."
 \item sentence, ``if x is odd, then y is even"
-\item paragraph or more, ``suppose x. then by y we know z. hence, w. but the v
-  gives additionally gives us..."
+\item paragraph or more, ``suppose x. then by y we know z. hence, w. but ..."
 \end{itemize}
 
 In \cite{rantaZ}, the authors, generating human readable natural language from
 specifications, used a word type with many different fields for different
 grammatical categories (with the same grammatical categories sometimes
 accounting for multiple fields), in addition to symbolic fields. While deemed
-successful by the client, it would be interesting to apply this methodology to 
-cubicalTT the grammar, and see how it scales once one begins to add more
-of Agda's capabilities. Their system also involved other components, like
-haskell transformations, and it is uncertain how these specific approaches would
-also allow for the generation of more \emph{semantically adequate} language.
+successful by the client, it would be interesting to apply this methodology to
+cubicalTT the grammar, and see how it scales once one begins to add more of
+Agda's capabilities. Their system also involved other components like Haskell
+transformations, and it is uncertain how these specific approaches would also
+allow for the generation of more \emph{semantically adequate} mathematical
+language.
 
 Other issues encountered in this grammar were Agda's pattern matching, whereby
 arguments are arranged in a matrix, as opposed to explicit cases, or \emph{splits}.
-While cubicalTT allows syntax like
+We define \codeword{equalNat} in cubicalTT as:
 
 \begin{verbatim}
 equalNat : nat -> nat -> bool = split
@@ -186,7 +182,9 @@ equalNat : nat -> nat -> bool = split
 The problem is that when linearizing a split, one cannot know how many further
 splits will take place, and so going from this form to the more ``readable" Agda
 code below is outside of GF's linearization capabilities - although a proof of
-this fact would require advanced mathematical capabilities.
+this fact would require advanced mathematical capabilities. One could instead
+just a new form of declarations in the abstract syntax, but this would require
+more Haskell overhead to allow for the correct AST transformations.
 
 \begin{verbatim}
 equalNat : nat → nat → bool
@@ -196,110 +194,98 @@ equalNat (suc n1) zero = false ;
 equalNat (suc n1) (suc n2) = equalNat n1 n2
 \end{verbatim}
 
-One could instead just introduce a new form of declarations in the abstract
-syntax so-as to allow for \term{equalNat}, but this would require more Haskell
-overhead to allow for the correct AST transformations. 
-
-The way lists are dealt with in natural language vs. programming
-languages present obstacles, because the RGL's support for lists require certain
-numbers of categories in the end node, e.g. \codeword{cat[2]}, whereas our Agda
+The way lists are dealt with in natural language versus programming
+languages also present obstacles, because the RGL's support for lists require $2$ 
+numbers of categories in the end node whereas our Agda
 grammar may instead have \codeword{cat[1]} or \codeword{cat[0]} for the same
-category, thereby require overloading of categories for the two linearization
-spaces, or alternatively adding more complexity to the linearization categories.
-
-While presented succinctly here, these obstacles were legitimate difficulties
-which obliged us to test them on smaller grammars to isolate the phenomena
-trying to be overcome.
+category. Resolving this overloading of categories for the two linearization
+spaces will also require Haskell transformations. 
 
 \subsubsection{More advanced Agda features}
 
-Our grammar realistically covers just a small kernel of Agda's features and
-syntax. Agda supports much more, both in terms of syntactic sugar and
-semantically interesting. Aside from telescopes, other syntactic sugar features
+Our grammar covers just a small kernel of Agda's features and
+syntax. Aside from telescopes, other syntactic sugar features
 of Agda include unicode support, do notation, idiom brackets, generalized
 variable declarations, and more. While require significant work to extend the 
 cubicalTT grammar with these, it is doubtful
 these kinds of features offer significant theoretical challenges in terms of
 translation to natural language.
 
-From the semantic side, however, Agda offers many features which extend just the kernel
-of the $\Pi$, $\Sigma$, and recursive data type definitions which form the basis
-of any dependent type theory. These include universes, sized types, modules,
-overloading for more ad-hoc polymorphism, proof by reflection, a sort system,
-higher inductive types (thanks to cubical), and many more things visible in the Agda documentation [cite agda docs].
-Additionally, it has more traditional PL features, like the ability to perform
-side effects or call Haskell functions. Adding any one of these not only adds
-overhead to the parser, but would require lots of thought in terms of how to
-these features manifest in natural language for mathematicians (and programmers).
-Additionally, these features make the metatheory of Agda much more expensive to
-understand, in addition to the practical implications of introducing bugs in its
+From the semantic side, however, Agda offers many features which extend just the
+kernel of the $\Pi$, $\Sigma$, and recursive data type definitions which form
+the basis of any dependent type theory. These include universes, sized types,
+modules, overloading for more ad-hoc polymorphism, proof by reflection, a sort
+system, higher inductive types (only in Cubical Agda), and many more things
+visible in the Agda documentation \cite{agdaDocs}. Additionally, it has more
+traditional PL features, like the ability to perform side effects or call
+Haskell functions. Adding any one of these not only adds overhead to the parser,
+but would require lots of thought in terms of how to these features manifest in
+natural language for mathematicians (and programmers). Additionally, these
+features make the metatheory of Agda much more expensive to understand, in
+addition to the practical implications of introducing bugs in its
 implementation.
 
 Mathematics on the other hand, doesn't often introduce more advanced ``semantic
-machinery" like those listed, at least not in a way that is explicitly designed.
-Perhaps idioms and conventions change, as well as generalizations, i.e. Category
-Theory, offering ways of presenting ideas more succinctly, but these are merely
-reflected in the presentation, not in the underlying logical formalism. The
-linguistic evolution of mathematics additionally reflects some kind of
-meta-changes, but not in a coherent way that is yet understood. For many
-mathematicians are largely interested in proving theorems and solving problems
-specific to some domain, and many mathematicians are unfamiliar with logic as a
-discipline as a whole, let alone type theory.
-
-The resolution of these meta-ideas from both the type theoretic and mathematical
-perspectives is what makes this problem of translation so philosophically
-intriguing, as well as intractable. We hope these observations might offer some
-light when trying to examine any one of these deep and undeveloped problems.
+machinery" like those Agda features just listed. Perhaps idioms and conventions
+change, as well as general machinery like category theory offer ways of presenting
+ideas more succinctly, but these are merely reflected in the presentation, not
+in the underlying logical formalism. The linguistic evolution of mathematics
+additionally reflects some kind of meta-changes, but not in a coherent way that
+is documented or even understood. For many mathematicians are largely interested
+in proving theorems and solving problems specific to some domain. The resolution
+of these meta-ideas from both the type theoretic and mathematical perspectives
+is what makes this problem of translation so philosophically intriguing, as well
+as even more intractable.
 
 \subsection{Comparing the Grammars}
 
-To conclude this section, we compare the Ranta's HoTT grammar and our cubicalTT
-grammar. We hope that doing so offers some final insights into how to approach
-the problem of syntactic
-completeness and semantic adequacy. 
+We compare the Ranta's HoTT grammar and our cubicalTT grammar, with a focus on
+comparing syntactic completeness and semantic adequacy.
 
-cubicalTT is in some sense takes expressions as its epicenter, whereby
-declarations, branches, telescopes, where expressions, and lists offer syntactic
+Our cubicalTT grammar takes expressions as its epicenter, whereby
+declarations, branches, telescopes, ``where expressions", etc. offer syntactic
 sugar so that it becomes a minimally readable programming language. It is a
-synthetic approach to writing a grammar, whereby one has an a priori idea of
+synthetic approach to writing a grammar, whereby one has an \emph{a priori} idea of
 what an expression syntactically should be, with the most important feature
 being that it is inductively generated. It is not really concerned with
 semantics per-se, because this is the job of the type-checker and evaluator.
 
-HoTT, on the other hand, analyses real text, and decisions about the grammar are
-made posterior to observing phenomena.  The grammar makes distinction between
-\codeword{Formulas}, namely expressions with symbolic support for latex, 
-\codeword{Framework} which allows one to construct natural language sentences,
-and a \codeword{HottLexicon}. This grammar, while having some inductive notion
-of what an expression is, puts the bulk of work in producing valid sentences in \codeword{Framework}.
+Ranta's HoTT grammar on the other hand, analyses real text, and decisions about
+the grammar are made posterior to observing phenomena in the text being
+analyzed. The grammar makes distinction between \codeword{Formulas.gf}, namely
+expressions with symbolic support for latex, \codeword{Framework.gf} which allows
+one to construct natural language sentences, and a \codeword{HottLexicon.gf}. This
+grammar, while having some inductive notion of what an expression is, puts the
+bulk of work in producing valid sentences in \codeword{Framework.gf}.
 
 \begin{verbatim}
 cat
   Paragraph ;        -- definition, theorem, etc
   Definition ;       -- definition of a new concept
-  Assumption ;       -- assumption in a proof  -- let ...
-  [Assumption]{1} ;  -- list of assumptions in one sentence -- let ... and ...
-  Conclusion ;       -- conclusion in a proof -- thus P
-  Prop ;             -- proposition (sentence or formula) -- A is contractible
+  Assumption ;       -- assumption in a proof  
+  [Assumption]{1} ;  -- list of assumptions in one sentence 
+  Conclusion ;       -- conclusion in a proof 
+  Prop ;             -- proposition (sentence or formula) 
   Sort ;             -- set, type, etc corresponding to a common noun
   Ind ;              -- individual, element, corresponding to a singular term
   Fun ;              -- function with individual value
-  Pred ;             -- predicate: function with proposition value -- contractible
-  [Ind] ;            -- list of individual expressions   -- 1, 2 and 3
-  UnivPhrase ;       -- universal noun phrase          -- for all x,y : A
-  ConclusionPhrase ; -- conclusion word                -- hence
-  Label ;            -- name/number of definition, theorem, etc -- Id-induction
+  Pred ;             -- predicate: function with proposition value 
+  [Ind] ;            -- list of individual expressions  
+  UnivPhrase ;       -- universal noun phrase          
+  ConclusionPhrase ; -- conclusion word               
+  Label ;            -- name/number of definition, theorem, etc 
   Title ;            -- title for theorem, definition, etc
 \end{verbatim}
 
-The distinction between individuals, propositions,
-sorts, functions, and predicates also allows more nuance, but delegates the work
-of deciding what category a term represents much more difficult, which makes the
-possibility of having some algorithm infer the right category much more
-difficult. The expressions can be embedded into any of these categories.  Additionally, 
-we see that the universal phrase, the notion of a $\Pi$-type, merits semantic 
+The distinction between individuals, propositions, sorts, functions, and
+predicates also allows more nuance, but delegates the work of deciding what
+category a term represents much more difficult, in addition to complicating the
+possibility of having some algorithm infer the right category. The expressions,
+\codeword{Exp}, can be embedded into any of these categories. Additionally, we
+see that the universal phrase, the notion of a $\Pi$-type, merits semantic
 distinction in this grammar, with unique functions being assigned for all the
-(observed) ways of saying it - this is the case with existential statements as well.
+(observed) ways of saying it - this is the case with existential statements as
+well.
 
 \begin{verbatim}
   plainUnivPhrase   : [Var] -> Sort -> UnivPhrase ;  -- for x, y : A
@@ -311,9 +297,9 @@ distinction in this grammar, with unique functions being assigned for all the
 
 One caveat is that set comprehensions are treated as expressions, whereas
 existential phrases are propositions, even though to the Agda programmer they
-are the same thing. This differences obviously arises in the fact
+are the \emph{same thing}. This differences obviously arises in the fact
 that expressions are meant to be symbolic in this grammar, whereas functions
-taking \term{Exp} arguments generally return things of grammatical categories
+taking \term{Exp} arguments generally return things with grammatical categories
 with possibly auxiliary data, i.e.
 
 \begin{verbatim}
@@ -331,10 +317,10 @@ oper
 Ranta clearly chose to treat prioritize semantic adequacy by placing the
 grammatical categories at the forefront. This was not an error, as Peter Azcel
 wrote this mixing notations from set theory, type theory, first order logic, and
-homotopy theory presented in a Latex document. For as much as the
-type theorist insists on his or her exclusive use of types, the written language
-tradition is still tied to the logical and set theoretic tradition of presenting
-mathematics - and this constraint arises in a more expressive abstract syntax. 
+homotopy theory. For as much as the type theorist insists on her
+exclusive use of types, the written language tradition is still tied to the
+logical and set theoretic tradition of presenting mathematics - and this
+constraint arises in a more expressive abstract syntax.
 
 This includes document structure categories, \codeword{Title}, \codeword{Label},
 \codeword{Paragraph}, \codeword{Definition}, \codeword{Conclusion}, etc. While
@@ -348,8 +334,8 @@ Another observation of the grammar is that the certain notions come with more
 semantic information that the type-checker would be able to infer, so for
 instance, \codewrod \codeword{fiberExp} is a binary function, as opposed to the
 cubicalTT grammar which treats it as a variable and explicitly uses the
-application operator for each of its arguments, leading to the application hell
-observed in our earlier work.
+application operator for each of its arguments, leading to the application hell 
+observed earlier \ref{appHell}.
 
 Despite the complexity of the abstract syntax relative to cubicalTT, it is
 remarkable that Ranta was able to capture the entire text with a few days of
@@ -357,7 +343,7 @@ labor. Expertise in GF, however, reveals itself through trial, error, and
 patience. Despite the success, we hypothesize that extending it to longer
 lengths of text would very difficult for anyone without deep knowledge of GF and
 type theory generally. The ease of extending cubicalTT to cover more text,
-, despite its limitations regarding language generation, pose a dual problem of
+despite its limitations regarding language generation, pose a dual problem of
 extending the concrete syntax each time a new grammatical ``feature" is discovered.
 
 We have taken the text parsed by Ranta's HoTT grammar and implemented both an
@@ -421,7 +407,8 @@ The ``in-between" depth is to include \term{Nat} as an expression, whereby the
 zero, successor, and induction principle, included as functions, retain their
 arities from the actual programming language, but don't actually specify what
 types of expressions work for them - this work is delegated to the type-checker.
-While this has the benefit of disallowing the ``application hell" we saw in our
+While this has the benefit of disallowing the ``application hell" we saw in
+\ref{appHell} our
 unreadable natural language proof, it also requires what we'll passively call
 ``arity inference", and therefore some components of the type-checker would be
 needed to scale this depth of embedding functions into Haskell. Additionally,

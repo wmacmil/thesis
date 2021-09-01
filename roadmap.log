@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  1 SEP 2021 11:20
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  1 SEP 2021 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1142,8 +1142,12 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 (./roadmap.aux (./intro.aux) (./preliminaries.aux) (./previouswork.aux) (./gfin
-tro.aux) (./grammar.aux) (./natproof.aux) (./latex/equality.aux) (./hottgrammar
-s.aux) (./conclusion.aux) (./appendix.aux))
+tro.aux) (./grammar.aux) (./natproof.aux
+
+LaTeX Warning: Label `npf' multiply defined.
+
+) (./latex/equality.aux) (./hottgrammars.aux) (./conclusion.aux) (./appendix.au
+x))
 \openout1 = `roadmap.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
@@ -1905,18 +1909,22 @@ Overfull \hbox (4.52766pt too wide) in paragraph at lines 193--205
 [26] [27]) [28]
 \openout2 = `gfintro.aux'.
 
-(./gfintro.tex [29
+(./gfintro.tex
+
+Package natbib Warning: Citation `bnfc' on page 29 undefined on input line 64.
+
+[29
 
 
 ] [30]
-Overfull \hbox (1.09044pt too wide) in paragraph at lines 130--133
+Overfull \hbox (1.09044pt too wide) in paragraph at lines 131--134
 []\TU/DejaVuSerif(0)/m/n/10.95 The two functions displayed in []Figure 5[][], $
 [][][][][] [] [][][][][][][][][] [] [][][][][][][][]$ and $[][][][][][][][][] [
 ]
  []
 
 
-Overfull \hbox (5.19357pt too wide) in paragraph at lines 136--145
+Overfull \hbox (5.19357pt too wide) in paragraph at lines 137--146
 \TU/DejaVuSerif(0)/m/n/10.95 presumably not diverge. Parsing a GF grammar is do
 ne in polynomial time, whereby
  []
@@ -1978,126 +1986,104 @@ op c (GListNumPred (xs))) obj) in[]
 \openout4 = `roadmap.ptb'.
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][] 
  []
 
 
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 643--643
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
  [][][][] 
  []
 
+[42]
 \openout4 = `roadmap.ptb'.
 
-[42] [43])) [44]
+[43])) [44] [45]
 \openout2 = `latex/equality.aux'.
 
 (./latex/equality.tex
 \openout4 = `roadmap.ptb'.
 
-[45
+[46
 
 
-]) [46]
+]) [47]
 \openout2 = `hottgrammars.aux'.
 
 (./hottgrammars.tex (./latex/ContrClean.tex
 \openout4 = `roadmap.ptb'.
 
-
-! LaTeX3 Error: Verbatim argument of command '\codeword' ended by end of line.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.119 ...deword{fiber} has the type \codeword{it :
-                                                  
-
-The verbatim argument of the command '\codeword' cannot contain more than one
-line, but the end of the current line has been reached. You may have forgotten
-the closing delimiter.
-
-LaTeX will ignore '{it :'.
-
-
-! Too many }'s.
-l.120 Set}
-           instead of something like \codeword{(y : B) : Set}, and the y var...
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-[47
-
-
-]
 \openout4 = `roadmap.ptb'.
 
-) [48]
+) [48
+
+
+] [49]
 Overfull \hbox (3.28198pt too wide) detected at line 96
 [][][] [][][][][] [][] [][][] [][] [] [][][][][][][][][][] [][][][][][][][][][]
 [][][][] [] [][] [][][][][][][][][][][][][][][][][][] [] [][] [][][][][][][][][
 ]
  []
 
-[49] [50] [51] [52]
-Overfull \hbox (1.91154pt too wide) in paragraph at lines 293--293
+[50] [51] [52] [53]
+Overfull \hbox (1.91154pt too wide) in paragraph at lines 278--278
 []  \TU/DejaVuSansMono(0)/m/n/10.95 Ind ;              -- individual, element, 
 corresponding to a singular term[] 
  []
 
-[53]
+[54]
 ! Undefined control sequence.
-l.349 instance, \codewrod
+l.335 instance, \codewrod
                           \codeword{fiberExp} is a binary function, as oppos...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2105,9 +2091,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[54]
+[55]
 ! Undefined control sequence.
-l.416 ...e the builtin number to it, i.e. \codword
+l.402 ...e the builtin number to it, i.e. \codword
                                                   {Int -> Nat}. Unless one
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2115,36 +2101,78 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[55] [56]) [57]
+[56] [57]) [58]
 \openout2 = `conclusion.aux'.
 
-(./conclusion.tex [58
+(./conclusion.tex [59
 
 
 ]
 
-Package natbib Warning: Citation `borges' on page 59 undefined on input line 10
+Package natbib Warning: Citation `borges' on page 60 undefined on input line 10
 0.
 
-[59]) [60] (./roadmap.bbl [61
+[60]) [61] (./roadmap.bbl
+! Missing $ inserted.
+<inserted text> 
+                $
+l.53 \newblock \url|http://www.jucs.org/jucs_
+                                             23_1/higher_inductive_types_in|.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-] [62]
-Underfull \hbox (badness 4353) in paragraph at lines 264--267
-[]\TU/DejaVuSerif(0)/m/n/10.95 Macmillan, W. (2021a).  \TU/DejaVuSerif(0)/m/it/
-10.95 cubicalTT\TU/DejaVuSerif(0)/m/n/10.95 .  []$[][][][][] [] [] [] [][][][][
-][] [] [][][] [] [][][][][][][] []
+! Missing $ inserted.
+<inserted text> 
+                $
+l.54 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.54 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.54 
+     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[62
+
+] [63] [64]
+Underfull \hbox (badness 10000) in paragraph at lines 305--308
+[]\TU/DejaVuSerif(0)/m/n/10.95 Macmillan, W. (2021a).  cubicalTT.  []$[][][][][
+] [] [] [] [][][][][][] [] [][][] [] [][][][][][][] []
  []
 
-[63]
-Underfull \hbox (badness 10000) in paragraph at lines 369--373
-[]\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  \TU/DejaVuSerif(0)/m/it/10.95
- gf-contrib/typetheory\TU/DejaVuSerif(0)/m/n/10.95 .  []$[][][][][] [] [] [] []
-[][][][][] [] [][][] []
+
+Underfull \hbox (badness 2435) in paragraph at lines 310--313
+[]\TU/DejaVuSerif(0)/m/n/10.95 Macmillan, W. (2021b).  QA Grammar.  []$[][][][]
+[] [] [] [] [][][][][][] [] [][][] [] [][][][][][][] []
  []
 
-[64]
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 424--428
+[]\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  gf-contrib/typetheory.  []$[]
+[][][][] [] [] [] [][][][][][] [] [][][] []
+ []
+
 ! Misplaced alignment tab character &.
-l.415 ...tion for Computing Machinery and Morgan &
+l.475 ...tion for Computing Machinery and Morgan &
                                                    Claypool.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2153,10 +2181,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-) [65]
+[66]) [67]
 \openout2 = `appendix.aux'.
 
-(./appendix.tex [66
+(./appendix.tex [68
 
 ]
 Missing character: There is no ̌ in font cmmi10!
@@ -2173,7 +2201,7 @@ l.116 ...a \vdash \lambda x. b {:} \Pi x {:} A. B}
                                                   
 (That was another \errmessage.)
 
-[67]
+[69]
 ! Extra }, or forgotten $.
 l.136 ...ambda x.f)\, x \equiv f {:} \Pi x{:}A. B}
                                                   $$
@@ -2183,16 +2211,16 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[68] (./latex/monoid.tex
+[70] (./latex/monoid.tex
 \openout4 = `roadmap.ptb'.
 
 \openout4 = `roadmap.ptb'.
 
-[69]) (./latex/twinsigma.tex
+[71]) (./latex/twinsigma.tex
 
-LaTeX Warning: Reference `twinprime' on page 70 undefined on input line 133.
+LaTeX Warning: Reference `twinprime' on page 72 undefined on input line 133.
 
-[70]
+[72]
 \openout4 = `roadmap.ptb'.
 
 )
@@ -2201,7 +2229,7 @@ Overfull \hbox (280.99213pt too wide) in paragraph at lines 371--371
 uctive families, and therefore the datatype (& labels) need to be modified[] 
  []
 
-[71] [72]
+[73] [74]
 Overfull \hbox (72.2311pt too wide) in paragraph at lines 371--371
 \TU/DejaVuSansMono(0)/m/n/10.95 > ( ( b ) ( x ) ) ) ( p : ( x : a ) -> ( ( ( b 
 ) ( x ) ) ( ( f ) ( x ) ) == ( ( g ) ( x ) ) ) )[] 
@@ -2213,7 +2241,7 @@ Overfull \hbox (177.7104pt too wide) in paragraph at lines 371--371
  L , M , N , O , P , Q , R , S , T , U , V , W , X , Y , Z : AIdent ;[] 
  []
 
-[73] [74]
+[75] [76]
 Overfull \hbox (32.67632pt too wide) in paragraph at lines 509--509
 []  \TU/DejaVuSansMono(0)/m/n/10.95 Id e1 e2 e3 = mkPrec 3 (usePrec 4 e1 ++ use
 Prec 4 e2 ++ "==" ++ usePrec 3 e3) ;[] 
@@ -2237,10 +2265,10 @@ Overfull \hbox (8.50397pt too wide) in paragraph at lines 509--509
 ++ "," ++ usePrec 0 e2 ++ ")") ;[] 
  []
 
-[75] [76] (./latex/compare.tex
+[77] [78] (./latex/compare.tex
 \openout4 = `roadmap.ptb'.
 
-[77] [78]
+[79] [80]
 Overfull \hbox (22.64977pt too wide) in paragraph at lines 449--514
  [][][] 
  []
@@ -2253,7 +2281,7 @@ Overfull \hbox (22.64977pt too wide) in paragraph at lines 522--632
 
 LaTeX Warning: Float too large for page by 257.37898pt on input line 633.
 
-)) [79] [80] [81]
+)) [81] [82] [83]
 
 Package natbib Warning: There were undefined citations.
 
@@ -2265,7 +2293,7 @@ s.aux) (./conclusion.aux) (./appendix.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 315.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: 7513E3D6A657EC12F7F38E5D4C74DF8B;3542.
+(rerunfilecheck)             Checksum: 85B43969911BE47ECD5776C772837AF0;3694.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
@@ -2273,14 +2301,17 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 33815 strings out of 479819
- 648029 string characters out of 5895846
+ 33850 strings out of 479819
+ 648566 string characters out of 5895846
  1193651 words of memory out of 5000000
- 50151 multiletter control sequences out of 15000+600000
+ 50186 multiletter control sequences out of 15000+600000
  538521 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,814b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (86 pages, 2228492 bytes).
+Output written on roadmap.xdv (88 pages, 2228892 bytes).

@@ -4,6 +4,11 @@
 Abel, A. (2020).
 \newblock Personal correspondance.
 
+\bibitem[Abel, 2002]{warrickPrec}
+Abel, A. e.~a. (2002).
+\newblock {BNFC}.
+\newblock \url{https://github.com/bnfc/bnfc}.
+
 \bibitem[Angelov, 2010]{angelovApi}
 Angelov, K. (2010).
 \newblock {PGF}.
@@ -24,6 +29,13 @@ Angelov, K., Bringert, B., \& Ranta, A. (2010).
 \newblock {PGF: A Portable Run-time Format for Type-theoretical Grammars}.
 \newblock {\em Journal of Logic, Language and Information}, 19(2), 201--228.
 
+\bibitem[Angiuli et~al., 2018]{Angiuli_2018}
+Angiuli, C., Cavallo, E., Hou~(Favonia), K.-B., Harper, R., \& Sterling, J.
+  (2018).
+\newblock The redprl proof assistant (invited paper).
+\newblock {\em Electronic Proceedings in Theoretical Computer Science}, 274,
+  1–10.
+
 \bibitem[Avigad, 2015]{avigad2015mathematics}
 Avigad, J. (2015).
 \newblock Mathematics and language.
@@ -33,6 +45,12 @@ Avigad, J. (2015).
 \bibitem[Bar et~al., 2016]{Bar2016GlobularAO}
 Bar, K., Kissinger, A., \& Vicary, J. (2016).
 \newblock Globular: an online proof assistant for higher-dimensional rewriting.
+
+\bibitem[Basold et~al., 2017]{hits}
+Basold, H., Geuvers, H., \& van~der Weide, N. (2017).
+\newblock Higher inductive types in programming.
+\newblock 23(1), 63--88.
+\newblock \url|http://www.jucs.org/jucs_23_1/higher_inductive_types_in|.
 
 \bibitem[Bernardy \& Chatzikyriakidis,
   2017]{bernardy-chatzikyriakidis-2017-type}
@@ -110,6 +128,14 @@ Cohen, C., Coquand, T., Huber, S., \& M{\"o}rtberg, A. (2015).
   and Programs  (pp.\ 262).  Tallinn, Estonia: {Schloss
   Dagstuhl--Leibniz-Zentrum fuer Informatik}.
 
+\bibitem[Constable et~al., 1986]{nuprl}
+Constable, R.~L., Allen, S.~F., Bromley, H.~M., Cleaveland, W.~R., Cremer,
+  J.~F., Harper, R.~W., Howe, D.~J., Knoblock, T.~B., Mendler, N.~P.,
+  Panangaden, P., Sasaki, J.~T., \& Smith, S.~F. (1986).
+\newblock {\em Implementing Mathematics with the Nuprl Proof Development
+  System}.
+\newblock USA: Prentice-Hall, Inc.
+
 \bibitem[Coquand, 1992]{coqPat}
 Coquand, T. (1992).
 \newblock Pattern matching with dependent types.
@@ -151,6 +177,16 @@ Dybjer, P. \& Palmgren, E. (2020).
 \bibitem[Escardó, 2020]{escardó2020introduction}
 Escardó, M.~H. (2020).
 \newblock Introduction to univalent foundations of mathematics with agda.
+
+\bibitem[et~al., 2005]{agdaDocs}
+et~al., N. (2005).
+\newblock {Agda Docs}.
+\newblock \url{https://agda.readthedocs.io/en/v2.6.2/team.html}.
+
+\bibitem[Favonia, 2020]{coolTT}
+Favonia (2020).
+\newblock {coolTT}.
+\newblock \url{https://github.com/redprl/cooltt}.
 
 \bibitem[Fong, 2016]{fong2016algebra}
 Fong, B. (2016).
@@ -206,6 +242,11 @@ Hermida, C., Makkai, M., \& Power, J. (1998).
 \newblock In {\em Proceedings. Thirteenth Annual IEEE Symposium on Logic in
   Computer Science (Cat. No.98CB36226)}  (pp.\ 199--206).
 
+\bibitem[Huber, 2014]{huberCub}
+Huber, S. (2014).
+\newblock {Cubical}.
+\newblock \url{https://github.com/simhu/cubical}.
+
 \bibitem[Jackson, 2002]{2002TheWO}
 Jackson, A. (2002).
 \newblock The world of blind mathematicians.
@@ -257,12 +298,12 @@ Luo, Z. (2012).
 
 \bibitem[Macmillan, 2020]{warrickHarper}
 Macmillan, W. (2020).
-\newblock {\em {GF-Typechecker}}.
+\newblock {GF-Typechecker}.
 \newblock \url{https://github.com/wmacmil/GF_Typechecker}.
 
 \bibitem[Macmillan, 2021a]{warrickCub}
 Macmillan, W. (2021a).
-\newblock {\em {cubicalTT}}.
+\newblock {cubicalTT}.
 \newblock \url{https://github.com/wmacmil/AgdaGrammar}.
 
 \bibitem[Macmillan, 2021b]{warrickQA}
@@ -293,6 +334,13 @@ Martin-Löf, P. (1987).
 \newblock Truth of a proposition, evidence of a judgement, validity of a proof.
 \newblock {\em Synthese}, 73(3), 407--420.
 
+\bibitem[McBride, 2002]{motive}
+McBride, C. (2002).
+\newblock Elimination with a motive.
+\newblock In P. Callaghan, Z. Luo, J. McKinna, R. Pollack, \& R. Pollack
+  (Eds.), {\em Types for Proofs and Programs}  (pp.\ 197--216).  Berlin,
+  Heidelberg: Springer Berlin Heidelberg.
+
 \bibitem[Montague, 1973]{Montague1973}
 Montague, R. (1973).
 \newblock {\em The Proper Treatment of Quantification in Ordinary English},
@@ -318,6 +366,13 @@ Pfenning, F. \& Sch{\"u}rmann, C. (1999).
   systems.
 \newblock In {\em Automated Deduction --- CADE-16}  (pp.\ 202--206).  Berlin,
   Heidelberg: Springer Berlin Heidelberg.
+
+\bibitem[Pierce et~al., 2010]{pierce2010software}
+Pierce, B.~C., Casinghino, C., Gaboardi, M., Greenberg, M., Hri{\c{t}}cu, C.,
+  Sj{\"o}berg, V., \& Yorgey, B. (2010).
+\newblock Software foundations.
+\newblock {\em Webpage: http://www. cis. upenn. edu/bcpierce/sf/current/index.
+  html}.
 
 \bibitem[Pit-Claudel, 2020]{coqAlec}
 Pit-Claudel, C. (2020).
@@ -367,7 +422,7 @@ Ranta, A. (2011b).
 
 \bibitem[Ranta, 2013]{rantaTT}
 Ranta, A. (2013).
-\newblock {\em {gf-contrib/typetheory}}.
+\newblock {gf-contrib/typetheory}.
 \newblock
   \url{https://github.com/GrammaticalFramework/gf-contrib/tree/master/typetheory}.
 
@@ -408,6 +463,11 @@ Schaefer, J.~F. \& Kohlhase, M. (2020).
 Seki, H., Matsumura, T., Fujii, M., \& Kasami, T. (1991).
 \newblock {On Multiple Context-Free Grammars}.
 \newblock {\em {Theoretical Computer Science}}, 88(2), 191--229.
+
+\bibitem[Sterling, 2018]{redTT}
+Sterling, J. (2018).
+\newblock {redTT}.
+\newblock \url{https://github.com/redprl/redtt}.
 
 \bibitem[Stump, 2016]{stump}
 Stump, A. (2016).

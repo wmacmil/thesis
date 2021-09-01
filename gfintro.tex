@@ -60,8 +60,9 @@ grammar from CADE 2011 \cite{rantaLog} built a propositional framework with a co
 extended with other categories to capture syntactic nuance. Ranta's grammar from
 the Stockholm University mathematics seminar in 2014 \cite{aarneHott} took verbatim text from a
 publication of Peter Aczel and sought to show that all the syntactic nuance by
-constructing a grammar capable of NL translation. Finally, our work takes a BNFC
-grammar for a real programming language cubicaltt \cite{cubicaltt}, GFifies it,
+constructing a grammar capable of NL translation. Finally, our work takes a Backus-Naur
+Form Converter (BNFC) \cite{bnfc}
+grammar for the cubicalTT programming language \cite{cubicaltt}, GFifies it,
 producing an unambiguous grammar \cite{warrickCub}.
 
 \begin{figure}[H]
@@ -157,7 +158,7 @@ semantic distinctions. We emphasize that GF's dependent types can be used to
 implement a programming language which only parses well-typed terms (and can
 actually compute with them using auxiliary declarations).
 
-\subsubsection{Gödel's T in GF}
+\subsubsection{Gödel's T in GF} \label{godel}
 
 In a simply typed programming language we can choose categories, for variables,
 types and expressions. One can then define the functions for the simply typed

@@ -1,4 +1,104 @@
 
+@Article{hits,
+  author =     "Henning Basold and Herman Geuvers and Niels van der Weide",
+  title =      "Higher Inductive Types in Programming",
+  abstract =   "We propose general rules for higher inductive   types with non-dependent and dependent elimination rules. These can   be used to give a formal treatment of data types with laws as has   been discussed by David Turner in his earliest papers on Miranda   [Turner(1985)]. The non-dependent elimination scheme is particularly   useful for defining functions by recursion and pattern matching,   while the dependent elimination scheme gives an induction proof   principle. We have rules for non-recursive higher inductive types,   like the integers, but also for recursive higher inductive types   like the truncation. In the present paper we only allow path   constructors (so there are no higher path constructors), which is   sufficient for treating various interesting examples from functional   programming, as we will briefly show in the paper: arithmetic   modulo, integers and finite sets.",
+  journal =    j-jucs,
+  year =       "2017",
+  volume =     "23",
+  number =     "1",
+  pages =      "63--88",
+  date =       "2017-01-28",
+  month =      "jan",
+  note =       "\url|http://www.jucs.org/jucs_23_1/higher_inductive_types_in|"}
+
+
+@article{Angiuli_2018,
+   title={The RedPRL Proof Assistant (Invited Paper)},
+   volume={274},
+   ISSN={2075-2180},
+   url={http://dx.doi.org/10.4204/EPTCS.274.1},
+   DOI={10.4204/eptcs.274.1},
+   journal={Electronic Proceedings in Theoretical Computer Science},
+   publisher={Open Publishing Association},
+   author={Angiuli, Carlo and Cavallo, Evan and Hou (Favonia), Kuen-Bang and Harper, Robert and Sterling, Jonathan},
+   year={2018},
+   month={Jul},
+   pages={1–10}
+}
+
+@misc{agdaDocs,
+  author = {Norell et al.},
+  title = {{Agda Docs}},
+  year = 2005,
+  howpublished = {\url{https://agda.readthedocs.io/en/v2.6.2/team.html}}
+}
+
+
+@misc{coolTT,
+  author = {Favonia},
+  title = {{coolTT}},
+  year = 2020,
+  howpublished = {\url{https://github.com/redprl/cooltt}}
+}
+
+@misc{redTT,
+  author = {Sterling, Jon},
+  title = {{redTT}},
+  year = 2018,
+  howpublished = {\url{https://github.com/redprl/redtt}}
+}
+
+@misc{huberCub,
+  author = {Huber, Simon},
+  title = {{Cubical}},
+  year = 2014,
+  howpublished = {\url{https://github.com/simhu/cubical}}
+}
+
+
+@misc{warrickPrec,
+  author = {Abel, Andreas et al.},
+  title = {{BNFC}},
+  year = 2002,
+  howpublished = {\url{https://github.com/bnfc/bnfc}}
+}
+
+@book{nuprl,
+author = {Constable, R. L. and Allen, S. F. and Bromley, H. M. and Cleaveland, W. R. and Cremer, J. F. and Harper, R. W. and Howe, D. J. and Knoblock, T. B. and Mendler, N. P. and Panangaden, P. and Sasaki, J. T. and Smith, S. F.},
+title = {Implementing Mathematics with the Nuprl Proof Development System},
+year = {1986},
+isbn = {0134518322},
+publisher = {Prentice-Hall, Inc.},
+address = {USA}
+}
+
+@InProceedings{motive,
+author="McBride, Conor",
+editor="Callaghan, Paul
+and Luo, Zhaohui
+and McKinna, James
+and Pollack, Robert
+and Pollack, Robert",
+title="Elimination with a Motive",
+booktitle="Types for Proofs and Programs",
+year="2002",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="197--216",
+abstract="Elimination rules tell us how we may exploit hypotheses in the course of a proof. Many common elimination rules, such as ∨-elim and the induction principles for inductively defined datatypes and relations, are parametric in their conclusion. We typically instantiate this parameter with the goal we are trying to prove, and acquire subproblems specialising this goal to particular circumstances in which the eliminated hypothesis holds. This paper describes a generic tactic, Elim, which supports this ubiquitous idiom in interactive proof and subsumes the functionality of the more specific `induction' and `inversion' tactics found in systems like Coq and Lego[6][7][15]. Elim also supports user-derived rules which follow the same style.",
+isbn="978-3-540-45842-5"
+}
+
+
+@article{pierce2010software,
+  title={Software foundations},
+  author={Pierce, Benjamin C and Casinghino, Chris and Gaboardi, Marco and Greenberg, Michael and Hri{\c{t}}cu, C{\u{a}}t{\u{a}}lin and Sj{\"o}berg, Vilhelm and Yorgey, Brent},
+  journal={Webpage: http://www. cis. upenn. edu/bcpierce/sf/current/index. html},
+  year={2010}
+}
+
+
 
 @article{quickCheck,
 author = {Claessen, Koen and Hughes, John},
@@ -26,6 +126,12 @@ pages = {268–279},
 numpages = {12}
 }
 
+@misc{warrickPrec,
+  author = {Macmillan , Warrick},
+  title = {{Application Precdences Grammar}},
+  year = 2021,
+  howpublished = {\url{https://github.com/wmacmil/GF-Application-Precedences/tree/master}}
+}
 
 
 @misc{warrickQA,
@@ -34,6 +140,28 @@ numpages = {12}
   year = 2021,
   howpublished = {\url{https://github.com/wmacmil/AgdaGrammar/tree/main/pgfTests}}
 }
+
+@misc{warrickCub,
+  author = {Macmillan , Warrick},
+  title = {{cubicalTT}},
+  year = 2021,
+  howpublished = {\url{https://github.com/wmacmil/AgdaGrammar}}
+}
+
+@misc{rantaTT,
+  author = {Ranta , Aarne},
+  title = {{gf-contrib/typetheory}},
+  year = 2013,
+  howpublished = {\url{https://github.com/GrammaticalFramework/gf-contrib/tree/master/typetheory}}
+}
+
+@misc{warrickHarper,
+  author = {Macmillan , Warrick},
+  title = {{GF-Typechecker}},
+  year = 2020,
+  howpublished = {\url{https://github.com/wmacmil/GF_Typechecker}}
+}
+
 
 @misc{angelovApi,
   author = {Angelov , Krasimir},
@@ -55,12 +183,6 @@ abstract="Twelf is a meta-logical framework for the specification, implementatio
 isbn="978-3-540-48660-2"
 }
 
-@Book{warrickCub,
-  author = {Macmillan , Warrick},
-  title = {{cubicalTT}},
-  year = 2021,
-  publisher = {\url{https://github.com/wmacmil/AgdaGrammar}}
-}
 
 @Book{cubicaltt,
   author = {Mörtberg , Anders},
@@ -842,20 +964,6 @@ numpages = {20},
 keywords = {proof presentation, proof browsing, formal verification, literate programming},
 location = {Virtual, USA},
 series = {SLE 2020}
-}
-
-@Book{rantaTT,
-  author = {Ranta , Aarne},
-  title = {{gf-contrib/typetheory}},
-  year = 2013,
-  publisher = {\url{https://github.com/GrammaticalFramework/gf-contrib/tree/master/typetheory}}
-}
-
-@Book{warrickHarper,
-  author = {Macmillan , Warrick},
-  title = {{GF-Typechecker}},
-  year = 2020,
-  publisher = {\url{https://github.com/wmacmil/GF_Typechecker}}
 }
 
 

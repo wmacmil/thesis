@@ -7,6 +7,7 @@
     "latex/compare")
    (LaTeX-add-labels
     "judge"
+    "homo"
     "def:def3"
     "def:def4"
     "cubicaltt"

@@ -22,7 +22,6 @@ id = λ z → z
 \begin{figure}[H]
 \textbf{Definition}:
 A type $A$ is contractible, if there is $a : A$, called the center of contraction, such that for all $x : A$, $\equalH {a}{x}$.
-\caption{Rendered Latex} \label{fig:R1}
 \begin{verbatim}
 isContr ( A : Set ) : Set = ( a : A ) ( * ) ( ( x : A ) -> Id ( a ) ( x ) )
 \end{verbatim}
@@ -30,19 +29,18 @@ isContr ( A : Set ) : Set = ( a : A ) ( * ) ( ( x : A ) -> Id ( a ) ( x ) )
 isContr : (A : Set) → Set
 isContr A =  Σ A λ a → (x : A) → (a ≡ x)
 \end{code}
-\caption{Contractibility} \label{fig:R2}
+\caption{Contractibility} \label{fig:R1}
 \end{figure}
 
-In \autoref{fig:R2}, we show the different syntax presentations of the
+In \autoref{fig:R3}, we show the different syntax presentations of the notion of
 \emph{equivalence}, which is merely a bijection when restricted to sets. This is
-of such fundamental idea in mathematics and HoTT in particular that it merits
-its own chapter in [cite hott], but we only showcase one of its many equivalent
-definitions. We see that the pidgin syntax is stuck with the anaphoric artifact
-from the bloated abstract syntax, \codeword{fiber} has the type \codeword{it :
-Set} instead of something like \codeword{(y : B) : Set}, and the y variable is
-unbound in the \codeword{fiber} expression. This may presumably be fixed with a
-few hours more of tinkering, but becomes even more complicated when not just
-defining new types, but actually writing real mathematical proofs.
+of such fundamental importance in mathematics that it merits its own chapter in
+the HoTT book, but we only showcase one of its many equivalent definitions. We
+see that the pidgin syntax is stuck with the anaphoric artifact,
+\codeword{fiber} has the type \codeword{it : Set} instead of something like
+\codeword{(y : B) : Set}, and the \codeword{y} variable is unbound in the \codeword{fiber}
+expression. This may possibly be fixed with a few hours more of tinkering, but
+creates even more angst if we anticipate trying to translate proofs to Agda.
 
 \begin{figure}[H]
 \textbf{Definition}:

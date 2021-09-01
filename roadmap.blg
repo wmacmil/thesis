@@ -17,12 +17,20 @@ Illegal, another \bibstyle command---line 33 of file roadmap.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: appendix.aux
 Database file #1: example_bibliography.bib
-I was expecting an "="---line 342 of file example_bibliography.bib
+Warning--string name "j-jucs" is undefined
+--line 6 of file example_bibliography.bib
+Repeated entry---line 129 of file example_bibliography.bib
+ : @misc{warrickPrec
+ :                  ,
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 464 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "bnfc"
 Warning--I didn't find a database entry for "borges"
 Warning--empty booktitle in Bar2016GlobularAO
+Warning--empty journal in hits
 Warning--can't use both author and editor fields in Bove2009
 Warning--can't use both author and editor fields in deBruijn1983
 Warning--empty booktitle in 2002TheWO
@@ -31,45 +39,45 @@ Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 82 entries,
+You've used 92 entries,
             2229 wiz_defined-function locations,
-            990 strings with 16683 characters,
-and the built_in function-call counts, 30411 in all, are:
-= -- 3045
-> -- 964
-< -- 91
-+ -- 341
-- -- 298
-* -- 2232
-:= -- 5174
-add.period$ -- 236
-call.type$ -- 82
-change.case$ -- 527
-chr.to.int$ -- 79
-cite$ -- 91
-duplicate$ -- 1396
-empty$ -- 2270
-format.name$ -- 407
-if$ -- 6201
+            1044 strings with 18146 characters,
+and the built_in function-call counts, 34093 in all, are:
+= -- 3407
+> -- 1170
+< -- 98
++ -- 414
+- -- 369
+* -- 2535
+:= -- 5867
+add.period$ -- 267
+call.type$ -- 92
+change.case$ -- 612
+chr.to.int$ -- 89
+cite$ -- 102
+duplicate$ -- 1516
+empty$ -- 2463
+format.name$ -- 488
+if$ -- 6884
 int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 83
-newline$ -- 396
-num.names$ -- 263
-pop$ -- 555
+newline$ -- 447
+num.names$ -- 295
+pop$ -- 608
 preamble$ -- 1
-purify$ -- 549
+purify$ -- 632
 quote$ -- 0
-skip$ -- 1094
+skip$ -- 1197
 stack$ -- 0
-substring$ -- 1965
-swap$ -- 286
-text.length$ -- 26
+substring$ -- 2156
+swap$ -- 296
+text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 452
-warning$ -- 9
-while$ -- 252
+type$ -- 516
+warning$ -- 10
+while$ -- 279
 width$ -- 0
-write$ -- 1042
-(There were 2 error messages)
+write$ -- 1169
+(There were 3 error messages)

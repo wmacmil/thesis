@@ -4,6 +4,7 @@
    (LaTeX-add-labels
     "fig:G1"
     "fig:G2"
-    "fig:G3"))
+    "fig:G3"
+    "godel"))
  :latex)
 
