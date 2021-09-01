@@ -64,7 +64,7 @@ comprehensive grammar.
 \item Aggregation
   $x\ is\ even\ or\ x\ is\ odd\ \mapsto x\ is\ even\ or\ odd$
 \item In-situ quantification \\
-  $\forall\ n\ \in Nat,\ x\ is\ even\ or\ x\ is\ odd \mapsto every\ Nat\ is\ even\ or \odd$
+  $\forall\ n\ \in Nat,\ x\ is\ even\ or\ x\ is\ odd \mapsto every\ Nat\ is\ even\ or\ odd$
 \item Negation
   $it\ is\ not\ that\ case\ that\ x\ is\ even\ \mapsto \x is\ not\ even$
 \item Reflexivitazion
@@ -91,17 +91,6 @@ problems that have no ultimate automatic solution."
 
 \subsubsection{A Question Answering Example}
 
-One of the difficulties encountered in this work was reverse engineering Ranta's
-code - the large size and declarative nature of a grammar makes it incredibly
-difficult to isolate individual features one may wish to understand. This is
-true for both GF and its Haskell embedding. Significant efforts went into
-filtering the grammars to understand behaviors of individual components of
-interest. Careful usage of the GF module system may allow one to look at
-``subgrammars" in some circumstances, but there is not proper methodology to
-extract a sub-grammar and therefore it was found that writing a grammar from
-scratch was often the easiest way to do this. Grammars can be written
-compositionally (adding new categories and functions, refactoring linearization
-types, etc.) but decomposing them is not a compositional process.
 
 We wrote a smaller version of the above grammar \cite{warrickCub} just focused on
 propositional logic. It included an added component not just translating between
@@ -212,6 +201,19 @@ same meaning, up to some notion of equivalence. The verbose ``if $a$ then $b$
 and if $a$ then $c$, can be more canonically read as ``if $a$ then $b$ and $c$".
 The application of these theorems as evaluation functions in Haskell could
 help give our QA example more informative and direct answers.
+
+\paragraph{Reflections on Grammar Refactoring}
+One of the difficulties encountered in this work was reverse engineering Ranta's
+code - the large size and declarative nature of a grammar makes it incredibly
+difficult to isolate individual features one may wish to understand. This is
+true for both GF and its Haskell embedding. Significant efforts went into
+filtering the grammars to understand behaviors of individual components of
+interest. Careful usage of the GF module system may allow one to look at
+``subgrammars" in some circumstances, but there is not proper methodology to
+extract a sub-grammar and therefore it was found that writing a grammar from
+scratch was often the easiest way to do this. Grammars can be written
+compositionally (adding new categories and functions, refactoring linearization
+types, etc.) but decomposing them is not a compositional process.
 
 We hope this intricate look at a fairly simple grammar highlights some very
 serious considerations one should make when writing a PGF embedded grammar.

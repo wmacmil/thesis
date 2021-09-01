@@ -4,9 +4,10 @@
 Abel, A. (2020).
 \newblock Personal correspondance.
 
-\bibitem[Angelov, ]{angelovApi}
-Angelov, K.
-\newblock {\em {PGF}}.
+\bibitem[Angelov, 2010]{angelovApi}
+Angelov, K. (2010).
+\newblock {PGF}.
+\newblock \url{https://hackage.haskell.org/package/gf-3.11.0/docs/PGF.html}.
 
 \bibitem[Angelov, 2011]{angelov2010phd}
 Angelov, K. (2011).
@@ -26,6 +27,8 @@ Angelov, K., Bringert, B., \& Ranta, A. (2010).
 \bibitem[Avigad, 2015]{avigad2015mathematics}
 Avigad, J. (2015).
 \newblock Mathematics and language.
+\newblock In {\em Mathematics, Substance and Surmise}  (pp.\ 235--255).
+  Springer.
 
 \bibitem[Bar et~al., 2016]{Bar2016GlobularAO}
 Bar, K., Kissinger, A., \& Vicary, J. (2016).
@@ -75,6 +78,7 @@ Bove, A., Dybjer, P., \& Norell, U. (2009).
 \bibitem[Buzzard, 2020]{buzzard2020will}
 Buzzard, K. (2020).
 \newblock When will computers prove theorems?
+\newblock \url{https://www.ma.imperial.ac.uk/~buzzard/xena/computers.pdf}.
 
 \bibitem[Chomsky, 1956]{chomsky1956hierarchy}
 Chomsky, N. (1956).
@@ -103,6 +107,8 @@ Cohen, C., Coquand, T., Huber, S., \& M{\"o}rtberg, A. (2015).
 \bibitem[Coquand, 1992]{coqPat}
 Coquand, T. (1992).
 \newblock Pattern matching with dependent types.
+\newblock In {\em Proceedings of the Workshop on Types for Proofs and Programs}
+   (pp.\ 71--83).: Citeseer.
 
 \bibitem[Coscoy et~al., 1995]{proofFrom}
 Coscoy, Y., Kahn, G., \& Th{\'e}ry, L. (1995).
@@ -185,6 +191,8 @@ Hallgren, T. \& Ranta, A. (2000).
 \bibitem[Harper, 2011]{harperTrinity}
 Harper, R. (2011).
 \newblock The holy trinity.
+\newblock
+  \url{https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/}.
 
 \bibitem[Hermida et~al., 1998]{705656}
 Hermida, C., Makkai, M., \& Power, J. (1998).
@@ -317,9 +325,9 @@ Ranta, A. (1994b).
 \newblock In H. Barendregt \& T. Nipkow (Eds.), {\em Types for Proofs and
   Programs}  (pp.\ 352--365).  Berlin, Heidelberg: Springer Berlin Heidelberg.
 
-\bibitem[RANTA, 2004]{ranta_2004}
-RANTA, A. (2004).
-\newblock Grammatical framework.
+\bibitem[Ranta, 2004]{ranta_2004}
+Ranta, A. (2004).
+\newblock {Grammatical Framework}.
 \newblock {\em Journal of Functional Programming}, 14(2), 145–189.
 
 \bibitem[Ranta, 2009]{ranta2009rgl}
