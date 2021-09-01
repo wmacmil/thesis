@@ -31,7 +31,7 @@ sugaring these dependently typed interpretations of utterances into the strings
 themselves - introducing the common nouns as types idea which has been since
 seen great interest from both type theoretic and linguistic communities
 \cite{luoCNs}. Therefore, if we interpret the set of men and the set of donkeys
-as types, e.g. we judge $\vdash man \; {:} {\rm type}$ and $\vdash donkey \; {:}
+as types, e.g. we judge $\vdash man \; {:}\: {\rm type}$ and $\vdash donkey \; {:}\:
 {\rm type}$ where ${\rm type}$ really denotes a universe, and ditransitive verbs
 ``owns'' and ``beats'' as predicates, or dependent types over the CN types, i.e.
 $\vdash owns \; {:} man \rightarrow donkey \rightarrow {\rm type}$ we can
@@ -232,48 +232,61 @@ QED is the very tentative title of a project to build a computer system that eff
 \end{displayquote}
 
 The ambition of the QED Manifesto, with formalization and informalization of
-mathematics being a subset, is probably impossible. The myriad attempts
-at formalization and informalization are too much to compress here - a survey
-and comparison of these ideas is unfortunately unavailable. We recount some of
-them briefly.
+mathematics being a subset of its grandiose vision, is probably impossible. We
+examine a few of the myriad attempts at languages providing a bridge between the
+formal and informal mathematics.
+
+N.G. de Brujn's Automath \cite{debrujn}, a language for expressing mathematics
+developed at Eindhoven in the late 60s was a pioneer. It was the first CNL for
+mathematics well. It gave the first notion of a proof object. It put the notion
+of substitution of variables at its center, leading to the development of the de
+Brujn presentation of the lambda calculus. Most interestingly for us is the fact
+that it was ``not a programming language", and didn't have a type-checker
+capable of guiding proof development, but a notation for encoding constructions.
+We emphasize this because this notation, which we may now associate with
+concrete syntax, was actually one of the guiding ideas which made Automath so
+powerful and caused it to have such a big influence in the development of ITPs
+generally.
 
 The Naproche project (Natural language Proof Checking) is a CNL for studying the
-language of mathematics by using Proof Representation Structures, a mutated form
-of Discourse Representation Structures \cite{cramer2009naproche}. A central
-goal of Naproche is to develop a controlled natural language (CNL), based off FOL, for
+language of mathematics by using proof representation structures, a mutated form
+of discourse representation structures \cite{cramer2009naproche}. A central
+goal of Naproche is to develop a controlled natural language, based off FOL, for
 mathematics texts. It parses a theorem from the CNL into fully formal
-statement, and then comes with a proof checking back-end to allow verification,
+statement, and then comes with a proof checking back-end to allow for verification,
 where it uses an Automated Theorem Prover (ATP) to check for correctness.
 While the language is quite ``natural looking", it doesn't offer the same
 linguistic flexibility as our GF approach and aspirations.
 
-Mizar is a system attempting to be a formal language,which mathematicians can
-use to express their results, and a database \cite{rudnicki1992overview}. It is
-based off Tarski-Grothendeick set theory, and allows for correctness checking of
-articles. It was originally developed concurrent to Martin-Löf's work in 1973,
-and so much of the interest in types instead of sets couldn't be anticipated.
-The focus Mizar on syntax resembling mathematics was pioneering, nonetheless, it
-uses clumsy references and looks unreadable to those without expertise. Mizar
-has a journal devoted to results in it, \emph{Formalized Mathematics}, and
-offers a large library of known results. Additionally, it has inspired
-iterations for other vernacular proof assistants, like Isabelle's Intelligible semi-automated
-reasoning (Isar) extension \cite{wenzel2004isabelle}.
+Mizar is a system attempting to be a formal language which mathematicians can
+use to express their results, in addition a database of known results
+\cite{rudnicki1992overview}. It is based off Tarski-Grothendeick set theory, and
+allows for correctness checking of articles. It was originally developed in
+Poland concurrent to Martin-Löf's work in 1973, and so much of the interest in
+types instead of sets couldn't be anticipated. Mizar's focus on syntax
+resembling mathematics was pioneering, nonetheless, it uses clumsy references
+and looks unreadable to those without expertise. Mizar has a journal devoted to
+results in it, \emph{Formalized Mathematics}, and offers the largest library of
+for CNL results. Additionally, it has inspired iterations for other vernacular
+proof assistants, like Isabelle's Intelligible semi-automated reasoning (Isar)
+extension \cite{wenzel2004isabelle}.
 
-Subsequently, in \cite{mlTrans}, the authors take a corpus of parallel Mizar proofs natural
-language proofs with latex, and seek to \emph{autoformalize} natural language
-text with the intention of, in the future, further elaboration into an ITP.
-This work uses traditional language models from the machine learning community, and analyze
-the results. They were able to see some results, but nothing that as of yet can
-be foreseen to general use.  Interestingly, a type elaboration mechanism in some
-of their models was shown to bolster results.
+Subsequently, in \cite{mlTrans}, the authors take a corpus of parallel Mizar
+proofs natural language proofs with latex, and seek to \emph{autoformalize}
+natural language text with the intention of, in the future, further elaboration
+into an ITP. This work uses traditional language models from the machine
+learning community. While showing promising initial results, nothing as of yet
+can be foreseen to manifest in general use. There are opinions that large-scale
+autoformalization is feasible \cite{49351}, but our work certainly casts doubts.
+Interestingly, a type elaboration mechanism in some of their models was shown to
+bolster results.
 
 Formalization seems more feasible with machine learning methods than
 informalization , partially because tactics like ``hammer" in Coq for example,
 are capable of some fairly large proofs \cite{czajka2018hammer} . Nonetheless,
 for the Agda developer this isn't yet very relevant, and it's debatable whether
 it would even be desirable. Voevodsky, for example, was apparently skeptical of
-the usefulness of automated theorem proving for much of mathematics, as are many
-mathematicians (although this is certainly changing).
+the usefulness of automated theorem proving for much of mathematics.
 
 The Boxer system, a CCG parser \cite{bos-etal-2004-wide} which allows English
 text translation into FOL. However, it is not always correct, and dealing with
@@ -289,11 +302,7 @@ because of help from the Resource Grammar Library (RGL). The complexity of the s
 untenable for larger proofs - nonetheless, it serves as an important prelude to
 many of the subsequent GF developments in this area.
 
-There are many other examples worth exploring in the natural language and
-theorem prover boundary. It should be noted that GF's role in this space is
-primitive, but it does offer the advantage of providing interface for natural
-languages and programming languages. We also hope other PL developers will and
-use and develop tools like the Grammatical Logical Inference Framework (GLIF),
-which uses GF as a front-end for the Meta-Meta-Theory framework
-\cite{schaefer2020glif}. With many approaches are not mentioned here, we a
-hungry reader should evaluate these many sources with respect to this work.
+It should be noted that GF's role in this space is primitive. Tools like the
+Grammatical Logical Inference Framework (GLIF), which uses GF as a front-end for
+the Meta-Meta-Theory framework \cite{schaefer2020glif}, offer more evidence of
+the role GF may play in this space.

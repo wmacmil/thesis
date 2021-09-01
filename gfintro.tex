@@ -2,12 +2,13 @@
 
 \subsection{Thinking about GF}
 
-A grammar specification in GF is actually just an abstract syntax. With an abstract
-syntax specified, one can then define various linearization rules which
-compositionally evaluate to strings. An Abstract Syntax Tree (AST) may then be
-linearized to various strings admitted by different concrete syntaxes.
-Conversely, given a string admitted by the language being defined, GF's powerful
-parser will generate all the ASTs which linearize to that tree.
+A grammar specification in GF is an abstract syntax, where one specifies trees,
+and a concrete syntax, where one says how the trees compositionally evaluate to
+strings. Multiple concrete syntaxes may be attached to a given abstract syntax,
+and these different concrete syntaxes represent different languages. An AST may
+then be linearized to a string for each concrete syntax. conversely, given a
+string admitted by the language being defined, GF's parser will generate all the
+ASTs which linearize to that tree.
 
 When defining a GF pipeline, one has to merely to construct an abstract syntax
 file and a concrete syntax file such that they are coherent. In the abstract,
@@ -22,23 +23,23 @@ semantic space in non-formal NL applications \cite{ranta2011grammatical}.
 
 Let us revisit the ``tetrahedral doctrine", now restricting our attention to the
 subset of linguistics which GF occupies. We first examine how GF fits into the
-trinity, as seen in  \autoref{fig:G1}. Immediately, GF abstract syntax with
-dependent types can just be seen as an
-implementation of MLTT with the added bonus of a parser.  Additionally, GF is a
-relatively tame Type Theory, and therefore it would be easy to construct a model
-in a general purpose programming language, like Agda.  Embeddings of GF already
-exist in Coq [cite FraCoq], Haskell [cite pgf], and MMT [cite mmt],  These applications allow one to use GF's
-parser so that a GF AST may be transformed into some kind of
-inductively defined tree these languages all support. Future work could involve
-modeling GF in Agda would allow one to prove things about GF
-meta-theorems about soundness and termination, or perhaps statements about
-specific grammars, such as one being unambiguous.
+trinity, as seen in \autoref{fig:G1}. A GF abstract syntax with dependent types
+can just be seen as an implementation of MLTT with the added bonus of a parser
+once one specifies the linearizations. Additionally, GF is a relatively minimal
+type theory, and therefore it would be easy to construct a model in a general
+purpose programming language, like Agda. Embeddings of GF already exist in Coq
+\cite{bernardy-chatzikyriakidis-2017-type}, Haskell \cite{angelov2010pgf}, and
+MMT \cite{Kohlhase_2019}. These applications allow one to use GF's parser so
+that a GF AST may be transformed into some notion of inductively defined tree
+these languages all support. From the logical side, we note that GF's parser
+specification was done using inference rules \cite{angelov2010phd}. Given the
+coupling of Context-Free Grammars (CFGs) and operads (also known as
+multicategories) \cite{lambek1989multicategories} \cite{705656} one could use
+much more advanced mathematical machinery to articulate a categorical semantics
+of GF.
 
-From the logical side, we note that GF's parser specification was done using
-inference rules [cite krasimir]. Given the coupling of Context-Free Grammars
-(CFGs) and operads (also known as multicategories) [cite lambek, etc], one could use much more
-advanced mathematical machinery to articulate and understand GF.  We sketch this
-briefly below [refer].
+% We sketch this briefly
+% below [refer].
 
 \begin{figure}[H]
 \centering
@@ -53,16 +54,15 @@ Math &  &  &                                                                    
 \caption{Models of GF} \label{fig:G1}
 \end{figure}
 
-One can additionally model these domains in GF, which is obviously the main
-focus of this work. In \autoref{fig:G2}, we see that there are 3 grammars which
-give allow one to translate in these domains. Ranta's grammar from CADE 2011,
-built a propositional framework with a core grammar extended with other
-categories to capture syntactic nuance. Ranta's grammar from the Stockholm University
-mathematics seminar in 2014 took verbatim text from a publication of Peter Aczel
-and sought to show that all the syntactic nuance by constructing a grammar
-capable of NL translation. Finally, our work takes a BNFC grammar for a real
-programming language cubicaltt [cite], GFifies it, producing an unambiguous
-grammar.
+One can additionally model these domains in GF. In \autoref{fig:G2}, we see that
+there are 3 grammars which allow one to translate in the Trinitarian domains. Ranta's
+grammar from CADE 2011 \cite{rantaLog} built a propositional framework with a core grammar
+extended with other categories to capture syntactic nuance. Ranta's grammar from
+the Stockholm University mathematics seminar in 2014 \cite{aarneHott} took verbatim text from a
+publication of Peter Aczel and sought to show that all the syntactic nuance by
+constructing a grammar capable of NL translation. Finally, our work takes a BNFC
+grammar for a real programming language cubicaltt \cite{cubicaltt}, GFifies it,
+producing an unambiguous grammar \cite{warrickCub}.
 
 \begin{figure}[H]
 \centering
@@ -83,9 +83,9 @@ we also note that there were many other smaller grammars developed during the
 course of this work to supplement and experiment with various ideas presented.
 Importantly, the ``Trinitarian Grammars" do not only model these different
 domains, but they each do so in a unique way, making compromises and capturing
-various linguistic and formal phenomena. The phenomena should be seen on a
-spectrum of \emph{semantic adequacy} and \emph{syntactic completeness}, as in
-autoref{fig:G3} .  
+various linguistic and formal language phenomena. The phenomena should be seen
+on a spectrum of semantic adequacy and syntactic completeness, as
+in \autoref{fig:G3}.
 
 
 \begin{figure}[H]
@@ -94,40 +94,40 @@ autoref{fig:G3} .
 Lexicon\ Size                                                                                                                                          &  &  & Syntactic\ Completeness \\
                                                                                                                                                        &  &  & {}                      \\
                                                                                                                                                        &  &  &                         \\
-Spectrum\ of\ GF \arrow[uuu, "Statistical\ Methods?"] \arrow[rrr, "Ranta\ HoTT\ '14"'] \arrow[rrruuu, "cubicalTT"] \arrow[rrruu, "Ranta\ Logic\ '14"'] &  &  & Semantic\ Adequacy
+Spectrum\ of\ GF \arrow[uuu, "Statistical\ Methods?"] \arrow[rrr, "Ranta\ HoTT\ '14"'] \arrow[rrruuu, "cubicalTT"] \arrow[rrruu, "Ranta\ Logic\ '11"'] &  &  & Semantic\ Adequacy
 \end{tikzcd}
 \caption{The Grammatical Dimension} \label{fig:G3}
 \end{figure}
 
 The cubicalTT grammar, seeking syntacitic completeness, only has a pidgin
-English syntax, and therefore is only capable of parsing a programming language.
+English syntax, and therefore is only to be used for parsing a programming language.
 Ranta's HoTT grammar on the other hand, while capable of presenting a
 quasi-logical form, would require extensive refactoring in order to transform
 the ASTs to something that resembles the ASTs of a programming language. The
 Logic grammar, which produces logically coherent and linguistically nuanced
 expressions, does not yet cover proofs, and therefore would require additional extensions
-to actually express anything a computer might understand, or, alternatively,
-theorems capable of impressing a mathematician. Finally, we note that large-scale
+to actually express an Agda program. Finally, we note that large-scale
 coverage of linguistic phenomena for any of these grammars will additionally
 need to incorporate statistical methods in some way. 
 
-Before providing perspectives on the grammar design process, it is alo 
+Before providing perspectives on the grammar design process, it is also 
 When designing grammars, the foremost question one should ask
 A few remarks on designing GF grammars should be noted as well. 
 
-The PMCFG class of languages is still quite tame when compared with, for
-instance, Turing complete languages. Thus, the `abstract` and `concrete`
-coupling tight, the evaluation is quite simple, and the programs tend to write
-themselves once the correct types are chosen. This is not to say GF programming
-is easier than in other languages, because often there are unforeseen
-constraints that the programmer must get used to, limiting the palette available
-when writing code. These constraints allow for fast parsing, but greatly limit
-the types of programs one often thinks of writing.
+GF has been show to exist in the PMCFG class of languages \cite{seki91pmcfg},
+between CFGs and context sensitive grammars on the Chomsky Hierarchy
+\cite{chomsky1956hierarchy} Thus, the `abstract` and `concrete` coupling is
+relatively tight, the evaluation is quite simple, and the programs may suggest
+ways of ``writing themselves" once the correct linearization types are chosen.
+This is not to say GF programming is easier than in other languages, because
+often there are unforeseen constraints that the programmer must get used to,
+limiting the available palette. These constraints allow for fast parsing, but
+greatly limit the sorts of programs one often thinks of writing.
 
 \subsection{A Brief Introduction to GF}
 
 GF is a very powerful yet simple system.  While learning the basics may not be
-to difficult for the experienced programmer, GF requires the programmer to work
+too difficult for the experienced programmer, GF requires the programmer to work
 with, in some sense, an incredibly stiff set of constraints compared to general
 purpose languages, and therefore its lack of expressiveness requires a different
 way of thinking about programming.
@@ -136,38 +136,34 @@ The two functions displayed in \autoref{fig:N2}, $Parse : \{Strings\}
 \rightarrow \{\{ASTs\}\}$ and $Linearize : \{ASTs\} \rightarrow \{Strings\}$, obey
 the important property that :
 
- $$\forall s \in \{Strings\} \forall x \in (Parse(s)), Linearize(x) \equiv s$$
+ $$\forall s \in \{Strings\}. \forall x \in (Parse(s)). Linearize(x) \equiv s$$
 
-This seems somewhat natural from the programmers perspective. The limitation on
-ASTs to linearize uniquely is actually a benefit, because it saves the user
-having to make a choice about a translation (although, again, a statistical
-mechanism could alleviate this constraint). We also want our translations to be
-well-behaved mathematically, i.e. composing $Linearize$ and $Parse$ ad
-infinitum should presumably not diverge.
-
-GF captures languages more expressive than Chomsky's original 
-CFG [cite] but is still remains decidable, with parsing in polynomial
-time. Which polynomial depends on the grammar [cite krasimir]. 
-It comes equipped with 6 basic judgments:
+Both the $\{Strings\}$ and $\{\{ASTs\}\}$ are really parameterized by a grammar
+$G$. This property seems somewhat natural from the programmers perspective. The
+limitation on ASTs to linearize uniquely is actually a benefit, because it saves
+the user having to make a choice about a translation (although, again, a
+statistical mechanism could alleviate this constraint). We also want our
+translations to be well-behaved mathematically, i.e. composing $Linearize$ and
+$Parse$ ad infinitum should presumably not diverge. Parsing a GF grammar is done
+in polynomial time, whereby the degree of the polynomial depends on the grammar
+\cite{angelov2010phd} . It comes equipped with 6 basic judgments:
 
 \begin{itemize}[noitemsep]
-  \item Abstract : `cat, fun`
-  \item Concrete : `lincat, lin, param`
-  \item Auxiliary : `oper`
+  \item Abstract : \term{cat} and \term{fun}
+  \item Concrete : \term{lincat}, \term{lin}, and \term{param}
+  \item Auxiliary : \term{oper}
 \end{itemize}
 
 There are two judgments in an abstract file, for categories and named functions
 defined over those categories, namely \term{cat} and \term{fun}. The categories
-are just (succinct) names, and while GF allows dependent types, e.g. categories
-which are parameterized over other categories and thereby allow for more
-fine-grained semantic distinctions. We will leave these details aside, but do
-note that GF's dependent types can be used to implement a programming language
-which only parses well-typed terms (and can actually compute with them using
-auxiliary declarations).
+are just (succinct) names. GF dependent types arise as categories which are
+parameterized over other categories and thereby allow for more fine-grained
+semantic distinctions. We emphasize that GF's dependent types can be used to
+implement a programming language which only parses well-typed terms (and can
+actually compute with them using auxiliary declarations).
 
-In a simply typed programming language we can choose categories, for
-variables, types and expressions, or what might \term{Var}, \term{Typ}, and
-\term{Exp} respectively. One can then define the functions for the simply typed
+In a simply typed programming language we can choose categories, for variables,
+types and expressions. One can then define the functions for the simply typed
 lambda calculus extended with natural numbers, known as Gödel's T.
 
 \begin{verbatim} 
@@ -191,12 +187,12 @@ fun
   IntV : Int -> Var ;
 \end{verbatim}
 
-So far we have specified how to form expressions : types built out of
-possibly higher order functions
-between natural numbers, and expressions built out of lambda and
-natural number terms. The variables are kept as a separate syntactic category,
-and integers, \term{Int}, are predefined via GF's internals and simply allow one
-to parse numeric expressions. One may then define a functional which takes a
+So far we have specified how to form expressions : types built out of possibly
+higher order functions between natural numbers, and expressions built out of
+variables, $\lambda$, application, $0$, the successor function, and recursion
+principle. The variables are kept as a separate syntactic category, and
+integers, \codeword{Int}, are predefined. They allow one to
+parse numeric expressions. One may then define a functional which takes a
 function over the natural numbers and returns that function applied to $1$ - the
 AST for this expression is :
 
@@ -213,23 +209,21 @@ Elam
                 1
 \end{verbatim} 
 
-Dual to the abstract syntax there are parallel judgments when defining a concrete
-syntax in GF, \term{lincat} and \term{lin} corresponding to \term{cat} and
-\term{fun}, respectively. Wher the AST is the specification, the concrete
-form is its implementation in a given lanaguage. The \term{lincat} serves to
-give \emph{linearization types} which are quite simply either strings, records (or products
-which support sub-typing and named fields), or tables (or coproducts) which can
-make choices when computing with arbitrarily named parameters, which are
+Dual to the abstract syntax there are parallel judgments when defining a
+concrete syntax in GF, \term{lincat} and \term{lin} corresponding to \term{cat}
+and \term{fun}, respectively. If an AST is the specification, the concrete form
+is its implementation in a given lanaguage. The \term{lincat} serves to give
+linearization types which are quite simply either strings, records (products
+which support sub-typing and named fields), or tables (coproducts) which can
+make choices when computing with arbitrarily named parameters. Parameters are
 naturally isomorphic to the sets of some finite cardinality. The tables are
 actually derivable from the records and their projections, which is how PGF is
 defined internally, but they are so fundamental to GF programming and
-expressiveness that they merit syntactic distincion.  The \term{lin}
-is a term which matches the type signature of the \term{fun} with which it
-shares a name. The \term{lincat} constrains the concrete types of the arguments,
-and therefore subjects the GF user to how they are used. 
+expressiveness that they merit syntactic distincion. The \term{lin} is a term
+which matches the type signature of the \term{fun} with which it shares a name.
 
 If we assume we are just working with strings, then we can simply define the
-functions as recursively concatenating \term{++} strings. The lambda function
+functions as recursively concatenating \codeword{++} strings. The lambda function
 for pidgin English then has, as its linearization form as follows :
 
 \begin{verbatim}
@@ -237,17 +231,17 @@ lin
   Elam v t e = "function taking" ++ v ++ "in" ++ t ++ "to" ++ e ;
 \end{verbatim}
 
-Once all the relevant functions are giving correct linearizations, one can now
+Once all the relevant function are giving correct linearizations, one can now
 parse and linearize to the abstract syntax tree above the to string ``function
 taking f in the natural numbers to the natural numbers to apply f to 1". This is
 clearly unnatural for a variety of reasons, but it's an approximation of what
 a computer scientist might say. Suppose instead, we choose to linearize this same
-expression to a pidgin expression modeled off Haskell's syntax, ``\\ ( f
-: nat -> nat ) -> f 1". We should notice the absence of parentheses for
+expression to a pidgin expression modeled off Haskell's syntax,
+``$\backslash\backslash$ ( f : nat -> nat ) -> f 1". We should notice the absence of parentheses for
 application suggest something more subtle is happening with the linearization
 process, for normally programming languages use fixity declarations to avoid
-lispy looking code. Here are the linearization functions which allow for
-linearization from the above AST :
+lispy looking code. Here are the linearization functions for our Haskell-like
+$\lambda$-terms:
 
 \begin{verbatim}
 lincat
@@ -259,10 +253,11 @@ lin
   Eapp = infixl 2 "" ;
 \end{verbatim}
 
-Where did \term{TermPrec}, \term{infixl}, \term{parenth}, \term{mkPrec}, and
-\term{usePrec} come from? These are all functions defined in the RGL. We show a
-few of them below, thereby introducing the final, main GF judgments \term{param}
-and \term{oper} for parameters and operators.
+Where did \codeword{TermPrec}, \codeword{infixl}, \codeword{parenth},
+\codeword{mkPrec}, and \codeword{usePrec} come from? These are all functions
+defined in GF's standard library, the RGL. We show a few of them below, thereby
+introducing the final, main GF judgments \term{param} and \term{oper} for
+parameters and operations.
 
 \begin{verbatim}
 param 
@@ -278,30 +273,29 @@ oper
   parenthOpt : Str -> Str = \s -> variants {s ; "(" ++ s ++ ")"} ;
 \end{verbatim}
 
-Parameters in GF, to a first approximation, are simply data types of unary
-constructors with finite cardinality. Operators, on the other hand, encode the
-logic of GF linearization rules. They are an unnecessary part of the language
-because they don't introduce new logical content, but they do allow one to
-abstract the function bodies of \term{lin}'s so that one may keep the actual
-linearization rules looking clean. Since GF also support \term{oper}
+Parameters in GF are data types with nullary constructors - or something
+isomorphic to them. Operations, on the other hand, encode the logic of GF
+linearization rules. They are syntactic sugar - they allow one to abstract the
+function bodies of \term{lin}s and \term{lincat}s so that one may keep the
+actual linearization rules looking clean. Since GF also support \term{oper}
 overloading, one can often get away with often deceptively sleek looking
-linearizations, and this is a key feature of the RGL. The variants is one of the
+linearizations, and this is a key feature of the RGL. The use of \codeword{variants} is one of the
 ways to encode multiple linearizations forms for a given tree, so here, for
-example, we're breaking the nice property from above.
+example, we're breaking the key nice property from above.
 
 This more or less resembles a typical programming language, with very little
-deviation from what when would expect specifying something in twelf.
-Nonetheless, because this is both meant to somehow capture the logical form in
-addition to the surface appearance of a language, the separation of concerns
-leaves the user with an important decision to make regarding how one couples the
-linear and abstract syntaxes. There are in some sense two extremes one can take
-to get a well performing GF grammar.
+deviation from what when would expect specifying something in Twelf
+\cite{twelf}. Nonetheless, because this is both meant to somehow capture the
+logical form in addition to the surface appearance of a language, the separation
+of concerns leaves the user with an important decision to make regarding how one
+couples the linear and abstract syntaxes. There are in some sense two extremes
+one can take to get a well performing GF grammar.
 
 Suppose you have a page of text from some random source of length $l$, and you
 take it as an exercise to build a GF grammar which translates it. The first
 extreme approach you could take would be to give each word in the text to a
 unique category, a unique function for each category bearing the word's name,
-along with a single really function with $l$ arguments for the whole sequence of
+along with a single really long function with $l$ arguments for the whole sequence of
 words in the text. One could then verbatim copy the words as just strings with
 their corresponding names in the concrete syntax. This overfitted grammar would
 fail : it wouldn't scale to other languages, wouldn't cover any texts other than
@@ -314,59 +308,60 @@ degenerate, despite also parsing the page of text.
 
 This seemingly silly example highlights the most blatant tension the GF grammar
 writer will face : how to balance syntactic and semantic content of the grammar
-in between the concrete and the abstract syntax. It is also highly
+between the concrete and the abstract syntax. It is also highly
 relevant as concerns the domain of translation, for a programming language
 with minimal syntax and the mathematicians language in expressing her ideas are
-on vastly different sides of this issue.
+on vastly different sides of this spectrum.
 
-We claim that syntactically complete grammars are much more easily dealt with
-simple abstract syntax. However, to take allow a syntactically complete grammar
-to capture semantic nuance and neutrality then humans requires immensely more
-work on the concrete side. Semantically adequate grammars on the other hand,
-require significantly more attention on the abstract side, because semantically
+We claim syntactically complete grammars are much more naturally dealt with
+using a simple abstract syntax. However, to take allow a syntactically complete
+grammar to capture semantic nuance and requires immensely more work on the
+concrete side. Semantically adequate grammars on the other hand, require
+significantly more attention on the abstract side, because semantically
 meaningful expressions often don't generalize - each part of an expressions
 exhibits unique behaviors which can't be abstracted to apply to other parts of
-the expression. Therefore, producing a syntactically complete expressions which
-doesn't overgenerate parses also requires a lot work from the grammar writer.
+the expression. Semantically complete grammars are vulnerable to over-fitting
+natural language, making generating formal languages difficult. Producing a
+syntactically complete expressions which doesn't overgenerate parses also
+requires a lot work from the grammar writer in this case.
 
-We hope the subsequent examples will illuminate this tension. The problem with
-treating a syntactically oriented domain like type theory with and a semantically
-oriented one like mathematics with the same abstract syntax poses very serious
-problems, but also highlights the power of other features of GF, like the RGL [cite]
-and Haskell embedding PGF [cite].
+The subsequent examples should illuminate this tension. The problem of
+merging a syntactically oriented domain like type theory with and a semantically
+oriented one like natural language mathematics with the same abstract syntax poses very serious
+problems, but also highlights the power and need of other features of GF, like the RGL \cite{ranta2009rgl}
+and Haskell embedding made available through the PGF API \cite{angelovApi}.
 
-The GF RGL is a very robust library for parsing grammatically coherent language.
-It exists for many different natural languages with a core abstract syntax
-shared by all of them. The API allows one to easily construct, sentence level
-phrases once the lexicon has been defined, which are also greatly facilitated by
-the API. 
+The GF RGL is a library for parsing grammatically coherent language. It exists
+for many different natural languages, with various levels of coverage and
+grammatically, with a core abstract syntax shared by all of them. The API allows
+one to easily construct sentence level phrases once the lexicon has been
+defined. The API also provides helper functions for lexical constructions.
 
-PGF, is an embedding of a GF abstract syntax into Haskell, where the categories
-are given ``shadow types", so that one can build turn an abstract syntax into (a
-possibly massive) Generalized Algebraic Data Type (GADT) \term{Tree} with kind
+The Haskell embedding of a GF abstract syntax is given via Angelov's PGF
+library, where the categories are given ``shadow types", so that one can
+transform an abstract syntax into (a possibly massive) Generalized Algebraic
+Data Type (GADT). The syntax of the embedding is a GADT, \term{Tree}, with kind
 \codeword{* -> *} where all the functions serve as constructors. If function
 \codeword{h} returns category \codeword{c}, the Haskell constructor
-\codeword{Gh} returns \codeword{Tree c}.
+\codeword{Gh} returns \codeword{Tree c}. We note that this uses the
+\codeword{--haskell=gadt} flag, of which other options are available but weren't
+used in this thesis.
 
 The PGF API also allows for the Haskell user to call the parse and linearization
 functions, so that once the grammar is built, one can use Haskell as an
 interface with the outside world. While GF originally was conceived as allowing
 computation with ASTs, using a semantic computation judgment \term{def}, this
-has approach has largely been overshadowed by Haskell. Once a grammar is
-embedded in Haskell, one can use general recursion, monads, and all other types
-of bells and whistles produced by the functional programming community to
-compute with the embedded ASTs.
+has approach has largely been overshadowed by its Haskell embedding. Once a
+grammar is embedded in Haskell, one can use general recursion, monads, and all
+other types of bells and whistles produced by the functional programming
+community to compute with the embedded ASTs.
 
-We note that this further muddies the water of
-what syntax and semantics refer to in the GF lexicon. Although a GF
-abstract syntax somehow represents the programmers idealized semantic domain,
-once embedded in PGF the trees now may represent syntactic objects to be
-evaluated or transformed to some other semantic domain which may or may not
-eventually be linked back to a GF linearization.
-
-These are all the main ingredients a GF user will hopefully need to understand
-the grammars hereby elaborated, and hopefully these examples will showcase the
-full potential of GF for the problem of mathematical translations.
+We note that this further muddies the water of what syntax and semantics refer
+to in the GF lexicon. Although a GF abstract syntax represents the
+programmers idealized semantic domain, once embedded in Haskell, the trees now may
+represent syntactic objects to be evaluated or transformed to some other
+semantic domain which may or may not eventually be linked back to a GF
+linearization. We will see these tools applied more directly below.
 
 % \subsection{Mathematical Model of GF}
 % Note on the construction of free monoids

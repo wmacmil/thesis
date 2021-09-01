@@ -4,10 +4,24 @@
 Abel, A. (2020).
 \newblock Personal correspondance.
 
+\bibitem[Angelov, ]{angelovApi}
+Angelov, K.
+\newblock {\em {PGF}}.
+
+\bibitem[Angelov, 2011]{angelov2010phd}
+Angelov, K. (2011).
+\newblock {\em {The Mechanics of the Grammatical Framework}}.
+\newblock PhD thesis, {Chalmers University of Technology}.
+
 \bibitem[Angelov, 2021]{angelovSS}
 Angelov, K. (2021).
 \newblock Meet the grammarian: Why or do we need to write application grammars?
 \newblock GF Summer School.
+
+\bibitem[Angelov et~al., 2010]{angelov2010pgf}
+Angelov, K., Bringert, B., \& Ranta, A. (2010).
+\newblock {PGF: A Portable Run-time Format for Type-theoretical Grammars}.
+\newblock {\em Journal of Logic, Language and Information}, 19(2), 201--228.
 
 \bibitem[Avigad, 2015]{avigad2015mathematics}
 Avigad, J. (2015).
@@ -16,6 +30,14 @@ Avigad, J. (2015).
 \bibitem[Bar et~al., 2016]{Bar2016GlobularAO}
 Bar, K., Kissinger, A., \& Vicary, J. (2016).
 \newblock Globular: an online proof assistant for higher-dimensional rewriting.
+
+\bibitem[Bernardy \& Chatzikyriakidis,
+  2017]{bernardy-chatzikyriakidis-2017-type}
+Bernardy, J.-P. \& Chatzikyriakidis, S. (2017).
+\newblock A type-theoretical system for the {F}ra{C}a{S} test suite:
+  Grammatical framework meets coq.
+\newblock In {\em {IWCS} 2017 - 12th International Conference on Computational
+  Semantics - Long papers}.
 
 \bibitem[Bezem et~al., 2017]{bezem2017univalence}
 Bezem, M., Coquand, T., \& Huber, S. (2017).
@@ -41,9 +63,23 @@ Bove, A., Dybjer, P., \& Norell, U. (2009).
   Theorem Proving in Higher Order Logics}  (pp.\ 73--78).  Berlin, Heidelberg:
   Springer Berlin Heidelberg.
 
+\bibitem[{Bruijn, de}, 1970]{debrujn}
+{Bruijn, de}, N. (1970).
+\newblock The mathematical language automath, its usage and some of its
+  extensions.
+\newblock In M. Laudet, D. Lacombe, L. Nolin, \& M. Sch{\"u}tzenberger (Eds.),
+  {\em Proceedings Symposium on Automatic Demonstration (Versailles, France,
+  December 1968)}, Lecture Notes in Mathematics  (pp.\ 29--61).  Germany:
+  Springer.
+
 \bibitem[Buzzard, 2020]{buzzard2020will}
 Buzzard, K. (2020).
 \newblock When will computers prove theorems?
+
+\bibitem[Chomsky, 1956]{chomsky1956hierarchy}
+Chomsky, N. (1956).
+\newblock Three models for the description of language.
+\newblock {\em {IRE} Transactions on Information Theory}, 2(3), 113--124.
 
 \bibitem[Chomsky, 1995]{Chomsky1995}
 Chomsky, N. (1995).
@@ -150,6 +186,12 @@ Hallgren, T. \& Ranta, A. (2000).
 Harper, R. (2011).
 \newblock The holy trinity.
 
+\bibitem[Hermida et~al., 1998]{705656}
+Hermida, C., Makkai, M., \& Power, J. (1998).
+\newblock Higher dimensional multigraphs.
+\newblock In {\em Proceedings. Thirteenth Annual IEEE Symposium on Logic in
+  Computer Science (Cat. No.98CB36226)}  (pp.\ 199--206).
+
 \bibitem[Jackson, 2002]{2002TheWO}
 Jackson, A. (2002).
 \newblock The world of blind mathematicians.
@@ -171,6 +213,18 @@ Kamp, H., Van~Genabith, J., \& Reyle, U. (2011).
 \newblock Discourse representation theory.
 \newblock In {\em Handbook of philosophical logic}  (pp.\ 125--394). Springer.
 
+\bibitem[Kohlhase \& Schaefer, 2019]{Kohlhase_2019}
+Kohlhase, M. \& Schaefer, J.~F. (2019).
+\newblock Gf + mmt = glf – from language to semantics through lf.
+\newblock {\em Electronic Proceedings in Theoretical Computer Science}, 307,
+  24–39.
+
+\bibitem[Lambek et~al., 1989]{lambek1989multicategories}
+Lambek, J., of~Mathematics, M. U.~D., \& Statistics (1989).
+\newblock {\em Multicategories Revisited}.
+\newblock Rapport du Department of Mathematics and Statistics. McGill
+  University, Department of Mathematics and Statistics.
+
 \bibitem[Ljungl{\"o}f, 2004]{ljunglof2004expressivity}
 Ljungl{\"o}f, P. (2004).
 \newblock Expressivity and complexity of the grammatical framework.
@@ -186,6 +240,11 @@ Luo, Z. (2012).
 Macmillan, W. (2020).
 \newblock {\em {GF-Typechecker}}.
 \newblock \url{https://github.com/wmacmil/GF_Typechecker}.
+
+\bibitem[Macmillan, 2021]{warrickCub}
+Macmillan, W. (2021).
+\newblock {\em {cubicalTT}}.
+\newblock \url{https://github.com/wmacmil/AgdaGrammar}.
 
 \bibitem[Martin{-}L{\"{o}}f, 1984]{ml1984}
 Martin{-}L{\"{o}}f, P. (1984).
@@ -216,6 +275,11 @@ Montague, R. (1973).
   (pp.\ 221--242).
 \newblock Springer Netherlands: Dordrecht.
 
+\bibitem[Mörtberg, 2018]{cubicaltt}
+Mörtberg, A. (2018).
+\newblock {\em {cubicaltt}}.
+\newblock \url{https://github.com/mortberg/cubicaltt}.
+
 \bibitem[Nelsen, 1993]{proofWW}
 Nelsen, R. (1993).
 \newblock {\em Proofs Without Words}.
@@ -223,6 +287,13 @@ Nelsen, R. (1993).
 \bibitem[Pfenning, 2009]{pfenningHar}
 Pfenning, F. (2009).
 \newblock Lecture notes on harmony.
+
+\bibitem[Pfenning \& Sch{\"u}rmann, 1999]{twelf}
+Pfenning, F. \& Sch{\"u}rmann, C. (1999).
+\newblock System description: Twelf --- a meta-logical framework for deductive
+  systems.
+\newblock In {\em Automated Deduction --- CADE-16}  (pp.\ 202--206).  Berlin,
+  Heidelberg: Springer Berlin Heidelberg.
 
 \bibitem[Pit-Claudel, 2020]{coqAlec}
 Pit-Claudel, C. (2020).
@@ -250,6 +321,11 @@ Ranta, A. (1994b).
 RANTA, A. (2004).
 \newblock Grammatical framework.
 \newblock {\em Journal of Functional Programming}, 14(2), 145–189.
+
+\bibitem[Ranta, 2009]{ranta2009rgl}
+Ranta, A. (2009).
+\newblock {The GF Resource Grammar Library}.
+\newblock {\em {Linguistics in Language Technology}}, 2.
 
 \bibitem[Ranta, 2011a]{ranta2011grammatical}
 Ranta, A. (2011a).
@@ -304,10 +380,20 @@ Schaefer, J.~F. \& Kohlhase, M. (2020).
 \newblock The glif system: A framework for inference-based natural-language
   understanding.
 
+\bibitem[Seki et~al., 1991]{seki91pmcfg}
+Seki, H., Matsumura, T., Fujii, M., \& Kasami, T. (1991).
+\newblock {On Multiple Context-Free Grammars}.
+\newblock {\em {Theoretical Computer Science}}, 88(2), 191--229.
+
 \bibitem[Stump, 2016]{stump}
 Stump, A. (2016).
 \newblock {\em Verified Functional Programming in Agda}.
 \newblock Association for Computing Machinery and Morgan & Claypool.
+
+\bibitem[Szegedy, 2020]{49351}
+Szegedy, C., Ed. (2020).
+\newblock {\em A Promising Path Towards Autoformalization and General
+  Artificial Intelligence}.
 
 \bibitem[{The Univalent foundations program} \& {Institute for advanced study
   (Princeton}, 2013]{theunivalentfoundationsprogram-homotopytypetheory-2013}

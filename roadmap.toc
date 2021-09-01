@@ -25,22 +25,22 @@
 \contentsline {section}{\numberline {4}Grammatical Framework}{29}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Thinking about GF}{29}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}A Brief Introduction to GF}{31}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Prior GF Formalizations}{37}{section.5}%
-\contentsline {subsection}{\numberline {5.1}CADE 2011}{37}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}An Additional PGF Grammar}{38}{subsubsection.5.1.1}%
-\contentsline {section}{\numberline {6}Natural Number Proofs}{42}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Associativity of Natural Numbers}{42}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}What is Equality?}{47}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Ranta's HoTT Grammar}{49}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}cubicalTT Grammar}{50}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Difficulties}{52}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}More advanced Agda features}{54}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Comparing the Grammars}{54}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Ideas for resolution}{57}{subsubsection.6.5.1}%
-\contentsline {paragraph}{Typechecker's Role}{59}{section*.8}%
-\contentsline {section}{\numberline {7}Conclusion}{60}{section.7}%
-\contentsline {subsection}{\numberline {7.1}The Mathematical Library of Babel}{61}{subsection.7.1}%
-\contentsline {section}{References}{63}{subsection.7.1}%
+\contentsline {section}{\numberline {5}Prior GF Formalizations}{36}{section.5}%
+\contentsline {subsection}{\numberline {5.1}CADE 2011}{36}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}An Additional PGF Grammar}{37}{subsubsection.5.1.1}%
+\contentsline {section}{\numberline {6}Natural Number Proofs}{41}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Associativity of Natural Numbers}{41}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}What is Equality?}{46}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Ranta's HoTT Grammar}{48}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}cubicalTT Grammar}{49}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Difficulties}{51}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}More advanced Agda features}{53}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Comparing the Grammars}{53}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Ideas for resolution}{56}{subsubsection.6.5.1}%
+\contentsline {paragraph}{Typechecker's Role}{58}{section*.8}%
+\contentsline {section}{\numberline {7}Conclusion}{59}{section.7}%
+\contentsline {subsection}{\numberline {7.1}The Mathematical Library of Babel}{60}{subsection.7.1}%
+\contentsline {section}{References}{62}{subsection.7.1}%
 \contentsline {section}{\numberline {8}Appendix}{67}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Martin-Löf Type Theory}{67}{subsection.8.1}%
 \contentsline {subsubsection}{\numberline {8.1.1}Judgments}{67}{subsubsection.8.1.1}%

@@ -1,77 +1,62 @@
-
+PGF 
 % \section{A Spectrum of GF Grammars for types}
 \section{Prior GF Formalizations}
 
-Prior to the grammars explored thesis, Ranta produced two main results
-\cite{rantaLog} \cite{aarneHott}. These are incredibly important precedents in
-this approach to proof translation, and serve as important comparative work for
-which this work responds.
-
 \subsection{CADE 2011} \label{cade}
 
-In \cite{rantaLog}, Ranta designed a grammar which
-allowed for predicate logic with a domain specific lexicon supporting mathematical
-theories , say geometry or arithmetic, on top of the logic. The syntax was
-both meant to be relatively complete, so that typical logical utterances of
-interest could be accommodated, as well as support relatively non-trivial linguistic
-nuance like lists of terms, predicates, and propositions, in-situ and
-bounded quantification, like other ways of constructing more syntactically
-nuanced predicates. The more interesting syntactic details captured in this work
-was by means of an extended grammar on top of the core. The bidirectional
-transformation between the core and extended grammars via a PGF also show the
-viability and necessity of using more expressive programming languages (Haskell) when
+In \cite{rantaLog}, Ranta designed a grammar which allowed for predicate logic
+with a domain specific lexicon supporting mathematical theories like geometry or
+arithmetic. The syntax was both meant to be relatively complete so that typical
+logical utterances of interest could be accommodated, as well as support
+relatively non-trivial linguistic nuance. The nuances included lists of terms,
+predicates, and propositions and in-situ and bounded quantification. The more
+interesting syntactic details captured in this work was by means of an extended
+grammar on top of the core. The bidirectional transformation between the core
+and extended grammars via a Haskell transformation also show the viability and
+necessity of using more expressive programming languages as intermediaries when
 doing thorough translations.
 
-Lists are natural to humans - this is reflected in our language. The RGL supports listing the sentences, noun phrases, and other
-grammatical categories. One can then use PGF to unroll the lists into binary
-operators, or alternatively transform them in the opposite direction.
-, we first mention that GF
-natively supports list categories, the judgment \term{cat [C] {n}} can be
+As a simple example, the proposition $\forall x (Nat(x) \supset
+Even(x) \lor Odd(x))$ can be given a maximized and minimized version. The tree
+representing the syntactically complete phrase ``for all natural numbers
+x, x is even or x is odd" would be minimized to a tree which linearizes to the
+semantically adequate phrase ``every natural number is even or odd".
+
+We see that our criteria of semantic adequacy and syntactic completeness can
+both occur in the same grammar, with Haskell level transformation allowing one
+to go between the them. Problematically, this syntactically complete phrase
+produces four ASTs, with the ``or" and ``forall" competing for precedence. There
+is therefore no assurance give the user of the grammar confidence that her
+phrase was correctly interpreted without deciding which translation is best.
+
+In the opposite direction, the desugaring of a logically ``informal" statement
+into something less linguistically idiomatic is also accomplished. Ranta claims
+``Finding extended syntax equivalents for core syntax trees is trickier than the
+opposite direction". While this may be true for this particular grammar, we
+argue that this may not hold generally.
+
+
+The RGL supports listing the sentences, noun phrases, and other grammatical
+categories. One can then use Haskell to unroll the lists into binary operators, or
+alternatively transform them in the opposite direction. , we first mention that
+GF natively supports list categories, the judgment \term{cat [C] {n}} can be
 desugared to
+
 \begin{verbatim}
   cat ListC ;
   fun BaseC : C -> ... -> C -> ListC ; -- n C ’s
   fun ConsC : C -> ListC -> ListC
 \end{verbatim}
 
-As a case study for this grammar, the proposition $\forall x (Nat(x) \supset
-Even(x) \lor Odd(x))$ can be given a maximized and minimized version. The tree
-representing the \emph{syntactically complete} phrase ``for all natural numbers
-x, x is even or x is odd" would be minimized to a tree which linearizes to the
-\emph{semantically adequate} phrase ``every natural number is even or odd".
+We could therefore transform the extended language phrase ``The sum of x , y ,
+and z is equal to itself" in to core language phrase ``the sum of the sum of x
+and y and z is equal to the sum of x and the sum of y and z". Parsing this core
+string gives 32 unique trees, and dealing with ambiguities must be solved first
+and foremost to satisfy the PL designer who only accepts unambiguous parses.
 
-% The trees below also revels how the semantically adequate tree is also
-% simpler to understand as representing
-% \begin{verbatim}
-% PUnivs
-%   (BaseVar X)
-%   Nat
-%   (PConj COr (PAtom (APred1 Even (IVar X))) (PAtom (APred1 Odd (IVar X))))
-% |
-% V
-% PAtom (APred1 (ConjPred1 COr (BasePred1 Even Odd)) (IUniv Nat))
-% \
-% end{verbatim}
-
-We see that our criteria of semantic adequacy and syntactic completeness can
-both occur in the same grammar, with the different subsets related not by a
-direct GF translation but a PGF level transformation. Problematically, this
-syntactically complete phrase produces four ASTs, with the ``or" and ``forall"
-competing for precedence. Where PGF may only give one translation to the
-extended syntax, this doesn't give the user of the grammar confidence that her
-phrase was correctly interpreted.
-
-In the opposite direction, the desugaring of a logically ``informal"
-statement into something less linguistically idiomatic is also accomplished.
-Ranta claims ``Finding extended syntax equivalents for core syntax trees is
-trickier than the opposite direction". While this may be true for this
-particular grammar, we argue that this may not hold generally. Dealing with these ambiguities must be
-solved first and foremost to satisfy the PL designer who only accepts
-unambiguous parses. For instance, the gf shell shows ``the sum of the
-sum of x and y and z is equal to the sum of x and the sum of y and z" giving 32
-unique parses. Ranta also outlines the mapping, $\llbracket -
-\rrbracket : Core \to Extended$, which should hypothetically return a set of extended
-sentences for a more comprehensive grammar.
+Ranta outlines the mapping, $\llbracket - \rrbracket : Core \to Extended$,
+which should hypothetically return a set of extended sentences for a more
+comprehensive grammar.
 
 \begin{itemize}
 \item Flattening a list
@@ -88,44 +73,42 @@ sentences for a more comprehensive grammar.
   $x\ is\ a\ number\ and\ x\ is\ even\ \mapsto x\ is\ an\ even\ number$
 \end{itemize}
 
-Scaling this to cover more phenomena, such as those from [cite ganesalingam], will
-pose challenges. Extending this work in general without very sophisticated
+Scaling this to cover more phenomena, such as those from Ganesalingam's analysis
+will pose challenges. Extending this work in general without very sophisticated
 statistical methods is impossible because mathematicians will speak uniquely,
-and so choosing how to extend a grammar that covers the multiplicity of ways of saying
-``the same thing" will require many choices and a significant corpus of examples. Efficient
-communication, is a pragmatic feature which this only begins to barely address. The most
-interesting linguistic phenomena covered by this grammar, In-situ
-quantification, has been at the heart of the Montague tradition.
+and so choosing how to extend a grammar that covers the multiplicity of ways of
+saying ``the same thing" will require many choices and a significant corpus of
+examples. The most interesting linguistic phenomena covered by this grammar,
+In-situ quantification, has been at the heart of the Montague tradition.
 
-In some sense, this grammar serves as a case study for what this thesis is
-trying to do. However, we note that the core logic only supports propositions
-without proofs - it is not a type theory with terms. Additionally, the domain of
-arithmetic is an important case study, but scaling this grammar (or any other,
-for that matter) to allow for \emph{semantic adequacy} of real mathematics is
-still far away, or as Ranta concedes, ``it seems that text generation involves
-undecidable optimization problems that have no ultimate automatic solution." It
-would be interesting to further extend this grammar with both terms and an
-Agda-like concrete syntax.
+While this grammar serves as a precedent for this work generally, we note that
+the core logic only supports propositions without proofs - it is not a type
+theory with terms. Additionally, the domain of arithmetic is an important case
+study, but scaling this grammar (or any other, for that matter) to allow for
+\emph{semantic adequacy} of real mathematics is still far away, or as Ranta
+concedes, ``it seems that text generation involves undecidable optimization
+problems that have no ultimate automatic solution."
 
-\subsubsection{An Additional PGF Grammar}
+\subsubsection{A Question Answering Example}
 
 One of the difficulties encountered in this work was reverse engineering Ranta's
-code - the large size of a grammar and declarative nature of the code makes it
-incredibly difficult to isolate individual features one may wish to understand.
-This is true for both GF and PGF, and therefore a lot of work went into
+code - the large size and declarative nature of a grammar makes it incredibly
+difficult to isolate individual features one may wish to understand. This is
+true for both GF and its Haskell embedding. Significant efforts went into
 filtering the grammars to understand behaviors of individual components of
 interest. Careful usage of the GF module system may allow one to look at
-``subgrammars" for some circumstances, but there is not proper methodology to
+``subgrammars" in some circumstances, but there is not proper methodology to
 extract a sub-grammar and therefore it was found that writing a grammar from
 scratch was often the easiest way to do this. Grammars can be written
 compositionally (adding new categories and functions, refactoring linearization
 types, etc.) but decomposing them is not a compositional process.
 
-We wrote a smaller version [cite mycode] of, just focused on propositional
-logic, but with the added interest of not just translating between Trees, but
-also allowing Haskell computation and evaluation of expressions. Although this
-exercise was in some ways a digression from the language of proofs, it also
-highlighted many interesting problems.
+We wrote a smaller version of the above grammar \cite{warrickCub} just focused on
+propositional logic. It included an added component not just translating between
+ASTs, but also allowing intermediary computation and of logical
+propositions and numerical expressions. Although this exercise was in some ways
+a digression from the language of proofs, it also highlighted many interesting
+problems.
 
 We begin with an example : the idea was to create a PGF layer for the evaluation
 of propositional expressions to their Boolean values, and then create a question

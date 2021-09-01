@@ -17,11 +17,18 @@ Illegal, another \bibstyle command---line 33 of file roadmap.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: appendix.aux
 Database file #1: example_bibliography.bib
-I was expecting an "="---line 114 of file example_bibliography.bib
+You're missing a field name---line 5 of file example_bibliography.bib
+ :   
+ :   %%Comment year = 2020,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 305 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "borges"
+Warning--empty year in angelovApi
+Warning--empty publisher in angelovApi
 Warning--empty booktitle in Bar2016GlobularAO
 Warning--can't use both author and editor fields in Bove2009
 Warning--empty booktitle in coqPat
@@ -33,45 +40,45 @@ Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 64 entries,
+You've used 79 entries,
             2229 wiz_defined-function locations,
-            886 strings with 13637 characters,
-and the built_in function-call counts, 23557 in all, are:
-= -- 2344
-> -- 750
-< -- 72
-+ -- 268
-- -- 232
-* -- 1715
-:= -- 4003
-add.period$ -- 177
-call.type$ -- 64
-change.case$ -- 412
-chr.to.int$ -- 62
-cite$ -- 75
-duplicate$ -- 1096
-empty$ -- 1761
-format.name$ -- 315
-if$ -- 4804
+            969 strings with 16051 characters,
+and the built_in function-call counts, 29124 in all, are:
+= -- 2890
+> -- 937
+< -- 86
++ -- 332
+- -- 290
+* -- 2140
+:= -- 4958
+add.period$ -- 221
+call.type$ -- 79
+change.case$ -- 508
+chr.to.int$ -- 77
+cite$ -- 92
+duplicate$ -- 1346
+empty$ -- 2185
+format.name$ -- 394
+if$ -- 5928
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 67
-newline$ -- 303
-num.names$ -- 206
-pop$ -- 452
+missing$ -- 84
+newline$ -- 376
+num.names$ -- 254
+pop$ -- 560
 preamble$ -- 1
-purify$ -- 428
+purify$ -- 530
 quote$ -- 0
-skip$ -- 861
+skip$ -- 1043
 stack$ -- 0
-substring$ -- 1484
-swap$ -- 227
-text.length$ -- 21
+substring$ -- 1846
+swap$ -- 267
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 350
-warning$ -- 11
-while$ -- 194
+type$ -- 432
+warning$ -- 13
+while$ -- 239
 width$ -- 0
-write$ -- 799
-(There were 2 error messages)
+write$ -- 989
+(There were 3 error messages)
