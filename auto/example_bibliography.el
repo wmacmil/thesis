@@ -2,6 +2,7 @@
  "example_bibliography"
  (lambda ()
    (LaTeX-add-bibitems
+    "borges"
     "hits"
     "Angiuli_2018"
     "agdaDocs"

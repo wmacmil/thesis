@@ -18,17 +18,16 @@ I'm skipping whatever remains of this command
 A level-1 auxiliary file: appendix.aux
 Database file #1: example_bibliography.bib
 Warning--string name "j-jucs" is undefined
---line 6 of file example_bibliography.bib
-Repeated entry---line 129 of file example_bibliography.bib
+--line 14 of file example_bibliography.bib
+Repeated entry---line 137 of file example_bibliography.bib
  : @misc{warrickPrec
  :                  ,
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 464 of file example_bibliography.bib
+I was expecting an "="---line 472 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "bnfc"
-Warning--I didn't find a database entry for "borges"
 Warning--empty booktitle in Bar2016GlobularAO
 Warning--empty journal in hits
 Warning--can't use both author and editor fields in Bove2009
@@ -39,45 +38,45 @@ Warning--can't use both author and editor fields in Montague1973
 Warning--empty publisher in proofWW
 Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
 Warning--empty publisher in wadler
-You've used 92 entries,
+You've used 93 entries,
             2229 wiz_defined-function locations,
-            1044 strings with 18127 characters,
-and the built_in function-call counts, 34093 in all, are:
-= -- 3407
-> -- 1170
-< -- 98
-+ -- 414
-- -- 369
-* -- 2535
-:= -- 5867
-add.period$ -- 267
-call.type$ -- 92
-change.case$ -- 612
-chr.to.int$ -- 89
-cite$ -- 102
-duplicate$ -- 1516
-empty$ -- 2463
-format.name$ -- 488
-if$ -- 6884
+            1048 strings with 18199 characters,
+and the built_in function-call counts, 34367 in all, are:
+= -- 3433
+> -- 1177
+< -- 99
++ -- 418
+- -- 371
+* -- 2552
+:= -- 5919
+add.period$ -- 270
+call.type$ -- 93
+change.case$ -- 618
+chr.to.int$ -- 90
+cite$ -- 103
+duplicate$ -- 1529
+empty$ -- 2483
+format.name$ -- 491
+if$ -- 6935
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 83
-newline$ -- 447
-num.names$ -- 295
-pop$ -- 608
+missing$ -- 84
+newline$ -- 452
+num.names$ -- 298
+pop$ -- 613
 preamble$ -- 1
-purify$ -- 632
+purify$ -- 638
 quote$ -- 0
-skip$ -- 1197
+skip$ -- 1208
 stack$ -- 0
-substring$ -- 2156
-swap$ -- 296
+substring$ -- 2170
+swap$ -- 297
 text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 516
+type$ -- 522
 warning$ -- 10
-while$ -- 279
+while$ -- 281
 width$ -- 0
-write$ -- 1169
+write$ -- 1181
 (There were 3 error messages)

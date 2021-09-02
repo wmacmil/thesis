@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  1 SEP 2021 20:16
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  1 SEP 2021 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2091,12 +2091,7 @@ and I'll forget about whatever was undefined.
 (./conclusion.tex [58
 
 
-]
-
-Package natbib Warning: Citation `borges' on page 59 undefined on input line 10
-0.
-
-[59]) [60] (./roadmap.bbl
+] [59]) [60] (./roadmap.bbl
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2138,25 +2133,25 @@ deleted material, e.g., by typing `I$}'.
 [61
 
 ] [62] [63]
-Underfull \hbox (badness 10000) in paragraph at lines 305--308
+Underfull \hbox (badness 10000) in paragraph at lines 310--313
 []\TU/DejaVuSerif(0)/m/n/10.95 Macmillan, W. (2021a).  cubicalTT.  []$[][][][][
 ] [] [] [] [][][][][][] [] [][][] [] [][][][][][][] []
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 310--313
+Underfull \hbox (badness 2435) in paragraph at lines 315--318
 []\TU/DejaVuSerif(0)/m/n/10.95 Macmillan, W. (2021b).  QA Grammar.  []$[][][][]
 [] [] [] [] [][][][][][] [] [][][] [] [][][][][][][] []
  []
 
 [64]
-Underfull \hbox (badness 10000) in paragraph at lines 424--428
+Underfull \hbox (badness 10000) in paragraph at lines 429--433
 []\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  gf-contrib/typetheory.  []$[]
 [][][][] [] [] [] [][][][][][] [] [][][] []
  []
 
 ! Misplaced alignment tab character &.
-l.475 ...tion for Computing Machinery and Morgan &
+l.480 ...tion for Computing Machinery and Morgan &
                                                    Claypool.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2290,12 +2285,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33850 strings out of 479819
- 648566 string characters out of 5895846
+ 33853 strings out of 479819
+ 648608 string characters out of 5895846
  1193651 words of memory out of 5000000
- 50186 multiletter control sequences out of 15000+600000
+ 50189 multiletter control sequences out of 15000+600000
  538521 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,16n,109p,814b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (87 pages, 2219612 bytes).
+Output written on roadmap.xdv (87 pages, 2215120 bytes).

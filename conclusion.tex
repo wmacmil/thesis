@@ -5,62 +5,42 @@ Concrete syntax is in some sense where programming language theory meets
 psychology. \emph{Robert Harper}, \emph{Oregon Programming Languages Summer School 2017}
 \end{displayquote}
 
-% Future work could model GF in Agda, which would allow one to prove metatheorems
-% about GF like soundness and termination, or perhaps statements about specific
-% grammars, such as one being unambiguous.
+There are two major problems in the reformulation of mathematics via typed
+languages which underlay interactive proofs assistants and which fall under the scope
+of this thesis.
 
-% move to conclusion
-% However, as a counterexample to the Agda developer's mentality, the so-called
-% \emph{Brunerie Number}, a computation about the homotopy groups of spheres,
-% doesn't terminate in Agda but can be computed with pen and paper, offers a
-% counterexample even the computer scientist has to come to terms with
-% \cite{brunerie2016homotopy}. It is sufficiently precise, but nonetheless poses a
-% practical issue to formal systems where, until it terminates, offers presumably
-% correct code which doesn't match the mathematicians linguistic proof. And while
-% this one example which may see resolution, many further counterexample may
-% abound. It is a speculative matter to guess which mathematics is formalizable.
-
-There are two major problems in the reformulation of mathematics via
-typed languages which underlay interactive proofs assistants that fall under the
-scope of this thesis tried to grapple with. 
-
-The first is how to make a dependently typed programming language capable of
-formulating proposition and proof more amenable to mathematicians with the goal
-of improving semantic adequacy. The second seeks to ask how to facilitate the
-formalization of mathematics, whether that be translation of theorem statements,
-proofs, or giving the mathematicians a template for using CNLs that are more
-suited to their tastes and also capable of providing tractable data in various
-applications.
+The first is how to make a dependently typed programming language, capable of
+formulating proposition and proof, more amenable to mathematicians with the goal
+of improving semantic adequacy. The second asks how to facilitate the
+formalization of mathematics, specifically the translation of theorem statements
+and proofs to controlled natural languages, so-as to slightly disambiguate the
+many ambiguities which pervade mathematical language and practice.
 
 Progress in either of these directions will only be realized and through
 significant time, labor, expertise, and most vitally, \emph{original thinking}
 through collaborative efforts. It is uncertain what the role of parsers,
 abstract syntax trees, linearization schemes, and other components of the GF
-ecosystem will have on these efforts, but we hope that our efforts have shown
-that its very much an open plane of exploration. 
+ecosystem will have on these efforts, but we have offered a taste of how these
+tools may be applied..
 
 Our work has perhaps only made a small contribution to these incredibly
-difficult problems, yet, we hope that compiling various ideas across many
-different fields have at least given some philosophical clarification as to why
-the problems are so difficult. Additionally, we hope our proposal to the GF
-means of approaching these problems through the analysis and comparison
-different grammars gives legitimation and evidence that there's a feasibility of
-actually applying these ideas to solve real problems, or at the very least,
-asking important questions that may influence other methods. For there is no
-doubt a role to play for statistical methods in tackling these problems as well,
-How these data-based methods along with the rule-based techniques is
-also incredibly speculative and merits careful consideration and research.
+difficult problems. Compiling various ideas across many
+different fields has given some philosophical clarifications as to why
+the problems are so difficult.
+
+Additionally, through the analysis and comparison different GF grammars gives
+has provided evidence that there's a feasibility of actually applying these
+ideas to solve real problems. There is doubtless a role to play for
+statistical methods in tackling these problems as well, and how these data-based
+methods interface with the rule-based techniques is up to future scholarship.
 
 Our contributions, partially original and partially extrapolated from others,
 are the following :
 
 \begin{itemize}
 \item Introduce notions of \emph{syntactic completeness} and \emph{semantic adequacy}, so-as to
-allowing understanding a piece of mathematics based off its degree of formality
-as well as clarity of presentation
-\item Recognition that the GF approach is limited, especially as regards pragmatic
-concerns and other philosophical stances about mathematics, like the role of
-visualization in mathematical thinking and presentation
+allow for understanding a piece of mathematics on a spectrum of formality and
+clarity
 \item Offer explicit comparisons, through examples of mathematics in a textual form and a type
   theoretic presentation
 \item The developments of new GF grammars for analyzing this problem
@@ -68,93 +48,69 @@ visualization in mathematical thinking and presentation
   to \emph{syntactic completeness} and \emph{semantic adequacy}
 \item The development of an Agda library which mirrors the HoTT book so that
   future work can seek a possible ``large-scale" translation case study
+\item Recognition that the GF approach is limited, especially as regards pragmatic
+  concerns, but that it still provides insights here as well
 \end{itemize}
 
-
- It has been remarked that the bigger grammars gets, the more it begins to
-resemble a domain specific RGL \cite{angelovSS}. We advocate to actually produce
-a ``formal language RGL", whereby many of the ideas advocated and observed in
+It has been remarked that the bigger grammars gets, the more it begins to
+resemble a domain specific resource grammar \cite{angelovSS}. We advocate to
+actually produce a ``formal language RGL", whereby many of the ideas observed in
 this work, like document structure, latex (and symbolic support generally),
-custom lexical classes (like in BNFC), and many other features not witnessed in
-the small case studies undertaken here should be accounted for. Therefore, the
-grammar writer's time could be better spent either focusing on the scaling of
-programming language features or the actual linguistic analysis of
-mathematics text - thereby making a more natural CNLs.
+custom lexical classes (like in BNFC), and many more may be accounted for.
+The future grammar writers' time could be spent either focusing on
+the scaling of programming language features or the actual linguistic analysis
+of mathematics text - thereby making a more natural CNL for mathematics.
 
 Despite the promise of various topics discussed here like Cubical Agda, the
-Formal Abstracts Project , and the use of Lean in mathematics education
+Formal Abstracts Project , and the use of ITPs in mathematics education
 \cite{buzzard2020will}, we don't foresee a convergence of type theorists and
-mathematicians, even though belief the holy trinity would compel us to think so.
-GF as a PL paradigm, applied to this problem, gives us a stark contrast of how
-different these two approaches to mathematical language. For the grammars of
-proof are insufficient to capture the complexity and nuance about the language
-of proof, so much of which has yet to captured in an existing linguistic
-framework. Grammars for propositions and definitions offer a much more limited
-and seemingly feasible problem, especially with GF largely because
-mathematicians write them with the explicit intention of being comprehensible
-and unambiguous. We hope this works serves the mathematical community in
-achieving some of these goals.
+mathematicians, even though devotion to the holy trinity would compel us to
+believe so. GF as a programming language paradigm applied to this problem gives
+us a stark contrast of how different these two approaches to mathematical
+language. For the grammars of proof are insufficient to capture the complexity
+and nuance about the language of proof, so much of which has yet to captured in
+an existing linguistic framework. Grammars for propositions and definitions
+offer a much more limited and seemingly feasible solution, because
+mathematicians make these utterances with the explicit intention of
+being comprehensible and unambiguous.
+
 
 \subsection{The Mathematical Library of Babel}
 
-\emph{The Library of Babel} \cite{borges} was a profound mirror held up to the human species
-as regards our comprehension of the world through language. It reflected our
-inability to grasp and reconcile our own finitude. The infinite stack of
-shelves, containing every book with every permutation of letters from the Hebrew
-alphabet, leaves the humans who inhabit the closed space in a state of discord
-as regards their failures to navigate and interpret the myriad texts.
+\emph{The Library of Babel} \cite{borges} is a profound mirror held up to the
+human species as regards our comprehension of the world through language. It
+reflects our inability to grasp and reconcile human finitude. The infinite stack
+of shelves, containing every book with every permutation of letters from the
+Hebrew alphabet, leaves the humans who inhabit the closed space in a state of
+discontent as regards their failures to navigate and interpret the myriad texts.
 
 \emph{The Library} most certainly contains all mathematical statements, with all
-possible foundations of mathematics, theorems, proofs of those theorems, in all
-the possible syntactic presentations. In addition, it contains a catalogue
+possible foundations of mathematics, theorems and proofs of those theorems, in
+all the possible syntactic presentations. In addition, it contains a catalogue
 documenting the mathematical constructions, and how these constructions can be
 encoded in the multiplicity of foundational systems. If there is a master GF
-grammar for translating all of the mathematics in \emph{The Library}, it certainly
+grammar for translating all of the mathematics, \emph{The Library} certainly
 contains the source code for that as well.
 
 Unfortunately, the library also contains all the erroneous proofs, whether they
 be lexical errors or a reference to flawed lemma somewhere much deeper in the
 library. There are certainly proofs of the Riemann conjecture, its negation, and
-its undecidability. When perceives mathematics through the lens of human
-language generally, we must acknowledge that mathematical content,
-constructions, and discoveries, are not developments that come by chance,
-through sifting through bags of words until some gemstone gleams through the
-noise. Humans have to produce mathematical constructions through hard labor,
-sweat, and tears. More importantly we create mathematics through dialogue,
-laughter, and occasionally even dreams.
+its undecidability.
 
-To imbue the sentences of mathematics which we see on paper or in the terminal
-with meaning we have some kind of internal mental mechanism that is at play with
-our other mental faculties : our motor system and sensory capabilities generally.
-We don't merely derive formulas by computing, but we distill ideas in our
-linguistic capacity to some kind of unambiguous kernel. The view of mathematics,
-that is just some subset of \emph{The Library}, waiting to be discovered or verified by a
-machine, is an incredibly misinformed and myopic view of the subject. That
-mathematics is a human endeavor, complete with all our lust, flaws, and
-ingenuity should be more clear after contemplating how difficult it is to
-construct a grammar of proof.
+When one perceives mathematics through the lens of human language, we must
+acknowledge that mathematical content, constructions, and discoveries, are not
+developments that come by chance, sifting through bags of words until
+some gemstone gleams through the noise. Humans have to produce mathematical
+constructions through hard labor, sweat, and tears. More importantly we create
+mathematics through dialogue, laughter, and occasionally even dreams.
 
-
-% which section, if worth keeping?
-% It is also worth noting that with respect to our earlier comparative analysis
-% of PLs and NLs [cite earlier section], there has been work comparing things like
-% numeracy, natural language acquisition skills, and programming language skills
-% \cite{prat2020relating}.  This account offers evidence that PL and NL acquisition
-% in humans who have no experience coding 
-% and it is claimed that the study ``are consistent with previous research
-% reporting higher or unique predictive utility of verbal aptitude tests when
-% compared to mathematical one" with respect to learning Python.
-
-% However, as Python is unityped, and similar experiments with a typed programming
-% language would perhaps be more relevant - especially for studying mathematical
-% abilities more consistent with the mathematicians notion of mathematics, rather
-% than just numeracy. Additionally, it would be interesting to explore the role of
-% PL syntax in such studies - and if what kind of variation could be linked to the
-
- 
-% Andreasp comment about the proof state/terms being desugared in every known PL -
-% % ask a question of how one can make the interactivity more amenable to a kind of
-% mathematical oracle, and therefore give semantic, not just syntactic goal states
-% (i.e help allow the programmer to reason semantically)
-
-
+To imbue the sentences of mathematics which we see on paper, or in the terminal,
+with meaning, we have some kind of internal mental mechanism that is at play
+with our other mental faculties : our motor system and sensory capabilities
+generally. We don't merely derive formulas by computing, but we distill ideas in
+our general linguistic capacity to some kind of unambiguous, undeniable kernel.
+The view that mathematics is just some subset of \emph{The Library} waiting
+to be discovered or verified by a machine, is an incredibly misinformed and
+myopic view of the subject. That mathematics is a human endeavor, complete with
+all our lust, flaws, and ingenuity should be more clear after contemplating how
+difficult it is to construct a grammar of proof.
