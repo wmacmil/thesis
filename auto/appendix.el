@@ -4,13 +4,13 @@
    (TeX-run-style-hooks
     "latex/monoid"
     "latex/twinsigma"
-    "latex/compare")
+    "latex/compare"
+    "latex/Id")
    (LaTeX-add-labels
     "judge"
     "homo"
     "def:def3"
     "def:def4"
-    "cubicaltt"
     "hottproofs"))
  :latex)
 

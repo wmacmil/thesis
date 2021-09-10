@@ -1,5 +1,25 @@
-@article{borges,
-  title={The Library of Babel},
+@article{pitts,
+  title={A new approach to abstract syntax with variable binding},
+  author={Gabbay, Murdoch J and Pitts, Andrew M},
+  journal={Formal aspects of computing},
+  volume={13},
+  number={3},
+  pages={341--363},
+  year={2002},
+  publisher={Springer}
+}
+
+@incollection{castellan2021categories,
+  title={Categories with families: Unityped, simply typed, and dependently typed},
+  author={Castellan, Simon and Clairambault, Pierre and Dybjer, Peter},
+  booktitle={Joachim Lambek: The Interplay of Mathematics, Logic, and Linguistics},
+  pages={135--180},
+  year={2021},
+  publisher={Springer}
+}
+
+@book{borges,
+  title={{The Library of Babel}},
   author={Borges, Jorge Luis},
   journal={Collected fictions},
   year={1998},
@@ -9,16 +29,16 @@
 
 @Article{hits,
   author =     "Henning Basold and Herman Geuvers and Niels van der Weide",
-  title =      "Higher Inductive Types in Programming",
+  title =      {{Higher Inductive Types in Programming}},
   abstract =   "We propose general rules for higher inductive   types with non-dependent and dependent elimination rules. These can   be used to give a formal treatment of data types with laws as has   been discussed by David Turner in his earliest papers on Miranda   [Turner(1985)]. The non-dependent elimination scheme is particularly   useful for defining functions by recursion and pattern matching,   while the dependent elimination scheme gives an induction proof   principle. We have rules for non-recursive higher inductive types,   like the integers, but also for recursive higher inductive types   like the truncation. In the present paper we only allow path   constructors (so there are no higher path constructors), which is   sufficient for treating various interesting examples from functional   programming, as we will briefly show in the paper: arithmetic   modulo, integers and finite sets.",
-  journal =    j-jucs,
-  year =       "2017",
-  volume =     "23",
+  journal = { J. Univ. Comp. Sci. },
+  year =       {2017},
+  volume =     {23},
   number =     "1",
-  pages =      "63--88",
+  pages =      {63–88},
   date =       "2017-01-28",
-  month =      "jan",
-  note =       "\url|http://www.jucs.org/jucs_23_1/higher_inductive_types_in|"}
+  month =      "jan"
+  }
 
 
 @article{Angiuli_2018,
@@ -36,7 +56,7 @@
 }
 
 @misc{agdaDocs,
-  author = {Norell et al.},
+  author = {Norell, Ulf and others},
   title = {{Agda Docs}},
   year = 2005,
   howpublished = {\url{https://agda.readthedocs.io/en/v2.6.2/team.html}}
@@ -44,29 +64,29 @@
 
 
 @misc{coolTT,
-  author = {Favonia},
+  author = {Favonia, and others},
   title = {{coolTT}},
   year = 2020,
   howpublished = {\url{https://github.com/redprl/cooltt}}
 }
 
 @misc{redTT,
-  author = {Sterling, Jon},
+  author = {Sterling, Jon and others},
   title = {{redTT}},
   year = 2018,
   howpublished = {\url{https://github.com/redprl/redtt}}
 }
 
 @misc{huberCub,
-  author = {Huber, Simon},
+  author = {Huber, Simon, and others},
   title = {{Cubical}},
   year = 2014,
   howpublished = {\url{https://github.com/simhu/cubical}}
 }
 
 
-@misc{warrickPrec,
-  author = {Abel, Andreas et al.},
+@misc{bnfc,
+  author = {Abel, Andreas and others},
   title = {{BNFC}},
   year = 2002,
   howpublished = {\url{https://github.com/bnfc/bnfc}}
@@ -99,10 +119,10 @@ isbn="978-3-540-45842-5"
 }
 
 
-@article{pierce2010software,
+@misc{pierce2010software,
   title={Software foundations},
   author={Pierce, Benjamin C and Casinghino, Chris and Gaboardi, Marco and Greenberg, Michael and Hri{\c{t}}cu, C{\u{a}}t{\u{a}}lin and Sj{\"o}berg, Vilhelm and Yorgey, Brent},
-  journal={Webpage: http://www. cis. upenn. edu/bcpierce/sf/current/index. html},
+  howpublished = {\url{https://github.com/wmacmil/AgdaGrammar/tree/main/pgfTests}}
   year={2010}
 }
 
@@ -110,7 +130,7 @@ isbn="978-3-540-45842-5"
 
 @article{quickCheck,
 author = {Claessen, Koen and Hughes, John},
-title = {QuickCheck: A Lightweight Tool for Random Testing of Haskell Programs},
+title = {{QuickCheck: A Lightweight Tool for Random Testing of Haskell Programs}},
 year = {2000},
 issue_date = {Sept. 2000},
 publisher = {Association for Computing Machinery},
@@ -193,7 +213,7 @@ isbn="978-3-540-48660-2"
 
 
 @Book{cubicaltt,
-  author = {Mörtberg , Anders},
+  author = {Mörtberg , Anders and others},
   title = {{cubicaltt}},
   year = 2018,
   publisher = {\url{https://github.com/mortberg/cubicaltt}}
@@ -222,7 +242,7 @@ isbn="978-3-540-48660-2"
 }
 
 @article{Kohlhase_2019,
-   title={GF + MMT = GLF – From Language to Semantics through LF},
+   title={{GF + MMT = GLF – From Language to Semantics through LF}},
    volume={307},
    ISSN={2075-2180},
    url={http://dx.doi.org/10.4204/EPTCS.307.4},
@@ -343,15 +363,21 @@ booktitle = "Proceedings Symposium on Automatic Demonstration (Versailles, Franc
 address = "Germany",
 
 }
-
-
-@proceedings{49351,
-title	= {A Promising Path Towards Autoformalization and General Artificial Intelligence},
-editor	= {Christian Szegedy},
-year	= {2020},
-booktitle	= {Lecture Notes in Computer Science},
-pages	= {3-20}
+@InProceedings{49351,
+author="Szegedy, Christian",
+editor="Benzm{\"u}ller, Christoph
+and Miller, Bruce",
+title="A Promising Path Towards Autoformalization and General Artificial Intelligence",
+booktitle="Intelligent Computer Mathematics",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="3--20",
+abstract="An autoformalization system is an AI that learns to read natural language content and to turn it into an abstract, machine verifiable formalization, ideally by bootstrapping from unlabeled training data with minimum human interaction. This is a difficult task in general, one that would require strong automated reasoning and automated natural language processing capabilities. In this paper, it is argued that autoformalization is a promising path for systems to learn sophisticated, general purpose reasoning in all domains of mathematics and computer science. This could have far reaching implications not just for mathematical research, but also for software synthesis. Here I provide the outline for a realistic path towards those goals and give a survey of recent results that support the feasibility of this direction.",
+isbn="978-3-030-53518-6"
 }
+
+
 
 
 
@@ -385,17 +411,21 @@ address = {Berlin, Heidelberg}
 }
 
 @book{ml1984,
-  author    = {Per Martin{-}L{\"{o}}f},
-  title     = {Intuitionistic type theory},
-  series    = {Studies in proof theory},
-  volume    = {1},
-  publisher = {Bibliopolis},
-  year      = {1984},
-  isbn      = {978-88-7088-228-5},
-  timestamp = {Thu, 19 Sep 2019 11:29:54 +0200},
-  biburl    = {https://dblp.org/rec/books/daglib/0000395.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
+	Author = {Martin-L{\"o}f, Per},
+	Isbn = {88-7088-105-9},
+	Mrclass = {03B15 (03F50 03F55)},
+	Mrnumber = {769301 (86j:03005)},
+	Mrreviewer = {M. M. Richter},
+	Pages = {iv+91},
+	Publisher = {Bibliopolis},
+	Series = {Studies in Proof Theory},
+	Note = {Notes by Giovanni Sambin of a series of lectures given in Padua, June 1980},
+	Title = {Intuitionistic type theory},
+	Volume = {1},
+	Year = {1984}}
+
+
+
 
 @unpublished{angelovSS,
 title= {Meet the Grammarian: Why or do we need to write application grammars?},
@@ -438,16 +468,36 @@ url="https://doi.org/10.1007/978-3-642-81955-1_11"
 }
 
 
-
-
-@misc{bezem2017univalence,
-      title={The univalence axiom in cubical sets},
-      author={Marc Bezem and Thierry Coquand and Simon Huber},
-      year={2017},
-      eprint={1710.10941},
-      archivePrefix={arXiv},
-      primaryClass={math.LO}
+@article{bezem2017univalence,
+author = {Bezem, Marc and Coquand, Thierry and Huber, Simon},
+title = {{The Univalence Axiom in Cubical Sets}},
+year = {2019},
+issue_date = {August 2019},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+volume = {63},
+number = {2},
+issn = {0168-7433},
+url = {https://doi.org/10.1007/s10817-018-9472-6},
+doi = {10.1007/s10817-018-9472-6},
+abstract = {In this note we show that Voevodsky's univalence axiom holds in the model of type
+theory based on cubical sets as described in Bezem et al. (in: Matthes and Schubert
+(eds.) 19th international conference on types for proofs and programs (TYPES 2013),
+Leibniz international proceedings in informatics (LIPIcs), Schloss Dagstuhl-Leibniz-Zentrum
+f\"{u}r Informatik, Dagstuhl, Germany, vol 26, pp 107---128, 2014. https://doi.org/10.4230/LIPIcs.TYPES.2013.107.
+http://drops.dagstuhl.de/opus/volltexte/2014/4628) and Huber (A model of type theory
+in cubical sets. Licentiate thesis, University of Gothenburg, 2015). We will also
+discuss Swan's construction of the identity type in this variation of cubical sets.
+This proves that we have a model of type theory supporting dependent products, dependent
+sums, univalent universes, and identity types with the usual judgmental equality,
+and this model is formulated in a constructive metatheory.},
+journal = {J. Autom. Reason.},
+month = aug,
+pages = {159–171},
+numpages = {13},
+keywords = {Univalence axiom, Cubical sets, Dependent type theory}
 }
+
 
 @inproceedings{cohen:hal-01378906,
   TITLE = {{Cubical Type Theory: a constructive interpretation of the univalence axiom}},
@@ -477,7 +527,7 @@ url="https://doi.org/10.1007/978-3-642-81955-1_11"
 
 @article{cubicalAgda,
 author = {Vezzosi, Andrea and M\"{o}rtberg, Anders and Abel, Andreas},
-title = {Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types},
+title = {{Cubical Agda: A Dependently Typed Programming Language with Univalence and Higher Inductive Types}},
 year = {2019},
 issue_date = {August 2019},
 publisher = {Association for Computing Machinery},
@@ -518,25 +568,28 @@ keywords = {Higher Inductive Types, Cubical Type Theory, Univalence, Dependent P
  year = {1987}
 }
 
+@incollection{ml79,
+	Author = {Martin-L{\"o}f, Per},
+	Booktitle = {Logic, Methodology and Philosophy of Science VI, Proceedings of the Sixth International Congress of Logic, Methodology and Philosophy of Science, Hannover 1979},
+        Editor = {L. Jonathan Cohen and Jerzy {Łoś} and Helmut Pfeiffer and Klaus-Peter Podewski},
+	Doi = {10.1016/S0049-237X(09)70189-2},
+	Mrclass = {03F50 (03B70 03F55 68Q45)},
+	Mrnumber = {682410 (85d:03112)},
+	Mrreviewer = {B. H. Mayoh},
+	Pages = {153--175},
+	Publisher = {North-Holland},
+	Series = {Studies in Logic and the Foundations of Mathematics},
+	Title = {Constructive mathematics and computer programming},
+	Url = {http://dx.doi.org/10.1016/S0049-237X(09)70189-2},
+	Volume = 104,
+	Year = 1982}
 
 
-@article{ml79,
- ISSN = {00804614},
- URL = {http://www.jstor.org/stable/37448},
- abstract = {If programming is understood not as the writing of instructions for this or that computing machine but as the design of methods of computation that it is the computer's duty to execute (a difference that Dijkstra has referred to as the difference between computer science and computing science), then it no longer seems possible to distinguish the discipline of programming from constructive mathematics. This explains why the intuitionistic theory of types (Martin-Lof 1975 In Logic Colloquium 1973 (ed. H. E. Rose & J. C. Shepherdson), pp. 73-118. Amsterdam: North-Holland), which was originally developed as a symbolism for the precise codification of constructive mathematics, may equally well be viewed as a programming language. As such it provides a precise notation not only, like other programming languages, for the programs themselves but also for the tasks that the programs are supposed to perform. Moreover, the inference rules of the theory of types, which are again completely formal, appear as rules of correct program synthesis. Thus the correctness of a program written in the theory of types is proved formally at the same time as it is being synthesized.},
- author = {P. Martin-Lof and Z. A. Lozinski},
- journal = {Philosophical Transactions of the Royal Society of London. Series A, Mathematical and Physical Sciences},
- number = {1522},
- pages = {501--518},
- publisher = {The Royal Society},
- title = {Constructive Mathematics and Computer Programming [and Discussion]},
- volume = {312},
- year = {1984}
-}
+
 
 
 @article{RANTA2020120,
-title = {Some remarks on pragmatics in the language of mathematics: Comments to the paper “At Least One Black Sheep: Pragmatics and Mathematical Language” by Luca San Mauro, Marco Ruffino and Giorgio Venturi},
+title = {{Some remarks on pragmatics in the language of mathematics: Comments to the paper “At Least One Black Sheep: Pragmatics and Mathematical Language” by Luca San Mauro, Marco Ruffino and Giorgio Venturi}},
 journal = {Journal of Pragmatics},
 volume = {160},
 pages = {120-122},
@@ -572,7 +625,7 @@ abstract = {In this paper we argue, against a somewhat standard view, that pragm
 }
 
 @misc{schaefer2020glif,
-  title={The GLIF System: A Framework for Inference-Based Natural-Language Understanding},
+  title={{The GLIF System: A Framework for Inference-Based Natural-Language Understanding}},
   author={Schaefer, Jan Frederik and Kohlhase, Michael},
   year={2020},
   publisher={submitted}
@@ -580,7 +633,7 @@ abstract = {In this paper we argue, against a somewhat standard view, that pragm
 
 
 @inproceedings{bos-etal-2004-wide,
-    title = "Wide-Coverage Semantic Representations from a {CCG} Parser",
+    title = {{ Wide-Coverage Semantic Representations from a {CCG} Parser }},
     author = "Bos, Johan  and
       Clark, Stephen  and
       Steedman, Mark  and
@@ -604,14 +657,18 @@ abstract = {In this paper we argue, against a somewhat standard view, that pragm
   organization={Springer}
 }
 
-@misc{wenzel2004isabelle,
-  title={The isabelle/isar reference manual},
-  author={Wenzel, Makarius and others},
-  year={2004}
+@book{wenzel2004isabelle,
+author = {Nipkow, Tobias and Wenzel, Markus and Paulson, Lawrence C.},
+title = {Isabelle/HOL: A Proof Assistant for Higher-Order Logic},
+year = {2002},
+isbn = {3540433767},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg}
 }
 
+
 @inproceedings{rudnicki1992overview,
-  title={An overview of the Mizar project},
+  title={{An overview of the Mizar project}},
   author={Rudnicki, Piotr},
   booktitle={Proceedings of the 1992 Workshop on Types for Proofs and Programs},
   pages={311--330},
@@ -621,7 +678,7 @@ abstract = {In this paper we argue, against a somewhat standard view, that pragm
 
 @inproceedings{mlTrans,
 author = {Wang, Qingxiang and Brown, Chad and Kaliszyk, Cezary and Urban, Josef},
-title = {Exploration of Neural Machine Translation in Autoformalization of Mathematics in Mizar},
+title = {{Exploration of Neural Machine Translation in Autoformalization of Mathematics in Mizar}},
 year = {2020},
 isbn = {9781450370974},
 publisher = {Association for Computing Machinery},
@@ -647,7 +704,7 @@ series = {CPP 2020}
 }
 
 @article{czajka2018hammer,
-  title={Hammer for Coq: Automation for dependent type theory},
+  title={{Hammer for Coq: Automation for dependent type theory}},
   author={Czajka, {\L}ukasz and Kaliszyk, Cezary},
   journal={Journal of automated reasoning},
   volume={61},
@@ -657,13 +714,16 @@ series = {CPP 2020}
   publisher={Springer}
 }
 
-@article{godel1994qed,
-  title={The QED Manifesto},
-  author={G{\"o}del, K},
-  journal={Lecture Notes in Artificial Intelligence},
-  volume={814},
-  pages={238--251},
-  year={1994}
+@inproceedings{godel1994qed,
+title = {The QED Manifesto},
+year = {1994},
+isbn = {3540581561},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+booktitle = {Proceedings of the 12th International Conference on Automated Deduction},
+pages = {238–251},
+numpages = {14},
+series = {CADE-12}
 }
 
 
@@ -683,51 +743,92 @@ abstract="In this paper, we propose a method for presenting formal proofs in an 
 isbn="978-3-540-49178-1"
 }
 
-@incollection{ganesalingam2013language,
-  title={The language of mathematics},
+@book{ganesalingam2013language,
+  title={{The Language of Mathematics}},
   author={Ganesalingam, Mohan},
-  booktitle={The language of mathematics},
-  pages={17--38},
   year={2013},
-  publisher={Springer}
+  publisher={Springer Berlin Heidelberg}
 }
 
 
 @misc{escardó2020introduction,
-      title={Introduction to Univalent Foundations of Mathematics with Agda},
-      author={Martín Hötzel Escardó},
-      year={2020},
-      eprint={1911.00580},
-      archivePrefix={arXiv},
-      primaryClass={cs.LO}
+  title={{Introduction to Univalent Foundations of Mathematics with Agda}},
+  author={Martín Hötzel Escardó},
+  year=2020,
+  howpublished = {\url{https://www.cs.bham.ac.uk/~mhe/HoTT-UF-in-Agda-Lecture-Notes/index.html}}
 }
 
 @book{proofWW,
-  title={Proofs Without Words},
-  author={Roger Nelsen},
-  year=1993
+  title={Proofs without words: Exercises in visual thinking},
+  author={Nelsen, Roger B},
+  number={1},
+  year={1993},
+  publisher={MAA}
 }
 
-@inproceedings{2002TheWO,
-  title={The World of Blind Mathematicians},
-  author={Allyn Jackson},
-  year=2002
+
+@Comment @InProceedings{proofFrom,
+@Comment author="Coscoy, Yann
+@Comment and Kahn, Gilles
+@Comment and Th{\'e}ry, Laurent",
+@Comment title="Extracting text from proofs",
+@Comment booktitle="Typed Lambda Calculi and Applications",
+@Comment year="1995",
+@Comment publisher="Springer Berlin Heidelberg",
+@Comment address="Berlin, Heidelberg",
+@Comment pages="109--123",
+@Comment abstract="In this paper, we propose a method for presenting formal proofs in an intelligible form. We describe a transducer from proof objects ($\lambda$-terms in the Calculus of Constructions) to pseudo natural language that has been implemented for the Coq system.",
+@Comment isbn="978-3-540-49178-1"
+@Comment }
+
+@article{2002TheWO,
+  title={Communications-The World of Blind Mathematicians},
+  author={Jackson, Allyn},
+  journal={Notices of the American Mathematical Society},
+  volume={49},
+  number={10},
+  pages={1246--1251},
+  year={2002},
+  publisher={[Providence, RI, etc., American Mathematical Society]}
 }
 
-@misc{fong2016algebra,
-      title={The Algebra of Open and Interconnected Systems},
+
+@phdthesis{fong2016algebra,
+      title={{The Algebra of Open and Interconnected Systems}},
       author={Brendan Fong},
       year={2016},
+      school={{Oxford University}},
       eprint={1609.05382},
       archivePrefix={arXiv},
       primaryClass={math.CT}
 }
 
 @inproceedings{Bar2016GlobularAO,
-  title={Globular: an online proof assistant for higher-dimensional rewriting},
+  title={Globular: An Online Proof Assistant for Higher-Dimensional Rewriting},
   author={K. Bar and A. Kissinger and Jamie Vicary},
+  booktitle={FSCD},
   year={2016}
 }
+
+
+
+
+@proceedings{DBLP:conf/rta/2016,
+  editor    = {Delia Kesner and
+               Brigitte Pientka},
+  series    = {LIPIcs},
+  volume    = {52},
+  publisher = {Schloss Dagstuhl - Leibniz-Zentrum f{\"{u}}r Informatik},
+  year      = {2016},
+  url       = {http://www.dagstuhl.de/dagpub/978-3-95977-010-1},
+  isbn      = {978-3-95977-010-1},
+  timestamp = {Tue, 11 Feb 2020 15:52:14 +0100},
+  biburl    = {https://dblp.org/rec/conf/rta/2016.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
 
 @InCollection{sep-epistemology-visual-thinking,
 	author       =	{Giaquinto, Marcus},
@@ -755,7 +856,7 @@ year = 2020
 }
 
 @misc{harperTrinity,
-  title={The Holy Trinity},
+  title={{The Holy Trinity}},
   author={Robert Harper},
   year={2011},  howpublished={\url{https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/}}
 }
@@ -771,11 +872,6 @@ year = 2020
   publisher={Nature Publishing Group}
 }
 
-@inproceedings{coqPat1992_OLD_BAD_REFERENCE,
-  title={Pattern Matching with Dependent Types},
-  author={T. Coquand},
-  year={1992}
-}
 
 @inproceedings{coqPat,
   title={Pattern matching with dependent types},
@@ -793,12 +889,21 @@ publisher= { 15-317: Constructive Logic },
 year = 2009
 }
 
-@Book{wadler,
+p
+
+@misc{agdaDocs,
+  author = {Norell, Ulf and others},
+  title = {{Agda Docs}},
+  year = 2005,
+  howpublished = {\url{https://agda.readthedocs.io/en/v2.6.2/team.html}}
+}
+
+@misc{wadler,
     author = {Philip Wadler and Wen Kokke and Jeremy G. Siek},
     title  = {Programming Language Foundations in {A}gda},
     year   = {2020},
     month  = jul,
-    url    = {http://plfa.inf.ed.ac.uk/20.07/},
+    howpublished    = {\url{http://plfa.inf.ed.ac.uk/20.07/}}
 }
 
 @InProceedings{ulf,
@@ -809,7 +914,7 @@ editor="Berghofer, Stefan
 and Nipkow, Tobias
 and Urban, Christian
 and Wenzel, Makarius",
-title="A Brief Overview of Agda -- A Functional Language with Dependent Types",
+title={{ A Brief Overview of Agda -- A Functional Language with Dependent Types }},
 booktitle="Theorem Proving in Higher Order Logics",
 year="2009",
 publisher="Springer Berlin Heidelberg",
@@ -847,7 +952,6 @@ is also included. The book also includes a medium-sized case study on Huffman en
 and decoding.}
 }
 
-
 @Inbook{Bove2009,
 author="Bove, Ana
 and Dybjer, Peter",
@@ -855,7 +959,7 @@ editor="Bove, Ana
 and Barbosa, Lu{\'i}s Soares
 and Pardo, Alberto
 and Pinto, Jorge Sousa",
-title="Dependent Types at Work",
+title={{ Dependent Types at Work }},
 bookTitle="Language Engineering and Rigorous Software Development: International LerNet ALFA Summer School 2008, Piriapolis, Uruguay, February 24 - March 1, 2008, Revised Tutorial Lectures",
 year="2009",
 publisher="Springer Berlin Heidelberg",
@@ -888,7 +992,7 @@ url="https://doi.org/10.1007/978-3-642-03153-3_2"
 
 
 @article{mlMeanings,
-	title = {On the Meanings of the Logical Constants and the Justifications of the Logical Laws},
+	title = {{On the Meanings of the Logical Constants and the Justifications of the Logical Laws}},
 	year = {1996},
 	volume = {1},
 	journal = {Nordic Journal of Philosophical Logic},
@@ -900,7 +1004,7 @@ url="https://doi.org/10.1007/978-3-642-03153-3_2"
 
 @article{mtac2,
 author = {Kaiser, Jan-Oliver and Ziliani, Beta and Krebbers, Robbert and R\'{e}gis-Gianas, Yann and Dreyer, Derek},
-title = {Mtac2: Typed Tactics for Backward Reasoning in Coq},
+title = {{Mtac2: Typed Tactics for Backward Reasoning in Coq}},
 year = {2018},
 issue_date = {September 2018},
 publisher = {Association for Computing Machinery},
@@ -939,7 +1043,7 @@ keywords = {Metaprogramming, Dependent Types, Theorem Proving, Tactic Languages,
 
 @inproceedings{coqAlec,
 author = {Pit-Claudel, Cl\'{e}ment},
-title = {Untangling Mechanized Proofs},
+title = {{Untangling Mechanized Proofs}},
 year = {2020},
 isbn = {9781450381765},
 publisher = {Association for Computing Machinery},
@@ -1020,14 +1124,14 @@ keywords = {finite functions, functional programming, linguistics, morphological
     }
 
 @article{ljunglof2004expressivity,
-  title={Expressivity and complexity of the Grammatical Framework},
+  title={{Expressivity and complexity of the Grammatical Framework}},
   author={Ljungl{\"o}f, Peter},
   year={2004}
 }
 
 @inproceedings{alfaGF,
 author = {Hallgren, Thomas and Ranta, Aarne},
-title = {An Extensible Proof Text Editor},
+title = {{An Extensible Proof Text Editor}},
 year = {2000},
 isbn = {3540412859},
 publisher = {Springer-Verlag},
@@ -1087,7 +1191,7 @@ url="https://doi.org/10.1007/978-94-010-2506-5_10"
 author="Luo, Zhaohui",
 editor="B{\'e}chet, Denis
 and Dikovsky, Alexander",
-title="Common Nouns as Types",
+title={{Common Nouns as Types}},
 booktitle="Logical Aspects of Computational Linguistics",
 year="2012",
 publisher="Springer Berlin Heidelberg",
@@ -1097,21 +1201,20 @@ abstract="When modern type theories are employed for formal semantics, common no
 isbn="978-3-642-31262-5"
 }
 
-@book{theunivalentfoundationsprogram-homotopytypetheory-2013,
-  title = {Homotopy Type Theory: Univalent Foundations of Mathematics},
-  shorttitle = {Homotopy Type Theory},
-  author = {{The Univalent foundations program} and {Institute for advanced study (Princeton}, N.J.)},
-  year = {2013},
-  annotation = {OCLC: 1028552960},
-  language = {English}
-}
+@Book{theunivalentfoundationsprogram-homotopytypetheory-2013,
+  author =    {The {Univalent Foundations Program}},
+  title =     {Homotopy Type Theory: Univalent Foundations of Mathematics},
+  publisher = {\url{https://homotopytypetheory.org/book}},
+  address =   {Institute for Advanced Study},
+  year =      2013}
+
 
 @InProceedings{surveyLang,
 author="Kaliszyk, Cezary
 and Rabe, Florian",
 editor="Benzm{\"u}ller, Christoph
 and Miller, Bruce",
-title="A Survey of Languages for Formalizing Mathematics",
+title={{ A Survey of Languages for Formalizing Mathematics }},
 booktitle="Intelligent Computer Mathematics",
 year="2020",
 publisher="Springer International Publishing",
@@ -1121,26 +1224,31 @@ abstract="In order to work with mathematical content in computer systems, it is 
 isbn="978-3-030-53518-6"
 }
 
+
+
 @misc{halesCNL,
 author = {Thomas Hales},
-title = {AN ARGUMENT FOR CONTROLLED NATURAL LANGUAGES IN MATHEMATICS},
-year = 2019
+title = {{An Argument for Controlled Natural Languages in Mathematics}},
+year = 2019,
+howpublished = {\url{https://jiggerwit.wordpress.com/2019/06/20/an-argument-for-controlled-natural-languages-in-mathematics/}}
 }
 
 @misc{aarneHott,
 author = {Aarne Ranta},
-title = { Translating Homotopy Type Theory in Grammatical Framework },
-publisher= { Stockholm Mathematics Seminar },
-year = 2014
+title = {{ Translating Homotopy Type Theory in Grammatical Framework }},
+note = { Stockholm University, Department of Mathematics },
+year = 2014,
+howpublished = {\url{https://github.com/GrammaticalFramework/gf-contrib/tree/master/homotopy-typetheory}}
 }
 
-
-@misc{ltac2,
-author = {Pierre-Marie Pédrot},
-title = { Ltac2 : Tactical Warfare},
-publisher= { POPL },
-year = 2021
+@inproceedings{ltac2,
+  title={Ltac2: tactical warfare},
+  author={P{\'e}drot, Pierre-Marie},
+  booktitle={The Fifth International Workshop on Coq for Programming Languages, CoqPL},
+  pages={13--19},
+  year={2019}
 }
+
 
 @book{frege79,
   author =    {Gottlob Frege},
@@ -1158,14 +1266,10 @@ year = 2021
 }
 
 @book{ranta1994type,
-  title={Type-theoretical Grammar},
+  title={{Type Theoretical Grammar}},
   author={Ranta, A.},
-  isbn={9780198538578},
-  lccn={lc94038911},
-  series={Indices (Claredon)},
-  url={https://books.google.se/books?id=A5m13eGOcqYC},
   year={1994},
-  publisher={Clarendon Press}
+  publisher={Oxford University Press}
 }
 
 @incollection{avigad2015mathematics,

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  1 SEP 2021 21:49
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.27)  10 SEP 2021 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,14 +969,14 @@ Package fontspec Info: Font family 'DejaVuSerif(1)' created for font 'DejaVu
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/DejaVuSerif(1)/m/n on input line 48.
+(Font)                  OT1/cmr/m/n --> TU/DejaVuSerif(1)/m/n on input line 46.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/DejaVuSerif(1)/m/it on input line 4
-8.
+6.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/DejaVuSerif(1)/bx/n on input line 4
-8.
+6.
 
 Package fontspec Info: Font family 'DejaVuSans(0)' created for font 'DejaVu
 (fontspec)             Sans' with options [Ligatures=TeX].
@@ -1018,11 +1018,11 @@ Package fontspec Info: Font family 'DejaVuSans(1)' created for font 'DejaVu
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/DejaVuSans(1)/m/n on input line 49.
+(Font)                  OT1/cmss/m/n --> TU/DejaVuSans(1)/m/n on input line 47.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/DejaVuSans(1)/bx/n on input line 4
-9.
+7.
 
 Package fontspec Info: Font family 'DejaVuSansMono(0)' created for font
 (fontspec)             'DejaVu Sans Mono' with options
@@ -1087,10 +1087,10 @@ Package fontspec Info: Font family 'DejaVuSansMono(1)' created for font
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(1)/m/n on input line
- 50.
+ 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono(1)/bx/n on input lin
-e 50.
+e 48.
 (/usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
@@ -1150,26 +1150,26 @@ LaTeX Warning: Label `npf' multiply defined.
 x))
 \openout1 = `roadmap.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1206,7 +1206,7 @@ LaTeX Font Info:    ... okay on input line 143.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box118
-Package hyperref Info: Link coloring OFF on input line 143.
+Package hyperref Info: Link coloring OFF on input line 115.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1216,9 +1216,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 143.
-LaTeX Info: Redefining \pageref on input line 143.
-LaTeX Info: Redefining \nameref on input line 143.
+LaTeX Info: Redefining \ref on input line 115.
+LaTeX Info: Redefining \pageref on input line 115.
+LaTeX Info: Redefining \nameref on input line 115.
 (./roadmap.out) (./roadmap.out)
 \@outlinefile=\write5
 \openout5 = `roadmap.out'.
@@ -1263,16 +1263,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 143.
+(Font)              `operators' in the math version `normal' on input line 115.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 143.
+ line 115.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 143.
+(Font)              `operators' in the math version `bold' on input line 115.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 143.
+t line 115.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1343,15 +1343,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 143.
+(Font)              `symbols' in the math version `normal' on input line 115.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 143.
+t line 115.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 143.
+(Font)              `symbols' in the math version `bold' on input line 115.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 143.
+t line 115.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1405,16 +1405,16 @@ uage=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-43.
+15.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 143.
+t line 115.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 143
+(Font)              `largesymbols' in the math version `bold' on input line 115
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 143.
+t line 115.
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                `mathtools' package.
@@ -1437,30 +1437,30 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 File: logo/gu_logo_blue.pdf Graphic file (type pdf)
 <use logo/gu_logo_blue.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 156.
+(Font)              scaled to size 10.95116pt on input line 128.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 156.
+(Font)              scaled to size 7.6658pt on input line 128.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 156.
+(Font)              scaled to size 5.47559pt on input line 128.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 156.
+(Font)              scaled to size 10.94882pt on input line 128.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 156.
+(Font)              scaled to size 7.66417pt on input line 128.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 156.
+(Font)              scaled to size 5.47441pt on input line 128.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-56.
+28.
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.475> not available
-(Font)              size <5> substituted on input line 156.
+(Font)              size <5> substituted on input line 128.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 156
+LaTeX Font Info:    Trying to load font information for U+msa on input line 128
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 156
+LaTeX Font Info:    Trying to load font information for U+msb on input line 128
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1469,11 +1469,17 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 ) [1
 
-] [1] [2] (./roadmap.toc [3])
+] [1] [2]
+Overfull \hbox (1.50735pt too wide) in paragraph at lines 260--266
+[]\TU/DejaVuSerif(0)/m/n/10.95 Efter tre år i Sverige kan jag nu prata och skri
+va lite svenska, och som den amerikan
+ []
+
+[3] [4] (./roadmap.toc [5])
 \tf@toc=\write6
 \openout6 = `roadmap.toc'.
 
-[4] [1]
+[6]
 \openout2 = `intro.aux'.
 
 (./intro.tex
@@ -1482,9 +1488,9 @@ Overfull \hbox (3.81491pt too wide) in paragraph at lines 23--29
 ds that computation man-
  []
 
-[2
+[1
 
-] [3] [4] (./perspectives.tex [5]
+] [2] [3] (./perspectives.tex [4]
 Overfull \hbox (28.66846pt too wide) in paragraph at lines 25--35
 []\TU/DejaVuSerif(0)/m/n/10.95 Computational linguistics, particularly in the t
 radition of type theoretical semantics[[]],
@@ -1613,7 +1619,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no p in font nullfont!
-[6] [7] [8] [9] [10]
+[5] [6] [7] [8] [9]
 ! Misplaced alignment tab character &.
 <argument> Coq &
                  other ITPs
@@ -1632,7 +1638,7 @@ Overfull \hbox (0.85721pt too wide) in paragraph at lines 324--330
 y hundreds of cases, the metapro-
  []
 
-[11] [12] [13])) [14]
+[10] [11] [12])) [13]
 \openout2 = `preliminaries.aux'.
 
 (./preliminaries.tex (./mltt.tex
@@ -1654,7 +1660,7 @@ Overfull \hbox (29.80446pt too wide) in paragraph at lines 38--51
  [][] 
  []
 
-[15
+[14
 
 
 ]
@@ -1662,7 +1668,7 @@ Overfull \hbox (17.62871pt too wide) in paragraph at lines 96--103
  [][] 
  []
 
-[16]) (./intro-agda.tex (./latex/ex.tex [17]
+[15]) (./intro-agda.tex (./latex/ex.tex [16]
 \openout4 = `roadmap.ptb'.
 
 
@@ -1808,7 +1814,7 @@ Overfull \hbox (66.17099pt too wide) detected at line 274
 
 \openout4 = `roadmap.ptb'.
 
-[18]
+[17]
 \openout4 = `roadmap.ptb'.
 
 
@@ -1835,7 +1841,7 @@ l.425     \infer1[]{ \Gamma \vdash 0 : ℕ  }
 
 \openout4 = `roadmap.ptb'.
 
-[19]
+[18]
 Missing character: There is no ̌ in font cmmi10!
 \openout4 = `roadmap.ptb'.
 
@@ -1877,15 +1883,15 @@ Overfull \hbox (10.37508pt too wide) in paragraph at lines 607--607
  [][] 
  []
 
-) (./latex/twin-primes.tex [20]
+) (./latex/twin-primes.tex [19]
 \openout4 = `roadmap.ptb'.
 
 \openout4 = `roadmap.ptb'.
 
-[21]))) [22]
+[20]))) [21]
 \openout2 = `previouswork.aux'.
 
-(./previouswork.tex [23
+(./previouswork.tex [22
 
 
 ]
@@ -1894,29 +1900,25 @@ Overfull \hbox (7.00284pt too wide) in paragraph at lines 67--80
 ][][][][][][][][][][] [] [][][][] [] [][][][][][][] [][][][][][][][][][]$
  []
 
-[24]
+[23]
 Overfull \hbox (0.34492pt too wide) in paragraph at lines 117--122
 []\TU/DejaVuSerif(0)/m/n/10.95 He remarks that mathematicians believe “insuffic
 iently precise” mathematical sen-
  []
 
-[25]
+[24]
 Overfull \hbox (4.52766pt too wide) in paragraph at lines 193--205
 []\TU/DejaVuSerif(0)/m/n/10.95 Ranta categorizes pragmatic phenomena in 5 ways 
 : speech acts, context, speaker’s
  []
 
-[26] [27]) [28]
+[25] [26]) [27]
 \openout2 = `gfintro.aux'.
 
-(./gfintro.tex
-
-Package natbib Warning: Citation `bnfc' on page 29 undefined on input line 64.
-
-[29
+(./gfintro.tex [28
 
 
-] [30]
+] [29]
 Overfull \hbox (1.09044pt too wide) in paragraph at lines 131--134
 []\TU/DejaVuSerif(0)/m/n/10.95 The two functions displayed in []Figure 5[][], $
 [][][][][] [] [][][][][][][][][] [] [][][][][][][][]$ and $[][][][][][][][][] [
@@ -1929,10 +1931,10 @@ Overfull \hbox (5.19357pt too wide) in paragraph at lines 137--146
 ne in polynomial time, whereby
  []
 
-[31] [32] [33] [34]) [35]
+[30] [31] [32] [33]) [34]
 \openout2 = `grammar.aux'.
 
-(./grammar.tex [36
+(./grammar.tex [35
 
 
 ]
@@ -1957,7 +1959,7 @@ Overfull \hbox (6.30647pt too wide) in paragraph at lines 114--114
  of 4 and 5 is prime and the sum[] 
  []
 
-[37]
+[36]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
 31.
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
@@ -1968,13 +1970,13 @@ Overfull \hbox (23.88637pt too wide) in paragraph at lines 156--156
 op c (GListNumPred (xs))) obj) in[] 
  []
 
-[38]) [39]
+[37]) [38]
 \openout2 = `natproof.aux'.
 
 (./natproof.tex (./latex/nproof.tex
 \openout4 = `roadmap.ptb'.
 
-[40
+[39
 
 
 ]
@@ -1982,82 +1984,82 @@ op c (GListNumPred (xs))) obj) in[]
 
 \openout4 = `roadmap.ptb'.
 
+[40]
+\openout4 = `roadmap.ptb'.
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][] 
+ []
+
+
+Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
+ [][][][] 
+ []
+
 [41]
 \openout4 = `roadmap.ptb'.
 
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][] 
- []
-
-
-Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
- [][][][] 
- []
-
-[42]
-\openout4 = `roadmap.ptb'.
-
-[43])) [44] [45]
+[42])) [43] [44]
 \openout2 = `latex/equality.aux'.
 
 (./latex/equality.tex
 \openout4 = `roadmap.ptb'.
 
-[46
+[45
 
 
-]) [47]
+]) [46]
 \openout2 = `hottgrammars.aux'.
 
 (./hottgrammars.tex (./latex/ContrClean.tex
@@ -2065,17 +2067,17 @@ Overfull \hbox (44.10202pt too wide) in paragraph at lines 644--644
 
 \openout4 = `roadmap.ptb'.
 
-) [48
+) [47
 
 
-] [49]
+] [48]
 Overfull \hbox (3.28198pt too wide) detected at line 96
 [][][] [][][][][] [][] [][][] [][] [] [][][][][][][][][][] [][][][][][][][][][]
 [][][][] [] [][] [][][][][][][][][][][][][][][][][][] [] [][] [][][][][][][][][
 ]
  []
 
-[50] [51] [52] [53] [54] [55]
+[49] [50] [51] [52] [53] [54]
 ! Undefined control sequence.
 l.400 ...erce GFs builtin number to, i.e. \codword
                                                   {Int -> Nat}. Unless one
@@ -2085,73 +2087,58 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[56]) [57]
+[55]) [56]
 \openout2 = `conclusion.aux'.
 
-(./conclusion.tex [58
+(./conclusion.tex [57
 
 
-] [59]) [60] (./roadmap.bbl
-! Missing $ inserted.
-<inserted text> 
-                $
-l.53 \newblock \url|http://www.jucs.org/jucs_
-                                             23_1/higher_inductive_types_in|.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+] [58]) [59] [60
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.54 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+] (./roadmap.bbl [61] [62]
+Underfull \hbox (badness 10000) in paragraph at lines 197--201
+[]\TU/DejaVuSerif(0)/m/n/10.95 Escardó, M. H. (2020).  Introduction to Univalen
+t Foundations
+ []
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.54 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-! Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.54 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Underfull \hbox (badness 10000) in paragraph at lines 197--201
+\TU/DejaVuSerif(0)/m/n/10.95 of Mathematics with Agda.  []$[][][][][] [] [] [] 
+[][][] [] [][] [] [][][][] [] [][] [] [][] [] [][][][] []
+ []
 
-[61
 
-] [62] [63]
-Underfull \hbox (badness 10000) in paragraph at lines 310--313
-[]\TU/DejaVuSerif(0)/m/n/10.95 Macmillan, W. (2021a).  cubicalTT.  []$[][][][][
+Underfull \hbox (badness 4353) in paragraph at lines 240--244
+[]\TU/DejaVuSerif(0)/m/n/10.95 Hales, T. (2019).  An Argument for Controlled Na
+tural Languages
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--244
+\TU/DejaVuSerif(0)/m/n/10.95 in Mathematics.  []$[][][][][] [] [] [] [][][][][]
+[][][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][] [] [][] []
+ []
+
+[63]
+Underfull \hbox (badness 4647) in paragraph at lines 332--335
+[]\TU/DejaVuSerif(0)/m/n/10.95 Macmillan, W. (2021b).  cubicalTT.  []$[][][][][
 ] [] [] [] [][][][][][] [] [][][] [] [][][][][][][] []
  []
 
-
-Underfull \hbox (badness 2435) in paragraph at lines 315--318
-[]\TU/DejaVuSerif(0)/m/n/10.95 Macmillan, W. (2021b).  QA Grammar.  []$[][][][]
-[] [] [] [] [][][][][][] [] [][][] [] [][][][][][][] []
- []
-
 [64]
-Underfull \hbox (badness 10000) in paragraph at lines 429--433
+Underfull \hbox (badness 10000) in paragraph at lines 468--472
 []\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2013).  gf-contrib/typetheory.  []$[]
 [][][][] [] [] [] [][][][][][] [] [][][] []
  []
 
+[65]
+Underfull \hbox (badness 1430) in paragraph at lines 474--479
+[]\TU/DejaVuSerif(0)/m/n/10.95 Ranta, A. (2014).   Translating Homotopy Type Th
+eory in Grammati-
+ []
+
 ! Misplaced alignment tab character &.
-l.480 ...tion for Computing Machinery and Morgan &
+l.522 ...tion for Computing Machinery and Morgan &
                                                    Claypool.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2160,10 +2147,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[65]) [66]
+[66]) [67]
 \openout2 = `appendix.aux'.
 
-(./appendix.tex [67
+(./appendix.tex [68
 
 ]
 Missing character: There is no ̌ in font cmmi10!
@@ -2176,13 +2163,13 @@ See the ebproof package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.116 ...a \vdash \lambda x. b {:} \Pi x {:} A. B}
+l.113 ...a \vdash \lambda x. b {:} \Pi x {:} A. B}
                                                   
 (That was another \errmessage.)
 
-[68]
+[69]
 ! Extra }, or forgotten $.
-l.136 ...ambda x.f)\, x \equiv f {:} \Pi x{:}A. B}
+l.133 ...ambda x.f)\, x \equiv f {:} \Pi x{:}A. B}
                                                   $$
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2190,64 +2177,22 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[69] (./latex/monoid.tex
+[70] (./latex/monoid.tex
 \openout4 = `roadmap.ptb'.
-
-\openout4 = `roadmap.ptb'.
-
-[70]) (./latex/twinsigma.tex
-
-LaTeX Warning: Reference `twinprime' on page 71 undefined on input line 133.
 
 [71]
 \openout4 = `roadmap.ptb'.
 
-)
-Overfull \hbox (280.99213pt too wide) in paragraph at lines 371--371
-[]      \TU/DejaVuSansMono(0)/m/n/10.95 -- note, cubical tt doesn't support ind
-uctive families, and therefore the datatype (& labels) need to be modified[] 
- []
+) [72] (./latex/twinsigma.tex
 
-[72] [73]
-Overfull \hbox (72.2311pt too wide) in paragraph at lines 371--371
-\TU/DejaVuSansMono(0)/m/n/10.95 > ( ( b ) ( x ) ) ) ( p : ( x : a ) -> ( ( ( b 
-) ( x ) ) ( ( f ) ( x ) ) == ( ( g ) ( x ) ) ) )[] 
- []
+LaTeX Warning: Reference `twinprime' on page 73 undefined on input line 133.
 
-
-Overfull \hbox (177.7104pt too wide) in paragraph at lines 371--371
-[]  \TU/DejaVuSansMono(0)/m/n/10.95 A , B , C , D , E , F , G , H , I , J , K ,
- L , M , N , O , P , Q , R , S , T , U , V , W , X , Y , Z : AIdent ;[] 
- []
-
-[74] [75]
-Overfull \hbox (32.67632pt too wide) in paragraph at lines 509--509
-[]  \TU/DejaVuSansMono(0)/m/n/10.95 Id e1 e2 e3 = mkPrec 3 (usePrec 4 e1 ++ use
-Prec 4 e2 ++ "==" ++ usePrec 3 e3) ;[] 
- []
-
-
-Overfull \hbox (283.18956pt too wide) in paragraph at lines 509--509
-[]\TU/DejaVuSansMono(0)/m/n/10.95 -- for an explicit vs implicit use of paramet
-ers, may have to use expressions as records, with a parameter is_implicit[] 
- []
-
-
-Overfull \hbox (261.21477pt too wide) in paragraph at lines 509--509
-[]  \TU/DejaVuSansMono(0)/m/n/10.95 IdJ e1 e2 e3 e4 e5 = mkPrec 3 ("J" ++ usePr
-ec 4 e1 ++ usePrec 4 e2 ++ usePrec 4 e3 ++ usePrec 4 e4 ++ usePrec 4 e5) ;[] 
- []
-
-
-Overfull \hbox (8.50397pt too wide) in paragraph at lines 509--509
-[]  \TU/DejaVuSansMono(0)/m/n/10.95 Pair e1 e2 = mkPrec 5 ("(" ++ usePrec 0 e1 
-++ "," ++ usePrec 0 e2 ++ ")") ;[] 
- []
-
-[76] [77] (./latex/compare.tex
 \openout4 = `roadmap.ptb'.
 
-[78] [79]
+) (./latex/compare.tex
+\openout4 = `roadmap.ptb'.
+
+[73] [74] [75]
 Overfull \hbox (22.64977pt too wide) in paragraph at lines 449--514
  [][][] 
  []
@@ -2260,19 +2205,3167 @@ Overfull \hbox (22.64977pt too wide) in paragraph at lines 522--632
 
 LaTeX Warning: Float too large for page by 257.37898pt on input line 633.
 
-)) [80] [81] [82]
+) [76] [77] (./latex/Id.tex
+\openout4 = `roadmap.ptb'.
 
-Package natbib Warning: There were undefined citations.
+Missing character: There is no ⋆ in font DejaVu Serif/OT:script=latn;language=d
+flt;mapping=tex-text;!
+Missing character: There is no ⋆ in font DejaVu Serif/OT:script=latn;language=d
+flt;mapping=tex-text;!
+Missing character: There is no ⋆ in font DejaVu Serif/OT:script=latn;language=d
+flt;mapping=tex-text;!
+Missing character: There is no ⋆ in font DejaVu Serif/OT:script=latn;language=d
+flt;mapping=tex-text;!
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 304.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 304.
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][][][][][][][] 
+ []
+
+
+Overfull \hbox (579.94084pt too wide) in paragraph at lines 6767--6767
+ [][] 
+ []
+
+[78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89])) [90]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
 (./roadmap.aux (./intro.aux) (./preliminaries.aux) (./previouswork.aux) (./gfin
 tro.aux) (./grammar.aux) (./natproof.aux) (./latex/equality.aux) (./hottgrammar
 s.aux) (./conclusion.aux) (./appendix.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 304.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 304.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 345.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
 Package rerunfilecheck Info: File `roadmap.out' has not changed.
-(rerunfilecheck)             Checksum: 85B43969911BE47ECD5776C772837AF0;3694.
+(rerunfilecheck)             Checksum: A2C75D3EA7628388F3CAF4F96710DD30;3637.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
@@ -2285,12 +5378,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33853 strings out of 479819
- 648608 string characters out of 5895846
- 1193651 words of memory out of 5000000
- 50189 multiletter control sequences out of 15000+600000
+ 34175 strings out of 479819
+ 653630 string characters out of 5895846
+ 1716356 words of memory out of 5000000
+ 50508 multiletter control sequences out of 15000+600000
  538521 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,16n,109p,814b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 104i,16n,349p,814b,1037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on roadmap.xdv (87 pages, 2215120 bytes).
+Output written on roadmap.xdv (97 pages, 2723872 bytes).

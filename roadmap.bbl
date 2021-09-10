@@ -1,11 +1,17 @@
 \begin{thebibliography}{}
 
+\bibitem[god, 1994]{godel1994qed}
+ (1994).
+\newblock The qed manifesto.
+\newblock In {\em Proceedings of the 12th International Conference on Automated
+  Deduction}, CADE-12  (pp.\ 238–251).  Berlin, Heidelberg: Springer-Verlag.
+
 \bibitem[Abel, 2020]{andreasEmail}
 Abel, A. (2020).
 \newblock Personal correspondance.
 
-\bibitem[Abel, 2002]{warrickPrec}
-Abel, A. e.~a. (2002).
+\bibitem[Abel et~al., 2002]{bnfc}
+Abel, A. et~al. (2002).
 \newblock {BNFC}.
 \newblock \url{https://github.com/bnfc/bnfc}.
 
@@ -44,13 +50,13 @@ Avigad, J. (2015).
 
 \bibitem[Bar et~al., 2016]{Bar2016GlobularAO}
 Bar, K., Kissinger, A., \& Vicary, J. (2016).
-\newblock Globular: an online proof assistant for higher-dimensional rewriting.
+\newblock Globular: An online proof assistant for higher-dimensional rewriting.
+\newblock In {\em FSCD}.
 
 \bibitem[Basold et~al., 2017]{hits}
 Basold, H., Geuvers, H., \& van~der Weide, N. (2017).
-\newblock Higher inductive types in programming.
-\newblock 23(1), 63--88.
-\newblock \url|http://www.jucs.org/jucs_23_1/higher_inductive_types_in|.
+\newblock {Higher Inductive Types in Programming}.
+\newblock {\em J. Univ. Comp. Sci.}, 23(1), 63–88.
 
 \bibitem[Bernardy \& Chatzikyriakidis,
   2017]{bernardy-chatzikyriakidis-2017-type}
@@ -60,31 +66,32 @@ Bernardy, J.-P. \& Chatzikyriakidis, S. (2017).
 \newblock In {\em {IWCS} 2017 - 12th International Conference on Computational
   Semantics - Long papers}.
 
-\bibitem[Bezem et~al., 2017]{bezem2017univalence}
-Bezem, M., Coquand, T., \& Huber, S. (2017).
-\newblock The univalence axiom in cubical sets.
+\bibitem[Bezem et~al., 2019]{bezem2017univalence}
+Bezem, M., Coquand, T., \& Huber, S. (2019).
+\newblock {The Univalence Axiom in Cubical Sets}.
+\newblock {\em J. Autom. Reason.}, 63(2), 159–171.
 
 \bibitem[Borges, 1998]{borges}
 Borges, J.~L. (1998).
-\newblock The library of babel.
-\newblock {\em Collected fictions}.
+\newblock {\em {The Library of Babel}}.
+\newblock Penguin New York.
 
 \bibitem[Bos et~al., 2004]{bos-etal-2004-wide}
 Bos, J., Clark, S., Steedman, M., Curran, J.~R., \& Hockenmaier, J. (2004).
-\newblock Wide-coverage semantic representations from a {CCG} parser.
+\newblock { Wide-Coverage Semantic Representations from a {CCG} Parser }.
 \newblock In {\em {COLING} 2004: Proceedings of the 20th International
   Conference on Computational Linguistics}  (pp.\ 1240--1246).  Geneva,
   Switzerland: COLING.
 
 \bibitem[Bove \& Dybjer, 2009]{Bove2009}
 Bove, A. \& Dybjer, P. (2009).
-\newblock {\em Dependent Types at Work}, (pp.\ 57--99).
+\newblock {\em { Dependent Types at Work }}, (pp.\ 57--99).
 \newblock Springer Berlin Heidelberg: Berlin, Heidelberg.
 
 \bibitem[Bove et~al., 2009]{ulf}
 Bove, A., Dybjer, P., \& Norell, U. (2009).
-\newblock A brief overview of agda -- a functional language with dependent
-  types.
+\newblock { A Brief Overview of Agda -- A Functional Language with Dependent
+  Types }.
 \newblock In S. Berghofer, T. Nipkow, C. Urban, \& M. Wenzel (Eds.), {\em
   Theorem Proving in Higher Order Logics}  (pp.\ 73--78).  Berlin, Heidelberg:
   Springer Berlin Heidelberg.
@@ -103,6 +110,13 @@ Buzzard, K. (2020).
 \newblock When will computers prove theorems?
 \newblock \url{https://www.ma.imperial.ac.uk/~buzzard/xena/computers.pdf}.
 
+\bibitem[Castellan et~al., 2021]{castellan2021categories}
+Castellan, S., Clairambault, P., \& Dybjer, P. (2021).
+\newblock Categories with families: Unityped, simply typed, and dependently
+  typed.
+\newblock In {\em Joachim Lambek: The Interplay of Mathematics, Logic, and
+  Linguistics}  (pp.\ 135--180). Springer.
+
 \bibitem[Chomsky, 1956]{chomsky1956hierarchy}
 Chomsky, N. (1956).
 \newblock Three models for the description of language.
@@ -120,8 +134,8 @@ Chomsky, N. (2009).
 
 \bibitem[Claessen \& Hughes, 2000]{quickCheck}
 Claessen, K. \& Hughes, J. (2000).
-\newblock Quickcheck: A lightweight tool for random testing of haskell
-  programs.
+\newblock {QuickCheck: A Lightweight Tool for Random Testing of Haskell
+  Programs}.
 \newblock {\em SIGPLAN Not.}, 35(9), 268–279.
 
 \bibitem[Cohen et~al., 2015]{cohen:hal-01378906}
@@ -164,7 +178,7 @@ Cramer, M., Fisseni, B., Koepke, P., K{\"u}hlwein, D., Schr{\"o}der, B., \&
 
 \bibitem[Czajka \& Kaliszyk, 2018]{czajka2018hammer}
 Czajka, {\L}. \& Kaliszyk, C. (2018).
-\newblock Hammer for coq: Automation for dependent type theory.
+\newblock {Hammer for Coq: Automation for dependent type theory}.
 \newblock {\em Journal of automated reasoning}, 61(1), 423--453.
 
 \bibitem[de~Bruijn, 1983]{deBruijn1983}
@@ -181,21 +195,19 @@ Dybjer, P. \& Palmgren, E. (2020).
 
 \bibitem[Escardó, 2020]{escardó2020introduction}
 Escardó, M.~H. (2020).
-\newblock Introduction to univalent foundations of mathematics with agda.
+\newblock {Introduction to Univalent Foundations of Mathematics with Agda}.
+\newblock
+  \url{https://www.cs.bham.ac.uk/~mhe/HoTT-UF-in-Agda-Lecture-Notes/index.html}.
 
-\bibitem[et~al., 2005]{agdaDocs}
-et~al., N. (2005).
-\newblock {Agda Docs}.
-\newblock \url{https://agda.readthedocs.io/en/v2.6.2/team.html}.
-
-\bibitem[Favonia, 2020]{coolTT}
-Favonia (2020).
+\bibitem[Favonia et~al., 2020]{coolTT}
+Favonia et~al. (2020).
 \newblock {coolTT}.
 \newblock \url{https://github.com/redprl/cooltt}.
 
 \bibitem[Fong, 2016]{fong2016algebra}
 Fong, B. (2016).
-\newblock The algebra of open and interconnected systems.
+\newblock {\em {The Algebra of Open and Interconnected Systems}}.
+\newblock PhD thesis, {Oxford University}.
 
 \bibitem[Forsberg \& Ranta, 2004]{rantaForsberg}
 Forsberg, M. \& Ranta, A. (2004).
@@ -207,10 +219,15 @@ Frege, G. (1879).
 \newblock {\em Begrisschrift}.
 \newblock Halle.
 
+\bibitem[Gabbay \& Pitts, 2002]{pitts}
+Gabbay, M.~J. \& Pitts, A.~M. (2002).
+\newblock A new approach to abstract syntax with variable binding.
+\newblock {\em Formal aspects of computing}, 13(3), 341--363.
+
 \bibitem[Ganesalingam, 2013]{ganesalingam2013language}
 Ganesalingam, M. (2013).
-\newblock The language of mathematics.
-\newblock In {\em The language of mathematics}  (pp.\ 17--38). Springer.
+\newblock {\em {The Language of Mathematics}}.
+\newblock Springer Berlin Heidelberg.
 
 \bibitem[Giaquinto, 2020]{sep-epistemology-visual-thinking}
 Giaquinto, M. (2020).
@@ -219,25 +236,22 @@ Giaquinto, M. (2020).
   Philosophy}. Metaphysics Research Lab, Stanford University, {S}pring 2020
   edition.
 
-\bibitem[G{\"o}del, 1994]{godel1994qed}
-G{\"o}del, K. (1994).
-\newblock The qed manifesto.
-\newblock {\em Lecture Notes in Artificial Intelligence}, 814, 238--251.
-
 \bibitem[Hales, 2019]{halesCNL}
 Hales, T. (2019).
-\newblock An argument for controlled natural languages in mathematics.
+\newblock {An Argument for Controlled Natural Languages in Mathematics}.
+\newblock
+  \url{https://jiggerwit.wordpress.com/2019/06/20/an-argument-for-controlled-natural-languages-in-mathematics/}.
 
 \bibitem[Hallgren \& Ranta, 2000]{alfaGF}
 Hallgren, T. \& Ranta, A. (2000).
-\newblock An extensible proof text editor.
+\newblock {An Extensible Proof Text Editor}.
 \newblock In {\em Proceedings of the 7th International Conference on Logic for
   Programming and Automated Reasoning}, LPAR'00  (pp.\ 70–84).  Berlin,
   Heidelberg: Springer-Verlag.
 
 \bibitem[Harper, 2011]{harperTrinity}
 Harper, R. (2011).
-\newblock The holy trinity.
+\newblock {The Holy Trinity}.
 \newblock
   \url{https://existentialtype.wordpress.com/2011/03/27/the-holy-trinity/}.
 
@@ -247,24 +261,26 @@ Hermida, C., Makkai, M., \& Power, J. (1998).
 \newblock In {\em Proceedings. Thirteenth Annual IEEE Symposium on Logic in
   Computer Science (Cat. No.98CB36226)}  (pp.\ 199--206).
 
-\bibitem[Huber, 2014]{huberCub}
-Huber, S. (2014).
+\bibitem[Huber et~al., 2014]{huberCub}
+Huber, S. et~al. (2014).
 \newblock {Cubical}.
 \newblock \url{https://github.com/simhu/cubical}.
 
 \bibitem[Jackson, 2002]{2002TheWO}
 Jackson, A. (2002).
-\newblock The world of blind mathematicians.
+\newblock Communications-the world of blind mathematicians.
+\newblock {\em Notices of the American Mathematical Society}, 49(10),
+  1246--1251.
 
 \bibitem[Kaiser et~al., 2018]{mtac2}
 Kaiser, J.-O., Ziliani, B., Krebbers, R., R\'{e}gis-Gianas, Y., \& Dreyer, D.
   (2018).
-\newblock Mtac2: Typed tactics for backward reasoning in coq.
+\newblock {Mtac2: Typed Tactics for Backward Reasoning in Coq}.
 \newblock {\em Proc. ACM Program. Lang.}, 2(ICFP).
 
 \bibitem[Kaliszyk \& Rabe, 2020]{surveyLang}
 Kaliszyk, C. \& Rabe, F. (2020).
-\newblock A survey of languages for formalizing mathematics.
+\newblock { A Survey of Languages for Formalizing Mathematics }.
 \newblock In C. Benzm{\"u}ller \& B. Miller (Eds.), {\em Intelligent Computer
   Mathematics}  (pp.\ 138--156).  Cham: Springer International Publishing.
 
@@ -275,7 +291,7 @@ Kamp, H., Van~Genabith, J., \& Reyle, U. (2011).
 
 \bibitem[Kohlhase \& Schaefer, 2019]{Kohlhase_2019}
 Kohlhase, M. \& Schaefer, J.~F. (2019).
-\newblock Gf + mmt = glf – from language to semantics through lf.
+\newblock {GF + MMT = GLF – From Language to Semantics through LF}.
 \newblock {\em Electronic Proceedings in Theoretical Computer Science}, 307,
   24–39.
 
@@ -292,11 +308,11 @@ Listenmaa, I. (2019).
 
 \bibitem[Ljungl{\"o}f, 2004]{ljunglof2004expressivity}
 Ljungl{\"o}f, P. (2004).
-\newblock Expressivity and complexity of the grammatical framework.
+\newblock {Expressivity and complexity of the Grammatical Framework}.
 
 \bibitem[Luo, 2012]{luoCNs}
 Luo, Z. (2012).
-\newblock Common nouns as types.
+\newblock {Common Nouns as Types}.
 \newblock In D. B{\'e}chet \& A. Dikovsky (Eds.), {\em Logical Aspects of
   Computational Linguistics}  (pp.\ 173--185).  Berlin, Heidelberg: Springer
   Berlin Heidelberg.
@@ -306,33 +322,44 @@ Macmillan, W. (2020).
 \newblock {GF-Typechecker}.
 \newblock \url{https://github.com/wmacmil/GF_Typechecker}.
 
-\bibitem[Macmillan, 2021a]{warrickCub}
+\bibitem[Macmillan, 2021a]{warrickPrec}
 Macmillan, W. (2021a).
+\newblock {Application Precdences Grammar}.
+\newblock
+  \url{https://github.com/wmacmil/GF-Application-Precedences/tree/master}.
+
+\bibitem[Macmillan, 2021b]{warrickCub}
+Macmillan, W. (2021b).
 \newblock {cubicalTT}.
 \newblock \url{https://github.com/wmacmil/AgdaGrammar}.
 
-\bibitem[Macmillan, 2021b]{warrickQA}
-Macmillan, W. (2021b).
+\bibitem[Macmillan, 2021c]{warrickQA}
+Macmillan, W. (2021c).
 \newblock {QA Grammar}.
 \newblock \url{https://github.com/wmacmil/AgdaGrammar/tree/main/pgfTests}.
 
-\bibitem[Martin{-}L{\"{o}}f, 1984]{ml1984}
-Martin{-}L{\"{o}}f, P. (1984).
-\newblock {\em Intuitionistic type theory}, volume~1 of {\em Studies in proof
-  theory}.
+\bibitem[Martin-L{\"o}f, 1982]{ml79}
+Martin-L{\"o}f, P. (1982).
+\newblock Constructive mathematics and computer programming.
+\newblock In L.~J. Cohen, J. {Łoś}, H. Pfeiffer, \& K.-P. Podewski (Eds.),
+  {\em Logic, Methodology and Philosophy of Science VI, Proceedings of the
+  Sixth International Congress of Logic, Methodology and Philosophy of Science,
+  Hannover 1979}, volume 104 of {\em Studies in Logic and the Foundations of
+  Mathematics}  (pp.\ 153--175). North-Holland.
+
+\bibitem[Martin-L{\"o}f, 1984]{ml1984}
+Martin-L{\"o}f, P. (1984).
+\newblock {\em Intuitionistic type theory}, volume~1 of {\em Studies in Proof
+  Theory}.
 \newblock Bibliopolis.
+\newblock Notes by Giovanni Sambin of a series of lectures given in Padua, June
+  1980.
 
 \bibitem[Martin{-}L\"of, 1996]{mlMeanings}
 Martin{-}L\"of, P. (1996).
-\newblock On the meanings of the logical constants and the justifications of
-  the logical laws.
+\newblock {On the Meanings of the Logical Constants and the Justifications of
+  the Logical Laws}.
 \newblock {\em Nordic Journal of Philosophical Logic}, 1(1), 11--60.
-
-\bibitem[Martin-Lof \& Lozinski, 1984]{ml79}
-Martin-Lof, P. \& Lozinski, Z.~A. (1984).
-\newblock Constructive mathematics and computer programming [and discussion].
-\newblock {\em Philosophical Transactions of the Royal Society of London.
-  Series A, Mathematical and Physical Sciences}, 312(1522), 501--518.
 
 \bibitem[Martin-Löf, 1987]{mlTruth}
 Martin-Löf, P. (1987).
@@ -352,14 +379,31 @@ Montague, R. (1973).
   (pp.\ 221--242).
 \newblock Springer Netherlands: Dordrecht.
 
-\bibitem[Mörtberg, 2018]{cubicaltt}
-Mörtberg, A. (2018).
+\bibitem[Mörtberg et~al., 2018]{cubicaltt}
+Mörtberg, A. et~al. (2018).
 \newblock {\em {cubicaltt}}.
 \newblock \url{https://github.com/mortberg/cubicaltt}.
 
 \bibitem[Nelsen, 1993]{proofWW}
-Nelsen, R. (1993).
-\newblock {\em Proofs Without Words}.
+Nelsen, R.~B. (1993).
+\newblock {\em Proofs without words: Exercises in visual thinking}.
+\newblock Number~1. MAA.
+
+\bibitem[Nipkow et~al., 2002]{wenzel2004isabelle}
+Nipkow, T., Wenzel, M., \& Paulson, L.~C. (2002).
+\newblock {\em Isabelle/HOL: A Proof Assistant for Higher-Order Logic}.
+\newblock Berlin, Heidelberg: Springer-Verlag.
+
+\bibitem[Norell et~al., 2005]{agdaDocs}
+Norell, U. et~al. (2005).
+\newblock {Agda Docs}.
+\newblock \url{https://agda.readthedocs.io/en/v2.6.2/team.html}.
+
+\bibitem[P{\'e}drot, 2019]{ltac2}
+P{\'e}drot, P.-M. (2019).
+\newblock Ltac2: tactical warfare.
+\newblock In {\em The Fifth International Workshop on Coq for Programming
+  Languages, CoqPL}  (pp.\ 13--19).
 
 \bibitem[Pfenning, 2009]{pfenningHar}
 Pfenning, F. (2009).
@@ -372,28 +416,23 @@ Pfenning, F. \& Sch{\"u}rmann, C. (1999).
 \newblock In {\em Automated Deduction --- CADE-16}  (pp.\ 202--206).  Berlin,
   Heidelberg: Springer Berlin Heidelberg.
 
-\bibitem[Pierce et~al., 2010]{pierce2010software}
+\bibitem[Pierce et~al., ]{pierce2010software}
 Pierce, B.~C., Casinghino, C., Gaboardi, M., Greenberg, M., Hri{\c{t}}cu, C.,
-  Sj{\"o}berg, V., \& Yorgey, B. (2010).
+  Sj{\"o}berg, V., \& Yorgey, B.
 \newblock Software foundations.
-\newblock {\em Webpage: http://www. cis. upenn. edu/bcpierce/sf/current/index.
-  html}.
+\newblock \url{https://github.com/wmacmil/AgdaGrammar/tree/main/pgfTests}.
 
 \bibitem[Pit-Claudel, 2020]{coqAlec}
 Pit-Claudel, C. (2020).
-\newblock Untangling mechanized proofs.
+\newblock {Untangling Mechanized Proofs}.
 \newblock In {\em Proceedings of the 13th ACM SIGPLAN International Conference
   on Software Language Engineering}, SLE 2020  (pp.\ 155–174).  New York, NY,
   USA: Association for Computing Machinery.
 
-\bibitem[Pédrot, 2021]{ltac2}
-Pédrot, P.-M. (2021).
-\newblock Ltac2 : Tactical warfare.
-
 \bibitem[Ranta, 1994a]{ranta1994type}
 Ranta, A. (1994a).
-\newblock {\em Type-theoretical Grammar}.
-\newblock Indices (Claredon). Clarendon Press.
+\newblock {\em {Type Theoretical Grammar}}.
+\newblock Oxford University Press.
 
 \bibitem[Ranta, 1994b]{ranta93}
 Ranta, A. (1994b).
@@ -433,7 +472,10 @@ Ranta, A. (2013).
 
 \bibitem[Ranta, 2014]{aarneHott}
 Ranta, A. (2014).
-\newblock Translating homotopy type theory in grammatical framework.
+\newblock { Translating Homotopy Type Theory in Grammatical Framework }.
+\newblock
+  \url{https://github.com/GrammaticalFramework/gf-contrib/tree/master/homotopy-typetheory}.
+\newblock Stockholm University, Department of Mathematics.
 
 \bibitem[Ranta, 2019]{rantaZ}
 Ranta, A. (2019).
@@ -443,14 +485,14 @@ Ranta, A. (2019).
 
 \bibitem[Ranta, 2020]{RANTA2020120}
 Ranta, A. (2020).
-\newblock Some remarks on pragmatics in the language of mathematics: Comments
-  to the paper “at least one black sheep: Pragmatics and mathematical
-  language” by luca san mauro, marco ruffino and giorgio venturi.
+\newblock {Some remarks on pragmatics in the language of mathematics: Comments
+  to the paper “At Least One Black Sheep: Pragmatics and Mathematical
+  Language” by Luca San Mauro, Marco Ruffino and Giorgio Venturi}.
 \newblock {\em Journal of Pragmatics}, 160, 120--122.
 
 \bibitem[Rudnicki, 1992]{rudnicki1992overview}
 Rudnicki, P. (1992).
-\newblock An overview of the mizar project.
+\newblock {An overview of the Mizar project}.
 \newblock In {\em Proceedings of the 1992 Workshop on Types for Proofs and
   Programs}  (pp.\ 311--330).
 
@@ -461,16 +503,16 @@ Ruffino, M., {San Mauro}, L., \& Venturi, G. (2020).
 
 \bibitem[Schaefer \& Kohlhase, 2020]{schaefer2020glif}
 Schaefer, J.~F. \& Kohlhase, M. (2020).
-\newblock The glif system: A framework for inference-based natural-language
-  understanding.
+\newblock {The GLIF System: A Framework for Inference-Based Natural-Language
+  Understanding}.
 
 \bibitem[Seki et~al., 1991]{seki91pmcfg}
 Seki, H., Matsumura, T., Fujii, M., \& Kasami, T. (1991).
 \newblock {On Multiple Context-Free Grammars}.
 \newblock {\em {Theoretical Computer Science}}, 88(2), 191--229.
 
-\bibitem[Sterling, 2018]{redTT}
-Sterling, J. (2018).
+\bibitem[Sterling et~al., 2018]{redTT}
+Sterling, J. et~al. (2018).
 \newblock {redTT}.
 \newblock \url{https://github.com/redprl/redtt}.
 
@@ -480,37 +522,37 @@ Stump, A. (2016).
 \newblock Association for Computing Machinery and Morgan & Claypool.
 
 \bibitem[Szegedy, 2020]{49351}
-Szegedy, C., Ed. (2020).
-\newblock {\em A Promising Path Towards Autoformalization and General
-  Artificial Intelligence}.
+Szegedy, C. (2020).
+\newblock A promising path towards autoformalization and general artificial
+  intelligence.
+\newblock In C. Benzm{\"u}ller \& B. Miller (Eds.), {\em Intelligent Computer
+  Mathematics}  (pp.\ 3--20).  Cham: Springer International Publishing.
 
-\bibitem[{The Univalent foundations program} \& {Institute for advanced study
-  (Princeton}, 2013]{theunivalentfoundationsprogram-homotopytypetheory-2013}
-{The Univalent foundations program} \& {Institute for advanced study
-  (Princeton}, N. (2013).
+\bibitem[{Univalent Foundations Program},
+  2013]{theunivalentfoundationsprogram-homotopytypetheory-2013}
+{Univalent Foundations Program}, T. (2013).
 \newblock {\em Homotopy Type Theory: Univalent Foundations of Mathematics}.
+\newblock Institute for Advanced Study:
+  \url{https://homotopytypetheory.org/book}.
 
 \bibitem[Vezzosi et~al., 2019]{cubicalAgda}
 Vezzosi, A., M\"{o}rtberg, A., \& Abel, A. (2019).
-\newblock Cubical agda: A dependently typed programming language with
-  univalence and higher inductive types.
+\newblock {Cubical Agda: A Dependently Typed Programming Language with
+  Univalence and Higher Inductive Types}.
 \newblock {\em Proc. ACM Program. Lang.}, 3(ICFP).
 
 \bibitem[Wadler et~al., 2020]{wadler}
 Wadler, P., Kokke, W., \& Siek, J.~G. (2020).
-\newblock {\em Programming Language Foundations in {A}gda}.
+\newblock Programming language foundations in {A}gda.
+\newblock \url{http://plfa.inf.ed.ac.uk/20.07/}.
 
 \bibitem[Wang et~al., 2020]{mlTrans}
 Wang, Q., Brown, C., Kaliszyk, C., \& Urban, J. (2020).
-\newblock Exploration of neural machine translation in autoformalization of
-  mathematics in mizar.
+\newblock {Exploration of Neural Machine Translation in Autoformalization of
+  Mathematics in Mizar}.
 \newblock In {\em Proceedings of the 9th ACM SIGPLAN International Conference
   on Certified Programs and Proofs}, CPP 2020  (pp.\ 85–98).  New York, NY,
   USA: Association for Computing Machinery.
-
-\bibitem[Wenzel et~al., 2004]{wenzel2004isabelle}
-Wenzel, M. et~al. (2004).
-\newblock The isabelle/isar reference manual.
 
 \bibitem[Wiedijk, 2006]{10.5555/1121735}
 Wiedijk, F. (2006).

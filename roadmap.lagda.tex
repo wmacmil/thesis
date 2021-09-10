@@ -5,8 +5,6 @@
 % With Xetex/Luatex this shouldn't be used
 %\usepackage[utf8]{inputenc}
 
-
-
 \usepackage{multicol}
 % \usepackage{graphicx}
 
@@ -109,32 +107,6 @@
 
 
 
-% \DeclareMathSymbol{\mlq}{\mathord}{operators}{``}
-% \DeclareMathSymbol{\mrq}{\mathord}{operators}{`'}
-
-% \newcommand\doubleplus{+\kern-1.3ex+\kern0.8ex}
-
-% for section numbers, doesn't work
-% \usepackage{titlesec}
-% \titleformat{\section}[block]
-%   {\fontsize{12}{15}\bfseries\sffamily\filcenter}
-%   {\thesection}
-%   {1em}
-%   {\MakeUppercase}
-% \titleformat{\subsection}[hang]
-%   {\fontsize{12}{15}\bfseries\sffamily}
-%   {\thesubsection}
-%   {1em}
-%   {}
-
-%\newcommand{\ct}{%
-  %\mathchoice{\mathbin{\raisebox{0.5ex}{$\displaystyle\centerdot$}}}%
-             %{\mathbin{\raisebox{0.5ex}{$\centerdot$}}}%
-             %{\mathbin{\raisebox{0.25ex}{$\scriptstyle\,\centerdot\,$}}}%
-             %{\mathbin{\raisebox{0.1ex}{$\scriptscriptstyle\,\centerdot\,$}}}
-%}
-
-% til here
 
 \title{On the Grammar of Proof}
 % \subtitle{Subtitle} case study in formal & nl proof translation
@@ -226,13 +198,84 @@ analyzing and understanding the difference between formal and informal proofs.
 
 \thispagestyle{empty}
 
+\newpage
+
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{.25\textwidth}
+Till världens kvinnor
+\end{minipage}
+\end{center}
+\vspace*{\fill}
+
+\thispagestyle{empty}
 %% ============================================================================
 %% Preface
 %% ============================================================================
 \newpage
 \section*{Preface}
 
-Acknowledgements, etc.
+Having anticipated writing this for so long, it's no surprise that I have no
+idea what to say. I want to say everything, but this is probably not the place
+to do it. I write this in my final hours of quarantine in New York, having just
+contracted the most significant disease the world has faced in a generation,
+while the remnants of a disastrous hurricane pour outside my window and a crazy
+wildfire rips through my community back home. Three years ago, burnt out and
+more confused than ever, I decided not to go to Burning Man for the first time
+in my adult life. Three years ago \emph{today} I stepped foot in Sweden for the
+first time, and will be back home in the desert tomorrow for the first time in
+two years. Life's a fucking trip.
+
+I certainly wouldn't be here writing this right now if it weren't for my mother,
+Beth, whose endless love helps steer me through life, nor would I be here
+without the my father, Eddie, whose life has inspired me, whose love has guided
+me, and whose death thirteen years ago has given me the insight to treat every
+day as if it's my last. I love you both: for having me and Graham, for
+loving each other, and for teaching me how to love. I love you too, Graham.
+
+I love and thank all the people who helped get me to a point in life where I can
+write this, and I hope this love is reflected in the gratitude I feel for y'all,
+for us. Thank you Daniel for sitting on the phone with me day after day,
+teaching me algebra and geometry. To Mr. Harris for teaching me to love
+learning, Mr. McCart for teaching me to think critically, and to Mr. Meinert for
+teaching me what science is, thank you. To Peter, Danny, Adrian, Bill and the
+rest of the library crew, thank you. And to the rest of you Reno folk, namaste
+motherfuckers. At this point I gotta start just listing names : Donna, Andrew,
+Cliff, James K, Ky, James R, Adrienne, Rachel, Jeremy, Ari, Christophe, David,
+Kiki, Michelle, Chuck, Erik, Kieran, Jake, Gloria, Mirabai, Ravi, and too many
+others to mention, I hope I'm an ample reflection of the life and wisdom you've
+instilled in me, and know that I love you.
+
+To Alessandro, Jose, and Shanshuang, thank you for teaching me to love
+mathematics and science during my undergraduate years. Thank you Aarne for your
+time, patience, and conversations. Thank you Inari for your endless support and
+insight. To the many friends and colleagues I've had the pleasure to know and learn
+from in Göteborg : Ayberk, Fabian, Nachi, Irena, Sandro, Carlos, Robert and 
+Theresa, and the rest of the ITC crew, tack. And to various mentors whose
+lectures, writings, and conversations have expanded my love and knowledge of
+type theory, linguistics, and mathematics : Andreas, Thierry, Peter, Jesper, and
+Krasimir from the CS department and Robin, Stergios, Jean-Phillipe, Frederik,
+and Martin from FLOV, tack så mycket.
+
+Efter tre år i Sverige kan jag nu prata och skriva lite svenska, och som den
+amerikan jag är, vill jag visa upp lite av vad jag kan. Jag har så mycket kärlek
+för Sverige, trots att de här åren på vissa sätt har varit den svåraste och mest
+prövande tiden i mitt liv. Men, jag har också vuxit som mest, eftersom jag har
+fått så mycket kärlek från människor som älskar livet, naturen, och hela
+planeten. Detta har givit mig ett nytt perspektiv på världen.
+
+Jag vill tacka Per Martin-Löf, vars texter har lärt mig om hur man kan ha så
+mycket originella idéer, men också vara så ödmjuk. Och ödmjukhet - något jag har
+upplevt ofta i Sverige. Det var mycket generöst och inspirerande av dig att
+prata med mig. Tack, Per.
+
+Och till mina nya svenska vänner som jag älskar så mycket, jag har fått mer
+glädje i mitt liv för att jag har er i mitt liv. Till David, Pär, Maja och
+Linnea - tack så mycket. Tack också till Charlotte och Uma.
+
+Jag har gråtit mycket när jag har skrivit den här masteruppsatsen, men jag har
+också skrattat och lett. Jag känner att jag har uttryckt något originellt, även
+om det inte är mycket. Tack för att jag har fått säga det jag har sagt här.
 
 \thispagestyle{empty}
 
@@ -240,7 +283,6 @@ Acknowledgements, etc.
 %% Contents
 %% ============================================================================
 \newpage
-
 \begin{spacing}{0.0}
 \tableofcontents
 \end{spacing}
@@ -259,8 +301,6 @@ Acknowledgements, etc.
 
 module roadmap where
 \end{code}
-
-2149
 
 \include{intro}
 
@@ -283,6 +323,7 @@ module roadmap where
 
 \include{conclusion}
 
+b
 
 \newpage
 

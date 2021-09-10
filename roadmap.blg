@@ -17,66 +17,82 @@ Illegal, another \bibstyle command---line 33 of file roadmap.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: appendix.aux
 Database file #1: example_bibliography.bib
-Warning--string name "j-jucs" is undefined
---line 14 of file example_bibliography.bib
-Repeated entry---line 137 of file example_bibliography.bib
- : @misc{warrickPrec
- :                  ,
+I was expecting a `,' or a `}'---line 126 of file example_bibliography.bib
+ :   
+ :   year={2010}
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 472 of file example_bibliography.bib
+I was expecting an "="---line 522 of file example_bibliography.bib
  : @Comment   
  :            author =    {The {Univalent Foundations Program}},
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "bnfc"
-Warning--empty booktitle in Bar2016GlobularAO
-Warning--empty journal in hits
+Repeated entry---line 770 of file example_bibliography.bib
+ : @comment @inproceedings{proofFrom
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 894 of file example_bibliography.bib
+ : @misc{agdaDocs
+ :               ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in godel1994qed
+Name 1 in "Huber, Simon, and others" has a comma at the end for entry huberCub
+while executing---line 1191 of file apalike2.bst
+Name 1 in "Huber, Simon, and others" has a comma at the end for entry huberCub
+while executing---line 1191 of file apalike2.bst
+Name 1 in "Favonia, and others" has a comma at the end for entry coolTT
+while executing---line 1191 of file apalike2.bst
+Name 1 in "Favonia, and others" has a comma at the end for entry coolTT
+while executing---line 1191 of file apalike2.bst
+Warning--empty author in godel1994qed
 Warning--can't use both author and editor fields in Bove2009
 Warning--can't use both author and editor fields in deBruijn1983
-Warning--empty booktitle in 2002TheWO
+Name 1 in "Favonia, and others" has a comma at the end for entry coolTT
+while executing---line 1266 of file apalike2.bst
+Name 1 in "Huber, Simon, and others" has a comma at the end for entry huberCub
+while executing---line 1266 of file apalike2.bst
 Warning--empty journal in ljunglof2004expressivity
 Warning--can't use both author and editor fields in Montague1973
-Warning--empty publisher in proofWW
-Warning--empty publisher in theunivalentfoundationsprogram-homotopytypetheory-2013
-Warning--empty publisher in wadler
-You've used 93 entries,
+Warning--there's a number but no series in proofWW
+Warning--empty year in pierce2010software
+You've used 96 entries,
             2229 wiz_defined-function locations,
-            1048 strings with 18199 characters,
-and the built_in function-call counts, 34367 in all, are:
-= -- 3433
-> -- 1177
-< -- 99
-+ -- 418
-- -- 371
-* -- 2552
-:= -- 5919
-add.period$ -- 270
-call.type$ -- 93
-change.case$ -- 618
-chr.to.int$ -- 90
-cite$ -- 103
-duplicate$ -- 1529
-empty$ -- 2483
-format.name$ -- 491
-if$ -- 6935
-int.to.chr$ -- 4
+            1077 strings with 19558 characters,
+and the built_in function-call counts, 36590 in all, are:
+= -- 3686
+> -- 1258
+< -- 105
++ -- 423
+- -- 397
+* -- 2725
+:= -- 6250
+add.period$ -- 294
+call.type$ -- 96
+change.case$ -- 636
+chr.to.int$ -- 92
+cite$ -- 105
+duplicate$ -- 1630
+empty$ -- 2648
+format.name$ -- 522
+if$ -- 7460
+int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 84
-newline$ -- 452
-num.names$ -- 298
-pop$ -- 613
+missing$ -- 90
+newline$ -- 481
+num.names$ -- 307
+pop$ -- 624
 preamble$ -- 1
-purify$ -- 638
+purify$ -- 658
 quote$ -- 0
-skip$ -- 1208
+skip$ -- 1294
 stack$ -- 0
-substring$ -- 2170
-swap$ -- 297
-text.length$ -- 27
+substring$ -- 2321
+swap$ -- 349
+text.length$ -- 33
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 522
-warning$ -- 10
-while$ -- 281
+type$ -- 536
+warning$ -- 8
+while$ -- 297
 width$ -- 0
-write$ -- 1181
-(There were 3 error messages)
+write$ -- 1259
+(There were 11 error messages)
