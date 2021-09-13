@@ -88,7 +88,8 @@ doubleInv {A} {x} {y} p = J D d x y p
     d a = r
 
 -- Lemma 2.1.4 (iv)
-associativity :{A : Set} {x y z w : A} (p : x ≡ y) (q : y ≡ z) (r' : z ≡ w ) → p ∙ (q ∙ r') ≡ p ∙ q ∙ r'
+associativity :{A : Set} {x y z w : A} (p : x ≡ y) (q : y ≡ z) (r' : z ≡ w )
+  → p ∙ (q ∙ r') ≡ p ∙ q ∙ r'
 associativity {A} {x} {y} {z} {w} p q r' = J D₁ d₁ x y p z w q r'
   where
     D₁ : (x y : A) → x ≡ y → Set
@@ -107,7 +108,8 @@ associativity {A} {x} {y} {z} {w} p q r' = J D₁ d₁ x y p z w q r'
 module Eckmann-Hilton where
   -- Lemma 2.1.6
   -- whiskering
-  _∙ᵣ_ : {A : Set} → {b c : A} {a : A} {p q : a ≡ b} (α : p ≡ q) (r' : b ≡ c) → p ∙ r' ≡ q ∙ r'
+  _∙ᵣ_ : {A : Set} → {b c : A} {a : A} {p q : a ≡ b} (α : p ≡ q) (r' : b ≡ c)
+    → p ∙ r' ≡ q ∙ r'
   _∙ᵣ_ {A} {b} {c} {a} {p} {q} α r' = J D d b c r' a α
     where
       D : (b c : A) → b ≡ c → Set
@@ -115,7 +117,8 @@ module Eckmann-Hilton where
       d : (a : A) → D a a r
       d a a' {p} {q} α = iᵣ p ⁻¹ ∙ α ∙ iᵣ q
 
-  _∙ₗ_ : {A : Set} → {a b : A} (q : a ≡ b) {c : A} {r' s : b ≡ c} (β : r' ≡ s) → q ∙ r' ≡ q ∙ s
+  _∙ₗ_ : {A : Set} → {a b : A} (q : a ≡ b) {c : A} {r' s : b ≡ c} (β : r' ≡ s)
+    → q ∙ r' ≡ q ∙ s
   _∙ₗ_ {A} {a} {b} q {c} {r'} {s} β = J D d a b q c β
     where
       D : (a b : A) → a ≡ b → Set
@@ -123,10 +126,12 @@ module Eckmann-Hilton where
       d : (a : A) → D a a r
       d a a' {r'} {s} β = iₗ r' ⁻¹ ∙ β ∙ iₗ s
 
-  _⋆_ : {A : Set} → {a b c : A} {p q : a ≡ b} {r' s : b ≡ c} (α : p ≡ q) (β : r' ≡ s) → p ∙ r' ≡ q ∙ s
+  _⋆_ : {A : Set} → {a b c : A} {p q : a ≡ b} {r' s : b ≡ c} (α : p ≡ q) (β : r' ≡ s)
+    → p ∙ r' ≡ q ∙ s
   _⋆_ {A} {q = q} {r' = r'} α β = (α ∙ᵣ r') ∙ (q ∙ₗ β)
 
-  _⋆'_ : {A : Set} → {a b c : A} {p q : a ≡ b} {r' s : b ≡ c} (α : p ≡ q) (β : r' ≡ s) → p ∙ r' ≡ q ∙ s
+  _⋆'_ : {A : Set} → {a b c : A} {p q : a ≡ b} {r' s : b ≡ c} (α : p ≡ q) (β : r' ≡ s)
+    → p ∙ r' ≡ q ∙ s
   _⋆'_ {A} {p = p} {s = s} α β =  (p ∙ₗ β) ∙ (α ∙ᵣ s)
 
   -- Definition 2.1.8
@@ -137,10 +142,12 @@ module Eckmann-Hilton where
   Ω² : {A : Set} (a : A) → Set
   Ω² {A} a = _≡_ {a ≡ a} r r
 
-  lem1 : {A : Set} → (a : A) → (α β : Ω² {A} a) → (α ⋆ β) ≡ (iᵣ r ⁻¹ ∙ α ∙ iᵣ r) ∙ (iₗ r ⁻¹ ∙ β ∙ iₗ r)
+  lem1 : {A : Set} → (a : A) → (α β : Ω² {A} a)
+    → (α ⋆ β) ≡ (iᵣ r ⁻¹ ∙ α ∙ iᵣ r) ∙ (iₗ r ⁻¹ ∙ β ∙ iₗ r)
   lem1 a α β = r
 
-  lem1' : {A : Set} → (a : A) → (α β : Ω² {A} a) → (α ⋆' β) ≡  (iₗ r ⁻¹ ∙ β ∙ iₗ r) ∙ (iᵣ r ⁻¹ ∙ α ∙ iᵣ r)
+  lem1' : {A : Set} → (a : A) → (α β : Ω² {A} a)
+    → (α ⋆' β) ≡  (iₗ r ⁻¹ ∙ β ∙ iₗ r) ∙ (iᵣ r ⁻¹ ∙ α ∙ iᵣ r)
   lem1' a α β = r
 
   -- Lemma 2.2.1
@@ -159,11 +166,17 @@ module Eckmann-Hilton where
   lem21 : {A : Set} → {a : A} → (β : Ω² {A} a) → (iₗ r ⁻¹ ∙ β ∙ iₗ r) ≡ β
   lem21 β = iᵣ (β) ⁻¹
 
-  lem2 : {A : Set} → (a : A) → (α β : Ω² {A} a) → (iᵣ r ⁻¹ ∙ α ∙ iᵣ r) ∙ (iₗ r ⁻¹ ∙ β ∙ iₗ r) ≡ (α ∙ β)
-  lem2 {A} a α β = apf (λ - → - ∙ (iₗ r ⁻¹ ∙ β ∙ iₗ r) ) (lem20 α) ∙ apf (λ - → α ∙ -) (lem21 β)
+  lem2 : {A : Set} → (a : A) → (α β : Ω² {A} a)
+    → (iᵣ r ⁻¹ ∙ α ∙ iᵣ r) ∙ (iₗ r ⁻¹ ∙ β ∙ iₗ r) ≡ (α ∙ β)
+  lem2 {A} a α β =
+    apf (λ - → - ∙ (iₗ r ⁻¹ ∙ β ∙ iₗ r) )
+        (lem20 α) ∙ apf (λ - → α ∙ -) (lem21 β)
 
-  lem2' : {A : Set} → (a : A) → (α β : Ω² {A} a) → (iₗ r ⁻¹ ∙ β ∙ iₗ r) ∙ (iᵣ r ⁻¹ ∙ α ∙ iᵣ r) ≡ (β ∙ α )
-  lem2' {A} a α β =  apf  (λ - → - ∙ (iᵣ r ⁻¹ ∙ α ∙ iᵣ r)) (lem21 β) ∙ apf (λ - → β ∙ -) (lem20 α)
+  lem2' : {A : Set} → (a : A) → (α β : Ω² {A} a)
+    → (iₗ r ⁻¹ ∙ β ∙ iₗ r) ∙ (iᵣ r ⁻¹ ∙ α ∙ iᵣ r) ≡ (β ∙ α )
+  lem2' {A} a α β =
+    apf (λ - → - ∙ (iᵣ r ⁻¹ ∙ α ∙ iᵣ r))
+      (lem21 β) ∙ apf (λ - → β ∙ -) (lem20 α)
 
   ⋆≡∙ : {A : Set} → (a : A) → (α β : Ω² {A} a) → (α ⋆ β) ≡ (α ∙ β)
   ⋆≡∙ a α β = lem1 a α β ∙ lem2 a α β
@@ -171,13 +184,15 @@ module Eckmann-Hilton where
   ⋆'≡∙ : {A : Set} → (a : A) → (α β : Ω² {A} a) → (α ⋆' β) ≡ (β ∙ α)
   ⋆'≡∙ a α β = lem1' a α β ∙ lem2' a α β
 
-  _⋆≡⋆'_ : {A : Set} → {a b c : A} {p q : a ≡ b} {r' s : b ≡ c} (α : p ≡ q) (β : r' ≡ s) → (α ⋆ β) ≡ (α ⋆' β)
+  _⋆≡⋆'_ : {A : Set} → {a b c : A} {p q : a ≡ b} {r' s : b ≡ c} (α : p ≡ q) (β : r' ≡ s)
+    → (α ⋆ β) ≡ (α ⋆' β)
   _⋆≡⋆'_ {A} {a} {b} {c} {p} {q} {r'} {s} α β = J D d p q α c r' s β
     where
       D : (p q : a ≡ b) → p ≡ q → Set
       D p q α = (c : A) (r' s : b ≡ c) (β : r' ≡ s) → (α ⋆ β) ≡ (α ⋆' β)
       E : (r' s : b ≡ c) → r' ≡ s → Set
-      E r' s β = (_⋆_ {A} {b = b} {c} {r} {r} {r' = r'} {s = s} r β) ≡ (r ⋆' β)
+      E r' s β =
+        (_⋆_ {A} {b = b} {c} {r} {r} {r' = r'} {s = s} r β) ≡ (r ⋆' β)
       e : ((s : b ≡ c) → E s s r)
       e r = r
       d : ((p : a ≡ b) → D p p r)
@@ -190,7 +205,8 @@ module Eckmann-Hilton where
 open Eckmann-Hilton
 
 -- Lemma 2.2.2 (i)
-apfHom : {A B : Set} {x y z : A} (p : x ≡ y) (f : A → B) (q : y ≡ z) → apf f (p ∙ q) ≡ (apf f p) ∙ (apf f q)
+apfHom : {A B : Set} {x y z : A} (p : x ≡ y) (f : A → B) (q : y ≡ z)
+  → apf f (p ∙ q) ≡ (apf f p) ∙ (apf f q)
 apfHom {A} {B} {x} {y} {z} p f q = J D d x y p
   where
     D : (x y : A) → x ≡ y → Set
@@ -213,7 +229,8 @@ _∘_ : {A B C : Set} → (B → C) → (A → B) → (A → C)
 (g ∘ f) x = g (f x)
 
 -- Lemma 2.2.2 (iii)
-apfComp : {A B C : Set} {x y : A} (p : x ≡ y) (f : A → B) (g : B → C) → apf g (apf f p) ≡ apf (g ∘ f) p
+apfComp : {A B C : Set} {x y : A} (p : x ≡ y) (f : A → B) (g : B → C)
+  → apf g (apf f p) ≡ apf (g ∘ f) p
 apfComp {A} {B} {C} {x} {y} p f g = J D d x y p
   where
     D : (x y : A) → x ≡ y → Set
@@ -221,11 +238,8 @@ apfComp {A} {B} {C} {x} {y} p f g = J D d x y p
     d : (x : A) → D x x r
     d x = r
 
--- not defined explicitly, different from Id_A
 id : {A : Set} → A → A
 id = λ z → z
-
--- apfId : {A B : Set} {x y : A} (p : x ≡ y) (f : _≡_ {A}) → apf f p ≡ p
 
 -- Lemma 2.2.2 (iv)
 apfId : {A : Set} {x y : A} (p : x ≡ y) → apf id p ≡ p
@@ -253,12 +267,11 @@ _* : {A : Set} {P : A → Set} {x : A} {y : A} (p : x ≡ y) → P x → P y
 
 
 -- Lemma 2.3.2
-lift : {A : Set} {P : A → Set} {x y : A}  (u : P x) (p : x ≡ y) → (x , u) ≡ (y , p* {P = P} {p = p} u)
-lift {P} u r = r --could use J, but we'll skip the effort for now
-
+lift : {A : Set} {P : A → Set} {x y : A}  (u : P x) (p : x ≡ y)
+  → (x , u) ≡ (y , p* {P = P} {p = p} u)
+lift {P} u r = r
 
 -- Lemma 2.3.4
-         -- the type inference needs p below
 apd : {A : Set} {P : A → Set} (f : (x : A) → P x) {x y : A} {p : x ≡ y}
   → p* {P = P} {p = p} (f x) ≡ f y
 apd {A} {P} f {x} {y} {p} = J D d x y p
@@ -268,10 +281,9 @@ apd {A} {P} f {x} {y} {p} = J D d x y p
     d : (x : A) → D x x r
     d = λ x → r
 
-
-
 -- Lemma 2.3.5
-transportconst : {A B : Set} {x y : A} {p : x ≡ y} (b : B) → transport {P = λ _ → B} p b ≡ b
+transportconst : {A B : Set} {x y : A} {p : x ≡ y} (b : B)
+  → transport {P = λ _ → B} p b ≡ b
 transportconst {A} {B} {x} {y} {p} b = J D d x y p
   where
     D : (x y : A) → x ≡ y → Set
@@ -282,21 +294,21 @@ transportconst {A} {B} {x} {y} {p} b = J D d x y p
 -- missing 2.3.8
 
 -- Lemma 2.3.9
-twothreenine : {A : Set} {P : A → Set} {x y z : A}  (p : x ≡ y) (q : y ≡ z ) {u : P x} → ((q *) (_* {P = P} p u)) ≡ (((p ∙ q) *) u)
+twothreenine : {A : Set} {P : A → Set} {x y z : A}  (p : x ≡ y) (q : y ≡ z ) {u : P x}
+  → ((q *) (_* {P = P} p u)) ≡ (((p ∙ q) *) u)
 twothreenine r r = r
 
 -- Lemma 2.3.10
-twothreeten : {A B : Set} {f : A → B} {P : B → Set} {x y : A} (p : x ≡ y) {u : P (f x) }  → transport p u ≡ transport {P = P} (apf f p) u
+twothreeten : {A B : Set} {f : A → B} {P : B → Set} {x y : A} (p : x ≡ y)
+  {u : P (f x) } → transport p u ≡ transport {P = P} (apf f p) u
 twothreeten r = r
 
 -- Lemma 2.3.11
-twothreeeleven : {A : Set} {P Q : A → Set} {f : (x : A) → P x → Q x} {x y : A} (p : x ≡ y) {u : P x} → transport {P = Q} p (f x u) ≡ f y (transport p u)
+twothreeeleven : {A : Set} {P Q : A → Set} {f : (x : A) → P x → Q x} {x y : A}
+  (p : x ≡ y) {u : P x} → transport {P = Q} p (f x u) ≡ f y (transport p u)
 twothreeeleven r = r
 
--- 2.4
-
 infixl 20 _~_
-
 -- Lemma 2.4.1
 _~_ : {A : Set} {P : A → Set} (f g : (x : A) → P x) → Set
 f ~ g  = (x : _) → f x ≡ g x
@@ -317,12 +329,13 @@ trans~ f g h fg gh = λ x → (fg x) ∙ (gh x)
 translemma : {A : Set} {x y : A} (p : x ≡ y) → p ∙ r ≡ p
 translemma r = r
 
--- first use of implicit non-definitional equality (oudside of the eckmann hilton arguement)
 -- Lemma 2.4.3
-hmtpyNatural : {A B : Set} {f g : A → B} {x y : A} (p : x ≡ y) → ((H : f ~ g) → H x ∙ apf g p ≡ apf f p ∙ H y )
+hmtpyNatural : {A B : Set} {f g : A → B} {x y : A} (p : x ≡ y)
+  → ((H : f ~ g) → H x ∙ apf g p ≡ apf f p ∙ H y )
 hmtpyNatural {x = x} r H = translemma (H x)
 
--- syntactic sugar for equational reasoning, borrowed from Wadler's presentation
+-- syntactic sugar for equational reasoning
+-- from Wadler's presentation
 module ≡-Reasoning {A : Set} where
 
   infix  1 begin_
@@ -356,7 +369,8 @@ module ≡-Reasoning {A : Set} where
 open ≡-Reasoning
 
 -- Corollary 2.4.4
-coroll :  {A B : Set} {f : A → A} {x y : A} (p : x ≡ y) → ((H : f ~ (id {A})) → H (f x) ≡ apf f (H x) )
+coroll :  {A B : Set} {f : A → A} {x y : A} (p : x ≡ y)
+  → ((H : f ~ (id {A})) → H (f x) ≡ apf f (H x) )
 coroll {A} {f = f} {x = x} p H =
   begin
     H (f x)
@@ -421,10 +435,12 @@ qinvcomp p = (λ - → p ⁻¹ ∙ -) , sec , retr
 
 
 -- Example 2.4.9
-qinvtransp : {A : Set} {P : A → Set} {x y : A} (p : x ≡ y) → qinv (transport {P = P} p)
+qinvtransp : {A : Set} {P : A → Set} {x y : A} (p : x ≡ y)
+  → qinv (transport {P = P} p)
 qinvtransp {A} {P} {x} {y} p = transport (p ⁻¹) , sec , retr p
   where
-    sec' : {A : Set} {P : A → Set} {x y : A} (p : x ≡ y) → (λ x₁ → transport {P = P} p (transport (p ⁻¹) x₁)) ~ (λ z → z)
+    sec' : {A : Set} {P : A → Set} {x y : A} (p : x ≡ y)
+      → (λ x₁ → transport {P = P} p (transport (p ⁻¹) x₁)) ~ (λ z → z)
     sec' r x = r
     sec : (λ x₁ → transport p (transport (p ⁻¹) x₁)) ~ (λ z → z)
     sec z = sec' p z
@@ -433,7 +449,8 @@ qinvtransp {A} {P} {x} {y} p = transport (p ⁻¹) , sec , retr p
 
 -- Definition 2.4.10
 isequiv : {A B : Set} → (f : A → B) → Set
-isequiv {A} {B} f = Σ (B → A) λ g → (f ∘ g ~ id {B}) ×  Σ (B → A) λ g → (g ∘ f ~ id {A})
+isequiv {A} {B} f = Σ (B → A) λ g → (f ∘ g ~ id {B}) ×
+                    Σ (B → A) λ g → (g ∘ f ~ id {A})
 
 -- (i) prior to 2.4.10
 qinv->isequiv : {A B : Set} → (f : A → B) → qinv f → isequiv f
@@ -449,7 +466,6 @@ isequiv->qinv f (g , α , g' , β ) = (g' ∘ f ∘ g) , sec , retr
     retr : (λ x → g' (f (g (f x)))) ~ (λ z → z)
     retr x = apf g' (α (f x)) ∙ β x
 
--- book defn, confusing because of the "let this be the composite homotopy" which mixes both human semantic content as well as formal typing information
 isequiv->qinv' : {A B : Set} → (f : A → B) →  isequiv f → qinv f
 isequiv->qinv' f (g , α , h , β ) = g , α , β'
   where
@@ -517,7 +533,8 @@ comm× (a , b) = (b , a)
 -- No section 2.5
 
 -- Lemma 2.6.1
-fprodId : {A B : Set} {x y : A × B} → _≡_ {A × B} x y → ((fst x) ≡ (fst y)) × ((snd x) ≡ (snd y))
+fprodId : {A B : Set} {x y : A × B} → _≡_ {A × B} x y
+  → ((fst x) ≡ (fst y)) × ((snd x) ≡ (snd y))
 fprodId p = (apf fst p) , (apf snd p)
 -- fprodId r = r , r
 
@@ -538,7 +555,9 @@ equivfprod (x1 , y1) (x2 , y2) = qinv->isequiv fprodId (sn , h1 , h2)
 ×fam {A = A} {B = B} z = A z × B z
 
 -- Theorem 2.6.4
-transport× : {Z : Set} {A B : Z → Set} {z w : Z} (p : z ≡ w) (x : ×fam {Z} {A} {B} z) → (transport p x ) ≡ (transport {Z} {A} p (fst x) , transport {Z} {B} p (snd x))
+transport× : {Z : Set} {A B : Z → Set} {z w : Z} (p : z ≡ w)
+             (x : ×fam {Z} {A} {B} z)
+  → (transport p x ) ≡ (transport {Z} {A} p (fst x) , transport {Z} {B} p (snd x))
 transport× r s = r
 
 fprod : {A B A' B' : Set} (g : A → A') (h : B → B') → (A × B → A' × B')
@@ -549,19 +568,19 @@ pair= : {A B : Set} {x y : A × B} → (fst x ≡ fst y) × (snd x ≡ snd y) �
 pair= (r , r) = r
 
 -- Theorem 2.6.5
-functorProdEq : {A B A' B' : Set} (g : A → A') (h : B → B')  (x y : A × B) (p : fst x ≡ fst y) (q : snd x ≡ snd y) →  apf (λ - → fprod g h -) (pair= (p , q)) ≡ pair= (apf g p , apf h q)
+functorProdEq : {A B A' B' : Set} (g : A → A') (h : B → B')
+                (x y : A × B) (p : fst x ≡ fst y) (q : snd x ≡ snd y)
+  → apf (λ - → fprod g h -) (pair= (p , q)) ≡ pair= (apf g p , apf h q)
 functorProdEq g h (a , b) (.a , .b) r r = r
 
-
 -- Theorem 2.7.2
--- rename f to g to be consistent with book
-equivfDprod : {A : Set} {P : A → Set} (w w' : Σ A (λ x → P x)) → (w ≡ w') ≃ Σ (fst w ≡ fst w') λ p → p* {p = p} (snd w) ≡ snd w'
+equivfDprod : {A : Set} {P : A → Set} (w w' : Σ A (λ x → P x))
+  → (w ≡ w') ≃ Σ (fst w ≡ fst w') λ p → p* {p = p} (snd w) ≡ snd w'
 equivfDprod (w1 , w2) (w1' , w2') = f , qinv->isequiv f (f-1 , ff-1 , f-1f)
   where
     f : (w1 , w2) ≡ (w1' , w2') → Σ (w1 ≡ w1') (λ p → p* {p = p} w2 ≡ w2')
     f r = r , r
     f-1 : Σ (w1 ≡ w1') (λ p → p* {p = p} w2 ≡ w2') → (w1 , w2) ≡ (w1' , w2')
-    -- f-1 (r , psndw) = apf (λ - → (w1 , -)) psndw
     f-1 (r , r) = r
     ff-1 : (λ x → f (f-1 x)) ~ (λ z → z)
     ff-1 (r , r) = r
@@ -577,15 +596,20 @@ etaDprod z = r
 Σfam {P = P} Q x = Σ (P x) λ u → Q (x , u)
 
 -- helper function for 2.7.4
-dpair= : {A : Set} {P : A → Set} {w1 w1' : A} {w2 : P w1 } {w2' : P w1'} →  (p : Σ (w1 ≡ w1') (λ p → p* {p = p} w2 ≡ w2')) → (w1 , w2) ≡ (w1' , w2')
+dpair= : {A : Set} {P : A → Set} {w1 w1' : A} {w2 : P w1 } {w2' : P w1'}
+  → (p : Σ (w1 ≡ w1') (λ p → p* {p = p} w2 ≡ w2')) → (w1 , w2) ≡ (w1' , w2')
 dpair= (r  , r) = r
 
 -- Theorem 2.7.4
-transportΣ : {A : Set} {P : A → Set} (Q : Σ A (λ x → P x) → Set) (x y : A) (p : x ≡ y) ((u , z) : Σfam Q x)
-             →  _* {P = λ - → Σfam Q - } p (u , z) ≡ ((p *) u  , _* {P = λ - → Q ((fst -) , (snd -))} (dpair= (p , r)) z)
+transportΣ : {A : Set} {P : A → Set} (Q : Σ A (λ x → P x) → Set) (x y : A) (p : x ≡ y)
+  ((u , z) : Σfam Q x)
+  → _* {P = λ - → Σfam Q - } p (u , z) ≡
+    ((p *) u  , _* {P = λ - → Q ((fst -) , (snd -))} (dpair= (p , r)) z)
 transportΣ Q x .x r (u , z) = r
 
-fDprod : {A A' : Set} {P : A → Set} {Q : A' → Set} (g : A → A') (h : (a : A) →  P a → Q (g a)) → (Σ A λ a → P a) → (Σ A' λ a' → Q a')
+fDprod : {A A' : Set} {P : A → Set} {Q : A' → Set} (g : A → A')
+  (h : (a : A) →  P a → Q (g a))
+  → (Σ A λ a → P a) → (Σ A' λ a' → Q a')
 fDprod g h (a , pa) = g a , h a pa
 
 ap2 : {A B C : Set} {x x' : A} {y y' : B} (f : A → B → C)
@@ -614,17 +638,20 @@ path1 x y = (λ p → ⋆) , qinv->isequiv (λ p → ⋆) (f-1 x y , ff-1 , f-1f
 -- 2.9
 
 -- theorem 2.9.2
-happly : {A : Set} {B : A → Set} {f g : (x : A) → B x} → f ≡ g → ((x : A) → f x ≡ g x )
+happly : {A : Set} {B : A → Set} {f g : (x : A) → B x} → f ≡ g
+  → ((x : A) → f x ≡ g x )
 happly r x = r
 
 postulate
-  funext : {A : Set} {B : A → Set} {f g : (x : A) → B x} →  ((x : A) → f x ≡ g x ) → f ≡ g
+  funext : {A : Set} {B : A → Set} {f g : (x : A) → B x} →
+    ((x : A) → f x ≡ g x ) → f ≡ g
 
 ->fam : {X : Set} (A B : X → Set) → X → Set
 ->fam A B x = A x → B x
 
 -- Lemma 2.9.4
-transportF : {X : Set} {A B : X → Set} {x1 x2 : X} {p : x1 ≡ x2} {f : A x1 → B x1} →
-             transport {P = ->fam A B} p f ≡  λ x → transport {P = B} p (f (transport {P = A} (p ⁻¹) x))
+transportF : {X : Set} {A B : X → Set} {x1 x2 : X} {p : x1 ≡ x2} {f : A x1 → B x1}
+  → transport {P = ->fam A B} p f ≡  λ x
+  → transport {P = B} p (f (transport {P = A} (p ⁻¹) x))
 transportF {X} {A} {B} {x1} {.x1} {r} {f} = funext (λ x → r)
 \end{code}

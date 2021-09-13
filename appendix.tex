@@ -1,4 +1,19 @@
 \section{Appendices} \label{appendix}
+
+\subsection{Overview} 
+
+The broad scope of this thesis led to many partial developments which, due to
+time constraints, could not be refined to a degree that would warrant their
+explicit inclusion in the text of prior text. Nevertheless, one of the original
+ambitions was to design a grammar that could work over a nontrivial corpus,
+either natural language text or Agda code.
+
+Below, in addition to a brief introduction to MLTT, we showcase Agda code along
+with possible natural language presentations of the content, as well as ideas
+for comparing the formal and informal presentations. This should suggest how a
+corpus for formalized mathematics might be designed or analyzed.
+
+
 \subsection{Martin-Löf Type Theory} \label{judge}
 \subsubsection{Judgments}
 
@@ -68,8 +83,6 @@ expression $\sin x$, a which is given meaning in the judgment $\vdash \sin x { :
 } \mathbb{R}$. We write our hypothetical judgement as follows :
 
 $$x : \mathbb{R} \vdash \sin x : \mathbb{R}$$
-
-
 
 \subsubsection{Rules}
 
@@ -160,9 +173,9 @@ both practically and philosophically.
 
 \subsection{What is a Homomorphism?} \label{homo}
 
-To get a feel for the syntactic paradigm we explore in this thesis, let us look
-at a basic mathematical example: that of a group homomorphism as expressed in by
-a variety of somewhat randomly sampled authors.
+To get a feel for the syntactic paradigm we explore, let us look at a basic
+mathematical example: that of a group homomorphism as expressed in a variety
+of ways.
 
 % Wikipedia Defn:
 
@@ -195,59 +208,67 @@ Classically, a group is a monoid in which every element has an inverse (necessar
 \end{definition}
 
 We inquire the reader to pay attention to nuance and difference in presentation
-that is normally ignored or taken for granted by the fluent mathematician, ask
-which definitions feel better, and how the reader herself might present the
-definition differently.
+that is normally ignored or taken for granted by the fluent mathematician. One
+should ask which definitions \emph{feel better}, and how the reader herself might
+present the definitions differently.
 
 If one wants to distill the meaning of each of these presentations, there is a
 significant amount of subliminal interpretation happening very much analogous to
-our innate linguistic usage. The inverse and identity are discarded, even though
-they are necessary data when defining a group. The order of presenting the
-information is inconsistent, as well as the choice to use symbolic or natural
-language information. In Definition~\ref{def:def3}, the group operation is used
-implicitly, and its clarification a side remark. Details aside, these all mean
-the same thing - don't they?
-
+our innate linguistic usage. The inverse and identity aren't mentioned in every
+example, even though they are necessary data when defining a group. The order of
+presenting the information is inconsistent, as well as the choice to use
+symbolic or natural language information. In Definition~\ref{def:def3}, the
+group operation is used implicitly, and its clarification a side remark. Details
+aside, these all mean the same thing - don't they?
 
 We now show yet another definition of a group homomorphism formalized in the
 Agda programming language:
 
 \input{latex/monoid}
 
-While the last two definitions be somewhat compressible to a programmer
-or mathematician not exposed to Agda, it is certainly comprehensible to a
-computer : that is, the colors indicate it type-checks on a computer where Cubical Agda is installed.
-While GF is designed for multilingual syntactic transformations and is targeted
-for natural language translation, its underlying theory is largely based on
-ideas from the compiler communities. A cousin of the BNF Converter (BNFC), GF is
-fully capable of parsing programming languages like Agda! While the Agda
-definitions are present another concrete presentation of a group
-homomorphism, they are distinct in that they have inherent semantic content.
+While the last two definitions be somewhat compressible to a programmer or
+mathematician not exposed to Agda, it is certainly comprehensible to a computer
+: that is, the colors indicate it type-checks on a computer where Cubical Agda
+is installed. While GF is designed for multilingual syntactic transformations
+and is targeted for natural language translation, its underlying theory is
+largely based on ideas from the compiler communities. A cousin of the BNF
+Converter (BNFC), GF is fully capable of parsing programming languages like
+Agda! While the Agda definitions are present another concrete presentation of a
+group homomorphism, they are distinct in that they have inherent semantic
+content.
 
 While this example may not exemplify the power of Agda's type-checker, it is of
 considerable interest to many. The type-checker has merely assured us that
-\term{GroupHom(')} are well-formed types - not that we have a canonical representation
-of a group homomorphism.
-% Aarne says cut
+\term{GroupHom(')} are well-formed types - not that we have a canonical
+representation of a group homomorphism. % Aarne says cut
 
-We note that the natural
-language definitions of monoid differ in form, but also in pragmatic content.
-How one expresses formalities in natural language is incredibly diverse, and
-Definition~\ref{def:def4} as compared with the prior homomorphism definitions is
-particularly poignant in demonstrating this. These differ very much in nature to
-the Agda definitions - especially pragmatically.
-The differences between the Cubical
-Agda definitions may be loosely called pragmatic, in the sense that the choice
-of definitions may have downstream effects on readability, maintainability, modularity, and other
-considerations when trying to write good code, in a burgeoning area known as proof engineering.
-
-% TODO section name
-
+We note that the natural language definitions of monoid differ in form, but also
+in pragmatic content. How one expresses formalities in natural language is
+incredibly diverse, and Definition~\ref{def:def4} as compared with the prior
+homomorphism definitions is particularly poignant in demonstrating this. These
+differ very much in nature to the Agda definitions - especially pragmatically.
+The differences between the Agda definitions may be loosely called
+pragmatic, in the sense that the choice of definitions may have downstream
+effects on readability, maintainability, modularity, and other considerations
+when trying to write good code, in a burgeoning area known as proof engineering.
 
 \input{latex/twinsigma}
 
 \input{latex/compare}
 
 \subsection{HoTT Agda Corpus} \label{hottproofs}
+
+Ironically, the final text included here is actually content which was developed
+at the very beginning of this thesis. Anticipating that having a complete Agda
+corpus which matched some natural language text would be a prerequisite for
+translation, we formalized much of the second chapter of the HoTT Book.
+
+The natural language presentation, however, did not allow for an easy way to
+translate with the cubicalTT grammar, and so the actual GF translation of this
+corpus was never completed. Nonetheless, we include the definitions and theorems
+with the identifying number from the text in the comments above each Agda
+judgment. We hope this can serve as both a future domain of possible translation
+experimentation as well as a possible pedagogical tool for teaching both
+formalization generally and HoTT.
 
 \input{latex/Id}

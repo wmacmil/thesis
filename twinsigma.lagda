@@ -19,10 +19,10 @@ isPrime n =
   (n ≥ 2) ×
   ((x y : ℕ) → x * y ≡ n → (x ≡ 1) + (x ≡ n))
 \end{code}
-We now give the dependent uncurring from the functions from \ref{twinprime} We
+We now give the dependent uncurring from the functions from \ref{really} We
 note that this perhaps is a bit more linguistically natural, because we can
 refer to definitions of a prime number, sucessive prime numbers, etc. We leave
-it to the reader to decide which presentation would be better suited for
+it to the reader to ponder which presentation would be better suited for
 translation.
 \begin{code}
 prime = Σ[ p ∈ ℕ ] isPrime p

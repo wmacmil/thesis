@@ -47,12 +47,13 @@
 \contentsline {paragraph}{Typechecker's Role}{56}{section*.12}%
 \contentsline {section}{\numberline {7}Conclusion}{57}{section.7}%
 \contentsline {subsection}{\numberline {7.1}The Mathematical Library of Babel}{58}{subsection.7.1}%
-\contentsline {section}{References}{61}{subsection.7.1}%
-\contentsline {section}{\numberline {8}Appendices}{68}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Martin-Löf Type Theory}{68}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Judgments}{68}{subsubsection.8.1.1}%
-\contentsline {subsubsection}{\numberline {8.1.2}Rules}{69}{subsubsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.2}What is a Homomorphism?}{70}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Twin Primes Conjecture Revisited}{73}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Hott and cubicalTT Grammars}{73}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}HoTT Agda Corpus}{78}{subsection.8.5}%
+\contentsline {section}{References}{60}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Appendices}{67}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Overview}{67}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Martin-Löf Type Theory}{67}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Judgments}{67}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Rules}{68}{subsubsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.3}What is a Homomorphism?}{70}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Twin Primes Conjecture Revisited}{72}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Hott and cubicalTT Grammars}{73}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}HoTT Agda Corpus}{77}{subsection.8.6}%

@@ -13,7 +13,7 @@ n     - zero = n
 zero  - suc m = zero
 suc n - suc m = n - m
 \end{code}
-\subsubsection{Formalizing The Twin Prime Conjecture}
+\subsubsection{Formalizing The Twin Prime Conjecture} \label{really}
 
 Inspired by Escardos's formalization of the twin primes conjecture
 \cite{escardó2020introduction}, we intend to demonstrate that while formalizing
